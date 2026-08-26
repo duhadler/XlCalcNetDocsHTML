@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=cf1a26e0" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=dd540455" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=f2b458fe" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -53,7 +53,7 @@
     <link rel="prev" title="Numerical transformations and descriptive statistics" href="C24_DescritiveStatistics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 22, 2026"/>
+    <meta name="docbuild:last-update" content="Aug 26, 2026"/>
   </head>
   
   
@@ -163,11 +163,11 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B01_GeneralUsage/index.html">Setup and general usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C01_Setup.html">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C02_GuiFunctions.html">General and user interface functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_PythonFromCSharp.html">Calling Python from C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_SpreadsheetFormulas.html">Using XlCalcNet with spreadsheet formulas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C08_Numpy.html">A quick look at Numpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
@@ -958,7 +958,7 @@ document.write(`
 <section id="standard-decompositions-and-linear-solving">
 <h1>Standard decompositions and linear solving<a class="headerlink" href="#standard-decompositions-and-linear-solving" title="Link to this heading">#</a></h1>
 <p>Returns the Cholesky decomposition of the symmetric matrix <em>matA</em> <span class="math notranslate nohighlight">\(=A = PLU\)</span>, without pivoting. Here <em>matA</em> is an instance of one of the above classes.</p>
-<p>See also Eigen <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id529" title="Eigen Core Developers. LLT. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://eigen.tuxfamily.org/dox/classEigen_1_1LLT.html.">238</a>]</span>, Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1223" title="Wikipedia. Cholesky decomposition. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Cholesky_decomposition.">1521</a>]</span>, Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1555</a>]</span>.</p>
+<p>See also Eigen <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id529" title="Eigen Core Developers. LLT. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1LLT.html.">238</a>]</span>, Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1223" title="Wikipedia. Cholesky decomposition. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Cholesky_decomposition.">1521</a>]</span>, Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1555</a>]</span>.</p>
 <section id="cholesky-decomposition">
 <span id="rst-mpm-cholesky"></span><h2>Cholesky decomposition<a class="headerlink" href="#cholesky-decomposition" title="Link to this heading">#</a></h2>
 <dl class="py method">
@@ -1032,7 +1032,7 @@ definite:</p>
 <p>Solves a symmetric positive-definite linear equation system.
 This is twice as efficient as lu_solve.</p>
 <p>Returns the LU decomposition of the general square matrix <em>matA</em> <span class="math notranslate nohighlight">\(= A = PLU\)</span>, with partial pivoting.</p>
-<p>See also Eigen <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id530" title="Eigen Core Developers. PartialPivLU. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://eigen.tuxfamily.org/dox/classEigen_1_1PartialPivLU.html.">239</a>]</span>, Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1224" title="Wikipedia. LU factorization with partial pivoting. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/LU_decomposition#LU_factorization_with_partial_pivoting.">1535</a>]</span>, Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1555</a>]</span>.</p>
+<p>See also Eigen <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id530" title="Eigen Core Developers. PartialPivLU. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1PartialPivLU.html.">239</a>]</span>, Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1224" title="Wikipedia. LU factorization with partial pivoting. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/LU_decomposition#LU_factorization_with_partial_pivoting.">1535</a>]</span>, Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1555</a>]</span>.</p>
 </dd></dl>
 
 </section>
@@ -1176,7 +1176,7 @@ of lu_solve(). This does not help with input errors however, it just avoids
 to add additional errors.</p>
 <p>Definition:    cond(A) = ||A|| * ||A**-1||</p>
 <p>Returns the QR decomposition of the symmetric matrix <em>matA</em> <span class="math notranslate nohighlight">\(=A = QR\)</span>, without pivoting.</p>
-<p>See also Eigen <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id531" title="Eigen Core Developers. HouseholderQR. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://eigen.tuxfamily.org/dox/classEigen_1_1HouseholderQR.html.">235</a>]</span>, Wikipedia <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1236" title="Wikipedia. QR decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/QR_decomposition.">1559</a>]</span>, Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1555</a>]</span>.</p>
+<p>See also Eigen <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id531" title="Eigen Core Developers. HouseholderQR. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1HouseholderQR.html.">235</a>]</span>, Wikipedia <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1236" title="Wikipedia. QR decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/QR_decomposition.">1559</a>]</span>, Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1555</a>]</span>.</p>
 </dd></dl>
 
 </section>
@@ -1373,7 +1373,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 22, 2026.
+  Last updated on Aug 26, 2026.
   <br/>
 </p>
   </div>

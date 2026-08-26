@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=cf1a26e0" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=dd540455" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=f2b458fe" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -53,7 +53,7 @@
     <link rel="prev" title="Mpmath: Numerical inverse Laplace transform" href="C08_MpMathInverseLaplaceTransform.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 22, 2026"/>
+    <meta name="docbuild:last-update" content="Aug 26, 2026"/>
   </head>
   
   
@@ -163,11 +163,11 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B01_GeneralUsage/index.html">Setup and general usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C01_Setup.html">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C02_GuiFunctions.html">General and user interface functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_PythonFromCSharp.html">Calling Python from C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_SpreadsheetFormulas.html">Using XlCalcNet with spreadsheet formulas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C08_Numpy.html">A quick look at Numpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
@@ -967,7 +967,7 @@ document.write(`
 <p>runge_kutta4 is a good stepper for constant step sizes. It is widely used and very well known. If you need to create artificial time series this stepper should be the first choice.</p>
 <p>‘runge_kutta_fehlberg78’ is similar to the ‘runge_kutta4’ with the advantage that it has higher precision. It can also be used with step size control.</p>
 <p>adams_bashforth_moulton is very well suited for ODEs where the r.h.s. is expensive (in terms of computation time). It will calculate the system function only once during each step.</p>
-<p>See also:  BoostMath <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id23" title="Karsten Ahnert and Mario Mulansky. Boost odeint library. http://www.boost.org/libs/odeint/, June 2013. Documentation available as http://www.boost.org/doc/libs/1_54_0/libs/numeric/odeint/doc/html/index.html.">5</a>]</span>,  Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id910" title="Wikipedia. Initial value problem. Wikimedia Foundation, 2005. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Initial_value_problem.">1205</a>]</span>.</p>
+<p>See also:  BoostMath <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id23" title="Karsten Ahnert and Mario Mulansky. Boost odeint library. https://www.boost.org/doc/libs/latest/libs/numeric/odeint/doc/html/index.html, June 2013. Documentation available as https://www.boost.org/doc/libs/latest/libs/numeric/odeint/doc/html/index.html.">5</a>]</span>,  Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id910" title="Wikipedia. Initial value problem. Wikimedia Foundation, 2005. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Initial_value_problem.">1205</a>]</span>.</p>
 <p></p>
 <section id="runge-kutta-4-method-constant-stepper">
 <h2>Runge-Kutta 4 method, constant stepper<a class="headerlink" href="#runge-kutta-4-method-constant-stepper" title="Link to this heading">#</a></h2>
@@ -1273,7 +1273,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 22, 2026.
+  Last updated on Aug 26, 2026.
   <br/>
 </p>
   </div>

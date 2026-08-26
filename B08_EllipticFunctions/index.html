@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=cf1a26e0" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=dd540455" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=f2b458fe" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -53,7 +53,7 @@
     <link rel="prev" title="Flint/Functions for matrices" href="../B07_NumpyMultiprecision/C29_Flint_Matrices.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 22, 2026"/>
+    <meta name="docbuild:last-update" content="Aug 26, 2026"/>
   </head>
   
   
@@ -163,11 +163,11 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B01_GeneralUsage/index.html">Setup and general usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C01_Setup.html">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C02_GuiFunctions.html">General and user interface functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_PythonFromCSharp.html">Calling Python from C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_SpreadsheetFormulas.html">Using XlCalcNet with spreadsheet formulas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C08_Numpy.html">A quick look at Numpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
@@ -924,6 +924,9 @@ document.write(`
 \[k(q) = \frac{\theta_2^2(q)}{\theta_3^2(q)},\]</div>
 <p>where <span class="math notranslate nohighlight">\(K(\cdot)\)</span> denotes the complete elliptic integral of the first kind (Legendre), and <span class="math notranslate nohighlight">\(\theta_i(q)\)</span> denote the Jacobi theta functions.</p>
 <p>See also Wikipedia <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1132" title="Wikipedia. Jacobi elliptic functions. Wikimedia Foundation, 2014. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Jacobi_elliptic_functions.">1417</a>]</span>, Wikipedia <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1133" title="Wikipedia. Elliptic function. Wikimedia Foundation, 2014. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Elliptic_function.">1409</a>]</span>, MathWorld <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1608" title="E. W. Weisstein. Jacobi Elliptic Functions. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/JacobiEllipticFunctions.html.">1038</a>]</span>, MathWorld <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1609" title="E. W. Weisstein. Elliptic Function. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/EllipticFunction.html.">1029</a>]</span>, NIST <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">501</a>]</span>.</p>
+<p>The source code for the C# tests in Visual Studio is divided by real and complex modules:</p>
+<p>The source code for the C# tests in Visual Studio using real modules can be found online in the <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/TestFixedAndArbPrecCS/B08a_RealEllipticFunctions.cs">B08a_RealEllipticFunctions.cs</a>,</p>
+<p>The source code for the C# tests in Visual Studio using complex modules can be found online in the <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/TestFixedAndArbPrecCS/B08b_CplxEllipticFunctions.cs">B08b_CplxEllipticFunctions.cs</a>,</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="C01_CarlsonIntegrals.html">Carlson symmetric elliptic integrals</a><ul>
@@ -1198,7 +1201,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 22, 2026.
+  Last updated on Aug 26, 2026.
   <br/>
 </p>
   </div>

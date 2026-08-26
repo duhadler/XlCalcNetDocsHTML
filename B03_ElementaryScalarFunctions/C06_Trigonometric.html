@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=cf1a26e0" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=dd540455" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=f2b458fe" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -53,7 +53,7 @@
     <link rel="prev" title="Power functions" href="C05_PowerFunctions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 22, 2026"/>
+    <meta name="docbuild:last-update" content="Aug 26, 2026"/>
   </head>
   
   
@@ -163,11 +163,11 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B01_GeneralUsage/index.html">Setup and general usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C01_Setup.html">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C02_GuiFunctions.html">General and user interface functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_PythonFromCSharp.html">Calling Python from C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_SpreadsheetFormulas.html">Using XlCalcNet with spreadsheet formulas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C08_Numpy.html">A quick look at Numpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
@@ -1365,7 +1365,7 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.sinc">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">sinc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.sinc" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">mathc53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns the cardinal sine of <em>x</em>. See also  Wikipedia <span id="id45">[<a class="reference internal" href="../99BackMatter/index.html#id1098" title="Wikipedia. Sinc function. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Sinc_function.">1397</a>]</span>,  MathWorld <span id="id46">[<a class="reference internal" href="../99BackMatter/index.html#id1560" title="E. W. Weisstein. Sinc Function. From MathWorld - A Wolfram Web Resource, 2010. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/SincFunction.html.">1007</a>]</span>, BoostMath <span id="id47">[<a class="reference internal" href="../99BackMatter/index.html#id365" title="P. A. Bristow and H. Holin. SincPi. Boost Math Toolkit Library, 2017. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/1_83_0/libs/math/doc/html/math_toolkit/sinc/sinc_pi.html.">133</a>]</span>, Flint <span id="id48">[<a class="reference internal" href="../99BackMatter/index.html#id570" title="The FLINT Team. Arb: Trigonometric functions. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/arb.html#trigonometric-functions.">812</a>]</span>, Flint <span id="id49">[<a class="reference internal" href="../99BackMatter/index.html#id571" title="The FLINT Team. Acb: Trigonometric functions. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb.html#trigonometric-functions.">802</a>]</span>, Mpmath <span id="id50">[<a class="reference internal" href="../99BackMatter/index.html#id698" title="The Mpmath Development Team. Cardinal sine sinc. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: http://mpmath.org/doc/1.1.0/functions/trigonometric.html#sinc.">632</a>]</span>.</p>
+<p>Returns the cardinal sine of <em>x</em>. See also  Wikipedia <span id="id45">[<a class="reference internal" href="../99BackMatter/index.html#id1098" title="Wikipedia. Sinc function. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Sinc_function.">1397</a>]</span>,  MathWorld <span id="id46">[<a class="reference internal" href="../99BackMatter/index.html#id1560" title="E. W. Weisstein. Sinc Function. From MathWorld - A Wolfram Web Resource, 2010. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/SincFunction.html.">1007</a>]</span>, BoostMath <span id="id47">[<a class="reference internal" href="../99BackMatter/index.html#id365" title="P. A. Bristow and H. Holin. SincPi. Boost Math Toolkit Library, 2017. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/sinc/sinc_pi.html.">133</a>]</span>, Flint <span id="id48">[<a class="reference internal" href="../99BackMatter/index.html#id570" title="The FLINT Team. Arb: Trigonometric functions. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/arb.html#trigonometric-functions.">812</a>]</span>, Flint <span id="id49">[<a class="reference internal" href="../99BackMatter/index.html#id571" title="The FLINT Team. Acb: Trigonometric functions. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb.html#trigonometric-functions.">802</a>]</span>, Mpmath <span id="id50">[<a class="reference internal" href="../99BackMatter/index.html#id698" title="The Mpmath Development Team. Cardinal sine sinc. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: http://mpmath.org/doc/1.1.0/functions/trigonometric.html#sinc.">632</a>]</span>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">sinc(x)</span></code> computes the unnormalized sinc function, defined as <span class="math notranslate nohighlight">\(\displaystyle \mathrm{sinc}(x) = \begin{cases} \sin(x)/x, &amp; \mbox{if } x \ne 0 \\ 1,         &amp; \mbox{if } x = 0. \end{cases}\)</span></p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
@@ -1522,7 +1522,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 22, 2026.
+  Last updated on Aug 26, 2026.
   <br/>
 </p>
   </div>

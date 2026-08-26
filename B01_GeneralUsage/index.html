@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=cf1a26e0" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=dd540455" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=f2b458fe" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -52,7 +52,7 @@
     <link rel="prev" title="Preface" href="../000_Preface/01_preface.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 22, 2026"/>
+    <meta name="docbuild:last-update" content="Aug 26, 2026"/>
   </head>
   
   
@@ -162,11 +162,11 @@
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Setup and general usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html">General and user interface functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C03_PythonFromCSharp.html">Calling Python from C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C04_SpreadsheetFormulas.html">Using XlCalcNet with spreadsheet formulas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C08_Numpy.html">A quick look at Numpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
@@ -907,19 +907,24 @@ document.write(`
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="C01_Setup.html">Setting up XlCalcNet</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#downloading-and-installing-the-right-version-of-cpython">Downloading and installing the “right” version of CPython</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-xlcalcnet">Installing XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-and-using-pythonnet-calling-c-from-python">Installing and using Pythonnet: Calling C# from Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#the-3-folder-concept-user-application-local-data-installation">The 3 folder concept: user, application local data, installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#copying-and-exploring-the-dataxlcalcnet-folder">Copying and exploring the DataXlCalcNet folder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#downloading-and-unpacking-repositories-from-github">Downloading and unpacking repositories from Github</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-and-using-the-tiny-ide-as-a-python-application">Installing and using the Tiny IDE as a Python application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#building-a-library-of-user-defined-python-functions">Building a library of user defined python functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#building-a-library-of-user-defined-functions-in-c">Building a library of user defined functions in C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#sphinx-building-documentation-for-software-with-python-html-and-pdf">Sphinx: building documentation for software with Python (html and pdf)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-and-using-of-the-ms-excel-xlnet-addin-first-steps">Installing and using of the MS Excel XlNet addin: first steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#rebuilding-the-dll-files-of-xlcalcnet-and-xlcalcnet2-from-source-code">Rebuilding the .dll files of XlCalcNet and XlCalcNet2 from source code</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="C02_GuiFunctions.html">General and user interface functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html#starting-the-socket-server">Starting the socket server</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#gui.socketserver"><code class="docutils literal notranslate"><span class="pre">gui.socketserver()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html#starting-and-calling-the-socket-server">Starting and calling the socket server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#starting-the-socketserver-from-the-tinyide-or-galleryofplots-application">Starting the socketserver from the TinyIDE or GalleryOfPlots application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#starting-the-socketserver-from-the-navigator-dialog-in-excel">Starting the socketserver from the Navigator dialog in Excel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#starting-the-socketserver-programmatically-from-python">Starting the socketserver programmatically from Python</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="C02_GuiFunctions.html#gui.socketserver"><code class="docutils literal notranslate"><span class="pre">gui.socketserver()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#calling-the-socketserver-from-python">Calling the socketserver from Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#calling-the-socketserver-from-c">Calling the socketserver from C#</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#source-code">Source code</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html#starting-the-output-monitor">Starting the output monitor</a><ul>
@@ -965,27 +970,26 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#gui.setdps"><code class="docutils literal notranslate"><span class="pre">gui.setdps()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html#calling-the-socketserver-from-python">Calling the socketserver from Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html#support-for-running-interactive-matplotlib-output-in-a-separate-process">Support for running interactive Matplotlib output in a separate process</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#gui.plot"><code class="docutils literal notranslate"><span class="pre">gui.plot</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="C03_PythonFromCSharp.html">Calling Python from C#</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C03_PythonFromCSharp.html#using-pythonnet-from-c">Using Pythonnet from C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C03_PythonFromCSharp.html#calling-the-socket-server-from-c">Calling the socket server from C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#exploring-with-an-example-spreadsheet-simple-formulas-multiple-precision">Exploring with an example spreadsheet: simple formulas, multiple precision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#exploring-with-an-example-spreadsheet-array-formulas">Exploring with an example spreadsheet: array formulas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#exploring-with-an-example-spreadsheet-small-python-programs-syntax-rules">Exploring with an example spreadsheet: small Python programs, syntax rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#entering-multi-precision-data-into-a-spreadsheet-text-formatting-and-asdouble">Entering multi-precision data into a spreadsheet (text formatting and AsDouble)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#managing-procedures-instead-of-functions">Managing procedures instead of functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#building-a-library-of-user-defined-python-functions">Building a library of user defined python functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#building-a-library-of-user-defined-functions-in-c">Building a library of user defined functions in C#</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#sphinx-building-documentation-for-software-with-python-html-and-pdf">Sphinx: building documentation for software with Python (html and pdf)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="C04_SpreadsheetFormulas.html">Using XlCalcNet with spreadsheet formulas</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C04_SpreadsheetFormulas.html#installation-of-the-ms-excel-xlnet-addin">Installation of the MS Excel XlNet addin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C04_SpreadsheetFormulas.html#starting-and-stopping-the-socket-server">Starting and stopping the socket server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C04_SpreadsheetFormulas.html#exploring-with-an-example-spreadsheet-simple-formulas-double-precision">Exploring with an example spreadsheet: simple formulas, double precision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C04_SpreadsheetFormulas.html#exploring-with-an-example-spreadsheet-simple-formulas-multiple-precision">Exploring with an example spreadsheet: simple formulas, multiple precision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C04_SpreadsheetFormulas.html#exploring-with-an-example-spreadsheet-array-formulas">Exploring with an example spreadsheet: array formulas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C04_SpreadsheetFormulas.html#exploring-with-an-example-spreadsheet-small-python-programs-syntax-rules">Exploring with an example spreadsheet: small Python programs, syntax rules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C04_SpreadsheetFormulas.html#entering-multi-precision-data-into-a-spreadsheet-text-formatting-and-asdouble">Entering multi-precision data into a spreadsheet (text formatting and AsDouble)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C04_SpreadsheetFormulas.html#managing-procedures-instead-of-functions">Managing procedures instead of functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C04_PythonFromCSharp.html">Calling Python from C#</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="C04_PythonFromCSharp.html#using-pythonnet-from-c">Using Pythonnet from C#</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C04_PythonFromCSharp.html#calling-the-socket-server-from-c">Calling the socket server from C#</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a><ul>
@@ -1021,24 +1025,145 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html#reasons-for-using-multiprecision-arithmetic">Reasons for using multiprecision arithmetic</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html#scalar-functions-with-double-and-complex-math53-and-cmath53">Scalar functions with <code class="docutils literal notranslate"><span class="pre">Double</span></code> and <code class="docutils literal notranslate"><span class="pre">Complex</span></code>: <code class="docutils literal notranslate"><span class="pre">math53</span></code> and  <code class="docutils literal notranslate"><span class="pre">cmath53</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html#binary-floating-point-single-precision-sreal-and-scplx">Binary floating point, single precision: <code class="docutils literal notranslate"><span class="pre">sreal</span></code> and <code class="docutils literal notranslate"><span class="pre">scplx</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html#binary-floating-point-double-precision-dreal-and-dcplx">Binary floating point, double precision: <code class="docutils literal notranslate"><span class="pre">dreal</span></code> and <code class="docutils literal notranslate"><span class="pre">dcplx</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html#binary-floating-point-extended-precision-ereal-and-ecplx">Binary floating point, extended precision: <code class="docutils literal notranslate"><span class="pre">ereal</span></code> and <code class="docutils literal notranslate"><span class="pre">ecplx</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html#binary-floating-point-quadruple-precision-qreal-and-qcplx">Binary floating point, quadruple precision: <code class="docutils literal notranslate"><span class="pre">qreal</span></code> and <code class="docutils literal notranslate"><span class="pre">qcplx</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html#binary-floating-point-octuple-precision-oreal-and-ocplx">Binary floating point, octuple precision: <code class="docutils literal notranslate"><span class="pre">oreal</span></code> and  <code class="docutils literal notranslate"><span class="pre">ocplx</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html#c-based-context-groups">C# based context groups</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#context-group-ctx53">Context group <code class="docutils literal notranslate"><span class="pre">ctx53</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#context-group-ctxcpp">Context group <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#context-group-ctxboost">Context group <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#context-group-ctxflint">Context group <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#binary-floating-point-multiple-precision-mreal-mcplx">Binary floating point, multiple precision: <code class="docutils literal notranslate"><span class="pre">mreal</span></code>, <code class="docutils literal notranslate"><span class="pre">mcplx</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#binary-floating-point-single-precision-sflint-and-sflintc">Binary floating point, single precision: <code class="docutils literal notranslate"><span class="pre">sflint</span></code> and <code class="docutils literal notranslate"><span class="pre">sflintc</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#binary-floating-point-double-precision-dflint-and-dflintc">Binary floating point, double precision: <code class="docutils literal notranslate"><span class="pre">dflint</span></code> and <code class="docutils literal notranslate"><span class="pre">dflintc</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#binary-floating-point-extended-precision-eflint-and-eflintc">Binary floating point, extended precision: <code class="docutils literal notranslate"><span class="pre">eflint</span></code> and <code class="docutils literal notranslate"><span class="pre">eflintc</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#binary-floating-point-quadruple-precision-qflint-and-qflintc">Binary floating point, quadruple precision: <code class="docutils literal notranslate"><span class="pre">qflint</span></code> and <code class="docutils literal notranslate"><span class="pre">qflintc</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#binary-floating-point-octuple-precision-oflint-and-oflintc">Binary floating point, octuple precision: <code class="docutils literal notranslate"><span class="pre">oflint</span></code> and <code class="docutils literal notranslate"><span class="pre">oflintc</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#binary-floating-point-multiple-precision-mflint-mflintc">Binary floating point, multiple precision: <code class="docutils literal notranslate"><span class="pre">mflint</span></code>, <code class="docutils literal notranslate"><span class="pre">mflintc</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#binary-arbitrary-precision-ball-aflint-and-aflintc">Binary arbitrary precision ball: <code class="docutils literal notranslate"><span class="pre">aflint</span></code> and <code class="docutils literal notranslate"><span class="pre">aflintc</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html#scalar-functions-with-double-and-complex-math53-and-cmath53">Scalar functions with <code class="docutils literal notranslate"><span class="pre">Double</span></code> and <code class="docutils literal notranslate"><span class="pre">Complex</span></code>: <code class="docutils literal notranslate"><span class="pre">math53</span></code> and  <code class="docutils literal notranslate"><span class="pre">cmath53</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-c-math53">Examples in C#, <code class="docutils literal notranslate"><span class="pre">math53</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-c-cmath53">Examples in C#, <code class="docutils literal notranslate"><span class="pre">cmath53</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-python-math53">Examples in Python, <code class="docutils literal notranslate"><span class="pre">math53</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-python-cmath53">Examples in Python, <code class="docutils literal notranslate"><span class="pre">cmath53</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#notes-regarding-the-implementation-in-c-and-c">Notes regarding the implementation in C# and C++</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html#binary-floating-point-single-precision-sreal-and-scplx">Binary floating point, single precision: <code class="docutils literal notranslate"><span class="pre">sreal</span></code> and <code class="docutils literal notranslate"><span class="pre">scplx</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-c-sreal">Examples in C#, <code class="docutils literal notranslate"><span class="pre">sreal</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-c-scplx">Examples in C#, <code class="docutils literal notranslate"><span class="pre">scplx</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-python-sreal">Examples in Python, <code class="docutils literal notranslate"><span class="pre">sreal</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-python-scplx">Examples in Python, <code class="docutils literal notranslate"><span class="pre">scplx</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#id1">Notes regarding the implementation in C# and C++</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html#binary-floating-point-double-precision-dreal-and-dcplx">Binary floating point, double precision: <code class="docutils literal notranslate"><span class="pre">dreal</span></code> and <code class="docutils literal notranslate"><span class="pre">dcplx</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-c-dreal">Examples in C#, <code class="docutils literal notranslate"><span class="pre">dreal</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-c-dcplx">Examples in C#, <code class="docutils literal notranslate"><span class="pre">dcplx</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-python-dreal">Examples in Python, <code class="docutils literal notranslate"><span class="pre">dreal</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-python-dcplx">Examples in Python, <code class="docutils literal notranslate"><span class="pre">dcplx</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#id2">Notes regarding the implementation in C# and C++</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html#binary-floating-point-extended-precision-ereal-and-ecplx">Binary floating point, extended precision: <code class="docutils literal notranslate"><span class="pre">ereal</span></code> and <code class="docutils literal notranslate"><span class="pre">ecplx</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-c-ereal">Examples in C#, <code class="docutils literal notranslate"><span class="pre">ereal</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-c-ecplx">Examples in C#, <code class="docutils literal notranslate"><span class="pre">ecplx</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-python-ereal">Examples in Python, <code class="docutils literal notranslate"><span class="pre">ereal</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-python-ecplx">Examples in Python, <code class="docutils literal notranslate"><span class="pre">ecplx</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#id3">Notes regarding the implementation in C# and C++</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html#binary-floating-point-quadruple-precision-qreal-and-qcplx">Binary floating point, quadruple precision: <code class="docutils literal notranslate"><span class="pre">qreal</span></code> and <code class="docutils literal notranslate"><span class="pre">qcplx</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-c-qreal">Examples in C#, <code class="docutils literal notranslate"><span class="pre">qreal</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-c-qcplx">Examples in C#, <code class="docutils literal notranslate"><span class="pre">qcplx</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-python-qreal">Examples in Python, <code class="docutils literal notranslate"><span class="pre">qreal</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-python-qcplx">Examples in Python, <code class="docutils literal notranslate"><span class="pre">qcplx</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#id4">Notes regarding the implementation in C# and C++</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html#binary-floating-point-octuple-precision-oreal-and-ocplx">Binary floating point, octuple precision: <code class="docutils literal notranslate"><span class="pre">oreal</span></code> and  <code class="docutils literal notranslate"><span class="pre">ocplx</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-c-oreal">Examples in C#, <code class="docutils literal notranslate"><span class="pre">oreal</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-c-ocplx">Examples in C#, <code class="docutils literal notranslate"><span class="pre">ocplx</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-python-oreal">Examples in Python, <code class="docutils literal notranslate"><span class="pre">oreal</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#examples-in-python-ocplx">Examples in Python, <code class="docutils literal notranslate"><span class="pre">ocplx</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#id5">Notes regarding the implementation in C# and C++</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html#building-the-underlying-c-c-c-and-pascal-libraries">Building the underlying C#, C/C++ and Pascal libraries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#installing-msys2">Installing MSYS2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#eigen-version-5-0-1">Eigen, (version 5.0.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#boost-version-1-90-0">Boost, (version 1.90.0)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#damath-version-2-27">DAMath (version 2.27)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#fixedprenet-version-1-0-0">FixedPreNet (version 1.0.0)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#binary-floating-point-multiple-precision-mreal-mcplx">Binary floating point, multiple precision: <code class="docutils literal notranslate"><span class="pre">mreal</span></code>, <code class="docutils literal notranslate"><span class="pre">mcplx</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-c-mreal">Examples in C#, <code class="docutils literal notranslate"><span class="pre">mreal</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-c-mcplx">Examples in C#, <code class="docutils literal notranslate"><span class="pre">mcplx</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-python-mreal">Examples in Python, <code class="docutils literal notranslate"><span class="pre">mreal</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-python-mcplx">Examples in Python, <code class="docutils literal notranslate"><span class="pre">mcplx</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#notes-regarding-the-implementation-in-c-and-c">Notes regarding the implementation in C# and C++</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#binary-arbitrary-precision-ball-aflint-and-aflintc">Binary arbitrary precision ball: <code class="docutils literal notranslate"><span class="pre">aflint</span></code> and <code class="docutils literal notranslate"><span class="pre">aflintc</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-c-aflint">Examples in C#, <code class="docutils literal notranslate"><span class="pre">aflint</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-c-aflintc">Examples in C#, <code class="docutils literal notranslate"><span class="pre">aflintc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-python-aflint">Examples in Python, <code class="docutils literal notranslate"><span class="pre">aflint</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-python-aflintc">Examples in Python, <code class="docutils literal notranslate"><span class="pre">aflintc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#id1">Notes regarding the implementation in C# and C++</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#binary-floating-point-single-precision-sflint-and-sflintc">Binary floating point, single precision: <code class="docutils literal notranslate"><span class="pre">sflint</span></code> and <code class="docutils literal notranslate"><span class="pre">sflintc</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-c-sflint">Examples in C#, <code class="docutils literal notranslate"><span class="pre">sflint</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-c-sflintc">Examples in C#, <code class="docutils literal notranslate"><span class="pre">sflintc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-python-sflint">Examples in Python, <code class="docutils literal notranslate"><span class="pre">sflint</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-python-sflintc">Examples in Python, <code class="docutils literal notranslate"><span class="pre">sflintc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#id2">Notes regarding the implementation in C# and C++</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#binary-floating-point-double-precision-dflint-and-dflintc">Binary floating point, double precision: <code class="docutils literal notranslate"><span class="pre">dflint</span></code> and <code class="docutils literal notranslate"><span class="pre">dflintc</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-c-dflint">Examples in C#, <code class="docutils literal notranslate"><span class="pre">dflint</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-c-dflintc">Examples in C#, <code class="docutils literal notranslate"><span class="pre">dflintc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-python-dflint">Examples in Python, <code class="docutils literal notranslate"><span class="pre">dflint</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-python-dflintc">Examples in Python, <code class="docutils literal notranslate"><span class="pre">dflintc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#id3">Notes regarding the implementation in C# and C++</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#binary-floating-point-extended-precision-eflint-and-eflintc">Binary floating point, extended precision: <code class="docutils literal notranslate"><span class="pre">eflint</span></code> and <code class="docutils literal notranslate"><span class="pre">eflintc</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-c-eflint">Examples in C#, <code class="docutils literal notranslate"><span class="pre">eflint</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-c-eflintc">Examples in C#, <code class="docutils literal notranslate"><span class="pre">eflintc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-python-eflint">Examples in Python, <code class="docutils literal notranslate"><span class="pre">eflint</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-python-eflintc">Examples in Python, <code class="docutils literal notranslate"><span class="pre">eflintc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#id4">Notes regarding the implementation in C# and C++</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#binary-floating-point-quadruple-precision-qflint-and-qflintc">Binary floating point, quadruple precision: <code class="docutils literal notranslate"><span class="pre">qflint</span></code> and <code class="docutils literal notranslate"><span class="pre">qflintc</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-c-qflint">Examples in C#, <code class="docutils literal notranslate"><span class="pre">qflint</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-c-qflintc">Examples in C#, <code class="docutils literal notranslate"><span class="pre">qflintc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-python-qflint">Examples in Python, <code class="docutils literal notranslate"><span class="pre">qflint</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-python-qflintc">Examples in Python, <code class="docutils literal notranslate"><span class="pre">qflintc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#id5">Notes regarding the implementation in C# and C++</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#binary-floating-point-octuple-precision-oflint-and-oflintc">Binary floating point, octuple precision: <code class="docutils literal notranslate"><span class="pre">oflint</span></code> and <code class="docutils literal notranslate"><span class="pre">oflintc</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-c-oflint">Examples in C#, <code class="docutils literal notranslate"><span class="pre">oflint</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-c-oflintc">Examples in C#, <code class="docutils literal notranslate"><span class="pre">oflintc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-python-oflint">Examples in Python, <code class="docutils literal notranslate"><span class="pre">oflint</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-python-oflintc">Examples in Python, <code class="docutils literal notranslate"><span class="pre">oflintc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#id6">Notes regarding the implementation in C# and C++</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#binary-floating-point-multiple-precision-mflint-mflintc">Binary floating point, multiple precision: <code class="docutils literal notranslate"><span class="pre">mflint</span></code>, <code class="docutils literal notranslate"><span class="pre">mflintc</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-c-mflint">Examples in C#, <code class="docutils literal notranslate"><span class="pre">mflint</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-c-mflintc">Examples in C#, <code class="docutils literal notranslate"><span class="pre">mflintc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-python-mflint">Examples in Python, <code class="docutils literal notranslate"><span class="pre">mflint</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#examples-in-python-mflintc">Examples in Python, <code class="docutils literal notranslate"><span class="pre">mflintc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#id7">Notes regarding the implementation in C# and C++</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#building-the-underlying-c-and-c-c-libraries">Building the underlying C# and C/C++ libraries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#gmp-version-6-3-0">GMP (version 6.3.0)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#mpfr-version-4-2-2">MPFR (version 4.2.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#mpc-version-1-3-1">MPC (version 1.3.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#flint-version-3-4-0">FLINT (version 3.4.0)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C07_ContextsXlCalcNet2.html#arbprenet-version-1-0-0">ArbPreNet (version 1.0.0)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="C08_Numpy.html">A quick look at Numpy</a><ul>
@@ -1154,7 +1279,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 22, 2026.
+  Last updated on Aug 26, 2026.
   <br/>
 </p>
   </div>

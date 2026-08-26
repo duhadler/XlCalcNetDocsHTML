@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Getting started &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>Searching &#8212; XlCalcNet 1.0.0 documentation</title>
   
   
   
@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=cf1a26e0" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=dd540455" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=f2b458fe" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -52,7 +52,7 @@
     <link rel="next" title="Preface" href="000_Preface/01_preface.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 22, 2026"/>
+    <meta name="docbuild:last-update" content="Aug 26, 2026"/>
   </head>
   
   
@@ -164,11 +164,11 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="B01_GeneralUsage/index.html">Setup and general usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C01_Setup.html">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C02_GuiFunctions.html">General and user interface functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C03_PythonFromCSharp.html">Calling Python from C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C04_SpreadsheetFormulas.html">Using XlCalcNet with spreadsheet formulas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C08_Numpy.html">A quick look at Numpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
@@ -890,7 +890,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Getting started</h1>
+    <h1>Searching</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -899,7 +899,9 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Searching</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sidebars">Sidebars</a></li>
 </ul>
 
             </nav>
@@ -915,21 +917,21 @@ document.write(`
   <figure class="align-center">
 <img alt="_images/title_mpaddin.svg" src="_images/title_mpaddin.svg" />
 </figure>
-<a class="reference internal image-reference" href="_images/KuenOrange.jpg"><img alt="_images/KuenOrange.jpg" class="align-center" src="_images/KuenOrange.jpg" style="width: 10%;" />
+<a class="reference internal image-reference" href="_images/KuenGreen.png"><img alt="_images/KuenGreen.png" class="align-center" src="_images/KuenGreen.png" style="width: 10%;" />
 </a>
 <p><br /></p>
 <p>Welcome to the documentation of <strong>XlCalcNet</strong>, a Microsoft E<strong>X</strong>ce<strong>l</strong> addin for <strong>Calc</strong>ulations in multiprecision, based on Python<strong>Net</strong>. This edition of the documentation describes release 1.0. This documentation can be downloaded in PDF format from <a class="github reference external" href="https://github.com/duhadler/DocsXlCalcNet/raw/master/pdf/xlcalcnet.pdf">duhadler/DocsXlCalcNet</a></p>
 <p>XlCalcNet is free software released under the Mozilla Public License <span class="math notranslate nohighlight">\(2.0\)</span> (see  <a class="reference internal" href="99BackMatter/10_License.html#rst-mpl-2-0-license"><span class="std std-ref">License</span></a>). The git repository is <a class="github reference external" href="https://github.com/duhadler/XlCalcNet">duhadler/XlCalcNet</a>.</p>
 <p>The main goal of XlCalcNet is to enable the use of functions written in Python or C# within spreadsheet formulas. It is therefore assumed that Microsoft Excel (2010 or later, 64 bit) is installed on the users system, running under Windows (7.1 or later, 64 bit), with .NET Framework 4.8/4.8.1 installed.</p>
 <p>If you are not yet familiar with XlCalcNet, it is suggested that you read the preface before browsing the other sections (just click the Next button).</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<section id="searching">
+<h1>Searching<a class="headerlink" href="#searching" title="Link to this heading">#</a></h1>
 <p>Try the “Search “ box in the upper left corner. If you can’t see such a box, move the mouse cursor over the menu tree, and use the mouse wheel to move up the menu tree. As an example, type “gamma” in the search box. This will return not  only the entry for the gamma function, but also a list of all occurrences of the word “gamma” in  this documentation.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
+</section>
+<section id="sidebars">
+<h1>Sidebars<a class="headerlink" href="#sidebars" title="Link to this heading">#</a></h1>
 <p>The sphinx book theme is used, which has a primary (left) and secondary (right) sidebar. The secondary sidebar is invisible when the browser window is not wide enough. So if something seems to be missing, try to make the browser window wider.</p>
-</div>
+</section>
 
 
                 </article>
@@ -966,7 +968,9 @@ document.write(`
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Searching</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sidebars">Sidebars</a></li>
 </ul>
 
   </nav></div>
@@ -1001,7 +1005,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 22, 2026.
+  Last updated on Aug 26, 2026.
   <br/>
 </p>
   </div>

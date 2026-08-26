@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=cf1a26e0" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=dd540455" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=f2b458fe" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -53,7 +53,7 @@
     <link rel="prev" title="Introduction" href="C01_Introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 22, 2026"/>
+    <meta name="docbuild:last-update" content="Aug 26, 2026"/>
   </head>
   
   
@@ -163,11 +163,11 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B01_GeneralUsage/index.html">Setup and general usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C01_Setup.html">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C02_GuiFunctions.html">General and user interface functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_PythonFromCSharp.html">Calling Python from C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_SpreadsheetFormulas.html">Using XlCalcNet with spreadsheet formulas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C08_Numpy.html">A quick look at Numpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
@@ -1147,7 +1147,7 @@ x2:  -0.27584912069607076 y2:  0.11582803026356575
 <dd class="field-even"><p>a tuple (<em>localmin, fx, ic</em>), where <em>localmin</em> is an approximation to  a local minimum; <em>fx</em> = f(localmin); and <em>ic</em> is the iteration count, -1 if a=b, 0 if max.=5000 exceeded.</p>
 </dd>
 </dl>
-<p>See also:  Wikipedia <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id896" title="Wikipedia. Brent's method. Wikimedia Foundation, 2004. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Brent%27s_method.">1178</a>]</span>, <span id="id9">Zhang [<a class="reference internal" href="../99BackMatter/index.html#id285" title="Z. Zhang. An improvement to the brent's method. IJEA, 2:2–26, 2011. Available at: https://www.cscjournals.org/manuscript/Journals/IJEA/Volume2/Issue1/IJEA-7.pdf.">1655</a>]</span>, <span id="id10">Brent [<a class="reference internal" href="../99BackMatter/index.html#id28" title="R. Brent. Algorithms for Minimization without Derivatives. Prentice-Hall (Reprinted by Dover, 2002.), 1st edition, 1973.">41</a>]</span>,  BoostMath <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id290" title="P. A. Bristow and H. Holin. Locating Function Minima using Brent's algorithm. Boost Math Toolkit Library, 2013. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/1_83_0/libs/math/doc/html/math_toolkit/roots_deriv.html.">53</a>]</span>.</p>
+<p>See also:  Wikipedia <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id896" title="Wikipedia. Brent's method. Wikimedia Foundation, 2004. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Brent%27s_method.">1178</a>]</span>, <span id="id9">Zhang [<a class="reference internal" href="../99BackMatter/index.html#id285" title="Z. Zhang. An improvement to the brent's method. IJEA, 2:2–26, 2011. Available at: https://www.cscjournals.org/manuscript/Journals/IJEA/Volume2/Issue1/IJEA-7.pdf.">1655</a>]</span>, <span id="id10">Brent [<a class="reference internal" href="../99BackMatter/index.html#id28" title="R. Brent. Algorithms for Minimization without Derivatives. Prentice-Hall (Reprinted by Dover, 2002.), 1st edition, 1973.">41</a>]</span>,  BoostMath <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id290" title="P. A. Bristow and H. Holin. Locating Function Minima using Brent's algorithm. Boost Math Toolkit Library, 2013. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/roots_deriv.html.">53</a>]</span>.</p>
 <p>The routine in Python:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="o">-</span><span class="mf">10.0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">20.0</span><span class="p">;</span> <span class="n">tol</span> <span class="o">=</span> <span class="mf">1E-8</span>
@@ -1180,7 +1180,7 @@ x2:  -0.27584912069607076 y2:  0.11582803026356575
 </dd>
 </dl>
 <p>Brent/Dekker algorithm with guaranteed convergence for finding a zero   of a function: Return a zero x of the function f in the interval [a,b] to within a tolerance 6*eps_x*|x|+2*t, where t is a positive tolerance; assumes that f(a) and f(b) have different signs. ic is the iteration   count; err is an error code (0: no error, -1: if f(a) and f(b) have the same sign, -2: max. iteration count exceeded). The algorithm is based   on a combination of successive interpolations and bisection.</p>
-<p>See also:  Wikipedia <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id896" title="Wikipedia. Brent's method. Wikimedia Foundation, 2004. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Brent%27s_method.">1178</a>]</span>, <span id="id13">Zhang [<a class="reference internal" href="../99BackMatter/index.html#id285" title="Z. Zhang. An improvement to the brent's method. IJEA, 2:2–26, 2011. Available at: https://www.cscjournals.org/manuscript/Journals/IJEA/Volume2/Issue1/IJEA-7.pdf.">1655</a>]</span>, <span id="id14">Brent [<a class="reference internal" href="../99BackMatter/index.html#id27" title="R.P. Brent. An algorithm with guaranteed convergence for finding a zero of a function. The Computer Journal, 1971.">42</a>]</span>,  BoostMath <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id290" title="P. A. Bristow and H. Holin. Locating Function Minima using Brent's algorithm. Boost Math Toolkit Library, 2013. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/1_83_0/libs/math/doc/html/math_toolkit/roots_deriv.html.">53</a>]</span>.</p>
+<p>See also:  Wikipedia <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id896" title="Wikipedia. Brent's method. Wikimedia Foundation, 2004. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Brent%27s_method.">1178</a>]</span>, <span id="id13">Zhang [<a class="reference internal" href="../99BackMatter/index.html#id285" title="Z. Zhang. An improvement to the brent's method. IJEA, 2:2–26, 2011. Available at: https://www.cscjournals.org/manuscript/Journals/IJEA/Volume2/Issue1/IJEA-7.pdf.">1655</a>]</span>, <span id="id14">Brent [<a class="reference internal" href="../99BackMatter/index.html#id27" title="R.P. Brent. An algorithm with guaranteed convergence for finding a zero of a function. The Computer Journal, 1971.">42</a>]</span>,  BoostMath <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id290" title="P. A. Bristow and H. Holin. Locating Function Minima using Brent's algorithm. Boost Math Toolkit Library, 2013. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/roots_deriv.html.">53</a>]</span>.</p>
 <p>The routine in Python:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="o">-</span><span class="mf">20.0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">20.0</span><span class="p">;</span> <span class="n">tol</span> <span class="o">=</span> <span class="mf">1E-8</span>
@@ -1212,7 +1212,7 @@ x2:  -0.27584912069607076 y2:  0.11582803026356575
 <dd class="field-even"><p>an approximation to a zero (root) of the function.</p>
 </dd>
 </dl>
-<p>See also:  Wikipedia <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id896" title="Wikipedia. Brent's method. Wikimedia Foundation, 2004. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Brent%27s_method.">1178</a>]</span>, <span id="id17">Zhang [<a class="reference internal" href="../99BackMatter/index.html#id285" title="Z. Zhang. An improvement to the brent's method. IJEA, 2:2–26, 2011. Available at: https://www.cscjournals.org/manuscript/Journals/IJEA/Volume2/Issue1/IJEA-7.pdf.">1655</a>]</span>, <span id="id18">Brent [<a class="reference internal" href="../99BackMatter/index.html#id27" title="R.P. Brent. An algorithm with guaranteed convergence for finding a zero of a function. The Computer Journal, 1971.">42</a>]</span>,  BoostMath <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id290" title="P. A. Bristow and H. Holin. Locating Function Minima using Brent's algorithm. Boost Math Toolkit Library, 2013. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/1_83_0/libs/math/doc/html/math_toolkit/roots_deriv.html.">53</a>]</span>.</p>
+<p>See also:  Wikipedia <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id896" title="Wikipedia. Brent's method. Wikimedia Foundation, 2004. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Brent%27s_method.">1178</a>]</span>, <span id="id17">Zhang [<a class="reference internal" href="../99BackMatter/index.html#id285" title="Z. Zhang. An improvement to the brent's method. IJEA, 2:2–26, 2011. Available at: https://www.cscjournals.org/manuscript/Journals/IJEA/Volume2/Issue1/IJEA-7.pdf.">1655</a>]</span>, <span id="id18">Brent [<a class="reference internal" href="../99BackMatter/index.html#id27" title="R.P. Brent. An algorithm with guaranteed convergence for finding a zero of a function. The Computer Journal, 1971.">42</a>]</span>,  BoostMath <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id290" title="P. A. Bristow and H. Holin. Locating Function Minima using Brent's algorithm. Boost Math Toolkit Library, 2013. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/roots_deriv.html.">53</a>]</span>.</p>
 <p>The routine in Python:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="o">-</span><span class="mf">20.0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">20.0</span><span class="p">;</span> <span class="n">tol</span> <span class="o">=</span> <span class="mf">1E-8</span>
@@ -1328,7 +1328,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 22, 2026.
+  Last updated on Aug 26, 2026.
   <br/>
 </p>
   </div>

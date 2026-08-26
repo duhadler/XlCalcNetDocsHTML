@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=cf1a26e0" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=dd540455" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=f2b458fe" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -53,7 +53,7 @@
     <link rel="prev" title="Additional numbertheoretic functions" href="D03_AdditionalNumbertheoretic.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 22, 2026"/>
+    <meta name="docbuild:last-update" content="Aug 26, 2026"/>
   </head>
   
   
@@ -163,11 +163,11 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B01_GeneralUsage/index.html">Setup and general usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C01_Setup.html">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C02_GuiFunctions.html">General and user interface functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_PythonFromCSharp.html">Calling Python from C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_SpreadsheetFormulas.html">Using XlCalcNet with spreadsheet formulas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C08_Numpy.html">A quick look at Numpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
@@ -1253,7 +1253,7 @@ The call <code class="docutils literal notranslate"><span class="pre">hyp2f2(a1,
 <dt class="sig sig-object py" id="ctx.hyperg_2f0">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">hyperg_2f0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.hyperg_2f0" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, <code class="docutils literal notranslate"><span class="pre">gmp</span></code> or <code class="docutils literal notranslate"><span class="pre">apm</span></code>.</p>
-<p>Returns the generalized hypergeometric function  <sub>2</sub>F<sub>0</sub>(a, b; z). See also  Wikipedia <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id1134" title="Wikipedia. Generalized hypergeometric function. Wikimedia Foundation, 2014. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Generalized_hypergeometric_function.">1411</a>]</span>, MathWorld <span id="id22">[<a class="reference internal" href="../99BackMatter/index.html#id1624" title="E. W. Weisstein. Generalized Hypergeometric Function. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/GeneralizedHypergeometricFunction.html.">1031</a>]</span>, NIST <span id="id23">[<a class="reference internal" href="../99BackMatter/index.html#id487" title="A.B.O. Askey, R. A.; Daalhuis. Generalized Hypergeometric Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/16.2.">21</a>]</span>, BoostMath <span id="id24">[<a class="reference internal" href="../99BackMatter/index.html#id409" title="P. A. Bristow and H. Holin. Hypergeometric 2F0. Boost Math Toolkit Library, 2019. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/1_83_0/libs/math/doc/html/math_toolkit/hypergeometric/hypergeometric_2f0.html.">162</a>]</span>, Mpmath <span id="id25">[<a class="reference internal" href="../99BackMatter/index.html#id738" title="The Mpmath Development Team. Hypergeometric Function 2F0. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2013. [Online; accessed 22-July-2024]. URL: http://mpmath.org/doc/1.1.0/functions/hypergeometric.html#hyp2f0.">688</a>]</span>.</p>
+<p>Returns the generalized hypergeometric function  <sub>2</sub>F<sub>0</sub>(a, b; z). See also  Wikipedia <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id1134" title="Wikipedia. Generalized hypergeometric function. Wikimedia Foundation, 2014. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Generalized_hypergeometric_function.">1411</a>]</span>, MathWorld <span id="id22">[<a class="reference internal" href="../99BackMatter/index.html#id1624" title="E. W. Weisstein. Generalized Hypergeometric Function. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/GeneralizedHypergeometricFunction.html.">1031</a>]</span>, NIST <span id="id23">[<a class="reference internal" href="../99BackMatter/index.html#id487" title="A.B.O. Askey, R. A.; Daalhuis. Generalized Hypergeometric Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/16.2.">21</a>]</span>, BoostMath <span id="id24">[<a class="reference internal" href="../99BackMatter/index.html#id409" title="P. A. Bristow and H. Holin. Hypergeometric 2F0. Boost Math Toolkit Library, 2019. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/hypergeometric/hypergeometric_2f0.html.">162</a>]</span>, Mpmath <span id="id25">[<a class="reference internal" href="../99BackMatter/index.html#id738" title="The Mpmath Development Team. Hypergeometric Function 2F0. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2013. [Online; accessed 22-July-2024]. URL: http://mpmath.org/doc/1.1.0/functions/hypergeometric.html#hyp2f0.">688</a>]</span>.</p>
 </dd></dl>
 
 </section>
@@ -1357,7 +1357,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 22, 2026.
+  Last updated on Aug 26, 2026.
   <br/>
 </p>
   </div>

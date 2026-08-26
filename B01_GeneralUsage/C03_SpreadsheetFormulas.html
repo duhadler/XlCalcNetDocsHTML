@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Calling Python from C# &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>More on XlCalcNet with MS Excel &#8212; XlCalcNet 1.0.0 documentation</title>
   
   
   
@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=cf1a26e0" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=dd540455" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=f2b458fe" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -44,15 +44,15 @@
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=4ea706d9"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'B01_GeneralUsage/C03_PythonFromCSharp';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'B01_GeneralUsage/C03_SpreadsheetFormulas';</script>
     <script src="../_static/custom-icon.js?v=74687d30"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Using XlCalcNet with spreadsheet formulas" href="C04_SpreadsheetFormulas.html" />
+    <link rel="next" title="Calling Python from C#" href="C04_PythonFromCSharp.html" />
     <link rel="prev" title="General and user interface functions" href="C02_GuiFunctions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 22, 2026"/>
+    <meta name="docbuild:last-update" content="Aug 26, 2026"/>
   </head>
   
   
@@ -162,11 +162,11 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Setup and general usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html">General and user interface functions</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Calling Python from C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C04_SpreadsheetFormulas.html">Using XlCalcNet with spreadsheet formulas</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C08_Numpy.html">A quick look at Numpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
@@ -804,7 +804,7 @@
       
       
       
-      <li><a href="../_sources/B01_GeneralUsage/C03_PythonFromCSharp.rst" target="_blank"
+      <li><a href="../_sources/B01_GeneralUsage/C03_SpreadsheetFormulas.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -888,7 +888,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Calling Python from C#</h1>
+    <h1>More on XlCalcNet with MS Excel</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -898,8 +898,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-pythonnet-from-c">Using Pythonnet from C#</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-the-socket-server-from-c">Calling the socket server from C#</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-with-an-example-spreadsheet-simple-formulas-multiple-precision">Exploring with an example spreadsheet: simple formulas, multiple precision</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-with-an-example-spreadsheet-array-formulas">Exploring with an example spreadsheet: array formulas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-with-an-example-spreadsheet-small-python-programs-syntax-rules">Exploring with an example spreadsheet: small Python programs, syntax rules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entering-multi-precision-data-into-a-spreadsheet-text-formatting-and-asdouble">Entering multi-precision data into a spreadsheet (text formatting and AsDouble)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-procedures-instead-of-functions">Managing procedures instead of functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-library-of-user-defined-python-functions">Building a library of user defined python functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-library-of-user-defined-functions-in-c">Building a library of user defined functions in C#</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sphinx-building-documentation-for-software-with-python-html-and-pdf">Sphinx: building documentation for software with Python (html and pdf)</a></li>
 </ul>
             </nav>
         </div>
@@ -912,15 +918,41 @@ document.write(`
                 <article class="bd-article">
                   
   <p></p>
-<section id="calling-python-from-c">
-<h1>Calling Python from C#<a class="headerlink" href="#calling-python-from-c" title="Link to this heading">#</a></h1>
-<section id="using-pythonnet-from-c">
-<h2>Using Pythonnet from C#<a class="headerlink" href="#using-pythonnet-from-c" title="Link to this heading">#</a></h2>
-<p>This allows to call python from C# in-process.</p>
+<section id="more-on-xlcalcnet-with-ms-excel">
+<h1>More on XlCalcNet with MS Excel<a class="headerlink" href="#more-on-xlcalcnet-with-ms-excel" title="Link to this heading">#</a></h1>
+<section id="exploring-with-an-example-spreadsheet-simple-formulas-multiple-precision">
+<h2>Exploring with an example spreadsheet: simple formulas, multiple precision<a class="headerlink" href="#exploring-with-an-example-spreadsheet-simple-formulas-multiple-precision" title="Link to this heading">#</a></h2>
+<p>MS Excel: TestCPython.xlsx</p>
 </section>
-<section id="calling-the-socket-server-from-c">
-<h2>Calling the socket server from C#<a class="headerlink" href="#calling-the-socket-server-from-c" title="Link to this heading">#</a></h2>
-<p>This is the preferred method. It is also used internally by MS Excel XlNet addin.</p>
+<section id="exploring-with-an-example-spreadsheet-array-formulas">
+<h2>Exploring with an example spreadsheet: array formulas<a class="headerlink" href="#exploring-with-an-example-spreadsheet-array-formulas" title="Link to this heading">#</a></h2>
+<p>MS Excel: TestCPython.xlsx</p>
+</section>
+<section id="exploring-with-an-example-spreadsheet-small-python-programs-syntax-rules">
+<h2>Exploring with an example spreadsheet: small Python programs, syntax rules<a class="headerlink" href="#exploring-with-an-example-spreadsheet-small-python-programs-syntax-rules" title="Link to this heading">#</a></h2>
+<p>MS Excel: TestCPython.xlsx</p>
+</section>
+<section id="entering-multi-precision-data-into-a-spreadsheet-text-formatting-and-asdouble">
+<h2>Entering multi-precision data into a spreadsheet (text formatting and AsDouble)<a class="headerlink" href="#entering-multi-precision-data-into-a-spreadsheet-text-formatting-and-asdouble" title="Link to this heading">#</a></h2>
+<p>MS Excel: TestCPython.xlsx</p>
+</section>
+<section id="managing-procedures-instead-of-functions">
+<h2>Managing procedures instead of functions<a class="headerlink" href="#managing-procedures-instead-of-functions" title="Link to this heading">#</a></h2>
+<p>MS Excel: TestCPython.xlsx</p>
+</section>
+<section id="building-a-library-of-user-defined-python-functions">
+<h2>Building a library of user defined python functions<a class="headerlink" href="#building-a-library-of-user-defined-python-functions" title="Link to this heading">#</a></h2>
+<p>MS Excel: TestCPython.xlsx</p>
+</section>
+<section id="building-a-library-of-user-defined-functions-in-c">
+<h2>Building a library of user defined functions in C#<a class="headerlink" href="#building-a-library-of-user-defined-functions-in-c" title="Link to this heading">#</a></h2>
+<p>Describes building and using the user library.</p>
+</section>
+<section id="sphinx-building-documentation-for-software-with-python-html-and-pdf">
+<span id="rst-user-documentation"></span><h2>Sphinx: building documentation for software with Python (html and pdf)<a class="headerlink" href="#sphinx-building-documentation-for-software-with-python-html-and-pdf" title="Link to this heading">#</a></h2>
+<p>See also: <a class="reference external" href="https://www.sphinx-doc.org/en/master/">https://www.sphinx-doc.org/en/master/</a></p>
+<p>See also: <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/markdown.html">https://www.sphinx-doc.org/en/master/usage/markdown.html</a></p>
+<p>See also: <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">https://myst-parser.readthedocs.io/en/latest/</a></p>
 </section>
 </section>
 
@@ -945,11 +977,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="C04_SpreadsheetFormulas.html"
+       href="C04_PythonFromCSharp.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Using XlCalcNet with spreadsheet formulas</p>
+        <p class="prev-next-title">Calling Python from C#</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -969,8 +1001,14 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-pythonnet-from-c">Using Pythonnet from C#</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-the-socket-server-from-c">Calling the socket server from C#</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-with-an-example-spreadsheet-simple-formulas-multiple-precision">Exploring with an example spreadsheet: simple formulas, multiple precision</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-with-an-example-spreadsheet-array-formulas">Exploring with an example spreadsheet: array formulas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-with-an-example-spreadsheet-small-python-programs-syntax-rules">Exploring with an example spreadsheet: small Python programs, syntax rules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entering-multi-precision-data-into-a-spreadsheet-text-formatting-and-asdouble">Entering multi-precision data into a spreadsheet (text formatting and AsDouble)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-procedures-instead-of-functions">Managing procedures instead of functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-library-of-user-defined-python-functions">Building a library of user defined python functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-library-of-user-defined-functions-in-c">Building a library of user defined functions in C#</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sphinx-building-documentation-for-software-with-python-html-and-pdf">Sphinx: building documentation for software with Python (html and pdf)</a></li>
 </ul>
   </nav></div>
 
@@ -1004,7 +1042,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 22, 2026.
+  Last updated on Aug 26, 2026.
   <br/>
 </p>
   </div>

@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=cf1a26e0" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=dd540455" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=f2b458fe" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -53,7 +53,7 @@
     <link rel="prev" title="Boost: Cauchy distribution" href="D02_Cauchy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 22, 2026"/>
+    <meta name="docbuild:last-update" content="Aug 26, 2026"/>
   </head>
   
   
@@ -163,11 +163,11 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../B01_GeneralUsage/index.html">Setup and general usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C01_Setup.html">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C02_GuiFunctions.html">General and user interface functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C03_PythonFromCSharp.html">Calling Python from C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C04_SpreadsheetFormulas.html">Using XlCalcNet with spreadsheet formulas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C08_Numpy.html">A quick look at Numpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
@@ -928,7 +928,7 @@ document.write(`
 <section id="boost-exponential-distribution">
 <span id="rst-dist-exponential"></span><h1>Boost: Exponential distribution<a class="headerlink" href="#boost-exponential-distribution" title="Link to this heading">#</a></h1>
 <p>The following functions return the pdf, cdf, qtf or boost class of the distribution with rate parameter <span class="math notranslate nohighlight">\(\lambda_1 &gt; 0\)</span> and the support interval <span class="math notranslate nohighlight">\((0, +\infty)\)</span>.</p>
-<p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id963" title="Wikipedia. Exponential distribution. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Exponential_distribution.">1242</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id1442" title="E. W. Weisstein. Exponential Distribution. From MathWorld - A Wolfram Web Resource, 2005. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ExponentialDistribution.html.">892</a>]</span>,  BoostMath <span id="id3">[<a class="reference internal" href="../../99BackMatter/index.html#id310" title="P. A. Bristow and H. Holin. Exponential Distribution. Boost Math Toolkit Library, 2014. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/1_83_0/libs/math/doc/html/math_toolkit/dist_ref/dists/exp_dist.html.">60</a>]</span>, <span id="id4">Ehrhardt [<a class="reference internal" href="../../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">309</a>]</span> (3.9.7).</p>
+<p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id963" title="Wikipedia. Exponential distribution. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Exponential_distribution.">1242</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id1442" title="E. W. Weisstein. Exponential Distribution. From MathWorld - A Wolfram Web Resource, 2005. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ExponentialDistribution.html.">892</a>]</span>,  BoostMath <span id="id3">[<a class="reference internal" href="../../99BackMatter/index.html#id310" title="P. A. Bristow and H. Holin. Exponential Distribution. Boost Math Toolkit Library, 2014. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/dist_ref/dists/exp_dist.html.">60</a>]</span>, <span id="id4">Ehrhardt [<a class="reference internal" href="../../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">309</a>]</span> (3.9.7).</p>
 <p></p>
 <dl class="py method" id="ctx-exponentialpdf">
 <dt class="sig sig-object py" id="Ctx.exponential_pdf">
@@ -989,7 +989,7 @@ document.write(`
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dist_exponential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lambda1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dist_exponential" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, <code class="docutils literal notranslate"><span class="pre">ipm</span></code>, <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">gmp</span></code> or <code class="docutils literal notranslate"><span class="pre">apm</span></code>.</p>
 <p>The exponential distribution is a continuous probability distribution  with rate parameter <span class="math notranslate nohighlight">\(\lambda_1 &gt; 0\)</span>, and the support interval <span class="math notranslate nohighlight">\([0, +\infty)\)</span>.
-See also Wikipedia <span id="id5">[<a class="reference internal" href="../../99BackMatter/index.html#id963" title="Wikipedia. Exponential distribution. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Exponential_distribution.">1242</a>]</span>, MathWorld <span id="id6">[<a class="reference internal" href="../../99BackMatter/index.html#id1442" title="E. W. Weisstein. Exponential Distribution. From MathWorld - A Wolfram Web Resource, 2005. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ExponentialDistribution.html.">892</a>]</span>, BoostMath <span id="id7">[<a class="reference internal" href="../../99BackMatter/index.html#id310" title="P. A. Bristow and H. Holin. Exponential Distribution. Boost Math Toolkit Library, 2014. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/1_83_0/libs/math/doc/html/math_toolkit/dist_ref/dists/exp_dist.html.">60</a>]</span>, <span id="id8">Witkovský [<a class="reference internal" href="../../99BackMatter/index.html#id421" title="V. Witkovský. Exponential Distribution. CharFunTool: The characteristic functions toolbox, 2017. [Online; accessed 22-July-2024]. URL: https://github.com/witkovsky/CharFunTool/blob/master/CF_Repository/cfX_Exponential.m.">1616</a>]</span>, R (Statistical System) <span id="id9">[<a class="reference internal" href="../../99BackMatter/index.html#id866" title="R Core Team. The Exponential Distribution. The R Project for Statistical Computing, 2019. [Online; accessed 22-July-2024]. URL: https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/Exponential.">548</a>]</span>.</p>
+See also Wikipedia <span id="id5">[<a class="reference internal" href="../../99BackMatter/index.html#id963" title="Wikipedia. Exponential distribution. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Exponential_distribution.">1242</a>]</span>, MathWorld <span id="id6">[<a class="reference internal" href="../../99BackMatter/index.html#id1442" title="E. W. Weisstein. Exponential Distribution. From MathWorld - A Wolfram Web Resource, 2005. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ExponentialDistribution.html.">892</a>]</span>, BoostMath <span id="id7">[<a class="reference internal" href="../../99BackMatter/index.html#id310" title="P. A. Bristow and H. Holin. Exponential Distribution. Boost Math Toolkit Library, 2014. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/dist_ref/dists/exp_dist.html.">60</a>]</span>, <span id="id8">Witkovský [<a class="reference internal" href="../../99BackMatter/index.html#id421" title="V. Witkovský. Exponential Distribution. CharFunTool: The characteristic functions toolbox, 2017. [Online; accessed 22-July-2024]. URL: https://github.com/witkovsky/CharFunTool/blob/master/CF_Repository/cfX_Exponential.m.">1616</a>]</span>, R (Statistical System) <span id="id9">[<a class="reference internal" href="../../99BackMatter/index.html#id866" title="R Core Team. The Exponential Distribution. The R Project for Statistical Computing, 2019. [Online; accessed 22-July-2024]. URL: https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/Exponential.">548</a>]</span>.</p>
 </dd></dl>
 
 <p></p>
@@ -1244,7 +1244,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 22, 2026.
+  Last updated on Aug 26, 2026.
   <br/>
 </p>
   </div>

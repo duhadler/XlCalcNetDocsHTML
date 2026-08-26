@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=cf1a26e0" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=dd540455" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=f2b458fe" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -53,7 +53,7 @@
     <link rel="prev" title="Modular forms, in terms of half-period \(\omega_1\) and elliptic period ratio \(\tau\)" href="../B08_EllipticFunctions/C08_ModularFormsTau.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 22, 2026"/>
+    <meta name="docbuild:last-update" content="Aug 26, 2026"/>
   </head>
   
   
@@ -163,11 +163,11 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B01_GeneralUsage/index.html">Setup and general usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C01_Setup.html">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C02_GuiFunctions.html">General and user interface functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_PythonFromCSharp.html">Calling Python from C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_SpreadsheetFormulas.html">Using XlCalcNet with spreadsheet formulas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C08_Numpy.html">A quick look at Numpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
@@ -931,9 +931,9 @@ document.write(`
 <p>and</p>
 <div class="math notranslate nohighlight">
 \[\Phi (z,s+1,a)=-\,{\frac {1}{s}}{\frac {\partial }{\partial a}}\Phi (z,s,a).\]</div>
-<p><strong>Implementation notes</strong></p>
-<p>The current Amath implementation is restricted to real arguments <span class="math notranslate nohighlight">\(z \leq 1, s \geq -1, a \geq 0\)</span>.</p>
-<p>The current ARB implementation is restricted to calls to the polylogarithm or the Hurwitz zeta function, i.e. it expects <span class="math notranslate nohighlight">\(s=0\)</span> for arbitrary <span class="math notranslate nohighlight">\(z\)</span> and <span class="math notranslate nohighlight">\(a\)</span>, or <span class="math notranslate nohighlight">\(z=1\)</span> for arbitrary <span class="math notranslate nohighlight">\(s\)</span> and <span class="math notranslate nohighlight">\(a\)</span>, or <span class="math notranslate nohighlight">\(a\)</span> a nonnegative integer for arbitrary <span class="math notranslate nohighlight">\(z\)</span> and <span class="math notranslate nohighlight">\(s\)</span>, and otherwise returns NAN.</p>
+<p>The source code for the C# tests in Visual Studio is divided by real and complex modules:</p>
+<p>The source code for the C# tests in Visual Studio using real modules can be found online in the <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/TestFixedAndArbPrecCS/B09a_RealLerchPhi.cs">B09a_RealLerchPhi.cs</a>,</p>
+<p>The source code for the C# tests in Visual Studio using complex modules can be found online in the <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/TestFixedAndArbPrecCS/B09b_CplxLerchPhi.cs">B09b_CplxLerchPhi.cs</a>,</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="C01_LerchPhi.html">Lerch’s transcendent and Lerch’s zeta</a><ul>
@@ -1164,7 +1164,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 22, 2026.
+  Last updated on Aug 26, 2026.
   <br/>
 </p>
   </div>

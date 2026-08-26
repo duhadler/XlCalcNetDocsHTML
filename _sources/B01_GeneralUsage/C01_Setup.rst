@@ -38,18 +38,6 @@ XlCalcNet is intended to be used together with existing Python libraries like Nu
 
 
 
-
-
-Downloading and installing the "right" version of CPython
--------------------------------------------------------------
-
-**Installation of CPython specifically for Excel**
-
-Explain installation process.
-
-**Current development version**
-
-
 This documentation is available online at https://duhadler.github.io/XlCalcNetDocsOnline/
 
 
@@ -60,42 +48,28 @@ The git repository is https://github.com/duhadler/xlcalcnet)
 
 
 
+|newpage|
+
+Downloading and installing the "right" version of CPython
+-------------------------------------------------------------
+
+Describe the dependency on PythonNet.
+
+Explain The 3 folder concept: user, application local data, python installation
+
+Describe the choices for downloading python
+
+Describe how to install python as a "free-standing" version without need to uninstall.
+
+Describe choices for locating this version of python
+
+Describe copying the batch files into 
 
 
 
-**Checking that it works**
 
 
-After the setup has completed, you should be able to fire up the interactive Python interpreter and do the following::
-
-    >>> from xlcalcnet import *
-    >>> mp.dps = 50
-    >>> print(mpf(2) ** mpf('0.5'))
-    1.4142135623730950488016887242096980785696718753769
-    >>> print(2*pi)
-    6.2831853071795864769252867665590057683943387987502
-
-*Note: if you have are upgrading xlcalcnet from an earlier version, you may have to manually uninstall the old version or remove the old files.*
-
-
-
-
-
-Installing XlCalcNet
-----------------------
-
-It is recommended that you run xlcalcnet's full set of unit tests to make sure everything works. The `py.test <https://pytest.org/>`_ is a required dependence for testing.  The tests are located in the ``tests`` subdirectory of the main xlcalcnet directory. They can be run using::
-
-    ``py.test --pyargs xlcalcnet``
-
-If any test fails, please send a detailed bug report to the `xlcalcnet issue tracker <https://github.com/fredrik-johansson/xlcalcnet/issues>`_.
-
-To run the tests with support for gmpy disabled, set ``mpdistlab_NOGMPY`` environment variable.
-
-To enable extra diagnostics, use, set ``mpdistlab_STRICT`` environment variable.
-
-
-
+|newpage|
 
 Installing and using Pythonnet: Calling C\# from Python
 ---------------------------------------------------------
@@ -123,8 +97,16 @@ In terms of usability, the .NET Framework 4.x runtime does not include an IDE; w
 
 
 
-The 3 folder concept: user, application local data, installation
---------------------------------------------------------------------------------
+|newpage|
+
+Downloading and unpacking repositories from Github
+--------------------------------------------------------
+
+Describe how to download and unpack the core repositories from Github
+
+
+Emphasize the need to use Microsoft defender for the unzipped repositories.
+
 
 The data which are directly maniplated by the user are located in:
 
@@ -133,19 +115,12 @@ The data which generated as a result of running a python script or C\# program a
 The data which contain the installation are located in:
 
 
-
-
-
-
-
-Copying and exploring the DataXlCalcNet folder
---------------------------------------------------------------------------------
-
 Describe the copying and exploring the DataXlCalcNet folder
 
 
 
 
+|newpage|
 
 Installing and using the Tiny IDE as a Python application
 ----------------------------------------------------------------
@@ -179,17 +154,47 @@ Follow the steps to make the Tiny IDE available:
 
 
 
-
-
 |newpage|
 
+Installing and using of the MS Excel XlNet addin: first steps
+--------------------------------------------------------------------------------
+
+
+!!! Describe the need for starting  the socket server first !!!
+
+When starting the socket server for the first time to allow acces of Pyton to networks. Confirm.
+
+
+
+Describe the installation of the MS Excel addin.
 
 
 
 
+MS Excel: TestCPython.xlsx
 
-Building a library of user defined python functions
-------------------------------------------------------------------------------------
+
+
+.. image:: ../_static/FunctionArguments.png
+    :width: 50 %
+    :align: center
+
+
+MS Excel: TestCPython.xlsx
+
+
+
+.. image:: ../_static/ContextMenu.png
+    :width: 30 %
+    :align: center
+
+
+MS Excel: TestCPython.xlsx
+
+
+.. image:: ../_static/NavigatorXlCalcNet.png
+    :width: 50 %
+    :align: center
 
 
 MS Excel: TestCPython.xlsx
@@ -198,34 +203,44 @@ MS Excel: TestCPython.xlsx
 
 
 
+|newpage|
+
+Rebuilding the .dll files of XlCalcNet and XlCalcNet2 from source code
+--------------------------------------------------------------------------
+
+The XlCalcNet and XlCalcNet2 repositories contain both precompiled .dll files and their source code.
+
+This section descibes how to rebuild the .dll files of XlCalcNet and XlCalcNet2 from source code, either completely or only in part. The building process itself is not particularly difficult, but it requires the installation of MSYS2 (version 3.4.9.x86_64 or later: about 4 GB in size), Free Pascal (version 2.6.4 or later: about 320 MB in size), and Visual Studio Community (version 2019 or later: about 4.6 GB in size).
+
+In the following it is assumed that the user has installed MSYS2, Free Pascal and Visual Studio Community and is comfortable using them.
+
+MSYS2 is required to build the file ``FixedPrecGCC64K8.dll`` in the XlCalcNet ``Bin`` folder. The details of the building process are described in :ref:`FixedPrec <rst_FixedPrec>`.
+
+MSYS2 is also required to build the file ``ArbPrecNetGCCK8.dll`` in the XlCalcNet2 ``Bin`` folder. The details of the building process are described in :ref:`ArbPrec <rst_ArbPrec>`.
+
+Free Pascal is required to build  the file ``libwe64d.dll`` in the XlCalcNet ``Bin`` folder. The details of the building process are described in :ref:`FixedPrec <rst_FixedPrec>`.
 
 
-Building a library of user defined functions in C\#
-----------------------------------------------------------------------------------------
+Erverything else can be done in Visual Studio Community:
 
-Describes building and using the user library.
+The details of the building the file ``FixedPrecNet.dll`` in the XlCalcNet ``Bin`` folder are described in :ref:`FixedPrec <rst_FixedPrec>`.
 
-
-
+The details of the building the file ``ArbPrecNet.dll`` in the XlCalcNet2 ``Bin`` folder are described in :ref:`ArbPrec <rst_ArbPrec>`.
 
 
-.. _rst_user_documentation: 
+The details of the building the file ``ArbPrecNet.dll`` in the XlCalcNet ``Bin`` folder are described in :ref:`ClientServer <rst_ClientServer>`.
 
 
-Sphinx: building documentation for software with Python (html and pdf)
-----------------------------------------------------------------------------------
+The details of the building the file ``ArbPrecNet.dll`` in the XlCalcNet ``Bin`` folder are described in :ref:`OutputMonitor <rst_OutputMonitor>`.
 
 
-See also: https://www.sphinx-doc.org/en/master/
-
-See also: https://www.sphinx-doc.org/en/master/usage/markdown.html
-
-See also: https://myst-parser.readthedocs.io/en/latest/
+The details of the building the file ``ArbPrecNet.dll`` in the XlCalcNet ``Bin`` folder are described in :ref:`TinyIde <rst_TinyIde>`.
 
 
+The details of the building the file ``ArbPrecNet.dll`` in the XlCalcNet ``Bin`` folder are described in :ref:`GalleryOfPlots <rst_GalleryOfPlots>`.
 
 
-
+The details of the building the file ``ArbPrecNet.dll`` in the XlCalcNet ``Bin`` folder are described in :ref:`Wpf3D <rst_Wpf3D>`.
 
 
 

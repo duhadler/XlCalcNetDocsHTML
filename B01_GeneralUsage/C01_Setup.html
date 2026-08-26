@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=cf1a26e0" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=dd540455" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=f2b458fe" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -52,7 +52,7 @@
     <link rel="prev" title="Setup and general usage" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 22, 2026"/>
+    <meta name="docbuild:last-update" content="Aug 26, 2026"/>
   </head>
   
   
@@ -162,11 +162,11 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Setup and general usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html">General and user interface functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C03_PythonFromCSharp.html">Calling Python from C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C04_SpreadsheetFormulas.html">Using XlCalcNet with spreadsheet formulas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C08_Numpy.html">A quick look at Numpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
@@ -899,14 +899,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-and-installing-the-right-version-of-cpython">Downloading and installing the “right” version of CPython</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-xlcalcnet">Installing XlCalcNet</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-pythonnet-calling-c-from-python">Installing and using Pythonnet: Calling C# from Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-3-folder-concept-user-application-local-data-installation">The 3 folder concept: user, application local data, installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copying-and-exploring-the-dataxlcalcnet-folder">Copying and exploring the DataXlCalcNet folder</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-and-unpacking-repositories-from-github">Downloading and unpacking repositories from Github</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-the-tiny-ide-as-a-python-application">Installing and using the Tiny IDE as a Python application</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-library-of-user-defined-python-functions">Building a library of user defined python functions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-library-of-user-defined-functions-in-c">Building a library of user defined functions in C#</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sphinx-building-documentation-for-software-with-python-html-and-pdf">Sphinx: building documentation for software with Python (html and pdf)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-of-the-ms-excel-xlnet-addin-first-steps">Installing and using of the MS Excel XlNet addin: first steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rebuilding-the-dll-files-of-xlcalcnet-and-xlcalcnet2-from-source-code">Rebuilding the .dll files of XlCalcNet and XlCalcNet2 from source code</a></li>
 </ul>
             </nav>
         </div>
@@ -932,35 +929,19 @@ or no experience using Python.</p>
 <p>On the C/C++ side, XlCalcNet uses DAMath, Boost Math, Boost Multiprecision and Eigen to provide numerical functions in single, double, extended, quadruple and octuple precision, which are available to the user both from C# and Python.</p>
 <p>The XlCalcNet2 library, which is licensed under the LGPL-3.0 and is therefore provided as a separate project, is based on Boost Math, Boost Multiprecision, Eigen, GMP, MPFR, MPC and Flint and provides functions for the same data types as XlCalcNet and also in arbitrary precision.</p>
 <p>XlCalcNet is intended to be used together with existing Python libraries like NumPy, Matplotlib, Pandas, SciPy. It can also be used from recent versions of RStudio and R, using the reticulate package.</p>
-<section id="downloading-and-installing-the-right-version-of-cpython">
-<h2>Downloading and installing the “right” version of CPython<a class="headerlink" href="#downloading-and-installing-the-right-version-of-cpython" title="Link to this heading">#</a></h2>
-<p><strong>Installation of CPython specifically for Excel</strong></p>
-<p>Explain installation process.</p>
-<p><strong>Current development version</strong></p>
 <p>This documentation is available online at <a class="reference external" href="https://duhadler.github.io/XlCalcNetDocsOnline/">https://duhadler.github.io/XlCalcNetDocsOnline/</a></p>
 <p>The pdf can be downloaded from <a class="github reference external" href="https://github.com/duhadler/DocsXlCalcNet/raw/master/pdf/xlcalcnet.pdf">duhadler/DocsXlCalcNet</a></p>
 <p>The git repository is <a class="github reference external" href="https://github.com/duhadler/xlcalcnet">duhadler/xlcalcnet</a>)</p>
-<p><strong>Checking that it works</strong></p>
-<p>After the setup has completed, you should be able to fire up the interactive Python interpreter and do the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mp</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">50</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mpf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="n">mpf</span><span class="p">(</span><span class="s1">&#39;0.5&#39;</span><span class="p">))</span>
-<span class="go">1.4142135623730950488016887242096980785696718753769</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">)</span>
-<span class="go">6.2831853071795864769252867665590057683943387987502</span>
-</pre></div>
-</div>
-<p><em>Note: if you have are upgrading xlcalcnet from an earlier version, you may have to manually uninstall the old version or remove the old files.</em></p>
-</section>
-<section id="installing-xlcalcnet">
-<h2>Installing XlCalcNet<a class="headerlink" href="#installing-xlcalcnet" title="Link to this heading">#</a></h2>
-<p>It is recommended that you run xlcalcnet’s full set of unit tests to make sure everything works. The <a class="reference external" href="https://pytest.org/">py.test</a> is a required dependence for testing.  The tests are located in the <code class="docutils literal notranslate"><span class="pre">tests</span></code> subdirectory of the main xlcalcnet directory. They can be run using:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>``py.test --pyargs xlcalcnet``
-</pre></div>
-</div>
-<p>If any test fails, please send a detailed bug report to the <a class="reference external" href="https://github.com/fredrik-johansson/xlcalcnet/issues">xlcalcnet issue tracker</a>.</p>
-<p>To run the tests with support for gmpy disabled, set <code class="docutils literal notranslate"><span class="pre">mpdistlab_NOGMPY</span></code> environment variable.</p>
-<p>To enable extra diagnostics, use, set <code class="docutils literal notranslate"><span class="pre">mpdistlab_STRICT</span></code> environment variable.</p>
+<p></p>
+<section id="downloading-and-installing-the-right-version-of-cpython">
+<h2>Downloading and installing the “right” version of CPython<a class="headerlink" href="#downloading-and-installing-the-right-version-of-cpython" title="Link to this heading">#</a></h2>
+<p>Describe the dependency on PythonNet.</p>
+<p>Explain The 3 folder concept: user, application local data, python installation</p>
+<p>Describe the choices for downloading python</p>
+<p>Describe how to install python as a “free-standing” version without need to uninstall.</p>
+<p>Describe choices for locating this version of python</p>
+<p>Describe copying the batch files into</p>
+<p></p>
 </section>
 <section id="installing-and-using-pythonnet-calling-c-from-python">
 <h2>Installing and using Pythonnet: Calling C# from Python<a class="headerlink" href="#installing-and-using-pythonnet-calling-c-from-python" title="Link to this heading">#</a></h2>
@@ -972,16 +953,17 @@ or no experience using Python.</p>
 <p>It is important to note that these compilers are not part of Visual Studio but part of Windows; they are, in a way, the closest to a compiler as part of the operating system that Windows has ever come up with. On the other hand, these compilers have been tugged away with the rest of the .NET Framework 4.x runtime; in that sense, they are “hidden” compilers.</p>
 <p>In the following, we will ignore the Visual Basic and JScript compilers, but focus only on C#. The C# compiler supports only language versions up to C# 5. Luckily, this still provides us with all language features which we need for our purposes.</p>
 <p>In terms of usability, the .NET Framework 4.x runtime does not include an IDE; we therefore include a tiny IDE as described below.</p>
+<p></p>
 </section>
-<section id="the-3-folder-concept-user-application-local-data-installation">
-<h2>The 3 folder concept: user, application local data, installation<a class="headerlink" href="#the-3-folder-concept-user-application-local-data-installation" title="Link to this heading">#</a></h2>
+<section id="downloading-and-unpacking-repositories-from-github">
+<h2>Downloading and unpacking repositories from Github<a class="headerlink" href="#downloading-and-unpacking-repositories-from-github" title="Link to this heading">#</a></h2>
+<p>Describe how to download and unpack the core repositories from Github</p>
+<p>Emphasize the need to use Microsoft defender for the unzipped repositories.</p>
 <p>The data which are directly maniplated by the user are located in:</p>
 <p>The data which generated as a result of running a python script or C# program are written to:</p>
 <p>The data which contain the installation are located in:</p>
-</section>
-<section id="copying-and-exploring-the-dataxlcalcnet-folder">
-<h2>Copying and exploring the DataXlCalcNet folder<a class="headerlink" href="#copying-and-exploring-the-dataxlcalcnet-folder" title="Link to this heading">#</a></h2>
 <p>Describe the copying and exploring the DataXlCalcNet folder</p>
+<p></p>
 </section>
 <section id="installing-and-using-the-tiny-ide-as-a-python-application">
 <h2>Installing and using the Tiny IDE as a Python application<a class="headerlink" href="#installing-and-using-the-tiny-ide-as-a-python-application" title="Link to this heading">#</a></h2>
@@ -1000,19 +982,39 @@ or no experience using Python.</p>
 </ul>
 <p></p>
 </section>
-<section id="building-a-library-of-user-defined-python-functions">
-<h2>Building a library of user defined python functions<a class="headerlink" href="#building-a-library-of-user-defined-python-functions" title="Link to this heading">#</a></h2>
+<section id="installing-and-using-of-the-ms-excel-xlnet-addin-first-steps">
+<h2>Installing and using of the MS Excel XlNet addin: first steps<a class="headerlink" href="#installing-and-using-of-the-ms-excel-xlnet-addin-first-steps" title="Link to this heading">#</a></h2>
+<p>!!! Describe the need for starting  the socket server first !!!</p>
+<p>When starting the socket server for the first time to allow acces of Pyton to networks. Confirm.</p>
+<p>Describe the installation of the MS Excel addin.</p>
 <p>MS Excel: TestCPython.xlsx</p>
+<a class="reference internal image-reference" href="../_images/FunctionArguments.png"><img alt="../_images/FunctionArguments.png" class="align-center" src="../_images/FunctionArguments.png" style="width: 50%;" />
+</a>
+<p>MS Excel: TestCPython.xlsx</p>
+<a class="reference internal image-reference" href="../_images/ContextMenu.png"><img alt="../_images/ContextMenu.png" class="align-center" src="../_images/ContextMenu.png" style="width: 30%;" />
+</a>
+<p>MS Excel: TestCPython.xlsx</p>
+<a class="reference internal image-reference" href="../_images/NavigatorXlCalcNet.png"><img alt="../_images/NavigatorXlCalcNet.png" class="align-center" src="../_images/NavigatorXlCalcNet.png" style="width: 50%;" />
+</a>
+<p>MS Excel: TestCPython.xlsx</p>
+<p></p>
 </section>
-<section id="building-a-library-of-user-defined-functions-in-c">
-<h2>Building a library of user defined functions in C#<a class="headerlink" href="#building-a-library-of-user-defined-functions-in-c" title="Link to this heading">#</a></h2>
-<p>Describes building and using the user library.</p>
-</section>
-<section id="sphinx-building-documentation-for-software-with-python-html-and-pdf">
-<span id="rst-user-documentation"></span><h2>Sphinx: building documentation for software with Python (html and pdf)<a class="headerlink" href="#sphinx-building-documentation-for-software-with-python-html-and-pdf" title="Link to this heading">#</a></h2>
-<p>See also: <a class="reference external" href="https://www.sphinx-doc.org/en/master/">https://www.sphinx-doc.org/en/master/</a></p>
-<p>See also: <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/markdown.html">https://www.sphinx-doc.org/en/master/usage/markdown.html</a></p>
-<p>See also: <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">https://myst-parser.readthedocs.io/en/latest/</a></p>
+<section id="rebuilding-the-dll-files-of-xlcalcnet-and-xlcalcnet2-from-source-code">
+<h2>Rebuilding the .dll files of XlCalcNet and XlCalcNet2 from source code<a class="headerlink" href="#rebuilding-the-dll-files-of-xlcalcnet-and-xlcalcnet2-from-source-code" title="Link to this heading">#</a></h2>
+<p>The XlCalcNet and XlCalcNet2 repositories contain both precompiled .dll files and their source code.</p>
+<p>This section descibes how to rebuild the .dll files of XlCalcNet and XlCalcNet2 from source code, either completely or only in part. The building process itself is not particularly difficult, but it requires the installation of MSYS2 (version 3.4.9.x86_64 or later: about 4 GB in size), Free Pascal (version 2.6.4 or later: about 320 MB in size), and Visual Studio Community (version 2019 or later: about 4.6 GB in size).</p>
+<p>In the following it is assumed that the user has installed MSYS2, Free Pascal and Visual Studio Community and is comfortable using them.</p>
+<p>MSYS2 is required to build the file <code class="docutils literal notranslate"><span class="pre">FixedPrecGCC64K8.dll</span></code> in the XlCalcNet <code class="docutils literal notranslate"><span class="pre">Bin</span></code> folder. The details of the building process are described in <a class="reference internal" href="C06_ContextsFixedPrec.html#rst-fixedprec"><span class="std std-ref">FixedPrec</span></a>.</p>
+<p>MSYS2 is also required to build the file <code class="docutils literal notranslate"><span class="pre">ArbPrecNetGCCK8.dll</span></code> in the XlCalcNet2 <code class="docutils literal notranslate"><span class="pre">Bin</span></code> folder. The details of the building process are described in <a class="reference internal" href="C07_ContextsXlCalcNet2.html#rst-arbprec"><span class="std std-ref">ArbPrec</span></a>.</p>
+<p>Free Pascal is required to build  the file <code class="docutils literal notranslate"><span class="pre">libwe64d.dll</span></code> in the XlCalcNet <code class="docutils literal notranslate"><span class="pre">Bin</span></code> folder. The details of the building process are described in <a class="reference internal" href="C06_ContextsFixedPrec.html#rst-fixedprec"><span class="std std-ref">FixedPrec</span></a>.</p>
+<p>Erverything else can be done in Visual Studio Community:</p>
+<p>The details of the building the file <code class="docutils literal notranslate"><span class="pre">FixedPrecNet.dll</span></code> in the XlCalcNet <code class="docutils literal notranslate"><span class="pre">Bin</span></code> folder are described in <a class="reference internal" href="C06_ContextsFixedPrec.html#rst-fixedprec"><span class="std std-ref">FixedPrec</span></a>.</p>
+<p>The details of the building the file <code class="docutils literal notranslate"><span class="pre">ArbPrecNet.dll</span></code> in the XlCalcNet2 <code class="docutils literal notranslate"><span class="pre">Bin</span></code> folder are described in <a class="reference internal" href="C07_ContextsXlCalcNet2.html#rst-arbprec"><span class="std std-ref">ArbPrec</span></a>.</p>
+<p>The details of the building the file <code class="docutils literal notranslate"><span class="pre">ArbPrecNet.dll</span></code> in the XlCalcNet <code class="docutils literal notranslate"><span class="pre">Bin</span></code> folder are described in <a class="reference internal" href="C02_GuiFunctions.html#rst-clientserver"><span class="std std-ref">ClientServer</span></a>.</p>
+<p>The details of the building the file <code class="docutils literal notranslate"><span class="pre">ArbPrecNet.dll</span></code> in the XlCalcNet <code class="docutils literal notranslate"><span class="pre">Bin</span></code> folder are described in <a class="reference internal" href="C02_GuiFunctions.html#rst-outputmonitor"><span class="std std-ref">OutputMonitor</span></a>.</p>
+<p>The details of the building the file <code class="docutils literal notranslate"><span class="pre">ArbPrecNet.dll</span></code> in the XlCalcNet <code class="docutils literal notranslate"><span class="pre">Bin</span></code> folder are described in <a class="reference internal" href="C02_GuiFunctions.html#rst-tinyide"><span class="std std-ref">TinyIde</span></a>.</p>
+<p>The details of the building the file <code class="docutils literal notranslate"><span class="pre">ArbPrecNet.dll</span></code> in the XlCalcNet <code class="docutils literal notranslate"><span class="pre">Bin</span></code> folder are described in <a class="reference internal" href="C02_GuiFunctions.html#rst-galleryofplots"><span class="std std-ref">GalleryOfPlots</span></a>.</p>
+<p>The details of the building the file <code class="docutils literal notranslate"><span class="pre">ArbPrecNet.dll</span></code> in the XlCalcNet <code class="docutils literal notranslate"><span class="pre">Bin</span></code> folder are described in <a class="reference internal" href="C02_GuiFunctions.html#rst-wpf3d"><span class="std std-ref">Wpf3D</span></a>.</p>
 </section>
 </section>
 
@@ -1062,14 +1064,11 @@ or no experience using Python.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-and-installing-the-right-version-of-cpython">Downloading and installing the “right” version of CPython</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-xlcalcnet">Installing XlCalcNet</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-pythonnet-calling-c-from-python">Installing and using Pythonnet: Calling C# from Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-3-folder-concept-user-application-local-data-installation">The 3 folder concept: user, application local data, installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copying-and-exploring-the-dataxlcalcnet-folder">Copying and exploring the DataXlCalcNet folder</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-and-unpacking-repositories-from-github">Downloading and unpacking repositories from Github</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-the-tiny-ide-as-a-python-application">Installing and using the Tiny IDE as a Python application</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-library-of-user-defined-python-functions">Building a library of user defined python functions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-library-of-user-defined-functions-in-c">Building a library of user defined functions in C#</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sphinx-building-documentation-for-software-with-python-html-and-pdf">Sphinx: building documentation for software with Python (html and pdf)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-of-the-ms-excel-xlnet-addin-first-steps">Installing and using of the MS Excel XlNet addin: first steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rebuilding-the-dll-files-of-xlcalcnet-and-xlcalcnet2-from-source-code">Rebuilding the .dll files of XlCalcNet and XlCalcNet2 from source code</a></li>
 </ul>
   </nav></div>
 
@@ -1103,7 +1102,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 22, 2026.
+  Last updated on Aug 26, 2026.
   <br/>
 </p>
   </div>

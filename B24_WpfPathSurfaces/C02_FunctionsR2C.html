@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=cf1a26e0" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=dd540455" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=f2b458fe" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -53,7 +53,7 @@
     <link rel="prev" title="Introduction to path surfaces" href="C01_Introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 22, 2026"/>
+    <meta name="docbuild:last-update" content="Aug 26, 2026"/>
   </head>
   
   
@@ -163,11 +163,11 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B01_GeneralUsage/index.html">Setup and general usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C01_Setup.html">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C02_GuiFunctions.html">General and user interface functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_PythonFromCSharp.html">Calling Python from C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_SpreadsheetFormulas.html">Using XlCalcNet with spreadsheet formulas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C08_Numpy.html">A quick look at Numpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
@@ -950,7 +950,7 @@ var z = t;</p>
 <section id="hankel-function-of-the-first-kind-h-1-nu-x">
 <h2>Hankel function of the first kind <span class="math notranslate nohighlight">\(H_{1, \nu}(x)\)</span><a class="headerlink" href="#hankel-function-of-the-first-kind-h-1-nu-x" title="Link to this heading">#</a></h2>
 <p>Returns the Hankel function of the first kind, defined as <span class="math notranslate nohighlight">\(\displaystyle H^{(1)}_{\nu}(x) = J_{\nu}(x) + i Y_{\nu}(x)\)</span>.</p>
-<p>See also  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1120" title="Wikipedia. Hankel functions. Wikimedia Foundation, 2014. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Hankel_functions.">1412</a>]</span>, MathWorld <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1585" title="E. W. Weisstein. Hankel Function of the First Kind. From MathWorld - A Wolfram Web Resource, 2011. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/HankelFunctionoftheFirstKind.html.">1013</a>]</span>, NIST <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id479" title="L. Olver, F. W. J.; Maximon. Hankel Functions. NIST Digital Library of Mathematical Functions, 2010. URL: http://dlmf.nist.gov/10.2.E5.">466</a>]</span>, BoostMath <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id378" title="P. A. Bristow and H. Holin. Cyclic Hankel Functions. Boost Math Toolkit Library, 2017. [Online; accessed 22-July-2024]. URL: https://https://www.boost.org/doc/libs/1_83_0/libs/math/doc/html/math_toolkit/hankel/cyl_hankel.html.">121</a>]</span>.</p>
+<p>See also  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1120" title="Wikipedia. Hankel functions. Wikimedia Foundation, 2014. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Hankel_functions.">1412</a>]</span>, MathWorld <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1585" title="E. W. Weisstein. Hankel Function of the First Kind. From MathWorld - A Wolfram Web Resource, 2011. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/HankelFunctionoftheFirstKind.html.">1013</a>]</span>, NIST <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id479" title="L. Olver, F. W. J.; Maximon. Hankel Functions. NIST Digital Library of Mathematical Functions, 2010. URL: http://dlmf.nist.gov/10.2.E5.">466</a>]</span>, BoostMath <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id378" title="P. A. Bristow and H. Holin. Cyclic Hankel Functions. Boost Math Toolkit Library, 2017. [Online; accessed 22-July-2024]. URL: https://https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/hankel/cyl_hankel.html.">121</a>]</span>.</p>
 <p>An example in C#, for real part only</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">math53</span><span class="p">.</span><span class="n">bessel_j0</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
@@ -979,7 +979,7 @@ var z = t;</p>
 <section id="hankel-function-of-the-second-kind-h-2-nu-x">
 <h2>Hankel function of the second kind <span class="math notranslate nohighlight">\(H_{2, \nu}(x)\)</span><a class="headerlink" href="#hankel-function-of-the-second-kind-h-2-nu-x" title="Link to this heading">#</a></h2>
 <p>Returns the Hankel function of the second kind, defined as <span class="math notranslate nohighlight">\(\displaystyle H^{(2)}_{\nu}(x) = J_{\nu}(x) - i Y_{\nu}(x)\)</span>.</p>
-<p>See also  Wikipedia <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1120" title="Wikipedia. Hankel functions. Wikimedia Foundation, 2014. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Hankel_functions.">1412</a>]</span>, MathWorld <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1586" title="E. W. Weisstein. Hankel Function of the Second Kind. From MathWorld - A Wolfram Web Resource, 2011. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/HankelFunctionoftheSecondKind.html.">1014</a>]</span>, NIST <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id479" title="L. Olver, F. W. J.; Maximon. Hankel Functions. NIST Digital Library of Mathematical Functions, 2010. URL: http://dlmf.nist.gov/10.2.E5.">466</a>]</span>, BoostMath <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id378" title="P. A. Bristow and H. Holin. Cyclic Hankel Functions. Boost Math Toolkit Library, 2017. [Online; accessed 22-July-2024]. URL: https://https://www.boost.org/doc/libs/1_83_0/libs/math/doc/html/math_toolkit/hankel/cyl_hankel.html.">121</a>]</span>.</p>
+<p>See also  Wikipedia <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1120" title="Wikipedia. Hankel functions. Wikimedia Foundation, 2014. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Hankel_functions.">1412</a>]</span>, MathWorld <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1586" title="E. W. Weisstein. Hankel Function of the Second Kind. From MathWorld - A Wolfram Web Resource, 2011. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/HankelFunctionoftheSecondKind.html.">1014</a>]</span>, NIST <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id479" title="L. Olver, F. W. J.; Maximon. Hankel Functions. NIST Digital Library of Mathematical Functions, 2010. URL: http://dlmf.nist.gov/10.2.E5.">466</a>]</span>, BoostMath <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id378" title="P. A. Bristow and H. Holin. Cyclic Hankel Functions. Boost Math Toolkit Library, 2017. [Online; accessed 22-July-2024]. URL: https://https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/hankel/cyl_hankel.html.">121</a>]</span>.</p>
 <p>An example in C#, for real part only</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">math53</span><span class="p">.</span><span class="n">bessel_j0</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
@@ -1161,7 +1161,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 22, 2026.
+  Last updated on Aug 26, 2026.
   <br/>
 </p>
   </div>

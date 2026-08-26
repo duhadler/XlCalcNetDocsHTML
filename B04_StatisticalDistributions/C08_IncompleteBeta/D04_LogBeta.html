@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=cf1a26e0" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=dd540455" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=f2b458fe" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -53,7 +53,7 @@
     <link rel="prev" title="Boost: Student \(t\) (Pearson Type VII) distribution" href="D03_StudentT.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 22, 2026"/>
+    <meta name="docbuild:last-update" content="Aug 26, 2026"/>
   </head>
   
   
@@ -163,11 +163,11 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../B01_GeneralUsage/index.html">Setup and general usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C01_Setup.html">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C02_GuiFunctions.html">General and user interface functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C03_PythonFromCSharp.html">Calling Python from C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C04_SpreadsheetFormulas.html">Using XlCalcNet with spreadsheet formulas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C08_Numpy.html">A quick look at Numpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B01_GeneralUsage/C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
@@ -931,7 +931,7 @@ document.write(`
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dist_logrv_beta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dist_logrv_beta" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, <code class="docutils literal notranslate"><span class="pre">ipm</span></code>, <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">gmp</span></code> or <code class="docutils literal notranslate"><span class="pre">apm</span></code>.</p>
 <p>The distribution of the negative logarithm of a beta variable with parameters <span class="math notranslate nohighlight">\(a&gt;0\)</span> and <span class="math notranslate nohighlight">\(b&gt;0\)</span>  is a continuous probability distribution with  the support interval <span class="math notranslate nohighlight">\((0, +\infty)\)</span>.
-See also Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id959" title="Wikipedia. Beta distribution. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Beta_distribution.">1238</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id1438" title="E. W. Weisstein. Beta Distribution. From MathWorld - A Wolfram Web Resource, 2004. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/BetaDistribution.html.">868</a>]</span>, BoostMath <span id="id3">[<a class="reference internal" href="../../99BackMatter/index.html#id306" title="P. A. Bristow and H. Holin. Beta Distribution. Boost Math Toolkit Library, 2014. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/1_83_0/libs/math/doc/html/math_toolkit/dist_ref/dists/beta_dist.html.">57</a>]</span>, <span id="id4">Witkovský [<a class="reference internal" href="../../99BackMatter/index.html#id418" title="V. Witkovský. Beta Distribution. CharFunTool: The characteristic functions toolbox, 2017. [Online; accessed 22-July-2024]. URL: https://github.com/witkovsky/CharFunTool/blob/master/CF_Repository/cf_Student.m.">1614</a>]</span>, R (Statistical System) <span id="id5">[<a class="reference internal" href="../../99BackMatter/index.html#id863" title="R Core Team. The Beta Distribution. The R Project for Statistical Computing, 2019. [Online; accessed 22-July-2024]. URL: https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/Beta.">545</a>]</span>.</p>
+See also Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id959" title="Wikipedia. Beta distribution. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Beta_distribution.">1238</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id1438" title="E. W. Weisstein. Beta Distribution. From MathWorld - A Wolfram Web Resource, 2004. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/BetaDistribution.html.">868</a>]</span>, BoostMath <span id="id3">[<a class="reference internal" href="../../99BackMatter/index.html#id306" title="P. A. Bristow and H. Holin. Beta Distribution. Boost Math Toolkit Library, 2014. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/dist_ref/dists/beta_dist.html.">57</a>]</span>, <span id="id4">Witkovský [<a class="reference internal" href="../../99BackMatter/index.html#id418" title="V. Witkovský. Beta Distribution. CharFunTool: The characteristic functions toolbox, 2017. [Online; accessed 22-July-2024]. URL: https://github.com/witkovsky/CharFunTool/blob/master/CF_Repository/cf_Student.m.">1614</a>]</span>, R (Statistical System) <span id="id5">[<a class="reference internal" href="../../99BackMatter/index.html#id863" title="R Core Team. The Beta Distribution. The R Project for Statistical Computing, 2019. [Online; accessed 22-July-2024]. URL: https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/Beta.">545</a>]</span>.</p>
 </dd></dl>
 
 <p></p>
@@ -1211,7 +1211,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 22, 2026.
+  Last updated on Aug 26, 2026.
   <br/>
 </p>
   </div>

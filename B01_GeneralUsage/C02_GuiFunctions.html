@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=cf1a26e0" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=dd540455" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=f2b458fe" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -48,11 +48,11 @@
     <script src="../_static/custom-icon.js?v=74687d30"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Calling Python from C#" href="C03_PythonFromCSharp.html" />
+    <link rel="next" title="More on XlCalcNet with MS Excel" href="C03_SpreadsheetFormulas.html" />
     <link rel="prev" title="Setting up XlCalcNet" href="C01_Setup.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 22, 2026"/>
+    <meta name="docbuild:last-update" content="Aug 26, 2026"/>
   </head>
   
   
@@ -162,11 +162,11 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Setup and general usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html">Setting up XlCalcNet</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">General and user interface functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C03_PythonFromCSharp.html">Calling Python from C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C04_SpreadsheetFormulas.html">Using XlCalcNet with spreadsheet formulas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C08_Numpy.html">A quick look at Numpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
@@ -898,8 +898,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socket-server">Starting the socket server</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.socketserver"><code class="docutils literal notranslate"><span class="pre">gui.socketserver()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-and-calling-the-socket-server">Starting and calling the socket server</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-from-the-tinyide-or-galleryofplots-application">Starting the socketserver from the TinyIDE or GalleryOfPlots application</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-from-the-navigator-dialog-in-excel">Starting the socketserver from the Navigator dialog in Excel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-programmatically-from-python">Starting the socketserver programmatically from Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.socketserver"><code class="docutils literal notranslate"><span class="pre">gui.socketserver()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-the-socketserver-from-python">Calling the socketserver from Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-the-socketserver-from-c">Calling the socketserver from C#</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code">Source code</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-output-monitor">Starting the output monitor</a><ul class="visible nav section-nav flex-column">
@@ -945,7 +953,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.setdps"><code class="docutils literal notranslate"><span class="pre">gui.setdps()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-the-socketserver-from-python">Calling the socketserver from Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#support-for-running-interactive-matplotlib-output-in-a-separate-process">Support for running interactive Matplotlib output in a separate process</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.plot"><code class="docutils literal notranslate"><span class="pre">gui.plot</span></code></a></li>
 </ul>
@@ -964,256 +971,35 @@ document.write(`
   <p></p>
 <section id="general-and-user-interface-functions">
 <h1>General and user interface functions<a class="headerlink" href="#general-and-user-interface-functions" title="Link to this heading">#</a></h1>
-<section id="starting-the-socket-server">
-<h2>Starting the socket server<a class="headerlink" href="#starting-the-socket-server" title="Link to this heading">#</a></h2>
+<section id="starting-and-calling-the-socket-server">
+<span id="rst-clientserver"></span><h2>Starting and calling the socket server<a class="headerlink" href="#starting-and-calling-the-socket-server" title="Link to this heading">#</a></h2>
+<p>A running socket server is critical for the use of XlCalcNet from Microsoft Excel.</p>
+<a class="reference internal image-reference" href="../_images/SocketServer.png"><img alt="../_images/SocketServer.png" class="align-center" src="../_images/SocketServer.png" style="width: 50%;" />
+</a>
+<p>The socket server can be startet in various ways:</p>
+<section id="starting-the-socketserver-from-the-tinyide-or-galleryofplots-application">
+<h3>Starting the socketserver from the TinyIDE or GalleryOfPlots application<a class="headerlink" href="#starting-the-socketserver-from-the-tinyide-or-galleryofplots-application" title="Link to this heading">#</a></h3>
+<p>Explain use of menu.</p>
+</section>
+<section id="starting-the-socketserver-from-the-navigator-dialog-in-excel">
+<h3>Starting the socketserver from the Navigator dialog in Excel<a class="headerlink" href="#starting-the-socketserver-from-the-navigator-dialog-in-excel" title="Link to this heading">#</a></h3>
+<p>Explain use of dialog.</p>
+</section>
+<section id="starting-the-socketserver-programmatically-from-python">
+<h3>Starting the socketserver programmatically from Python<a class="headerlink" href="#starting-the-socketserver-programmatically-from-python" title="Link to this heading">#</a></h3>
 <dl class="py method">
 <dt class="sig sig-object py" id="gui.socketserver">
 <span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">socketserver</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.socketserver" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p>Describe the start of the socket server</p>
-<p>The Python source code for the socketserver can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Bin/socketspy.py">duhadler/XlCalcNet</a></p>
-<p>The C# source code for the socket client can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/ClientServer">duhadler/XlCalcNet</a></p>
-<blockquote>
-<div><div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<dd><p>Describe the start of the socket server</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">socketserver</span><span class="p">()</span>
 </pre></div>
 </div>
-</div></blockquote>
-</section>
-<section id="starting-the-output-monitor">
-<h2>Starting the output monitor<a class="headerlink" href="#starting-the-output-monitor" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.outputmonitor">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">outputmonitor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.outputmonitor" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
+</dd></dl>
 
-<p>Describe the start of the output monitor</p>
-<p>The Python source code for starting the output monitor can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowOutputMonitor.py">duhadler/XlCalcNet</a></p>
-<p>The C# source code for the output monitor can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/OutputMonitor">duhadler/XlCalcNet</a></p>
-<blockquote>
-<div><div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">outputmonitor</span><span class="p">()</span>
-</pre></div>
-</div>
-</div></blockquote>
-</section>
-<section id="starting-an-additional-instance-of-the-ide">
-<h2>Starting an additional instance of the IDE<a class="headerlink" href="#starting-an-additional-instance-of-the-ide" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.tinyide">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">tinyide</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.tinyide" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p>Describe the start an additional instance of the IDE</p>
-<p>The Python source code for starting the IDE can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowEditor.py">duhadler/XlCalcNet</a></p>
-<p>The C# source code for the IDE can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/TinyEditor">duhadler/XlCalcNet</a></p>
-<blockquote>
-<div><div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">tinyide</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div></blockquote>
-</section>
-<section id="starting-the-gallery-of-plots">
-<h2>Starting the gallery of plots<a class="headerlink" href="#starting-the-gallery-of-plots" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.plot2d">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">plot2d</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.plot2d" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p>Describe the start of the gallery of plots</p>
-<p>The Python source code for starting the IDE can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowEditor.py">duhadler/XlCalcNet</a></p>
-<p>The C# source code for the gallery of plots can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/TinyPlot2D">duhadler/XlCalcNet</a></p>
-<blockquote>
-<div><div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">plot2d</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div></blockquote>
-</section>
-<section id="starting-the-interactive-3d-wpf-plots">
-<h2>Starting the interactive 3D wpf plots<a class="headerlink" href="#starting-the-interactive-3d-wpf-plots" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.plot3d">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">plot3d</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.plot3d" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p>Describe the start of Interactive 3D Wpf plots</p>
-<p>The Python source code for starting the interactive 3D wpf plots can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowPlot3d.py">duhadler/XlCalcNet</a></p>
-<p>The C# source code for the gallery of plots can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/TinyPlot3D">duhadler/XlCalcNet</a></p>
-<blockquote>
-<div><div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">plot3d</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div></blockquote>
-</section>
-<section id="starting-the-data-viewer">
-<h2>Starting the data viewer<a class="headerlink" href="#starting-the-data-viewer" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.dataviewer">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">dataviewer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.dataviewer" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p>Describe the start of data viewer</p>
-<p>The Python source code for starting the data viewer can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowDataViewer.py">duhadler/XlCalcNet</a></p>
-<p>The C# source code for the data viewer can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/DataViewer">duhadler/XlCalcNet</a></p>
-<blockquote>
-<div><div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">dataviewer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div></blockquote>
-</section>
-<section id="starting-idle">
-<h2>Starting IDLE<a class="headerlink" href="#starting-idle" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.idle">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">idle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.idle" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p>Describe the setup and use of IDLE</p>
-<blockquote>
-<div><div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">idle</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div></blockquote>
-</section>
-<section id="functions-related-to-folders">
-<h2>Functions related to folders<a class="headerlink" href="#functions-related-to-folders" title="Link to this heading">#</a></h2>
-<p>There are several functions related to folders</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.get_local_appdata">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">get_local_appdata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.get_local_appdata" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p>Return the current user’s local Application Data folder</p>
-<blockquote>
-<div><div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">get_local_appdata</span><span class="p">()</span>
-</pre></div>
-</div>
-</div></blockquote>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.get_local_appdata_xlcalcnet">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">get_local_appdata_xlcalcnet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.get_local_appdata_xlcalcnet" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p>Return the current user’s local AppData/XlCalcNetIDE folder</p>
-<blockquote>
-<div><div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">get_local_appdata_xlcalcnet</span><span class="p">()</span>
-</pre></div>
-</div>
-</div></blockquote>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.get_my_documents">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">get_my_documents</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.get_my_documents" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p>Return the current user’s local AppData/XlCalcNetIDE folder</p>
-<blockquote>
-<div><div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">get_my_documents</span><span class="p">()</span>
-</pre></div>
-</div>
-</div></blockquote>
-</section>
-<section id="information-about-installation-status-of-supporting-python-packages">
-<h2>Information about installation status of supporting python packages<a class="headerlink" href="#information-about-installation-status-of-supporting-python-packages" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.info">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.info" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p>Support for Matplotlib output in a separate process</p>
-<blockquote>
-<div><div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-</pre></div>
-</div>
-</div></blockquote>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.has_gpm">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">has_gpm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.has_gpm" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p>Returns True if gmpy2 is installed</p>
-<blockquote>
-<div><div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">has_gpm</span><span class="p">()</span>
-</pre></div>
-</div>
-</div></blockquote>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.has_apm">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">has_apm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.has_apm" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p>Returns True if python-flint is installed</p>
-<blockquote>
-<div><div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">has_apm</span><span class="p">()</span>
-</pre></div>
-</div>
-</div></blockquote>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.has_xlcalcnet2">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">has_xlcalcnet2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.has_xlcalcnet2" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p>Returns True if xlcalcnet2 is installed</p>
-<blockquote>
-<div><div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">has_xlcalcnet2</span><span class="p">()</span>
-</pre></div>
-</div>
-</div></blockquote>
-</section>
-<section id="information-about-context-lists-and-setting-global-precision">
-<h2>Information about context lists, and setting global precision<a class="headerlink" href="#information-about-context-lists-and-setting-global-precision" title="Link to this heading">#</a></h2>
-<dl class="py property">
-<dt class="sig sig-object py" id="gui.ctxlistreal">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">ctxlistreal</span></span><a class="headerlink" href="#gui.ctxlistreal" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p>Returns a list of all available numerical contexts supporting real data types</p>
-<blockquote>
-<div><div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">ctxlistreal</span>
-</pre></div>
-</div>
-</div></blockquote>
-<dl class="py property">
-<dt class="sig sig-object py" id="gui.ctxlistcplx">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">ctxlistcplx</span></span><a class="headerlink" href="#gui.ctxlistcplx" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p>Returns a list of all available numerical contexts supporting complex data types</p>
-<blockquote>
-<div><div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">ctxlistcomplex</span>
-</pre></div>
-</div>
-</div></blockquote>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.setdps">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">setdps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.setdps" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p>Sets the decimal precision for all multiprecision data types</p>
-<blockquote>
-<div><div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dps</span> <span class="o">=</span> <span class="mi">50</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="n">dps</span><span class="p">)</span>
-</pre></div>
-</div>
-</div></blockquote>
 </section>
 <section id="calling-the-socketserver-from-python">
-<h2>Calling the socketserver from Python<a class="headerlink" href="#calling-the-socketserver-from-python" title="Link to this heading">#</a></h2>
+<h3>Calling the socketserver from Python<a class="headerlink" href="#calling-the-socketserver-from-python" title="Link to this heading">#</a></h3>
 <p>Describe calling the socketserver from Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">socket</span>
 
@@ -1230,6 +1016,239 @@ document.write(`
 </pre></div>
 </div>
 </section>
+<section id="calling-the-socketserver-from-c">
+<h3>Calling the socketserver from C#<a class="headerlink" href="#calling-the-socketserver-from-c" title="Link to this heading">#</a></h3>
+<p>Describe calling the socketserver from C#</p>
+</section>
+<section id="source-code">
+<h3>Source code<a class="headerlink" href="#source-code" title="Link to this heading">#</a></h3>
+<p>The Python source code for the socketserver can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Bin/socketspy.py">duhadler/XlCalcNet</a></p>
+<p>The C# source code for the socket client can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/ClientServer">duhadler/XlCalcNet</a></p>
+<p></p>
+</section>
+</section>
+<section id="starting-the-output-monitor">
+<span id="rst-outputmonitor"></span><h2>Starting the output monitor<a class="headerlink" href="#starting-the-output-monitor" title="Link to this heading">#</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.outputmonitor">
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">outputmonitor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.outputmonitor" title="Link to this definition">#</a></dt>
+<dd><p>Describe the start of the output monitor</p>
+<a class="reference internal image-reference" href="../_images/DataMo0nitor.png"><img alt="../_images/DataMo0nitor.png" class="align-center" src="../_images/DataMo0nitor.png" style="width: 50%;" />
+</a>
+<p>The Python source code for starting the output monitor can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowOutputMonitor.py">duhadler/XlCalcNet</a></p>
+<p>The C# source code for the output monitor can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/OutputMonitor">duhadler/XlCalcNet</a></p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">outputmonitor</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p></p>
+</section>
+<section id="starting-an-additional-instance-of-the-ide">
+<span id="rst-tinyide"></span><h2>Starting an additional instance of the IDE<a class="headerlink" href="#starting-an-additional-instance-of-the-ide" title="Link to this heading">#</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.tinyide">
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">tinyide</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.tinyide" title="Link to this definition">#</a></dt>
+<dd><p>Describe the start an additional instance of the IDE</p>
+<a class="reference internal image-reference" href="../_images/TinyIDE.png"><img alt="../_images/TinyIDE.png" class="align-center" src="../_images/TinyIDE.png" style="width: 50%;" />
+</a>
+<p>The Python source code for starting the IDE can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowEditor.py">duhadler/XlCalcNet</a></p>
+<p>The C# source code for the IDE can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/TinyEditor">duhadler/XlCalcNet</a></p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">tinyide</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p></p>
+</section>
+<section id="starting-the-gallery-of-plots">
+<span id="rst-galleryofplots"></span><h2>Starting the gallery of plots<a class="headerlink" href="#starting-the-gallery-of-plots" title="Link to this heading">#</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.plot2d">
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">plot2d</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.plot2d" title="Link to this definition">#</a></dt>
+<dd><p>Describe the start of the gallery of plots</p>
+<a class="reference internal image-reference" href="../_images/GalleryOfPlots.png"><img alt="../_images/GalleryOfPlots.png" class="align-center" src="../_images/GalleryOfPlots.png" style="width: 50%;" />
+</a>
+<p>The Python source code for starting the IDE can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowEditor.py">duhadler/XlCalcNet</a></p>
+<p>The C# source code for the gallery of plots can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/TinyPlot2D">duhadler/XlCalcNet</a></p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">plot2d</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p></p>
+</section>
+<section id="starting-the-interactive-3d-wpf-plots">
+<span id="rst-wpf3d"></span><h2>Starting the interactive 3D wpf plots<a class="headerlink" href="#starting-the-interactive-3d-wpf-plots" title="Link to this heading">#</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.plot3d">
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">plot3d</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.plot3d" title="Link to this definition">#</a></dt>
+<dd><p>Describe the start of Interactive 3D Wpf plots</p>
+<a class="reference internal image-reference" href="../_images/Wpf3D.png"><img alt="../_images/Wpf3D.png" class="align-center" src="../_images/Wpf3D.png" style="width: 50%;" />
+</a>
+<p>The Python source code for starting the interactive 3D wpf plots can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowPlot3d.py">duhadler/XlCalcNet</a></p>
+<p>The C# source code for the gallery of plots can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/TinyPlot3D">duhadler/XlCalcNet</a></p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">plot3d</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p></p>
+</section>
+<section id="starting-the-data-viewer">
+<span id="rst-dataviewer"></span><h2>Starting the data viewer<a class="headerlink" href="#starting-the-data-viewer" title="Link to this heading">#</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.dataviewer">
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">dataviewer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.dataviewer" title="Link to this definition">#</a></dt>
+<dd><p>Describe the start of data viewer</p>
+<a class="reference internal image-reference" href="../_images/DataViewer.png"><img alt="../_images/DataViewer.png" class="align-center" src="../_images/DataViewer.png" style="width: 50%;" />
+</a>
+<p>The Python source code for starting the data viewer can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowDataViewer.py">duhadler/XlCalcNet</a></p>
+<p>The C# source code for the data viewer can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/DataViewer">duhadler/XlCalcNet</a></p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">dataviewer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p></p>
+</section>
+<section id="starting-idle">
+<h2>Starting IDLE<a class="headerlink" href="#starting-idle" title="Link to this heading">#</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.idle">
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">idle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.idle" title="Link to this definition">#</a></dt>
+<dd><p>Describe the setup and use of IDLE</p>
+<a class="reference internal image-reference" href="../_images/IDLE.png"><img alt="../_images/IDLE.png" class="align-center" src="../_images/IDLE.png" style="width: 50%;" />
+</a>
+<p>The Python source code for starting the data viewer can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowDataViewer.py">duhadler/XlCalcNet</a></p>
+<p>The C# source code for the data viewer can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/DataViewer">duhadler/XlCalcNet</a></p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">idle</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p></p>
+</section>
+<section id="functions-related-to-folders">
+<h2>Functions related to folders<a class="headerlink" href="#functions-related-to-folders" title="Link to this heading">#</a></h2>
+<p>There are several functions related to folders</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.get_local_appdata">
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">get_local_appdata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.get_local_appdata" title="Link to this definition">#</a></dt>
+<dd><p>Return the current user’s local Application Data folder</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">get_local_appdata</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.get_local_appdata_xlcalcnet">
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">get_local_appdata_xlcalcnet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.get_local_appdata_xlcalcnet" title="Link to this definition">#</a></dt>
+<dd><p>Return the current user’s local AppData/XlCalcNetIDE folder</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">get_local_appdata_xlcalcnet</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.get_my_documents">
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">get_my_documents</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.get_my_documents" title="Link to this definition">#</a></dt>
+<dd><p>Return the current user’s local AppData/XlCalcNetIDE folder</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">get_my_documents</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p></p>
+</section>
+<section id="information-about-installation-status-of-supporting-python-packages">
+<h2>Information about installation status of supporting python packages<a class="headerlink" href="#information-about-installation-status-of-supporting-python-packages" title="Link to this heading">#</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.info">
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.info" title="Link to this definition">#</a></dt>
+<dd><p>Support for Matplotlib output in a separate process</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.has_gpm">
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">has_gpm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.has_gpm" title="Link to this definition">#</a></dt>
+<dd><p>Returns True if gmpy2 is installed</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">has_gpm</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.has_apm">
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">has_apm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.has_apm" title="Link to this definition">#</a></dt>
+<dd><p>Returns True if python-flint is installed</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">has_apm</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.has_xlcalcnet2">
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">has_xlcalcnet2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.has_xlcalcnet2" title="Link to this definition">#</a></dt>
+<dd><p>Returns True if xlcalcnet2 is installed</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">has_xlcalcnet2</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p></p>
+</section>
+<section id="information-about-context-lists-and-setting-global-precision">
+<h2>Information about context lists, and setting global precision<a class="headerlink" href="#information-about-context-lists-and-setting-global-precision" title="Link to this heading">#</a></h2>
+<dl class="py property">
+<dt class="sig sig-object py" id="gui.ctxlistreal">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">ctxlistreal</span></span><a class="headerlink" href="#gui.ctxlistreal" title="Link to this definition">#</a></dt>
+<dd><p>Returns a list of all available numerical contexts supporting real data types</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">ctxlistreal</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gui.ctxlistcplx">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">ctxlistcplx</span></span><a class="headerlink" href="#gui.ctxlistcplx" title="Link to this definition">#</a></dt>
+<dd><p>Returns a list of all available numerical contexts supporting complex data types</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">ctxlistcomplex</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.setdps">
+<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">setdps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.setdps" title="Link to this definition">#</a></dt>
+<dd><p>Sets the decimal precision for all multiprecision data types</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dps</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="n">dps</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p></p>
+</section>
 <section id="support-for-running-interactive-matplotlib-output-in-a-separate-process">
 <h2>Support for running interactive Matplotlib output in a separate process<a class="headerlink" href="#support-for-running-interactive-matplotlib-output-in-a-separate-process" title="Link to this heading">#</a></h2>
 <p>There is support for Matplotlib output in a separate process</p>
@@ -1237,15 +1256,13 @@ document.write(`
 <dl class="py property">
 <dt class="sig sig-object py" id="gui.plot">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.plot" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p>Support for Matplotlib output in a separate process</p>
-<blockquote>
-<div><div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<dd><p>Support for Matplotlib output in a separate process</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span>
 </pre></div>
 </div>
-</div></blockquote>
+</dd></dl>
+
 </section>
 </section>
 
@@ -1270,11 +1287,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="C03_PythonFromCSharp.html"
+       href="C03_SpreadsheetFormulas.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Calling Python from C#</p>
+        <p class="prev-next-title">More on XlCalcNet with MS Excel</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1294,8 +1311,16 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socket-server">Starting the socket server</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.socketserver"><code class="docutils literal notranslate"><span class="pre">gui.socketserver()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-and-calling-the-socket-server">Starting and calling the socket server</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-from-the-tinyide-or-galleryofplots-application">Starting the socketserver from the TinyIDE or GalleryOfPlots application</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-from-the-navigator-dialog-in-excel">Starting the socketserver from the Navigator dialog in Excel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-programmatically-from-python">Starting the socketserver programmatically from Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.socketserver"><code class="docutils literal notranslate"><span class="pre">gui.socketserver()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-the-socketserver-from-python">Calling the socketserver from Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-the-socketserver-from-c">Calling the socketserver from C#</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code">Source code</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-output-monitor">Starting the output monitor</a><ul class="visible nav section-nav flex-column">
@@ -1341,7 +1366,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.setdps"><code class="docutils literal notranslate"><span class="pre">gui.setdps()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-the-socketserver-from-python">Calling the socketserver from Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#support-for-running-interactive-matplotlib-output-in-a-separate-process">Support for running interactive Matplotlib output in a separate process</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.plot"><code class="docutils literal notranslate"><span class="pre">gui.plot</span></code></a></li>
 </ul>
@@ -1379,7 +1403,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 22, 2026.
+  Last updated on Aug 26, 2026.
   <br/>
 </p>
   </div>

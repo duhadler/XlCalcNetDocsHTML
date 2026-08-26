@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=cf1a26e0" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=dd540455" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=f2b458fe" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -53,7 +53,7 @@
     <link rel="prev" title="Basic arithmetic operations" href="C05_BasicArithmeticOperations.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 22, 2026"/>
+    <meta name="docbuild:last-update" content="Aug 26, 2026"/>
   </head>
   
   
@@ -163,11 +163,11 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B01_GeneralUsage/index.html">Setup and general usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C01_Setup.html">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C02_GuiFunctions.html">General and user interface functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_PythonFromCSharp.html">Calling Python from C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_SpreadsheetFormulas.html">Using XlCalcNet with spreadsheet formulas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C08_Numpy.html">A quick look at Numpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
@@ -963,7 +963,7 @@ document.write(`
 <dt class="sig sig-object py" id="mat.PartialSum">
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">PartialSum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.PartialSum" title="Link to this definition">#</a></dt>
 <dd><p>Calculates the PartialSum</p>
-<p>See also: Eigen <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://eigen.tuxfamily.org/dox/group__TutorialReductionsVisitorsBroadcasting.html.">244</a>]</span>.</p>
+<p>See also: Eigen <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/group__TutorialReductionsVisitorsBroadcasting.html.">244</a>]</span>.</p>
 </dd></dl>
 
 </section>
@@ -973,7 +973,7 @@ document.write(`
 <dt class="sig sig-object py" id="mat.PartialProd">
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">PartialProd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.PartialProd" title="Link to this definition">#</a></dt>
 <dd><p>Calculates the PartialProd</p>
-<p>See also: Eigen <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://eigen.tuxfamily.org/dox/group__TutorialReductionsVisitorsBroadcasting.html.">244</a>]</span>.</p>
+<p>See also: Eigen <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/group__TutorialReductionsVisitorsBroadcasting.html.">244</a>]</span>.</p>
 </dd></dl>
 
 </section>
@@ -983,7 +983,7 @@ document.write(`
 <dt class="sig sig-object py" id="mat.PartialMean">
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">PartialMean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.PartialMean" title="Link to this definition">#</a></dt>
 <dd><p>Calculates the PartialMean</p>
-<p>See also: Eigen <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://eigen.tuxfamily.org/dox/group__TutorialReductionsVisitorsBroadcasting.html.">244</a>]</span>.</p>
+<p>See also: Eigen <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/group__TutorialReductionsVisitorsBroadcasting.html.">244</a>]</span>.</p>
 </dd></dl>
 
 </section>
@@ -993,7 +993,7 @@ document.write(`
 <dt class="sig sig-object py" id="mat.PartialMinCoeff">
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">PartialMinCoeff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.PartialMinCoeff" title="Link to this definition">#</a></dt>
 <dd><p>Calculates the PartialMinCoeff</p>
-<p>See also: Eigen <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://eigen.tuxfamily.org/dox/group__TutorialReductionsVisitorsBroadcasting.html.">244</a>]</span>.</p>
+<p>See also: Eigen <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/group__TutorialReductionsVisitorsBroadcasting.html.">244</a>]</span>.</p>
 </dd></dl>
 
 </section>
@@ -1003,7 +1003,7 @@ document.write(`
 <dt class="sig sig-object py" id="mat.PartialMaxCoeff">
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">PartialMaxCoeff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.PartialMaxCoeff" title="Link to this definition">#</a></dt>
 <dd><p>Calculates the PartialMaxCoeff</p>
-<p>See also: Eigen <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://eigen.tuxfamily.org/dox/group__TutorialReductionsVisitorsBroadcasting.html.">244</a>]</span>.</p>
+<p>See also: Eigen <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/group__TutorialReductionsVisitorsBroadcasting.html.">244</a>]</span>.</p>
 </dd></dl>
 
 </section>
@@ -1013,7 +1013,7 @@ document.write(`
 <dt class="sig sig-object py" id="mat.Trace">
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">Trace</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.Trace" title="Link to this definition">#</a></dt>
 <dd><p>Returns the trace of the matrix <span class="math notranslate nohighlight">\(A\)</span>.</p>
-<p>See also: Eigen <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://eigen.tuxfamily.org/dox/group__TutorialReductionsVisitorsBroadcasting.html.">244</a>]</span>,  Wikipedia <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1214" title="Wikipedia. Trace (linear algebra). Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Determinant.">1513</a>]</span>.</p>
+<p>See also: Eigen <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/group__TutorialReductionsVisitorsBroadcasting.html.">244</a>]</span>,  Wikipedia <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1214" title="Wikipedia. Trace (linear algebra). Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Determinant.">1513</a>]</span>.</p>
 </dd></dl>
 
 </section>
@@ -1023,7 +1023,7 @@ document.write(`
 <dt class="sig sig-object py" id="mat.PartialSquaredNorm">
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">PartialSquaredNorm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.PartialSquaredNorm" title="Link to this definition">#</a></dt>
 <dd><p>Calculates the PartialSquaredNorm</p>
-<p>See also: Eigen <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://eigen.tuxfamily.org/dox/group__TutorialReductionsVisitorsBroadcasting.html.">244</a>]</span>.</p>
+<p>See also: Eigen <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/group__TutorialReductionsVisitorsBroadcasting.html.">244</a>]</span>.</p>
 </dd></dl>
 
 </section>
@@ -1033,7 +1033,7 @@ document.write(`
 <dt class="sig sig-object py" id="mat.PartialNorm">
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">PartialNorm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.PartialNorm" title="Link to this definition">#</a></dt>
 <dd><p>Calculates the PartialNorm</p>
-<p>See also: Eigen <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://eigen.tuxfamily.org/dox/group__TutorialReductionsVisitorsBroadcasting.html.">244</a>]</span>.</p>
+<p>See also: Eigen <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/group__TutorialReductionsVisitorsBroadcasting.html.">244</a>]</span>.</p>
 </dd></dl>
 
 </section>
@@ -1043,7 +1043,7 @@ document.write(`
 <dt class="sig sig-object py" id="mat.PartialStableNorm">
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">PartialStableNorm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.PartialStableNorm" title="Link to this definition">#</a></dt>
 <dd><p>Calculates the PartialStableNorm.</p>
-<p>See also: Eigen <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://eigen.tuxfamily.org/dox/group__TutorialReductionsVisitorsBroadcasting.html.">244</a>]</span>.</p>
+<p>See also: Eigen <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/group__TutorialReductionsVisitorsBroadcasting.html.">244</a>]</span>.</p>
 </dd></dl>
 
 </section>
@@ -1191,7 +1191,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 22, 2026.
+  Last updated on Aug 26, 2026.
   <br/>
 </p>
   </div>

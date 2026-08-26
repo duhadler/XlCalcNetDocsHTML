@@ -16,9 +16,9 @@ Setup and general usage
 
     C02_GuiFunctions.rst
 
-    C03_PythonFromCSharp.rst
+    C03_SpreadsheetFormulas.rst
 
-    C04_SpreadsheetFormulas.rst
+    C04_PythonFromCSharp.rst
 
     C05_ContextsMpmath.rst
 
