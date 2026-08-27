@@ -19,7 +19,8 @@
     |vspace|
 
 
-    Welcome to the documentation of **XlCalcNet**, a Microsoft E\ **X**\ ce\ **l** addin for **Calc**\ ulations in multiprecision, based on Python\ **Net**\ . This edition of the documentation describes release |version|. This documentation can be downloaded in PDF format from https://github.com/duhadler/DocsXlCalcNet/raw/master/pdf/xlcalcnet.pdf
+    Welcome to the documentation of **XlCalcNet**, a Microsoft E\ **X**\ ce\ **l** addin for **Calc**\ ulations in multiprecision, based on Python\ **Net**\ . This edition of the documentation describes release |release|. This documentation can be downloaded in PDF format from the Assets on the `Releases Page <https://github.com/duhadler/XlCalcNet/releases>`__ as "xlcalcnet.pdf".
+
 
     XlCalcNet is free software released under the Mozilla Public License `2.0` (see  :ref:`License <rst_MPL_2.0_License>`). The git repository is https://github.com/duhadler/XlCalcNet. 
 

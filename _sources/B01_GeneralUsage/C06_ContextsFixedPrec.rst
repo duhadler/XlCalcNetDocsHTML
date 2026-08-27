@@ -95,8 +95,6 @@ Note: automatic conversion from ``Double`` in .Net Framework to ``float``
 
 Note: no conversion from  ``Complex`` in .Net Framework to ``complex`` in Python. Explain workarounds.
 
-
-
 DAMath library.
 
 
@@ -131,7 +129,7 @@ General test code for C\# can be found here
 .. code-block:: csharp
 
 
-    public static void ScplxTest0()
+    public static void Math53Test0()
     {
         Console.WriteLine("<H1 Title=" + "\"" + "ScplxTest0"  + "\"" + ">");
 
@@ -152,7 +150,7 @@ General test code for C\# can be found here
 
 .. code-block:: csharp
 
-    public static void ScplxTest1()
+    public static void Math53Test1()
     {
         Console.WriteLine("<H1 Title=" + "\"" + "ScplxTest1"  + "\"" + ">");
 
@@ -170,7 +168,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Sreal.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_Sreal.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Math53.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_Math53.cs>`__.
 
 
 
@@ -244,7 +242,7 @@ General test code for C\# can be found here
     }
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_Scplx.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_Scplx.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_Cmath53.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_Cmath53.cs>`__.
 
 
 
@@ -387,7 +385,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_TestSReal.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_TestSReal.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Math53.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_Math53.py>`__.
 
 
 
@@ -529,7 +527,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_TestSCplx.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_TestSCplx.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_Cmath53.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_Cmath53.py>`__.
 
 
 
@@ -649,7 +647,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Sreal.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_Sreal.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Sreal.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D03a_Sreal.cs>`__.
 
 
 
@@ -723,7 +721,7 @@ General test code for C\# can be found here
     }
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_Scplx.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_Scplx.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D03b_Scplx.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D03b_Scplx.cs>`__.
 
 
 
@@ -866,7 +864,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_TestSReal.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_TestSReal.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D03a_SReal.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D03a_SReal.py>`__.
 
 
 
@@ -1008,7 +1006,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_TestSCplx.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_TestSCplx.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D03b_SCplx.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D03b_SCplx.py>`__.
 
 
 
@@ -1131,7 +1129,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Dreal.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_Dreal.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D04a_Dreal.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D04a_Dreal.cs>`__.
 
 
 
@@ -1205,7 +1203,7 @@ General test code for C\# can be found here
     }
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_Dcplx.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_Dcplx.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D04b_Dcplx.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D04b_Dcplx.cs>`__.
 
 
 
@@ -1348,7 +1346,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_TestSReal.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_TestSReal.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D04a_DReal.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D04a_DReal.py>`__.
 
 
 
@@ -1490,7 +1488,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_TestSCplx.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_TestSCplx.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D04b_DCplx.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D04b_DCplx.py>`__.
 
 
 
@@ -1505,13 +1503,13 @@ The C\# source code for the module ``dcplx`` can be found here: `dcplx.cs <https
 
 
 
-The C++ source code supporting scalars in general which is called from ``dreal.cs`` and ``dcplx.cs`` can be found here:  `UseSReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C++/xlcalcnet/mpNum/UseSReal.cpp>`__.
+The C++ source code supporting scalars in general which is called from ``dreal.cs`` and ``dcplx.cs`` can be found here:  `UseFReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/mpNum/UseFReal.cpp>`__.
 
-The C++ source code which interacts directly with Boost can be found here: `BoostSReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/BoostMath/BoostSReal.cpp>`__.
+The C++ source code which interacts directly with Boost can be found here: `BoostSReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/BoostMath/BoostFReal.cpp>`__, and  `BoostDouble.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/BoostMath/BoostDouble.cpp>`__.
 
 
 
-The C++ source code supporting Eigen which is called from ``dreal.cs`` and ``dcplx.cs`` can be found here: `UseEigenSReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C++/xlcalcnet/mpNum/UseEigenSReal.cpp>`__.
+The C++ source code supporting Eigen which is called from ``dreal.cs`` and ``dcplx.cs`` can be found here: `UseEigenFReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/mpNum/UseEigenFReal.cpp>`__.
 
 The C++ source code which interacts directly with Eigen can be found in the folder: `BoostEigenMath.cpp <https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/BoostEigenMath>`__.
 
@@ -1614,7 +1612,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Ereal.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_Ereal.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D05a_Ereal.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D05a_Ereal.cs>`__.
 
 
 
@@ -1688,7 +1686,7 @@ General test code for C\# can be found here
     }
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_Ecplx.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_Ecplx.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D05b_Ecplx.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D05b_Ecplx.cs>`__.
 
 
 
@@ -1831,7 +1829,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_TestSReal.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_TestSReal.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D05a_EReal.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D05a_EReal.py>`__.
 
 
 
@@ -1973,7 +1971,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_TestSCplx.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_TestSCplx.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D05b_ECplx.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D05b_ECplx.py>`__.
 
 
 
@@ -1988,13 +1986,13 @@ The C\# source code for the module ``ecplx`` can be found here: `ecplx.cs <https
 
 
 
-The C++ source code supporting scalars in general which is called from ``ereal.cs`` and ``ecplx.cs`` can be found here:  `UseSReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C++/xlcalcnet/mpNum/UseSReal.cpp>`__.
+The C++ source code supporting scalars in general which is called from ``ereal.cs`` and ``ecplx.cs`` can be found here:  `UseXReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/mpNum/UseXReal.cpp>`__.
 
-The C++ source code which interacts directly with Boost can be found here: `BoostSReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/BoostMath/BoostSReal.cpp>`__.
+The C++ source code which interacts directly with Boost can be found here: `BoostXReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/BoostMath/BoostXReal.cpp>`__.
 
 
 
-The C++ source code supporting Eigen which is called from ``ereal.cs`` and ``ecplx.cs`` can be found here: `UseEigenSReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C++/xlcalcnet/mpNum/UseEigenSReal.cpp>`__.
+The C++ source code supporting Eigen which is called from ``ereal.cs`` and ``ecplx.cs`` can be found here: `UseEigenXReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/mpNum/UseEigenXReal.cpp>`__.
 
 The C++ source code which interacts directly with Eigen can be found in the folder: `BoostEigenMath.cpp <https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/BoostEigenMath>`__.
 
@@ -2092,7 +2090,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Qreal.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_Qreal.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D06a_Qreal.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D06a_Qreal.cs>`__.
 
 
 
@@ -2166,7 +2164,7 @@ General test code for C\# can be found here
     }
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_Qcplx.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_Qcplx.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_Qcplx.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D06b_Qcplx.cs>`__.
 
 
 
@@ -2309,7 +2307,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_TestSReal.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_TestSReal.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D06a_QReal.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D06a_QReal.py>`__.
 
 
 
@@ -2451,7 +2449,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_TestSCplx.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_TestSCplx.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D06b_QCplx.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D06b_QCplx.py>`__.
 
 
 
@@ -2466,13 +2464,13 @@ The C\# source code for the module ``qcplx`` can be found here: `qcplx.cs <https
 
 
 
-The C++ source code supporting scalars in general which is called from ``qreal.cs`` and ``qcplx.cs`` can be found here:  `UseSReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C++/xlcalcnet/mpNum/UseSReal.cpp>`__.
+The C++ source code supporting scalars in general which is called from ``qreal.cs`` and ``qcplx.cs`` can be found here:  `UseQReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/mpNum/UseQReal.cpp>`__.
 
-The C++ source code which interacts directly with Boost can be found here: `BoostSReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/BoostMath/BoostSReal.cpp>`__.
+The C++ source code which interacts directly with Boost can be found here: `BoostQReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/BoostMath/BoostQReal.cpp>`__.
 
 
 
-The C++ source code supporting Eigen which is called from ``qreal.cs`` and ``qcplx.cs`` can be found here: `UseEigenSReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C++/xlcalcnet/mpNum/UseEigenSReal.cpp>`__.
+The C++ source code supporting Eigen which is called from ``qreal.cs`` and ``qcplx.cs`` can be found here: `UseEigenQReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/mpNum/UseEigenQReal.cpp>`__.
 
 The C++ source code which interacts directly with Eigen can be found in the folder: `BoostEigenMath.cpp <https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/BoostEigenMath>`__.
 
@@ -2565,7 +2563,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Oreal.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_Oreal.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D07a_Oreal.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D07a_Oreal.cs>`__.
 
 
 
@@ -2639,7 +2637,7 @@ General test code for C\# can be found here
     }
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_Ocplx.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_Ocplx.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D07b_Ocplx.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D07b_Ocplx.cs>`__.
 
 
 
@@ -2782,7 +2780,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_TestSReal.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_TestSReal.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D07a_OReal.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D07a_OReal.py>`__.
 
 
 
@@ -2924,7 +2922,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_TestSCplx.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_TestSCplx.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D07b_OCplx.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D07b_OCplx.py>`__.
 
 
 
@@ -2939,13 +2937,13 @@ The C\# source code for the module ``ocplx`` can be found here: `ocplx.cs <https
 
 
 
-The C++ source code supporting scalars in general which is called from ``oreal.cs`` and ``ocplx.cs`` can be found here:  `UseSReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C++/xlcalcnet/mpNum/UseSReal.cpp>`__.
+The C++ source code supporting scalars in general which is called from ``oreal.cs`` and ``ocplx.cs`` can be found here:  `UseOReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/mpNum/UseOReal.cpp>`__.
 
-The C++ source code which interacts directly with Boost can be found here: `BoostSReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/BoostMath/BoostSReal.cpp>`__.
+The C++ source code which interacts directly with Boost can be found here: `BoostSReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/BoostMath/BoostOReal.cpp>`__.
 
 
 
-The C++ source code supporting Eigen which is called from ``oreal.cs`` and ``ocplx.cs`` can be found here: `UseEigenSReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C++/xlcalcnet/mpNum/UseEigenSReal.cpp>`__.
+The C++ source code supporting Eigen which is called from ``oreal.cs`` and ``ocplx.cs`` can be found here: `UseEigenSReal.cpp <https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/mpNum/UseEigenOReal.cpp>`__.
 
 The C++ source code which interacts directly with Eigen can be found in the folder: `BoostEigenMath.cpp <https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/C%2B%2B/xlcalcnet/BoostEigenMath>`__.
 

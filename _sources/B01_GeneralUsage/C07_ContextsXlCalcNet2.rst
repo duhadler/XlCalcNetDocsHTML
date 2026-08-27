@@ -108,7 +108,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Mreal.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_Mreal.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D01a_Mreal.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C07_ContextsXlCalcNet2/D01a_Mreal.cs>`__.
 
 
 
@@ -182,7 +182,7 @@ General test code for C\# can be found here
     }
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_Mcplx.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_Mcplx.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D01b_Mcplx.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C07_ContextsXlCalcNet2/D01b_Mcplx.cs>`__.
 
 
 
@@ -325,7 +325,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_TestMReal.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_TestMReal.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D01a_MReal.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C07_ContextsXlCalcNet2/D01a_MReal.py>`__.
 
 
 
@@ -467,7 +467,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_TestMCplx.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_TestMCplx.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_TestMCplx.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C07_ContextsXlCalcNet2/D01b_MCplx.py>`__.
 
 
 
@@ -482,13 +482,13 @@ The C\# source code for the module ``mcplx`` can be found here: `mcplx.cs <https
 
 
 
-The C++ source code supporting scalars in general which is called from ``mreal.cs`` and ``mcplx.cs`` can be found here:  `UseMReal.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C++/xlcalcnet2/mpNum/UseMReal.cpp>`__.
+The C++ source code supporting scalars in general which is called from ``mreal.cs`` and ``mcplx.cs`` can be found here:  `UseMpfr.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C%2B%2B/xlcalcnet2/mpNum/UseMpfr.cpp>`__.
 
-The C++ source code which interacts directly with Boost can be found here: `BoostMReal.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C%2B%2B/xlcalcnet2/BoostMath/BoostMReal.cpp>`__.
+The C++ source code which interacts directly with Boost can be found here: `BoostMpfr.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C%2B%2B/xlcalcnet2/BoostEigenMath/BoostMpfr.cpp>`__.
 
 
 
-The C++ source code supporting Eigen which is called from ``mreal.cs`` and ``mcplx.cs`` can be found here: `UseEigenMReal.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C++/xlcalcnet2/mpNum/UseEigenMReal.cpp>`__.
+The C++ source code supporting Eigen which is called from ``mreal.cs`` and ``mcplx.cs`` can be found here: `UseAnyEigenMat.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C%2B%2B/xlcalcnet2/mpNum/UseAnyEigenMat.cpp>`__.
 
 The C++ source code which interacts directly with Eigen can be found in the folder: `BoostEigenMath.cpp <https://github.com/duhadler/XlCalcNet2/tree/master/xlcalcnet2/Addin/NET48/Source/C%2B%2B/xlcalcnet2/BoostEigenMath>`__.
 
@@ -513,14 +513,6 @@ The C\# modules ``aflint`` and ``aflintc`` provide support for real and complex 
 The C\# modules ``mreal`` and ``mcplx``  partially support Eigen.
 
 Note: Exponent soft maximum and minimum
-
-
-
-The source code for the module ``aflint``  can be found here: https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/ArbPrec/aflint.cs
-
-
-The source code for the module ``aflintc``  can be found here: https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/ArbPrec/aflintc.cs
-
 
 
 
@@ -593,7 +585,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Aflint.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_Aflint.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Aflint.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C07_ContextsXlCalcNet2/D02a_Aflint.cs>`__.
 
 
 
@@ -667,7 +659,7 @@ General test code for C\# can be found here
     }
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_Aflintc.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_Aflintc.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_Aflintc.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C07_ContextsXlCalcNet2/D02b_Aflintc.cs>`__.
 
 
 
@@ -810,7 +802,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_TestAFlint.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_TestAFlint.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_AFlint.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C07_ContextsXlCalcNet2/D02a_AFlint.py>`__.
 
 
 
@@ -952,7 +944,8 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_TestAFlintc.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_TestAFlintc.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_AFlintc.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C07_ContextsXlCalcNet2/D02b_AFlintc.py>`__.
+
 
 
 
@@ -967,13 +960,10 @@ The C\# source code for the module ``aflintc`` can be found here: `aflintc.cs <h
 
 
 
-The C++ source code supporting scalars in general which is called from ``aflint.cs`` and ``aflintc.cs`` can be found here:  `UseAFlint.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C++/xlcalcnet2/mpNum/UseAFlint.cpp>`__.
-
-The C++ source code which interacts directly with Boost can be found here: `BoostAFlint.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C%2B%2B/xlcalcnet2/BoostMath/BoostAFlint.cpp>`__.
+The C++ source code supporting scalars in general which is called from ``aflint.cs`` and ``aflintc.cs`` can be found here:  `UseArb.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C%2B%2B/xlcalcnet2/mpNum/UseArb.cpp>`__.
 
 
-
-The C++ source code supporting Eigen which is called from ``aflint.cs`` and ``aflintc.cs`` can be found here: `UseEigenAFlint.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C++/xlcalcnet2/mpNum/UseEigenAFlint.cpp>`__.
+The C++ source code supporting Eigen which is called from ``aflint.cs`` and ``aflintc.cs`` can be found here: `UseAnyEigenMat.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C%2B%2B/xlcalcnet2/mpNum/UseAnyEigenMat.cpp>`__.
 
 The C++ source code which interacts directly with Eigen can be found in the folder: `BoostEigenMath.cpp <https://github.com/duhadler/XlCalcNet2/tree/master/xlcalcnet2/Addin/NET48/Source/C%2B%2B/xlcalcnet2/BoostEigenMath>`__.
 
@@ -1056,7 +1046,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Sflint.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_Sflint.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D03a_Sflint.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C07_ContextsXlCalcNet2/D03a_Sflint.cs>`__.
 
 
 
@@ -1111,7 +1101,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_Sflintc.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_Sflintc.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D03b_Sflintc.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C07_ContextsXlCalcNet2/D03b_Sflintc.cs>`__.
 
 
 
@@ -1183,7 +1173,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_TestDFlint.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_TestDFlint.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D03a_SFlint.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C07_ContextsXlCalcNet2/D03a_SFlint.py>`__.
 
 
 
@@ -1254,7 +1244,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_TestDFlintc.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_TestDFlintc.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D03b_SFlintc.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C07_ContextsXlCalcNet2/D03b_SFlintc.py>`__.
 
 
 
@@ -1263,7 +1253,7 @@ The above and additional examples can be found online in the ``DataXlCalcNet`` r
 Notes regarding the implementation in C\# and C++
 ........................................................
 
-The C\# source code for the modules ``sflint`` and  ``qflintc``  can be found here: `srealcplxflint.cs <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/ArbPrec/srealcplxflint.cs>`__.
+The C\# source code for the modules ``sflint`` and  ``sflintc``  can be found here: `srealcplxflint.cs <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/ArbPrec/srealcplxflint.cs>`__.
 
 
 
@@ -1341,7 +1331,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Dflint.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_Dflint.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D04a_Dflint.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C07_ContextsXlCalcNet2/D04a_Dflint.cs>`__.
 
 
 
@@ -1396,7 +1386,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_Dflintc.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_Dflintc.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D04b_Dflintc.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C07_ContextsXlCalcNet2/D04b_Dflintc.cs>`__.
 
 
 
@@ -1468,7 +1458,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_TestDFlint.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_TestDFlint.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D04a_DFlint.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C07_ContextsXlCalcNet2/D04a_DFlint.py>`__.
 
 
 
@@ -1539,7 +1529,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_TestDFlintc.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_TestDFlintc.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D04b_DFlintc.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C07_ContextsXlCalcNet2/D04b_DFlintc.py>`__.
 
 
 
@@ -1548,11 +1538,11 @@ The above and additional examples can be found online in the ``DataXlCalcNet`` r
 Notes regarding the implementation in C\# and C++
 ........................................................
 
-The C\# source code for the modules ``sflint`` and  ``qflintc``  can be found here: `srealcplxflint.cs <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/ArbPrec/drealcplxflint.cs>`__.
+The C\# source code for the modules ``dflint`` and  ``dflintc``  can be found here: `drealcplxflint.cs <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/ArbPrec/drealcplxflint.cs>`__.
 
 
 
-The C++ source code which is called from ``srealcplxflint.cs`` can be found here:  `UseSReal.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C%2B%2B/xlcalcnet2/mpNum/UseFReal.cpp>`__.
+The C++ source code which is called from ``drealcplxflint.cs`` can be found here:  `UseFReal.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C%2B%2B/xlcalcnet2/mpNum/UseFReal.cpp>`__.
 
 
 
@@ -1635,7 +1625,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Eflint.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_Eflint.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D05a_Eflint.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C07_ContextsXlCalcNet2/D05a_Eflint.cs>`__.
 
 
 
@@ -1690,7 +1680,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_Eflintc.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_Eflintc.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D05b_Eflintc.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C07_ContextsXlCalcNet2/D05b_Eflintc.cs>`__.
 
 
 
@@ -1762,7 +1752,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_TestDFlint.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_TestDFlint.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D05a_EFlint.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C07_ContextsXlCalcNet2/D05a_EFlint.py>`__.
 
 
 
@@ -1833,7 +1823,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_TestDFlintc.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_TestDFlintc.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D05b_EFlintc.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C07_ContextsXlCalcNet2/D05b_EFlintc.py>`__.
 
 
 
@@ -1842,11 +1832,11 @@ The above and additional examples can be found online in the ``DataXlCalcNet`` r
 Notes regarding the implementation in C\# and C++
 ........................................................
 
-The C\# source code for the modules ``eflint`` and  ``qflintc``  can be found here: `srealcplxflint.cs <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/ArbPrec/srealcplxflint.cs>`__.
+The C\# source code for the modules ``eflint`` and  ``eflintc``  can be found here: `erealcplxflint.cs <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/ArbPrec/erealcplxflint.cs>`__.
 
 
 
-The C++ source code which is called from ``srealcplxflint.cs`` can be found here:  `UseSReal.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C%2B%2B/xlcalcnet2/mpNum/UseSReal.cpp>`__.
+The C++ source code which is called from ``erealcplxflint.cs`` can be found here:  `UseXReal.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C%2B%2B/xlcalcnet2/mpNum/UseXReal.cpp>`__.
 
 
 
@@ -1920,7 +1910,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Sflint.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_Sflint.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D06a_Qflint.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C07_ContextsXlCalcNet2/D06a_Qflint.cs>`__.
 
 
 
@@ -1975,7 +1965,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_Qflintc.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_Qflintc.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D06b_Qflintc.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C07_ContextsXlCalcNet2/D06b_Qflintc.cs>`__.
 
 
 
@@ -2047,7 +2037,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_TestDFlint.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_TestDFlint.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D06a_QFlint.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C07_ContextsXlCalcNet2/D06a_QFlint.py>`__.
 
 
 
@@ -2118,7 +2108,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_TestDFlintc.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_TestDFlintc.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D06b_QFlintc.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C07_ContextsXlCalcNet2/D06b_QFlintc.py>`__.
 
 
 
@@ -2127,11 +2117,11 @@ The above and additional examples can be found online in the ``DataXlCalcNet`` r
 Notes regarding the implementation in C\# and C++
 ........................................................
 
-The C\# source code for the modules ``qflint`` and  ``qflintc``  can be found here: `srealcplxflint.cs <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/ArbPrec/srealcplxflint.cs>`__.
+The C\# source code for the modules ``qflint`` and  ``qflintc``  can be found here: `qrealcplxflint.cs <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/ArbPrec/qrealcplxflint.cs>`__.
 
 
 
-The C++ source code which is called from ``srealcplxflint.cs`` can be found here:  `UseSReal.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C%2B%2B/xlcalcnet2/mpNum/UseSReal.cpp>`__.
+The C++ source code which is called from ``qrealcplxflint.cs`` can be found here:  `UseQReal.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C%2B%2B/xlcalcnet2/mpNum/UseQReal.cpp>`__.
 
 
 
@@ -2204,7 +2194,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Oflint.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_Oflint.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D07a_Oflint.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C07_ContextsXlCalcNet2/D07a_Oflint.cs>`__.
 
 
 
@@ -2259,7 +2249,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_Oflintc.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_Oflintc.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D07b_Oflintc.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C07_ContextsXlCalcNet2/D07b_Oflintc.cs>`__.
 
 
 
@@ -2331,7 +2321,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_TestDFlint.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_TestDFlint.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D07a_OFlint.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C07_ContextsXlCalcNet2/D07a_OFlint.py>`__.
 
 
 
@@ -2402,7 +2392,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_TestDFlintc.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_TestDFlintc.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D07b_OFlintc.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C07_ContextsXlCalcNet2/D07b_OFlintc.py>`__.
 
 
 
@@ -2411,11 +2401,11 @@ The above and additional examples can be found online in the ``DataXlCalcNet`` r
 Notes regarding the implementation in C\# and C++
 ........................................................
 
-The C\# source code for the modules ``oflint`` and  ``qflintc``  can be found here: `srealcplxflint.cs <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/ArbPrec/srealcplxflint.cs>`__.
+The C\# source code for the modules ``oflint`` and  ``oflintc``  can be found here: `orealcplxflint.cs <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/ArbPrec/orealcplxflint.cs>`__.
 
 
 
-The C++ source code which is called from ``srealcplxflint.cs`` can be found here:  `UseSReal.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C%2B%2B/xlcalcnet2/mpNum/UseSReal.cpp>`__.
+The C++ source code which is called from ``orealcplxflint.cs`` can be found here:  `UseOReal.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C%2B%2B/xlcalcnet2/mpNum/UseOReal.cpp>`__.
 
 
 
@@ -2489,7 +2479,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Mflint.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_Mflint.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D08a_Mflint.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C07_ContextsXlCalcNet2/D08a_Mflint.cs>`__.
 
 
 
@@ -2544,7 +2534,7 @@ General test code for C\# can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_Mflintc.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_Mflintc.cs>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D08b_Mflintc.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C07_ContextsXlCalcNet2/D08b_Mflintc.cs>`__.
 
 
 
@@ -2616,7 +2606,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_TestDFlint.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02a_TestDFlint.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D08a_MFlint.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C07_ContextsXlCalcNet2/D08a_MFlint.py>`__.
 
 
 
@@ -2687,7 +2677,7 @@ General test code can be found here
 
 
 
-The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02b_TestDFlintc.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C06_ContextsFixedPrec/D02b_TestDFlintc.py>`__.
+The above and additional examples can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D08b_MFlintc.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B01_GeneralUsage/C07_ContextsXlCalcNet2/D08b_MFlintc.py>`__.
 
 
 
@@ -2696,11 +2686,11 @@ The above and additional examples can be found online in the ``DataXlCalcNet`` r
 Notes regarding the implementation in C\# and C++
 ........................................................
 
-The C\# source code for the modules ``mflint`` and  ``qflintc``  can be found here: `srealcplxflint.cs <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/ArbPrec/srealcplxflint.cs>`__.
+The C\# source code for the modules ``mflint`` and  ``mflintc``  can be found here: `mrealcplxflint.cs <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/ArbPrec/mrealcplxflint.cs>`__.
 
 
 
-The C++ source code which is called from ``srealcplxflint.cs`` can be found here:  `UseSReal.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C%2B%2B/xlcalcnet2/mpNum/UseSReal.cpp>`__.
+The C++ source code which is called from ``mrealcplxflint.cs`` can be found here:  `UseMpfr.cpp <https://github.com/duhadler/XlCalcNet2/blob/master/xlcalcnet2/Addin/NET48/Source/C%2B%2B/xlcalcnet2/mpNum/UseMpfr.cpp>`__.
 
 
 

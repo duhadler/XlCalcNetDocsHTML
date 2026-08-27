@@ -52,7 +52,7 @@
     <link rel="prev" title="Preface" href="../000_Preface/01_preface.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 26, 2026"/>
+    <meta name="docbuild:last-update" content="Aug 27, 2026"/>
   </head>
   
   
@@ -902,15 +902,27 @@ document.write(`
                   
   <section id="setup-and-general-usage">
 <h1>Setup and general usage<a class="headerlink" href="#setup-and-general-usage" title="Link to this heading">#</a></h1>
+<p>XlCalcNet is a numerical library with parts written in Python and other parts written in C#, C++, C and Pascal, focussing on numerical calculations in multiple precision and data visualisation.</p>
+<p>Since the main goal is to give access to software written in Python (or via PythonNet software written in C#) from within spreadsheet formulas, a dedicated CPython installation is strongly recommend, to make it easier to configure the interaction with Microsoft Excel, without disturbing existing Python installations.</p>
+<p>The interaction with Microsoft Excel is achieved by running a socket server written in Python, which is called from spreadsheet formulas using the functionality provided by Excel.Dna.</p>
+<p>The code which is necessary to make this work overall contains much more C# and C/C++ than Python, so the project is not really suitable as a project on PyPI, but is provided as a Github project only. Both the source code and precompiled binaries are included, since compiling all of the source code requires MSYS2, Free Pascal and Visual Studio, which not all Excel users will be familiar with.</p>
+<p>On the Python side XlCalcNet uses Mpmath 4.0 to provide a rich set of functions in arbitrary precision, using not only Mpmath’s binary and interval data types, but also Python’s built-in Decimal and Fraction data types. If GMP2 is installed, its data types can be used in many cases instead of Mpmath’s binary data types, being much faster. Likewise, if Python-Flint is installed, its data types  can be used in many cases instead of Mpmath’s interval data types, being much faster, and often also more accurate.</p>
+<p>On the C/C++ side, XlCalcNet uses DAMath, Boost Math, Boost Multiprecision and Eigen to provide numerical functions in single, double, extended, quadruple and octuple precision, which are available to the user both from C# and Python.</p>
+<p>The XlCalcNet2 library, which is licensed under the LGPL-3.0 and is therefore provided as a separate project, is based on Boost Math, Boost Multiprecision, Eigen, GMP, MPFR, MPC and Flint and provides functions for the same data types as XlCalcNet and also in arbitrary precision.</p>
+<p>XlCalcNet is intended to be used together with existing Python libraries like NumPy, Matplotlib, Pandas, SciPy. It can also be used from recent versions of RStudio and R, using the reticulate package.</p>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup and general usage</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="C01_Setup.html">Setting up XlCalcNet</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#downloading-and-installing-the-right-version-of-cpython">Downloading and installing the “right” version of CPython</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-and-using-pythonnet-calling-c-from-python">Installing and using Pythonnet: Calling C# from Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#downloading-and-unpacking-repositories-from-github">Downloading and unpacking repositories from Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-and-using-python-net-calling-c-from-python">Installing and using Python.NET: Calling C# from Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-the-dataxlcalcnet-folder">Installing the DataXlCalcNet folder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-xlcalcnet">Installing XlCalcNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-xlcalcnet2-optional">Installing XlCalcNet2 (optional)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-and-using-the-tiny-ide-as-a-python-application">Installing and using the Tiny IDE as a Python application</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-and-using-of-the-ms-excel-xlnet-addin-first-steps">Installing and using of the MS Excel XlNet addin: first steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#reasons-for-using-multiprecision-arithmetic">Reasons for using multiprecision arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#reasons-for-calling-c-from-python">Reasons for calling C# from Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#rebuilding-the-dll-files-of-xlcalcnet-and-xlcalcnet2-from-source-code">Rebuilding the .dll files of XlCalcNet and XlCalcNet2 from source code</a></li>
 </ul>
 </li>
@@ -994,35 +1006,55 @@ document.write(`
 </li>
 <li class="toctree-l1"><a class="reference internal" href="C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html#overview">Overview</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#ctx.mpf"><code class="docutils literal notranslate"><span class="pre">ctx.mpf()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#ctx.mpc"><code class="docutils literal notranslate"><span class="pre">ctx.mpc()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#ctx.t"><code class="docutils literal notranslate"><span class="pre">ctx.t()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#ctx.convert"><code class="docutils literal notranslate"><span class="pre">ctx.convert()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#ctx.mpmathify"><code class="docutils literal notranslate"><span class="pre">ctx.mpmathify()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#contexts">Contexts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#conversion-of-sclars">Conversion of sclars</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="C05_ContextsMpmath.html#ctx.t"><code class="docutils literal notranslate"><span class="pre">ctx.t()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html#double-precision-arithmetic-fpm">Double-precision arithmetic (<code class="docutils literal notranslate"><span class="pre">fpm</span></code>)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html#binary-floating-point-in-arbitrary-precision-and-with-arbitrary-exponent-mpm">Binary floating-point in arbitrary-precision and with arbitrary exponent  (<code class="docutils literal notranslate"><span class="pre">mpm</span></code>)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html#interval-arithmetic-in-arbitrary-precision-and-with-arbitrary-exponent-ipm">Interval arithmetic in arbitrary-precision and with arbitrary exponent (<code class="docutils literal notranslate"><span class="pre">ipm</span></code>)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#mpi_from_str"><code class="docutils literal notranslate"><span class="pre">mpi_from_str()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#mpi_to_str"><code class="docutils literal notranslate"><span class="pre">mpi_to_str()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#precision-in-bits-and-digits">Precision in bits and digits</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html#decimal-floating-point-in-arbitrary-precision-with-limited-exponent-dpm">Decimal floating-point in arbitrary-precision with limited exponent (<code class="docutils literal notranslate"><span class="pre">dpm</span></code>)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html#rational-numbers-qpm">Rational numbers (<code class="docutils literal notranslate"><span class="pre">qpm</span></code>)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html#binary-floating-point-in-arbitrary-precision-with-limited-exponent-gpm">Binary floating-point in arbitrary-precision with limited exponent (<code class="docutils literal notranslate"><span class="pre">gpm</span></code>)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html#binary-balls-in-arbitrary-precision-and-with-arbitrary-exponent-apm">Binary balls in arbitrary-precision and with arbitrary exponent  (<code class="docutils literal notranslate"><span class="pre">apm</span></code>)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html#writing-portable-code-for-interval-and-ball-arithmetic">Writing portable code for interval and ball arithmetic</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#ctx.mid"><code class="docutils literal notranslate"><span class="pre">ctx.mid()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#ctx.radius"><code class="docutils literal notranslate"><span class="pre">ctx.radius()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#ctx.left"><code class="docutils literal notranslate"><span class="pre">ctx.left()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#ctx.right"><code class="docutils literal notranslate"><span class="pre">ctx.right()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#ctx.absmin"><code class="docutils literal notranslate"><span class="pre">ctx.absmin()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#ctx.absmax"><code class="docutils literal notranslate"><span class="pre">ctx.absmax()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#ctx.union"><code class="docutils literal notranslate"><span class="pre">ctx.union()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html#double-precision-arithmetic-fpm">Double-precision arithmetic: <code class="docutils literal notranslate"><span class="pre">fpm</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#examples-for-fpm-real-input">Examples for <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, real input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#examples-for-fpm-complex-input">Examples for <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, complex input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#implementation-in-python">Implementation in Python</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html#reasons-for-using-multiprecision-arithmetic">Reasons for using multiprecision arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html#binary-floating-point-with-arbitrary-precision-and-exponent-mpm">Binary floating-point with arbitrary-precision and exponent: <code class="docutils literal notranslate"><span class="pre">mpm</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#examples-for-mpm-real-input">Examples for <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, real input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#examples-for-mpm-complex-input">Examples for <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, complex input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#id1">Implementation in Python</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html#interval-arithmetic-with-arbitrary-precision-and-exponent-ipm">Interval arithmetic with arbitrary-precision and exponent:<code class="docutils literal notranslate"><span class="pre">ipm</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#examples-for-ipm-real-input">Examples for <code class="docutils literal notranslate"><span class="pre">ipm</span></code>, real input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#examples-for-ipm-complex-input">Examples for <code class="docutils literal notranslate"><span class="pre">ipm</span></code>, complex input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#id2">Implementation in Python</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html#decimal-floating-point-in-arbitrary-precision-with-limited-exponent-dpm">Decimal floating-point in arbitrary-precision with limited exponent: <code class="docutils literal notranslate"><span class="pre">dpm</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#examples-for-dpm-real-input">Examples for <code class="docutils literal notranslate"><span class="pre">dpm</span></code>, real input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#examples-for-dpm-complex-input">Examples for <code class="docutils literal notranslate"><span class="pre">dpm</span></code>, complex input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#id3">Implementation in Python</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html#rational-numbers-qpm">Rational numbers: <code class="docutils literal notranslate"><span class="pre">qpm</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#examples-for-qpm-real-input">Examples for <code class="docutils literal notranslate"><span class="pre">qpm</span></code>, real input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#id4">Implementation in Python</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html#binary-floating-point-in-arbitrary-precision-with-limited-exponent-gpm">Binary floating-point in arbitrary-precision with limited exponent: <code class="docutils literal notranslate"><span class="pre">gpm</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#examples-for-gpm-real-input">Examples for <code class="docutils literal notranslate"><span class="pre">gpm</span></code>, real input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#examples-for-gpm-complex-input">Examples for <code class="docutils literal notranslate"><span class="pre">gpm</span></code>, complex input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#id5">Implementation in Python</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html#binary-balls-in-arbitrary-precision-and-with-arbitrary-exponent-apm">Binary balls in arbitrary-precision and with arbitrary exponent: <code class="docutils literal notranslate"><span class="pre">apm</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#examples-for-apm-real-input">Examples for <code class="docutils literal notranslate"><span class="pre">apm</span></code>, real input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#examples-for-apm-complex-input">Examples for <code class="docutils literal notranslate"><span class="pre">apm</span></code>, complex input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#id6">Implementation in Python</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a><ul>
@@ -1279,7 +1311,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 26, 2026.
+  Last updated on Aug 27, 2026.
   <br/>
 </p>
   </div>
