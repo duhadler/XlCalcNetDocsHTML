@@ -44,6 +44,7 @@
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=4ea706d9"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'B19_Bitmaps/C02_MandelbrotSet';</script>
     <script src="../_static/custom-icon.js?v=74687d30"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -52,7 +53,7 @@
     <link rel="prev" title="Fractals: introduction" href="C01_IntroFractals.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 27, 2026"/>
+    <meta name="docbuild:last-update" content="Aug 30, 2026"/>
   </head>
   
   
@@ -581,7 +582,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B18_FunctionsAndCurvesPlots/index.html">Visualisation of functions and curves (2D)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../B18_FunctionsAndCurvesPlots/C01_Intro_Parametric2D.html">Introduction to 2D functions and curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B18_FunctionsAndCurvesPlots/C01_Intro_Parametric2D.html">Introduction to 2D functions plots</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B18_FunctionsAndCurvesPlots/C02_BasicCurves.html">Basic curves</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B18_FunctionsAndCurvesPlots/C03_Spirals.html">Spirals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B18_FunctionsAndCurvesPlots/C04_DecorativeCurves.html">Decorative curves</a></li>
@@ -597,21 +598,20 @@
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Fractals related to the Mandelbrot set</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C03_JuliaSet.html">Fractals related to the Julia set</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_NewtonFractals.html">Newton Fractals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C05_DomainOptions.html">Domain coloring options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C06_DomainExamples1.html">Domain coloring: Examples part 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C05_DomainColoring.html">Domain coloring</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B20_Matplotlib3D/index.html">Matplotlib 3D Graphics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../B20_Matplotlib3D/C01_Introduction.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B20_Matplotlib3D/C02_BasicExamples.html">Matplotlib: 3D Graphics, part 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B20_Matplotlib3D/C04_BasicGeometricFigures.html">S3dlib: Basic geometric figures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B20_Matplotlib3D/C05_RealFunctions.html">S3dlib: Real functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B20_Matplotlib3D/C06_ParametricSurfaces.html">S3dlib: Parametric Surfaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B20_Matplotlib3D/C07_ImageMappingAndClipping.html">S3dlib: Image mapping and clipping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B20_Matplotlib3D/C08_EdgeToEdgeSurfaceColoring.html">S3dlib: Edge-to-edge surface coloring</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B20_Matplotlib3D/C09_DecorativeSurfaces.html">S3dlib: Decorative parametric surfaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B20_Matplotlib3D/C10_GeometricDataGridMapping.html">S3dlib: Geometric and color datagrid mapping (requires scipy)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B20_Matplotlib3D/C11_ImplicitSurfaces.html">S3dlib: Implicit surfaces (requires scikit-image)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B20_Matplotlib3D/C02_BasicExamples.html">Matplotlib: 3D Graphics (from Matplotlib tutorials)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B20_Matplotlib3D/C03_BasicGeometricFigures.html">S3dlib: Basic geometric figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B20_Matplotlib3D/C04_RealFunctions.html">S3dlib: Real functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B20_Matplotlib3D/C05_ParametricSurfaces.html">S3dlib: Parametric Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B20_Matplotlib3D/C06_ImageMappingAndClipping.html">S3dlib: Image mapping and clipping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring.html">S3dlib: Edge-to-edge surface coloring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B20_Matplotlib3D/C08_DecorativeSurfaces.html">S3dlib: Decorative parametric surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B20_Matplotlib3D/C09_GeometricDataGridMapping.html">S3dlib: Geometric and color datagrid mapping (requires scipy)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B20_Matplotlib3D/C10_ImplicitSurfaces.html">S3dlib: Implicit surfaces (requires scikit-image)</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B21_Plotly/index.html">Plotly</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -898,13 +898,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mandelbrot-set">Classical Mandelbrot set</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-set-at-higher-powers">Mandelbrot set at higher powers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-6">Mandelbrot 6</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-7">Mandelbrot 7</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-mandelbrot">Inverse Mandelbrot</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marek-dragon-fractal">Marek Dragon Fractal</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#burning-ship-fractal">Burning Ship Fractal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-set-example-1-classical-set-z-n-1-z-n-2-c">Mandelbrot set, example 1, classical set: <span class="math notranslate nohighlight">\(z_{n+1} = z_n^2 + c\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-set-example-2-higher-powers">Mandelbrot set, example 2: higher powers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-set-example-3-z-n-1-z-n-5-frac-c-z-n">Mandelbrot set, example 3: <span class="math notranslate nohighlight">\(z_{n+1} = z_n^5 + \frac{c}{z_n}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-set-example-4-z-n-1-z-n-5-frac-c-z-n-5">Mandelbrot set, example 4: <span class="math notranslate nohighlight">\(z_{n+1} = z_n^5 + \frac{c}{z_n^5}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-set-example-5-inverse-mandelbrot">Mandelbrot set, example 5, “Inverse Mandelbrot”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-set-example-6-marek-dragon-fractal">Mandelbrot set, example 6, “Marek Dragon Fractal”:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-set-example-7-burning-ship-fractal">Mandelbrot set, example 7, “Burning Ship Fractal”</a></li>
 </ul>
             </nav>
         </div>
@@ -926,59 +926,74 @@ document.write(`
 <p>Difference Method: <a class="reference external" href="https://en.wikibooks.org/wiki/Fractals/Iterations_in_the_complex_plane/demm">https://en.wikibooks.org/wiki/Fractals/Iterations_in_the_complex_plane/demm</a></p>
 <p>MandelbrotSetExterior: <a class="reference external" href="https://en.wikibooks.org/wiki/Fractals/Iterations_in_the_complex_plane/MandelbrotSetExterior#Real_Escape_Time">https://en.wikibooks.org/wiki/Fractals/Iterations_in_the_complex_plane/MandelbrotSetExterior#Real_Escape_Time</a></p>
 <p>Fractals/fractalzoomer: <a class="reference external" href="https://en.wikibooks.org/wiki/Fractals/fractalzoomer">https://en.wikibooks.org/wiki/Fractals/fractalzoomer</a></p>
-<section id="classical-mandelbrot-set">
-<h2>Classical Mandelbrot set<a class="headerlink" href="#classical-mandelbrot-set" title="Link to this heading">#</a></h2>
-<p>some text</p>
+<section id="mandelbrot-set-example-1-classical-set-z-n-1-z-n-2-c">
+<h2>Mandelbrot set, example 1, classical set: <span class="math notranslate nohighlight">\(z_{n+1} = z_n^2 + c\)</span><a class="headerlink" href="#mandelbrot-set-example-1-classical-set-z-n-1-z-n-2-c" title="Link to this heading">#</a></h2>
+<p>Classical formula: <span class="math notranslate nohighlight">\(z_{n+1} = z_n^2 + c\)</span>.</p>
+<p>The Python code for the example below, <em>without</em> using <code class="docutils literal notranslate"><span class="pre">numba</span></code>, can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B19_Bitmaps/C02_MandelbrotSet/D01a_Mandelbrot1.py">D01a_Mandelbrot1.py</a>.</p>
+<p>The Python code for the example below, using <code class="docutils literal notranslate"><span class="pre">numba</span></code>, can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B19_Bitmaps/C02_MandelbrotSet/D01b_Mandelbrot1.py">D01b_Mandelbrot1.py</a>.</p>
 <a class="reference internal image-reference" href="../_images/Mandelbrot1.svg"><img alt="../_images/Mandelbrot1.svg" src="../_images/Mandelbrot1.svg" style="width: 50%;" />
 </a>
 <p></p>
 </section>
-<section id="mandelbrot-set-at-higher-powers">
-<h2>Mandelbrot set at higher powers<a class="headerlink" href="#mandelbrot-set-at-higher-powers" title="Link to this heading">#</a></h2>
-<p>some text</p>
+<section id="mandelbrot-set-example-2-higher-powers">
+<h2>Mandelbrot set, example 2: higher powers<a class="headerlink" href="#mandelbrot-set-example-2-higher-powers" title="Link to this heading">#</a></h2>
+<p>Recursion formula: <span class="math notranslate nohighlight">\(\displaystyle z_{n+1} = z_n^5 + c\)</span>.</p>
+<p>The Python code for the example below, <em>without</em> using <code class="docutils literal notranslate"><span class="pre">numba</span></code>, can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B19_Bitmaps/C02_MandelbrotSet/D02a_Mandelbrot2.py">D02a_Mandelbrot2.py</a>.</p>
+<p>The Python code for the example below, using <code class="docutils literal notranslate"><span class="pre">numba</span></code>, can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B19_Bitmaps/C02_MandelbrotSet/D02b_Mandelbrot2.py">D02b_Mandelbrot2.py</a>.</p>
 <p>See also: <a class="reference external" href="https://paulbourke.net/fractals/mandelpower/">https://paulbourke.net/fractals/mandelpower/</a></p>
 <p>See also: <a class="reference external" href="http://www.3d-meier.de/">http://www.3d-meier.de/</a>, Mandelbrot und Julia Mengen</p>
 <a class="reference internal image-reference" href="../_images/Mandelbrot2.svg"><img alt="../_images/Mandelbrot2.svg" src="../_images/Mandelbrot2.svg" style="width: 50%;" />
 </a>
 <p></p>
 </section>
-<section id="mandelbrot-6">
-<h2>Mandelbrot 6<a class="headerlink" href="#mandelbrot-6" title="Link to this heading">#</a></h2>
-<p>some text</p>
+<section id="mandelbrot-set-example-3-z-n-1-z-n-5-frac-c-z-n">
+<h2>Mandelbrot set, example 3: <span class="math notranslate nohighlight">\(z_{n+1} = z_n^5 + \frac{c}{z_n}\)</span><a class="headerlink" href="#mandelbrot-set-example-3-z-n-1-z-n-5-frac-c-z-n" title="Link to this heading">#</a></h2>
+<p>Recursion formula: <span class="math notranslate nohighlight">\(\displaystyle z_{n+1} = z_n^5 + \frac{c}{z_n}\)</span>.</p>
 <p>See also: <a class="reference external" href="http://www.3d-meier.de/">http://www.3d-meier.de/</a>, Mandelbrot und Julia Mengen</p>
+<p>The Python code for the example below, <em>without</em> using <code class="docutils literal notranslate"><span class="pre">numba</span></code>, can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B19_Bitmaps/C02_MandelbrotSet/D03a_Mandelbrot3.py">D03a_Mandelbrot3.py</a>.</p>
+<p>The Python code for the example below, using <code class="docutils literal notranslate"><span class="pre">numba</span></code>, can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B19_Bitmaps/C02_MandelbrotSet/D03b_Mandelbrot3.py">D03b_Mandelbrot3.py</a>.</p>
 <a class="reference internal image-reference" href="../_images/Mandelbrot6.svg"><img alt="../_images/Mandelbrot6.svg" src="../_images/Mandelbrot6.svg" style="width: 50%;" />
 </a>
 <p></p>
 </section>
-<section id="mandelbrot-7">
-<h2>Mandelbrot 7<a class="headerlink" href="#mandelbrot-7" title="Link to this heading">#</a></h2>
-<p>some text</p>
+<section id="mandelbrot-set-example-4-z-n-1-z-n-5-frac-c-z-n-5">
+<h2>Mandelbrot set, example 4: <span class="math notranslate nohighlight">\(z_{n+1} = z_n^5 + \frac{c}{z_n^5}\)</span><a class="headerlink" href="#mandelbrot-set-example-4-z-n-1-z-n-5-frac-c-z-n-5" title="Link to this heading">#</a></h2>
+<p>Recursion formula: <span class="math notranslate nohighlight">\(\displaystyle z_{n+1} = z_n^5 + \frac{c}{z_n^5}\)</span>.</p>
 <p>See also: <a class="reference external" href="http://www.3d-meier.de/">http://www.3d-meier.de/</a>, Mandelbrot und Julia Mengen</p>
+<p>The Python code for the example below, <em>without</em> using <code class="docutils literal notranslate"><span class="pre">numba</span></code>, can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B19_Bitmaps/C02_MandelbrotSet/D04a_Mandelbrot4.py">D04a_Mandelbrot4.py</a>.</p>
+<p>The Python code for the example below, using <code class="docutils literal notranslate"><span class="pre">numba</span></code>, can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B19_Bitmaps/C02_MandelbrotSet/D04b_Mandelbrot4.py">D04b_Mandelbrot4.py</a>.</p>
 <a class="reference internal image-reference" href="../_images/Mandelbrot7.svg"><img alt="../_images/Mandelbrot7.svg" src="../_images/Mandelbrot7.svg" style="width: 50%;" />
 </a>
 <p></p>
 </section>
-<section id="inverse-mandelbrot">
-<h2>Inverse Mandelbrot<a class="headerlink" href="#inverse-mandelbrot" title="Link to this heading">#</a></h2>
-<p>some text</p>
+<section id="mandelbrot-set-example-5-inverse-mandelbrot">
+<h2>Mandelbrot set, example 5, “Inverse Mandelbrot”<a class="headerlink" href="#mandelbrot-set-example-5-inverse-mandelbrot" title="Link to this heading">#</a></h2>
+<p>Recursion formula: <span class="math notranslate nohighlight">\(\displaystyle z_{n+1} = z_n^2 + \frac{1}{c}\)</span>.</p>
 <p>See also: <a class="reference external" href="http://www.3d-meier.de/">http://www.3d-meier.de/</a>, Mandelbrot und Julia Mengen</p>
+<p>The Python code for the example below, <em>without</em> using <code class="docutils literal notranslate"><span class="pre">numba</span></code>, can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B19_Bitmaps/C02_MandelbrotSet/D05a_Mandelbrot5.py">D05a_Mandelbrot5.py</a>.</p>
+<p>The Python code for the example below, using <code class="docutils literal notranslate"><span class="pre">numba</span></code>, can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B19_Bitmaps/C02_MandelbrotSet/D05b_Mandelbrot5.py">D05b_Mandelbrot5.py</a>.</p>
 <a class="reference internal image-reference" href="../_images/Mandelbrot5.svg"><img alt="../_images/Mandelbrot5.svg" src="../_images/Mandelbrot5.svg" style="width: 50%;" />
 </a>
 <p></p>
 </section>
-<section id="marek-dragon-fractal">
-<h2>Marek Dragon Fractal<a class="headerlink" href="#marek-dragon-fractal" title="Link to this heading">#</a></h2>
+<section id="mandelbrot-set-example-6-marek-dragon-fractal">
+<h2>Mandelbrot set, example 6, “Marek Dragon Fractal”:<a class="headerlink" href="#mandelbrot-set-example-6-marek-dragon-fractal" title="Link to this heading">#</a></h2>
 <p>Compare this with “Phoenix Julia fractals”</p>
+<p>Recursion formula: <span class="math notranslate nohighlight">\(\displaystyle z_{n+1} = \exp(2 \pi i r) z_n + z_n^2\)</span> where r is an irrational number, in this example it is <span class="math notranslate nohighlight">\(1 - (\sqrt{2} - \sqrt{3} + \sqrt{5} )/2\)</span>.</p>
 <p>See also: <a class="reference external" href="https://paulbourke.net/fractals/marek/">https://paulbourke.net/fractals/marek/</a></p>
+<p>The Python code for the example below, <em>without</em> using <code class="docutils literal notranslate"><span class="pre">numba</span></code>, can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B19_Bitmaps/C02_MandelbrotSet/D06a_Mandelbrot6.py">D06a_Mandelbrot6.py</a>.</p>
+<p>The Python code for the example below, using <code class="docutils literal notranslate"><span class="pre">numba</span></code>, can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B19_Bitmaps/C02_MandelbrotSet/D06b_Mandelbrot6.py">D06b_Mandelbrot6.py</a>.</p>
 <a class="reference internal image-reference" href="../_images/Mandelbrot4.svg"><img alt="../_images/Mandelbrot4.svg" src="../_images/Mandelbrot4.svg" style="width: 50%;" />
 </a>
 <p></p>
 </section>
-<section id="burning-ship-fractal">
-<h2>Burning Ship Fractal<a class="headerlink" href="#burning-ship-fractal" title="Link to this heading">#</a></h2>
-<p>some text</p>
+<section id="mandelbrot-set-example-7-burning-ship-fractal">
+<h2>Mandelbrot set, example 7, “Burning Ship Fractal”<a class="headerlink" href="#mandelbrot-set-example-7-burning-ship-fractal" title="Link to this heading">#</a></h2>
+<p>Recursion formula: <span class="math notranslate nohighlight">\(\displaystyle z_{n+1} = \left(|\Re(z_n)| + i|\Im(z_n)| \right)^2 + c\)</span>.</p>
 <p>See also: <a class="reference external" href="http://www.3d-meier.de/">http://www.3d-meier.de/</a>, Mandelbrot und Julia Mengen</p>
 <p>See also: <a class="reference external" href="https://paulbourke.net/fractals/burnship/">https://paulbourke.net/fractals/burnship/</a></p>
+<p>The Python code for the example below, <em>without</em> using <code class="docutils literal notranslate"><span class="pre">numba</span></code>, can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B19_Bitmaps/C02_MandelbrotSet/D07a_Mandelbrot7.py">D07a_Mandelbrot7.py</a>.</p>
+<p>The Python code for the example below, using <code class="docutils literal notranslate"><span class="pre">numba</span></code>, can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B19_Bitmaps/C02_MandelbrotSet/D07b_Mandelbrot7.py">D07b_Mandelbrot7.py</a>.</p>
 <a class="reference internal image-reference" href="../_images/Mandelbrot3.svg"><img alt="../_images/Mandelbrot3.svg" src="../_images/Mandelbrot3.svg" style="width: 50%;" />
 </a>
 </section>
@@ -1029,13 +1044,13 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mandelbrot-set">Classical Mandelbrot set</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-set-at-higher-powers">Mandelbrot set at higher powers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-6">Mandelbrot 6</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-7">Mandelbrot 7</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-mandelbrot">Inverse Mandelbrot</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marek-dragon-fractal">Marek Dragon Fractal</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#burning-ship-fractal">Burning Ship Fractal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-set-example-1-classical-set-z-n-1-z-n-2-c">Mandelbrot set, example 1, classical set: <span class="math notranslate nohighlight">\(z_{n+1} = z_n^2 + c\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-set-example-2-higher-powers">Mandelbrot set, example 2: higher powers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-set-example-3-z-n-1-z-n-5-frac-c-z-n">Mandelbrot set, example 3: <span class="math notranslate nohighlight">\(z_{n+1} = z_n^5 + \frac{c}{z_n}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-set-example-4-z-n-1-z-n-5-frac-c-z-n-5">Mandelbrot set, example 4: <span class="math notranslate nohighlight">\(z_{n+1} = z_n^5 + \frac{c}{z_n^5}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-set-example-5-inverse-mandelbrot">Mandelbrot set, example 5, “Inverse Mandelbrot”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-set-example-6-marek-dragon-fractal">Mandelbrot set, example 6, “Marek Dragon Fractal”:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandelbrot-set-example-7-burning-ship-fractal">Mandelbrot set, example 7, “Burning Ship Fractal”</a></li>
 </ul>
   </nav></div>
 
@@ -1069,7 +1084,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 27, 2026.
+  Last updated on Aug 30, 2026.
   <br/>
 </p>
   </div>
