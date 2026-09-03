@@ -53,7 +53,7 @@
     <link rel="prev" title="Nonorientable (one-sided) Surfaces" href="C05_NonorientableSurfaces.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 30, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 03, 2026"/>
   </head>
   
   
@@ -631,7 +631,7 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Wpf: Parametric surfaces</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="C01_TranslationSurfaces.html">Surfaces of translation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C02_SurfacesOfRevolution.html">Surfaces of revolution: spheres and related</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C02_SurfacesOfRevolution.html">Surfaces of revolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C03_GeneralisationsOfSurfaces.html">Generalisations of common surfaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_MinimalSurfaces.html">Minimal surfaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_NonorientableSurfaces.html">Nonorientable (one-sided) Surfaces</a></li>
@@ -651,9 +651,9 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/index.html">Wpf: Built-in 3D objects</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/C02_SolidsWithTextures.html">Builtin solids with support for textures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/C03_SolidsWithoutTextures.html">Builtin solids without support for textures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/C04_PlatonicSolids.html">Platonic solids, and related solids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/C01_SolidsWithTextures.html">Builtin solids with support for textures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures.html">Builtin solids without support for textures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/C03_PlatonicSolids.html">Platonic solids, and related solids</a></li>
 </ul>
 </details></li>
 </ul>
@@ -899,54 +899,18 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bourke-seashell">Bourke Seashell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seashell-mathworld-wolfram">Seashell (mathworld.wolfram)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.Seashell"><code class="docutils literal notranslate"><span class="pre">User.Seashell()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-apple">3D Apple</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.Apple"><code class="docutils literal notranslate"><span class="pre">User.Apple()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bow-curve">Bow curve</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.Bow"><code class="docutils literal notranslate"><span class="pre">User.Bow()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fish-surface">Fish Surface</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.Fish3D"><code class="docutils literal notranslate"><span class="pre">User.Fish3D()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bourke-horn">Bourke Horn</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.BourkeHorn3D"><code class="docutils literal notranslate"><span class="pre">User.BourkeHorn3D()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hexa-torus">Hexa torus</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.HexaTorus3D"><code class="docutils literal notranslate"><span class="pre">User.HexaTorus3D()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-breather-surface">3D Breather Surface</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.Breather3D"><code class="docutils literal notranslate"><span class="pre">User.Breather3D()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kuen-surface">Kuen surface</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.Kuen3D"><code class="docutils literal notranslate"><span class="pre">User.Kuen3D()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tranguloid-trefoil">Tranguloid trefoil</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.TranguloidTrefoil3D"><code class="docutils literal notranslate"><span class="pre">User.TranguloidTrefoil3D()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#triaxial-teardrop">Triaxial teardrop</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.TriaxialTeardrop3D"><code class="docutils literal notranslate"><span class="pre">User.TriaxialTeardrop3D()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gray-bottle">Gray Bottle</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.GrayBottle3D"><code class="docutils literal notranslate"><span class="pre">User.GrayBottle3D()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surfaces-mimicking-snail-shells">Surfaces mimicking snail shells</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.Snail1"><code class="docutils literal notranslate"><span class="pre">User.Snail1()</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seashell-mathworld-wolfram">Seashell (mathworld.wolfram)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-apple">3D Apple</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bow-curve">Bow curve</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fish-surface">Fish Surface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bourke-horn">Bourke Horn</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hexa-torus">Hexa torus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-breather-surface">3D Breather Surface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kuen-surface">Kuen surface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tranguloid-trefoil">Tranguloid trefoil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#triaxial-teardrop">Triaxial teardrop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gray-bottle">Gray Bottle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surfaces-mimicking-snail-shells">Surfaces mimicking snail shells</a></li>
 </ul>
             </nav>
         </div>
@@ -984,16 +948,11 @@ document.write(`
 <span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pt</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pt</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../_images/TestBourneSeaShell.3D.xm.jpg"><img alt="picTestBourneSeaShell1" src="../_images/TestBourneSeaShell.3D.xm.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/TestBourneSeaShell.3D.xml.jpg"><img alt="picTestBourneSeaShell2" src="../_images/TestBourneSeaShell.3D.xml.jpg" style="width: 30%;" /></a></p>
+<p><a class="reference internal" href="../_images/01a_BourkeSeaShell.3D.jpg"><img alt="01a_BourkeSeaShell.3D" src="../_images/01a_BourkeSeaShell.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/01b_BourkeSeaShell.3D.jpg"><img alt="01b_BourkeSeaShell.3D" src="../_images/01b_BourkeSeaShell.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/01c_BourkeSeaShell.3D.jpg"><img alt="01c_BourkeSeaShell.3D" src="../_images/01c_BourkeSeaShell.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="seashell-mathworld-wolfram">
 <h2>Seashell (mathworld.wolfram)<a class="headerlink" href="#seashell-mathworld-wolfram" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="User.Seashell">
-<span class="sig-prename descclassname"><span class="pre">User.</span></span><span class="sig-name descname"><span class="pre">Seashell</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.Seashell" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
 <p>See also: <a class="reference external" href="https://mathworld.wolfram.com/Seashell.html">https://mathworld.wolfram.com/Seashell.html</a></p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Exp</span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mf">6.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">));</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.0</span><span class="p">);</span>
@@ -1003,16 +962,11 @@ document.write(`
 <span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">));</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../_images/TestSeashell_a.3D.xml.jpg"><img alt="TestSeashell_a" src="../_images/TestSeashell_a.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/TestSeashell_a.3D.xml.jpg"><img alt="TestSeashell_b" src="../_images/TestSeashell_a.3D.xml.jpg" style="width: 30%;" /></a></p>
+<p><a class="reference internal" href="../_images/02a_Seashell.3D.jpg"><img alt="02a_Seashell.3D" src="../_images/02a_Seashell.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/02b_Seashell.3D.jpg"><img alt="02b_Seashell.3D" src="../_images/02b_Seashell.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/02c_Seashell.3D.jpg"><img alt="02c_Seashell.3D" src="../_images/02c_Seashell.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="d-apple">
 <h2>3D Apple<a class="headerlink" href="#d-apple" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="User.Apple">
-<span class="sig-prename descclassname"><span class="pre">User.</span></span><span class="sig-name descname"><span class="pre">Apple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.Apple" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">R1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.0</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">R2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.8</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">su</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
@@ -1025,17 +979,11 @@ document.write(`
 <span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mf">2.3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.3157</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sv</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">cv</span><span class="p">;</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../_images/TestApple.3D.xm.jpg"><img alt="picTestApple1" src="../_images/TestApple.3D.xm.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/TestApple.3D.xml.jpg"><img alt="picTestApple2" src="../_images/TestApple.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: parametric plot of the Apple surface.</p>
+<p><a class="reference internal" href="../_images/03a_Apple.3D.jpg"><img alt="03a_Apple.3D" src="../_images/03a_Apple.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/03b_Apple.3D.jpg"><img alt="03b_Apple.3D" src="../_images/03b_Apple.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/03c_Apple.3D.jpg"><img alt="03c_Apple.3D" src="../_images/03c_Apple.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="bow-curve">
 <h2>Bow curve<a class="headerlink" href="#bow-curve" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="User.Bow">
-<span class="sig-prename descclassname"><span class="pre">User.</span></span><span class="sig-name descname"><span class="pre">Bow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.Bow" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
 <p>See also: <a class="reference external" href="http://paulbourke.net/geometry/toroidal/">http://paulbourke.net/geometry/toroidal/</a></p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">p4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="o">*</span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">;</span>
@@ -1046,20 +994,13 @@ document.write(`
 <span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">p2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">p2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v</span><span class="p">);</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../_images/TestBowCurve.3D.xm.jpg"><img alt="picTestBowCurve1" src="../_images/TestBowCurve.3D.xm.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/TestBowCurve.3D.xml.jpg"><img alt="picTestBowCurve2" src="../_images/TestBowCurve.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Bow curve (see also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1282" title="Wikipedia. Scatter plot. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Scatter_plot.">1462</a>]</span>, <span id="id2">Gray <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id107" title="A. Gray, E. Abbena, and S. Salamon. Modern Differential Geometry of Curves and Surfaces with Mathematica, 3rd ed. CRC Press, Boca Raton, FL, 2006.">368</a>]</span>,  <span id="id3">Krivoshapko and Ivanov [<a class="reference internal" href="../99BackMatter/index.html#id159" title="S.N. Krivoshapko and V.N. Ivanov. Encyclopedia of Analytical Surfaces. Springer International Publishing Switzerland, 2015.">421</a>]</span>).</p>
-<p><strong>Right figure</strong>: Bow curve (see also  Wikipedia <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1283" title="Wikipedia. Bubble chart. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bubble_chart.">1444</a>]</span>, <span id="id5">Gray <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id107" title="A. Gray, E. Abbena, and S. Salamon. Modern Differential Geometry of Curves and Surfaces with Mathematica, 3rd ed. CRC Press, Boca Raton, FL, 2006.">368</a>]</span>,  <span id="id6">Krivoshapko and Ivanov [<a class="reference internal" href="../99BackMatter/index.html#id159" title="S.N. Krivoshapko and V.N. Ivanov. Encyclopedia of Analytical Surfaces. Springer International Publishing Switzerland, 2015.">421</a>]</span>).</p>
+<p><a class="reference internal" href="../_images/04a_BowCurve.3D.jpg"><img alt="04a_BowCurve.3D" src="../_images/04a_BowCurve.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/04b_BowCurve.3D.jpg"><img alt="04b_BowCurve.3D" src="../_images/04b_BowCurve.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/04c_BowCurve.3D.jpg"><img alt="04c_BowCurve.3D" src="../_images/04c_BowCurve.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="fish-surface">
 <h2>Fish Surface<a class="headerlink" href="#fish-surface" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="User.Fish3D">
-<span class="sig-prename descclassname"><span class="pre">User.</span></span><span class="sig-name descname"><span class="pre">Fish3D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.Fish3D" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
 <p>See also: <a class="reference external" href="http://www.3d-meier.de/tut3/Seite47.html">http://www.3d-meier.de/tut3/Seite47.html</a></p>
-<p>See also  Wikipedia <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
+<p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">su</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">s2u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">u</span><span class="p">);</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">sv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
@@ -1071,18 +1012,11 @@ document.write(`
 <span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cu</span><span class="p">;</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../_images/TestFish_a.3D.xml.jpg"><img alt="TestFish_a" src="../_images/TestFish_a.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/TestFish_a.3D.xml.jpg"><img alt="TestFish_b" src="../_images/TestFish_a.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Fish Surface (see also  Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1282" title="Wikipedia. Scatter plot. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Scatter_plot.">1462</a>]</span>, <span id="id10">Gray <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id107" title="A. Gray, E. Abbena, and S. Salamon. Modern Differential Geometry of Curves and Surfaces with Mathematica, 3rd ed. CRC Press, Boca Raton, FL, 2006.">368</a>]</span>,  <span id="id11">Krivoshapko and Ivanov [<a class="reference internal" href="../99BackMatter/index.html#id159" title="S.N. Krivoshapko and V.N. Ivanov. Encyclopedia of Analytical Surfaces. Springer International Publishing Switzerland, 2015.">421</a>]</span>).</p>
-<p><strong>Right figure</strong>: Fish Surface (see also  Wikipedia <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1283" title="Wikipedia. Bubble chart. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bubble_chart.">1444</a>]</span>, <span id="id13">Gray <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id107" title="A. Gray, E. Abbena, and S. Salamon. Modern Differential Geometry of Curves and Surfaces with Mathematica, 3rd ed. CRC Press, Boca Raton, FL, 2006.">368</a>]</span>,  <span id="id14">Krivoshapko and Ivanov [<a class="reference internal" href="../99BackMatter/index.html#id159" title="S.N. Krivoshapko and V.N. Ivanov. Encyclopedia of Analytical Surfaces. Springer International Publishing Switzerland, 2015.">421</a>]</span>).</p>
+<p><a class="reference internal" href="../_images/05a_Fish.3D.jpg"><img alt="05a_Fish.3D" src="../_images/05a_Fish.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/05b_Fish.3D.jpg"><img alt="05b_Fish.3D" src="../_images/05b_Fish.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/05c_Fish.3D.jpg"><img alt="05c_Fish.3D" src="../_images/05c_Fish.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="bourke-horn">
 <h2>Bourke Horn<a class="headerlink" href="#bourke-horn" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="User.BourkeHorn3D">
-<span class="sig-prename descclassname"><span class="pre">User.</span></span><span class="sig-name descname"><span class="pre">BourkeHorn3D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.BourkeHorn3D" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
 <p>See also: <a class="reference external" href="http://paulbourke.net/geometry/spiral/">http://paulbourke.net/geometry/spiral/</a></p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">;</span>
 <span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">v</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">p2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">u</span><span class="p">);</span>
@@ -1090,18 +1024,11 @@ document.write(`
 <span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../_images/TestBourneHorn.3D.xm.jpg"><img alt="picTestBourneHorn1" src="../_images/TestBourneHorn.3D.xm.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/TestBourneHorn.3D.xml.jpg"><img alt="picTestBourneHorn2" src="../_images/TestBourneHorn.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Bourne Horn (see also  Wikipedia <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id1282" title="Wikipedia. Scatter plot. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Scatter_plot.">1462</a>]</span>, <span id="id16">Gray <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id107" title="A. Gray, E. Abbena, and S. Salamon. Modern Differential Geometry of Curves and Surfaces with Mathematica, 3rd ed. CRC Press, Boca Raton, FL, 2006.">368</a>]</span>,  <span id="id17">Krivoshapko and Ivanov [<a class="reference internal" href="../99BackMatter/index.html#id159" title="S.N. Krivoshapko and V.N. Ivanov. Encyclopedia of Analytical Surfaces. Springer International Publishing Switzerland, 2015.">421</a>]</span>).</p>
-<p><strong>Right figure</strong>: Bourne Horn (see also  Wikipedia <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id1283" title="Wikipedia. Bubble chart. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bubble_chart.">1444</a>]</span>, <span id="id19">Gray <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id107" title="A. Gray, E. Abbena, and S. Salamon. Modern Differential Geometry of Curves and Surfaces with Mathematica, 3rd ed. CRC Press, Boca Raton, FL, 2006.">368</a>]</span>,  <span id="id20">Krivoshapko and Ivanov [<a class="reference internal" href="../99BackMatter/index.html#id159" title="S.N. Krivoshapko and V.N. Ivanov. Encyclopedia of Analytical Surfaces. Springer International Publishing Switzerland, 2015.">421</a>]</span>).</p>
+<p><a class="reference internal" href="../_images/06a_BourkeHorn.3D.jpg"><img alt="06a_BourkeHorn.3D" src="../_images/06a_BourkeHorn.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/06b_BourkeHorn.3D.jpg"><img alt="06b_BourkeHorn.3D" src="../_images/06b_BourkeHorn.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/06c_BourkeHorn.3D.jpg"><img alt="06c_BourkeHorn.3D" src="../_images/06c_BourkeHorn.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="hexa-torus">
 <h2>Hexa torus<a class="headerlink" href="#hexa-torus" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="User.HexaTorus3D">
-<span class="sig-prename descclassname"><span class="pre">User.</span></span><span class="sig-name descname"><span class="pre">HexaTorus3D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.HexaTorus3D" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
 <p>See also: <a class="reference external" href="http://paulbourke.net/geometry/toroidal/">http://paulbourke.net/geometry/toroidal/</a></p>
 <p>The C# code for the Klein bottle:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
@@ -1115,18 +1042,11 @@ document.write(`
 <span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">2.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">15.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../_images/TestHexaTorus.3D.xm.jpg"><img alt="picHexaTorus1" src="../_images/TestHexaTorus.3D.xm.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/TestHexaTorus.3D.xml.jpg"><img alt="picHexaTorus2" src="../_images/TestHexaTorus.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Hexa torus (see also  Wikipedia <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id1282" title="Wikipedia. Scatter plot. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Scatter_plot.">1462</a>]</span>, <span id="id22">Gray <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id107" title="A. Gray, E. Abbena, and S. Salamon. Modern Differential Geometry of Curves and Surfaces with Mathematica, 3rd ed. CRC Press, Boca Raton, FL, 2006.">368</a>]</span>,  <span id="id23">Krivoshapko and Ivanov [<a class="reference internal" href="../99BackMatter/index.html#id159" title="S.N. Krivoshapko and V.N. Ivanov. Encyclopedia of Analytical Surfaces. Springer International Publishing Switzerland, 2015.">421</a>]</span>).</p>
-<p><strong>Right figure</strong>: Hexa torus (see also  Wikipedia <span id="id24">[<a class="reference internal" href="../99BackMatter/index.html#id1283" title="Wikipedia. Bubble chart. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bubble_chart.">1444</a>]</span>, <span id="id25">Gray <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id107" title="A. Gray, E. Abbena, and S. Salamon. Modern Differential Geometry of Curves and Surfaces with Mathematica, 3rd ed. CRC Press, Boca Raton, FL, 2006.">368</a>]</span>,  <span id="id26">Krivoshapko and Ivanov [<a class="reference internal" href="../99BackMatter/index.html#id159" title="S.N. Krivoshapko and V.N. Ivanov. Encyclopedia of Analytical Surfaces. Springer International Publishing Switzerland, 2015.">421</a>]</span>).</p>
+<p><a class="reference internal" href="../_images/07a_HexaTorus.3D.jpg"><img alt="07a_HexaTorus.3D" src="../_images/07a_HexaTorus.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/07b_HexaTorus.3D.jpg"><img alt="07b_HexaTorus.3D" src="../_images/07b_HexaTorus.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/07c_HexaTorus.3D.jpg"><img alt="07c_HexaTorus.3D" src="../_images/07c_HexaTorus.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="d-breather-surface">
 <h2>3D Breather Surface<a class="headerlink" href="#d-breather-surface" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="User.Breather3D">
-<span class="sig-prename descclassname"><span class="pre">User.</span></span><span class="sig-name descname"><span class="pre">Breather3D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.Breather3D" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.4</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sqrt</span><span class="p">(</span><span class="n">r</span><span class="p">);</span>
@@ -1139,17 +1059,11 @@ document.write(`
 <span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cosh</span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">w</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">w</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">w</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v</span><span class="p">)))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">denom</span><span class="p">;</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../_images/TestBreather.3D.xm.jpg"><img alt="picTestBreather1" src="../_images/TestBreather.3D.xm.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/TestBreather.3D.xml.jpg"><img alt="picTestBreather2" src="../_images/TestBreather.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: parametric plot of the Breather Surface.</p>
+<p><a class="reference internal" href="../_images/08a_Breather.3D.jpg"><img alt="08a_Breather.3D" src="../_images/08a_Breather.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/08b_Breather.3D.jpg"><img alt="08b_Breather.3D" src="../_images/08b_Breather.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/08c_Breather.3D.jpg"><img alt="08c_Breather.3D" src="../_images/08c_Breather.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="kuen-surface">
 <h2>Kuen surface<a class="headerlink" href="#kuen-surface" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="User.Kuen3D">
-<span class="sig-prename descclassname"><span class="pre">User.</span></span><span class="sig-name descname"><span class="pre">Kuen3D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.Kuen3D" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
 <p>See also: <a class="reference external" href="https://mathworld.wolfram.com/KuenSurface.html">https://mathworld.wolfram.com/KuenSurface.html</a></p>
 <p>See also: <a class="reference external" href="https://virtualmathmuseum.org/Surface/kuen/kuen.html">https://virtualmathmuseum.org/Surface/kuen/kuen.html</a></p>
 <p>See also: <a class="reference external" href="https://mathcurve.com/surfaces.gb/kuen/kuen.shtml">https://mathcurve.com/surfaces.gb/kuen/kuen.shtml</a></p>
@@ -1161,18 +1075,11 @@ document.write(`
 <span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Tan</span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.0</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../_images/TestKuen_a.3D.xml.jpg"><img alt="TestKuen_a" src="../_images/TestKuen_a.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/TestKuen_a.3D.xml.jpg"><img alt="TestKuen_b" src="../_images/TestKuen_a.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Kuen surface (see also  Wikipedia <span id="id27">[<a class="reference internal" href="../99BackMatter/index.html#id1282" title="Wikipedia. Scatter plot. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Scatter_plot.">1462</a>]</span>, <span id="id28">Gray <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id107" title="A. Gray, E. Abbena, and S. Salamon. Modern Differential Geometry of Curves and Surfaces with Mathematica, 3rd ed. CRC Press, Boca Raton, FL, 2006.">368</a>]</span>,  <span id="id29">Krivoshapko and Ivanov [<a class="reference internal" href="../99BackMatter/index.html#id159" title="S.N. Krivoshapko and V.N. Ivanov. Encyclopedia of Analytical Surfaces. Springer International Publishing Switzerland, 2015.">421</a>]</span>).</p>
-<p><strong>Right figure</strong>: Kuen surface (see also  Wikipedia <span id="id30">[<a class="reference internal" href="../99BackMatter/index.html#id1283" title="Wikipedia. Bubble chart. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bubble_chart.">1444</a>]</span>, <span id="id31">Gray <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id107" title="A. Gray, E. Abbena, and S. Salamon. Modern Differential Geometry of Curves and Surfaces with Mathematica, 3rd ed. CRC Press, Boca Raton, FL, 2006.">368</a>]</span>,  <span id="id32">Krivoshapko and Ivanov [<a class="reference internal" href="../99BackMatter/index.html#id159" title="S.N. Krivoshapko and V.N. Ivanov. Encyclopedia of Analytical Surfaces. Springer International Publishing Switzerland, 2015.">421</a>]</span>).</p>
+<p><a class="reference internal" href="../_images/09a_Kuen.3D.jpg"><img alt="09a_Kuen.3D" src="../_images/09a_Kuen.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/09b_Kuen.3D.jpg"><img alt="09b_Kuen.3D" src="../_images/09b_Kuen.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/09c_Kuen.3D.jpg"><img alt="09c_Kuen.3D" src="../_images/09c_Kuen.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="tranguloid-trefoil">
 <h2>Tranguloid trefoil<a class="headerlink" href="#tranguloid-trefoil" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="User.TranguloidTrefoil3D">
-<span class="sig-prename descclassname"><span class="pre">User.</span></span><span class="sig-name descname"><span class="pre">TranguloidTrefoil3D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.TranguloidTrefoil3D" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
 <p>See also: <a class="reference external" href="http://paulbourke.net/geometry/tranguloid/">http://paulbourke.net/geometry/tranguloid/</a></p>
 <p>There are other parametrizations:</p>
 <p>See also: <a class="reference external" href="http://www.3d-meier.de/tut3/Seite56.html">http://www.3d-meier.de/tut3/Seite56.html</a>
@@ -1184,60 +1091,37 @@ See also: <a class="reference external" href="https://mathart.org/sw/GreenSnake/
 <span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">u</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">v</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p2</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../_images/TestTrefoil.3D.xm.jpg"><img alt="picTestTrefoil1" src="../_images/TestTrefoil.3D.xm.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/TestTrefoil.3D.xml.jpg"><img alt="picTestTrefoil2" src="../_images/TestTrefoil.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Tranguloid trefoil (see also  Wikipedia <span id="id33">[<a class="reference internal" href="../99BackMatter/index.html#id1282" title="Wikipedia. Scatter plot. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Scatter_plot.">1462</a>]</span>, <span id="id34">Gray <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id107" title="A. Gray, E. Abbena, and S. Salamon. Modern Differential Geometry of Curves and Surfaces with Mathematica, 3rd ed. CRC Press, Boca Raton, FL, 2006.">368</a>]</span>,  <span id="id35">Krivoshapko and Ivanov [<a class="reference internal" href="../99BackMatter/index.html#id159" title="S.N. Krivoshapko and V.N. Ivanov. Encyclopedia of Analytical Surfaces. Springer International Publishing Switzerland, 2015.">421</a>]</span>).</p>
-<p><strong>Right figure</strong>: Tranguloid trefoil (see also  Wikipedia <span id="id36">[<a class="reference internal" href="../99BackMatter/index.html#id1283" title="Wikipedia. Bubble chart. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bubble_chart.">1444</a>]</span>, <span id="id37">Gray <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id107" title="A. Gray, E. Abbena, and S. Salamon. Modern Differential Geometry of Curves and Surfaces with Mathematica, 3rd ed. CRC Press, Boca Raton, FL, 2006.">368</a>]</span>,  <span id="id38">Krivoshapko and Ivanov [<a class="reference internal" href="../99BackMatter/index.html#id159" title="S.N. Krivoshapko and V.N. Ivanov. Encyclopedia of Analytical Surfaces. Springer International Publishing Switzerland, 2015.">421</a>]</span>).</p>
+<p><a class="reference internal" href="../_images/10a_TranguloidTrefoil.3D.jpg"><img alt="10a_TranguloidTrefoil.3D" src="../_images/10a_TranguloidTrefoil.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/10b_TranguloidTrefoil.3D.jpg"><img alt="10b_TranguloidTrefoil.3D" src="../_images/10b_TranguloidTrefoil.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/10c_TranguloidTrefoil.3D.jpg"><img alt="10c_TranguloidTrefoil.3D" src="../_images/10c_TranguloidTrefoil.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="triaxial-teardrop">
 <h2>Triaxial teardrop<a class="headerlink" href="#triaxial-teardrop" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="User.TriaxialTeardrop3D">
-<span class="sig-prename descclassname"><span class="pre">User.</span></span><span class="sig-name descname"><span class="pre">TriaxialTeardrop3D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.TriaxialTeardrop3D" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
 <p>See also: <a class="reference external" href="http://paulbourke.net/geometry/triaxtear/">http://paulbourke.net/geometry/triaxtear/</a></p>
-<p>See also  Wikipedia <span id="id39">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id40">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
+<p>See also  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="o">/</span><span class="mi">3</span><span class="p">;</span>
 <span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p2</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 <span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p2</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 <span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p2</span><span class="p">);</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../_images/TestTearDrop_a.3D.xml.jpg"><img alt="TestTearDrop_a" src="../_images/TestTearDrop_a.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/TestTearDrop_a.3D.xml.jpg"><img alt="TestTearDrop_b" src="../_images/TestTearDrop_a.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Bours Minimal Surface (see also  Wikipedia <span id="id41">[<a class="reference internal" href="../99BackMatter/index.html#id1282" title="Wikipedia. Scatter plot. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Scatter_plot.">1462</a>]</span>, <span id="id42">Gray <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id107" title="A. Gray, E. Abbena, and S. Salamon. Modern Differential Geometry of Curves and Surfaces with Mathematica, 3rd ed. CRC Press, Boca Raton, FL, 2006.">368</a>]</span>,  <span id="id43">Krivoshapko and Ivanov [<a class="reference internal" href="../99BackMatter/index.html#id159" title="S.N. Krivoshapko and V.N. Ivanov. Encyclopedia of Analytical Surfaces. Springer International Publishing Switzerland, 2015.">421</a>]</span>).</p>
-<p><strong>Right figure</strong>: Bours Minimal Surface (see also  Wikipedia <span id="id44">[<a class="reference internal" href="../99BackMatter/index.html#id1283" title="Wikipedia. Bubble chart. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bubble_chart.">1444</a>]</span>, <span id="id45">Gray <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id107" title="A. Gray, E. Abbena, and S. Salamon. Modern Differential Geometry of Curves and Surfaces with Mathematica, 3rd ed. CRC Press, Boca Raton, FL, 2006.">368</a>]</span>,  <span id="id46">Krivoshapko and Ivanov [<a class="reference internal" href="../99BackMatter/index.html#id159" title="S.N. Krivoshapko and V.N. Ivanov. Encyclopedia of Analytical Surfaces. Springer International Publishing Switzerland, 2015.">421</a>]</span>).</p>
+<p><a class="reference internal" href="../_images/11a_TearDrop.3D.jpg"><img alt="11a_TearDrop.3D" src="../_images/11a_TearDrop.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/11b_TearDrop.3D.jpg"><img alt="11b_TearDrop.3D" src="../_images/11b_TearDrop.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/11c_TearDrop.3D.jpg"><img alt="11c_TearDrop.3D" src="../_images/11c_TearDrop.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="gray-bottle">
 <h2>Gray Bottle<a class="headerlink" href="#gray-bottle" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="User.GrayBottle3D">
-<span class="sig-prename descclassname"><span class="pre">User.</span></span><span class="sig-name descname"><span class="pre">GrayBottle3D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.GrayBottle3D" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
 <p>See also: <a class="reference external" href="http://paulbourke.net/geometry/toroidal/">http://paulbourke.net/geometry/toroidal/</a></p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sqrt</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Abs</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">u</span><span class="p">)))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
 <span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sqrt</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Abs</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">u</span><span class="p">)))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
 <span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Tan</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Tan</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../_images/TestGrayBottel.3D.xm.jpg"><img alt="picGrayBottel1" src="../_images/TestGrayBottel.3D.xm.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/TestGrayBottel.3D.xml.jpg"><img alt="picGrayBottel2" src="../_images/TestGrayBottel.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Gray Bottle (see also  Wikipedia <span id="id47">[<a class="reference internal" href="../99BackMatter/index.html#id1282" title="Wikipedia. Scatter plot. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Scatter_plot.">1462</a>]</span>, <span id="id48">Gray <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id107" title="A. Gray, E. Abbena, and S. Salamon. Modern Differential Geometry of Curves and Surfaces with Mathematica, 3rd ed. CRC Press, Boca Raton, FL, 2006.">368</a>]</span>,  <span id="id49">Krivoshapko and Ivanov [<a class="reference internal" href="../99BackMatter/index.html#id159" title="S.N. Krivoshapko and V.N. Ivanov. Encyclopedia of Analytical Surfaces. Springer International Publishing Switzerland, 2015.">421</a>]</span>).</p>
-<p><strong>Right figure</strong>: Gray Bottle (see also  Wikipedia <span id="id50">[<a class="reference internal" href="../99BackMatter/index.html#id1283" title="Wikipedia. Bubble chart. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bubble_chart.">1444</a>]</span>, <span id="id51">Gray <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id107" title="A. Gray, E. Abbena, and S. Salamon. Modern Differential Geometry of Curves and Surfaces with Mathematica, 3rd ed. CRC Press, Boca Raton, FL, 2006.">368</a>]</span>,  <span id="id52">Krivoshapko and Ivanov [<a class="reference internal" href="../99BackMatter/index.html#id159" title="S.N. Krivoshapko and V.N. Ivanov. Encyclopedia of Analytical Surfaces. Springer International Publishing Switzerland, 2015.">421</a>]</span>).</p>
+<p><a class="reference internal" href="../_images/12a_GrayBottel.3D.jpg"><img alt="12a_GrayBottel.3D" src="../_images/12a_GrayBottel.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/12b_GrayBottel.3D.jpg"><img alt="12b_GrayBottel.3D" src="../_images/12b_GrayBottel.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/12c_GrayBottel.3D.jpg"><img alt="12c_GrayBottel.3D" src="../_images/12c_GrayBottel.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="surfaces-mimicking-snail-shells">
 <h2>Surfaces mimicking snail shells<a class="headerlink" href="#surfaces-mimicking-snail-shells" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="User.Snail1">
-<span class="sig-prename descclassname"><span class="pre">User.</span></span><span class="sig-name descname"><span class="pre">Snail1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.Snail1" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
 <p>See also: <a class="reference external" href="http://www.3d-meier.de/tut3/Seite89.html">http://www.3d-meier.de/tut3/Seite89.html</a></p>
-<p><a class="reference internal" href="../_images/TestSnail1_a.3D.xml.jpg"><img alt="TestSnail1_a" src="../_images/TestSnail1_a.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/TestSnail1_a.3D.xml.jpg"><img alt="TestSnail1_b" src="../_images/TestSnail1_a.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Pseudoheliceras subcatenatum surface (see also  Wikipedia <span id="id53">[<a class="reference internal" href="../99BackMatter/index.html#id1282" title="Wikipedia. Scatter plot. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Scatter_plot.">1462</a>]</span>, <span id="id54">Gray <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id107" title="A. Gray, E. Abbena, and S. Salamon. Modern Differential Geometry of Curves and Surfaces with Mathematica, 3rd ed. CRC Press, Boca Raton, FL, 2006.">368</a>]</span>,  <span id="id55">Krivoshapko and Ivanov [<a class="reference internal" href="../99BackMatter/index.html#id159" title="S.N. Krivoshapko and V.N. Ivanov. Encyclopedia of Analytical Surfaces. Springer International Publishing Switzerland, 2015.">421</a>]</span>).</p>
-<p><strong>Right figure</strong>: Pseudoheliceras subcatenatum surface (see also  Wikipedia <span id="id56">[<a class="reference internal" href="../99BackMatter/index.html#id1283" title="Wikipedia. Bubble chart. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bubble_chart.">1444</a>]</span>, <span id="id57">Gray <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id107" title="A. Gray, E. Abbena, and S. Salamon. Modern Differential Geometry of Curves and Surfaces with Mathematica, 3rd ed. CRC Press, Boca Raton, FL, 2006.">368</a>]</span>,  <span id="id58">Krivoshapko and Ivanov [<a class="reference internal" href="../99BackMatter/index.html#id159" title="S.N. Krivoshapko and V.N. Ivanov. Encyclopedia of Analytical Surfaces. Springer International Publishing Switzerland, 2015.">421</a>]</span>).</p>
+<p><a class="reference internal" href="../_images/21a_Snail1.3D.jpg"><img alt="21a_Snail1.3D" src="../_images/21a_Snail1.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/21b_Snail1.3D.jpg"><img alt="21b_Snail1.3D" src="../_images/21b_Snail1.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/21c_Snail1.3D.jpg"><img alt="21c_Snail1.3D" src="../_images/21c_Snail1.3D.jpg" style="width: 30%;" /></a></p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.6</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.6</span><span class="p">;</span>
@@ -1261,14 +1145,19 @@ See also: <a class="reference external" href="https://mathart.org/sw/GreenSnake/
 </pre></div>
 </div>
 <p></p>
-<p><a class="reference internal" href="../_images/TestSnail2_a.3D.xml.jpg"><img alt="TestSnail2_a" src="../_images/TestSnail2_a.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/TestSnail3_a.3D.xml.jpg"><img alt="TestSnail3_a" src="../_images/TestSnail3_a.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/TestSnail4_a.3D.xml.jpg"><img alt="TestSnail4_a" src="../_images/TestSnail4_a.3D.xml.jpg" style="width: 30%;" /></a></p>
+<p><a class="reference internal" href="../_images/22a_Snail2.3D.jpg"><img alt="22a_Snail2.3D" src="../_images/22a_Snail2.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/22b_Snail2.3D.jpg"><img alt="22b_Snail2.3D" src="../_images/22b_Snail2.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/22c_Snail2.3D.jpg"><img alt="22c_Snail2.3D" src="../_images/22c_Snail2.3D.jpg" style="width: 30%;" /></a></p>
+<p><a class="reference internal" href="../_images/23a_Snail3.3D.jpg"><img alt="23a_Snail3.3D" src="../_images/23a_Snail3.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/23b_Snail3.3D.jpg"><img alt="23b_Snail3.3D" src="../_images/23b_Snail3.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/23c_Snail3.3D.jpg"><img alt="23c_Snail3.3D" src="../_images/23c_Snail3.3D.jpg" style="width: 30%;" /></a></p>
+<p><a class="reference internal" href="../_images/24a_Snail4.3D.jpg"><img alt="24a_Snail4.3D" src="../_images/24a_Snail4.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/24b_Snail4.3D.jpg"><img alt="24b_Snail4.3D" src="../_images/24b_Snail4.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/24c_Snail4.3D.jpg"><img alt="24c_Snail4.3D" src="../_images/24c_Snail4.3D.jpg" style="width: 30%;" /></a></p>
 <p><strong>Left figure</strong>: Astroceras surface.</p>
 <p><strong>Middle figure</strong>: Bellerophina surface.</p>
 <p><strong>Right figure</strong>: Euhoplites Surface.</p>
-<p><a class="reference internal" href="../_images/TestSnail5_a.3D.xml.jpg"><img alt="TestSnail5_a" src="../_images/TestSnail5_a.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/TestSnail6_a.3D.xml.jpg"><img alt="TestSnail6_a" src="../_images/TestSnail6_a.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/TestSnail7_a.3D.xml.jpg"><img alt="TestSnail7_a" src="../_images/TestSnail7_a.3D.xml.jpg" style="width: 30%;" /></a></p>
+<p></p>
+<p><a class="reference internal" href="../_images/25a_Snail5.3D.jpg"><img alt="25a_Snail5.3D" src="../_images/25a_Snail5.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/25b_Snail5.3D.jpg"><img alt="25b_Snail5.3D" src="../_images/25b_Snail5.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/25c_Snail5.3D.jpg"><img alt="25c_Snail5.3D" src="../_images/25c_Snail5.3D.jpg" style="width: 30%;" /></a></p>
+<p><a class="reference internal" href="../_images/26a_Snail6.3D.jpg"><img alt="26a_Snail6.3D" src="../_images/26a_Snail6.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/26b_Snail6.3D.jpg"><img alt="26b_Snail6.3D" src="../_images/26b_Snail6.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/26c_Snail6.3D.jpg"><img alt="26c_Snail6.3D" src="../_images/26c_Snail6.3D.jpg" style="width: 30%;" /></a></p>
+<p><a class="reference internal" href="../_images/27a_Snail7.3D.jpg"><img alt="27a_Snail7.3D" src="../_images/27a_Snail7.3D.jpg" style="height: 300px;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/27b_Snail7.3D.jpg"><img alt="27b_Snail7.3D" src="../_images/27b_Snail7.3D.jpg" style="height: 300px;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/27c_Snail7.3D.jpg"><img alt="27c_Snail7.3D" src="../_images/27c_Snail7.3D.jpg" style="height: 300px;" /></a></p>
 <p><strong>Left figure</strong>: Nautilus surface.</p>
 <p><strong>Middle figure</strong>: Natica stellata surface.</p>
-<p><strong>Right figure</strong>: Mya arenaria Surface.</p>
+<p><strong>Right figure</strong>: Mya arenaria surface.</p>
 </section>
 </section>
 
@@ -1318,54 +1207,18 @@ See also: <a class="reference external" href="https://mathart.org/sw/GreenSnake/
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bourke-seashell">Bourke Seashell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seashell-mathworld-wolfram">Seashell (mathworld.wolfram)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.Seashell"><code class="docutils literal notranslate"><span class="pre">User.Seashell()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-apple">3D Apple</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.Apple"><code class="docutils literal notranslate"><span class="pre">User.Apple()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bow-curve">Bow curve</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.Bow"><code class="docutils literal notranslate"><span class="pre">User.Bow()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fish-surface">Fish Surface</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.Fish3D"><code class="docutils literal notranslate"><span class="pre">User.Fish3D()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bourke-horn">Bourke Horn</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.BourkeHorn3D"><code class="docutils literal notranslate"><span class="pre">User.BourkeHorn3D()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hexa-torus">Hexa torus</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.HexaTorus3D"><code class="docutils literal notranslate"><span class="pre">User.HexaTorus3D()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-breather-surface">3D Breather Surface</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.Breather3D"><code class="docutils literal notranslate"><span class="pre">User.Breather3D()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kuen-surface">Kuen surface</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.Kuen3D"><code class="docutils literal notranslate"><span class="pre">User.Kuen3D()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tranguloid-trefoil">Tranguloid trefoil</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.TranguloidTrefoil3D"><code class="docutils literal notranslate"><span class="pre">User.TranguloidTrefoil3D()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#triaxial-teardrop">Triaxial teardrop</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.TriaxialTeardrop3D"><code class="docutils literal notranslate"><span class="pre">User.TriaxialTeardrop3D()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gray-bottle">Gray Bottle</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.GrayBottle3D"><code class="docutils literal notranslate"><span class="pre">User.GrayBottle3D()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surfaces-mimicking-snail-shells">Surfaces mimicking snail shells</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.Snail1"><code class="docutils literal notranslate"><span class="pre">User.Snail1()</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seashell-mathworld-wolfram">Seashell (mathworld.wolfram)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-apple">3D Apple</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bow-curve">Bow curve</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fish-surface">Fish Surface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bourke-horn">Bourke Horn</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hexa-torus">Hexa torus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-breather-surface">3D Breather Surface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kuen-surface">Kuen surface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tranguloid-trefoil">Tranguloid trefoil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#triaxial-teardrop">Triaxial teardrop</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gray-bottle">Gray Bottle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surfaces-mimicking-snail-shells">Surfaces mimicking snail shells</a></li>
 </ul>
   </nav></div>
 
@@ -1399,7 +1252,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 30, 2026.
+  Last updated on Sep 03, 2026.
   <br/>
 </p>
   </div>

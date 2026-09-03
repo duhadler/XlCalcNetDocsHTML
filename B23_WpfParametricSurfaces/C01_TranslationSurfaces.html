@@ -49,11 +49,11 @@
     <script src="../_static/custom-icon.js?v=74687d30"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Surfaces of revolution: spheres and related" href="C02_SurfacesOfRevolution.html" />
+    <link rel="next" title="Surfaces of revolution" href="C02_SurfacesOfRevolution.html" />
     <link rel="prev" title="Wpf: Parametric surfaces" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 30, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 03, 2026"/>
   </head>
   
   
@@ -631,7 +631,7 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Wpf: Parametric surfaces</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Surfaces of translation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C02_SurfacesOfRevolution.html">Surfaces of revolution: spheres and related</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C02_SurfacesOfRevolution.html">Surfaces of revolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C03_GeneralisationsOfSurfaces.html">Generalisations of common surfaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_MinimalSurfaces.html">Minimal surfaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_NonorientableSurfaces.html">Nonorientable (one-sided) Surfaces</a></li>
@@ -651,9 +651,9 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/index.html">Wpf: Built-in 3D objects</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/C02_SolidsWithTextures.html">Builtin solids with support for textures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/C03_SolidsWithoutTextures.html">Builtin solids without support for textures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/C04_PlatonicSolids.html">Platonic solids, and related solids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/C01_SolidsWithTextures.html">Builtin solids with support for textures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures.html">Builtin solids without support for textures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/C03_PlatonicSolids.html">Platonic solids, and related solids</a></li>
 </ul>
 </details></li>
 </ul>
@@ -898,10 +898,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regular-polygone-as-generator">Regular polygone as generator</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypocycloid-as-generator">Hypocycloid as generator</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#archimedes-spiral-as-generator">Archimedes spiral as generator</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fermat-spiral-as-generator">Fermat spiral as generator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lemniscate-as-generator">Lemniscate as generator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tanh-spiral-as-generator">Tanh spiral as generator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rose-curve-as-generator">Rose curve as generator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypocycloid-as-generator">Hypocycloid as generator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#epicycloid-as-generator">Epicycloid as generator</a></li>
 </ul>
             </nav>
         </div>
@@ -918,39 +920,48 @@ document.write(`
 <p>See also: <a class="reference external" href="https://en.wikipedia.org/wiki/Translation_surface_(differential_geometry">https://en.wikipedia.org/wiki/Translation_surface_(differential_geometry</a>)</p>
 <p>See also:http://www.3d-meier.de/tut3/Seite0.html</p>
 <p>See also: <a class="reference external" href="https://en.wikipedia.org/wiki/Implicit_surface">https://en.wikipedia.org/wiki/Implicit_surface</a></p>
-<section id="regular-polygone-as-generator">
-<h2>Regular polygone as generator<a class="headerlink" href="#regular-polygone-as-generator" title="Link to this heading">#</a></h2>
+<section id="fermat-spiral-as-generator">
+<h2>Fermat spiral as generator<a class="headerlink" href="#fermat-spiral-as-generator" title="Link to this heading">#</a></h2>
 <p>The XML code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C01_TranslationSurfaces/D03a_Cylinder_3_1.3D.xml">D03a_Cylinder_3_1.3D.xml</a>.</p>
 <p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
-<p><a class="reference internal" href="../_images/10a_Triangle_surface.3D.xml.jpg"><img alt="10a_Triangle_surface" src="../_images/10a_Triangle_surface.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/10a_Square_surface.3D.xml.jpg"><img alt="10a_Square_surface" src="../_images/10a_Square_surface.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/10a_Circle_surface.3D.xml.jpg"><img alt="10a_Circle_surface" src="../_images/10a_Circle_surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Triangle surface</p>
-<p><strong>Middle figure</strong>: Square surface</p>
-<p><strong>Right figure</strong>: Circle surface</p>
+<p><a class="reference internal" href="../_images/D01a_FermatSpiral.3D.jpg"><img alt="D01a_FermatSpiral.3D" src="../_images/D01a_FermatSpiral.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D01b_FermatSpiral.3D.jpg"><img alt="D01b_FermatSpiral.3D" src="../_images/D01b_FermatSpiral.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D01c_FermatSpiral.3D.jpg"><img alt="D01c_FermatSpiral.3D" src="../_images/D01c_FermatSpiral.3D.jpg" style="width: 30%;" /></a></p>
+<p></p>
+</section>
+<section id="lemniscate-as-generator">
+<h2>Lemniscate as generator<a class="headerlink" href="#lemniscate-as-generator" title="Link to this heading">#</a></h2>
+<p>// see also: <a class="reference external" href="http://www.3d-meier.de/tut3/Seite152.html">http://www.3d-meier.de/tut3/Seite152.html</a></p>
+<p>See also  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
+<p><a class="reference internal" href="../_images/D02a_Lemniscate.3D.jpg"><img alt="D02a_Lemniscate.3D" src="../_images/D02a_Lemniscate.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D02b_Lemniscate.3D.jpg"><img alt="D02b_Lemniscate.3D" src="../_images/D02b_Lemniscate.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D02c_Lemniscate.3D.jpg"><img alt="D02c_Lemniscate.3D" src="../_images/D02c_Lemniscate.3D.jpg" style="width: 30%;" /></a></p>
+<p></p>
+</section>
+<section id="tanh-spiral-as-generator">
+<h2>Tanh spiral as generator<a class="headerlink" href="#tanh-spiral-as-generator" title="Link to this heading">#</a></h2>
+<p>// see <a class="reference external" href="http://www.3d-meier.de/tut3/Seite187.html">http://www.3d-meier.de/tut3/Seite187.html</a>
+// see Krivoshapko, p. 498</p>
+<p>See also  Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
+<p>See also  Wikipedia <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
+<p><a class="reference internal" href="../_images/D03a_TanhSpiral.3D.jpg"><img alt="D03a_TanhSpiral.3D" src="../_images/D03a_TanhSpiral.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D03b_TanhSpiral.3D.jpg"><img alt="D03b_TanhSpiral.3D" src="../_images/D03b_TanhSpiral.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D03c_TanhSpiral.3D.jpg"><img alt="D03c_TanhSpiral.3D" src="../_images/D03c_TanhSpiral.3D.jpg" style="width: 30%;" /></a></p>
+<p></p>
+</section>
+<section id="rose-curve-as-generator">
+<h2>Rose curve as generator<a class="headerlink" href="#rose-curve-as-generator" title="Link to this heading">#</a></h2>
+<p>// see <a class="reference external" href="http://www.3d-meier.de/tut3/Seite189.html">http://www.3d-meier.de/tut3/Seite189.html</a></p>
+<p>See also  Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
+<p><a class="reference internal" href="../_images/D04a_RoseCurve.3D.jpg"><img alt="D04a_RoseCurve.3D" src="../_images/D04a_RoseCurve.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D04b_RoseCurve.3D.jpg"><img alt="D04b_RoseCurve.3D" src="../_images/D04b_RoseCurve.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D04c_RoseCurve.3D.jpg"><img alt="D04c_RoseCurve.3D" src="../_images/D04c_RoseCurve.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="hypocycloid-as-generator">
 <h2>Hypocycloid as generator<a class="headerlink" href="#hypocycloid-as-generator" title="Link to this heading">#</a></h2>
-<p>// see also: <a class="reference external" href="http://www.3d-meier.de/tut3/Seite152.html">http://www.3d-meier.de/tut3/Seite152.html</a></p>
-<p>See also  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
-<p><a class="reference internal" href="../_images/10a_Hypocycloid_surface.3D.xml.jpg"><img alt="10a_Hypocycloid_surface" src="../_images/10a_Hypocycloid_surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Hypocycloid surface</p>
-<p></p>
-</section>
-<section id="archimedes-spiral-as-generator">
-<h2>Archimedes spiral as generator<a class="headerlink" href="#archimedes-spiral-as-generator" title="Link to this heading">#</a></h2>
-<p>// see <a class="reference external" href="http://www.3d-meier.de/tut3/Seite187.html">http://www.3d-meier.de/tut3/Seite187.html</a>
-// see Krivoshapko, p. 498</p>
-<p>See also  Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
-<p><a class="reference internal" href="../_images/01a_ArchimedesSpiral_surface.3D.xml.jpg"><img alt="01a_ArchimedesSpiral_surface" src="../_images/01a_ArchimedesSpiral_surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Archimedes spiral surface</p>
-<p></p>
-</section>
-<section id="fermat-spiral-as-generator">
-<h2>Fermat spiral as generator<a class="headerlink" href="#fermat-spiral-as-generator" title="Link to this heading">#</a></h2>
 <p>// see <a class="reference external" href="http://www.3d-meier.de/tut3/Seite189.html">http://www.3d-meier.de/tut3/Seite189.html</a></p>
-<p>See also  Wikipedia <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
-<p><a class="reference internal" href="../_images/02a_FermatSpiral_surface.3D.xml.jpg"><img alt="02a_FermatSpiral_surface" src="../_images/02a_FermatSpiral_surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Fermat spiral surface</p>
+<p>See also  Wikipedia <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
+<p><a class="reference internal" href="../_images/D05a_Hypocycloid_55.3D.jpg"><img alt="D05a_Hypocycloid_55.3D" src="../_images/D05a_Hypocycloid_55.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D05b_Hypocycloid_55.3D.jpg"><img alt="D05b_Hypocycloid_55.3D" src="../_images/D05b_Hypocycloid_55.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D05c_Hypocycloid_55.3D.jpg"><img alt="D05c_Hypocycloid_55.3D" src="../_images/D05c_Hypocycloid_55.3D.jpg" style="width: 30%;" /></a></p>
+<p></p>
+</section>
+<section id="epicycloid-as-generator">
+<h2>Epicycloid as generator<a class="headerlink" href="#epicycloid-as-generator" title="Link to this heading">#</a></h2>
+<p>// see <a class="reference external" href="http://www.3d-meier.de/tut3/Seite189.html">http://www.3d-meier.de/tut3/Seite189.html</a></p>
+<p>See also  Wikipedia <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
+<p><a class="reference internal" href="../_images/D06a_Epicycloid_55.3D.jpg"><img alt="D06a_Epicycloid_55.3D" src="../_images/D06a_Epicycloid_55.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D06b_Epicycloid_55.3D.jpg"><img alt="D06b_Epicycloid_55.3D" src="../_images/D06b_Epicycloid_55.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D06c_Epicycloid_55.3D.jpg"><img alt="D06c_Epicycloid_55.3D" src="../_images/D06c_Epicycloid_55.3D.jpg" style="width: 30%;" /></a></p>
 </section>
 </section>
 
@@ -979,7 +990,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Surfaces of revolution: spheres and related</p>
+        <p class="prev-next-title">Surfaces of revolution</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -999,10 +1010,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regular-polygone-as-generator">Regular polygone as generator</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypocycloid-as-generator">Hypocycloid as generator</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#archimedes-spiral-as-generator">Archimedes spiral as generator</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fermat-spiral-as-generator">Fermat spiral as generator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lemniscate-as-generator">Lemniscate as generator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tanh-spiral-as-generator">Tanh spiral as generator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rose-curve-as-generator">Rose curve as generator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypocycloid-as-generator">Hypocycloid as generator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#epicycloid-as-generator">Epicycloid as generator</a></li>
 </ul>
   </nav></div>
 
@@ -1036,7 +1049,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 30, 2026.
+  Last updated on Sep 03, 2026.
   <br/>
 </p>
   </div>

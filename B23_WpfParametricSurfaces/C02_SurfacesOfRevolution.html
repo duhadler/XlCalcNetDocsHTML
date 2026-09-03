@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Surfaces of revolution: spheres and related &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>Surfaces of revolution &#8212; XlCalcNet 1.0.0 documentation</title>
   
   
   
@@ -53,7 +53,7 @@
     <link rel="prev" title="Surfaces of translation" href="C01_TranslationSurfaces.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Aug 30, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 03, 2026"/>
   </head>
   
   
@@ -631,7 +631,7 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Wpf: Parametric surfaces</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="C01_TranslationSurfaces.html">Surfaces of translation</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Surfaces of revolution: spheres and related</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Surfaces of revolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C03_GeneralisationsOfSurfaces.html">Generalisations of common surfaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_MinimalSurfaces.html">Minimal surfaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_NonorientableSurfaces.html">Nonorientable (one-sided) Surfaces</a></li>
@@ -651,9 +651,9 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/index.html">Wpf: Built-in 3D objects</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/C02_SolidsWithTextures.html">Builtin solids with support for textures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/C03_SolidsWithoutTextures.html">Builtin solids without support for textures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/C04_PlatonicSolids.html">Platonic solids, and related solids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/C01_SolidsWithTextures.html">Builtin solids with support for textures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures.html">Builtin solids without support for textures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B25_WpfBuiltInSurfaces/C03_PlatonicSolids.html">Platonic solids, and related solids</a></li>
 </ul>
 </details></li>
 </ul>
@@ -888,7 +888,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Surfaces of revolution: spheres and related</h1>
+    <h1>Surfaces of revolution</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -898,53 +898,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prism-and-cylinder">Prism and cylinder</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyramid-and-cone">Pyramid and cone</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frustum-and-cone-frustum">Frustum  and cone frustum</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insolator">Insolator</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gabriels-horn">Gabriels Horn</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funnel">Funnel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-sheeted-hyperboloid">One-Sheeted Hyperboloid</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catenoid">Catenoid</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gauss-cylinder">Gauss Cylinder</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paraboloid">Paraboloid</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vase">Vase</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sphere">Sphere</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.ParametricSphere"><code class="docutils literal notranslate"><span class="pre">User.ParametricSphere()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prolate-spheroid">Prolate Spheroid</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.ProlateSpheroid"><code class="docutils literal notranslate"><span class="pre">User.ProlateSpheroid()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oblate-spheroid">Oblate Spheroid</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.OblateSpheroid"><code class="docutils literal notranslate"><span class="pre">User.OblateSpheroid()</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sphere">Sphere</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prolate-spheroid">Prolate Spheroid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oblate-spheroid">Oblate Spheroid</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drop-surface">Drop surface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#egg-surface">Egg surface</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apple-surface">Apple surface</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spinning-top">Spinning top</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.SpinningTop"><code class="docutils literal notranslate"><span class="pre">User.SpinningTop()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pseudosphere">Pseudosphere</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.Pseudosphere"><code class="docutils literal notranslate"><span class="pre">User.Pseudosphere()</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spinning-top">Spinning top</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pseudosphere">Pseudosphere</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wave-sphere-surface">Wave sphere Surface</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#low-resolution-torus-surface-part1">Low resolution torus surface, part1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#low-resolution-torus-surface-part2">Low resolution torus surface, part2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#low-resolution-torus-surface-part3">Low resolution torus surface, part3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torus">Torus</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.Torus"><code class="docutils literal notranslate"><span class="pre">User.Torus()</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torus">Torus</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#horn-torus">Horn Torus</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spindle-torus">Spindle Torus</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elliptic-torus">Elliptic Torus</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.EllipticTorus"><code class="docutils literal notranslate"><span class="pre">User.EllipticTorus()</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elliptic-torus">Elliptic Torus</a></li>
 </ul>
             </nav>
         </div>
@@ -957,8 +924,8 @@ document.write(`
                 <article class="bd-article">
                   
   <p></p>
-<section id="surfaces-of-revolution-spheres-and-related">
-<h1>Surfaces of revolution: spheres and related<a class="headerlink" href="#surfaces-of-revolution-spheres-and-related" title="Link to this heading">#</a></h1>
+<section id="surfaces-of-revolution">
+<h1>Surfaces of revolution<a class="headerlink" href="#surfaces-of-revolution" title="Link to this heading">#</a></h1>
 <p>See also: <a class="reference external" href="https://mathworld.wolfram.com/SurfaceofRevolution.html">https://mathworld.wolfram.com/SurfaceofRevolution.html</a></p>
 <p>A surface of revolution is a surface generated by rotating a two-dimensional curve about an axis. The resulting surface therefore always has azimuthal symmetry. Examples of surfaces of revolution include the apple surface, cone (excluding the base), conical frustum (excluding the ends), cylinder (excluding the ends), Darwin-de Sitter spheroid, Gabriel’s horn, hyperboloid, lemon surface, oblate spheroid, paraboloid, prolate spheroid, pseudosphere, sphere, spheroid, and torus (and its generalization, the toroid).</p>
 <p>The standard parameterization of a surface of revolution is given by</p>
@@ -968,160 +935,47 @@ document.write(`
 \[y(u,v) = \phi(v) \sin(u)\]</div>
 <div class="math notranslate nohighlight">
 \[z(u,v) = \psi(v)\]</div>
-<section id="prism-and-cylinder">
-<h2>Prism and cylinder<a class="headerlink" href="#prism-and-cylinder" title="Link to this heading">#</a></h2>
-<p>See also: <a class="reference external" href="http://www.3d-meier.de/tut3/Seite84.html">http://www.3d-meier.de/tut3/Seite84.html</a>, Cylinder</p>
-<p>See also: <a class="reference external" href="https://mathworld.wolfram.com/Cylinder.html">https://mathworld.wolfram.com/Cylinder.html</a>, Cylinder</p>
-<p><a class="reference internal" href="../_images/01a_ROT_Prism3.3D.xml.jpg"><img alt="01a_ROT_Prism3" src="../_images/01a_ROT_Prism3.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/01b_ROT_Prism4.3D.xml.jpg"><img alt="01b_ROT_Prism4" src="../_images/01b_ROT_Prism4.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/01c_ROT_Cylinder.3D.xml.jpg"><img alt="01c_ROT_Cylinder" src="../_images/01c_ROT_Cylinder.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Prism3</p>
-<p><strong>Right figure</strong>: Prism4</p>
-<p><strong>Right figure</strong>: Cylinder</p>
-<p></p>
-</section>
-<section id="pyramid-and-cone">
-<h2>Pyramid and cone<a class="headerlink" href="#pyramid-and-cone" title="Link to this heading">#</a></h2>
-<p><a class="reference internal" href="../_images/02a_ROT_Pyramid3_surface.3D.xml.jpg"><img alt="02a_ROT_Pyramid3_surface" src="../_images/02a_ROT_Pyramid3_surface.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/02b_ROT_Pyramid4_surface.3D.xml.jpg"><img alt="02b_ROT_Pyramid4_surface" src="../_images/02b_ROT_Pyramid4_surface.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/02c_ROT_Cone_surface.3D.xml.jpg"><img alt="02c_ROT_Cone_surface" src="../_images/02c_ROT_Cone_surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Pyramid3</p>
-<p><strong>Right figure</strong>: Pyramid4</p>
-<p><strong>Right figure</strong>: Cone</p>
-<p></p>
-</section>
-<section id="frustum-and-cone-frustum">
-<h2>Frustum  and cone frustum<a class="headerlink" href="#frustum-and-cone-frustum" title="Link to this heading">#</a></h2>
-<p><a class="reference internal" href="../_images/03a_ROT_Frustum3_surface.3D.xml.jpg"><img alt="03a_ROT_Frustum3_surface" src="../_images/03a_ROT_Frustum3_surface.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/03b_ROT_Frustum4_surface.3D.xml.jpg"><img alt="03b_ROT_Frustum4_surface" src="../_images/03b_ROT_Frustum4_surface.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/03c_ROT_ConeFrustum_surface.3D.xml.jpg"><img alt="03c_ROT_ConeFrustum_surface" src="../_images/03c_ROT_ConeFrustum_surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Frustum3</p>
-<p><strong>Right figure</strong>: Frustum4</p>
-<p><strong>Right figure</strong>: Cone Frustum</p>
-<p></p>
-</section>
-<section id="insolator">
-<h2>Insolator<a class="headerlink" href="#insolator" title="Link to this heading">#</a></h2>
-<p>See also: <a class="reference external" href="http://www.3d-meier.de/tut3/Seite86.html">http://www.3d-meier.de/tut3/Seite86.html</a>, Insolator</p>
-<p><a class="reference internal" href="../_images/04a_ROT_Insolator_surface.3D.xml.jpg"><img alt="04a_ROT_Insolator_surface" src="../_images/04a_ROT_Insolator_surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Insolator</p>
-<p></p>
-</section>
-<section id="gabriels-horn">
-<h2>Gabriels Horn<a class="headerlink" href="#gabriels-horn" title="Link to this heading">#</a></h2>
-<p>See also: <a class="reference external" href="https://mathworld.wolfram.com/GabrielsHorn.html">https://mathworld.wolfram.com/GabrielsHorn.html</a></p>
-<p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
-<p><a class="reference internal" href="../_images/05a_ROT_GabrielHorn_surface.3D.xml.jpg"><img alt="05a_ROT_GabrielHorn_surface" src="../_images/05a_ROT_GabrielHorn_surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Gabriels Horn</p>
-<p></p>
-</section>
-<section id="funnel">
-<h2>Funnel<a class="headerlink" href="#funnel" title="Link to this heading">#</a></h2>
-<p>// see <a class="reference external" href="https://mathworld.wolfram.com/Funnel.html">https://mathworld.wolfram.com/Funnel.html</a>
-// see <a class="reference external" href="http://www.3d-meier.de/tut3/Seite28.html">http://www.3d-meier.de/tut3/Seite28.html</a>
-// see <a class="reference external" href="http://www.3d-meier.de/tut3/Seite27.html">http://www.3d-meier.de/tut3/Seite27.html</a></p>
-<p>See also  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
-<p><a class="reference internal" href="../_images/06a_ROT_Funnel_surface.3D.xml.jpg"><img alt="06a_ROT_Funnel_surface" src="../_images/06a_ROT_Funnel_surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Funnel</p>
-<p></p>
-</section>
 <section id="one-sheeted-hyperboloid">
 <h2>One-Sheeted Hyperboloid<a class="headerlink" href="#one-sheeted-hyperboloid" title="Link to this heading">#</a></h2>
 <p>See also: <a class="reference external" href="https://mathworld.wolfram.com/One-SheetedHyperboloid.html">https://mathworld.wolfram.com/One-SheetedHyperboloid.html</a></p>
 <p>See also: <a class="reference external" href="https://en.wikipedia.org/wiki/Hyperboloid">https://en.wikipedia.org/wiki/Hyperboloid</a></p>
-<p><a class="reference internal" href="../_images/07a_ROT_Hyperboloid_surface.3D.xml.jpg"><img alt="07a_ROT_Hyperboloid_surface" src="../_images/07a_ROT_Hyperboloid_surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: One-Sheeted Hyperboloid</p>
-<p></p>
-</section>
-<section id="catenoid">
-<h2>Catenoid<a class="headerlink" href="#catenoid" title="Link to this heading">#</a></h2>
-<p>See also: <a class="reference external" href="https://mathworld.wolfram.com/Catenoid.html">https://mathworld.wolfram.com/Catenoid.html</a></p>
-<p>See also  Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
-<p><a class="reference internal" href="../_images/08a_ROT_Catenoid_surface.3D.xml.jpg"><img alt="08a_ROT_Catenoid_surface" src="../_images/08a_ROT_Catenoid_surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Catenoid</p>
-<p></p>
-</section>
-<section id="gauss-cylinder">
-<h2>Gauss Cylinder<a class="headerlink" href="#gauss-cylinder" title="Link to this heading">#</a></h2>
-<p>See also: <a class="reference external" href="http://www.3d-meier.de/tut3/Seite157.html">http://www.3d-meier.de/tut3/Seite157.html</a>    Gauss Cylinder</p>
-<p>See also  Wikipedia <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
-<p><a class="reference internal" href="../_images/09a_ROT_GCylinder_surface.3D.xml.jpg"><img alt="09a_ROT_GCylinder_surface" src="../_images/09a_ROT_GCylinder_surface.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/09b_ROT_GCylinder_surface.3D.xml.jpg"><img alt="09b_ROT_GCylinder_surface" src="../_images/09b_ROT_GCylinder_surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Gauss Cylinder</p>
-<p><strong>Right figure</strong>: Gauss Cylinder</p>
-<p></p>
-</section>
-<section id="paraboloid">
-<h2>Paraboloid<a class="headerlink" href="#paraboloid" title="Link to this heading">#</a></h2>
-<p><a class="reference internal" href="../_images/10a_ROT_Paraboloid_surface.3D.xml.jpg"><img alt="10a_ROT_Paraboloid_surface" src="../_images/10a_ROT_Paraboloid_surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Paraboloid</p>
-<p></p>
-</section>
-<section id="vase">
-<h2>Vase<a class="headerlink" href="#vase" title="Link to this heading">#</a></h2>
-<p><a class="reference internal" href="../_images/11a_ROT_Vase.3D.xml.jpg"><img alt="11a_ROT_Vase" src="../_images/11a_ROT_Vase.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/11b_ROT_Vase.3D.xml.jpg"><img alt="11b_ROT_Vase" src="../_images/11b_ROT_Vase.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Vase</p>
-<p><strong>Right figure</strong>: Vase</p>
+<p><a class="reference internal" href="../_images/D01a_Hyperboloid1.3D.jpg"><img alt="D01a_Hyperboloid1.3D" src="../_images/D01a_Hyperboloid1.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D01b_Hyperboloid1.3D.jpg"><img alt="D01b_Hyperboloid1.3D" src="../_images/D01b_Hyperboloid1.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D01c_Hyperboloid1.3D.jpg"><img alt="D01c_Hyperboloid1.3D" src="../_images/D01c_Hyperboloid1.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="sphere">
 <h2>Sphere<a class="headerlink" href="#sphere" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="User.ParametricSphere">
-<span class="sig-prename descclassname"><span class="pre">User.</span></span><span class="sig-name descname"><span class="pre">ParametricSphere</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Revolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">true</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.ParametricSphere" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
 <p>See also: <a class="reference external" href="http://www.3d-meier.de/tut3/Seite86.html">http://www.3d-meier.de/tut3/Seite86.html</a>, Sphere</p>
-<p><a class="reference internal" href="../_images/01a_ROT_Sphere_surface.3D.xml.jpg"><img alt="TestSphere_a" src="../_images/01a_ROT_Sphere_surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Sphere</p>
-<p><a class="reference internal" href="../_images/01b_ROT_Sphere_lower_half.3D.xml.jpg"><img alt="01b_ROT_Sphere_lower_half" src="../_images/01b_ROT_Sphere_lower_half.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/01c_ROT_Sphere_right_half.3D.xml.jpg"><img alt="01c_ROT_Sphere_right_half" src="../_images/01c_ROT_Sphere_right_half.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/01d_ROT_Sphere_quarter.3D.xml.jpg"><img alt="01d_ROT_Sphere_quarter" src="../_images/01d_ROT_Sphere_quarter.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Gear torus surface</p>
-<p><strong>Middle figure</strong>: Gear torus surface</p>
-<p><strong>Right figure</strong>: Gear torus surface</p>
+<p><a class="reference internal" href="../_images/D02a_SphereSqrt.3D.jpg"><img alt="D02a_SphereSqrt.3D" src="../_images/D02a_SphereSqrt.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D02b_SphereSqrt.3D.jpg"><img alt="D02b_SphereSqrt.3D" src="../_images/D02b_SphereSqrt.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D02c_SphereSqrt.3D.jpg"><img alt="D02c_SphereSqrt.3D" src="../_images/D02c_SphereSqrt.3D.jpg" style="width: 30%;" /></a></p>
+<p><a class="reference internal" href="../_images/D02d_SphereSqrt.3D.jpg"><img alt="D02d_SphereSqrt.3D" src="../_images/D02d_SphereSqrt.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D02e_SphereSqrt.3D.jpg"><img alt="D02e_SphereSqrt.3D" src="../_images/D02e_SphereSqrt.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D02f_SphereSqrt.3D.jpg"><img alt="D02f_SphereSqrt.3D" src="../_images/D02f_SphereSqrt.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="prolate-spheroid">
 <h2>Prolate Spheroid<a class="headerlink" href="#prolate-spheroid" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="User.ProlateSpheroid">
-<span class="sig-prename descclassname"><span class="pre">User.</span></span><span class="sig-name descname"><span class="pre">ProlateSpheroid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Revolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">true</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.ProlateSpheroid" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
 <p>See also: <a class="reference external" href="http://paulbourke.net/geometry/spherical/">http://paulbourke.net/geometry/spherical/</a>   prolate spheroid, or ellipsoid of revolution
 See also: <a class="reference external" href="https://en.wikipedia.org/wiki/Ellipsoid#Parameterization">https://en.wikipedia.org/wiki/Ellipsoid#Parameterization</a>  ellipsoid of revolution
 See also: <a class="reference external" href="https://mathworld.wolfram.com/OblateSpheroid.html">https://mathworld.wolfram.com/OblateSpheroid.html</a>  Oblate Spheroid</p>
-<p><a class="reference internal" href="../_images/03a_ROT_ProlateSpheroid_surface.3D.xml.jpg"><img alt="ProlateSpheroid_small_a" src="../_images/03a_ROT_ProlateSpheroid_surface.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/03b_ROT_ProlateSpheroidSqrt.3D.xml.jpg"><img alt="ProlateSpheroid_small_b" src="../_images/03b_ROT_ProlateSpheroidSqrt.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Prolate Spheroid.</p>
-<p><strong>Right figure</strong>: Prolate Spheroid via Sqrt.</p>
+<p><a class="reference internal" href="../_images/D03a_ProlateSpheroidoid.3D.jpg"><img alt="D03a_ProlateSpheroidoid.3D" src="../_images/D03a_ProlateSpheroidoid.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D03b_ProlateSpheroidoid.3D.jpg"><img alt="D03b_ProlateSpheroidoid.3D" src="../_images/D03b_ProlateSpheroidoid.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D03c_ProlateSpheroidoid.3D.jpg"><img alt="D03c_ProlateSpheroidoid.3D" src="../_images/D03c_ProlateSpheroidoid.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="oblate-spheroid">
 <h2>Oblate Spheroid<a class="headerlink" href="#oblate-spheroid" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="User.OblateSpheroid">
-<span class="sig-prename descclassname"><span class="pre">User.</span></span><span class="sig-name descname"><span class="pre">OblateSpheroid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Revolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">true</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.OblateSpheroid" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
 <p>See also: <a class="reference external" href="http://paulbourke.net/geometry/spherical/">http://paulbourke.net/geometry/spherical/</a>   prolate spheroid, or ellipsoid of revolution
 See also: <a class="reference external" href="https://en.wikipedia.org/wiki/Ellipsoid#Parameterization">https://en.wikipedia.org/wiki/Ellipsoid#Parameterization</a>  ellipsoid of revolution
 See also: <a class="reference external" href="https://mathworld.wolfram.com/OblateSpheroid.html">https://mathworld.wolfram.com/OblateSpheroid.html</a>  Oblate Spheroid</p>
-<p><a class="reference internal" href="../_images/04a_ROT_OblateSpheroid_surface.3D.xml.jpg"><img alt="OblateSpheroid_small_a" src="../_images/04a_ROT_OblateSpheroid_surface.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/04b_ROT_OblateSpheroidSqrt.3D.xml.jpg"><img alt="OblateSpheroid_small_b" src="../_images/04b_ROT_OblateSpheroidSqrt.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Prolate Spheroid.</p>
-<p><strong>Right figure</strong>: Prolate Spheroid via Sqrt.</p>
+<p><a class="reference internal" href="../_images/D04a_OblateSpheroidoid.3D.jpg"><img alt="D04a_OblateSpheroidoid.3D" src="../_images/D04a_OblateSpheroidoid.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D04b_OblateSpheroidoid.3D.jpg"><img alt="D04b_OblateSpheroidoid.3D" src="../_images/D04b_OblateSpheroidoid.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D04c_OblateSpheroidoid.3D.jpg"><img alt="D04c_OblateSpheroidoid.3D" src="../_images/D04c_OblateSpheroidoid.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="drop-surface">
 <h2>Drop surface<a class="headerlink" href="#drop-surface" title="Link to this heading">#</a></h2>
 <p>// see <a class="reference external" href="http://www.3d-meier.de/tut3/Seite44.html">http://www.3d-meier.de/tut3/Seite44.html</a></p>
-<blockquote>
-<div><p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">User</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Curve</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">Cardioid</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Resolution</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">AsPolar</span> <span class="o">=</span> <span class="n">true</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">User</span><span class="o">.</span><span class="n">Chart2D</span><span class="o">.</span><span class="n">Show</span><span class="p">(</span><span class="n">Curve</span><span class="p">,</span> <span class="n">Template</span> <span class="o">=</span> <span class="s1">&#39;PolarCurve&#39;</span><span class="p">,</span> <span class="n">Title</span> <span class="o">=</span> <span class="s1">&#39;Cardioid&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>An example in C#</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">User</span><span class="p">;</span>
-<span class="n">Curve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">User</span><span class="p">.</span><span class="n">Cardioid</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Resolution</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="n">AsPolar</span><span class="p">:</span><span class="w"> </span><span class="k">true</span><span class="p">);</span>
-<span class="n">User</span><span class="p">.</span><span class="n">Chart2D</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="n">Curve</span><span class="p">,</span><span class="w"> </span><span class="n">Template</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;PolarCurve&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Cardioid&quot;</span><span class="p">);</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p><a class="reference internal" href="../_images/07a_ROT_Drop_Surface.3D.xml.jpg"><img alt="07a_ROT_Drop_Surface" src="../_images/07a_ROT_Drop_Surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Drop surface</p>
+<p><a class="reference internal" href="../_images/D05a_DropSurface.3D.jpg"><img alt="D05a_DropSurface.3D" src="../_images/D05a_DropSurface.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D05b_DropSurface.3D.jpg"><img alt="D05b_DropSurface.3D" src="../_images/D05b_DropSurface.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D05c_DropSurface.3D.jpg"><img alt="D05c_DropSurface.3D" src="../_images/D05c_DropSurface.3D.jpg" style="width: 30%;" /></a></p>
+<p></p>
+</section>
+<section id="egg-surface">
+<h2>Egg surface<a class="headerlink" href="#egg-surface" title="Link to this heading">#</a></h2>
+<p>Examples in Bourke, towards the end of the page</p>
+<p>For the egg surface, also see Meier</p>
+<p><a class="reference internal" href="../_images/D06a_EggSurface.3D.jpg"><img alt="D06a_EggSurface.3D" src="../_images/D06a_EggSurface.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D06b_EggSurface.3D.jpg"><img alt="D06b_EggSurface.3D" src="../_images/D06b_EggSurface.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D06c_EggSurface.3D.jpg"><img alt="D06c_EggSurface.3D" src="../_images/D06c_EggSurface.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="apple-surface">
@@ -1130,189 +984,53 @@ See also: <a class="reference external" href="https://mathworld.wolfram.com/Obla
 <p>// see <a class="reference external" href="http://www.3d-meier.de/tut3/Seite54.html">http://www.3d-meier.de/tut3/Seite54.html</a></p>
 <p><a class="reference external" href="https://paulbourke.net/geometry/spherical/">https://paulbourke.net/geometry/spherical/</a></p>
 <p>For the apple surface, also see Meier</p>
-<p><a class="reference internal" href="../_images/09a_ROT_Apple_Surface.3D.xml.jpg"><img alt="09a_ROT_Apple_Surface" src="../_images/09a_ROT_Apple_Surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Apple surface</p>
+<p><a class="reference internal" href="../_images/D07a_Apple.3D.jpg"><img alt="D07a_Apple.3D" src="../_images/D07a_Apple.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D07b_Apple.3D.jpg"><img alt="D07b_Apple.3D" src="../_images/D07b_Apple.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D07c_Apple.3D.jpg"><img alt="D07c_Apple.3D" src="../_images/D07c_Apple.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="spinning-top">
 <h2>Spinning top<a class="headerlink" href="#spinning-top" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="User.SpinningTop">
-<span class="sig-prename descclassname"><span class="pre">User.</span></span><span class="sig-name descname"><span class="pre">SpinningTop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Revolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">true</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.SpinningTop" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
 <p>See also  <a class="reference external" href="http://www.3d-meier.de/tut3/Seite150.html">http://www.3d-meier.de/tut3/Seite150.html</a>    Kreisel</p>
-<p>See also  Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
-<p><a class="reference internal" href="../_images/11a_ROT_Spinningtop_surface.3D.xml.jpg"><img alt="11a_ROT_Spinningtop_surface" src="../_images/11a_ROT_Spinningtop_surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Spinning top</p>
+<p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
+<p><a class="reference internal" href="../_images/D08a_Spinningtop.3D.jpg"><img alt="D08a_Spinningtop.3D" src="../_images/D08a_Spinningtop.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D08b_Spinningtop.3D.jpg"><img alt="D08b_Spinningtop.3D" src="../_images/D08b_Spinningtop.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D08c_Spinningtop.3D.jpg"><img alt="D08c_Spinningtop.3D" src="../_images/D08c_Spinningtop.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="pseudosphere">
 <h2>Pseudosphere<a class="headerlink" href="#pseudosphere" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="User.Pseudosphere">
-<span class="sig-prename descclassname"><span class="pre">User.</span></span><span class="sig-name descname"><span class="pre">Pseudosphere</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Revolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">true</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.Pseudosphere" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
 <p>See also: <a class="reference external" href="https://mathworld.wolfram.com/Pseudosphere.html">https://mathworld.wolfram.com/Pseudosphere.html</a></p>
 <p>// see <a class="reference external" href="http://www.3d-meier.de/tut3/Seite28.html">http://www.3d-meier.de/tut3/Seite28.html</a></p>
-<blockquote>
-<div><p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">User</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Curve</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">Cardioid</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Resolution</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">AsPolar</span> <span class="o">=</span> <span class="n">true</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">User</span><span class="o">.</span><span class="n">Chart2D</span><span class="o">.</span><span class="n">Show</span><span class="p">(</span><span class="n">Curve</span><span class="p">,</span> <span class="n">Template</span> <span class="o">=</span> <span class="s1">&#39;PolarCurve&#39;</span><span class="p">,</span> <span class="n">Title</span> <span class="o">=</span> <span class="s1">&#39;Cardioid&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>An example in C#</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">User</span><span class="p">;</span>
-<span class="n">Curve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">User</span><span class="p">.</span><span class="n">Cardioid</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Resolution</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="n">AsPolar</span><span class="p">:</span><span class="w"> </span><span class="k">true</span><span class="p">);</span>
-<span class="n">User</span><span class="p">.</span><span class="n">Chart2D</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="n">Curve</span><span class="p">,</span><span class="w"> </span><span class="n">Template</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;PolarCurve&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Cardioid&quot;</span><span class="p">);</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p><a class="reference internal" href="../_images/12a_ROT_Pseudosphere_ROT0b_surface.3D.xml.jpg"><img alt="12a_ROT_Pseudosphere_ROT0b_surface" src="../_images/12a_ROT_Pseudosphere_ROT0b_surface.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/12b_ROT_Pseudosphere.3D.xml.jpg"><img alt="12b_ROT_Pseudosphere" src="../_images/12b_ROT_Pseudosphere.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Pseudosphere</p>
-<p><strong>Right figure</strong>: Pseudosphere</p>
+<p><a class="reference internal" href="../_images/D09a_PseudoSphere.3D.jpg"><img alt="D09a_PseudoSphere.3D" src="../_images/D09a_PseudoSphere.3D.jpg" style="height: 300px;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D09b_PseudoSphere.3D.jpg"><img alt="D09b_PseudoSphere.3D" src="../_images/D09b_PseudoSphere.3D.jpg" style="height: 300px;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D09c_PseudoSphere.3D.jpg"><img alt="D09c_PseudoSphere.3D" src="../_images/D09c_PseudoSphere.3D.jpg" style="height: 300px;" /></a></p>
 <p></p>
 </section>
 <section id="wave-sphere-surface">
 <h2>Wave sphere Surface<a class="headerlink" href="#wave-sphere-surface" title="Link to this heading">#</a></h2>
 <p>// see <a class="reference external" href="http://www.3d-meier.de/tut3/Seite63.html">http://www.3d-meier.de/tut3/Seite63.html</a></p>
-<p><a class="reference internal" href="../_images/13a_ROT_WaveSphere.3D.xml.jpg"><img alt="13a_ROT_WaveSphere" src="../_images/13a_ROT_WaveSphere.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/13b_ROT_WaveSphere.3D.xml.jpg"><img alt="13b_ROT_WaveSphere" src="../_images/13b_ROT_WaveSphere.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Wave sphere Surface</p>
-<p><strong>Right figure</strong>: Wave sphere Surface</p>
-</section>
-<section id="low-resolution-torus-surface-part1">
-<h2>Low resolution torus surface, part1<a class="headerlink" href="#low-resolution-torus-surface-part1" title="Link to this heading">#</a></h2>
-<p>// see <a class="reference external" href="https://mathworld.wolfram.com/Torus.html">https://mathworld.wolfram.com/Torus.html</a></p>
-<p>See also  Wikipedia <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
-<p><a class="reference internal" href="../_images/91a_ROT_Torus_surface.3D.xml.jpg"><img alt="91a_ROT_Torus_surface" src="../_images/91a_ROT_Torus_surface.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/91b_ROT_Torus_surface.3D.xml.jpg"><img alt="91b_ROT_Torus_surface" src="../_images/91b_ROT_Torus_surface.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/91c_ROT_Torus_surface.3D.xml.jpg"><img alt="91c_ROT_Torus_surface" src="../_images/91c_ROT_Torus_surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Low resolution torus surface, part1</p>
-<p><strong>Middle figure</strong>: Low resolution torus surface, part1</p>
-<p><strong>Right figure</strong>: Low resolution torus surface, part1</p>
-<p></p>
-</section>
-<section id="low-resolution-torus-surface-part2">
-<h2>Low resolution torus surface, part2<a class="headerlink" href="#low-resolution-torus-surface-part2" title="Link to this heading">#</a></h2>
-<p>See also: <a class="reference external" href="http://www.3d-meier.de/tut3/Seite165.html">http://www.3d-meier.de/tut3/Seite165.html</a></p>
-<p>See also  Wikipedia <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
-<p><a class="reference internal" href="../_images/92a_ROT_Torus_surface.3D.xml.jpg"><img alt="92a_ROT_Torus_surface" src="../_images/92a_ROT_Torus_surface.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/92b_ROT_Torus_surface.3D.xml.jpg"><img alt="92b_ROT_Torus_surface" src="../_images/92b_ROT_Torus_surface.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/92c_ROT_Torus_surface.3D.xml.jpg"><img alt="92c_ROT_Torus_surface" src="../_images/92c_ROT_Torus_surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Low resolution torus surface, part1</p>
-<p><strong>Middle figure</strong>: Low resolution torus surface, part1</p>
-<p><strong>Right figure</strong>: Low resolution torus surface, part1</p>
-<p></p>
-</section>
-<section id="low-resolution-torus-surface-part3">
-<h2>Low resolution torus surface, part3<a class="headerlink" href="#low-resolution-torus-surface-part3" title="Link to this heading">#</a></h2>
-<p>See also: <a class="reference external" href="http://www.3d-meier.de/tut3/Seite165.html">http://www.3d-meier.de/tut3/Seite165.html</a></p>
-<p>See also  Wikipedia <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
-<p><a class="reference internal" href="../_images/93a_ROT_Torus_surface.3D.xml.jpg"><img alt="93a_ROT_Torus_surface" src="../_images/93a_ROT_Torus_surface.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/93b_ROT_Torus_surface.3D.xml.jpg"><img alt="93b_ROT_Torus_surface" src="../_images/93b_ROT_Torus_surface.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/93c_ROT_Torus_surface.3D.xml.jpg"><img alt="93c_ROT_Torus_surface" src="../_images/93c_ROT_Torus_surface.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Low resolution torus surface, part1</p>
-<p><strong>Middle figure</strong>: Low resolution torus surface, part1</p>
-<p><strong>Right figure</strong>: Low resolution torus surface, part1</p>
+<p><a class="reference internal" href="../_images/D10a_WaveSphere.3D.jpg"><img alt="D10a_WaveSphere.3D" src="../_images/D10a_WaveSphere.3D.jpg" style="width: 45%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D10b_WaveSphere.3D.jpg"><img alt="D10b_WaveSphere.3D" src="../_images/D10b_WaveSphere.3D.jpg" style="width: 45%;" /></a></p>
 <p></p>
 </section>
 <section id="torus">
 <h2>Torus<a class="headerlink" href="#torus" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="User.Torus">
-<span class="sig-prename descclassname"><span class="pre">User.</span></span><span class="sig-name descname"><span class="pre">Torus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Revolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">true</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.Torus" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p>See also  Wikipedia <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
-<blockquote>
-<div><p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">User</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Curve</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">Cardioid</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Resolution</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">AsPolar</span> <span class="o">=</span> <span class="n">true</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">User</span><span class="o">.</span><span class="n">Chart2D</span><span class="o">.</span><span class="n">Show</span><span class="p">(</span><span class="n">Curve</span><span class="p">,</span> <span class="n">Template</span> <span class="o">=</span> <span class="s1">&#39;PolarCurve&#39;</span><span class="p">,</span> <span class="n">Title</span> <span class="o">=</span> <span class="s1">&#39;Cardioid&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>An example in C#</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">User</span><span class="p">;</span>
-<span class="n">Curve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">User</span><span class="p">.</span><span class="n">Cardioid</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Resolution</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="n">AsPolar</span><span class="p">:</span><span class="w"> </span><span class="k">true</span><span class="p">);</span>
-<span class="n">User</span><span class="p">.</span><span class="n">Chart2D</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="n">Curve</span><span class="p">,</span><span class="w"> </span><span class="n">Template</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;PolarCurve&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Cardioid&quot;</span><span class="p">);</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p><a class="reference internal" href="../_images/01a_ROT_Torus_surface.3D.xml.jpg"><img alt="01a_ROT_Torus_surface" src="../_images/01a_ROT_Torus_surface.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/01b_ROT_Torus_lower_half.3D.xml.jpg"><img alt="01b_ROT_Torus_lower_half" src="../_images/01b_ROT_Torus_lower_half.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/01c_ROT_Torus_right_half.3D.xml.jpg"><img alt="01c_ROT_Torus_right_half" src="../_images/01c_ROT_Torus_right_half.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Torus</p>
-<p><strong>Middle figure</strong>: Torus</p>
-<p><strong>Right figure</strong>: Torus</p>
+<p>See also  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
+<p><a class="reference internal" href="../_images/D11a_Torus.3D.jpg"><img alt="D11a_Torus.3D" src="../_images/D11a_Torus.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D11b_Torus_lowerhalf.3D.jpg"><img alt="D11b_Torus_lowerhalf.3D" src="../_images/D11b_Torus_lowerhalf.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D11c_Torus_backhalf.3D.jpg"><img alt="D11c_Torus_backhalf.3D" src="../_images/D11c_Torus_backhalf.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="horn-torus">
 <h2>Horn Torus<a class="headerlink" href="#horn-torus" title="Link to this heading">#</a></h2>
-<p>See also  Wikipedia <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id20">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
-<blockquote>
-<div><p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">User</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Curve</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">Cardioid</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Resolution</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">AsPolar</span> <span class="o">=</span> <span class="n">true</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">User</span><span class="o">.</span><span class="n">Chart2D</span><span class="o">.</span><span class="n">Show</span><span class="p">(</span><span class="n">Curve</span><span class="p">,</span> <span class="n">Template</span> <span class="o">=</span> <span class="s1">&#39;PolarCurve&#39;</span><span class="p">,</span> <span class="n">Title</span> <span class="o">=</span> <span class="s1">&#39;Cardioid&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>An example in C#</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">User</span><span class="p">;</span>
-<span class="n">Curve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">User</span><span class="p">.</span><span class="n">Cardioid</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Resolution</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="n">AsPolar</span><span class="p">:</span><span class="w"> </span><span class="k">true</span><span class="p">);</span>
-<span class="n">User</span><span class="p">.</span><span class="n">Chart2D</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="n">Curve</span><span class="p">,</span><span class="w"> </span><span class="n">Template</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;PolarCurve&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Cardioid&quot;</span><span class="p">);</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p><a class="reference internal" href="../_images/02a_ROT_HornTorus_surface.3D.xml.jpg"><img alt="02a_ROT_HornTorus_surface" src="../_images/02a_ROT_HornTorus_surface.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/02b_ROT_HornTorus_lower_half.3D.xml.jpg"><img alt="02b_ROT_HornTorus_lower_half" src="../_images/02b_ROT_HornTorus_lower_half.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/02c_ROT_HornTorus_right_half.3D.xml.jpg"><img alt="02c_ROT_HornTorus_right_half" src="../_images/02c_ROT_HornTorus_right_half.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Horn Torus</p>
-<p><strong>Middle figure</strong>: Horn Torus</p>
-<p><strong>Right figure</strong>: Horn Torus</p>
+<p>See also  Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
+<p><a class="reference internal" href="../_images/D12a_HornTorus.3D.jpg"><img alt="D12a_HornTorus.3D" src="../_images/D12a_HornTorus.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D12b_HornTorus_lowerhalf.3D.jpg"><img alt="D12b_HornTorus_lowerhalf.3D" src="../_images/D12b_HornTorus_lowerhalf.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D12c_HornTorus_backhalf.3D.jpg"><img alt="D12c_HornTorus_backhalf.3D" src="../_images/D12c_HornTorus_backhalf.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="spindle-torus">
 <h2>Spindle Torus<a class="headerlink" href="#spindle-torus" title="Link to this heading">#</a></h2>
 <p>See also: <a class="reference external" href="https://mathworld.wolfram.com/EllipticTorus.html">https://mathworld.wolfram.com/EllipticTorus.html</a></p>
-<p>See also  Wikipedia <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id22">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
-<blockquote>
-<div><p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">User</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Curve</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">Cardioid</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Resolution</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">AsPolar</span> <span class="o">=</span> <span class="n">true</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">User</span><span class="o">.</span><span class="n">Chart2D</span><span class="o">.</span><span class="n">Show</span><span class="p">(</span><span class="n">Curve</span><span class="p">,</span> <span class="n">Template</span> <span class="o">=</span> <span class="s1">&#39;PolarCurve&#39;</span><span class="p">,</span> <span class="n">Title</span> <span class="o">=</span> <span class="s1">&#39;Cardioid&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>An example in C#</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">User</span><span class="p">;</span>
-<span class="n">Curve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">User</span><span class="p">.</span><span class="n">Cardioid</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Resolution</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="n">AsPolar</span><span class="p">:</span><span class="w"> </span><span class="k">true</span><span class="p">);</span>
-<span class="n">User</span><span class="p">.</span><span class="n">Chart2D</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="n">Curve</span><span class="p">,</span><span class="w"> </span><span class="n">Template</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;PolarCurve&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Cardioid&quot;</span><span class="p">);</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p><a class="reference internal" href="../_images/03a_ROT_SpindleTorus_surface.3D.xml.jpg"><img alt="03a_ROT_SpindleTorus_surface" src="../_images/03a_ROT_SpindleTorus_surface.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/03b_ROT_SpindleTorus_lower_half.3D.xml.jpg"><img alt="03b_ROT_SpindleTorus_lower_half" src="../_images/03b_ROT_SpindleTorus_lower_half.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/03c_ROT_SpindleTorus_right_half.3D.xml.jpg"><img alt="03c_ROT_SpindleTorus_right_half" src="../_images/03c_ROT_SpindleTorus_right_half.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Spindle Torus</p>
-<p><strong>Middle figure</strong>: Spindle Torus</p>
-<p><strong>Right figure</strong>: Spindle Torus</p>
+<p>See also  Wikipedia <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
+<p><a class="reference internal" href="../_images/D13a_SpindelTorus.3D.jpg"><img alt="D13a_SpindelTorus.3D" src="../_images/D13a_SpindelTorus.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D13b_SpindelTorus_lowerhalf.3D.jpg"><img alt="D13b_SpindelTorus_lowerhalf.3D" src="../_images/D13b_SpindelTorus_lowerhalf.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D13c_SpindelTorus_backhalf.3D.jpg"><img alt="D13c_SpindelTorus_backhalf.3D" src="../_images/D13c_SpindelTorus_backhalf.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
 <section id="elliptic-torus">
 <h2>Elliptic Torus<a class="headerlink" href="#elliptic-torus" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="User.EllipticTorus">
-<span class="sig-prename descclassname"><span class="pre">User.</span></span><span class="sig-name descname"><span class="pre">EllipticTorus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Revolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">true</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.EllipticTorus" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
 <p>See also: <a class="reference external" href="https://mathworld.wolfram.com/EllipticTorus.html">https://mathworld.wolfram.com/EllipticTorus.html</a></p>
-<p>See also  Wikipedia <span id="id23">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id24">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
-<blockquote>
-<div><p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">User</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Curve</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">Cardioid</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Resolution</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">AsPolar</span> <span class="o">=</span> <span class="n">true</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">User</span><span class="o">.</span><span class="n">Chart2D</span><span class="o">.</span><span class="n">Show</span><span class="p">(</span><span class="n">Curve</span><span class="p">,</span> <span class="n">Template</span> <span class="o">=</span> <span class="s1">&#39;PolarCurve&#39;</span><span class="p">,</span> <span class="n">Title</span> <span class="o">=</span> <span class="s1">&#39;Cardioid&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>An example in C#</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">User</span><span class="p">;</span>
-<span class="n">Curve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">User</span><span class="p">.</span><span class="n">Cardioid</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Resolution</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="n">AsPolar</span><span class="p">:</span><span class="w"> </span><span class="k">true</span><span class="p">);</span>
-<span class="n">User</span><span class="p">.</span><span class="n">Chart2D</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="n">Curve</span><span class="p">,</span><span class="w"> </span><span class="n">Template</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;PolarCurve&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Cardioid&quot;</span><span class="p">);</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p><a class="reference internal" href="../_images/04a_ROT_EllipticTorus.3D.xml.jpg"><img alt="04a_ROT_EllipticTorus" src="../_images/04a_ROT_EllipticTorus.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/04a_ROT_EllipticTorus.3D.xml.jpg"><img alt="04b_ROT_EllipticTorus" src="../_images/04a_ROT_EllipticTorus.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>Left figure</strong>: Spindle Torus</p>
-<p><strong>Right figure</strong>: Spindle Torus</p>
+<p>See also  Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1303" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1484</a>]</span>,  MathWorld <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1417" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1160</a>]</span>.</p>
+<p><a class="reference internal" href="../_images/D14a_EllipticTorus.3D.jpg"><img alt="D14a_EllipticTorus.3D" src="../_images/D14a_EllipticTorus.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D14b_EllipticTorus.3D.jpg"><img alt="D14b_EllipticTorus.3D" src="../_images/D14b_EllipticTorus.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D14c_EllipticTorus.3D.jpg"><img alt="D14c_EllipticTorus.3D" src="../_images/D14c_EllipticTorus.3D.jpg" style="width: 30%;" /></a></p>
 </section>
 </section>
 
@@ -1361,53 +1079,20 @@ See also: <a class="reference external" href="https://mathworld.wolfram.com/Obla
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prism-and-cylinder">Prism and cylinder</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyramid-and-cone">Pyramid and cone</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frustum-and-cone-frustum">Frustum  and cone frustum</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insolator">Insolator</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gabriels-horn">Gabriels Horn</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funnel">Funnel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-sheeted-hyperboloid">One-Sheeted Hyperboloid</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catenoid">Catenoid</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gauss-cylinder">Gauss Cylinder</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paraboloid">Paraboloid</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vase">Vase</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sphere">Sphere</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.ParametricSphere"><code class="docutils literal notranslate"><span class="pre">User.ParametricSphere()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prolate-spheroid">Prolate Spheroid</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.ProlateSpheroid"><code class="docutils literal notranslate"><span class="pre">User.ProlateSpheroid()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oblate-spheroid">Oblate Spheroid</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.OblateSpheroid"><code class="docutils literal notranslate"><span class="pre">User.OblateSpheroid()</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sphere">Sphere</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prolate-spheroid">Prolate Spheroid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oblate-spheroid">Oblate Spheroid</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drop-surface">Drop surface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#egg-surface">Egg surface</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apple-surface">Apple surface</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spinning-top">Spinning top</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.SpinningTop"><code class="docutils literal notranslate"><span class="pre">User.SpinningTop()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pseudosphere">Pseudosphere</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.Pseudosphere"><code class="docutils literal notranslate"><span class="pre">User.Pseudosphere()</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spinning-top">Spinning top</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pseudosphere">Pseudosphere</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wave-sphere-surface">Wave sphere Surface</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#low-resolution-torus-surface-part1">Low resolution torus surface, part1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#low-resolution-torus-surface-part2">Low resolution torus surface, part2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#low-resolution-torus-surface-part3">Low resolution torus surface, part3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torus">Torus</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.Torus"><code class="docutils literal notranslate"><span class="pre">User.Torus()</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torus">Torus</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#horn-torus">Horn Torus</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spindle-torus">Spindle Torus</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elliptic-torus">Elliptic Torus</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#User.EllipticTorus"><code class="docutils literal notranslate"><span class="pre">User.EllipticTorus()</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elliptic-torus">Elliptic Torus</a></li>
 </ul>
   </nav></div>
 
@@ -1441,7 +1126,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Aug 30, 2026.
+  Last updated on Sep 03, 2026.
   <br/>
 </p>
   </div>
