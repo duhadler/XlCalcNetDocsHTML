@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Coil springs &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>(Coil) springs &#8212; XlCalcNet 1.0.0 documentation</title>
   
   
   
@@ -53,7 +53,7 @@
     <link rel="prev" title="Helices and related curves traced on cylinders, cones and spheres" href="C04_HelicesAndRelated.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 03, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 04, 2026"/>
   </head>
   
   
@@ -643,7 +643,7 @@
 <li class="toctree-l2"><a class="reference internal" href="C02_FunctionsR2C.html">Functions with real input and complex results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C03_CharacteristicFunctions.html">Characteristic functions of statistical distributions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_HelicesAndRelated.html">Helices and related curves traced on cylinders, cones and spheres</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Coil springs</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">(Coil) springs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C06_GeneralKnots.html">General knots</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C07_TorusKnots.html">Torus knots</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C08_LissajousKnots.html">Lissajous knots</a></li>
@@ -888,7 +888,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Coil springs</h1>
+    <h1>(Coil) springs</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -898,14 +898,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-1">Spring 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-2">Spring 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-3">Spring 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-4">Spring 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-5">Spring 5</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-6">Spring 6</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-7a">Spring 7a</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-7b">Spring 7b</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-7c">Spring 7c</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-7d">Spring 7d</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-7">Spring 7</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-8">Spring 8</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-9">Spring 9</a></li>
 </ul>
             </nav>
         </div>
@@ -919,12 +919,13 @@ document.write(`
                   
   <p></p>
 <section id="coil-springs">
-<h1>Coil springs<a class="headerlink" href="#coil-springs" title="Link to this heading">#</a></h1>
+<h1>(Coil) springs<a class="headerlink" href="#coil-springs" title="Link to this heading">#</a></h1>
 <p>See also: <a class="reference external" href="https://en.wikipedia.org/wiki/Coil_spring">https://en.wikipedia.org/wiki/Coil_spring</a></p>
 <p>See also: <a class="reference external" href="https://en.wikipedia.org/wiki/Spring_(device">https://en.wikipedia.org/wiki/Spring_(device</a>)</p>
-<section id="spring-2">
-<h2>Spring 2<a class="headerlink" href="#spring-2" title="Link to this heading">#</a></h2>
-<p>An example in C#</p>
+<section id="spring-1">
+<h2>Spring 1<a class="headerlink" href="#spring-1" title="Link to this heading">#</a></h2>
+<p>The XML code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the files <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C05_Springs/D01a_Path_Spring1.3D.xml">D01a_Path_Spring1.3D.xml (D01a-c)</a>.</p>
+<p>The example below uses the following code in C#</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="o">-</span><span class="mf">3.75</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">20</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="o">-</span><span class="mf">3.75</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
@@ -933,9 +934,10 @@ document.write(`
 <p><a class="reference internal" href="../_images/D01a_Path_Spiral2.3D.jpg"><img alt="D01a_Path_Spiral2.3D" src="../_images/D01a_Path_Spiral2.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D01b_Path_Spiral2.3D.jpg"><img alt="D01b_Path_Spiral2.3D" src="../_images/D01b_Path_Spiral2.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D01c_Path_Spiral2.3D.jpg"><img alt="D01c_Path_Spiral2.3D" src="../_images/D01c_Path_Spiral2.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
-<section id="spring-6">
-<h2>Spring 6<a class="headerlink" href="#spring-6" title="Link to this heading">#</a></h2>
-<p>An example in C#</p>
+<section id="spring-2">
+<h2>Spring 2<a class="headerlink" href="#spring-2" title="Link to this heading">#</a></h2>
+<p>The XML code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the files <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C05_Springs/D02a_Path_Spring2.3D.xml">D02a_Path_Spring2.3D.xml (D02a-b)</a>.</p>
+<p>The example below uses the following code in C#</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Sqrt</span><span class="p">(</span><span class="mi">10000</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">20</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Sqrt</span><span class="p">(</span><span class="mi">10000</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
@@ -944,9 +946,10 @@ document.write(`
 <p><a class="reference internal" href="../_images/D02a_Path_Spiral6.3D.jpg"><img alt="D02a_Path_Spiral6.3D" src="../_images/D02a_Path_Spiral6.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D02b_Path_Spiral6.3D.jpg"><img alt="D02b_Path_Spiral6.3D" src="../_images/D02b_Path_Spiral6.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
-<section id="spring-7a">
-<h2>Spring 7a<a class="headerlink" href="#spring-7a" title="Link to this heading">#</a></h2>
-<p>An example in C#</p>
+<section id="spring-3">
+<h2>Spring 3<a class="headerlink" href="#spring-3" title="Link to this heading">#</a></h2>
+<p>The XML code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the files <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C05_Springs/D04a_Path_Spring4.3D.xml">D04a_Path_Spring4.3D.xml (D04a-b)</a>.</p>
+<p>The example below uses the following code in C#</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Sqrt</span><span class="p">(</span><span class="mi">10000</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">209.22</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Tanh</span><span class="p">(</span><span class="mf">0.1896</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Sqrt</span><span class="p">(</span><span class="mi">10000</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
@@ -955,9 +958,10 @@ document.write(`
 <p><a class="reference internal" href="../_images/D03a_Path_Spiral7a.3D.jpg"><img alt="D03a_Path_Spiral7a.3D" src="../_images/D03a_Path_Spiral7a.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D03b_Path_Spiral7a.3D.jpg"><img alt="D03b_Path_Spiral7a.3D" src="../_images/D03b_Path_Spiral7a.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
-<section id="spring-7b">
-<h2>Spring 7b<a class="headerlink" href="#spring-7b" title="Link to this heading">#</a></h2>
-<p>An example in C#</p>
+<section id="spring-4">
+<h2>Spring 4<a class="headerlink" href="#spring-4" title="Link to this heading">#</a></h2>
+<p>The XML code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the files <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C05_Springs/D04a_Path_Spring4.3D.xml">D04a_Path_Spring4.3D.xml (D04a-b)</a>.</p>
+<p>The example below uses the following code in C#</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">200</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="mf">0.05</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">209.22</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Tanh</span><span class="p">(</span><span class="mf">0.1896</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">200</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="mf">0.05</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
@@ -966,9 +970,10 @@ document.write(`
 <p><a class="reference internal" href="../_images/D04a_Path_Spiral7b.3D.jpg"><img alt="D04a_Path_Spiral7b.3D" src="../_images/D04a_Path_Spiral7b.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D04b_Path_Spiral7b.3D.jpg"><img alt="D04b_Path_Spiral7b.3D" src="../_images/D04b_Path_Spiral7b.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
-<section id="spring-7c">
-<h2>Spring 7c<a class="headerlink" href="#spring-7c" title="Link to this heading">#</a></h2>
-<p>An example in C#</p>
+<section id="spring-5">
+<h2>Spring 5<a class="headerlink" href="#spring-5" title="Link to this heading">#</a></h2>
+<p>The XML code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the files <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C05_Springs/D05a_Path_Spring5.3D.xml">D05a_Path_Spring5.3D.xml (D05a-b)</a>.</p>
+<p>The example below uses the following code in C#</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="mf">0.2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">0.2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">));</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">200</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">209.22</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Tanh</span><span class="p">(</span><span class="mf">0.1896</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
@@ -978,9 +983,10 @@ document.write(`
 <p><a class="reference internal" href="../_images/D05a_Path_Spiral7c.3D.jpg"><img alt="D05a_Path_Spiral7c.3D" src="../_images/D05a_Path_Spiral7c.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D05b_Path_Spiral7c.3D.jpg"><img alt="D05b_Path_Spiral7c.3D" src="../_images/D05b_Path_Spiral7c.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
-<section id="spring-7d">
-<h2>Spring 7d<a class="headerlink" href="#spring-7d" title="Link to this heading">#</a></h2>
-<p>An example in C#</p>
+<section id="spring-6">
+<h2>Spring 6<a class="headerlink" href="#spring-6" title="Link to this heading">#</a></h2>
+<p>The XML code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the files <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C05_Springs/D06a_Path_Spring6.3D.xml">D06a_Path_Spring6.3D.xml (D06a-b)</a>.</p>
+<p>The example below uses the following code in C#</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="mf">0.2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">0.2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">));</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="mi">200</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">140</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">207.46</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Tanh</span><span class="p">(</span><span class="mf">0.2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
@@ -990,9 +996,10 @@ document.write(`
 <p><a class="reference internal" href="../_images/D06a_Path_Spiral7d.3D.jpg"><img alt="D06a_Path_Spiral7d.3D" src="../_images/D06a_Path_Spiral7d.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D06b_Path_Spiral7d.3D.jpg"><img alt="D06b_Path_Spiral7d.3D" src="../_images/D06b_Path_Spiral7d.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
-<section id="spring-8">
-<h2>Spring 8<a class="headerlink" href="#spring-8" title="Link to this heading">#</a></h2>
-<p>An example in C#</p>
+<section id="spring-7">
+<h2>Spring 7<a class="headerlink" href="#spring-7" title="Link to this heading">#</a></h2>
+<p>The XML code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the files <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C05_Springs/D07a_Path_Spring7.3D.xml">D07a_Path_Spring7.3D.xml (D07a-b)</a>.</p>
+<p>The example below uses the following code in C#</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">200</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Atan</span><span class="p">(</span><span class="mf">0.15</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">)))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">200</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Atan</span><span class="p">(</span><span class="mf">0.15</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">200</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Atan</span><span class="p">(</span><span class="mf">0.15</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">)))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
@@ -1001,9 +1008,10 @@ document.write(`
 <p><a class="reference internal" href="../_images/D07a_Path_Spiral8.3D.jpg"><img alt="D07a_Path_Spiral8.3D" src="../_images/D07a_Path_Spiral8.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D07b_Path_Spiral8.3D.jpg"><img alt="D07b_Path_Spiral8.3D" src="../_images/D07b_Path_Spiral8.3D.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/D07c_Path_Spiral8.3D.jpg"><img alt="D07c_Path_Spiral8.3D" src="../_images/D07c_Path_Spiral8.3D.jpg" style="width: 30%;" /></a></p>
 <p></p>
 </section>
-<section id="spring-9">
-<h2>Spring 9<a class="headerlink" href="#spring-9" title="Link to this heading">#</a></h2>
-<p>An example in C#</p>
+<section id="spring-8">
+<h2>Spring 8<a class="headerlink" href="#spring-8" title="Link to this heading">#</a></h2>
+<p>The XML code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the files <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C05_Springs/D08a_Path_Spring8.3D.xml">D08a_Path_Spring8.3D.xml (D08a-b)</a>.</p>
+<p>The example below uses the following code in C#</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100.0</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">G</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">160.0</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15.0</span><span class="p">;</span>
@@ -1062,14 +1070,14 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-1">Spring 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-2">Spring 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-3">Spring 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-4">Spring 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-5">Spring 5</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-6">Spring 6</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-7a">Spring 7a</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-7b">Spring 7b</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-7c">Spring 7c</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-7d">Spring 7d</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-7">Spring 7</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-8">Spring 8</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spring-9">Spring 9</a></li>
 </ul>
   </nav></div>
 
@@ -1103,7 +1111,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 03, 2026.
+  Last updated on Sep 04, 2026.
   <br/>
 </p>
   </div>

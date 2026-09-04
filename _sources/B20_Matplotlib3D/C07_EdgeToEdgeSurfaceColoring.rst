@@ -237,28 +237,5 @@ See: https://s3dlib.org/examples/lines/lorenz_op.html
 
 
 
-|newpage|
-
-
-!!! Line segment !!! Missing picture
----------------------------------------------------------------------------------
-
-
-The Python code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D10_LineSegment.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D10_LineSegment.py>`__.
-
-
-See: https://s3dlib.org/examples/lines/lorenz_op.html
-
-
-|picdemo_Sequential_Line_Segment|
-
-.. |picdemo_Sequential_Line_Segment| image:: ../_static/Graphics3D/S3dlib/demo_Sequential_Line_Color2.png
-
-**Left figure**:  demo_Sequential_Line_Color2.
-
-
-
-
-
 
 

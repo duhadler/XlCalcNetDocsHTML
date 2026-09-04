@@ -49,11 +49,11 @@
     <script src="../_static/custom-icon.js?v=74687d30"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Coil springs" href="C05_CoilSprings.html" />
+    <link rel="next" title="(Coil) springs" href="C05_CoilSprings.html" />
     <link rel="prev" title="Characteristic functions of statistical distributions" href="C03_CharacteristicFunctions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 03, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 04, 2026"/>
   </head>
   
   
@@ -643,7 +643,7 @@
 <li class="toctree-l2"><a class="reference internal" href="C02_FunctionsR2C.html">Functions with real input and complex results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C03_CharacteristicFunctions.html">Characteristic functions of statistical distributions</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Helices and related curves traced on cylinders, cones and spheres</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C05_CoilSprings.html">Coil springs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C05_CoilSprings.html">(Coil) springs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C06_GeneralKnots.html">General knots</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C07_TorusKnots.html">Torus knots</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C08_LissajousKnots.html">Lissajous knots</a></li>
@@ -942,11 +942,12 @@ Therefore, the notion of helix in mathematics is more connected to a mountain ro
 <p></p>
 <section id="cylindrical-helix">
 <h2>Cylindrical helix<a class="headerlink" href="#cylindrical-helix" title="Link to this heading">#</a></h2>
+<p>The XML code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the files <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D01a_Path_SpiralCylindrical.3D.xml">D01a_Path_SpiralCylindrical.3D.xml (D01a-f)</a>.</p>
 <p>See also: <a class="reference external" href="https://mathcurve.com/courbes3d.gb/helicecirculaire/helicecirculaire.shtml">https://mathcurve.com/courbes3d.gb/helicecirculaire/helicecirculaire.shtml</a></p>
 <p>The cylindrical helix can be defined as a helix traced on a vertical cylinder of revolution, or a rhumb line of this cylinder (i.e., in both cases, a curve forming a constant angle with respect to the axis of the cylinder), or a geodesic of this cylinder (in other words, a curve that becomes a line when the cylinder is developed) or a solenoid with linear bore.
 Intrinsic characterization: constant curvature and torsion.</p>
 <p>The radius of the helix is a, and its shift is  (it is the distance between two consecutive coils) and b is sometimes called reduced shift of the helix. The angle of the helix is the constant angle (equal to ) formed by its tangent with respect to any plane orthogonal to Oz. The helix is right-handed when e = 1 (it “goes up” counterclockwise and an observer located outside of it sees it going up from left to right) and left-handed when e = - 1 (it “goes up” clockwise).</p>
-<p>An example in C#</p>
+<p>The example below uses the following code in C#</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.2</span><span class="p">;</span>
 <span class="c1">// double b = 1.0;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.2</span><span class="p">;</span>
@@ -961,6 +962,7 @@ Intrinsic characterization: constant curvature and torsion.</p>
 </section>
 <section id="conical-helix-based-on-archimedes-spiral-spiral-of-pappus">
 <h2>Conical helix based on Archimedes spiral (spiral of Pappus)<a class="headerlink" href="#conical-helix-based-on-archimedes-spiral-spiral-of-pappus" title="Link to this heading">#</a></h2>
+<p>The XML code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the files <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D02a_Path_SpiralAConical.3D.xml">D02a_Path_SpiralAConical.3D.xml (D02a-f)</a>.</p>
 <p>See also: <a class="reference external" href="https://en.wikipedia.org/wiki/Conical_spiral">https://en.wikipedia.org/wiki/Conical_spiral</a></p>
 <p>See also: <a class="reference external" href="https://mathworld.wolfram.com/ConicalSpiral.html">https://mathworld.wolfram.com/ConicalSpiral.html</a></p>
 <p>See also: <a class="reference external" href="https://mathcurve.com/courbes3d.gb/helicecirculaire/helicecirculaire.shtml">https://mathcurve.com/courbes3d.gb/helicecirculaire/helicecirculaire.shtml</a></p>
@@ -971,7 +973,7 @@ As for all helices, it is a geodesic of the vertical cylinder based on the afore
 The principal normal is always perpendicular to Oy.
 The radii of curvature and torsion are proportional to z.
 The helix is right-handed when  (it “goes up” clockwise) and left-handed when  (it “goes up” counterclockwise).</p>
-<p>An example in C#</p>
+<p>The example below uses the following code in C#</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">phi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">rphi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">phi</span><span class="p">;</span>
@@ -987,9 +989,10 @@ The helix is right-handed when  (it “goes up” clockwise) and left-handed whe
 </section>
 <section id="conical-helix-based-on-fermat-s-spiral">
 <h2>Conical helix based on Fermat’s spiral<a class="headerlink" href="#conical-helix-based-on-fermat-s-spiral" title="Link to this heading">#</a></h2>
+<p>The XML code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the files <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D03a_Path_SpiralFConical.3D.xml">D03a_Path_SpiralFConical.3D.xml (D03a-f)</a>.</p>
 <p>See also: <a class="reference external" href="https://en.wikipedia.org/wiki/Conical_spiral">https://en.wikipedia.org/wiki/Conical_spiral</a></p>
 <p>Conical helix based on Fermat’s spiral</p>
-<p>An example in C#</p>
+<p>The example below uses the following code in C#</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">phi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">;</span>
@@ -1005,9 +1008,10 @@ The helix is right-handed when  (it “goes up” clockwise) and left-handed whe
 </section>
 <section id="conical-helix-based-on-the-logarithmic-spiral-concho-spiral">
 <h2>Conical helix based on the logarithmic spiral  (Concho-Spiral)<a class="headerlink" href="#conical-helix-based-on-the-logarithmic-spiral-concho-spiral" title="Link to this heading">#</a></h2>
+<p>The XML code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the files <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D04a_Path_SpiralLConical.3D.xml">D04a_Path_SpiralLConical.3D.xml (D04a-f)</a>.</p>
 <p>See also: <a class="reference external" href="https://mathworld.wolfram.com/Concho-Spiral.html">https://mathworld.wolfram.com/Concho-Spiral.html</a></p>
 <p>See also: <a class="reference external" href="https://en.wikipedia.org/wiki/Conchospiral">https://en.wikipedia.org/wiki/Conchospiral</a></p>
-<p>An example in C#</p>
+<p>The example below uses the following code in C#</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">;</span>
@@ -1024,13 +1028,14 @@ The helix is right-handed when  (it “goes up” clockwise) and left-handed whe
 </section>
 <section id="rhumb-line-of-the-sphere">
 <h2>Rhumb line of the sphere<a class="headerlink" href="#rhumb-line-of-the-sphere" title="Link to this heading">#</a></h2>
+<p>The XML code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the files <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D05a_Path_SphericalRhumbline.3D.xml">D05a_Path_SphericalRhumbline.3D.xml (D05a-f)</a>.</p>
 <p>See also: <a class="reference external" href="https://mathcurve.com/courbes3d.gb/loxodromie/sphereloxodromie.shtml">https://mathcurve.com/courbes3d.gb/loxodromie/sphereloxodromie.shtml</a></p>
 <p>The rhumb lines of the sphere, associated to a given axis, are the curves that form a constant angle with the parallel (or the meridians).
 Do not mistake the rhumb lines for the spherical helices, that form a constant angle with the equatorial plane, nor for the clelias.</p>
 <p>The rhumb lines correspond to the straight lines in Mercator coordinates ; in other words, on the maps of the Earth that use the Mercator projection, the rhumb lines are represented by straight lines. The angle a that the images of the rhumb lines form on the map with respect to the horizontal is the same as the angle they form on the sphere with respect to the parallels.
 If we know the geographic coordinates  and  of two points, the angle a associated to the shortest rhumb line joining these two points is obtained by the formula:  and the length is given by: .
-The notion of rhumb line is opposed to that of geodesic, shortest path joining two points on the sphere, which is an arc of a great circle</p>
-<p>An example in C#</p>
+The notion of rhumb line is opposed to that of geodesic, shortest path joining two points on the sphere, which is an arc of a great circle.</p>
+<p>The example below uses the following code in C#</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Tan</span><span class="p">(</span><span class="n">alpha</span><span class="p">);</span>
@@ -1045,6 +1050,7 @@ The notion of rhumb line is opposed to that of geodesic, shortest path joining t
 </section>
 <section id="clelia">
 <h2>Clelia<a class="headerlink" href="#clelia" title="Link to this heading">#</a></h2>
+<p>The XML code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the files <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D06a_Path_SphericalClelia.3D.xml">D06a_Path_SphericalClelia.3D.xml (D06a-f)</a>.</p>
 <p>See also: <a class="reference external" href="https://mathcurve.com/courbes3d.gb/clelie/clelie.shtml">https://mathcurve.com/courbes3d.gb/clelie/clelie.shtml</a></p>
 <p>See also: <a class="reference external" href="https://en.wikipedia.org/wiki/Cl%C3%A9lie">https://en.wikipedia.org/wiki/Cl%C3%A9lie</a></p>
 <p>The clelias are the loci of a point M on a meridian of a sphere rotating at constant speed w around the polar axis, the point M also moving at constant speed nw along this meridian.
@@ -1052,7 +1058,7 @@ Therefore, physically, we obtain a clelia when peeling an orange or when rewindi
 <p>When n is rational with numerator p and denominator q:</p>
 <p>In this case, the curve is composed of 2p patterns, obtained from the base pattern by rotations of axis Oz and angles <span class="math notranslate nohighlight">\(2k \pi / n\)</span>  and <span class="math notranslate nohighlight">\(p + 2k \pi / n\)</span>  .</p>
 <p>When p and q are odd, the curve is composed of p patterns, obtained from the base pattern by rotations of axis Oz and angles  <span class="math notranslate nohighlight">\(2k \pi / n\)</span> .</p>
-<p>An example in C#</p>
+<p>The example below uses the following code in C#</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span><span class="w">    </span><span class="c1">// Example 1</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">n1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
@@ -1066,13 +1072,14 @@ Therefore, physically, we obtain a clelia when peeling an orange or when rewindi
 </section>
 <section id="spherical-helix">
 <h2>Spherical helix<a class="headerlink" href="#spherical-helix" title="Link to this heading">#</a></h2>
+<p>The XML code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the files <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D07a_Path_SphericalHelix.3D.xml">D07a_Path_SphericalHelix.3D.xml (D07a-f)</a>.</p>
 <p>See also: <a class="reference external" href="https://mathworld.wolfram.com/SphericalSpiral.html">https://mathworld.wolfram.com/SphericalSpiral.html</a></p>
 <p>See also: <a class="reference external" href="https://mathworld.wolfram.com/SphericalHelix.html">https://mathworld.wolfram.com/SphericalHelix.html</a></p>
 <p>See also: <a class="reference external" href="https://mathcurve.com/courbes3d.gb/helicespheric/helicespheric.shtml">https://mathcurve.com/courbes3d.gb/helicespheric/helicespheric.shtml</a></p>
 <p>A spherical cycloid is the locus of a point on a circle rolling without slipping on a fixed circle, the angle between the two circles remaining constant equal to ; here, a is the radius of the fixed circle,  that of the moving circle, and xOy the plane where lies the fixed circle.</p>
 <p>When = 0, we get the hypocycloid, and when = , the epicycloid; apart from these two cases, the cycloid is traced on the sphere corresponding to both the base and the rolling circles, hence its name of spherical cycloid. The center W of this sphere is the point on Oz at height  and its radius is .
 Therefore, the spherical cycloid is a roulette of the motion of a sphere over a sphere.</p>
-<p>An example in C#</p>
+<p>The example below uses the following code in C#</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span><span class="w">    </span><span class="c1">// Example 1</span>
 <span class="c1">//double q = 2.0 / 5.0;    // Example 2</span>
 <span class="c1">//double q = 1.0 / 5.0;    // Example 3</span>
@@ -1089,6 +1096,7 @@ Therefore, the spherical cycloid is a roulette of the motion of a sphere over a 
 </section>
 <section id="satellite-curve">
 <h2>Satellite curve<a class="headerlink" href="#satellite-curve" title="Link to this heading">#</a></h2>
+<p>The XML code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the files <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D08a_Path_SphericalSatellite.3D.xml">D08a_Path_SphericalSatellite.3D.xml (D08a-f)</a>.</p>
 <p>See also: <a class="reference external" href="https://mathcurve.com/courbes3d.gb/satellite/satellite.shtml">https://mathcurve.com/courbes3d.gb/satellite/satellite.shtml</a></p>
 <p>See also: <a class="reference external" href="https://mathcurve.com/courbes3d.gb/capareda/capareda.shtml">https://mathcurve.com/courbes3d.gb/capareda/capareda.shtml</a></p>
 <p>The satellite curves are the various trajectories of a point M on a given great circle of a sphere rotating around one of its axes, while M has a uniform motion along the circle.
@@ -1102,7 +1110,7 @@ These curves can also be seen as the trajectories of points on a circle in unifo
 </ul>
 </dd>
 </dl>
-<p>An example in C#</p>
+<p>The example below uses the following code in C#</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
 <span class="c1">//double alpha = 1 * Math.PI / 2;  // This corresponds to clelias</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
@@ -1143,7 +1151,7 @@ These curves can also be seen as the trajectories of points on a circle in unifo
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Coil springs</p>
+        <p class="prev-next-title">(Coil) springs</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1204,7 +1212,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 03, 2026.
+  Last updated on Sep 04, 2026.
   <br/>
 </p>
   </div>
