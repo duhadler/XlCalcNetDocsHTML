@@ -53,7 +53,7 @@
     <link rel="prev" title="Setup and general usage" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 04, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 05, 2026"/>
   </head>
   
   
@@ -568,13 +568,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C01_BarCharts.html">Bar Charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C02_LineCharts.html">Line and lollipop charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C03_AreaPlots.html">Area Plots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudplots.html">Boxplot, Violinplot and Raincloud plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudPlots.html">Boxplot, Violinplot and Raincloud plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C05_CorrelationAndRegression.html">Correlation and regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C06_Finance.html">Financial plots (requires mplfinance)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C07_Cartopy.html">Geographic data (requires cartopy)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C08_Geopandas.html">Geographic data (requires geopandas)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfWhole.html">Parts of a whole</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Heatmaps.html">Arcplots, dendrograms, heatmaps and clustermaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfAWhole.html">Parts of a whole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Dendrograms.html">Dendrograms, heatmaps and clustermaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C11_PlotTable.html">PlotTable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C12_Flow.html">Flow and connections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C13_CircularPlotsAndFlows.html">Circular plots and flows</a></li>
@@ -1033,7 +1033,7 @@ document.write(`
 <p>In double precision and binary floating point arithmetic, the tangent of <span class="math notranslate nohighlight">\(x = 1.57079632679489\)</span> is calculated as <span class="math notranslate nohighlight">\(\tan(x) = 1.48752 \cdot 10^{14}\)</span>, whereas the correct result is <span class="math notranslate nohighlight">\(\tan(x) = 1.51075 \cdot 10^{14}\)</span>. This amounts to an absolute error of <span class="math notranslate nohighlight">\(2.32287  \cdot 10^{12}\)</span> and a relative error of <span class="math notranslate nohighlight">\(1.54\%\)</span>.</p>
 <p>There are also limits on the range of arguments, e.g. <span class="math notranslate nohighlight">\(\sin(10^{8})\)</span> returns the value  <span class="math notranslate nohighlight">\(-9.31639 \cdot 10^{-1}\)</span>   (with an relative error of <span class="math notranslate nohighlight">\(-6.22776 \cdot 10^{-13}\)</span>), whereas  <span class="math notranslate nohighlight">\(\sin(10^{9})\)</span> returns an invalid result (the exact result is  <span class="math notranslate nohighlight">\(5.45843 \cdot 10^{-1}\)</span>)</p>
 <p><strong>Example: Logarithms and Exponential Functions</strong></p>
-<p>Consider the following example from <span id="id5">Kaveh R. Ghazi and Vincent Lefèvre and Philippe Théveny and Paul Zimmermann [<a class="reference internal" href="../99BackMatter/index.html#id102" title="Kaveh R. Ghazi and Vincent Lefèvre and Philippe Théveny and Paul Zimmermann. Why and how to use arbitrary precision. Computing in Science and Engineering, 12(3):62–65, 2010. Preprint available at http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.212.6321&amp;rep=rep1&amp;type=pdf.">1658</a>]</span>:</p>
+<p>Consider the following example from <span id="id5">Kaveh R. Ghazi and Vincent Lefèvre and Philippe Théveny and Paul Zimmermann [<a class="reference internal" href="../99BackMatter/index.html#id102" title="Kaveh R. Ghazi and Vincent Lefèvre and Philippe Théveny and Paul Zimmermann. Why and how to use arbitrary precision. Computing in Science and Engineering, 12(3):62–65, 2010. Preprint available at http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.212.6321&amp;rep=rep1&amp;type=pdf.">1656</a>]</span>:</p>
 <p>Determine 10 decimal digits of the constant</p>
 <div class="math notranslate nohighlight">
 \[Y = 173746a + 94228b - 78487c, \quad \text{where }\]</div>
@@ -1041,7 +1041,7 @@ document.write(`
 \[a = \sin(10^{22}), b = \log(17.1), c = \exp(0.42).\]</div>
 <p>The expected result is <span class="math notranslate nohighlight">\(Y = -1.341818958 \cdot 10^{-12}\)</span>.</p>
 <p><strong>Example: Linear Algebra</strong></p>
-<p>The following example is from <span id="id6">W. Hofschuster and W. Krämer [<a class="reference internal" href="../99BackMatter/index.html#id129" title="W. Hofschuster and W. Krämer. C-xsc 2.0: a c++ library for extended scientific computing. In R. Alt, A. Frommer, R.B. Kearfott, and W. Luther, editors, Numerical Software with Result Verification, Lecture notes in Computer Science, pages 15–35. Springer-Verlag, Heidelberg, 2004.">1659</a>]</span>:</p>
+<p>The following example is from <span id="id6">W. Hofschuster and W. Krämer [<a class="reference internal" href="../99BackMatter/index.html#id129" title="W. Hofschuster and W. Krämer. C-xsc 2.0: a c++ library for extended scientific computing. In R. Alt, A. Frommer, R.B. Kearfott, and W. Luther, editors, Numerical Software with Result Verification, Lecture notes in Computer Science, pages 15–35. Springer-Verlag, Heidelberg, 2004.">1657</a>]</span>:</p>
 <p>We want to solve the (ill-conditioned) system of linear equations <span class="math notranslate nohighlight">\(Ax = b\)</span> with</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix}
@@ -1197,7 +1197,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 04, 2026.
+  Last updated on Sep 05, 2026.
   <br/>
 </p>
   </div>

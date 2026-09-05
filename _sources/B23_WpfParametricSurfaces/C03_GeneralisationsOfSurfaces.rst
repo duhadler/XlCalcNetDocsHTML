@@ -204,10 +204,6 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 
 
 
-**Left figure**: Hexaedron (see also  Wikipedia :cite:p:`Wikipedia2D010`, :cite:t:`Gray2006`,  :cite:t:`Krivoshapko2015`).
-
-
-
 
 
 
@@ -241,8 +237,6 @@ See also: http://paulbourke.net/geometry/toroidal/
    :width: 30 %
 
 
-
-**Left figure**: Super Toroid (see also  Wikipedia :cite:p:`Wikipedia2D010`, :cite:t:`Gray2006`,  :cite:t:`Krivoshapko2015`).
 
 
 
@@ -309,9 +303,6 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 
 
 
-**Left figure**: Elliptic Helicoid (see also  Wikipedia :cite:p:`Wikipedia2D010`, :cite:t:`Gray2006`,  :cite:t:`Krivoshapko2015`).
-
-
 
 .. code-block:: csharp
 
@@ -375,6 +366,8 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 
 
 
+   
+|newpage|
 
 
 Lemniscate
@@ -413,9 +406,6 @@ See also: http://paulbourke.net/geometry/lemniscape/
 
 
 
-
-
-**Right figure**: Lemniscape (see also  Wikipedia :cite:p:`Wikipedia2D011`, :cite:t:`Gray2006`,  :cite:t:`Krivoshapko2015`).
 
 
 
@@ -470,10 +460,6 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 .. |08c_BohemianDome.3D| image:: ../_static/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/08c_BohemianDome.3D.jpg
    :width: 30 %
 
-
-
-
-**Right figure**: Bohemian Dome (see also  Wikipedia :cite:p:`Wikipedia2D011`, :cite:t:`Gray2006`,  :cite:t:`Krivoshapko2015`).
 
 
 
@@ -690,9 +676,6 @@ The XML code for the example below can be found online in the ``DataXlCalcNet`` 
 
 
 
-**Right figure**: Plueckers Conoid (see also  Wikipedia :cite:p:`Wikipedia2D011`, :cite:t:`Gray2006`,  :cite:t:`Krivoshapko2015`).
-
-
 
 |12d_Pluecker.3D| `\quad` |12e_Pluecker.3D| `\quad` |12f_Pluecker.3D|
 
@@ -814,9 +797,6 @@ The XML code for the example below can be found online in the ``DataXlCalcNet`` 
 
 
 
-**Left figure**: Skidian's ruled surface (see also  Wikipedia :cite:p:`Wikipedia2D010`, :cite:t:`Gray2006`,  :cite:t:`Krivoshapko2015`).
-
-
 
 
 |14d_Skidan.3D| `\quad` |14e_Skidan.3D| `\quad` |14f_Skidan.3D|
@@ -881,8 +861,6 @@ The XML code for the example below can be found online in the ``DataXlCalcNet`` 
 .. |15c_Umbrella.3D| image:: ../_static/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/15c_Umbrella.3D.jpg
    :width: 30 %
 
-
-**Left figure**: Umbrella surface (see also  Wikipedia :cite:p:`Wikipedia2D010`, :cite:t:`Gray2006`,  :cite:t:`Krivoshapko2015`).
 
 
 

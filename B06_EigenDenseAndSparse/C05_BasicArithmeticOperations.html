@@ -53,7 +53,7 @@
     <link rel="prev" title="Changing the shape of a matrix and/or the order of coefficients" href="C04_ChangeShapeOrder.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 04, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 05, 2026"/>
   </head>
   
   
@@ -568,13 +568,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C01_BarCharts.html">Bar Charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C02_LineCharts.html">Line and lollipop charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C03_AreaPlots.html">Area Plots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudplots.html">Boxplot, Violinplot and Raincloud plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudPlots.html">Boxplot, Violinplot and Raincloud plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C05_CorrelationAndRegression.html">Correlation and regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C06_Finance.html">Financial plots (requires mplfinance)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C07_Cartopy.html">Geographic data (requires cartopy)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C08_Geopandas.html">Geographic data (requires geopandas)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfWhole.html">Parts of a whole</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Heatmaps.html">Arcplots, dendrograms, heatmaps and clustermaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfAWhole.html">Parts of a whole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Dendrograms.html">Dendrograms, heatmaps and clustermaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C11_PlotTable.html">PlotTable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C12_Flow.html">Flow and connections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C13_CircularPlotsAndFlows.html">Circular plots and flows</a></li>
@@ -1434,7 +1434,7 @@ If the columns of <span class="math notranslate nohighlight">\(\boldsymbol{A}\)<
 <dl class="py method">
 <dt class="sig sig-object py" id="mat.QuadraticForm">
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">QuadraticForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matX</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.QuadraticForm" title="Link to this definition">#</a></dt>
-<dd><p>In multivariate statistics, if <span class="math notranslate nohighlight">\(x\)</span> is a vector of  n random variables, and <span class="math notranslate nohighlight">\(A\)</span> is an  n-dimensional symmetric matrix, then the scalar quantity <span class="math notranslate nohighlight">\(x^T A x\)</span> is known as a quadratic form in <span class="math notranslate nohighlight">\(x\)</span>. See also:  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1218" title="Wikipedia. Quadratic form (statistics). Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Quadratic_form_(statistics).">1540</a>]</span>.</p>
+<dd><p>In multivariate statistics, if <span class="math notranslate nohighlight">\(x\)</span> is a vector of  n random variables, and <span class="math notranslate nohighlight">\(A\)</span> is an  n-dimensional symmetric matrix, then the scalar quantity <span class="math notranslate nohighlight">\(x^T A x\)</span> is known as a quadratic form in <span class="math notranslate nohighlight">\(x\)</span>. See also:  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1218" title="Wikipedia. Quadratic form (statistics). Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Quadratic_form_(statistics).">1538</a>]</span>.</p>
 <p>In general, this calculates expressions of the form <span class="math notranslate nohighlight">\(X^T A X\)</span>.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">();</span> <span class="n">mp14</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
@@ -2747,7 +2747,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 04, 2026.
+  Last updated on Sep 05, 2026.
   <br/>
 </p>
   </div>

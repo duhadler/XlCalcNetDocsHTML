@@ -52,7 +52,7 @@
     <link rel="prev" title="S3dlib: Basic geometric figures" href="C03_BasicGeometricFigures.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 04, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 05, 2026"/>
   </head>
   
   
@@ -567,13 +567,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C01_BarCharts.html">Bar Charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C02_LineCharts.html">Line and lollipop charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C03_AreaPlots.html">Area Plots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudplots.html">Boxplot, Violinplot and Raincloud plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudPlots.html">Boxplot, Violinplot and Raincloud plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C05_CorrelationAndRegression.html">Correlation and regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C06_Finance.html">Financial plots (requires mplfinance)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C07_Cartopy.html">Geographic data (requires cartopy)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C08_Geopandas.html">Geographic data (requires geopandas)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfWhole.html">Parts of a whole</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Heatmaps.html">Arcplots, dendrograms, heatmaps and clustermaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfAWhole.html">Parts of a whole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Dendrograms.html">Dendrograms, heatmaps and clustermaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C11_PlotTable.html">PlotTable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C12_Flow.html">Flow and connections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C13_CircularPlotsAndFlows.html">Circular plots and flows</a></li>
@@ -900,7 +900,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-plot-of-a-real-function-basic-example">Surface plot of a real function, basic example</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-plot-of-a-real-function-grid">Surface plot of a real function, grid</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-plot-of-a-real-function-peaks-example">Surface plot of a real function, peaks example</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-plots-ackley-himmelblau-rosenbroxk-rastrigin">Function plots: Ackley, Himmelblau, Rosenbroxk, Rastrigin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-plots-ackley-himmelblau-rosenbrock-rastrigin">Function plots: Ackley, Himmelblau, Rosenbrock, Rastrigin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mccormick-function">McCormick function</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-plot-combined-with-contour">Surface plot combined with contour</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sliced-polar-surface">Sliced polar surface</a></li>
@@ -920,58 +920,51 @@ document.write(`
 <h1>S3dlib: Real functions<a class="headerlink" href="#s3dlib-real-functions" title="Link to this heading">#</a></h1>
 <section id="surface-plot-of-a-real-function-basic-example">
 <h2>Surface plot of a real function, basic example<a class="headerlink" href="#surface-plot-of-a-real-function-basic-example" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C04_RealFunctions/D01_HelloWorldExample.py">D01_HelloWorldExample.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C04_RealFunctions/D01_HelloWorldExample.py">D01_HelloWorldExample.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C04_RealFunctions/D01_HelloWorldExample.2D.xml">D01_HelloWorldExample.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/functional/hw_example.html">https://s3dlib.org/examples/functional/hw_example.html</a></p>
 <p><img alt="picHello_World_Example" src="../_images/Hello_World_Example.png" /></p>
-<p><strong>Left figure</strong>:  Hello_World_Example.</p>
 <p></p>
 </section>
 <section id="surface-plot-of-a-real-function-grid">
 <h2>Surface plot of a real function, grid<a class="headerlink" href="#surface-plot-of-a-real-function-grid" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C04_RealFunctions/D02_HelloWorldExampleGrid.py">D02_HelloWorldExampleGrid.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C04_RealFunctions/D02_HelloWorldExampleGrid.py">D02_HelloWorldExampleGrid.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C04_RealFunctions/D02_HelloWorldExampleGrid.2D.xml">D02_HelloWorldExampleGrid.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/functional/hw_example_grid.html">https://s3dlib.org/examples/functional/hw_example_grid.html</a></p>
 <p><img alt="picHello_World_Example_Grid" src="../_images/Hello_World_Example_Grid.png" /></p>
-<p><strong>Left figure</strong>:  Hello_World_Example_Grid.</p>
 <p></p>
 </section>
 <section id="surface-plot-of-a-real-function-peaks-example">
 <h2>Surface plot of a real function, peaks example<a class="headerlink" href="#surface-plot-of-a-real-function-peaks-example" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C04_RealFunctions/D03_HelloWorldExample2b.py">D03_HelloWorldExample2b.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C04_RealFunctions/D03_HelloWorldExample2b.py">D03_HelloWorldExample2b.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C04_RealFunctions/D03_HelloWorldExample2b.2D.xml">D03_HelloWorldExample2b.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/functional/swirl.html">https://s3dlib.org/examples/functional/swirl.html</a></p>
 <p><img alt="picHello_World_Example_2b" src="../_images/Hello_World_Example_2b.png" /></p>
-<p><strong>Left figure</strong>:  Hello_World_Example_2b.</p>
 <p></p>
 </section>
-<section id="function-plots-ackley-himmelblau-rosenbroxk-rastrigin">
-<h2>Function plots: Ackley, Himmelblau, Rosenbroxk, Rastrigin<a class="headerlink" href="#function-plots-ackley-himmelblau-rosenbroxk-rastrigin" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C04_RealFunctions/D04_FunctionPlots.py">D04_FunctionPlots.py</a>.</p>
+<section id="function-plots-ackley-himmelblau-rosenbrock-rastrigin">
+<h2>Function plots: Ackley, Himmelblau, Rosenbrock, Rastrigin<a class="headerlink" href="#function-plots-ackley-himmelblau-rosenbrock-rastrigin" title="Link to this heading">#</a></h2>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C04_RealFunctions/D04_FunctionPlots.py">D04_FunctionPlots.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C04_RealFunctions/D04_FunctionPlots.2D.xml">D04_FunctionPlots.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/functional/funcplots.html">https://s3dlib.org/examples/functional/funcplots.html</a></p>
 <p><img alt="picFunction_Plots" src="../_images/Function_Plots.png" /></p>
-<p><strong>Left figure</strong>:  Function_Plots.</p>
 <p></p>
 </section>
 <section id="mccormick-function">
 <h2>McCormick function<a class="headerlink" href="#mccormick-function" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C04_RealFunctions/D05_FunctionPlots2.py">D05_FunctionPlots2.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C04_RealFunctions/D05_FunctionPlots2.py">D05_FunctionPlots2.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C04_RealFunctions/D05_FunctionPlots2.2D.xml">D05_FunctionPlots2.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/functional/domain.html">https://s3dlib.org/examples/functional/domain.html</a></p>
 <p><img alt="picFunction_Plots2" src="../_images/Function_Plots2.png" /></p>
-<p><strong>Left figure</strong>:  picFunction_Plots2.</p>
 <p></p>
 </section>
 <section id="surface-plot-combined-with-contour">
 <h2>Surface plot combined with contour<a class="headerlink" href="#surface-plot-combined-with-contour" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C04_RealFunctions/D06_SurfaceContours.py">D06_SurfaceContours.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C04_RealFunctions/D06_SurfaceContours.py">D06_SurfaceContours.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C04_RealFunctions/D06_SurfaceContours.2D.xml">D06_SurfaceContours.2D.xml</a>.</p>
 <p>See: <a class="github reference external" href="https://github.com/fzaverl/s3dlib">fzaverl/s3dlib</a></p>
 <p><img alt="pic3d_surface_contours" src="../_images/3d_surface_contours.png" /></p>
-<p><strong>Left figure</strong>:  3d_surface_contours.</p>
 <p></p>
 </section>
 <section id="sliced-polar-surface">
 <h2>Sliced polar surface<a class="headerlink" href="#sliced-polar-surface" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C04_RealFunctions/D07_SlicedPolarSurface.py">D07_SlicedPolarSurface.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C04_RealFunctions/D07_SlicedPolarSurface.py">D07_SlicedPolarSurface.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C04_RealFunctions/D07_SlicedPolarSurface.2D.xml">D07_SlicedPolarSurface.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/functional/screw.html">https://s3dlib.org/examples/functional/screw.html</a></p>
 <p><img alt="picSliced_Polar_Surface" src="../_images/Sliced_Polar_Surface.png" /></p>
-<p><strong>Left figure</strong>:  Sliced_Polar_Surface.</p>
 </section>
 </section>
 
@@ -1023,7 +1016,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-plot-of-a-real-function-basic-example">Surface plot of a real function, basic example</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-plot-of-a-real-function-grid">Surface plot of a real function, grid</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-plot-of-a-real-function-peaks-example">Surface plot of a real function, peaks example</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-plots-ackley-himmelblau-rosenbroxk-rastrigin">Function plots: Ackley, Himmelblau, Rosenbroxk, Rastrigin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-plots-ackley-himmelblau-rosenbrock-rastrigin">Function plots: Ackley, Himmelblau, Rosenbrock, Rastrigin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mccormick-function">McCormick function</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-plot-combined-with-contour">Surface plot combined with contour</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sliced-polar-surface">Sliced polar surface</a></li>
@@ -1060,7 +1053,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 04, 2026.
+  Last updated on Sep 05, 2026.
   <br/>
 </p>
   </div>

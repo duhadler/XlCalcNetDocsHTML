@@ -52,7 +52,7 @@
     <link rel="prev" title="S3dlib: Geometric and color datagrid mapping (requires scipy)" href="C09_GeometricDataGridMapping.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 04, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 05, 2026"/>
   </head>
   
   
@@ -567,13 +567,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C01_BarCharts.html">Bar Charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C02_LineCharts.html">Line and lollipop charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C03_AreaPlots.html">Area Plots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudplots.html">Boxplot, Violinplot and Raincloud plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudPlots.html">Boxplot, Violinplot and Raincloud plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C05_CorrelationAndRegression.html">Correlation and regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C06_Finance.html">Financial plots (requires mplfinance)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C07_Cartopy.html">Geographic data (requires cartopy)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C08_Geopandas.html">Geographic data (requires geopandas)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfWhole.html">Parts of a whole</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Heatmaps.html">Arcplots, dendrograms, heatmaps and clustermaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfAWhole.html">Parts of a whole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Dendrograms.html">Dendrograms, heatmaps and clustermaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C11_PlotTable.html">PlotTable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C12_Flow.html">Flow and connections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C13_CircularPlotsAndFlows.html">Circular plots and flows</a></li>
@@ -921,66 +921,58 @@ document.write(`
 <h1>S3dlib: Implicit surfaces (requires scikit-image)<a class="headerlink" href="#s3dlib-implicit-surfaces-requires-scikit-image" title="Link to this heading">#</a></h1>
 <section id="sphere-implicit-definition-part-1">
 <h2>Sphere (implicit definition), part 1<a class="headerlink" href="#sphere-implicit-definition-part-1" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C10_ImplicitSurfaces/D01_Sphere_Implicit_a.py">D01_Sphere_Implicit_a.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C10_ImplicitSurfaces/D01_Sphere_Implicit_a.py">D01_Sphere_Implicit_a.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C10_ImplicitSurfaces/D01_Sphere_Implicit_a.2D.xml">D01_Sphere_Implicit_a.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/functional/world_hello.html">https://s3dlib.org/examples/functional/world_hello.html</a></p>
 <p><img alt="picSphere_Implicit_a" src="../_images/Sphere_Implicit_a.png" /></p>
-<p><strong>Left figure</strong>:  Sphere_Implicit_a.</p>
 <p></p>
 </section>
 <section id="sphere-implicit-definition-part-2">
 <h2>Sphere (implicit definition), part 2<a class="headerlink" href="#sphere-implicit-definition-part-2" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C10_ImplicitSurfaces/D02_Sphere_Implicit_b.py">D02_Sphere_Implicit_b.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C10_ImplicitSurfaces/D02_Sphere_Implicit_b.py">D02_Sphere_Implicit_b.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C10_ImplicitSurfaces/D02_Sphere_Implicit_b.2D.xml">D02_Sphere_Implicit_b.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/functional/world_hello.html">https://s3dlib.org/examples/functional/world_hello.html</a></p>
 <p><img alt="picSphere_Implicit_b" src="../_images/Sphere_Implicit_b.png" /></p>
-<p><strong>Left figure</strong>:  Sphere_Implicit_b.</p>
 <p></p>
 </section>
 <section id="goursat-surface">
 <h2>Goursat surface<a class="headerlink" href="#goursat-surface" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C10_ImplicitSurfaces/D03_Goursat_Surface.py">D03_Goursat_Surface.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C10_ImplicitSurfaces/D03_Goursat_Surface.py">D03_Goursat_Surface.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C10_ImplicitSurfaces/D03_Goursat_Surface.2D.xml">D03_Goursat_Surface.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/functional/goursat.html">https://s3dlib.org/examples/functional/goursat.html</a></p>
 <p><img alt="picGoursat_Surface" src="../_images/Goursat_Surface.png" /></p>
-<p><strong>Left figure</strong>:  Goursat_Surface.</p>
 <p></p>
 </section>
 <section id="schwarz-p-surface">
 <h2>Schwarz P surface<a class="headerlink" href="#schwarz-p-surface" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C10_ImplicitSurfaces/D04_Schwarz_P_Surface.py">D04_Schwarz_P_Surface.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C10_ImplicitSurfaces/D04_Schwarz_P_Surface.py">D04_Schwarz_P_Surface.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C10_ImplicitSurfaces/D04_Schwarz_P_Surface.2D.xml">D04_Schwarz_P_Surface.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/functional/schwarz.html">https://s3dlib.org/examples/functional/schwarz.html</a></p>
 <p><img alt="picSchwarz_P_Surface" src="../_images/Schwarz_P_Surface.png" /></p>
-<p><strong>Left figure</strong>:  Schwarz_P_Surface.</p>
 <p></p>
 </section>
 <section id="nodal-surface">
 <h2>Nodal surface<a class="headerlink" href="#nodal-surface" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C10_ImplicitSurfaces/D05_Nodal_Surface.py">D05_Nodal_Surface.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C10_ImplicitSurfaces/D05_Nodal_Surface.py">D05_Nodal_Surface.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C10_ImplicitSurfaces/D05_Nodal_Surface.2D.xml">D05_Nodal_Surface.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/functional/nodesurf.html">https://s3dlib.org/examples/functional/nodesurf.html</a></p>
 <p><img alt="picNodal_Surface" src="../_images/Nodal_Surface.png" /></p>
-<p><strong>Left figure</strong>:  Nodal_Surface.</p>
 <p></p>
 </section>
 <section id="spirals-surface">
 <h2>Spirals surface<a class="headerlink" href="#spirals-surface" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C10_ImplicitSurfaces/D06_Spirals_Surface.py">D06_Spirals_Surface.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C10_ImplicitSurfaces/D06_Spirals_Surface.py">D06_Spirals_Surface.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C10_ImplicitSurfaces/D06_Spirals_Surface.2D.xml">D06_Spirals_Surface.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/functional/spiralsurf.html">https://s3dlib.org/examples/functional/spiralsurf.html</a></p>
 <p><img alt="picSpirals_Surface_Part1" src="../_images/Spirals_Surface_Part1.png" /></p>
-<p><strong>Left figure</strong>:  Spirals_Surface_Part1.</p>
 <p></p>
 </section>
 <section id="iso-surface">
 <h2>Iso surface<a class="headerlink" href="#iso-surface" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C10_ImplicitSurfaces/D07_Iso_Surface.py">D07_Iso_Surface.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C10_ImplicitSurfaces/D07_Iso_Surface.py">D07_Iso_Surface.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C10_ImplicitSurfaces/D07_Iso_Surface.2D.xml">D07_Iso_Surface.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/functional/mayavi_surfcont.html">https://s3dlib.org/examples/functional/mayavi_surfcont.html</a></p>
 <p><img alt="picIso_Surface" src="../_images/Iso_Surface.png" /></p>
-<p><strong>Left figure</strong>:  Iso_Surface.</p>
 <p></p>
 </section>
 <section id="implicit-surface">
 <h2>Implicit surface<a class="headerlink" href="#implicit-surface" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C10_ImplicitSurfaces/D08_Implicit_Surface.py">D08_Implicit_Surface.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C10_ImplicitSurfaces/D08_Implicit_Surface.py">D08_Implicit_Surface.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C10_ImplicitSurfaces/D08_Implicit_Surface.2D.xml">D08_Implicit_Surface.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/functional/bc_surf.html">https://s3dlib.org/examples/functional/bc_surf.html</a></p>
 <p><img alt="picImplicit_Surface" src="../_images/Implicit_Surface.png" /></p>
-<p><strong>Left figure</strong>:  Implicit_Surface.</p>
 </section>
 </section>
 
@@ -1070,7 +1062,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 04, 2026.
+  Last updated on Sep 05, 2026.
   <br/>
 </p>
   </div>

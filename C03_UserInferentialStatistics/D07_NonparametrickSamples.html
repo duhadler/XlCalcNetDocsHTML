@@ -53,7 +53,7 @@
     <link rel="prev" title="Nonparametric statistical tests, 1 or 2 samples" href="D06_Nonparametric1or2Samples.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 04, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 05, 2026"/>
   </head>
   
   
@@ -568,13 +568,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C01_BarCharts.html">Bar Charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C02_LineCharts.html">Line and lollipop charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C03_AreaPlots.html">Area Plots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudplots.html">Boxplot, Violinplot and Raincloud plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudPlots.html">Boxplot, Violinplot and Raincloud plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C05_CorrelationAndRegression.html">Correlation and regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C06_Finance.html">Financial plots (requires mplfinance)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C07_Cartopy.html">Geographic data (requires cartopy)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C08_Geopandas.html">Geographic data (requires geopandas)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfWhole.html">Parts of a whole</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Heatmaps.html">Arcplots, dendrograms, heatmaps and clustermaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfAWhole.html">Parts of a whole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Dendrograms.html">Dendrograms, heatmaps and clustermaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C11_PlotTable.html">PlotTable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C12_Flow.html">Flow and connections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C13_CircularPlotsAndFlows.html">Circular plots and flows</a></li>
@@ -954,7 +954,7 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.jterpsta_test">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">jterpsta_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.jterpsta_test" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, or <code class="docutils literal notranslate"><span class="pre">gmp</span></code>.</p>
-<p>Returns the results of the Jonckheere-Terpsta <span class="math notranslate nohighlight">\(S\)</span> test, under <span class="math notranslate nohighlight">\(H_0\)</span>. See also Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1261" title="Wikipedia. Jonckheere's trend test. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Jonckheere%27s_trend_test.">1570</a>]</span>.</p>
+<p>Returns the results of the Jonckheere-Terpsta <span class="math notranslate nohighlight">\(S\)</span> test, under <span class="math notranslate nohighlight">\(H_0\)</span>. See also Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1261" title="Wikipedia. Jonckheere's trend test. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Jonckheere%27s_trend_test.">1568</a>]</span>.</p>
 <p>Consider <span class="math notranslate nohighlight">\(k\)</span> independent groups <span class="math notranslate nohighlight">\(X_i\)</span> of sizes <span class="math notranslate nohighlight">\(n_i, i=1 \ldots k\)</span>. The Jonckheere-Terpsta statistic is defined as</p>
 <div class="math notranslate nohighlight">
 \[J = \sum_{i&lt;j}^{c} U_{ij} = \sum_{i=1}^{c-1} \sum_{j=i+1}^{c} U_{ij}\]</div>
@@ -968,7 +968,7 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.jterpsta_power_shorack">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">jterpsta_power_shorack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.jterpsta_power_shorack" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, or <code class="docutils literal notranslate"><span class="pre">gmp</span></code>.</p>
-<p>Returns the results of the Jonckheere-Terpsta <span class="math notranslate nohighlight">\(S\)</span> test, under Shorack alternatives. See also Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1261" title="Wikipedia. Jonckheere's trend test. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Jonckheere%27s_trend_test.">1570</a>]</span>.</p>
+<p>Returns the results of the Jonckheere-Terpsta <span class="math notranslate nohighlight">\(S\)</span> test, under Shorack alternatives. See also Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1261" title="Wikipedia. Jonckheere's trend test. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Jonckheere%27s_trend_test.">1568</a>]</span>.</p>
 </dd></dl>
 
 </section>
@@ -978,7 +978,7 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.jterpsta_power_milton">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">jterpsta_power_milton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.jterpsta_power_milton" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, or <code class="docutils literal notranslate"><span class="pre">gmp</span></code>.</p>
-<p>Returns the results of the Jonckheere-Terpsta <span class="math notranslate nohighlight">\(S\)</span> test, under Milton alternatives. See also Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1261" title="Wikipedia. Jonckheere's trend test. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Jonckheere%27s_trend_test.">1570</a>]</span>.</p>
+<p>Returns the results of the Jonckheere-Terpsta <span class="math notranslate nohighlight">\(S\)</span> test, under Milton alternatives. See also Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1261" title="Wikipedia. Jonckheere's trend test. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Jonckheere%27s_trend_test.">1568</a>]</span>.</p>
 </dd></dl>
 
 </section>
@@ -987,7 +987,7 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="ctx.spearman_test">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">spearman_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.spearman_test" title="Link to this definition">#</a></dt>
-<dd><p>Returns the results of the Spearman test, under <span class="math notranslate nohighlight">\(H_0\)</span>. See also: Wikipedia <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1262" title="Wikipedia. Spearman's rank correlation coefficient. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient.">1584</a>]</span>.</p>
+<dd><p>Returns the results of the Spearman test, under <span class="math notranslate nohighlight">\(H_0\)</span>. See also: Wikipedia <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1262" title="Wikipedia. Spearman's rank correlation coefficient. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient.">1582</a>]</span>.</p>
 </dd></dl>
 
 </section>
@@ -997,7 +997,7 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.page_l_test">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">page_l_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.page_l_test" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, or <code class="docutils literal notranslate"><span class="pre">gmp</span></code>.</p>
-<p>Returns the results of the Page <span class="math notranslate nohighlight">\(L\)</span> test under <span class="math notranslate nohighlight">\(H_0\)</span>.  See also: Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1263" title="Wikipedia. Page's trend test. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Page%27s_trend_test.">1579</a>]</span>.</p>
+<p>Returns the results of the Page <span class="math notranslate nohighlight">\(L\)</span> test under <span class="math notranslate nohighlight">\(H_0\)</span>.  See also: Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1263" title="Wikipedia. Page's trend test. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Page%27s_trend_test.">1577</a>]</span>.</p>
 <p>Page’s test (see Page, 1963) is a test for ordered alternatives in a randomised block
 design. We consider <span class="math notranslate nohighlight">\(n\)</span> independent random vectors such that <span class="math notranslate nohighlight">\((X_{i1}, \ldots , X_{ik})\)</span>
 has a continuous distribution function <span class="math notranslate nohighlight">\(F_i\)</span>.</p>
@@ -1038,7 +1038,7 @@ and let <span class="math notranslate nohighlight">\(D_i = (k-1)k(k+1)(1-\rho_i)
 <dt class="sig sig-object py" id="ctx.friedman_test">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">friedman_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.friedman_test" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, or <code class="docutils literal notranslate"><span class="pre">gmp</span></code>.</p>
-<p>Returns the results of the Friedman test under <span class="math notranslate nohighlight">\(H_0\)</span>. See also Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1264" title="Wikipedia. Friedman test. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Page%27s_trend_test.">1569</a>]</span>.</p>
+<p>Returns the results of the Friedman test under <span class="math notranslate nohighlight">\(H_0\)</span>. See also Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1264" title="Wikipedia. Friedman test. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Page%27s_trend_test.">1567</a>]</span>.</p>
 </dd></dl>
 
 </section>
@@ -1048,7 +1048,7 @@ and let <span class="math notranslate nohighlight">\(D_i = (k-1)k(k+1)(1-\rho_i)
 <dt class="sig sig-object py" id="ctx.kruskal_wallis_test">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">kruskal_wallis_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.kruskal_wallis_test" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, or <code class="docutils literal notranslate"><span class="pre">gmp</span></code>.</p>
-<p>Returns the results of the Kruskal-Wallis test under <span class="math notranslate nohighlight">\(H_0\)</span>. See also Wikipedia <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1265" title="Wikipedia. Kruskal–Wallis one-way analysis of variance. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Kruskal-Wallis_one-way_analysis_of_variance.">1572</a>]</span>.</p>
+<p>Returns the results of the Kruskal-Wallis test under <span class="math notranslate nohighlight">\(H_0\)</span>. See also Wikipedia <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1265" title="Wikipedia. Kruskal–Wallis one-way analysis of variance. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Kruskal-Wallis_one-way_analysis_of_variance.">1570</a>]</span>.</p>
 </dd></dl>
 
 </section>
@@ -1168,7 +1168,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 04, 2026.
+  Last updated on Sep 05, 2026.
   <br/>
 </p>
   </div>

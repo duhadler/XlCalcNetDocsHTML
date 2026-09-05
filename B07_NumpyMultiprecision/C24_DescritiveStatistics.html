@@ -53,7 +53,7 @@
     <link rel="prev" title="Arithmetic operations with scalars and iterables" href="C23_ArithmeticScalarsAndIterables.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 04, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 05, 2026"/>
   </head>
   
   
@@ -568,13 +568,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C01_BarCharts.html">Bar Charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C02_LineCharts.html">Line and lollipop charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C03_AreaPlots.html">Area Plots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudplots.html">Boxplot, Violinplot and Raincloud plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudPlots.html">Boxplot, Violinplot and Raincloud plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C05_CorrelationAndRegression.html">Correlation and regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C06_Finance.html">Financial plots (requires mplfinance)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C07_Cartopy.html">Geographic data (requires cartopy)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C08_Geopandas.html">Geographic data (requires geopandas)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfWhole.html">Parts of a whole</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Heatmaps.html">Arcplots, dendrograms, heatmaps and clustermaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfAWhole.html">Parts of a whole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Dendrograms.html">Dendrograms, heatmaps and clustermaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C11_PlotTable.html">PlotTable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C12_Flow.html">Flow and connections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C13_CircularPlotsAndFlows.html">Circular plots and flows</a></li>
@@ -1042,7 +1042,7 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="mat.trace">
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">trace</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.trace" title="Link to this definition">#</a></dt>
-<dd><p>Returns the trace of the matrix. See also: Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1214" title="Wikipedia. Trace (linear algebra). Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Determinant.">1513</a>]</span>.</p>
+<dd><p>Returns the trace of the matrix. See also: Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1214" title="Wikipedia. Trace (linear algebra). Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Determinant.">1511</a>]</span>.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">arbeigenlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">mp14</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1117,7 +1117,7 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="mat.covariance_matrix">
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">covariance_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_crossproduct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.covariance_matrix" title="Link to this definition">#</a></dt>
-<dd><p>Returns the covariance matrix of the matrix. See also Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1215" title="Wikipedia. Sample mean and covariance. Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Sample_mean_and_covariance#Sample_covariance.">1509</a>]</span>, Wikipedia <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1216" title="Wikipedia. Covariance matrix. Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Covariance_matrix.">1487</a>]</span>.</p>
+<dd><p>Returns the covariance matrix of the matrix. See also Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1215" title="Wikipedia. Sample mean and covariance. Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Sample_mean_and_covariance#Sample_covariance.">1507</a>]</span>, Wikipedia <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1216" title="Wikipedia. Covariance matrix. Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Covariance_matrix.">1485</a>]</span>.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">arbeigenlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">mp14</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">();</span> <span class="n">mp14</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1165,7 +1165,7 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="mat.correlation">
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">correlation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_crossproduct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.correlation" title="Link to this definition">#</a></dt>
-<dd><p>Returns the correlation matrix of matrix ?matA. See also Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1217" title="Wikipedia. Correlation matrix. Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Covariance_matrix#Correlation_matrix.">1485</a>]</span>.</p>
+<dd><p>Returns the correlation matrix of matrix ?matA. See also Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1217" title="Wikipedia. Correlation matrix. Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Covariance_matrix#Correlation_matrix.">1483</a>]</span>.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">arbeigenlab</span><span class="w"> </span><span class="kn">import</span> <span class="n">mp14</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">();</span> <span class="n">mp14</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1472,7 +1472,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 04, 2026.
+  Last updated on Sep 05, 2026.
   <br/>
 </p>
   </div>

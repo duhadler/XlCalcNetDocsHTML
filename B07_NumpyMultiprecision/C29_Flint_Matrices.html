@@ -53,7 +53,7 @@
     <link rel="prev" title="Discrete Fourier transform (DFT)" href="C28_DFT.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 04, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 05, 2026"/>
   </head>
   
   
@@ -568,13 +568,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C01_BarCharts.html">Bar Charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C02_LineCharts.html">Line and lollipop charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C03_AreaPlots.html">Area Plots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudplots.html">Boxplot, Violinplot and Raincloud plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudPlots.html">Boxplot, Violinplot and Raincloud plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C05_CorrelationAndRegression.html">Correlation and regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C06_Finance.html">Financial plots (requires mplfinance)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C07_Cartopy.html">Geographic data (requires cartopy)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C08_Geopandas.html">Geographic data (requires geopandas)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfWhole.html">Parts of a whole</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Heatmaps.html">Arcplots, dendrograms, heatmaps and clustermaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfAWhole.html">Parts of a whole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Dendrograms.html">Dendrograms, heatmaps and clustermaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C11_PlotTable.html">PlotTable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C12_Flow.html">Flow and connections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C13_CircularPlotsAndFlows.html">Circular plots and flows</a></li>
@@ -1040,7 +1040,7 @@ arb_mat_mul() .</p>
 <dd><p>returns the determinant of the matrix <span class="math notranslate nohighlight">\(A\)</span>.</p>
 </dd></dl>
 
-<p>See also:  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1219" title="Wikipedia. Determinant. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Determinant.">1524</a>]</span>.</p>
+<p>See also:  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1219" title="Wikipedia. Determinant. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Determinant.">1522</a>]</span>.</p>
 <p>Sets det to the determinant of the square matrix A. The matrix of dimension <span class="math notranslate nohighlight">\(0 \times 0\)</span> is defined to have determinant 1.</p>
 <p>FMPZ: This function automatically chooses between fmpz_mat_det_cofactor, fmpz_mat_det_bareiss, fmpz_mat_det_modular and fmpz_mat_det_modular_accelerated (with proved = 1), depending on the size of the matrix and its entries.</p>
 <p>The default version automatically selects between the lu and precond versions and additionally handles small or triangular matrices by direct formulas.</p>
@@ -1157,7 +1157,7 @@ virt/peak/res/peak(MB): 33.97 33.97 10.51 10.51
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">Inverse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.Inverse" title="Link to this definition">#</a></dt>
 <dd><p>returns the inverse of the matrix <span class="math notranslate nohighlight">\(A\)</span>.</p>
 <blockquote>
-<div><p>See also:  Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1220" title="Wikipedia. Invertible matrix. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Invertible_matrix.">1534</a>]</span>.</p>
+<div><p>See also:  Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1220" title="Wikipedia. Invertible matrix. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Invertible_matrix.">1532</a>]</span>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -1238,7 +1238,7 @@ large systems at low to moderate precision.</p>
 <dd><p>returns a solution x to the equation Ax=b.</p>
 </dd></dl>
 
-<p>See also:  Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1222" title="Wikipedia. System of linear equations. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/System_of_linear_equations.">1544</a>]</span>.</p>
+<p>See also:  Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1222" title="Wikipedia. System of linear equations. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/System_of_linear_equations.">1542</a>]</span>.</p>
 <p>The parameter b is the right-hand-side of the equation to solve. Can be a vector or a matrix, the only requirement in order for the equation to make sense is that b.rows()==A.rows().</p>
 <p>This method just tries to find as good a solution as possible. If you want to check whether a solution exists or if it is accurate, just call this function to get a result and then compute the error of this result, or use</p>
 <p>This method avoids dividing by zero, so that the non-existence of a solution doesn’t by itself mean that you’ll get inf or nan values. If there exists more than one solution, this method will arbitrarily choose one. If you need a complete analysis of the space of solutions, take the one solution obtained by this method and add to it elements of the kernel, as determined by kernel().</p>
@@ -1247,7 +1247,7 @@ large systems at low to moderate precision.</p>
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">ArbSolve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.ArbSolve" title="Link to this definition">#</a></dt>
 <dd><p>Solves <span class="math notranslate nohighlight">\(AX = B\)</span> given a nonsingular square matrix A and a matrix B of compatible dimensions</p>
 <p>Returns a solution <span class="math notranslate nohighlight">\(x\)</span> to the equation <span class="math notranslate nohighlight">\(Ax=b\)</span>.</p>
-<p>See also  Wikipedia <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1222" title="Wikipedia. System of linear equations. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/System_of_linear_equations.">1544</a>]</span>.</p>
+<p>See also  Wikipedia <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1222" title="Wikipedia. System of linear equations. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/System_of_linear_equations.">1542</a>]</span>.</p>
 </dd></dl>
 
 <p>The parameter <span class="math notranslate nohighlight">\(b\)</span> is the right-hand-side of the equation to solve. Can be a vector or a matrix, the only requirement in order for the equation to make sense is that b.rows()==A.rows().</p>
@@ -1366,7 +1366,7 @@ large systems at low to moderate precision.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mat.ApcExpm">
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">ApcExpm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.ApcExpm" title="Link to this definition">#</a></dt>
-<dd><p>See also:   Wikipedia <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1546</a>]</span>,  Wikipedia <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id1247" title="Wikipedia. Matrix exponential. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_exponential.">1556</a>]</span>.</p>
+<dd><p>See also:   Wikipedia <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1544</a>]</span>,  Wikipedia <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id1247" title="Wikipedia. Matrix exponential. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_exponential.">1554</a>]</span>.</p>
 <p>Computes the matrix exponential of a square matrix <span class="math notranslate nohighlight">\(A\)</span>, which is defined by the power series  <span class="math notranslate nohighlight">\(\displaystyle  \exp(A) = I + A + \frac{A^2}{2!} + \frac{A^3}{3!} + \ldots\)</span></p>
 <p>Basic examples:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
@@ -1422,7 +1422,7 @@ noncommuting matrices:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mat.ApcSinm">
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">ApcSinm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.ApcSinm" title="Link to this definition">#</a></dt>
-<dd><p>See also:   Wikipedia <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1546</a>]</span>,  Wikipedia <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id1248" title="Wikipedia. Trigonometric functions of matrices. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions_of_matrices.">1564</a>]</span>.</p>
+<dd><p>See also:   Wikipedia <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1544</a>]</span>,  Wikipedia <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id1248" title="Wikipedia. Trigonometric functions of matrices. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions_of_matrices.">1562</a>]</span>.</p>
 <p>Calculates the sine function of the matrix.</p>
 <p>The cosine of a square matrix <span class="math notranslate nohighlight">\(A\)</span> is defined in analogy with the matrix exponential.</p>
 <div class="math notranslate nohighlight">
@@ -1445,7 +1445,7 @@ noncommuting matrices:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mat.ApcCosm">
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">ApcCosm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.ApcCosm" title="Link to this definition">#</a></dt>
-<dd><p>See also:   Wikipedia <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1546</a>]</span>,  Wikipedia <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id1248" title="Wikipedia. Trigonometric functions of matrices. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions_of_matrices.">1564</a>]</span>.</p>
+<dd><p>See also:   Wikipedia <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1544</a>]</span>,  Wikipedia <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id1248" title="Wikipedia. Trigonometric functions of matrices. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions_of_matrices.">1562</a>]</span>.</p>
 <p>Calculates the cosine function of the matrix.</p>
 <p>The cosine of a square matrix <span class="math notranslate nohighlight">\(A\)</span> is defined in analogy with the matrix exponential.</p>
 <div class="math notranslate nohighlight">
@@ -1468,7 +1468,7 @@ noncommuting matrices:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mat.ApcSinhm">
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">ApcSinhm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.ApcSinhm" title="Link to this definition">#</a></dt>
-<dd><p>See also:   Wikipedia <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1546</a>]</span>,  Wikipedia <span id="id20">[<a class="reference internal" href="../99BackMatter/index.html#id1248" title="Wikipedia. Trigonometric functions of matrices. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions_of_matrices.">1564</a>]</span>.</p>
+<dd><p>See also:   Wikipedia <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1544</a>]</span>,  Wikipedia <span id="id20">[<a class="reference internal" href="../99BackMatter/index.html#id1248" title="Wikipedia. Trigonometric functions of matrices. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions_of_matrices.">1562</a>]</span>.</p>
 <p>Calculates the hyperbolic sine function of the matrix.</p>
 <p>The hyperbolic sine of a square matrix <span class="math notranslate nohighlight">\(A\)</span> is defined in analogy with the matrix exponential.</p>
 <div class="math notranslate nohighlight">
@@ -1486,7 +1486,7 @@ noncommuting matrices:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mat.ApcCoshm">
 <span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">ApcCoshm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.ApcCoshm" title="Link to this definition">#</a></dt>
-<dd><p>See also:   Wikipedia <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1546</a>]</span>,  Wikipedia <span id="id22">[<a class="reference internal" href="../99BackMatter/index.html#id1248" title="Wikipedia. Trigonometric functions of matrices. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions_of_matrices.">1564</a>]</span>.</p>
+<dd><p>See also:   Wikipedia <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1544</a>]</span>,  Wikipedia <span id="id22">[<a class="reference internal" href="../99BackMatter/index.html#id1248" title="Wikipedia. Trigonometric functions of matrices. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions_of_matrices.">1562</a>]</span>.</p>
 <p>Calculates the hyperbolic cosine function of the matrix.</p>
 <p>The hyperbolic cosine of a square matrix <span class="math notranslate nohighlight">\(A\)</span> is defined in analogy with the matrix exponential.</p>
 <div class="math notranslate nohighlight">
@@ -1836,7 +1836,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 04, 2026.
+  Last updated on Sep 05, 2026.
   <br/>
 </p>
   </div>

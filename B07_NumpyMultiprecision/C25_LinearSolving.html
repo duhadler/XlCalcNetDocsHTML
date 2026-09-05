@@ -53,7 +53,7 @@
     <link rel="prev" title="Numerical transformations and descriptive statistics" href="C24_DescritiveStatistics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 04, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 05, 2026"/>
   </head>
   
   
@@ -568,13 +568,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C01_BarCharts.html">Bar Charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C02_LineCharts.html">Line and lollipop charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C03_AreaPlots.html">Area Plots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudplots.html">Boxplot, Violinplot and Raincloud plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudPlots.html">Boxplot, Violinplot and Raincloud plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C05_CorrelationAndRegression.html">Correlation and regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C06_Finance.html">Financial plots (requires mplfinance)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C07_Cartopy.html">Geographic data (requires cartopy)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C08_Geopandas.html">Geographic data (requires geopandas)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfWhole.html">Parts of a whole</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Heatmaps.html">Arcplots, dendrograms, heatmaps and clustermaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfAWhole.html">Parts of a whole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Dendrograms.html">Dendrograms, heatmaps and clustermaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C11_PlotTable.html">PlotTable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C12_Flow.html">Flow and connections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C13_CircularPlotsAndFlows.html">Circular plots and flows</a></li>
@@ -957,7 +957,7 @@ document.write(`
 <section id="standard-decompositions-and-linear-solving">
 <h1>Standard decompositions and linear solving<a class="headerlink" href="#standard-decompositions-and-linear-solving" title="Link to this heading">#</a></h1>
 <p>Returns the Cholesky decomposition of the symmetric matrix <em>matA</em> <span class="math notranslate nohighlight">\(=A = PLU\)</span>, without pivoting. Here <em>matA</em> is an instance of one of the above classes.</p>
-<p>See also Eigen <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id529" title="Eigen Core Developers. LLT. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1LLT.html.">238</a>]</span>, Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1223" title="Wikipedia. Cholesky decomposition. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Cholesky_decomposition.">1521</a>]</span>, Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1555</a>]</span>.</p>
+<p>See also Eigen <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id529" title="Eigen Core Developers. LLT. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1LLT.html.">238</a>]</span>, Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1223" title="Wikipedia. Cholesky decomposition. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Cholesky_decomposition.">1519</a>]</span>, Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1553</a>]</span>.</p>
 <section id="cholesky-decomposition">
 <span id="rst-mpm-cholesky"></span><h2>Cholesky decomposition<a class="headerlink" href="#cholesky-decomposition" title="Link to this heading">#</a></h2>
 <dl class="py method">
@@ -1031,7 +1031,7 @@ definite:</p>
 <p>Solves a symmetric positive-definite linear equation system.
 This is twice as efficient as lu_solve.</p>
 <p>Returns the LU decomposition of the general square matrix <em>matA</em> <span class="math notranslate nohighlight">\(= A = PLU\)</span>, with partial pivoting.</p>
-<p>See also Eigen <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id530" title="Eigen Core Developers. PartialPivLU. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1PartialPivLU.html.">239</a>]</span>, Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1224" title="Wikipedia. LU factorization with partial pivoting. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/LU_decomposition#LU_factorization_with_partial_pivoting.">1535</a>]</span>, Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1555</a>]</span>.</p>
+<p>See also Eigen <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id530" title="Eigen Core Developers. PartialPivLU. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1PartialPivLU.html.">239</a>]</span>, Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1224" title="Wikipedia. LU factorization with partial pivoting. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/LU_decomposition#LU_factorization_with_partial_pivoting.">1533</a>]</span>, Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1553</a>]</span>.</p>
 </dd></dl>
 
 </section>
@@ -1175,7 +1175,7 @@ of lu_solve(). This does not help with input errors however, it just avoids
 to add additional errors.</p>
 <p>Definition:    cond(A) = ||A|| * ||A**-1||</p>
 <p>Returns the QR decomposition of the symmetric matrix <em>matA</em> <span class="math notranslate nohighlight">\(=A = QR\)</span>, without pivoting.</p>
-<p>See also Eigen <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id531" title="Eigen Core Developers. HouseholderQR. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1HouseholderQR.html.">235</a>]</span>, Wikipedia <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1236" title="Wikipedia. QR decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/QR_decomposition.">1559</a>]</span>, Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1555</a>]</span>.</p>
+<p>See also Eigen <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id531" title="Eigen Core Developers. HouseholderQR. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1HouseholderQR.html.">235</a>]</span>, Wikipedia <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1236" title="Wikipedia. QR decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/QR_decomposition.">1557</a>]</span>, Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1553</a>]</span>.</p>
 </dd></dl>
 
 </section>
@@ -1372,7 +1372,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 04, 2026.
+  Last updated on Sep 05, 2026.
   <br/>
 </p>
   </div>

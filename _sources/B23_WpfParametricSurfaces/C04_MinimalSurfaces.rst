@@ -70,7 +70,6 @@ See also: https://mathworld.wolfram.com/Catenoid.html
 
 
 
-**Left figure**: Catenoid
 
 
 

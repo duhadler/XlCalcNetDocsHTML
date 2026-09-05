@@ -53,7 +53,7 @@
     <link rel="prev" title="Approximations based on the normal distribution" href="C01_NormalDistribution.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 04, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 05, 2026"/>
   </head>
   
   
@@ -568,13 +568,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C01_BarCharts.html">Bar Charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C02_LineCharts.html">Line and lollipop charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C03_AreaPlots.html">Area Plots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudplots.html">Boxplot, Violinplot and Raincloud plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudPlots.html">Boxplot, Violinplot and Raincloud plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C05_CorrelationAndRegression.html">Correlation and regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C06_Finance.html">Financial plots (requires mplfinance)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C07_Cartopy.html">Geographic data (requires cartopy)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C08_Geopandas.html">Geographic data (requires geopandas)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfWhole.html">Parts of a whole</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Heatmaps.html">Arcplots, dendrograms, heatmaps and clustermaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfAWhole.html">Parts of a whole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Dendrograms.html">Dendrograms, heatmaps and clustermaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C11_PlotTable.html">PlotTable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C12_Flow.html">Flow and connections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C13_CircularPlotsAndFlows.html">Circular plots and flows</a></li>
@@ -999,7 +999,7 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.chi2_nc_wb_cl">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">chi2_nc_wb_cl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.chi2_nc_wb_cl" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, <code class="docutils literal notranslate"><span class="pre">ipm</span></code>, <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">gmp</span></code> or <code class="docutils literal notranslate"><span class="pre">apm</span></code>.</p>
-<p>Returns an approximation to the confidence interval (CI) for the noncentrality parameter <span class="math notranslate nohighlight">\(\lambda\)</span> of noncentral chi-squared distribution, as decribed in <span id="id3">Winterbottom [<a class="reference internal" href="../99BackMatter/index.html#id273" title="A. Winterbottom. Estimation for the bivariate normal correlation coefficient using asymptotic expansions. Communications in Statistics, Part B – Simulation and Computation [Split from: &#64;J(CommStat)], 9:599–609, 1980.">1606</a>]</span>.</p>
+<p>Returns an approximation to the confidence interval (CI) for the noncentrality parameter <span class="math notranslate nohighlight">\(\lambda\)</span> of noncentral chi-squared distribution, as decribed in <span id="id3">Winterbottom [<a class="reference internal" href="../99BackMatter/index.html#id273" title="A. Winterbottom. Estimation for the bivariate normal correlation coefficient using asymptotic expansions. Communications in Statistics, Part B – Simulation and Computation [Split from: &#64;J(CommStat)], 9:599–609, 1980.">1604</a>]</span>.</p>
 <p>[Winterbottom1979` gives the following formula to determine the paramter <span class="math notranslate nohighlight">\(\lambda\)</span> of a noncentral <span class="math notranslate nohighlight">\(\chi^2\)</span> distribution with <span class="math notranslate nohighlight">\(n\)</span> degrees of freedom,
 so that <span class="math notranslate nohighlight">\(F_{\chi^2}\left(n, x; 0\right)=1-\alpha\)</span> and <span class="math notranslate nohighlight">\(F_{\chi^2}\left(n, x; \lambda\right)=1-\beta\)</span>. Let c be the <span class="math notranslate nohighlight">\(1-\alpha\)</span> percentage point of a <span class="math notranslate nohighlight">\(\chi^2\)</span>-distribution with <span class="math notranslate nohighlight">\(n\)</span> degrees of freedom,
 let <span class="math notranslate nohighlight">\(x\)</span> be the <span class="math notranslate nohighlight">\(1-\beta\)</span> percentage point of a <span class="math notranslate nohighlight">\(N(0,1)\)</span> distribution, and <span class="math notranslate nohighlight">\(T=(c-n)/n\)</span>, <span class="math notranslate nohighlight">\(Y=2T+1\)</span>. Then</p>
@@ -1246,7 +1246,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 04, 2026.
+  Last updated on Sep 05, 2026.
   <br/>
 </p>
   </div>

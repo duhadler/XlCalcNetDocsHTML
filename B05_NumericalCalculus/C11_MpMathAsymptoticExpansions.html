@@ -53,7 +53,7 @@
     <link rel="prev" title="Mpmath: Numerical differentiation" href="C10_MpMathDifferentiation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 04, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 05, 2026"/>
   </head>
   
   
@@ -568,13 +568,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C01_BarCharts.html">Bar Charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C02_LineCharts.html">Line and lollipop charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C03_AreaPlots.html">Area Plots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudplots.html">Boxplot, Violinplot and Raincloud plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudPlots.html">Boxplot, Violinplot and Raincloud plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C05_CorrelationAndRegression.html">Correlation and regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C06_Finance.html">Financial plots (requires mplfinance)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C07_Cartopy.html">Geographic data (requires cartopy)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C08_Geopandas.html">Geographic data (requires geopandas)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfWhole.html">Parts of a whole</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Heatmaps.html">Arcplots, dendrograms, heatmaps and clustermaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfAWhole.html">Parts of a whole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Dendrograms.html">Dendrograms, heatmaps and clustermaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C11_PlotTable.html">PlotTable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C12_Flow.html">Flow and connections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C13_CircularPlotsAndFlows.html">Circular plots and flows</a></li>
@@ -955,7 +955,7 @@ document.write(`
 <p>Using the first 4 cumulants, we have</p>
 <div class="math notranslate nohighlight">
 \[\text{Pr}\left[\frac{u-\mu}{\sigma} \le x \right] = \Phi(x) + \phi(x)\left[\frac{\gamma_1}{6}(1-x^2) + \frac{\gamma_2}{24}(3x-x^3) +  \frac{\gamma_1^2}{72}(15x-10x^3+x^5)\right] + O(N^{-3/2})\]</div>
-<p><span id="id5">Withers and Nadarajah [<a class="reference internal" href="../99BackMatter/index.html#id274" title="C. S. Withers and S. Nadarajah. Charlier and edgeworth expansions for distributions and densities in terms of bell polynomials. Probability and Mathematical Statistics, 29:271, 2009.">1607</a>]</span> and <span id="id6">Withers and Nadarajah [<a class="reference internal" href="../99BackMatter/index.html#id275" title="C. S. Withers and S. Nadarajah. Edgeworth–cornish–fisher–hill–davis expansions for normal and non-normal limits via bell polynomials. Stochastics: An International Journal of Probability and Stochastic Processes, 87:794–805, 2015.">1608</a>]</span> have shown that the Edgeworth expansion can also be expressed in terms of standardized cumulants <span class="math notranslate nohighlight">\(\alpha_r = \kappa_r/\kappa_2^{r/2}\)</span> (with <span class="math notranslate nohighlight">\(\alpha_1 = \alpha_2 = 0)\)</span>, partial exponential Bell polynomials <span class="math notranslate nohighlight">\(B_{r,k}(\boldsymbol{\alpha}),  \boldsymbol{\alpha} = (\alpha_1, \cdots, \alpha_r)\)</span>, and Hermite polynomials <span class="math notranslate nohighlight">\(H_r(x)\)</span>:</p>
+<p><span id="id5">Withers and Nadarajah [<a class="reference internal" href="../99BackMatter/index.html#id274" title="C. S. Withers and S. Nadarajah. Charlier and edgeworth expansions for distributions and densities in terms of bell polynomials. Probability and Mathematical Statistics, 29:271, 2009.">1605</a>]</span> and <span id="id6">Withers and Nadarajah [<a class="reference internal" href="../99BackMatter/index.html#id275" title="C. S. Withers and S. Nadarajah. Edgeworth–cornish–fisher–hill–davis expansions for normal and non-normal limits via bell polynomials. Stochastics: An International Journal of Probability and Stochastic Processes, 87:794–805, 2015.">1606</a>]</span> have shown that the Edgeworth expansion can also be expressed in terms of standardized cumulants <span class="math notranslate nohighlight">\(\alpha_r = \kappa_r/\kappa_2^{r/2}\)</span> (with <span class="math notranslate nohighlight">\(\alpha_1 = \alpha_2 = 0)\)</span>, partial exponential Bell polynomials <span class="math notranslate nohighlight">\(B_{r,k}(\boldsymbol{\alpha}),  \boldsymbol{\alpha} = (\alpha_1, \cdots, \alpha_r)\)</span>, and Hermite polynomials <span class="math notranslate nohighlight">\(H_r(x)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[f(x) = \phi(x) + \phi(x) \sum_{j=1}^{\infty} h_{1j}(x) n^{-j/2}, \quad  \text{where}\]</div>
 <div class="math notranslate nohighlight">
@@ -1362,7 +1362,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 04, 2026.
+  Last updated on Sep 05, 2026.
   <br/>
 </p>
   </div>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Arcplots, dendrograms, heatmaps and clustermaps &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>Parts of a whole &#8212; XlCalcNet 1.0.0 documentation</title>
   
   
   
@@ -44,15 +44,15 @@
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=4ea706d9"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'B17_VisualisationOfDatasets/C10_Heatmaps';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'B17_VisualisationOfDatasets/C09_PartsOfAWhole';</script>
     <script src="../_static/custom-icon.js?v=74687d30"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="PlotTable" href="C11_PlotTable.html" />
-    <link rel="prev" title="Parts of a whole" href="C09_PartsOfWhole.html" />
+    <link rel="next" title="Dendrograms, heatmaps and clustermaps" href="C10_Dendrograms.html" />
+    <link rel="prev" title="Geographic data (requires geopandas)" href="C08_Geopandas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 04, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 05, 2026"/>
   </head>
   
   
@@ -567,13 +567,13 @@
 <li class="toctree-l2"><a class="reference internal" href="C01_BarCharts.html">Bar Charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C02_LineCharts.html">Line and lollipop charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C03_AreaPlots.html">Area Plots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C04_BoxViolinRaincloudplots.html">Boxplot, Violinplot and Raincloud plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C04_BoxViolinRaincloudPlots.html">Boxplot, Violinplot and Raincloud plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_CorrelationAndRegression.html">Correlation and regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C06_Finance.html">Financial plots (requires mplfinance)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C07_Cartopy.html">Geographic data (requires cartopy)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C08_Geopandas.html">Geographic data (requires geopandas)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C09_PartsOfWhole.html">Parts of a whole</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Arcplots, dendrograms, heatmaps and clustermaps</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Parts of a whole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C10_Dendrograms.html">Dendrograms, heatmaps and clustermaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C11_PlotTable.html">PlotTable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C12_Flow.html">Flow and connections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C13_CircularPlotsAndFlows.html">Circular plots and flows</a></li>
@@ -803,7 +803,7 @@
       
       
       
-      <li><a href="../_sources/B17_VisualisationOfDatasets/C10_Heatmaps.rst" target="_blank"
+      <li><a href="../_sources/B17_VisualisationOfDatasets/C09_PartsOfAWhole.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -887,7 +887,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Arcplots, dendrograms, heatmaps and clustermaps</h1>
+    <h1>Parts of a whole</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -897,13 +897,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dendrogram">Dendrogram</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heatmap-simple">Heatmap, simple</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heatmap-complex">Heatmap, complex</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matshow">Matshow</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#many-pairwise-correlations-seaborn">Many pairwise correlations (Seaborn)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structured-heatmap-seaborn">Structured heatmap (Seaborn)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clustermap-seaborn">Clustermap (Seaborn)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#waffle-chart">Waffle Chart</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pie-chart">Pie Chart</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#donut-chart">Donut Chart</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#radar-chart">Radar Chart</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#venn-diagram">Venn Diagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#treemap">Treemap</a></li>
 </ul>
             </nav>
         </div>
@@ -916,61 +915,46 @@ document.write(`
                 <article class="bd-article">
                   
   <p></p>
-<section id="arcplots-dendrograms-heatmaps-and-clustermaps">
-<h1>Arcplots, dendrograms, heatmaps and clustermaps<a class="headerlink" href="#arcplots-dendrograms-heatmaps-and-clustermaps" title="Link to this heading">#</a></h1>
-<section id="dendrogram">
-<h2>Dendrogram<a class="headerlink" href="#dendrogram" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C10_Heatmaps/D01a_Dendrogram1.py">D01a_Dendrogram1.py</a>.</p>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C10_Heatmaps/D01b_Dendrogram2.py">D01b_Dendrogram2.py</a>.</p>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C10_Heatmaps/D01c_Dendrogram3.py">D01c_Dendrogram3.py</a>.</p>
-<p><img alt="picDendrogram1" src="../_images/Dendrogram1.svg" /></p>
+<section id="parts-of-a-whole">
+<h1>Parts of a whole<a class="headerlink" href="#parts-of-a-whole" title="Link to this heading">#</a></h1>
+<section id="waffle-chart">
+<h2>Waffle Chart<a class="headerlink" href="#waffle-chart" title="Link to this heading">#</a></h2>
+<p>The Python code for the first example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C09_PartsOfWhole/D01a_WaffleChart1.py">D01a_WaffleChart1.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B17_VisualisationOfDatasets/C09_PartsOfAWhole/D01a_WaffleChart1.2D.xml">D01a_WaffleChart1.2D.xml</a>.</p>
+<p>The Python code for the second example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C09_PartsOfWhole/D01b_WaffleChart2.py">D01b_WaffleChart2.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B17_VisualisationOfDatasets/C09_PartsOfAWhole/D01b_WaffleChart2.2D.xml">D01b_WaffleChart2.2D.xml</a>.</p>
+<p><a class="reference internal" href="../_images/WaffleChart1.svg"><img alt="picWaffleChart1" src="../_images/WaffleChart1.svg" style="width: 60%;" /></a></p>
 <p>Some text</p>
-<p><img alt="picDendrogram2" src="../_images/Dendrogram2.svg" /></p>
+<p><a class="reference internal" href="../_images/WaffleChart2.svg"><img alt="picWaffleChart2" src="../_images/WaffleChart2.svg" style="width: 60%;" /></a></p>
 <p>Some text</p>
-<p><img alt="picDendrogram3" src="../_images/Dendrogram3.svg" /></p>
 <p></p>
 </section>
-<section id="heatmap-simple">
-<h2>Heatmap, simple<a class="headerlink" href="#heatmap-simple" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C10_Heatmaps/D02_Heatmap1.py">D02_Heatmap1.py</a>.</p>
-<p><img alt="Heatmap1" src="../_images/Heatmap1.svg" /></p>
-<p><strong>Left figure</strong>: Heatmap, simple</p>
+<section id="pie-chart">
+<h2>Pie Chart<a class="headerlink" href="#pie-chart" title="Link to this heading">#</a></h2>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C09_PartsOfWhole/D02_PieChart.py">D02_PieChart.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B17_VisualisationOfDatasets/C09_PartsOfAWhole/D02_PieChart.2D.xml">D02_PieChart.2D.xml</a>.</p>
+<p><img alt="picPieChart" src="../_images/PieChart.svg" /></p>
 <p></p>
 </section>
-<section id="heatmap-complex">
-<h2>Heatmap, complex<a class="headerlink" href="#heatmap-complex" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C10_Heatmaps/D03_Heatmap2.py">D03_Heatmap2.py</a>.</p>
-<p><img alt="Heatmap2" src="../_images/Heatmap2.svg" /></p>
-<p><strong>Left figure</strong>: Heatmap, complex</p>
+<section id="donut-chart">
+<h2>Donut Chart<a class="headerlink" href="#donut-chart" title="Link to this heading">#</a></h2>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C09_PartsOfWhole/D03_DonutChart.py">D03_DonutChart.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B17_VisualisationOfDatasets/C09_PartsOfAWhole/D03_DonutChart.2D.xml">D03_DonutChart.2D.xml</a>.</p>
+<p><img alt="picDonutChart" src="../_images/DonutChart.svg" /></p>
 <p></p>
 </section>
-<section id="matshow">
-<h2>Matshow<a class="headerlink" href="#matshow" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C10_Heatmaps/D04_MatShow.py">D04_MatShow.py</a>.</p>
-<p><img alt="Matshow" src="../_images/Matshow.svg" /></p>
-<p><strong>Left figure</strong>: Heatmap, complex</p>
+<section id="radar-chart">
+<h2>Radar Chart<a class="headerlink" href="#radar-chart" title="Link to this heading">#</a></h2>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C09_PartsOfWhole/D04_RadarChart.py">D04_RadarChart.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B17_VisualisationOfDatasets/C09_PartsOfAWhole/D04_RadarChart.2D.xml">D04_RadarChart.2D.xml</a>.</p>
+<p><a class="reference internal" href="../_images/RadarChart.svg"><img alt="picRadarChart" src="../_images/RadarChart.svg" style="width: 90%;" /></a></p>
 <p></p>
 </section>
-<section id="many-pairwise-correlations-seaborn">
-<h2>Many pairwise correlations (Seaborn)<a class="headerlink" href="#many-pairwise-correlations-seaborn" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C10_Heatmaps/D05_ManyPairwiseCorrelations.py">D05_ManyPairwiseCorrelations.py</a>.</p>
-<img alt="../_images/many_pairwise_correlations.svg" class="align-center" src="../_images/many_pairwise_correlations.svg" />
-<p><strong>Figure</strong>: parametric plot of Kleins bottle.</p>
+<section id="venn-diagram">
+<h2>Venn Diagram<a class="headerlink" href="#venn-diagram" title="Link to this heading">#</a></h2>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C09_PartsOfWhole/D05_VennDiagram.py">D05_VennDiagram.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B17_VisualisationOfDatasets/C09_PartsOfAWhole/D05_VennDiagram.2D.xml">D05_VennDiagram.2D.xml</a>.</p>
+<p><img alt="picVennDiagram" src="../_images/VennDiagram.svg" /></p>
 <p></p>
 </section>
-<section id="structured-heatmap-seaborn">
-<h2>Structured heatmap (Seaborn)<a class="headerlink" href="#structured-heatmap-seaborn" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C10_Heatmaps/D06_StructuredHeatmap.py">D06_StructuredHeatmap.py</a>.</p>
-<img alt="../_images/structured_heatmap.svg" class="align-center" src="../_images/structured_heatmap.svg" />
-<p><strong>Figure</strong>: structured_heatmap.</p>
-<p></p>
-</section>
-<section id="clustermap-seaborn">
-<h2>Clustermap (Seaborn)<a class="headerlink" href="#clustermap-seaborn" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C10_Heatmaps/D07_Clustermap.py">D07_Clustermap.py</a>.</p>
-<img alt="../_images/Clustermap.svg" class="align-center" src="../_images/Clustermap.svg" />
-<p><strong>Figure</strong>: Clustermap.</p>
-<p>see: <a class="reference external" href="https://seaborn.pydata.org/generated/seaborn.clustermap.html">https://seaborn.pydata.org/generated/seaborn.clustermap.html</a></p>
+<section id="treemap">
+<h2>Treemap<a class="headerlink" href="#treemap" title="Link to this heading">#</a></h2>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C09_PartsOfWhole/D06_Treemap.py">D06_Treemap.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B17_VisualisationOfDatasets/C09_PartsOfAWhole/D06_Treemap.2D.xml">D06_Treemap.2D.xml</a>.</p>
+<p><img alt="picTreemap" src="../_images/Treemap.svg" /></p>
 </section>
 </section>
 
@@ -986,20 +970,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="C09_PartsOfWhole.html"
+       href="C08_Geopandas.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Parts of a whole</p>
+        <p class="prev-next-title">Geographic data (requires geopandas)</p>
       </div>
     </a>
     <a class="right-next"
-       href="C11_PlotTable.html"
+       href="C10_Dendrograms.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">PlotTable</p>
+        <p class="prev-next-title">Dendrograms, heatmaps and clustermaps</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1019,13 +1003,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dendrogram">Dendrogram</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heatmap-simple">Heatmap, simple</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heatmap-complex">Heatmap, complex</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matshow">Matshow</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#many-pairwise-correlations-seaborn">Many pairwise correlations (Seaborn)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structured-heatmap-seaborn">Structured heatmap (Seaborn)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clustermap-seaborn">Clustermap (Seaborn)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#waffle-chart">Waffle Chart</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pie-chart">Pie Chart</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#donut-chart">Donut Chart</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#radar-chart">Radar Chart</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#venn-diagram">Venn Diagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#treemap">Treemap</a></li>
 </ul>
   </nav></div>
 
@@ -1059,7 +1042,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 04, 2026.
+  Last updated on Sep 05, 2026.
   <br/>
 </p>
   </div>

@@ -52,7 +52,7 @@
     <link rel="prev" title="S3dlib: Image mapping and clipping" href="C06_ImageMappingAndClipping.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 04, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 05, 2026"/>
   </head>
   
   
@@ -567,13 +567,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C01_BarCharts.html">Bar Charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C02_LineCharts.html">Line and lollipop charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C03_AreaPlots.html">Area Plots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudplots.html">Boxplot, Violinplot and Raincloud plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudPlots.html">Boxplot, Violinplot and Raincloud plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C05_CorrelationAndRegression.html">Correlation and regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C06_Finance.html">Financial plots (requires mplfinance)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C07_Cartopy.html">Geographic data (requires cartopy)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C08_Geopandas.html">Geographic data (requires geopandas)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfWhole.html">Parts of a whole</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Heatmaps.html">Arcplots, dendrograms, heatmaps and clustermaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfAWhole.html">Parts of a whole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Dendrograms.html">Dendrograms, heatmaps and clustermaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C11_PlotTable.html">PlotTable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C12_Flow.html">Flow and connections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C13_CircularPlotsAndFlows.html">Circular plots and flows</a></li>
@@ -922,74 +922,65 @@ document.write(`
 <h1>S3dlib: Edge-to-edge surface coloring<a class="headerlink" href="#s3dlib-edge-to-edge-surface-coloring" title="Link to this heading">#</a></h1>
 <section id="platonic-solid-with-surface-edges-filled-part-1">
 <h2>Platonic solid, with surface edges filled, part 1<a class="headerlink" href="#platonic-solid-with-surface-edges-filled-part-1" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D01_Platonic_Solid_Surface_Edges_Filled.py">D01_Platonic_Solid_Surface_Edges_Filled.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D01_Platonic_Solid_Surface_Edges_Filled.py">D01_Platonic_Solid_Surface_Edges_Filled.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D01_Platonic_Solid_Surface_Edges_Filled.2D.xml">D01_Platonic_Solid_Surface_Edges_Filled.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/lines/platonic_proj.html">https://s3dlib.org/examples/lines/platonic_proj.html</a></p>
 <p><img alt="picdemo_Platonic_Solid_Surface_Edges_Filled" src="../_images/demo_Platonic_Solid_Surface_Edges_Filled.png" /></p>
-<p><strong>Left figure</strong>:  demo_Platonic_Solid_Surface_Edges_Filled.</p>
 <p></p>
 </section>
 <section id="platonic-solid-with-surface-edges-filled-part-2">
 <h2>Platonic solid, with surface edges filled, part 2<a class="headerlink" href="#platonic-solid-with-surface-edges-filled-part-2" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D02_Platonic_Solid_Surface_Edges_Filled.py">D02_Platonic_Solid_Surface_Edges_Filled.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D02_Platonic_Solid_Surface_Edges_Filled.py">D02_Platonic_Solid_Surface_Edges_Filled.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D02_Platonic_Solid_Surface_Edges_Filled.2D.xml">D02_Platonic_Solid_Surface_Edges_Filled.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/lines/platonic_proj.html">https://s3dlib.org/examples/lines/platonic_proj.html</a></p>
 <p><img alt="picdemo_Platonic_Solid_Surface_Edges_Filled2" src="../_images/demo_Platonic_Solid_Surface_Edges_Filled2.png" /></p>
-<p><strong>Left figure</strong>:  demo_Platonic_Solid_Surface_Edges_Filled2.</p>
 <p></p>
 </section>
 <section id="spherical-contour-surface-filled">
 <h2>Spherical contour surface, filled<a class="headerlink" href="#spherical-contour-surface-filled" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D03_Spherical_Contour_Filled_Surface.py">D03_Spherical_Contour_Filled_Surface.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D03_Spherical_Contour_Filled_Surface.py">D03_Spherical_Contour_Filled_Surface.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D03_Spherical_Contour_Filled_Surface.2D.xml">D03_Spherical_Contour_Filled_Surface.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/lines/filled_octa_cont.html">https://s3dlib.org/examples/lines/filled_octa_cont.html</a></p>
 <p><img alt="picdemo_Spherical_Contour_Filled_Surface" src="../_images/demo_Spherical_Contour_Filled_Surface.png" /></p>
-<p><strong>Left figure</strong>:  demo_Spherical_Contour_Filled_Surface.</p>
 <p></p>
 </section>
 <section id="edge-to-edge-surface-part-1">
 <h2>Edge-to-edge surface, part 1<a class="headerlink" href="#edge-to-edge-surface-part-1" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D04_Edge_to_Edge_Surface.py">D04_Edge_to_Edge_Surface.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D04_Edge_to_Edge_Surface.py">D04_Edge_to_Edge_Surface.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D04_Edge_to_Edge_Surface.2D.xml">D04_Edge_to_Edge_Surface.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/lines/surf_edge2edge.html">https://s3dlib.org/examples/lines/surf_edge2edge.html</a></p>
 <p><img alt="picdemo_Edge_to_Edge_Surface" src="../_images/demo_Edge_to_Edge_Surface.png" /></p>
-<p><strong>Left figure</strong>:  demo_Edge_to_Edge_Surface.</p>
 <p></p>
 </section>
 <section id="spherical-edge-surface-filled">
 <h2>Spherical edge surface, filled<a class="headerlink" href="#spherical-edge-surface-filled" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D06_Spherical_Edge_Filled_Surface_2.py">D06_Spherical_Edge_Filled_Surface_2.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D06_Spherical_Edge_Filled_Surface_2.py">D06_Spherical_Edge_Filled_Surface_2.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D06_Spherical_Edge_Filled_Surface_2.2D.xml">D06_Spherical_Edge_Filled_Surface_2.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/lines/filled_octa_edges.html">https://s3dlib.org/examples/lines/filled_octa_edges.html</a></p>
 <p><img alt="picdemo_Spherical_Edge_Filled_Surface" src="../_images/demo_Spherical_Edge_Filled_Surface.png" /></p>
-<p><strong>Left figure</strong>:  demo_Spherical_Edge_Filled_Surface.</p>
 <p></p>
 </section>
 <section id="edge-to-edge-surface-part-2">
 <h2>Edge-to-edge surface, part 2<a class="headerlink" href="#edge-to-edge-surface-part-2" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D06_Spherical_Edge_Filled_Surface_2.py">D06_Spherical_Edge_Filled_Surface_2.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D06_Spherical_Edge_Filled_Surface_2.py">D06_Spherical_Edge_Filled_Surface_2.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D06_Spherical_Edge_Filled_Surface_2.2D.xml">D06_Spherical_Edge_Filled_Surface_2.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/lines/surf_edge2edge_2.html">https://s3dlib.org/examples/lines/surf_edge2edge_2.html</a></p>
 <p><img alt="picdemo_Edge_to_Edge_Surface_2" src="../_images/demo_Edge_to_Edge_Surface_2.png" /></p>
-<p><strong>Left figure</strong>:  demo_Edge_to_Edge_Surface_2.</p>
 <p></p>
 </section>
 <section id="line-colormap-sequence">
 <h2>Line colormap sequence<a class="headerlink" href="#line-colormap-sequence" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D07_Line_Colormap_Sequence.py">D07_Line_Colormap_Sequence.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D07_Line_Colormap_Sequence.py">D07_Line_Colormap_Sequence.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D07_Line_Colormap_Sequence.2D.xml">D07_Line_Colormap_Sequence.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/lines/loop3d.html">https://s3dlib.org/examples/lines/loop3d.html</a></p>
 <p><img alt="picdemo_Line_Colormap_Sequence" src="../_images/demo_Line_Colormap_Sequence.png" /></p>
-<p><strong>Left figure</strong>:  demo_Line_Colormap_Sequence.</p>
 <p></p>
 </section>
 <section id="sequential-line-color-part-1">
 <h2>Sequential line color, part 1<a class="headerlink" href="#sequential-line-color-part-1" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D08_Sequential_Line_Color.py">D08_Sequential_Line_Color.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D08_Sequential_Line_Color.py">D08_Sequential_Line_Color.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D08_Sequential_Line_Color.2D.xml">D08_Sequential_Line_Color.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/lines/lorenz_seq.html">https://s3dlib.org/examples/lines/lorenz_seq.html</a></p>
 <p><img alt="picdemo_Sequential_Line_Color" src="../_images/demo_Sequential_Line_Color.png" /></p>
-<p><strong>Left figure</strong>:  demo_Sequential_Line_Color.</p>
 <p></p>
 </section>
 <section id="sequential-line-color-part-2">
 <h2>Sequential line color, part 2<a class="headerlink" href="#sequential-line-color-part-2" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D09_Sequential_Line_Color2.py">D09_Sequential_Line_Color2.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D09_Sequential_Line_Color2.py">D09_Sequential_Line_Color2.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C07_EdgeToEdgeSurfaceColoring/D09_Sequential_Line_Color2.2D.xml">D09_Sequential_Line_Color2.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/lines/lorenz_op.html">https://s3dlib.org/examples/lines/lorenz_op.html</a></p>
 <p><img alt="picdemo_Sequential_Line_Color2" src="../_images/demo_Sequential_Line_Color2.png" /></p>
-<p><strong>Left figure</strong>:  demo_Sequential_Line_Color2.</p>
 </section>
 </section>
 
@@ -1080,7 +1071,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 04, 2026.
+  Last updated on Sep 05, 2026.
   <br/>
 </p>
   </div>

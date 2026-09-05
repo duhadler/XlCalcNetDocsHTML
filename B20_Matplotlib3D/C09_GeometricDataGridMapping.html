@@ -52,7 +52,7 @@
     <link rel="prev" title="S3dlib: Decorative parametric surfaces" href="C08_DecorativeSurfaces.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 04, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 05, 2026"/>
   </head>
   
   
@@ -567,13 +567,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C01_BarCharts.html">Bar Charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C02_LineCharts.html">Line and lollipop charts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C03_AreaPlots.html">Area Plots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudplots.html">Boxplot, Violinplot and Raincloud plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C04_BoxViolinRaincloudPlots.html">Boxplot, Violinplot and Raincloud plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C05_CorrelationAndRegression.html">Correlation and regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C06_Finance.html">Financial plots (requires mplfinance)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C07_Cartopy.html">Geographic data (requires cartopy)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C08_Geopandas.html">Geographic data (requires geopandas)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfWhole.html">Parts of a whole</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Heatmaps.html">Arcplots, dendrograms, heatmaps and clustermaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C09_PartsOfAWhole.html">Parts of a whole</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C10_Dendrograms.html">Dendrograms, heatmaps and clustermaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C11_PlotTable.html">PlotTable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C12_Flow.html">Flow and connections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B17_VisualisationOfDatasets/C13_CircularPlotsAndFlows.html">Circular plots and flows</a></li>
@@ -919,50 +919,44 @@ document.write(`
 <h1>S3dlib: Geometric and color datagrid mapping (requires scipy)<a class="headerlink" href="#s3dlib-geometric-and-color-datagrid-mapping-requires-scipy" title="Link to this heading">#</a></h1>
 <section id="mandelbrot-contours">
 <h2>Mandelbrot contours<a class="headerlink" href="#mandelbrot-contours" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C09_GeometricDataGridMapping/D01_Mandelbrot_Contours.py">D01_Mandelbrot_Contours.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C09_GeometricDataGridMapping/D01_Mandelbrot_Contours.py">D01_Mandelbrot_Contours.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C09_GeometricDataGridMapping/D01_Mandelbrot_Contours.2D.xml">D01_Mandelbrot_Contours.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/lines/mand_contours.html">https://s3dlib.org/examples/lines/mand_contours.html</a></p>
 <p><img alt="picdemo_Mandelbrot_Contours" src="../_images/demo_Mandelbrot_Contours.png" /></p>
-<p><strong>Left figure</strong>:  demo_Mandelbrot_Contours.</p>
 <p></p>
 </section>
 <section id="geometric-and-color-datagrid-mapping">
 <h2>Geometric and color datagrid mapping<a class="headerlink" href="#geometric-and-color-datagrid-mapping" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C09_GeometricDataGridMapping/D02_GeometricMapping.py">D02_GeometricMapping.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C09_GeometricDataGridMapping/D02_GeometricMapping.py">D02_GeometricMapping.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C09_GeometricDataGridMapping/D02_GeometricMapping.2D.xml">D02_GeometricMapping.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/datagridmap/jacks_shaded.html">https://s3dlib.org/examples/datagridmap/jacks_shaded.html</a></p>
 <p><img alt="picdemo_Geometric_and_Color_Datagrid_Mapping" src="../_images/demo_Geometric_and_Color_Datagrid_Mapping.png" /></p>
-<p><strong>Left figure</strong>:  demo_Geometric_and_Color_Datagrid_Mapping.</p>
 <p></p>
 </section>
 <section id="mri-3d">
 <h2>MRI 3D<a class="headerlink" href="#mri-3d" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C09_GeometricDataGridMapping/D03_MRI_3D.py">D03_MRI_3D.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C09_GeometricDataGridMapping/D03_MRI_3D.py">D03_MRI_3D.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C09_GeometricDataGridMapping/D03_MRI_3D.2D.xml">D03_MRI_3D.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/datagridmap/mri_3d.html">https://s3dlib.org/examples/datagridmap/mri_3d.html</a></p>
 <p><img alt="picdemo_MRI_3D" src="../_images/demo_MRI_3D.png" /></p>
-<p><strong>Left figure</strong>:  demo_MRI_3D.</p>
 <p></p>
 </section>
 <section id="jacksboro-fault">
 <h2>Jacksboro fault<a class="headerlink" href="#jacksboro-fault" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C09_GeometricDataGridMapping/D04_Jacksboro_Fault.py">D04_Jacksboro_Fault.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C09_GeometricDataGridMapping/D04_Jacksboro_Fault.py">D04_Jacksboro_Fault.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C09_GeometricDataGridMapping/D04_Jacksboro_Fault.2D.xml">D04_Jacksboro_Fault.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/datagridmap/jacks_shaded2.html">https://s3dlib.org/examples/datagridmap/jacks_shaded2.html</a></p>
 <p><img alt="picdemo_Jacksboro_Fault" src="../_images/demo_Jacksboro_Fault.png" /></p>
-<p><strong>Left figure</strong>:  demo_Jacksboro_Fault.</p>
 <p></p>
 </section>
 <section id="mandelbrot-3d">
 <h2>Mandelbrot 3D<a class="headerlink" href="#mandelbrot-3d" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C09_GeometricDataGridMapping/D05_Mandelbrot_3D.py">D05_Mandelbrot_3D.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C09_GeometricDataGridMapping/D05_Mandelbrot_3D.py">D05_Mandelbrot_3D.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C09_GeometricDataGridMapping/D05_Mandelbrot_3D.2D.xml">D05_Mandelbrot_3D.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/datagridmap/mandelbrot.html">https://s3dlib.org/examples/datagridmap/mandelbrot.html</a></p>
 <p><img alt="picdemo_Mandelbrot_3D" src="../_images/demo_Mandelbrot_3D.png" /></p>
-<p><strong>Left figure</strong>:  demo_Mandelbrot_3D.</p>
 <p></p>
 </section>
 <section id="mri-regions">
 <h2>MRI regions<a class="headerlink" href="#mri-regions" title="Link to this heading">#</a></h2>
-<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C09_GeometricDataGridMapping/D06_MRI_Regions.py">D06_MRI_Regions.py</a>.</p>
+<p>The Python code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B20_Matplotlib3D/C09_GeometricDataGridMapping/D06_MRI_Regions.py">D06_MRI_Regions.py</a>, and the XML code in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/GalleryOfPlotsExamples/B20_Matplotlib3D/C09_GeometricDataGridMapping/D06_MRI_Regions.2D.xml">D06_MRI_Regions.2D.xml</a>.</p>
 <p>See: <a class="reference external" href="https://s3dlib.org/examples/colormaps/mri.html">https://s3dlib.org/examples/colormaps/mri.html</a></p>
 <p><img alt="picdemo_MRI_Regions" src="../_images/demo_MRI_Regions.png" /></p>
-<p><strong>Left figure</strong>:  demo_MRI_Regions.</p>
 </section>
 </section>
 
@@ -1050,7 +1044,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 04, 2026.
+  Last updated on Sep 05, 2026.
   <br/>
 </p>
   </div>
