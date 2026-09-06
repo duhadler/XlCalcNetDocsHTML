@@ -170,11 +170,22 @@
         C01_UserGeneral/index.rst
         C02_UserDistributions/index.rst
         C03_UserInferentialStatistics/index.rst
-        C04_UserElementary/index.rst
-        C05_UserSpecialReal/index.rst
-        C06_UserSpecialCplx/index.rst
-        C07_UserSpecialMpmath/index.rst
+        C04_UserSpecialCplx/index.rst
 
+
+
+    ######################################################
+    User library: graphics
+    ######################################################
+
+
+
+    .. toctree ::
+        :caption: User library: graphics
+        :maxdepth: 5
+
+        C05_UserDistributionPlots/index.rst
+        C06_UserSpecialCplxPlots/index.rst
 
 
 

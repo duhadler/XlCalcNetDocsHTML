@@ -85,7 +85,7 @@ Beta-negative binomial distribution (Waring)
 
     .. math:: \text{cdf}_X(k) = \sum_{j=\max(0,n+K-N)}^{k} \text{pmf}_X(j) = 1 - \text{pmf}_X(k+1) \times {}_3F_2(1,k+1-K,k+1-n;k+2,N+k+2-K-n;1),
 
-    where `{}_3F_2(\cdot)` is a generalized hypergeometric function (see  :ref:`hyp3f2() <rst_mpm_hyp3f2>`.)
+    where `{}_3F_2(\cdot)` is a generalized hypergeometric function.
 
 
 
@@ -110,7 +110,7 @@ Beta-negative binomial distribution (Waring)
 
     .. math:: \text{sf}_X(k) = \sum_{j=k+1}^{\min(K,n)} \text{pmf}_X(j) = \text{pmf}_X(k+1) \times {}_3F_2(1,k+1-K,k+1-n;k+2,N+k+2-K-n;1),
 
-    where `{}_3F_2(\cdot)` is a generalized hypergeometric function (see  :ref:`hyp3f2() <rst_mpm_hyp3f2>`.)
+    where `{}_3F_2(\cdot)` is a generalized hypergeometric function.
 
 
     .. code-block:: python
