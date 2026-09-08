@@ -19,16 +19,20 @@
     |vspace|
 
 
-    Welcome to the documentation of **XlCalcNet**, a Microsoft E\ **X**\ ce\ **l** addin for **Calc**\ ulations in multiprecision, based on Python\ **Net**\ . This edition of the documentation describes release |release|. This documentation can be downloaded in PDF format from the Assets on the `Releases Page <https://github.com/duhadler/XlCalcNet/releases>`__ as "xlcalcnet.pdf".
+    Overview
+    ---------------------------------------------------------------------------
+
+    Welcome to the documentation of **XlCalcNet** (Microsoft E\ **X**\ ce\ **l** addin for **Calc**\ ulations in multiprecision, based on Python\ **Net**\ ), a python library that focusses on numerical calculations in multiple precision and data visualisation, which can also be used within MS Excel spreadsheet formulas. This edition of the documentation describes release |release|. The documentation can also be downloaded in PDF format from `here <https://github.com/duhadler/DocsXlCalcNet/blob/master/pdf/xlcalcnet.pdf>`__.
+
+    XlCalcNet is free software released under the Mozilla Public License `2.0` (see  :ref:`License <rst_MPL_2.0_License>`). The git repository is https://github.com/duhadler/XlCalcNet.
 
 
-    XlCalcNet is free software released under the Mozilla Public License `2.0` (see  :ref:`License <rst_MPL_2.0_License>`). The git repository is https://github.com/duhadler/XlCalcNet. 
+    XlCalcNet can be installed as a python package from `PyPI <https://test.pypi.org/project/xlcalcnet/0.0.2/>`__. More detailed information regarding the installation and general usage of XlCalcNet can be found :ref:`here <rst_setting_up_XlCalcNet>`.
 
 
+    Since one of the main goals of XlCalcNet is to enable the use of functions written in Python or C# within spreadsheet formulas, it is assumed that Microsoft Excel (2010 or later, 64 bit) is installed on the users system, running under Windows (7.1 or later, 64 bit), with .NET Framework 4.8/4.8.1 installed.
 
-    The main goal of XlCalcNet is to enable the use of functions written in Python or C# within spreadsheet formulas. It is therefore assumed that Microsoft Excel (2010 or later, 64 bit) is installed on the users system, running under Windows (7.1 or later, 64 bit), with .NET Framework 4.8/4.8.1 installed.
 
-    If you are not yet familiar with XlCalcNet, it is suggested that you read the preface before browsing the other sections (just click the Next button).
 
 
     Searching

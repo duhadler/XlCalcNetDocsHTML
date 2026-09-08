@@ -10,6 +10,9 @@
 
 |newpage|
 
+
+.. _rst_setting_up_XlCalcNet: 
+
 Setting up XlCalcNet
 =========================
 
