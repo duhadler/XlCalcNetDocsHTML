@@ -24,6 +24,14 @@ Describe the dependency on Python.Net.
 
 Explain The 3 folder concept: user, application local data, python installation
 
+The data which are directly maniplated by the user are located in:
+
+The data which generated as a result of running a python script or C\# program are written to: 
+
+The data which contain the installation are located in:
+
+
+
 
 The data which are directly maniplated by the user are located in:
 
@@ -72,61 +80,19 @@ In terms of usability, the .NET Framework 4.x runtime does not include an IDE; w
 
 
 
-|newpage|
-
-Installing the DataXlCalcNet folder
---------------------------------------------------------
-
-Describe how to download and unpack the core repositories from Github
-
-
-Emphasize the need to use Microsoft defender for the unzipped repositories.
-
-
-
-Describe the copying and exploring the DataXlCalcNet folder
-
-Describe the copying and exploring the DataXlCalcNet folder
-
-
-
 
 |newpage|
 
 Installing XlCalcNet
 --------------------------------------------------------
 
-Describe how to download and unpack the core repositories from Github
-
-
-Emphasize the need to use Microsoft defender for the unzipped repositories.
+Describe installing from PyPI
 
 
 
 Describe the copying and exploring the DataXlCalcNet folder
 
 Describe the copying and exploring the DataXlCalcNet folder
-
-
-
-
-|newpage|
-
-Installing XlCalcNet2 (optional)
---------------------------------------------------------
-
-Describe how to download and unpack the core repositories from Github
-
-
-Emphasize the need to use Microsoft defender for the unzipped repositories.
-
-
-The data which are directly maniplated by the user are located in:
-
-The data which generated as a result of running a python script or C\# program are written to: 
-
-The data which contain the installation are located in:
-
 
 
 
@@ -168,17 +134,21 @@ Follow the steps to make the Tiny IDE available:
 
 |newpage|
 
-Installing and using of the MS Excel XlNet addin: first steps
---------------------------------------------------------------------------------
+
+
+.. _rst_setting_up_Mpfunlab: 
+
+Preparing MS Excel for using XlCalcNet: first steps
+---------------------------------------------------------------------------------------------
 
 
 !!! Describe the need for starting  the socket server first !!!
 
-When starting the socket server for the first time to allow acces of Pyton to networks. Confirm.
+When starting the socket server for the first time from a specific installation of python.exe, a dialog will appear to allow access of this version of Python to networks. Confirm, since this is required for the socket server to work properly. If you have multiple installations of Python, you may have to do this for each installation.
 
 
 
-Describe the installation of the MS Excel addin.
+Describe the installation of the MS Excel addin: Mpfunlab.xll and Mpfunlab.xlam addins.
 
 
 
