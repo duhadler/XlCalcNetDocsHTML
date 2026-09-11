@@ -27,7 +27,7 @@ See also: https://en.wikipedia.org/wiki/Implicit_surface
 Fermat spiral as generator
 ------------------------------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D01a_FermatSpiral.3D.xml (D01a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C01_TranslationSurfaces/D01a_FermatSpiral.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D01a_FermatSpiral.3D.xml (D01a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C01_TranslationSurfaces/D01a_FermatSpiral.3D.xml>`__.
 
 
 
@@ -69,7 +69,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Lemniscate as generator
 -----------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_Lemniscate.3D.xml (D02a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C01_TranslationSurfaces/D02a_Lemniscate.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_Lemniscate.3D.xml (D02a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C01_TranslationSurfaces/D02a_Lemniscate.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -119,7 +119,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Tanh spiral as generator
 -----------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_TanhSpiral.3D.xml (D03a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C01_TranslationSurfaces/D03a_TanhSpiral.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_TanhSpiral.3D.xml (D03a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C01_TranslationSurfaces/D03a_TanhSpiral.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -175,7 +175,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Rose curve as generator
 -----------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_RoseCurve.3D.xml (D04a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C01_TranslationSurfaces/D04a_RoseCurve.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_RoseCurve.3D.xml (D04a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C01_TranslationSurfaces/D04a_RoseCurve.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -231,7 +231,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Hypocycloid as generator
 -----------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_Hypocycloid_55.3D.xml (D05a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C01_TranslationSurfaces/D05a_Hypocycloid_55.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_Hypocycloid_55.3D.xml (D05a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C01_TranslationSurfaces/D05a_Hypocycloid_55.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -285,7 +285,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Epicycloid as generator
 -----------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_Epicycloid_55.3D.xml (D06a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C01_TranslationSurfaces/D06a_Epicycloid_55.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_Epicycloid_55.3D.xml (D06a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C01_TranslationSurfaces/D06a_Epicycloid_55.3D.xml>`__.
 
 
 The example below uses the following code in C\#

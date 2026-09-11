@@ -34,7 +34,7 @@ Parametric Surfaces: `x=f(u,v),` `y=g(u,v),` `z=h(u,v)`
 Ellipsoid
 -------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_Ellipsoid.3D.xml (D01a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D01a_Ellipsoid.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_Ellipsoid.3D.xml (D01a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D01a_Ellipsoid.3D.xml>`__.
 
 
     The parametric equations of an ellipsoid can be written as 
@@ -103,7 +103,7 @@ If the lengths of two axes of an ellipsoid are the same, the figure is called an
 Superellipsoid
 ------------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_SuperEllipse.3D.xml (D02a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D02a_SuperEllipse.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_SuperEllipse.3D.xml (D02a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D02a_SuperEllipse.3D.xml>`__.
 
 
 Superellipsoid is the name given to a family of shapes formed from the spherical product of two superquadratric curves. These shapes can be used to model a wide range of shapes including spheres, cylinders, and parallelepipeds as well as shapes in between. The parametric equations of an superellipsoid can be written as 
@@ -167,7 +167,7 @@ where `\displaystyle \frac{-\pi}{2} \le u  \le \frac{\pi}{2}`, `-\pi \le v  \le 
 Hexaedron
 -------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_Hexaedron.3D.xml (D03a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D03a_Hexaedron.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_Hexaedron.3D.xml (D03a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D03a_Hexaedron.3D.xml>`__.
 
 
 See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
@@ -215,7 +215,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Super Toroid
 ------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_SuperToroid.3D.xml (D04a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D04a_SuperToroid.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_SuperToroid.3D.xml (D04a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D04a_SuperToroid.3D.xml>`__.
 
 
 See also: http://paulbourke.net/geometry/toroidal/
@@ -275,7 +275,7 @@ See also: http://paulbourke.net/geometry/toroidal/
 Elliptic Helicoid
 -----------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_EllipticHelicoid.3D.xml (D05a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D05a_EllipticHelicoid.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_EllipticHelicoid.3D.xml (D05a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D05a_EllipticHelicoid.3D.xml>`__.
 
 
 See also: https://mathworld.wolfram.com/EllipticHelicoid.html
@@ -326,7 +326,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Hyperbolic Helicoid
 -----------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_Hyperhelicoid.3D.xml (D06a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D06a_Hyperhelicoid.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_Hyperhelicoid.3D.xml (D06a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D06a_Hyperhelicoid.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -373,7 +373,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Lemniscate
 ---------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D07a_Lemniscate.3D.xml (D07a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D07a_Lemnescate.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D07a_Lemniscate.3D.xml (D07a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D07a_Lemnescate.3D.xml>`__.
 
 
 See also: http://paulbourke.net/geometry/lemniscape/
@@ -419,7 +419,7 @@ See also: http://paulbourke.net/geometry/lemniscape/
 Bohemian Dome
 -------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D08a_BohemianDome.3D.xml (D08a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D08a_BohemianDome.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D08a_BohemianDome.3D.xml (D08a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D08a_BohemianDome.3D.xml>`__.
 
 
 See also: https://mathworld.wolfram.com/BohemianDome.html
@@ -480,7 +480,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Dupin1 surface
 -----------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D09a_Dupin1.3D.xml (D09a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D09a_Dupin1.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D09a_Dupin1.3D.xml (D09a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D09a_Dupin1.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -539,7 +539,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Dupin2 surface
 -------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D10a_Dupin2.3D.xml (D10a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D10a_Dupin2.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D10a_Dupin2.3D.xml (D10a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D10a_Dupin2.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -590,7 +590,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Dinis Surface (twisted pseudosphere)
 ------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D11a_Dini.3D.xml (D11a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D11a_Dini.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D11a_Dini.3D.xml (D11a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D11a_Dini.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -639,7 +639,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Plueckers conoid
 -----------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D12a_Pluecker.3D.xml (D12a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D12a_Pluecker.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D12a_Pluecker.3D.xml (D12a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D12a_Pluecker.3D.xml>`__.
 
 
 // See : https://mathworld.wolfram.com/PlueckersConoid.html
@@ -716,7 +716,7 @@ Gray, A. "Plücker's Conoid." Modern Differential Geometry of Curves and Surface
 Umbilic Torus
 ----------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D13a_UmbilicTorus.3D.xml (D13a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D13a_UmbilicTorus.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D13a_UmbilicTorus.3D.xml (D13a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D13a_UmbilicTorus.3D.xml>`__.
 
 
 .. code-block:: csharp
@@ -755,7 +755,7 @@ The XML code for the example below can be found online in the ``DataXlCalcNet`` 
 Skidian's ruled surface
 -----------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D14a_Skidan.3D.xml (D14a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D14a_Skidan.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D14a_Skidan.3D.xml (D14a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D14a_Skidan.3D.xml>`__.
 
 
 .. code-block:: csharp
@@ -824,7 +824,7 @@ The XML code for the example below can be found online in the ``DataXlCalcNet`` 
 Umbrella surface
 ------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D15a_Umbrella.3D.xml (D15a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D15a_Umbrella.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D15a_Umbrella.3D.xml (D15a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D15a_Umbrella.3D.xml>`__.
 
 
 .. code-block:: csharp
@@ -889,7 +889,7 @@ The XML code for the example below can be found online in the ``DataXlCalcNet`` 
 Cyclic surfaces (generalized torus)
 ---------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D16a_CyclicSurface1.3D.xml (D16a-n) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D16a_CyclicSurface1.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D16a_CyclicSurface1.3D.xml (D16a-n) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D16a_CyclicSurface1.3D.xml>`__.
 
 
 .. code-block:: csharp
@@ -1016,7 +1016,7 @@ The XML code for the example below can be found online in the ``DataXlCalcNet`` 
 Goursat surfaces 
 -------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D17a_Goursat1.3D.xml (D17a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D17a_Goursat1.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D17a_Goursat1.3D.xml (D17a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D17a_Goursat1.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -1100,7 +1100,7 @@ The example below uses the following code in C\#
 Cyclides triples
 --------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D18a_CyclidesTriple.3D.xml (D18a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D18a_CyclidesTriple.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D18a_CyclidesTriple.3D.xml (D18a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D18a_CyclidesTriple.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -1166,7 +1166,7 @@ The example below uses the following code in C\#
 Ship Lamé
 ------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D19a_ShipLame.3D.xml (D19a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D19a_ShipLame.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D19a_ShipLame.3D.xml (D19a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C03_GeneralisationsOfSurfaces/D19a_ShipLame.3D.xml>`__.
 
 
 The example below uses the following code in C\#

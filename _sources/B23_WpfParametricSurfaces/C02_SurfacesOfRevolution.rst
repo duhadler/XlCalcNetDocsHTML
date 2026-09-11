@@ -41,7 +41,7 @@ The standard parameterization of a surface of revolution is given by
 One-Sheeted Hyperboloid
 ------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_Hyperboloid1.3D.xml (D01a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D01a_Hyperboloid1.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_Hyperboloid1.3D.xml (D01a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D01a_Hyperboloid1.3D.xml>`__.
 
 
 
@@ -93,7 +93,7 @@ See also: https://en.wikipedia.org/wiki/Hyperboloid
 Sphere
 ------------------------------------------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_SphereSqrt.3D.xml (D02a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D02a_SphereSqrt.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_SphereSqrt.3D.xml (D02a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D02a_SphereSqrt.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -158,7 +158,7 @@ See also: http://www.3d-meier.de/tut3/Seite86.html, Sphere
 Prolate Spheroid
 ----------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_ProlateSpheroidoid.3D.xml (D03a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D03a_ProlateSpheroidoid.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_ProlateSpheroidoid.3D.xml (D03a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D03a_ProlateSpheroidoid.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -209,7 +209,7 @@ See also: https://mathworld.wolfram.com/OblateSpheroid.html  Oblate Spheroid
 Oblate Spheroid
 ----------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_OblateSpheroidoid.3D.xml (D04a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D04a_OblateSpheroidoid.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_OblateSpheroidoid.3D.xml (D04a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D04a_OblateSpheroidoid.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -264,7 +264,7 @@ See also: https://mathworld.wolfram.com/OblateSpheroid.html  Oblate Spheroid
 Drop surface
 -------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_DropSurface.3D.xml (D05a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D05a_DropSurface.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_DropSurface.3D.xml (D05a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D05a_DropSurface.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -315,7 +315,7 @@ The example below uses the following code in C\#
 Egg surface
 --------------------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_EggSurface.3D.xml (D06a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D06a_EggSurface.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_EggSurface.3D.xml (D06a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D06a_EggSurface.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -368,7 +368,7 @@ For the egg surface, also see Meier
 Apple surface
 --------------------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D07a_Apple.3D.xml (D07a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D07a_Apple.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D07a_Apple.3D.xml (D07a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D07a_Apple.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -417,7 +417,7 @@ For the apple surface, also see Meier
 Spinning top
 -------------------------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D08a_Spinningtop.3D.xml (D08a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D08a_Spinningtop.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D08a_Spinningtop.3D.xml (D08a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D08a_Spinningtop.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -468,7 +468,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Pseudosphere
 -----------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D09a_PseudoSphere.3D.xml (D09a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D09a_PseudoSphere.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D09a_PseudoSphere.3D.xml (D09a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D09a_PseudoSphere.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -517,7 +517,7 @@ See also: https://mathworld.wolfram.com/Pseudosphere.html
 Wave sphere Surface
 --------------------------------------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D10a_WaveSphere.3D.xml (D10a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D10a_WaveSphere.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D10a_WaveSphere.3D.xml (D10a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D10a_WaveSphere.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -561,7 +561,7 @@ The example below uses the following code in C\#
 Torus
 -----------------------------------------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D11a_Torus.3D.xml (D11a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D11a_Torus.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D11a_Torus.3D.xml (D11a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D11a_Torus.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -610,7 +610,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Horn Torus
 ----------------------------------------------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D12a_HornTorus.3D.xml (D12a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D12a_HornTorus.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D12a_HornTorus.3D.xml (D12a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D12a_HornTorus.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -657,7 +657,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Spindle Torus
 ----------------------------------------------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D13a_SpindelTorus.3D.xml (D13a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D13a_SpindelTorus.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D13a_SpindelTorus.3D.xml (D13a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D13a_SpindelTorus.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -707,7 +707,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Elliptic Torus
 ----------------------------------------------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D14a_EllipticTorus.3D.xml (D14a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D14a_EllipticTorus.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D14a_EllipticTorus.3D.xml (D14a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C02_SurfacesOfRevolution/D14a_EllipticTorus.3D.xml>`__.
 
 
 The example below uses the following code in C\#

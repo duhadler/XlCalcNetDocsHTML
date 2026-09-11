@@ -56,7 +56,7 @@ When the curve does not have double points, nor a cusp, it forms a knot in space
 Lissajous knot 1-1-1
 ----------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_Path_111_LKnot_P090T090.3D.xml (D01a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C08_LissajousKnots/D01a_Path_111_LKnot_P090T090.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_Path_111_LKnot_P090T090.3D.xml (D01a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C08_LissajousKnots/D01a_Path_111_LKnot_P090T090.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -122,7 +122,7 @@ The example below uses the following code in C\#
 Lissajous knot 1-2-1
 -------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_Path_121_LKnot_P090T090.3D.xml (D02a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C08_LissajousKnots/D02a_Path_121_LKnot_P090T090.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_Path_121_LKnot_P090T090.3D.xml (D02a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C08_LissajousKnots/D02a_Path_121_LKnot_P090T090.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -185,7 +185,7 @@ The example below uses the following code in C\#
 Lissajous knot 1-5-3
 ----------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_Path_153_LKnot_P090T090.3D.xml (D03a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C08_LissajousKnots/D03a_Path_153_LKnot_P090T090.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_Path_153_LKnot_P090T090.3D.xml (D03a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C08_LissajousKnots/D03a_Path_153_LKnot_P090T090.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -250,7 +250,7 @@ The example below uses the following code in C\#
 Lissajous knot 3-5-2
 --------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_Path_352_LKnot_P090T090.3D.xml (D04a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C08_LissajousKnots/D04a_Path_352_LKnot_P090T090.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_Path_352_LKnot_P090T090.3D.xml (D04a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C08_LissajousKnots/D04a_Path_352_LKnot_P090T090.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -316,7 +316,7 @@ The example below uses the following code in C\#
 Lissajous knot 3-5-7
 ----------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_Path_357_LKnot_P090T090.3D.xml (D05a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C08_LissajousKnots/D05a_Path_357_LKnot_P090T090.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_Path_357_LKnot_P090T090.3D.xml (D05a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C08_LissajousKnots/D05a_Path_357_LKnot_P090T090.3D.xml>`__.
 
 
 The example below uses the following code in C\#

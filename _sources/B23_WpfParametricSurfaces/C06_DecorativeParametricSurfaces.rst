@@ -46,7 +46,7 @@ https://ambientcg.com/list?category=&date=&createdUsing=&basedOn=&q=&method=&typ
 Bourke Seashell
 -----------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_BourkeSeaShell.3D.xml (D01a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D01a_BourkeSeaShell.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_BourkeSeaShell.3D.xml (D01a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D01a_BourkeSeaShell.3D.xml>`__.
 
 
 See also: http://paulbourke.net/geometry/spiral/
@@ -96,7 +96,7 @@ See also: http://paulbourke.net/geometry/spiral/
 Seashell (mathworld.wolfram)
 ---------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_Seashell.3D.xml (D02a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D02a_Seashell.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_Seashell.3D.xml (D02a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D02a_Seashell.3D.xml>`__.
 
 
 
@@ -143,7 +143,7 @@ See also: https://mathworld.wolfram.com/Seashell.html
 3D Apple
 -------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_Apple.3D.xml (D03a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D03a_Apple.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_Apple.3D.xml (D03a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D03a_Apple.3D.xml>`__.
 
 
 .. code-block:: csharp
@@ -187,7 +187,7 @@ The XML code for the example below can be found online in the ``DataXlCalcNet`` 
 Bow curve
 ----------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_BowCurve.3D.xml (D04a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D04a_BowCurve.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_BowCurve.3D.xml (D04a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D04a_BowCurve.3D.xml>`__.
 
 
 See also: http://paulbourke.net/geometry/toroidal/
@@ -230,7 +230,7 @@ See also: http://paulbourke.net/geometry/toroidal/
 Fish Surface
 --------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_Fish.3D.xml (D05a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D05a_Fish.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_Fish.3D.xml (D05a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D05a_Fish.3D.xml>`__.
 
 
 See also: http://www.3d-meier.de/tut3/Seite47.html
@@ -282,7 +282,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Bourke Horn
 --------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_BourkeHorn.3D.xml (D06a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D06a_BourkeHorn.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_BourkeHorn.3D.xml (D06a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D06a_BourkeHorn.3D.xml>`__.
 
 
 See also: http://paulbourke.net/geometry/spiral/
@@ -329,7 +329,7 @@ See also: http://paulbourke.net/geometry/spiral/
 Hexa torus
 --------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D07a_HexaTorus.3D.xml (D07a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D07a_HexaTorus.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D07a_HexaTorus.3D.xml (D07a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D07a_HexaTorus.3D.xml>`__.
 
 
 See also: http://paulbourke.net/geometry/toroidal/
@@ -382,7 +382,7 @@ The C\# code for the Klein bottle:
 3D Breather Surface
 -------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D08a_Breather.3D.xml (D08a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D08a_Breather.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D08a_Breather.3D.xml (D08a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D08a_Breather.3D.xml>`__.
 
 
 See also: https://en.wikipedia.org/wiki/Breather_surface
@@ -431,7 +431,7 @@ See also: https://mathworld.wolfram.com/BreatherSurface.html
 Kuen surface
 ----------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D09a_Kuen.3D.xml (D09a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D09a_Kuen.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D09a_Kuen.3D.xml (D09a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D09a_Kuen.3D.xml>`__.
 
 
 See also: https://mathworld.wolfram.com/KuenSurface.html
@@ -486,7 +486,7 @@ See also: https://mathcurve.com/surfaces.gb/kuen/kuen.shtml
 Tranguloid trefoil
 --------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D10a_TranguloidTrefoil.3D.xml (D10a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D10a_TranguloidTrefoil.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D10a_TranguloidTrefoil.3D.xml (D10a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D10a_TranguloidTrefoil.3D.xml>`__.
 
 
 See also: http://paulbourke.net/geometry/tranguloid/
@@ -538,7 +538,7 @@ See also: http://www.3d-meier.de/tut3/Seite159.html
 Triaxial teardrop
 --------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D11a_TearDrop.3D.xml (D11a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D11a_TearDrop.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D11a_TearDrop.3D.xml (D11a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D11a_TearDrop.3D.xml>`__.
 
 
 See also: http://paulbourke.net/geometry/triaxtear/
@@ -585,7 +585,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Gray Bottle
 --------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D12a_GrayBottel.3D.xml (D12a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D12a_GrayBottel.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D12a_GrayBottel.3D.xml (D12a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D12a_GrayBottel.3D.xml>`__.
 
 
 See also: http://paulbourke.net/geometry/toroidal/
@@ -628,7 +628,7 @@ See also: http://paulbourke.net/geometry/toroidal/
 Surfaces mimicking snail shells
 -----------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D13a_Snail1.3D.xml (D13a-u) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D13a_Snail1.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D13a_Snail1.3D.xml (D13a-u) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D13a_Snail1.3D.xml>`__.
 
 
 See also: http://www.3d-meier.de/tut3/Seite89.html

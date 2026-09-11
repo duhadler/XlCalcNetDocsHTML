@@ -31,7 +31,7 @@ See also: https://en.wikipedia.org/wiki/Spring_(device)
 Spring 1
 --------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_Path_Spring1.3D.xml (D01a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C05_Springs/D01a_Path_Spring1.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_Path_Spring1.3D.xml (D01a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C05_Springs/D01a_Path_Spring1.3D.xml>`__.
 
 
 
@@ -68,7 +68,7 @@ The example below uses the following code in C\#
 Spring 2
 ---------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_Path_Spring2.3D.xml (D02a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C05_Springs/D02a_Path_Spring2.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_Path_Spring2.3D.xml (D02a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C05_Springs/D02a_Path_Spring2.3D.xml>`__.
 
 
 
@@ -105,7 +105,7 @@ The example below uses the following code in C\#
 Spring 3
 ----------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_Path_Spring4.3D.xml (D04a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C05_Springs/D04a_Path_Spring4.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_Path_Spring4.3D.xml (D04a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C05_Springs/D04a_Path_Spring4.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -142,7 +142,7 @@ The example below uses the following code in C\#
 Spring 4
 ------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_Path_Spring4.3D.xml (D04a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C05_Springs/D04a_Path_Spring4.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_Path_Spring4.3D.xml (D04a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C05_Springs/D04a_Path_Spring4.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -180,7 +180,7 @@ The example below uses the following code in C\#
 Spring 5
 --------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_Path_Spring5.3D.xml (D05a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C05_Springs/D05a_Path_Spring5.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_Path_Spring5.3D.xml (D05a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C05_Springs/D05a_Path_Spring5.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -218,7 +218,7 @@ The example below uses the following code in C\#
 Spring 6
 ------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_Path_Spring6.3D.xml (D06a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C05_Springs/D06a_Path_Spring6.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_Path_Spring6.3D.xml (D06a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C05_Springs/D06a_Path_Spring6.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -257,7 +257,7 @@ The example below uses the following code in C\#
 Spring 7
 -------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D07a_Path_Spring7.3D.xml (D07a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C05_Springs/D07a_Path_Spring7.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D07a_Path_Spring7.3D.xml (D07a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C05_Springs/D07a_Path_Spring7.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -296,7 +296,7 @@ The example below uses the following code in C\#
 Spring 8
 -------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D08a_Path_Spring8.3D.xml (D08a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C05_Springs/D08a_Path_Spring8.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D08a_Path_Spring8.3D.xml (D08a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C05_Springs/D08a_Path_Spring8.3D.xml>`__.
 
 
 The example below uses the following code in C\#

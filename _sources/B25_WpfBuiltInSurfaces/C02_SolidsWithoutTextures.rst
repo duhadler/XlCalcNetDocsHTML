@@ -40,7 +40,7 @@ A prism is a polyhedron comprising an n-sided polygon base, a second base which 
 Triangular Prism
 -------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_TriangularPrism.3D.xml (D01a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D01a_TriangularPrism.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_TriangularPrism.3D.xml (D01a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D01a_TriangularPrism.3D.xml>`__.
 
 
 
@@ -87,7 +87,7 @@ The example below uses the following code in C\#
 Square prism
 -----------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_SquarePrism.3D.xml (D02a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D02a_SquarePrism.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_SquarePrism.3D.xml (D02a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D02a_SquarePrism.3D.xml>`__.
 
 
 See also: https://mathworld.wolfram.com/Cube.html
@@ -130,7 +130,7 @@ The example below uses the following code in C\#
 Hexagonal prism
 ---------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_HexagonalPrism.3D.xml (D03a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D03a_HexagonalPrism.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_HexagonalPrism.3D.xml (D03a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D03a_HexagonalPrism.3D.xml>`__.
 
 
 The hexagonal prism is a prism with hexagonal base. Prisms are polyhedrons; this polyhedron has 8 faces, 18 edges, and 12 vertices.
@@ -175,7 +175,7 @@ The example below uses the following code in C\#
 Octagonal prism
 ----------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_OctagonalPrism.3D.xml (D04a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D04a_OctagonalPrism.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_OctagonalPrism.3D.xml (D04a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D04a_OctagonalPrism.3D.xml>`__.
 
 
 The octagonal prism is a prism comprising eight rectangular sides joining two regular octagon caps. 
@@ -224,7 +224,7 @@ The example below uses the following code in C\#
 Cylinder
 ------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D05a_Cylinder.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D05a_Cylinder.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D05a_Cylinder.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D05a_Cylinder.3D.xml>`__.
 
 
 A cylinder  is considered a prism with a circle as its base. The cylinder obtained by rotating a line segment about a fixed line that it is parallel to is a cylinder of revolution. A cylinder of revolution is a right circular cylinder.
@@ -268,7 +268,7 @@ The example below uses the following code in C\#
 Cylinder, truncated by an inclined plane
 ---------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_Cylinder_Tilted.3D.xml (D06a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D06a_Cylinder_Tilted.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_Cylinder_Tilted.3D.xml (D06a-b) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D06a_Cylinder_Tilted.3D.xml>`__.
 
 
 A cylinder  is considered a prism with a circle as its base. The cylinder obtained by rotating a line segment about a fixed line that it is parallel to is a cylinder of revolution. A cylinder of revolution is a right circular cylinder.
@@ -322,7 +322,7 @@ The example below uses the following code in C\#
 Pyramid
 --------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D07a_Pyramid.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D07a_Pyramid.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D07a_Pyramid.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D07a_Pyramid.3D.xml>`__.
 
 
 A pyramid is a polyhedron formed by connecting a polygonal base and a point, called the apex. Each base edge and apex form a triangle, called a lateral face. It is a conic solid with a polygonal base. Many types of pyramids can be found by determining the shape of bases, or cutting off the apex. 
@@ -361,7 +361,7 @@ The example below uses the following code in C\#
 Pyramid frustum
 -----------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D08a_Frustum.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D08a_Frustum.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D08a_Frustum.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D08a_Frustum.3D.xml>`__.
 
 
 A frustum of a pyramid is the portion of the pyramid that lies between two parallel planes cutting the pyramid. In a truncated  pyramid, the truncation plane is not necessarily parallel to the pyramid's base (as in a frustum), i.e. it is inclined.
@@ -404,7 +404,7 @@ The example below uses the following code in C\#
 Pyramid, truncated by an inclined plane
 ---------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D09a_Frustum_Inclined.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D09a_Frustum_Inclined.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D09a_Frustum_Inclined.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D09a_Frustum_Inclined.3D.xml>`__.
 
 
 A frustum of a pyramid is the portion of the pyramid that lies between two parallel planes cutting the pyramid. In a truncated  pyramid, the truncation plane is not necessarily parallel to the pyramid's base (as in a frustum), i.e. it is inclined.
@@ -448,7 +448,7 @@ The example below uses the following code in C\#
 Cone 
 ----------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D10a_Cone.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D10a_Cone.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D10a_Cone.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D10a_Cone.3D.xml>`__.
 
 
 A cone is a three-dimensional geometric shape that tapers smoothly from a flat base (frequently, though not necessarily, circular) to a point called the apex or vertex. A cone with a polygonal base is called a pyramid.
@@ -488,7 +488,7 @@ The example below uses the following code in C\#
 Cone Frustum
 -------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D11a_ConeFrustum.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D11a_ConeFrustum.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D11a_ConeFrustum.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D11a_ConeFrustum.3D.xml>`__.
 
 
 A cone is a three-dimensional geometric shape that tapers smoothly from a flat base (frequently, though not necessarily, circular) to a point called the apex or vertex. A cone with a polygonal base is called a pyramid.
@@ -532,7 +532,7 @@ The example below uses the following code in C\#
 Cone, truncated by an inclined plane
 ------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D12a_ConeFrustum_Inclined.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D12a_ConeFrustum_Inclined.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D12a_ConeFrustum_Inclined.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C02_SolidsWithoutTextures/D12a_ConeFrustum_Inclined.3D.xml>`__.
 
 
 A cone is a three-dimensional geometric shape that tapers smoothly from a flat base (frequently, though not necessarily, circular) to a point called the apex or vertex. A cone with a polygonal base is called a pyramid.

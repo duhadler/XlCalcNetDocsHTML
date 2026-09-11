@@ -32,7 +32,7 @@ Nonorientable (one-sided) Surfaces
 Moebius Strip
 ------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_Moebius.3D.xml (D01a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C05_NonorientableSurfaces/D01a_Moebius.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_Moebius.3D.xml (D01a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C05_NonorientableSurfaces/D01a_Moebius.3D.xml>`__.
 
 
 The example below uses the following code in C\#
@@ -89,7 +89,7 @@ See also: https://mathworld.wolfram.com/MoebiusStrip.html
 Cross-Cap Surface
 ------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_CrossCap.3D.xml (D02a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C05_NonorientableSurfaces/D02a_CrossCap.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_CrossCap.3D.xml (D02a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C05_NonorientableSurfaces/D02a_CrossCap.3D.xml>`__.
 
 
 See also: https://mathworld.wolfram.com/Cross-Cap.html
@@ -140,7 +140,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Pseudo Cross-Cap Surface
 --------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_PseudoCrossCap.3D.xml (D03a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C05_NonorientableSurfaces/D03a_PseudoCrossCap.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_PseudoCrossCap.3D.xml (D03a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C05_NonorientableSurfaces/D03a_PseudoCrossCap.3D.xml>`__.
 
 
 See also: https://mathworld.wolfram.com/Pseudocrosscap.html
@@ -185,7 +185,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Roman Surface (or Steiner Surface)
 -----------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_Roman.3D.xml (D04a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C05_NonorientableSurfaces/D04a_Roman.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_Roman.3D.xml (D04a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C05_NonorientableSurfaces/D04a_Roman.3D.xml>`__.
 
 
 See also: https://mathworld.wolfram.com/RomanSurface.html
@@ -243,7 +243,7 @@ See also  Wikipedia :cite:p:`Wikipedia2D101`,  MathWorld :cite:p:`Wolfram3D101`.
 Klein bagel
 -----------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_KleinBagel.3D.xml (D05a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C05_NonorientableSurfaces/D05a_KleinBagel.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_KleinBagel.3D.xml (D05a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C05_NonorientableSurfaces/D05a_KleinBagel.3D.xml>`__.
 
 
 See also: https://en.wikipedia.org/wiki/Klein_bottle#The_figure_8_immersion
@@ -292,7 +292,7 @@ This is the 'bagel' form of a Klein bottle, a 4 dimensional object with a single
 Klein bottle
 ---------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_KleinBottle3.3D.xml (D06a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C05_NonorientableSurfaces/D06a_KleinBottle3.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_KleinBottle3.3D.xml (D06a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C05_NonorientableSurfaces/D06a_KleinBottle3.3D.xml>`__.
 
 
 See also: http://www.mapleprimes.com/maplesoftblog/95570-Klein-Bottle-Plot
@@ -343,7 +343,7 @@ See also: https://mathworld.wolfram.com/KleinBottle.html
 3D Boy Surface, version 1
 -----------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D07a_BoySurface.3D.xml (D07a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C05_NonorientableSurfaces/D07a_BoySurface.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D07a_BoySurface.3D.xml (D07a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C05_NonorientableSurfaces/D07a_BoySurface.3D.xml>`__.
 
 
 See also: https://en.wikipedia.org/wiki/Boy%27s_surface
@@ -402,7 +402,7 @@ See also: http://mathworld.wolfram.com/BoySurface.html
 3D Boy Surface, version 2
 -------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D08a_BoySurface2.3D.xml (D08a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C05_NonorientableSurfaces/D08a_BoySurface2.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D08a_BoySurface2.3D.xml (D08a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C05_NonorientableSurfaces/D08a_BoySurface2.3D.xml>`__.
 
 
 See also: https://en.wikipedia.org/wiki/Boy%27s_surface
@@ -456,7 +456,7 @@ See also: http://mathworld.wolfram.com/BoySurface.html
 Morin Surface
 -------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D08a_BoySurface2.3D.xml (D09a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B23_WpfParametricSurfaces/C05_NonorientableSurfaces/D09a_Morin3.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D08a_BoySurface2.3D.xml (D09a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C05_NonorientableSurfaces/D09a_Morin3.3D.xml>`__.
 
 
 // See also: http://www.3d-meier.de/tut3/Seite221.html  // Morin Surface

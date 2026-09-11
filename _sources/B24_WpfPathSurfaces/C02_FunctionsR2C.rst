@@ -26,7 +26,7 @@ Functions with real input and complex results
 Expj (Cis) function
 --------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_Path_Func_Expj_2Dx.3D.xml (D01a-e) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C02_FunctionsR2C/D01a_Path_Func_Expj_2Dx.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_Path_Func_Expj_2Dx.3D.xml (D01a-e) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C02_FunctionsR2C/D01a_Path_Func_Expj_2Dx.3D.xml>`__.
 
 
 Returns `e^{iz} = \cos(z) + i \sin(z)`. See also Wikipedia :cite:p:`WikipediaFun1035`, MathWorld :cite:p:`WolframFun1035`.
@@ -117,7 +117,7 @@ Some text
 Hankel function of the first kind `H_{1, \nu}(x)`
 ----------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_Path_Func_Hankel1_2Dx.3D.xml (D02a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C02_FunctionsR2C/D02a_Path_Func_Hankel1_2Dx.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_Path_Func_Hankel1_2Dx.3D.xml (D02a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C02_FunctionsR2C/D02a_Path_Func_Hankel1_2Dx.3D.xml>`__.
 
 
 Returns the Hankel function of the first kind, defined as `\displaystyle H^{(1)}_{\nu}(x) = J_{\nu}(x) + i Y_{\nu}(x)`.
@@ -195,7 +195,7 @@ The example below uses the following code in C\#, for real and imaginary part co
 Hankel function of the second kind `H_{2, \nu}(x)`
 ------------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_Path_Func_Hankel2_2Dx.3D.xml (D03a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C02_FunctionsR2C/D03a_Path_Func_Hankel2_2Dx.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_Path_Func_Hankel2_2Dx.3D.xml (D03a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C02_FunctionsR2C/D03a_Path_Func_Hankel2_2Dx.3D.xml>`__.
 
 
 Returns the Hankel function of the second kind, defined as `\displaystyle H^{(2)}_{\nu}(x) = J_{\nu}(x) - i Y_{\nu}(x)`.
@@ -274,7 +274,7 @@ The example below uses the following code in C\#, for real and imaginary part co
 Kelvin functions ber and bei
 ------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_Path_Func_KelvinBerBei_2Dx.3D.xml (D04a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C02_FunctionsR2C/D04a_Path_Func_KelvinBerBei_2Dx.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_Path_Func_KelvinBerBei_2Dx.3D.xml (D04a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C02_FunctionsR2C/D04a_Path_Func_KelvinBerBei_2Dx.3D.xml>`__.
 
 
 Returns the Kelvin functions ber bei. See also  Wikipedia :cite:p:`WikipediaFun1040`, MathWorld :cite:p:`WolframFun1040`, NIST :cite:p:`DLMFun1040`.
@@ -356,7 +356,7 @@ The example below uses the following code in C\#, for the real and imaginary par
 Kelvin functions ker and kei
 ---------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_Path_Func_KelvinKerKei_2Dx.3D.xml (D05a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C02_FunctionsR2C/D05a_Path_Func_KelvinKerKei_2Dx.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_Path_Func_KelvinKerKei_2Dx.3D.xml (D05a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C02_FunctionsR2C/D05a_Path_Func_KelvinKerKei_2Dx.3D.xml>`__.
 
 
 Returns the Kelvin function ker.  See also  Wikipedia :cite:p:`WikipediaFun1042`, MathWorld :cite:p:`WolframFun1042`, NIST :cite:p:`DLMFun1040`.

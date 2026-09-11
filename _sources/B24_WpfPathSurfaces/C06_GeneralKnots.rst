@@ -25,7 +25,7 @@ General knots
 Trefoil A
 --------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_Path_Trefoil_Knoten_A.3D.xml (D01a-d) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C06_GeneralKnots/D01a_Path_Trefoil_Knoten_A.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_Path_Trefoil_Knoten_A.3D.xml (D01a-d) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C06_GeneralKnots/D01a_Path_Trefoil_Knoten_A.3D.xml>`__.
 
 
 See also: https://en.wikipedia.org/wiki/Trefoil_knot
@@ -81,7 +81,7 @@ The example below uses the following code in C\#
 Trefoil B
 --------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_Path_Trefoil_Knoten_B.3D.xml (D02a-d) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C06_GeneralKnots/D02a_Path_Trefoil_Knoten_B.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_Path_Trefoil_Knoten_B.3D.xml (D02a-d) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C06_GeneralKnots/D02a_Path_Trefoil_Knoten_B.3D.xml>`__.
 
 
 See also: https://en.wikipedia.org/wiki/Trefoil_knot
@@ -136,7 +136,7 @@ The example below uses the following code in C\#
 Square knot
 ---------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_Path_SquareKnotP_P90T90.3D.xml (D03a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C06_GeneralKnots/D03a_Path_SquareKnotP_P90T90.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_Path_SquareKnotP_P90T90.3D.xml (D03a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C06_GeneralKnots/D03a_Path_SquareKnotP_P90T90.3D.xml>`__.
 
 
 See also:  https://en.wikipedia.org/wiki/Square_knot_(mathematics)
@@ -203,7 +203,7 @@ The example below uses the following code in C\#
 Granny knot
 --------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_Path_GrannyKnot.3D.xml (D04a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C06_GeneralKnots/D04a_Path_GrannyKnot.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_Path_GrannyKnot.3D.xml (D04a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C06_GeneralKnots/D04a_Path_GrannyKnot.3D.xml>`__.
 
 
 See also: https://en.wikipedia.org/wiki/Granny_knot_(mathematics)
@@ -271,7 +271,7 @@ The example below uses the following code in C\#
 Cinquefoil Knot
 ------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_Path_CinquefoilKnot.3D.xml (D05a-d) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C06_GeneralKnots/D05a_Path_CinquefoilKnot.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_Path_CinquefoilKnot.3D.xml (D05a-d) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C06_GeneralKnots/D05a_Path_CinquefoilKnot.3D.xml>`__.
 
 
 See also: https://en.wikipedia.org/wiki/Cinquefoil_knot
@@ -336,7 +336,7 @@ The example below uses the following code in C\#
 74 Knot
 -----------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_Path_74Knot.3D.xml (D06a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C06_GeneralKnots/D06a_Path_74Knot.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_Path_74Knot.3D.xml (D06a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C06_GeneralKnots/D06a_Path_74Knot.3D.xml>`__.
 
 
 See also: https://en.wikipedia.org/wiki/74_knot
@@ -409,7 +409,7 @@ The example below uses the following code in C\#
 Figure-eight knot
 -------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D07a_Path_FigureEightKnot.3D.xml (D07a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C06_GeneralKnots/D07a_Path_FigureEightKnot.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D07a_Path_FigureEightKnot.3D.xml (D07a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C06_GeneralKnots/D07a_Path_FigureEightKnot.3D.xml>`__.
 
 
 See also: https://mathcurve.com/courbes3d.gb/noeuds/noeudenhuit.shtml

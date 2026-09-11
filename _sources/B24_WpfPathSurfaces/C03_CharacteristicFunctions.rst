@@ -27,7 +27,7 @@ Characteristic functions of statistical distributions
 Uniform distribution
 ---------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_CfUniform.3D.xml (D01a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C03_CharacteristicFunctions/D01a_CfUniform.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_CfUniform.3D.xml (D01a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C03_CharacteristicFunctions/D01a_CfUniform.3D.xml>`__.
 
 
 The uniform distribution is a continuous probability distribution  on the support interval `[a, b]` with finite `a < b`.
@@ -92,7 +92,7 @@ The example below uses the following code in C\#
 Normal distribution
 -------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_Path_Func_CfNormal.3D.xml (D02a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C03_CharacteristicFunctions/D02a_Path_Func_CfNormal.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_Path_Func_CfNormal.3D.xml (D02a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C03_CharacteristicFunctions/D02a_Path_Func_CfNormal.3D.xml>`__.
 
 
 The normal distribution is a continuous probability distribution with mean `\mu \in \mathbb{R}`,  standard deviation `\sigma > 0`, and the support interval `(-\infty, +\infty)`.
@@ -153,7 +153,7 @@ The example below uses the following code in C\#
 Chi-squared distribution
 ------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_Path_Func_CfChiSquared.3D.xml (D03a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C03_CharacteristicFunctions/D03a_Path_Func_CfChiSquared.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_Path_Func_CfChiSquared.3D.xml (D03a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C03_CharacteristicFunctions/D03a_Path_Func_CfChiSquared.3D.xml>`__.
 
 
 
@@ -213,7 +213,7 @@ The example below uses the following code in C\#
 Beta distribution
 -----------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_Path_Func_CfBeta.3D.xml (D04a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C03_CharacteristicFunctions/D04a_Path_Func_CfBeta.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_Path_Func_CfBeta.3D.xml (D04a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C03_CharacteristicFunctions/D04a_Path_Func_CfBeta.3D.xml>`__.
 
 
 The beta distribution is a continuous probability distribution with parameters `a > 0`,  `b > 0`, and the support interval `(0, 1)`.
@@ -277,7 +277,7 @@ The example below uses the following code in C\#
 F distribution
 --------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_Path_Func_CfFisherF.3D.xml (D05a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C03_CharacteristicFunctions/D05a_Path_Func_CfFisherF.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_Path_Func_CfFisherF.3D.xml (D05a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C03_CharacteristicFunctions/D05a_Path_Func_CfFisherF.3D.xml>`__.
 
 
 The Fisher `F`-distribution is a continuous probability distribution with `m > 0` and  `n > 0` degrees of freedom, and the support interval `(0, +\infty)`.
@@ -343,7 +343,7 @@ The example below uses the following code in C\#
 Non-central Chi-squared distribution
 ----------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_Path_Func_CfChiSquaredNc.3D.xml (D06a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C03_CharacteristicFunctions/D06a_Path_Func_CfChiSquaredNc.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_Path_Func_CfChiSquaredNc.3D.xml (D06a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C03_CharacteristicFunctions/D06a_Path_Func_CfChiSquaredNc.3D.xml>`__.
 
 
 The noncentral chi-square distribution is a continuous probability distribution with degrees of freedom `n>0`, 
@@ -406,7 +406,7 @@ The example below uses the following code in C\#
 Binomial distribution
 -------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D07a_Path_Func_CfBinomial.3D.xml (D07a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C03_CharacteristicFunctions/D07a_Path_Func_CfBinomial.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D07a_Path_Func_CfBinomial.3D.xml (D07a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C03_CharacteristicFunctions/D07a_Path_Func_CfBinomial.3D.xml>`__.
 
 
 The binomial distribution is a discrete (lattice) probability distribution  with number of trials `n \ge 0` and success probability `0 \le p \le 1`.
@@ -470,7 +470,7 @@ The example below uses the following code in C\#
 Hypergeometric distribution
 ------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D08a_Path_Func_CfHypergeo.3D.xml (D08a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C03_CharacteristicFunctions/D08a_Path_Func_CfHypergeo.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D08a_Path_Func_CfHypergeo.3D.xml (D08a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C03_CharacteristicFunctions/D08a_Path_Func_CfHypergeo.3D.xml>`__.
 
 
 The hypergeometric distribution is a discrete (lattice) probability distribution  with `k` successes (random draws for which the object drawn has a specified feature) in `n \in \{0, 1 ,2, \ldots, N \}` draws, without replacement, from a finite population of size `N \in \{0, 1 ,2, \ldots \}`` that contains exactly `K \in \{0, 1 ,2, \ldots, N \}` objects with that feature, wherein each draw is either a success or a failure, and the support interval `(\max(0,n+K-N), \min(K,n))`.

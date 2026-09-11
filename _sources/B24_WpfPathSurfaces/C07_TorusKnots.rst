@@ -27,7 +27,7 @@ See also: https://katlas.org/wiki/36_Torus_Knots
 Torus knot 3:2
 --------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_TorusKnotp3q2.3D.xml (D01a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C07_TorusKnots/D01a_TorusKnotp3q2.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_TorusKnotp3q2.3D.xml (D01a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C07_TorusKnots/D01a_TorusKnotp3q2.3D.xml>`__.
 
 
 Some text
@@ -98,7 +98,7 @@ The example below uses the following code in C\#
 Torus knot 5:2
 -------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_TorusKnotp5q2.3D.xml (D02a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C07_TorusKnots/D02a_TorusKnotp5q2.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_TorusKnotp5q2.3D.xml (D02a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C07_TorusKnots/D02a_TorusKnotp5q2.3D.xml>`__.
 
 
 Some text
@@ -167,7 +167,7 @@ The example below uses the following code in C\#
 Torus knot 7:2
 ----------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_TorusKnotp7q2.3D.xml (D03a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C07_TorusKnots/D03a_TorusKnotp7q2.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_TorusKnotp7q2.3D.xml (D03a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C07_TorusKnots/D03a_TorusKnotp7q2.3D.xml>`__.
 
 
 Some text
@@ -241,7 +241,7 @@ The example below uses the following code in C\#
 Torus knot 7:3
 --------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_TorusKnotp7q3.3D.xml (D04a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C07_TorusKnots/D04a_TorusKnotp7q3.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_TorusKnotp7q3.3D.xml (D04a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C07_TorusKnots/D04a_TorusKnotp7q3.3D.xml>`__.
 
 
 Some text
@@ -308,7 +308,7 @@ The example below uses the following code in C\#
 Torus knot 15:2
 ------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_TorusKnotp15q2.3D.xml (D05a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C07_TorusKnots/D05a_TorusKnotp15q2.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_TorusKnotp15q2.3D.xml (D05a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C07_TorusKnots/D05a_TorusKnotp15q2.3D.xml>`__.
 
 
 Some text

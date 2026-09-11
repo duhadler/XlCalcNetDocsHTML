@@ -39,7 +39,7 @@ See also: https://mathworld.wolfram.com/Augmentation.html
 Tetrahedron
 ------------------------------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D01a_Tetrahedron.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D01a_Tetrahedron.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D01a_Tetrahedron.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D01a_Tetrahedron.3D.xml>`__.
 
 
 A regular tetrahedron is a tetrahedron in which all four faces are equilateral triangles. In other words, all of its faces are the same size and shape (congruent) and all edges are the same length.
@@ -80,7 +80,7 @@ The example below uses the following code in C\#
 Cube
 ---------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Cube.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D02a_Cube.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D02a_Cube.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D02a_Cube.3D.xml>`__.
 
 
 A cube is a three-dimensional solid object bounded by six square faces. It has twelve edges and eight vertices. It can be represented as a rectangular cuboid with six square faces, or a parallelepiped with equal edges.
@@ -121,7 +121,7 @@ The example below uses the following code in C\#
 Octahedron
 ---------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D03a_Octahedron.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D03a_Octahedron.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D03a_Octahedron.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D03a_Octahedron.3D.xml>`__.
 
 
 A regular octahedron is an octahedron that is a regular polyhedron. All the faces of a regular octahedron are equilateral triangles of the same size, and exactly four triangles meet at each vertex. A regular octahedron is convex, meaning that for any two points within it, the line segment connecting them lies entirely within it. 
@@ -163,7 +163,7 @@ The example below uses the following code in C\#
 Dodecahedron
 ----------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D04a_Dodecahedron.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D04a_Dodecahedron.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D04a_Dodecahedron.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D04a_Dodecahedron.3D.xml>`__.
 
 
 A regular dodecahedron or pentagonal dodecahedron is a dodecahedron composed of regular pentagonal faces, three meeting at each vertex.
@@ -204,7 +204,7 @@ The example below uses the following code in C\#
 Icosahedron 
 -----------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D05a_Icosahedron.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D05a_Icosahedron.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D05a_Icosahedron.3D.xml <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D05a_Icosahedron.3D.xml>`__.
 
 
 A regular icosahedron (or simply icosahedron) is a convex polyhedron that can be constructed from pentagonal antiprism by attaching two pentagonal pyramids with regular faces to each of its pentagonal faces, or by putting points onto the cube.
@@ -243,7 +243,7 @@ The example below uses the following code in C\#
 Geodesic sphere
 -----------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D06a_Geodesic_Sphere1.3D.xml (D06a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D06a_Geodesic_Sphere1.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D06a_Geodesic_Sphere1.3D.xml (D06a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D06a_Geodesic_Sphere1.3D.xml>`__.
 
 
 A spherical polyhedron or spherical tiling is a tiling of the sphere in which the surface is divided or partitioned by great arcs into bounded regions called spherical polygons
@@ -301,7 +301,7 @@ The example below uses the following code in C\#
 Augmented Octahedron
 --------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D07a_Augm_Octahedron_a.3D.xml (D07a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D07a_Augm_Octahedron_a.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D07a_Augm_Octahedron_a.3D.xml (D07a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D07a_Augm_Octahedron_a.3D.xml>`__.
 
 
 Returns the augmented Octahedron.
@@ -343,7 +343,7 @@ The example below uses the following code in C\#
 Augmented Dodecahedron
 -------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D08a_Augm_Dodecahedron_a.3D.xml (D08a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D08a_Augm_Dodecahedron_a.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D08a_Augm_Dodecahedron_a.3D.xml (D08a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D08a_Augm_Dodecahedron_a.3D.xml>`__.
 
 
 Returns the augmented Dodecahedron.
@@ -385,7 +385,7 @@ The example below uses the following code in C\#
 Augmented Icosahedron
 -------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D09a_Augm_Icosahedron_a.3D.xml (D09a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D09a_Augm_Icosahedron_a.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D09a_Augm_Icosahedron_a.3D.xml (D09a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D09a_Augm_Icosahedron_a.3D.xml>`__.
 
 Returns the augmented Dodecahedron.
 
@@ -423,7 +423,7 @@ The example below uses the following code in C\#
 Augmented Geodesic Sphere
 -----------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D10a_Augm_Geodesic_a.3D.xml (D10a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D10a_Augm_Geodesic_a.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D10a_Augm_Geodesic_a.3D.xml (D10a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D10a_Augm_Geodesic_a.3D.xml>`__.
 
 
 Returns augmented versions of the Geodesic.
@@ -465,7 +465,7 @@ The example below uses the following code in C\#
 Stella Octangula
 ----------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D11a_StellaOctangula.3D.xml (D10a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D11a_StellaOctangula.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D11a_StellaOctangula.3D.xml (D10a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D11a_StellaOctangula.3D.xml>`__.
 
 
 The stella octangula is a polyhedron compound composed of a tetrahedron and its dual (a second tetrahedron rotated 180 degrees with respect to the first). The stella octangula is also (incorrectly) called the augmented tetrahedron, and is the only stellation of the octahedron.
@@ -505,7 +505,7 @@ The example below uses the following code in C\#
 Small stellated Dodecahedron
 ---------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D12a_SmallStellatedDodecahedron.3D.xml (D10a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D12a_SmallStellatedDodecahedron.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D12a_SmallStellatedDodecahedron.3D.xml (D10a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D12a_SmallStellatedDodecahedron.3D.xml>`__.
 
 
 The small stellated dodecahedron is the Kepler-Poinsot polyhedra whose dual polyhedron is the great dodecahedron.
@@ -549,7 +549,7 @@ The example below uses the following code in C\#
 Great Dodecahedron
 ------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D13a_GreatDodecahedron.3D.xml (D10a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D13a_GreatDodecahedron.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D13a_GreatDodecahedron.3D.xml (D10a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D13a_GreatDodecahedron.3D.xml>`__.
 
 
 The great dodecahedron is the Kepler-Poinsot polyhedron whose dual is the small augmented dodecahedron. 
@@ -599,7 +599,7 @@ The example below uses the following code in C\#
 Great stellated Dodecahedron
 --------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D14a_GreatStellatedDodecahedron.3D.xml (D10a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D14a_GreatStellatedDodecahedron.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D14a_GreatStellatedDodecahedron.3D.xml (D10a-c) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B25_WpfBuiltInSurfaces/C03_PlatonicSolids/D14a_GreatStellatedDodecahedron.3D.xml>`__.
 
 
 The great augmented dodecahedron is one of the Kepler-Poinsot polyhedra. 

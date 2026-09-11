@@ -50,7 +50,7 @@ NOTE: the item "H. Stop of y, v [STOP2]" determines the diameter of the helix.
 Cylindrical helix
 -------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_Path_SpiralCylindrical.3D.xml (D01a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D01a_Path_SpiralCylindrical.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D01a_Path_SpiralCylindrical.3D.xml (D01a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D01a_Path_SpiralCylindrical.3D.xml>`__.
 
 
 See also: https://mathcurve.com/courbes3d.gb/helicecirculaire/helicecirculaire.shtml
@@ -119,7 +119,7 @@ The example below uses the following code in C\#
 Conical helix based on Archimedes spiral (spiral of Pappus)
 -------------------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_Path_SpiralAConical.3D.xml (D02a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D02a_Path_SpiralAConical.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D02a_Path_SpiralAConical.3D.xml (D02a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D02a_Path_SpiralAConical.3D.xml>`__.
 
 
 See also: https://en.wikipedia.org/wiki/Conical_spiral
@@ -199,7 +199,7 @@ The example below uses the following code in C\#
 Conical helix based on Fermat's spiral 
 ----------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_Path_SpiralFConical.3D.xml (D03a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D03a_Path_SpiralFConical.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D03a_Path_SpiralFConical.3D.xml (D03a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D03a_Path_SpiralFConical.3D.xml>`__.
 
 
 See also: https://en.wikipedia.org/wiki/Conical_spiral
@@ -267,7 +267,7 @@ The example below uses the following code in C\#
 Conical helix based on the logarithmic spiral  (Concho-Spiral)
 ---------------------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_Path_SpiralLConical.3D.xml (D04a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D04a_Path_SpiralLConical.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D04a_Path_SpiralLConical.3D.xml (D04a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D04a_Path_SpiralLConical.3D.xml>`__.
 
 
 See also: https://mathworld.wolfram.com/Concho-Spiral.html
@@ -340,7 +340,7 @@ The example below uses the following code in C\#
 Rhumb line of the sphere
 ------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_Path_SphericalRhumbline.3D.xml (D05a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D05a_Path_SphericalRhumbline.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D05a_Path_SphericalRhumbline.3D.xml (D05a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D05a_Path_SphericalRhumbline.3D.xml>`__.
 
 
 See also: https://mathcurve.com/courbes3d.gb/loxodromie/sphereloxodromie.shtml
@@ -414,7 +414,7 @@ The example below uses the following code in C\#
 Clelia
 ----------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_Path_SphericalClelia.3D.xml (D06a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D06a_Path_SphericalClelia.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D06a_Path_SphericalClelia.3D.xml (D06a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D06a_Path_SphericalClelia.3D.xml>`__.
 
 
 
@@ -491,7 +491,7 @@ The example below uses the following code in C\#
 Spherical helix
 ------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D07a_Path_SphericalHelix.3D.xml (D07a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D07a_Path_SphericalHelix.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D07a_Path_SphericalHelix.3D.xml (D07a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D07a_Path_SphericalHelix.3D.xml>`__.
 
 
 See also: https://mathworld.wolfram.com/SphericalSpiral.html
@@ -567,7 +567,7 @@ The example below uses the following code in C\#
 Satellite curve
 ----------------------------------------------------------------------------------------------------
 
-The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D08a_Path_SphericalSatellite.3D.xml (D08a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DInteractiveExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D08a_Path_SphericalSatellite.3D.xml>`__.
+The XML code for the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the files `D08a_Path_SphericalSatellite.3D.xml (D08a-f) <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B24_WpfPathSurfaces/C04_HelicesAndRelated/D08a_Path_SphericalSatellite.3D.xml>`__.
 
 
 
