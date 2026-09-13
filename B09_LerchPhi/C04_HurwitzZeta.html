@@ -53,7 +53,7 @@
     <link rel="prev" title="Polylogarithm and related functions" href="C03_Polylogarithm.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -867,7 +867,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalized-harmonic-number-function-h-x-r">Generalized harmonic number function, <span class="math notranslate nohighlight">\(H_x^{(r)}\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.harmonic2"><code class="docutils literal notranslate"><span class="pre">math53.harmonic2()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.harmonic2"><code class="docutils literal notranslate"><span class="pre">ctx.harmonic2()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bernoulli-numbers-b-n">Bernoulli numbers, <span class="math notranslate nohighlight">\(B_n\)</span></a><ul class="visible nav section-nav flex-column">
@@ -875,7 +875,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bernoulli-polynomials-b-n-x">Bernoulli polynomials, <span class="math notranslate nohighlight">\(B_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.bernpoly"><code class="docutils literal notranslate"><span class="pre">math53.bernpoly()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.bernpoly"><code class="docutils literal notranslate"><span class="pre">ctx.bernpoly()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#euler-numbers">Euler numbers</a><ul class="visible nav section-nav flex-column">
@@ -883,7 +883,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#euler-polynomials-e-n-x">Euler polynomials, <span class="math notranslate nohighlight">\(E_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.eulerpoly"><code class="docutils literal notranslate"><span class="pre">math53.eulerpoly()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.eulerpoly"><code class="docutils literal notranslate"><span class="pre">ctx.eulerpoly()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#barnes-g-function">Barnes G-function</a><ul class="visible nav section-nav flex-column">
@@ -979,8 +979,8 @@ document.write(`
 <section id="generalized-harmonic-number-function-h-x-r">
 <h2>Generalized harmonic number function, <span class="math notranslate nohighlight">\(H_x^{(r)}\)</span><a class="headerlink" href="#generalized-harmonic-number-function-h-x-r" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.harmonic2">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">harmonic2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.harmonic2" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.harmonic2">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">harmonic2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.harmonic2" title="Link to this definition">#</a></dt>
 <dd><p>Returns the generalized harmonic function  <span class="math notranslate nohighlight">\(H_x^{(r)} = \zeta(r) - \zeta(r,x+1)\)</span> for <span class="math notranslate nohighlight">\(r \ne 1\)</span> and <span class="math notranslate nohighlight">\(H_x^{(r)} = H_x\)</span> for <span class="math notranslate nohighlight">\(r = 1\)</span>.</p>
 <p>See also:  Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1107" title="Wikipedia. Harmonic number. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Harmonic_number.">1265</a>]</span>, MathWorld <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1568" title="E. W. Weisstein. Generalized Harmonic Numbers. From MathWorld - A Wolfram Web Resource, 2010. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/HarmonicNumber.html.">909</a>]</span>, <span id="id8">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.6.21).</p>
 <p>An example in Python</p>
@@ -1058,8 +1058,8 @@ document.write(`
 <section id="bernoulli-polynomials-b-n-x">
 <h2>Bernoulli polynomials, <span class="math notranslate nohighlight">\(B_n(x)\)</span><a class="headerlink" href="#bernoulli-polynomials-b-n-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.bernpoly">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">bernpoly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.bernpoly" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.bernpoly">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">bernpoly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.bernpoly" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(\displaystyle B_n(x) = \sum_{n=0}^{\infty} \binom{n}{k} B_k x^{n-k}\)</span>, the Bernoulli polynomial of degree <span class="math notranslate nohighlight">\(n \ge 0\)</span>.</p>
 <p>See also  Wikipedia <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id1074" title="Wikipedia. Bernoulli polynomials. Wikimedia Foundation, 2012. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Bernoulli_polynomials.">1231</a>]</span>, MathWorld <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id1532" title="E. W. Weisstein. Bernoulli Polynomial. From MathWorld - A Wolfram Web Resource, 2008. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/BernoulliPolynomial.html.">865</a>]</span>, NIST <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id464" title="K. Dilcher. Bernoulli and Euler Polynomials. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/24.2.">235</a>]</span>, <span id="id18">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.10.3), Flint <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id580" title="The FLINT Team. Acb: Bernoulli polynomial (in: Zeta function). FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb.html#zeta-function.">716</a>]</span>, Mpmath <span id="id20">[<a class="reference internal" href="../99BackMatter/index.html#id673" title="The Mpmath Development Team. Bernoulli polynomial. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2010. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/numtheory.html#bernpoly.">574</a>]</span>.</p>
 <p>See the Amath documentation (p. 146) for connection formula to Hurwitz Zeta.</p>
@@ -1131,8 +1131,8 @@ document.write(`
 <section id="euler-polynomials-e-n-x">
 <h2>Euler polynomials, <span class="math notranslate nohighlight">\(E_n(x)\)</span><a class="headerlink" href="#euler-polynomials-e-n-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.eulerpoly">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">eulerpoly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.eulerpoly" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.eulerpoly">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">eulerpoly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.eulerpoly" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(\displaystyle E_n(x) = \frac{2}{n+1} \left( B_{n+1}(x)-2^{n+1}B_{n+1}\left(\frac{x}{2}\right) \right)\)</span>, the Euler polynomial of degree <span class="math notranslate nohighlight">\(n \ge 0\)</span>. Special values include the Euler numbers <span class="math notranslate nohighlight">\(E_n = 2^n E_n(1/2)\)</span>.</p>
 <p>See also  Wikipedia <span id="id26">[<a class="reference internal" href="../99BackMatter/index.html#id1101" title="Wikipedia. Euler polynomials; in: Bernoulli polynomials. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bernoulli_polynomials.">1259</a>]</span>, MathWorld <span id="id27">[<a class="reference internal" href="../99BackMatter/index.html#id1562" title="E. W. Weisstein. Euler Polynomial. From MathWorld - A Wolfram Web Resource, 2010. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/EulerPolynomial.html.">907</a>]</span>, NIST <span id="id28">[<a class="reference internal" href="../99BackMatter/index.html#id464" title="K. Dilcher. Bernoulli and Euler Polynomials. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/24.2.">235</a>]</span>, <span id="id29">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.10.9), Mpmath <span id="id30">[<a class="reference internal" href="../99BackMatter/index.html#id701" title="The Mpmath Development Team. Euler Polynomial. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/numtheory.html#eulerpoly.">600</a>]</span>.</p>
 <div class="math notranslate nohighlight">
@@ -1405,7 +1405,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalized-harmonic-number-function-h-x-r">Generalized harmonic number function, <span class="math notranslate nohighlight">\(H_x^{(r)}\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.harmonic2"><code class="docutils literal notranslate"><span class="pre">math53.harmonic2()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.harmonic2"><code class="docutils literal notranslate"><span class="pre">ctx.harmonic2()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bernoulli-numbers-b-n">Bernoulli numbers, <span class="math notranslate nohighlight">\(B_n\)</span></a><ul class="visible nav section-nav flex-column">
@@ -1413,7 +1413,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bernoulli-polynomials-b-n-x">Bernoulli polynomials, <span class="math notranslate nohighlight">\(B_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.bernpoly"><code class="docutils literal notranslate"><span class="pre">math53.bernpoly()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.bernpoly"><code class="docutils literal notranslate"><span class="pre">ctx.bernpoly()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#euler-numbers">Euler numbers</a><ul class="visible nav section-nav flex-column">
@@ -1421,7 +1421,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#euler-polynomials-e-n-x">Euler polynomials, <span class="math notranslate nohighlight">\(E_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.eulerpoly"><code class="docutils literal notranslate"><span class="pre">math53.eulerpoly()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.eulerpoly"><code class="docutils literal notranslate"><span class="pre">ctx.eulerpoly()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#barnes-g-function">Barnes G-function</a><ul class="visible nav section-nav flex-column">
@@ -1473,7 +1473,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

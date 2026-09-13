@@ -53,7 +53,7 @@
     <link rel="prev" title="Introduction" href="C01_Introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -871,19 +871,19 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brent-s-algorithm-for-finding-a-local-minimum">Brent’s algorithm for finding a local minimum</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.localmin"><code class="docutils literal notranslate"><span class="pre">math53.localmin()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.localmin"><code class="docutils literal notranslate"><span class="pre">ctx.localmin()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modified-brents-algorithm-for-finding-a-local-minimum">Modified Brent’s algorithm for finding a local minimum</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.mbrent"><code class="docutils literal notranslate"><span class="pre">math53.mbrent()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mbrent"><code class="docutils literal notranslate"><span class="pre">ctx.mbrent()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rootfinding-brent-dekker-algorithm">Rootfinding: Brent/Dekker algorithm</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.zbrent"><code class="docutils literal notranslate"><span class="pre">math53.zbrent()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.zbrent"><code class="docutils literal notranslate"><span class="pre">ctx.zbrent()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rootfinding-simplified-brent-dekker-algorithm">Rootfinding: Simplified Brent/Dekker algorithm</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.zeroin"><code class="docutils literal notranslate"><span class="pre">math53.zeroin()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.zeroin"><code class="docutils literal notranslate"><span class="pre">ctx.zeroin()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -921,7 +921,7 @@ document.write(`
 <p>See also:  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id881" title="Wikipedia. Quadratic equation. Wikimedia Foundation, 2004. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Quadratic_equation.">1065</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1419" title="E. W. Weisstein. Quadratic Equation. From MathWorld - A Wolfram Web Resource, 2004. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/QuadraticEquation.html.">799</a>]</span>.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="o">-</span><span class="mi">13</span><span class="p">;</span>  <span class="n">b</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>  <span class="n">c</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ic</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span> <span class="o">=</span> <span class="n">math53</span><span class="o">.</span><span class="n">squadx</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ic</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">squadx</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ic: &quot;</span><span class="p">,</span> <span class="n">ic</span><span class="p">,</span><span class="s2">&quot;x1: &quot;</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span><span class="s2">&quot;y1: &quot;</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span><span class="s2">&quot;x2: &quot;</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span><span class="s2">&quot;y2: &quot;</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -957,7 +957,7 @@ x2:  0.7928172202244673 y2:  0.0
 <p>See also:  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id882" title="Wikipedia. Cubic equation. Wikimedia Foundation, 2004. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Cubic_equation.">1056</a>]</span>, MathWorld <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1420" title="E. W. Weisstein. Cubic Formula. From MathWorld - A Wolfram Web Resource, 2004. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/CubicFormula.html.">786</a>]</span>.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="o">-</span><span class="mi">13</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">x0</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span> <span class="o">=</span> <span class="n">math53</span><span class="o">.</span><span class="n">cubsolve</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x0</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">cubsolve</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x0: &quot;</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span><span class="s2">&quot;x1: &quot;</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span><span class="s2">&quot;y1: &quot;</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span><span class="s2">&quot;x2: &quot;</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span><span class="s2">&quot;y2: &quot;</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -974,8 +974,8 @@ x2:  -0.27584912069607076 y2:  0.11582803026356575
 <section id="brent-s-algorithm-for-finding-a-local-minimum">
 <h2>Brent’s algorithm for finding a local minimum<a class="headerlink" href="#brent-s-algorithm-for-finding-a-local-minimum" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.localmin">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">localmin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.localmin" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.localmin">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">localmin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.localmin" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>. Returns a local minimum of the function <span class="math notranslate nohighlight">\(f\)</span> in the interval (a, b), implementing Brent’s algorithm.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1094,8 +1094,8 @@ x2:  -0.27584912069607076 y2:  0.11582803026356575
 <section id="modified-brents-algorithm-for-finding-a-local-minimum">
 <h2>Modified Brent’s algorithm for finding a local minimum<a class="headerlink" href="#modified-brents-algorithm-for-finding-a-local-minimum" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.mbrent">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">mbrent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.mbrent" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mbrent">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mbrent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mbrent" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>. Returns a local minimum of the function <span class="math notranslate nohighlight">\(f\)</span> in the interval (a, b), implementing a modified (simplified) version of Brent’s algorithm as in  procedure localmin with fixed eps=0.5*sqrt(eps_x).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1126,8 +1126,8 @@ x2:  -0.27584912069607076 y2:  0.11582803026356575
 <section id="rootfinding-brent-dekker-algorithm">
 <h2>Rootfinding: Brent/Dekker algorithm<a class="headerlink" href="#rootfinding-brent-dekker-algorithm" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.zbrent">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">zbrent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.zbrent" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.zbrent">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">zbrent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.zbrent" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>. Performs the Brent/Dekker algorithm with guaranteed convergence for finding a zero of a function,; assumes that f(a) and f(b) have different signs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1159,8 +1159,8 @@ x2:  -0.27584912069607076 y2:  0.11582803026356575
 <section id="rootfinding-simplified-brent-dekker-algorithm">
 <h2>Rootfinding: Simplified Brent/Dekker algorithm<a class="headerlink" href="#rootfinding-simplified-brent-dekker-algorithm" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.zeroin">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">zeroin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.zeroin" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.zeroin">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">zeroin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.zeroin" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>. Performs a simplified version of the Brent/Dekker algorithm for finding a zero of a function; assumes that f(a) and f(b) have different signs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1243,19 +1243,19 @@ x2:  -0.27584912069607076 y2:  0.11582803026356575
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brent-s-algorithm-for-finding-a-local-minimum">Brent’s algorithm for finding a local minimum</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.localmin"><code class="docutils literal notranslate"><span class="pre">math53.localmin()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.localmin"><code class="docutils literal notranslate"><span class="pre">ctx.localmin()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modified-brents-algorithm-for-finding-a-local-minimum">Modified Brent’s algorithm for finding a local minimum</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.mbrent"><code class="docutils literal notranslate"><span class="pre">math53.mbrent()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mbrent"><code class="docutils literal notranslate"><span class="pre">ctx.mbrent()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rootfinding-brent-dekker-algorithm">Rootfinding: Brent/Dekker algorithm</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.zbrent"><code class="docutils literal notranslate"><span class="pre">math53.zbrent()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.zbrent"><code class="docutils literal notranslate"><span class="pre">ctx.zbrent()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rootfinding-simplified-brent-dekker-algorithm">Rootfinding: Simplified Brent/Dekker algorithm</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.zeroin"><code class="docutils literal notranslate"><span class="pre">math53.zeroin()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.zeroin"><code class="docutils literal notranslate"><span class="pre">ctx.zeroin()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1291,7 +1291,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

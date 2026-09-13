@@ -29,7 +29,7 @@ Non-normalized lower incomplete beta function, `B_{\mathrm{lower}}(a,b;x)`
 
     where ``ctx`` is ``math53``, ``ctxboost`` or ``ctxflint``.
 
-    Note: math53.beta3(a, b, x), ctxboost.IBetaNonNormalized(a, b, x)
+    Note: ctx.beta3(a, b, x), ctxboost.IBetaNonNormalized(a, b, x)
 
     Returns the non-normalized incomplete beta function `\displaystyle B_x(a,b) =  B_{\mathrm{lower}}(a,b;x)  = \int_0^x t^{a-1} (1-t)^{b-1}  \, \mathrm{d}t, \,` for `a>0`, `b>0`, and `0 \leq x \leq 1`. 
 
@@ -163,7 +163,7 @@ Normalized incomplete beta function, `I_{x}(a,b)`
 Derivative of the incomplete beta function
 -------------------------------------------------------------------------------
 
-.. method:: ctx.real_ibeta_prime(a, b, x)
+.. method:: ctx.ibeta_prime(a, b, x)
 
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
@@ -202,7 +202,7 @@ Real non-normalized upper incomplete beta function, `B_{\mathrm{upper}}(a,b;x)`
 
     where ``ctx`` is ``math53``, ``ctxboost`` or ``ctxflint``.
 
-    Note: math53.betac(a, b, x), ctxboost.IBetacNonNormalized(a, b, x)
+    Note: ctx.betac(a, b, x), ctxboost.IBetacNonNormalized(a, b, x)
 
 
     Returns the non-normalized incomplete beta function `\displaystyle B_{1-x}(a,b) =  B_{\mathrm{upper}}(a,b;x)  = \int_x^1 t^{a-1} (1-t)^{b-1}  \, \mathrm{d}t, \,` for `a>0`, `b>0`, and `0 \leq x \leq 1`. 
@@ -329,7 +329,7 @@ Inverse of the real normalised incomplete beta function
 
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
-    Returns the inverse of the normalised incomplete beta function calculates `x` with `Q(a,x) = p`. The input parameters are `a>0`, `b>0`, `p \geq 0`. 
+    Returns the inverse of the normalised incomplete beta function. Calculates `x` with `Q(a,x) = p`. The input parameters are `a>0`, `b>0`, `p \geq 0`. 
     
     
     See also  Wikipedia :cite:p:`WikipediaFun04`, MathWorld :cite:p:`WolframFun04b`, NIST :cite:p:`DLMFun04`,  BoostMath :cite:p:`BoostFun04`,  BoostMath :cite:p:`BoostFun05`, :cite:t:`Ehrhardt2018` (3.5.3.5).
@@ -371,8 +371,7 @@ Inverse of the real normalised complementary incomplete beta function
 
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
-    Returns the functional inverse of the complement of the upper normalized incomplete beta function calculates `x` 
-    with `I_{1-x}(a,b) = p`. The input parameters are `a>0`, `b>0`, `p \geq 0, \leq 1`. 
+    Returns the functional inverse of the complement of the upper normalized incomplete beta function. Calculates `x` with `I_{1-x}(a,b) = p`. The input parameters are `a>0`, `b>0`, `p \geq 0, \leq 1`. 
     
     
     See also BoostMath :cite:p:`BoostFun05`, Wikipedia :cite:p:`WikipediaFun04`, MathWorld :cite:p:`WolframFun05`, NIST :cite:p:`DLMFun04`.

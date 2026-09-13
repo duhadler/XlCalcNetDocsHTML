@@ -53,7 +53,7 @@
     <link rel="prev" title="Weierstrass elliptic functions, in terms of (real) lattice invariants \(g_2, g_3\)" href="D02_WeierstrassG2G3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -863,15 +863,15 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weierstrass-function-wp-e-x-e-1-e-2-also-damath">Weierstrass function <span class="math notranslate nohighlight">\(\wp_e(x,e_1,e_2)\)</span> (also DAMath)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.weierstrass_p_e"><code class="docutils literal notranslate"><span class="pre">math53.weierstrass_p_e()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.weierstrass_p_e"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_p_e()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Weierstrass function <span class="math notranslate nohighlight">\(\wp'_e(x,e_1,e_2)\)</span> (also DAMath)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.weierstrass_pprime_e"><code class="docutils literal notranslate"><span class="pre">math53.weierstrass_pprime_e()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.weierstrass_pprime_e"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_pprime_e()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-weierstrass-function-wp-1-e-y-e-1-e-2-also-damath">Inverse Weierstrass function <span class="math notranslate nohighlight">\(\wp^{-1}_e(y,e_1,e_2)\)</span> (also DAMath)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.weierstrass_p_inv_e"><code class="docutils literal notranslate"><span class="pre">math53.weierstrass_p_inv_e()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.weierstrass_p_inv_e"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_p_inv_e()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weierstrass-zeta-function-zeta-e-z-e-1-e-2">Weierstrass Zeta function <span class="math notranslate nohighlight">\(\zeta_e(z, e_1, e_2)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -900,8 +900,8 @@ document.write(`
 <section id="weierstrass-function-wp-e-x-e-1-e-2-also-damath">
 <h2>Weierstrass function <span class="math notranslate nohighlight">\(\wp_e(x,e_1,e_2)\)</span> (also DAMath)<a class="headerlink" href="#weierstrass-function-wp-e-x-e-1-e-2-also-damath" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.weierstrass_p_e">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">weierstrass_p_e</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.weierstrass_p_e" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.weierstrass_p_e">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">weierstrass_p_e</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.weierstrass_p_e" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Weierstrass function <span class="math notranslate nohighlight">\(\wp_e(x,e_1,e_2)\)</span> using the lattice roots and the Jacobi functions (where the equation with the smallest <span class="math notranslate nohighlight">\(e_k \ge 0\)</span> is used). See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1157" title="Wikipedia. Weierstrass elliptic function: Modular discriminant. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Weierstrass_elliptic_function#Modular_discriminant.">1316</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1652" title="E. W. Weisstein. Weierstrass Elliptic Function. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/WeierstrassEllipticFunction.html.">969</a>]</span>, <span id="id3">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.2.17.2).</p>
 <div class="math notranslate nohighlight">
 \[\wp_e(x,e_1,e_2) = e_3 + \frac{e_1-e_3}{\mathrm{sn}^2(u,k)}  = e_2 + (e_1-e_3) \frac{\mathrm{dn}^2(u,k)}{\mathrm{sn}^2(u,k)}  = e_1 + (e_1-e_3) \frac{\mathrm{cn}^2(u,k)}{\mathrm{sn}^2(u,k)}, \quad k = \sqrt{\frac{e_2-e_3}{e_1-e_3}}, \quad u = x \sqrt{e_1-e_3}.\]</div>
@@ -925,8 +925,8 @@ document.write(`
 <section id="id10">
 <h2>Weierstrass function <span class="math notranslate nohighlight">\(\wp'_e(x,e_1,e_2)\)</span> (also DAMath)<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.weierstrass_pprime_e">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">weierstrass_pprime_e</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.weierstrass_pprime_e" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.weierstrass_pprime_e">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">weierstrass_pprime_e</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.weierstrass_pprime_e" title="Link to this definition">#</a></dt>
 <dd><p>Returns the derivative of the Weierstrass function <span class="math notranslate nohighlight">\(\wp'_e(x,e_1,e_2)\)</span>. See also Wikipedia <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id1157" title="Wikipedia. Weierstrass elliptic function: Modular discriminant. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Weierstrass_elliptic_function#Modular_discriminant.">1316</a>]</span>, MathWorld <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1652" title="E. W. Weisstein. Weierstrass Elliptic Function. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/WeierstrassEllipticFunction.html.">969</a>]</span>, <span id="id13">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.2.17.3).</p>
 <div class="math notranslate nohighlight">
 \[\wp'_e(x,e_1,e_2) =  -2(e_1-e_3)^{3/2} \frac{\mathrm{cn}(u,k)\mathrm{dn}(u,k)}{\mathrm{sn}^3(u,k)} , \quad k = \sqrt{\frac{e_2-e_3}{e_1-e_3}}, \quad u = x \sqrt{e_1-e_3}.\]</div>
@@ -948,8 +948,8 @@ document.write(`
 <section id="inverse-weierstrass-function-wp-1-e-y-e-1-e-2-also-damath">
 <h2>Inverse Weierstrass function <span class="math notranslate nohighlight">\(\wp^{-1}_e(y,e_1,e_2)\)</span> (also DAMath)<a class="headerlink" href="#inverse-weierstrass-function-wp-1-e-y-e-1-e-2-also-damath" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.weierstrass_p_inv_e">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">weierstrass_p_inv_e</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.weierstrass_p_inv_e" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.weierstrass_p_inv_e">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">weierstrass_p_inv_e</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.weierstrass_p_inv_e" title="Link to this definition">#</a></dt>
 <dd><p>Returns the functional inverse <span class="math notranslate nohighlight">\(\wp^{-1}_e\)</span> of the Weierstrass function for <span class="math notranslate nohighlight">\(y \ge e_1\)</span>, i.e. the smallest positive <span class="math notranslate nohighlight">\(x\)</span> with <span class="math notranslate nohighlight">\(\wp_e(x,e_1,e_2) = y\)</span>. The result is computed with the symmetric Carlson integral,</p>
 <div class="math notranslate nohighlight">
 \[\wp^{-1}_e(y,e_1,e_2) = \frac{1}{2} \int_y^{\infty} \frac{\mathrm{d}t}{\sqrt{(t-e_1)(t-e_2)(t-e_3)}} = R_F(y-e_1, y-e_2, y-e_3)\]</div>
@@ -1049,15 +1049,15 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weierstrass-function-wp-e-x-e-1-e-2-also-damath">Weierstrass function <span class="math notranslate nohighlight">\(\wp_e(x,e_1,e_2)\)</span> (also DAMath)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.weierstrass_p_e"><code class="docutils literal notranslate"><span class="pre">math53.weierstrass_p_e()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.weierstrass_p_e"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_p_e()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Weierstrass function <span class="math notranslate nohighlight">\(\wp'_e(x,e_1,e_2)\)</span> (also DAMath)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.weierstrass_pprime_e"><code class="docutils literal notranslate"><span class="pre">math53.weierstrass_pprime_e()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.weierstrass_pprime_e"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_pprime_e()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-weierstrass-function-wp-1-e-y-e-1-e-2-also-damath">Inverse Weierstrass function <span class="math notranslate nohighlight">\(\wp^{-1}_e(y,e_1,e_2)\)</span> (also DAMath)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.weierstrass_p_inv_e"><code class="docutils literal notranslate"><span class="pre">math53.weierstrass_p_inv_e()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.weierstrass_p_inv_e"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_p_inv_e()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weierstrass-zeta-function-zeta-e-z-e-1-e-2">Weierstrass Zeta function <span class="math notranslate nohighlight">\(\zeta_e(z, e_1, e_2)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -1101,7 +1101,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

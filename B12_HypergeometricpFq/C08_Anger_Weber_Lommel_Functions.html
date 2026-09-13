@@ -53,7 +53,7 @@
     <link rel="prev" title="Struve functions" href="C07_StruveFunctions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -863,19 +863,19 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anger-function-mathbf-j-nu-x">Anger function <span class="math notranslate nohighlight">\(\mathbf{J}_{\nu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxFlint.AngerJ"><code class="docutils literal notranslate"><span class="pre">CtxFlint.AngerJ()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxFlint.anger_j"><code class="docutils literal notranslate"><span class="pre">CtxFlint.anger_j()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weber-function-mathbf-e-nu-x">Weber function <span class="math notranslate nohighlight">\(\mathbf{E}_{\nu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxFlint.WeberE"><code class="docutils literal notranslate"><span class="pre">CtxFlint.WeberE()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxFlint.weber_e"><code class="docutils literal notranslate"><span class="pre">CtxFlint.weber_e()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lommel-function-s-mu-nu-x-s-1-mu-nu-x">Lommel function <span class="math notranslate nohighlight">\(s_{\mu,\nu}(x) = s^{(1)}_{\mu,\nu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxFlint.LommelS1"><code class="docutils literal notranslate"><span class="pre">CtxFlint.LommelS1()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxFlint.lommel_s1"><code class="docutils literal notranslate"><span class="pre">CtxFlint.lommel_s1()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lommel-function-s-mu-nu-x-s-2-mu-nu-x">Lommel function <span class="math notranslate nohighlight">\(S_{\mu,\nu}(x) = s^{(2)}_{\mu,\nu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxFlint.LommelS2"><code class="docutils literal notranslate"><span class="pre">CtxFlint.LommelS2()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxFlint.lommel_s2"><code class="docutils literal notranslate"><span class="pre">CtxFlint.lommel_s2()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -895,8 +895,8 @@ document.write(`
 <section id="anger-function-mathbf-j-nu-x">
 <span id="rst-mpm-angerj"></span><h2>Anger function <span class="math notranslate nohighlight">\(\mathbf{J}_{\nu}(x)\)</span><a class="headerlink" href="#anger-function-mathbf-j-nu-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="CtxFlint.AngerJ">
-<span class="sig-prename descclassname"><span class="pre">CtxFlint.</span></span><span class="sig-name descname"><span class="pre">AngerJ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CtxFlint.AngerJ" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="CtxFlint.anger_j">
+<span class="sig-prename descclassname"><span class="pre">CtxFlint.</span></span><span class="sig-name descname"><span class="pre">anger_j</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CtxFlint.anger_j" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Anger function J. See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1204" title="Wikipedia. Anger function. Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Anger_function.">1326</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1713" title="E. W. Weisstein. Anger Function J. From MathWorld - A Wolfram Web Resource, 2015. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/AngerFunction.html.">987</a>]</span>, NIST <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id518" title="R. B. Paris. Anger–Weber Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/11.10.">448</a>]</span>.</p>
 <p>Gives the Anger function</p>
 <div class="math notranslate nohighlight">
@@ -946,8 +946,8 @@ equation</p>
 <section id="weber-function-mathbf-e-nu-x">
 <span id="rst-mpm-webere"></span><h2>Weber function <span class="math notranslate nohighlight">\(\mathbf{E}_{\nu}(x)\)</span><a class="headerlink" href="#weber-function-mathbf-e-nu-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="CtxFlint.WeberE">
-<span class="sig-prename descclassname"><span class="pre">CtxFlint.</span></span><span class="sig-name descname"><span class="pre">WeberE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CtxFlint.WeberE" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="CtxFlint.weber_e">
+<span class="sig-prename descclassname"><span class="pre">CtxFlint.</span></span><span class="sig-name descname"><span class="pre">weber_e</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CtxFlint.weber_e" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Weber function E. See also  Wikipedia <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1204" title="Wikipedia. Anger function. Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Anger_function.">1326</a>]</span>, MathWorld <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1714" title="E. W. Weisstein. Weber Function E. From MathWorld - A Wolfram Web Resource, 2015. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/WeberFunctions.html.">996</a>]</span>, NIST <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id518" title="R. B. Paris. Anger–Weber Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/11.10.">448</a>]</span>.</p>
 <p>Gives the Weber function</p>
 <div class="math notranslate nohighlight">
@@ -997,8 +997,8 @@ equation</p>
 <section id="lommel-function-s-mu-nu-x-s-1-mu-nu-x">
 <span id="rst-mpm-lommels1"></span><h2>Lommel function <span class="math notranslate nohighlight">\(s_{\mu,\nu}(x) = s^{(1)}_{\mu,\nu}(x)\)</span><a class="headerlink" href="#lommel-function-s-mu-nu-x-s-1-mu-nu-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="CtxFlint.LommelS1">
-<span class="sig-prename descclassname"><span class="pre">CtxFlint.</span></span><span class="sig-name descname"><span class="pre">LommelS1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CtxFlint.LommelS1" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="CtxFlint.lommel_s1">
+<span class="sig-prename descclassname"><span class="pre">CtxFlint.</span></span><span class="sig-name descname"><span class="pre">lommel_s1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CtxFlint.lommel_s1" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Lommel function S1. See also  Wikipedia <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1205" title="Wikipedia. Lommel function. Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Lommel_function.">1348</a>]</span>, MathWorld <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1715" title="E. W. Weisstein. Lommel Function. From MathWorld - A Wolfram Web Resource, 2016. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/LommelFunction.html.">1001</a>]</span>, NIST <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id519" title="R. B. Paris. Lommel Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/11.9.">451</a>]</span>.</p>
 <p>Gives the Lommel function <span class="math notranslate nohighlight">\(s_{\mu,\nu}\)</span> or <span class="math notranslate nohighlight">\(s^{(1)}_{\mu,\nu}\)</span></p>
 <div class="math notranslate nohighlight">
@@ -1045,8 +1045,8 @@ equation</p>
 <section id="lommel-function-s-mu-nu-x-s-2-mu-nu-x">
 <span id="rst-mpm-lommels2"></span><h2>Lommel function <span class="math notranslate nohighlight">\(S_{\mu,\nu}(x) = s^{(2)}_{\mu,\nu}(x)\)</span><a class="headerlink" href="#lommel-function-s-mu-nu-x-s-2-mu-nu-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="CtxFlint.LommelS2">
-<span class="sig-prename descclassname"><span class="pre">CtxFlint.</span></span><span class="sig-name descname"><span class="pre">LommelS2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CtxFlint.LommelS2" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="CtxFlint.lommel_s2">
+<span class="sig-prename descclassname"><span class="pre">CtxFlint.</span></span><span class="sig-name descname"><span class="pre">lommel_s2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CtxFlint.lommel_s2" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Lommel function S2. See also  Wikipedia <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1205" title="Wikipedia. Lommel function. Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Lommel_function.">1348</a>]</span>, MathWorld <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id1715" title="E. W. Weisstein. Lommel Function. From MathWorld - A Wolfram Web Resource, 2016. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/LommelFunction.html.">1001</a>]</span>, NIST <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id519" title="R. B. Paris. Lommel Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/11.9.">451</a>]</span>.</p>
 <p>Gives the second Lommel function <span class="math notranslate nohighlight">\(S_{\mu,\nu}\)</span> or <span class="math notranslate nohighlight">\(s^{(2)}_{\mu,\nu}\)</span></p>
 <div class="math notranslate nohighlight">
@@ -1133,19 +1133,19 @@ equation</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anger-function-mathbf-j-nu-x">Anger function <span class="math notranslate nohighlight">\(\mathbf{J}_{\nu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxFlint.AngerJ"><code class="docutils literal notranslate"><span class="pre">CtxFlint.AngerJ()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxFlint.anger_j"><code class="docutils literal notranslate"><span class="pre">CtxFlint.anger_j()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weber-function-mathbf-e-nu-x">Weber function <span class="math notranslate nohighlight">\(\mathbf{E}_{\nu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxFlint.WeberE"><code class="docutils literal notranslate"><span class="pre">CtxFlint.WeberE()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxFlint.weber_e"><code class="docutils literal notranslate"><span class="pre">CtxFlint.weber_e()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lommel-function-s-mu-nu-x-s-1-mu-nu-x">Lommel function <span class="math notranslate nohighlight">\(s_{\mu,\nu}(x) = s^{(1)}_{\mu,\nu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxFlint.LommelS1"><code class="docutils literal notranslate"><span class="pre">CtxFlint.LommelS1()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxFlint.lommel_s1"><code class="docutils literal notranslate"><span class="pre">CtxFlint.lommel_s1()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lommel-function-s-mu-nu-x-s-2-mu-nu-x">Lommel function <span class="math notranslate nohighlight">\(S_{\mu,\nu}(x) = s^{(2)}_{\mu,\nu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxFlint.LommelS2"><code class="docutils literal notranslate"><span class="pre">CtxFlint.LommelS2()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxFlint.lommel_s2"><code class="docutils literal notranslate"><span class="pre">CtxFlint.lommel_s2()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1181,7 +1181,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

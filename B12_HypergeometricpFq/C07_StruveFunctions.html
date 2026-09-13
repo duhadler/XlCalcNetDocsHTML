@@ -53,7 +53,7 @@
     <link rel="prev" title="Scorer functions" href="C06_ScorerFunctions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -863,19 +863,19 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struve-function-mathbf-h-n-x">Struve function <span class="math notranslate nohighlight">\(\mathbf{H}_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.struve_h"><code class="docutils literal notranslate"><span class="pre">math53.struve_h()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.struve_h"><code class="docutils literal notranslate"><span class="pre">ctx.struve_h()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struve-function-mathbf-l-nu-x">Struve function <span class="math notranslate nohighlight">\(\mathbf{L}_{\nu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.struveL"><code class="docutils literal notranslate"><span class="pre">math53.struveL()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.struve_l"><code class="docutils literal notranslate"><span class="pre">ctx.struve_l()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struve-function-mathbf-k-nu-x">Struve function <span class="math notranslate nohighlight">\(\mathbf{K}_{\nu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.struveK"><code class="docutils literal notranslate"><span class="pre">math53.struveK()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.struve_k"><code class="docutils literal notranslate"><span class="pre">ctx.struve_k()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struve-function-mathbf-m-nu-x">Struve function <span class="math notranslate nohighlight">\(\mathbf{M}_{\nu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.struveM"><code class="docutils literal notranslate"><span class="pre">math53.struveM()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.struve_m"><code class="docutils literal notranslate"><span class="pre">ctx.struve_m()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -895,8 +895,8 @@ document.write(`
 <section id="struve-function-mathbf-h-n-x">
 <h2>Struve function <span class="math notranslate nohighlight">\(\mathbf{H}_n(x)\)</span><a class="headerlink" href="#struve-function-mathbf-h-n-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.struve_h">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">struve_h</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.struve_h" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.struve_h">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">struve_h</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.struve_h" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Struve function <span class="math notranslate nohighlight">\(H_{\nu}(x)\)</span>. See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1203" title="Wikipedia. Struve function. Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Struve_function.">1352</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1711" title="E. W. Weisstein. Struve Function H. From MathWorld - A Wolfram Web Resource, 2015. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/StruveFunction.html.">995</a>]</span>, NIST <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id517" title="R. B. Paris. Struve and Modified Struve Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/11.2.">452</a>]</span>, <span id="id4">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.1.9.3), Mpmath <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id827" title="The Mpmath Development Team. Struve function H. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2017. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/bessel.html#struveh.">703</a>]</span>.</p>
 <div class="math notranslate nohighlight">
 \[\,\mathbf{H}_n(x) =
@@ -949,8 +949,8 @@ document.write(`
 <section id="struve-function-mathbf-l-nu-x">
 <h2>Struve function <span class="math notranslate nohighlight">\(\mathbf{L}_{\nu}(x)\)</span><a class="headerlink" href="#struve-function-mathbf-l-nu-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.struveL">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">struveL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.struveL" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.struve_l">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">struve_l</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.struve_l" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Struve function L. See also  Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1203" title="Wikipedia. Struve function. Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Struve_function.">1352</a>]</span>, MathWorld <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1712" title="E. W. Weisstein. Modified Struve Function L. From MathWorld - A Wolfram Web Resource, 2015. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ModifiedStruveFunction.html.">994</a>]</span>, NIST <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id517" title="R. B. Paris. Struve and Modified Struve Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/11.2.">452</a>]</span>, <span id="id9">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.1.9.4), Mpmath <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id828" title="The Mpmath Development Team. Struve function L. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2017. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/bessel.html#struvel.">704</a>]</span>.</p>
 <p>Returns the Struve function <span class="math notranslate nohighlight">\(\mathbf{L}_{\nu}(x)\)</span>, defined as</p>
 <div class="math notranslate nohighlight">
@@ -1002,8 +1002,8 @@ document.write(`
 <section id="struve-function-mathbf-k-nu-x">
 <h2>Struve function <span class="math notranslate nohighlight">\(\mathbf{K}_{\nu}(x)\)</span><a class="headerlink" href="#struve-function-mathbf-k-nu-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.struveK">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">struveK</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.struveK" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.struve_k">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">struve_k</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.struve_k" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Struve function K(nu, z) = H(nu,z) - Y(n, z). See also  Wikipedia <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id1203" title="Wikipedia. Struve function. Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Struve_function.">1352</a>]</span>, MathWorld <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1712" title="E. W. Weisstein. Modified Struve Function L. From MathWorld - A Wolfram Web Resource, 2015. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ModifiedStruveFunction.html.">994</a>]</span>, NIST <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id517" title="R. B. Paris. Struve and Modified Struve Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/11.2.">452</a>]</span>.</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{K}_{\nu}\left(z\right)=\mathbf{H}_{\nu}\left(z\right)-Y_{\nu}\left(z \right)\]</div>
@@ -1048,8 +1048,8 @@ document.write(`
 <section id="struve-function-mathbf-m-nu-x">
 <h2>Struve function <span class="math notranslate nohighlight">\(\mathbf{M}_{\nu}(x)\)</span><a class="headerlink" href="#struve-function-mathbf-m-nu-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.struveM">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">struveM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.struveM" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.struve_m">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">struve_m</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.struve_m" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Struve function M(nu, z) = L(nu,z) - I(n, z).. See also  Wikipedia <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id1203" title="Wikipedia. Struve function. Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Struve_function.">1352</a>]</span>, MathWorld <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id1712" title="E. W. Weisstein. Modified Struve Function L. From MathWorld - A Wolfram Web Resource, 2015. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ModifiedStruveFunction.html.">994</a>]</span>, NIST <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id517" title="R. B. Paris. Struve and Modified Struve Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/11.2.">452</a>]</span>.</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{M}_{\nu}\left(z\right)=\mathbf{L}_{\nu}\left(z\right)-I_{\nu}\left(z \right).\]</div>
@@ -1138,19 +1138,19 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struve-function-mathbf-h-n-x">Struve function <span class="math notranslate nohighlight">\(\mathbf{H}_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.struve_h"><code class="docutils literal notranslate"><span class="pre">math53.struve_h()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.struve_h"><code class="docutils literal notranslate"><span class="pre">ctx.struve_h()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struve-function-mathbf-l-nu-x">Struve function <span class="math notranslate nohighlight">\(\mathbf{L}_{\nu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.struveL"><code class="docutils literal notranslate"><span class="pre">math53.struveL()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.struve_l"><code class="docutils literal notranslate"><span class="pre">ctx.struve_l()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struve-function-mathbf-k-nu-x">Struve function <span class="math notranslate nohighlight">\(\mathbf{K}_{\nu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.struveK"><code class="docutils literal notranslate"><span class="pre">math53.struveK()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.struve_k"><code class="docutils literal notranslate"><span class="pre">ctx.struve_k()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struve-function-mathbf-m-nu-x">Struve function <span class="math notranslate nohighlight">\(\mathbf{M}_{\nu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.struveM"><code class="docutils literal notranslate"><span class="pre">math53.struveM()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.struve_m"><code class="docutils literal notranslate"><span class="pre">ctx.struve_m()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1186,7 +1186,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

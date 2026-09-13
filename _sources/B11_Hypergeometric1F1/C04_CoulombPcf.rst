@@ -256,7 +256,7 @@ Irregular Coulomb wave function `H^{(-)}_{\ell}(\eta,x)`
 Whittaker function `M_{\kappa, \mu}(x)`
 -------------------------------------------------------------------------------
 
-.. method:: math53.whittaker_m(k, m, x)
+.. method:: ctx.whittaker_m(k, m, x)
 
     Returns `M_{\kappa, \mu}(x) = e^{-\frac{1}{2}x} x^{\frac{1}{2}+\mu} M(\tfrac{1}{2}+\mu-\kappa, 1+2\mu, x)`, the Whittaker function M.
 
@@ -335,7 +335,7 @@ Whittaker function `M_{\kappa, \mu}(x)`
 Whittaker function `W_{\kappa, \mu}(x)`
 -------------------------------------------------------------------------------
 
-.. method:: math53.whittaker_w(k, m, x)
+.. method:: ctx.whittaker_w(k, m, x)
 
     Returns `W_{\kappa, \mu}(x) = e^{-\frac{1}{2}x} x^{\frac{1}{2}+\mu} U(\tfrac{1}{2}+\mu-\kappa, 1+2\mu, x)`, the Whittaker function W.
 
@@ -402,7 +402,7 @@ Whittaker function `W_{\kappa, \mu}(x)`
 Parabolic cylinder function `D_{\nu}(x)`
 -------------------------------------------------------------------------------
 
-.. method:: math53.cylinder_d(nu, x)
+.. method:: ctx.cylinder_d(nu, x)
 
     Returns Whittaker’s parabolic cylinder function `D_n(z) = U(-n-1/2, z)` (see :ref:`pcfu() <rst_mpm_pcfu>`).
 
@@ -465,7 +465,7 @@ Parabolic cylinder function `D_{\nu}(x)`
 Parabolic cylinder function `U(a, x)`
 -------------------------------------------------------------------------------
 
-.. method:: math53.cylinder_u(a, x)
+.. method:: ctx.cylinder_u(a, x)
 
     Returns the parabolic cylinder function `U(a, x)`.
 
@@ -550,7 +550,7 @@ Parabolic cylinder function `U(a, x)`
 Parabolic cylinder function `V(a,x)`
 -------------------------------------------------------------------------------
 
-.. method:: math53.cylinder_v(a, x)
+.. method:: ctx.cylinder_v(a, x)
 
     Returns the  parabolic cylinder function `\displaystyle V(a,x)`, which can be
     represented in terms of :ref:`pcfu() <rst_mpm_pcfu>` as

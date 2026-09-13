@@ -53,7 +53,7 @@
     <link rel="prev" title="Mpmath: Rootfinding and optimization" href="C04_MpMathRootfindingOptimisation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -873,23 +873,23 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#point-gauss-kronrod-rule-infinite-interval-qagi">15-point Gauss-Kronrod rule, infinite interval (qagi)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.qagi"><code class="docutils literal notranslate"><span class="pre">math53.qagi()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.qagi"><code class="docutils literal notranslate"><span class="pre">ctx.qagi()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cauchy-principal-value-finite-interval-qawc">Cauchy principal value, finite interval (qawc)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.qawc"><code class="docutils literal notranslate"><span class="pre">math53.qawc()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.qawc"><code class="docutils literal notranslate"><span class="pre">ctx.qawc()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#double-exponential-de-transformation-finite-interval-intde">Double Exponential (DE) transformation, finite interval (intde)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.intde"><code class="docutils literal notranslate"><span class="pre">math53.intde()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.intde"><code class="docutils literal notranslate"><span class="pre">ctx.intde()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-transformation-infinite-interval-no-oscillatory-factor-intdei">DE transformation, infinite interval, no oscillatory factor (intdei)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.intdei"><code class="docutils literal notranslate"><span class="pre">math53.intdei()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.intdei"><code class="docutils literal notranslate"><span class="pre">ctx.intdei()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-transformation-infinite-interval-oscillatory-factor-intdeo">DE transformation, infinite interval, oscillatory factor (intdeo)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.intdeo"><code class="docutils literal notranslate"><span class="pre">math53.intdeo()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.intdeo"><code class="docutils literal notranslate"><span class="pre">ctx.intdeo()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1004,8 +1004,8 @@ document.write(`
 <section id="point-gauss-kronrod-rule-infinite-interval-qagi">
 <h2>15-point Gauss-Kronrod rule, infinite interval (qagi)<a class="headerlink" href="#point-gauss-kronrod-rule-infinite-interval-qagi" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.qagi">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">qagi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsabs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsrel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.qagi" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.qagi">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">qagi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bound</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsabs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsrel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.qagi" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>. Performs a global adaptive quadrature of f over an infinite interval based on a transformed 15-point Gauss-Kronrod for the subintervals, with acceleration by Wynn’s epsilon algorithm.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1039,8 +1039,8 @@ document.write(`
 <section id="cauchy-principal-value-finite-interval-qawc">
 <h2>Cauchy principal value, finite interval (qawc)<a class="headerlink" href="#cauchy-principal-value-finite-interval-qawc" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.qawc">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">qawc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsabs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsrel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.qawc" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.qawc">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">qawc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsabs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsrel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.qawc" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>. Performs an adaptive quadrature of <span class="math notranslate nohighlight">\(f(x)/(x-c)\)</span> over the finite interval <span class="math notranslate nohighlight">\((a,b)\)</span> with the singularity at <span class="math notranslate nohighlight">\(c\)</span> and <span class="math notranslate nohighlight">\(c\)</span> not equal <span class="math notranslate nohighlight">\(a\)</span> or <span class="math notranslate nohighlight">\(b\)</span>. The routine calculates an approximation result to the Cauchy principal value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1078,8 +1078,8 @@ document.write(`
 <section id="double-exponential-de-transformation-finite-interval-intde">
 <h2>Double Exponential (DE) transformation, finite interval (intde)<a class="headerlink" href="#double-exponential-de-transformation-finite-interval-intde" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.intde">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">intde</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.intde" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.intde">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">intde</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.intde" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>. Performs an automatic quadrature of f(x) over the finite interval (a,b)} using Double Exponential (DE) transformation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1111,8 +1111,8 @@ document.write(`
 <section id="de-transformation-infinite-interval-no-oscillatory-factor-intdei">
 <h2>DE transformation, infinite interval, no oscillatory factor (intdei)<a class="headerlink" href="#de-transformation-infinite-interval-no-oscillatory-factor-intdei" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.intdei">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">intdei</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.intdei" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.intdei">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">intdei</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.intdei" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>. Performs an automatic quadrature of f(x) over (a,INF) using Double Exponential transformation when f(x) has no oscillatory factor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1143,8 +1143,8 @@ document.write(`
 <section id="de-transformation-infinite-interval-oscillatory-factor-intdeo">
 <h2>DE transformation, infinite interval, oscillatory factor (intdeo)<a class="headerlink" href="#de-transformation-infinite-interval-oscillatory-factor-intdeo" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.intdeo">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">intdeo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.intdeo" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.intdeo">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">intdeo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.intdeo" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>.     Performs an automatic quadrature of f(x) over (a,INF) using Double Exponential transformation when f(x) has an oscillatory factor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1232,23 +1232,23 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#point-gauss-kronrod-rule-infinite-interval-qagi">15-point Gauss-Kronrod rule, infinite interval (qagi)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.qagi"><code class="docutils literal notranslate"><span class="pre">math53.qagi()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.qagi"><code class="docutils literal notranslate"><span class="pre">ctx.qagi()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cauchy-principal-value-finite-interval-qawc">Cauchy principal value, finite interval (qawc)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.qawc"><code class="docutils literal notranslate"><span class="pre">math53.qawc()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.qawc"><code class="docutils literal notranslate"><span class="pre">ctx.qawc()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#double-exponential-de-transformation-finite-interval-intde">Double Exponential (DE) transformation, finite interval (intde)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.intde"><code class="docutils literal notranslate"><span class="pre">math53.intde()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.intde"><code class="docutils literal notranslate"><span class="pre">ctx.intde()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-transformation-infinite-interval-no-oscillatory-factor-intdei">DE transformation, infinite interval, no oscillatory factor (intdei)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.intdei"><code class="docutils literal notranslate"><span class="pre">math53.intdei()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.intdei"><code class="docutils literal notranslate"><span class="pre">ctx.intdei()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-transformation-infinite-interval-oscillatory-factor-intdeo">DE transformation, infinite interval, oscillatory factor (intdeo)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.intdeo"><code class="docutils literal notranslate"><span class="pre">math53.intdeo()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.intdeo"><code class="docutils literal notranslate"><span class="pre">ctx.intdeo()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1284,7 +1284,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

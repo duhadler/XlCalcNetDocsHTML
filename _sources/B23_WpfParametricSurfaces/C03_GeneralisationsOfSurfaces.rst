@@ -834,8 +834,8 @@ The XML code for the example below can be found online in the ``DataXlCalcNet`` 
     var n = 8.0;
 
     var r = R / n;
-    var x = math53.cbrt(u) * ((R - r)) * Math.Cos(v) + r * Math.Cos((n - 1) * v);
-    var y = math53.cbrt(u) * ((R - r)) * Math.Sin(v) - r * Math.Sin((n - 1) * v);
+    var x = ctx.cbrt(u) * ((R - r)) * Math.Cos(v) + r * Math.Cos((n - 1) * v);
+    var y = ctx.cbrt(u) * ((R - r)) * Math.Sin(v) - r * Math.Sin((n - 1) * v);
     var z = h * (1 - u);
 
 

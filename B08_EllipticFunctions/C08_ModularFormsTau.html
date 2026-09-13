@@ -53,7 +53,7 @@
     <link rel="prev" title="Weierstrass elliptic functions, in terms of elliptic period ratio \(\tau\)" href="C07_WeierstrassTau.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -867,11 +867,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elliptic-modular-lambda-function-lambda-tau-also-damath">Elliptic modular lambda function <span class="math notranslate nohighlight">\(\lambda(\tau)\)</span> (also DAMath)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.math53.elliptic_modular_lambda"><code class="docutils literal notranslate"><span class="pre">ctxflint.math53.elliptic_modular_lambda()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.ctx.elliptic_modular_lambda"><code class="docutils literal notranslate"><span class="pre">ctxflint.ctx.elliptic_modular_lambda()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elliptic-modular-delta-function-delta-omega-tau">Elliptic modular delta function <span class="math notranslate nohighlight">\(\Delta(\omega, \tau)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.math53.elliptic_modular_delta"><code class="docutils literal notranslate"><span class="pre">ctxflint.math53.elliptic_modular_delta()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.ctx.elliptic_modular_delta"><code class="docutils literal notranslate"><span class="pre">ctxflint.ctx.elliptic_modular_delta()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klein-j-invariant-j-tau-also-damath">Klein j-invariant <span class="math notranslate nohighlight">\(j(\tau )\)</span> (also DAMath)</a><ul class="visible nav section-nav flex-column">
@@ -935,8 +935,8 @@ document.write(`
 <section id="elliptic-modular-lambda-function-lambda-tau-also-damath">
 <span id="rst-mpm-modular-lambda-by-tau"></span><h2>Elliptic modular lambda function <span class="math notranslate nohighlight">\(\lambda(\tau)\)</span> (also DAMath)<a class="headerlink" href="#elliptic-modular-lambda-function-lambda-tau-also-damath" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctxflint.math53.elliptic_modular_lambda">
-<span class="sig-prename descclassname"><span class="pre">ctxflint.math53.</span></span><span class="sig-name descname"><span class="pre">elliptic_modular_lambda</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctxflint.math53.elliptic_modular_lambda" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctxflint.ctx.elliptic_modular_lambda">
+<span class="sig-prename descclassname"><span class="pre">ctxflint.ctx.</span></span><span class="sig-name descname"><span class="pre">elliptic_modular_lambda</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctxflint.ctx.elliptic_modular_lambda" title="Link to this definition">#</a></dt>
 <dd><p>Computes the lambda function <span class="math notranslate nohighlight">\(\lambda(\tau) = \theta_2^4(0,\tau) / \theta_3^4(0,\tau)\)</span> in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span>. It is invariant under modular transformations <span class="math notranslate nohighlight">\((a, b; c, d)\)</span> where <span class="math notranslate nohighlight">\(a, d\)</span> are odd and <span class="math notranslate nohighlight">\(b, c\)</span> are even.</p>
 <p>See also MathWorld <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1657" title="E. W. Weisstein. Elliptic Lambda Function. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/EllipticLambdaFunction.html.">957</a>]</span>, Flint <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id609" title="The FLINT Team. Acb: Modular forms. FLINT: Fast Library for Number Theory, 2021. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_elliptic.html#weierstrass-elliptic-functions.">758</a>]</span>.</p>
 <p>See also: <a class="reference external" href="https://dlmf.nist.gov/23.15#ii">https://dlmf.nist.gov/23.15#ii</a></p>
@@ -974,8 +974,8 @@ document.write(`
 <section id="elliptic-modular-delta-function-delta-omega-tau">
 <span id="rst-mpm-modular-delta-by-tau"></span><h2>Elliptic modular delta function <span class="math notranslate nohighlight">\(\Delta(\omega, \tau)\)</span><a class="headerlink" href="#elliptic-modular-delta-function-delta-omega-tau" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctxflint.math53.elliptic_modular_delta">
-<span class="sig-prename descclassname"><span class="pre">ctxflint.math53.</span></span><span class="sig-name descname"><span class="pre">elliptic_modular_delta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctxflint.math53.elliptic_modular_delta" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctxflint.ctx.elliptic_modular_delta">
+<span class="sig-prename descclassname"><span class="pre">ctxflint.ctx.</span></span><span class="sig-name descname"><span class="pre">elliptic_modular_delta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctxflint.ctx.elliptic_modular_delta" title="Link to this definition">#</a></dt>
 <dd><p>Computes the modular discriminant <span class="math notranslate nohighlight">\(\Delta(\tau) = \eta(\tau)^{24}\)</span> in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span>.  It transforms as</p>
 <div class="math notranslate nohighlight">
 \[\Delta\left(\frac{a\tau+b}{c\tau+d}\right) = (c\tau+d)^{12} \Delta(\tau).\]</div>
@@ -1116,11 +1116,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elliptic-modular-lambda-function-lambda-tau-also-damath">Elliptic modular lambda function <span class="math notranslate nohighlight">\(\lambda(\tau)\)</span> (also DAMath)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.math53.elliptic_modular_lambda"><code class="docutils literal notranslate"><span class="pre">ctxflint.math53.elliptic_modular_lambda()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.ctx.elliptic_modular_lambda"><code class="docutils literal notranslate"><span class="pre">ctxflint.ctx.elliptic_modular_lambda()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elliptic-modular-delta-function-delta-omega-tau">Elliptic modular delta function <span class="math notranslate nohighlight">\(\Delta(\omega, \tau)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.math53.elliptic_modular_delta"><code class="docutils literal notranslate"><span class="pre">ctxflint.math53.elliptic_modular_delta()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.ctx.elliptic_modular_delta"><code class="docutils literal notranslate"><span class="pre">ctxflint.ctx.elliptic_modular_delta()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klein-j-invariant-j-tau-also-damath">Klein j-invariant <span class="math notranslate nohighlight">\(j(\tau )\)</span> (also DAMath)</a><ul class="visible nav section-nav flex-column">
@@ -1160,7 +1160,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

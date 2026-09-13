@@ -53,7 +53,7 @@
     <link rel="prev" title="Logarithms and related functions" href="C04_Logarithms.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -871,15 +871,15 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auxiliary-function-mathrm-powi-x-n-x-n">Auxiliary function <span class="math notranslate nohighlight">\(\mathrm{powi}(x,n) = x^n\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.powi"><code class="docutils literal notranslate"><span class="pre">ctx.powi()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.pow_si"><code class="docutils literal notranslate"><span class="pre">ctx.pow_si()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auxiliary-function-mathrm-compound-x-n-1-x-n">Auxiliary function <span class="math notranslate nohighlight">\(\mathrm{compound}(x,n) = (1+x)^n\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.compound"><code class="docutils literal notranslate"><span class="pre">math53.compound()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.compound"><code class="docutils literal notranslate"><span class="pre">ctx.compound()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auxiliary-function-mathrm-comprel-x-n-1-x-n-1">Auxiliary function <span class="math notranslate nohighlight">\(\mathrm{comprel}(x,n) = (1+x)^n - 1\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.comprel"><code class="docutils literal notranslate"><span class="pre">math53.comprel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.comprel"><code class="docutils literal notranslate"><span class="pre">ctx.comprel()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auxiliary-function-mathrm-hypot-x-y-sqrt-x-2-y-2">Auxiliary function <span class="math notranslate nohighlight">\(\mathrm{hypot}(x,y) = \sqrt{x^2 + y^2}\)</span></a><ul class="visible nav section-nav flex-column">
@@ -960,10 +960,10 @@ document.write(`
 <section id="auxiliary-function-mathrm-powi-x-n-x-n">
 <h2>Auxiliary function <span class="math notranslate nohighlight">\(\mathrm{powi}(x,n) = x^n\)</span><a class="headerlink" href="#auxiliary-function-mathrm-powi-x-n-x-n" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.powi">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">powi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.powi" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.pow_si">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">pow_si</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.pow_si" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">mathc53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Note: math53.intpower(x, n)</p>
+<p>Note: ctx.intpower(x, n)</p>
 <p>Returns the integer power function of <span class="math notranslate nohighlight">\(x, x^n\)</span>. See also  Wikipedia <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1057" title="Wikipedia. Square (algebra). Wikimedia Foundation, 2011. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Square_(algebra).">1227</a>]</span>,  MathWorld <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id1495" title="E. W. Weisstein. Square. From MathWorld - A Wolfram Web Resource, 2006. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Square.html.">844</a>]</span>.</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
@@ -1015,8 +1015,8 @@ document.write(`
 <section id="auxiliary-function-mathrm-compound-x-n-1-x-n">
 <h2>Auxiliary function <span class="math notranslate nohighlight">\(\mathrm{compound}(x,n) = (1+x)^n\)</span><a class="headerlink" href="#auxiliary-function-mathrm-compound-x-n-1-x-n" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.compound">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">compound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.compound" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.compound">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">compound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.compound" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\((1+x)^n\)</span>, computed accurately also when <span class="math notranslate nohighlight">\(x\)</span> is very close to 0.</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
@@ -1032,8 +1032,8 @@ document.write(`
 <section id="auxiliary-function-mathrm-comprel-x-n-1-x-n-1">
 <h2>Auxiliary function <span class="math notranslate nohighlight">\(\mathrm{comprel}(x,n) = (1+x)^n - 1\)</span><a class="headerlink" href="#auxiliary-function-mathrm-comprel-x-n-1-x-n-1" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.comprel">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">comprel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.comprel" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.comprel">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">comprel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.comprel" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\((1+x)^n - 1\)</span>, computed accurately also when <span class="math notranslate nohighlight">\(x\)</span> is very close to 0.</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
@@ -1388,15 +1388,15 @@ See also  Wikipedia <span id="id23">[<a class="reference internal" href="../99Ba
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auxiliary-function-mathrm-powi-x-n-x-n">Auxiliary function <span class="math notranslate nohighlight">\(\mathrm{powi}(x,n) = x^n\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.powi"><code class="docutils literal notranslate"><span class="pre">ctx.powi()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.pow_si"><code class="docutils literal notranslate"><span class="pre">ctx.pow_si()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auxiliary-function-mathrm-compound-x-n-1-x-n">Auxiliary function <span class="math notranslate nohighlight">\(\mathrm{compound}(x,n) = (1+x)^n\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.compound"><code class="docutils literal notranslate"><span class="pre">math53.compound()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.compound"><code class="docutils literal notranslate"><span class="pre">ctx.compound()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auxiliary-function-mathrm-comprel-x-n-1-x-n-1">Auxiliary function <span class="math notranslate nohighlight">\(\mathrm{comprel}(x,n) = (1+x)^n - 1\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.comprel"><code class="docutils literal notranslate"><span class="pre">math53.comprel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.comprel"><code class="docutils literal notranslate"><span class="pre">ctx.comprel()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auxiliary-function-mathrm-hypot-x-y-sqrt-x-2-y-2">Auxiliary function <span class="math notranslate nohighlight">\(\mathrm{hypot}(x,y) = \sqrt{x^2 + y^2}\)</span></a><ul class="visible nav section-nav flex-column">
@@ -1452,7 +1452,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

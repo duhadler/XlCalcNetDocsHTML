@@ -867,7 +867,7 @@ To produce the figure as shown below, using the ``math53`` context, the try-bloc
 
     try:
         if __name__ == '__main__':
-            FuncPlot2d(ctx=math53, f=[math53.cos, math53.sin], xlim=[-4, 4], 
+            FuncPlot2d(ctx=math53, f=[ctx.cos, ctx.sin], xlim=[-4, 4], 
                 Title = 'Plot2dCosSin')
 
 
@@ -913,7 +913,7 @@ To produce the figure as shown below, the try-block at the end of the file shoul
 
     try:
         if __name__ == '__main__':
-            FuncPlot2d(ctx=math53, f=[math53.acos, math53.asin], xlim=[-2, 2], 
+            FuncPlot2d(ctx=math53, f=[ctx.acos, ctx.asin], xlim=[-2, 2], 
                 Title = 'Simultaneous plot of asin and acos, using math53')
 
 
@@ -955,7 +955,7 @@ To produce the right figure as shown below, the try-block at the end of the file
 
     try:
         if __name__ == '__main__':
-            FuncPlot2d(ctx=math53, f=math53.cot, xlim=[-5, 5], ylim=[-5, 5], 
+            FuncPlot2d(ctx=math53, f=ctx.cot, xlim=[-5, 5], ylim=[-5, 5], 
                 Title = 'Cotangent, singularities not specified, Math53')   
 
 
@@ -997,8 +997,8 @@ To produce the right figure as shown below, the try-block at the end of the file
 
     try:
         if __name__ == '__main__':
-            FuncPlot2d(ctx=math53, f=math53.cot, xlim=[-5, 5], ylim=[-5, 5], 
-                singularities=[-math53.pi(), 0, math53.pi()], 
+            FuncPlot2d(ctx=math53, f=ctx.cot, xlim=[-5, 5], ylim=[-5, 5], 
+                singularities=[-ctx.pi(), 0, ctx.pi()], 
                 Title = 'Cotangent, singularities specified, math53') 
 
 

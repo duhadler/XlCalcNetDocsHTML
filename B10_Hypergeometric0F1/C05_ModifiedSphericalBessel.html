@@ -53,7 +53,7 @@
     <link rel="prev" title="Spherical Bessel functions" href="C04_SphericalBessel.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -863,27 +863,27 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modified-spherical-bessel-function-of-the-first-kind-i-n-x">Modified spherical Bessel function of the first kind, <span class="math notranslate nohighlight">\(i_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.sph_bessel_in"><code class="docutils literal notranslate"><span class="pre">math53.sph_bessel_in()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.sph_bessel_in"><code class="docutils literal notranslate"><span class="pre">ctx.sph_bessel_in()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modified-spherical-bessel-function-of-the-second-kind-k-n-x">Modified Spherical Bessel function of the second kind, <span class="math notranslate nohighlight">\(k_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.sph_bessel_kn"><code class="docutils literal notranslate"><span class="pre">math53.sph_bessel_kn()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.sph_bessel_kn"><code class="docutils literal notranslate"><span class="pre">ctx.sph_bessel_kn()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-derivative-of-the-modified-spherical-bessel-function-of-the-first-kind-i-n-x">First derivative of the modified spherical Bessel function of the first kind, <span class="math notranslate nohighlight">\(i'_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.sph_bessel_in_prime"><code class="docutils literal notranslate"><span class="pre">math53.sph_bessel_in_prime()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.sph_bessel_in_prime"><code class="docutils literal notranslate"><span class="pre">ctx.sph_bessel_in_prime()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-derivative-of-the-modified-spherical-bessel-function-of-the-second-kind-k-n-x">First derivative of the modified spherical Bessel function of the second kind, <span class="math notranslate nohighlight">\(k'_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.sph_bessel_kn_prime"><code class="docutils literal notranslate"><span class="pre">math53.sph_bessel_kn_prime()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.sph_bessel_kn_prime"><code class="docutils literal notranslate"><span class="pre">ctx.sph_bessel_kn_prime()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bessel-polynomials-y-n-x">Bessel polynomials <span class="math notranslate nohighlight">\(y_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.besselpoly"><code class="docutils literal notranslate"><span class="pre">math53.besselpoly()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.besselpoly"><code class="docutils literal notranslate"><span class="pre">ctx.besselpoly()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reverse-bessel-polynomials-theta-n-x">Reverse Bessel polynomials <span class="math notranslate nohighlight">\(\theta_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.besseltheta"><code class="docutils literal notranslate"><span class="pre">math53.besseltheta()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.besseltheta"><code class="docutils literal notranslate"><span class="pre">ctx.besseltheta()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -903,8 +903,8 @@ document.write(`
 <section id="modified-spherical-bessel-function-of-the-first-kind-i-n-x">
 <span id="rst-mpm-bessel-in"></span><h2>Modified spherical Bessel function of the first kind, <span class="math notranslate nohighlight">\(i_n(x)\)</span><a class="headerlink" href="#modified-spherical-bessel-function-of-the-first-kind-i-n-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.sph_bessel_in">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">sph_bessel_in</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.sph_bessel_in" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.sph_bessel_in">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">sph_bessel_in</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.sph_bessel_in" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(i_n(x)\)</span>, the modified spherical Bessel function of the first kind.</p>
 <p>If <em>scaled</em> is <em>True</em>, then <span class="math notranslate nohighlight">\(i_n(x) \cdot \exp(-|\Re(x)|)\)</span> is returned.</p>
 <p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1121" title="Wikipedia. Spherical Bessel functions. Wikimedia Foundation, 2014. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Spherical_Bessel_functions:_jn,_yn.">1292</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1589" title="E. W. Weisstein. Modified Spherical Bessel Function of the First Kind. From MathWorld - A Wolfram Web Resource, 2011. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/ModifiedSphericalBesselFunctionoftheFirstKind.html.">927</a>]</span>, NIST <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id480" title="L. Olver, F. W. J.; Maximon. Spherical Bessel Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.47.">438</a>]</span>, BoostMath <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id379" title="P. A. Bristow and H. Holin. Spherical Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2017. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/sph_bessel.html.">127</a>]</span>, <span id="id5">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.1.6.3).</p>
@@ -943,8 +943,8 @@ document.write(`
 <section id="modified-spherical-bessel-function-of-the-second-kind-k-n-x">
 <span id="rst-mpm-bessel-kn"></span><h2>Modified Spherical Bessel function of the second kind, <span class="math notranslate nohighlight">\(k_n(x)\)</span><a class="headerlink" href="#modified-spherical-bessel-function-of-the-second-kind-k-n-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.sph_bessel_kn">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">sph_bessel_kn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.sph_bessel_kn" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.sph_bessel_kn">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">sph_bessel_kn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.sph_bessel_kn" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(k_n(x)\)</span>, the modified spherical Bessel function of the second kind.</p>
 <p>If <em>scaled</em> is <em>True</em>, then <span class="math notranslate nohighlight">\(k_n(x) \cdot \exp(x)\)</span> is returned.</p>
 <p>See also  Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1121" title="Wikipedia. Spherical Bessel functions. Wikimedia Foundation, 2014. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Spherical_Bessel_functions:_jn,_yn.">1292</a>]</span>, MathWorld <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1590" title="E. W. Weisstein. Modified Spherical Bessel Function of the Second Kind. From MathWorld - A Wolfram Web Resource, 2011. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/ModifiedSphericalBesselFunctionoftheSecondKind.html.">928</a>]</span>, NIST <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id480" title="L. Olver, F. W. J.; Maximon. Spherical Bessel Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.47.">438</a>]</span>, BoostMath <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id379" title="P. A. Bristow and H. Holin. Spherical Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2017. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/sph_bessel.html.">127</a>]</span>, <span id="id10">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.1.6.5).</p>
@@ -976,8 +976,8 @@ document.write(`
 <section id="first-derivative-of-the-modified-spherical-bessel-function-of-the-first-kind-i-n-x">
 <h2>First derivative of the modified spherical Bessel function of the first kind, <span class="math notranslate nohighlight">\(i'_n(x)\)</span><a class="headerlink" href="#first-derivative-of-the-modified-spherical-bessel-function-of-the-first-kind-i-n-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.sph_bessel_in_prime">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">sph_bessel_in_prime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.sph_bessel_in_prime" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.sph_bessel_in_prime">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">sph_bessel_in_prime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.sph_bessel_in_prime" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(i'_n(x)\)</span>, the first derivative (with respect to <span class="math notranslate nohighlight">\(x\)</span>) of <span class="math notranslate nohighlight">\(i_n(x)\)</span>, the modified spherical Bessel function of the first kind.</p>
 <p>If <em>scaled</em> is <em>True</em>, then <span class="math notranslate nohighlight">\(i'_n(x) \cdot \exp(-|\Re(x)|)\)</span> is returned.</p>
 <p>See also  Wikipedia <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id1121" title="Wikipedia. Spherical Bessel functions. Wikimedia Foundation, 2014. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Spherical_Bessel_functions:_jn,_yn.">1292</a>]</span>, MathWorld <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1589" title="E. W. Weisstein. Modified Spherical Bessel Function of the First Kind. From MathWorld - A Wolfram Web Resource, 2011. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/ModifiedSphericalBesselFunctionoftheFirstKind.html.">927</a>]</span>, NIST <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id480" title="L. Olver, F. W. J.; Maximon. Spherical Bessel Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.47.">438</a>]</span>, BoostMath <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id379" title="P. A. Bristow and H. Holin. Spherical Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2017. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/sph_bessel.html.">127</a>]</span>, <span id="id15">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.1.6.3).</p>
@@ -1000,8 +1000,8 @@ document.write(`
 <section id="first-derivative-of-the-modified-spherical-bessel-function-of-the-second-kind-k-n-x">
 <h2>First derivative of the modified spherical Bessel function of the second kind, <span class="math notranslate nohighlight">\(k'_n(x)\)</span><a class="headerlink" href="#first-derivative-of-the-modified-spherical-bessel-function-of-the-second-kind-k-n-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.sph_bessel_kn_prime">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">sph_bessel_kn_prime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.sph_bessel_kn_prime" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.sph_bessel_kn_prime">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">sph_bessel_kn_prime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.sph_bessel_kn_prime" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(k'_n(x)\)</span>, the first derivative (with respect to <span class="math notranslate nohighlight">\(x\)</span>) of <span class="math notranslate nohighlight">\(k_n(x)\)</span>, the modified spherical Bessel function of the second kind.</p>
 <p>If <em>scaled</em> is <em>True</em>, then <span class="math notranslate nohighlight">\(K_{\nu}(x) \cdot \exp(x)\)</span> is returned.</p>
 <p>See also  Wikipedia <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id1121" title="Wikipedia. Spherical Bessel functions. Wikimedia Foundation, 2014. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Spherical_Bessel_functions:_jn,_yn.">1292</a>]</span>, MathWorld <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id1590" title="E. W. Weisstein. Modified Spherical Bessel Function of the Second Kind. From MathWorld - A Wolfram Web Resource, 2011. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/ModifiedSphericalBesselFunctionoftheSecondKind.html.">928</a>]</span>, NIST <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id480" title="L. Olver, F. W. J.; Maximon. Spherical Bessel Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.47.">438</a>]</span>, BoostMath <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id379" title="P. A. Bristow and H. Holin. Spherical Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2017. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/sph_bessel.html.">127</a>]</span>, <span id="id20">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.1.6.5).</p>
@@ -1024,8 +1024,8 @@ document.write(`
 <section id="bessel-polynomials-y-n-x">
 <h2>Bessel polynomials <span class="math notranslate nohighlight">\(y_n(x)\)</span><a class="headerlink" href="#bessel-polynomials-y-n-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.besselpoly">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">besselpoly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.besselpoly" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.besselpoly">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">besselpoly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.besselpoly" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(y_n(x)\)</span>, the Bessel polynomial of order <span class="math notranslate nohighlight">\(n\)</span>.</p>
 <p>For <span class="math notranslate nohighlight">\(n \in \mathbb{Z}\)</span> and <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> the function can be defined in terms of the modified spherical Bessel function of the second kind, <span class="math notranslate nohighlight">\(k_n(x)\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -1060,8 +1060,8 @@ document.write(`
 <section id="reverse-bessel-polynomials-theta-n-x">
 <h2>Reverse Bessel polynomials <span class="math notranslate nohighlight">\(\theta_n(x)\)</span><a class="headerlink" href="#reverse-bessel-polynomials-theta-n-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.besseltheta">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">besseltheta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.besseltheta" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.besseltheta">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">besseltheta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.besseltheta" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(\theta_n(x)\)</span>, the reverse Bessel polynomial of order <span class="math notranslate nohighlight">\(n\)</span>.</p>
 <p>For <span class="math notranslate nohighlight">\(n \in \mathbb{Z}\)</span> and <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> the function can be defined in terms of the modified spherical Bessel function of the second kind, <span class="math notranslate nohighlight">\(k_n(x)\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -1138,27 +1138,27 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modified-spherical-bessel-function-of-the-first-kind-i-n-x">Modified spherical Bessel function of the first kind, <span class="math notranslate nohighlight">\(i_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.sph_bessel_in"><code class="docutils literal notranslate"><span class="pre">math53.sph_bessel_in()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.sph_bessel_in"><code class="docutils literal notranslate"><span class="pre">ctx.sph_bessel_in()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modified-spherical-bessel-function-of-the-second-kind-k-n-x">Modified Spherical Bessel function of the second kind, <span class="math notranslate nohighlight">\(k_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.sph_bessel_kn"><code class="docutils literal notranslate"><span class="pre">math53.sph_bessel_kn()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.sph_bessel_kn"><code class="docutils literal notranslate"><span class="pre">ctx.sph_bessel_kn()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-derivative-of-the-modified-spherical-bessel-function-of-the-first-kind-i-n-x">First derivative of the modified spherical Bessel function of the first kind, <span class="math notranslate nohighlight">\(i'_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.sph_bessel_in_prime"><code class="docutils literal notranslate"><span class="pre">math53.sph_bessel_in_prime()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.sph_bessel_in_prime"><code class="docutils literal notranslate"><span class="pre">ctx.sph_bessel_in_prime()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-derivative-of-the-modified-spherical-bessel-function-of-the-second-kind-k-n-x">First derivative of the modified spherical Bessel function of the second kind, <span class="math notranslate nohighlight">\(k'_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.sph_bessel_kn_prime"><code class="docutils literal notranslate"><span class="pre">math53.sph_bessel_kn_prime()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.sph_bessel_kn_prime"><code class="docutils literal notranslate"><span class="pre">ctx.sph_bessel_kn_prime()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bessel-polynomials-y-n-x">Bessel polynomials <span class="math notranslate nohighlight">\(y_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.besselpoly"><code class="docutils literal notranslate"><span class="pre">math53.besselpoly()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.besselpoly"><code class="docutils literal notranslate"><span class="pre">ctx.besselpoly()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reverse-bessel-polynomials-theta-n-x">Reverse Bessel polynomials <span class="math notranslate nohighlight">\(\theta_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.besseltheta"><code class="docutils literal notranslate"><span class="pre">math53.besseltheta()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.besseltheta"><code class="docutils literal notranslate"><span class="pre">ctx.besseltheta()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1194,7 +1194,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

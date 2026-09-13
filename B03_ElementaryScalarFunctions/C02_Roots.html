@@ -53,7 +53,7 @@
     <link rel="prev" title="Complex components" href="C01_ComplexComponents.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -879,7 +879,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nth-root-mathrm-nroot-x-n-sqrt-n-x">Nth root, <span class="math notranslate nohighlight">\(\mathrm{nroot}(x, n) = \sqrt[n]{x}\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.nroot"><code class="docutils literal notranslate"><span class="pre">ctx.nroot()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.root_si"><code class="docutils literal notranslate"><span class="pre">ctx.root_si()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-root-mathrm-unitroot-n">Unit root, <span class="math notranslate nohighlight">\(\mathrm{unitroot}(n)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -1134,8 +1134,8 @@ does not give a real cube root for negative real numbers:</p>
 <section id="nth-root-mathrm-nroot-x-n-sqrt-n-x">
 <h2>Nth root, <span class="math notranslate nohighlight">\(\mathrm{nroot}(x, n) = \sqrt[n]{x}\)</span><a class="headerlink" href="#nth-root-mathrm-nroot-x-n-sqrt-n-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.nroot">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">nroot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.nroot" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.root_si">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">root_si</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.root_si" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">mathc53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns the nth root of <span class="math notranslate nohighlight">\(x\)</span>. For real negative <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(n\)</span> needs to be an odd integer for a real result. See also Wikipedia <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id1095" title="Wikipedia. Group of nth roots of unity. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Root_of_unity#Group_of_nth_roots_of_unity.">1264</a>]</span>, MathWorld <span id="id20">[<a class="reference internal" href="../99BackMatter/index.html#id1558" title="E. W. Weisstein. nth Root. From MathWorld - A Wolfram Web Resource, 2010. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/nthRoot.html.">923</a>]</span>, Flint <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id568" title="The FLINT Team. Arb: Powers and roots. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/arb.html#powers-and-roots.">735</a>]</span>, Flint <span id="id22">[<a class="reference internal" href="../99BackMatter/index.html#id569" title="The FLINT Team. Acb: Powers and roots. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb.html#powers-and-roots.">725</a>]</span>,  <span id="id23">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (4.2.47), Mpmath <span id="id24">[<a class="reference internal" href="../99BackMatter/index.html#id694" title="The Mpmath Development Team. nth Root. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/powers.html#root.">611</a>]</span>.</p>
 <p>See also: <a class="reference external" href="https://dlmf.nist.gov/1.11#iv">https://dlmf.nist.gov/1.11#iv</a></p>
@@ -1277,7 +1277,7 @@ does not give a real cube root for negative real numbers:</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nth-root-mathrm-nroot-x-n-sqrt-n-x">Nth root, <span class="math notranslate nohighlight">\(\mathrm{nroot}(x, n) = \sqrt[n]{x}\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.nroot"><code class="docutils literal notranslate"><span class="pre">ctx.nroot()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.root_si"><code class="docutils literal notranslate"><span class="pre">ctx.root_si()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-root-mathrm-unitroot-n">Unit root, <span class="math notranslate nohighlight">\(\mathrm{unitroot}(n)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -1317,7 +1317,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

@@ -53,7 +53,7 @@
     <link rel="prev" title="Error function and related functions" href="C05_ErrorFunction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -1112,7 +1112,7 @@ using</p>
 <dt class="sig sig-object py" id="ctx.cosh_integral">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">cosh_integral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.cosh_integral" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Note: Also math53.chi(z), ctx.coshIntegral(z)</p>
+<p>Note: Also ctx.chi(z), ctx.coshIntegral(z)</p>
 <p>Returns the hyperbolic cosine integral <span class="math notranslate nohighlight">\(\displaystyle \mathrm{Chi}(x) = -\int_x^{\infty} \frac{\cosh(t)}{t} \, \mathrm{d}t = \gamma + \log(x) + \int_0^x \frac{\cosh(t) - 1}{t} \, \mathrm{d}t\)</span>.</p>
 <p>See also   Wikipedia <span id="id34">[<a class="reference internal" href="../99BackMatter/index.html#id1149" title="Wikipedia. Hyperbolic cosine integral. Wikimedia Foundation, 2015. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_integral#Hyperbolic_cosine_integral.">1302</a>]</span>, MathWorld <span id="id35">[<a class="reference internal" href="../99BackMatter/index.html#id1645" title="E. W. Weisstein. Hyperbolic Cosine Integral. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Chi.html.">963</a>]</span>, NIST <span id="id36">[<a class="reference internal" href="../99BackMatter/index.html#id498" title="N. M. Temme. Hyperbolic Analogs of the Sine and Cosine Integrals. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/6.2#E16.">766</a>]</span>, <span id="id37">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.4.1), Flint <span id="id38">[<a class="reference internal" href="../99BackMatter/index.html#id606" title="The FLINT Team. Arb: Exponential and trigonometric integrals. FLINT: Fast Library for Number Theory, 2021. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/arb_hypgeom.html#exponential-and-trigonometric-integrals.">760</a>]</span>, Flint <span id="id39">[<a class="reference internal" href="../99BackMatter/index.html#id607" title="The FLINT Team. Acb: Exponential and trigonometric integrals. FLINT: Fast Library for Number Theory, 2021. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_hypgeom.html#exponential-and-trigonometric-integrals.">755</a>]</span>, Mpmath <span id="id40">[<a class="reference internal" href="../99BackMatter/index.html#id748" title="The Mpmath Development Team. Chi. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2013. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/expintegrals.html#chi.">638</a>]</span>.</p>
 <p>For real <span class="math notranslate nohighlight">\(x\)</span> the integral is calculated using the relations <span class="math notranslate nohighlight">\(\displaystyle  \text{Chi}(x) = \tfrac{1}{2} \left(\text{Ei}(x)-\text{E}_1(x)\right)\)</span> for <span class="math notranslate nohighlight">\(x&gt;0\)</span> and <span class="math notranslate nohighlight">\(\text{Chi}(x) = \text{Chi}(-x)\)</span> for <span class="math notranslate nohighlight">\(x&lt;0\)</span>.</p>
@@ -1424,7 +1424,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

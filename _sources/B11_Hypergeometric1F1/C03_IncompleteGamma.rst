@@ -28,7 +28,7 @@ Lower normalized incomplete gamma function, `P(a,x)`
 
     where ``ctx`` is ``math53``, ``ctxboost``, ``ctxflint``.
 
-    Note: math53.incGammaP(a, x)
+    Note: ctx.incGammaP(a, x)
 
     Returns the lower normalized incomplete gamma function `\displaystyle P(a,x)=\frac{1}{\Gamma(a)} \int_0^x t^{a-1} e^{-t} \, \mathrm{d}t, \,` for `a \geq 0` and `x \geq 0`.
 
@@ -95,7 +95,7 @@ Upper normalized incomplete gamma functions , `Q(a,x)`
 
     where ``ctx`` is ``math53``, ``ctxboost`` or ``ctxflint``.
 
-    Note: math53.incGammaQ(a, x)
+    Note: ctx.incGammaQ(a, x)
 
     Returns the upper normalized incomplete gamma function `\displaystyle Q(a,x)=\frac{1}{\Gamma(a)} \int_x^{\infty} t^{a-1} e^{-t} \, \mathrm{d}t, \,` for `a \geq 0` and `x \geq 0`.
 
@@ -198,7 +198,7 @@ Lower non-normalized incomplete gamma function, `\gamma(a,x)`
 
     where ``ctx`` is ``math53``, ``ctxboost`` or ``ctxflint``.
 
-    Note: math53.incgammaL(a, x), ctxboost.TgammaLower(a, x)
+    Note: ctx.incgammaL(a, x), ctxboost.TgammaLower(a, x)
 
     Returns the real lower non-normalized incomplete gamma function `\displaystyle \gamma(a,x)= \int_0^x t^{a-1} e^{-t} \, \mathrm{d}t, \,` for `a \geq 0` and `x \geq 0`.
 
@@ -229,7 +229,7 @@ Upper non-normalized incomplete gamma function, `\Gamma(a,x)`
 
     where ``ctx`` is ``math53``, ``ctxboost`` or ``ctxflint``.
 
-    Note: math53.incGammaU(a, x)
+    Note: ctx.incGammaU(a, x)
 
     Returns the real upper non-normalized incomplete gamma function `\displaystyle \Gamma(a,x) = \int_x^{\infty} t^{a-1} e^{-t} \, \mathrm{d}t, \,` for `a \geq 0` and `x \geq 0`.
 
@@ -412,7 +412,7 @@ Inverse of the real lower normalised incomplete gamma function, `P^{-1}(a, q)`
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
 
-    Note: math53.incGammaPInv(a, p)
+    Note: ctx.incGammaPInv(a, p)
 
     Returns `P^{-1}(a,p)`, the functional inverse of the real lower normalized incomplete gamma function, i.e. the function calculates `x` with `P(a,x) = p` where `a>0` and  `0<p<1`.
 
@@ -448,7 +448,7 @@ Inverse of the real upper normalised incomplete gamma function, `Q^{-1}(a, q)`
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
 
-    Note: math53.incGammaQInv(a, q)
+    Note: ctx.incGammaQInv(a, q)
 
 
     Returns `Q^{-1}(a,q)`, the functional inverse of the real upper normalized incomplete gamma function, i.e. the function calculates `x` with `Q(a,x) = q` where `a>0` and  `0<q<1`.
@@ -489,7 +489,7 @@ Inverse (on parameter `a`) of the real lower normalised incomplete gamma functio
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
 
-    Note: math53.incGammaPInva(x, p)
+    Note: ctx.incGammaPInva(x, p)
 
     Returns the functional inverse (on parameter a) of the lower normalized incomplete gamma function `P(a,x)`, i.e. the function calculates `a` with `P(a,x) = p` where `x>0` and  `0<p<1`.
 
@@ -524,7 +524,7 @@ Inverse (on parameter `a`) of the real upper normalised incomplete gamma functio
 
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
-    Note: math53.incGammaQInva(x, p)
+    Note: ctx.incGammaQInva(x, p)
 
 
     Returns the functional inverse (on parameter a) of the upper normalized incomplete gamma function `Q(a,x)`, i.e. the function calculates `a` with `Q(a,x) = q` where `x>0` and  `0<q<1`.

@@ -53,7 +53,7 @@
     <link rel="prev" title="Bessel functions" href="C02_BesselGeneral.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -879,7 +879,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marcum-q-function-q-m-a-b-up-to-octuple-precision">Marcum Q function, <span class="math notranslate nohighlight">\(Q_m(a,b)\)</span>  (up to octuple precision)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.marcum_q"><code class="docutils literal notranslate"><span class="pre">math53.marcum_q()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.marcum_q"><code class="docutils literal notranslate"><span class="pre">ctx.marcum_q()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1070,8 +1070,8 @@ document.write(`
 <section id="marcum-q-function-q-m-a-b-up-to-octuple-precision">
 <h2>Marcum Q function, <span class="math notranslate nohighlight">\(Q_m(a,b)\)</span>  (up to octuple precision)<a class="headerlink" href="#marcum-q-function-q-m-a-b-up-to-octuple-precision" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.marcum_q">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">marcum_q</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.marcum_q" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.marcum_q">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">marcum_q</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.marcum_q" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Marcum Q-function  <span class="math notranslate nohighlight">\(\displaystyle Q_m(a,b)= \frac{1}{a^{m-1}}  \int _{b}^{\infty} x^m \exp \left(-{\frac {x^{2}+a^{2}}{2}}\right)I_{m-1}(ax) \, \mathrm{d}x\)</span>, where <span class="math notranslate nohighlight">\(m&gt;0\)</span>, <span class="math notranslate nohighlight">\(b\geq 0\)</span>, <span class="math notranslate nohighlight">\(a&gt;0\)</span> and <span class="math notranslate nohighlight">\(I_{m-1}\)</span> is the modified Bessel function of first kind of order <span class="math notranslate nohighlight">\(m-1\)</span>.</p>
 <p>See also: <span id="id27">Short [<a class="reference internal" href="../99BackMatter/index.html#id242" title="R.T. Short. Computation of rice and noncentral chi-squared probabilities. 2012. Available as http://www.mcs.anl.gov/ more/ANL8074a.pdf.">492</a>]</span>, Wikipedia <span id="id28">[<a class="reference internal" href="../99BackMatter/index.html#id1165" title="Wikipedia. Marcum Q-function. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Owen%27s_T_function.">1313</a>]</span>, MathWorld <span id="id29">[<a class="reference internal" href="../99BackMatter/index.html#id1668" title="E. W. Weisstein. Marcum Q function. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/MarcumQ-Function.html.">981</a>]</span>, <span id="id30">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.3.17).</p>
 <p>It is calculated using its relationship to the  noncentral chi-squared cumulative distribution function:</p>
@@ -1153,7 +1153,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#marcum-q-function-q-m-a-b-up-to-octuple-precision">Marcum Q function, <span class="math notranslate nohighlight">\(Q_m(a,b)\)</span>  (up to octuple precision)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.marcum_q"><code class="docutils literal notranslate"><span class="pre">math53.marcum_q()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.marcum_q"><code class="docutils literal notranslate"><span class="pre">ctx.marcum_q()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1189,7 +1189,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

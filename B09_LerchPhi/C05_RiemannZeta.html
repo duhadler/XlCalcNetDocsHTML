@@ -53,7 +53,7 @@
     <link rel="prev" title="Hurwitz zeta and related functions" href="C04_HurwitzZeta.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -867,7 +867,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-zeta-s-1">Riemann <span class="math notranslate nohighlight">\(\zeta(s)-1\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.zetam1"><code class="docutils literal notranslate"><span class="pre">math53.zetam1()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.zetam1"><code class="docutils literal notranslate"><span class="pre">ctx.zetam1()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardy-or-riemann-siegel-theta-function">Hardy (or Riemann-Siegel) theta function</a><ul class="visible nav section-nav flex-column">
@@ -883,19 +883,19 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirichlet-eta-function-eta-s">Dirichlet eta function, <span class="math notranslate nohighlight">\(\eta(s)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.dirichlet_eta"><code class="docutils literal notranslate"><span class="pre">math53.dirichlet_eta()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dirichlet_eta"><code class="docutils literal notranslate"><span class="pre">ctx.dirichlet_eta()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirichlet-eta-s-1">Dirichlet <span class="math notranslate nohighlight">\(\eta(s) - 1\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.dirichlet_eta_m1"><code class="docutils literal notranslate"><span class="pre">math53.dirichlet_eta_m1()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dirichlet_eta_m1"><code class="docutils literal notranslate"><span class="pre">ctx.dirichlet_eta_m1()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirichlet-beta-function-beta-s">Dirichlet beta function, <span class="math notranslate nohighlight">\(\beta(s)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.dirichlet_beta"><code class="docutils literal notranslate"><span class="pre">math53.dirichlet_beta()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dirichlet_beta"><code class="docutils literal notranslate"><span class="pre">ctx.dirichlet_beta()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirichlet-lambda-function-lambda-s">Dirichlet lambda function, <span class="math notranslate nohighlight">\(\lambda(s)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.dirichlet_lambda"><code class="docutils literal notranslate"><span class="pre">math53.dirichlet_lambda()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dirichlet_lambda"><code class="docutils literal notranslate"><span class="pre">ctx.dirichlet_lambda()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zeros-of-the-riemann-zeta-function">Zeros of the Riemann zeta function</a><ul class="visible nav section-nav flex-column">
@@ -967,8 +967,8 @@ document.write(`
 <section id="riemann-zeta-s-1">
 <h2>Riemann <span class="math notranslate nohighlight">\(\zeta(s)-1\)</span><a class="headerlink" href="#riemann-zeta-s-1" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.zetam1">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">zetam1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.zetam1" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.zetam1">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">zetam1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.zetam1" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Riemann function <span class="math notranslate nohighlight">\(\zeta(s)-1 =  \zeta(s, 2)\)</span> for <span class="math notranslate nohighlight">\(s \ne 1\)</span>.</p>
 <p>See also   Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1138" title="Wikipedia. Riemann zeta function. Wikimedia Foundation, 2015. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Riemann_zeta_function.">1308</a>]</span>, MathWorld <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1632" title="E. W. Weisstein. Riemann Zeta Function. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/RiemannZetaFunction.html.">952</a>]</span>, NIST <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id489" title="T.M. Apostol. Riemann Zeta Function. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/25.2.">19</a>]</span>,  BoostMath <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id410" title="P. A. Bristow and H. Holin. Riemann Zeta Function. Boost Math Toolkit Library, 2019. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/zetas/zeta.html.">154</a>]</span>, <span id="id13">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.6.1.4).</p>
 <p>An example in Python</p>
@@ -1131,8 +1131,8 @@ and where <span class="math notranslate nohighlight">\(\theta(t)\)</span> denote
 <section id="dirichlet-eta-function-eta-s">
 <span id="rst-mpm-dirichlet-eta"></span><h2>Dirichlet eta function, <span class="math notranslate nohighlight">\(\eta(s)\)</span><a class="headerlink" href="#dirichlet-eta-function-eta-s" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.dirichlet_eta">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">dirichlet_eta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.dirichlet_eta" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.dirichlet_eta">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dirichlet_eta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dirichlet_eta" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Dirichlet eta function, defined as <span class="math notranslate nohighlight">\(\displaystyle \eta(s) = (1 - 2^{1-s})\zeta(s) = \sum_{k=0}^{\infty} \frac{(-1)^k}{k^s}\)</span> for <span class="math notranslate nohighlight">\(s&gt;0\)</span> and by analytic continuation for <span class="math notranslate nohighlight">\(s \le 0\)</span>.</p>
 <p>See also: MathWorld <span id="id28">[<a class="reference internal" href="../99BackMatter/index.html#id1686" title="E. W. Weisstein. Dirichlet Eta Function. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/DirichletEtaFunction.html.">973</a>]</span>, <span id="id29">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.6.3.1), Flint <span id="id30">[<a class="reference internal" href="../99BackMatter/index.html#id602" title="The FLINT Team. Riemann zeta function. FLINT: Fast Library for Number Theory, 2020. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_dirichlet.html#riemann-zeta-function.">752</a>]</span>, Mpmath <span id="id31">[<a class="reference internal" href="../99BackMatter/index.html#id792" title="The Mpmath Development Team. Dirichlet eta function (Alternating zeta function). mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2016. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/zeta.html#altzeta.">688</a>]</span>.</p>
 <p>An example in Python</p>
@@ -1176,8 +1176,8 @@ and where <span class="math notranslate nohighlight">\(\theta(t)\)</span> denote
 <section id="dirichlet-eta-s-1">
 <h2>Dirichlet <span class="math notranslate nohighlight">\(\eta(s) - 1\)</span><a class="headerlink" href="#dirichlet-eta-s-1" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.dirichlet_eta_m1">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">dirichlet_eta_m1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.dirichlet_eta_m1" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.dirichlet_eta_m1">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dirichlet_eta_m1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dirichlet_eta_m1" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Dirichlet function <span class="math notranslate nohighlight">\(\eta(s)-1 = (\zeta(s)-1) - (2^{1-s} \zeta(s))\)</span>.</p>
 <p>See also: MathWorld <span id="id32">[<a class="reference internal" href="../99BackMatter/index.html#id1686" title="E. W. Weisstein. Dirichlet Eta Function. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/DirichletEtaFunction.html.">973</a>]</span>, <span id="id33">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.6.3.3).</p>
 <p>An example in Python</p>
@@ -1221,8 +1221,8 @@ and where <span class="math notranslate nohighlight">\(\theta(t)\)</span> denote
 <section id="dirichlet-beta-function-beta-s">
 <h2>Dirichlet beta function, <span class="math notranslate nohighlight">\(\beta(s)\)</span><a class="headerlink" href="#dirichlet-beta-function-beta-s" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.dirichlet_beta">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">dirichlet_beta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.dirichlet_beta" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.dirichlet_beta">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dirichlet_beta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dirichlet_beta" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Dirichlet beta function, defined as <span class="math notranslate nohighlight">\(\displaystyle \beta(s) = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n+1)^s}\)</span>, for <span class="math notranslate nohighlight">\(s&gt;0\)</span>, and by analytic continuation for <span class="math notranslate nohighlight">\(s \le 0\)</span>.</p>
 <p>See also:  Wikipedia <span id="id34">[<a class="reference internal" href="../99BackMatter/index.html#id1156" title="Wikipedia. Dirichlet beta function. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: http://en.wikipedia.org/wiki/Dirichlet_beta_function.">1312</a>]</span>, MathWorld <span id="id35">[<a class="reference internal" href="../99BackMatter/index.html#id1651" title="E. W. Weisstein. Dirichlet Beta Function. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/DirichletBetaFunction.html.">956</a>]</span>, <span id="id36">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.6.4).</p>
 <p>Alternatively, the following definition, in terms of the Hurwitz zeta function, is valid in the whole complex s-plane:</p>
@@ -1269,8 +1269,8 @@ and where <span class="math notranslate nohighlight">\(\theta(t)\)</span> denote
 <section id="dirichlet-lambda-function-lambda-s">
 <h2>Dirichlet lambda function, <span class="math notranslate nohighlight">\(\lambda(s)\)</span><a class="headerlink" href="#dirichlet-lambda-function-lambda-s" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.dirichlet_lambda">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">dirichlet_lambda</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.dirichlet_lambda" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.dirichlet_lambda">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dirichlet_lambda</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dirichlet_lambda" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Dirichlet lambda function, defined as <span class="math notranslate nohighlight">\(\displaystyle \lambda(s) = \sum_{n=0}^{\infty} (2n+1)^{-s}, for `s&gt;1\)</span>, and by analytic continuation for <span class="math notranslate nohighlight">\(s &lt; 1\)</span>.</p>
 <p>See also: MathWorld <span id="id37">[<a class="reference internal" href="../99BackMatter/index.html#id1669" title="E. W. Weisstein. Dirichlet Lambda function. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/DirichletLambdaFunction.html.">974</a>]</span>, <span id="id38">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.6.5), <span id="id39">Hu and Kim [<a class="reference internal" href="../99BackMatter/index.html#id133" title="S. Hu and M.-S. Kim. On dirichlet's lambda functions. 2018. Available as https://arxiv.org/abs/1806.07762v2.">367</a>]</span>.</p>
 </dd></dl>
@@ -1395,7 +1395,7 @@ imaginary part <span class="math notranslate nohighlight">\(t\)</span> is a zero
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-zeta-s-1">Riemann <span class="math notranslate nohighlight">\(\zeta(s)-1\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.zetam1"><code class="docutils literal notranslate"><span class="pre">math53.zetam1()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.zetam1"><code class="docutils literal notranslate"><span class="pre">ctx.zetam1()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardy-or-riemann-siegel-theta-function">Hardy (or Riemann-Siegel) theta function</a><ul class="visible nav section-nav flex-column">
@@ -1411,19 +1411,19 @@ imaginary part <span class="math notranslate nohighlight">\(t\)</span> is a zero
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirichlet-eta-function-eta-s">Dirichlet eta function, <span class="math notranslate nohighlight">\(\eta(s)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.dirichlet_eta"><code class="docutils literal notranslate"><span class="pre">math53.dirichlet_eta()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dirichlet_eta"><code class="docutils literal notranslate"><span class="pre">ctx.dirichlet_eta()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirichlet-eta-s-1">Dirichlet <span class="math notranslate nohighlight">\(\eta(s) - 1\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.dirichlet_eta_m1"><code class="docutils literal notranslate"><span class="pre">math53.dirichlet_eta_m1()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dirichlet_eta_m1"><code class="docutils literal notranslate"><span class="pre">ctx.dirichlet_eta_m1()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirichlet-beta-function-beta-s">Dirichlet beta function, <span class="math notranslate nohighlight">\(\beta(s)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.dirichlet_beta"><code class="docutils literal notranslate"><span class="pre">math53.dirichlet_beta()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dirichlet_beta"><code class="docutils literal notranslate"><span class="pre">ctx.dirichlet_beta()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirichlet-lambda-function-lambda-s">Dirichlet lambda function, <span class="math notranslate nohighlight">\(\lambda(s)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.dirichlet_lambda"><code class="docutils literal notranslate"><span class="pre">math53.dirichlet_lambda()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dirichlet_lambda"><code class="docutils literal notranslate"><span class="pre">ctx.dirichlet_lambda()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zeros-of-the-riemann-zeta-function">Zeros of the Riemann zeta function</a><ul class="visible nav section-nav flex-column">
@@ -1463,7 +1463,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

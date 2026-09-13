@@ -31,7 +31,7 @@ Error function, `\mathrm{erf}(x)`
     where ``ctx`` is ``math53``, ``mathc53``, ``ctxboost``, ``ctxflint``.
 
 
-    Returns the real error function `\displaystyle \mathrm{erf}(x) = \frac{2}{\sqrt \pi} \int_0^x \exp(-t^2) \mathrm{d}t`. See also BoostMath :cite:p:`BoostFun84`, BoostMath :cite:p:`BoostFun07`, Wikipedia :cite:p:`WikipediaFun07`, MathWorld :cite:p:`WolframFun07a`, NIST :cite:p:`DLMFun07`, :cite:t:`Ehrhardt2018` (4.2.32), Flint :cite:p:`FlintFun07`, Flint :cite:p:`FlintFun08`, Mpmath :cite:p:`MpmathFun07`.
+    Returns the error function `\displaystyle \mathrm{erf}(x) = \frac{2}{\sqrt \pi} \int_0^x \exp(-t^2) \mathrm{d}t`. See also BoostMath :cite:p:`BoostFun84`, BoostMath :cite:p:`BoostFun07`, Wikipedia :cite:p:`WikipediaFun07`, MathWorld :cite:p:`WolframFun07a`, NIST :cite:p:`DLMFun07`, :cite:t:`Ehrhardt2018` (4.2.32), Flint :cite:p:`FlintFun07`, Flint :cite:p:`FlintFun08`, Mpmath :cite:p:`MpmathFun07`.
 
 
     This function returns the value of the error function defined by
@@ -283,7 +283,7 @@ Standard normal density function `\phi(x)`
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
 
-    Note: also math53.erfZ(x), math53.ndens(x), mathc53.Ndens(x)
+    Note: also ctx.erfZ(x), ctx.ndens(x), mathc53.Ndens(x)
 
     Returns the Gaussian density function `\displaystyle \phi(z) = \frac{1}{\sqrt {2\pi}} \exp(-z^2)`. See also: :cite:t:`Ehrhardt2018` (3.3.12.3) and (3.9.28).
 
@@ -321,7 +321,7 @@ Standard normal cumulative distribution function `\Phi(x)`
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
 
-    Note: also math53.erfP(x), math53.ndis(x), mathc53.Ndis(x)
+    Note: also ctx.erfP(x), ctx.ndis(x), mathc53.Ndis(x)
 
     Returns the integral `\displaystyle \Phi(z) = \frac{1}{\sqrt 2\pi} \int_{-\infty}^z \exp(-t^2)\, \mathrm{d}t = \frac{1}{2} \mathrm{erfc}\left(-\frac{z}{\sqrt{2}}  \right)`. 
 
@@ -422,7 +422,7 @@ Imaginary error function, `\mathrm{erfi}(x)`
 Dawson integral, `F(x)`
 -------------------------------------------------------------------------------
 
-.. method:: math53.dawson(x)
+.. method:: ctx.dawson(x)
 
     Returns the Dawson integral `\displaystyle F(z) = e^{-z^2} \int_0^z e^{t^2} \mathrm{d}t = \frac{\sqrt{\pi}}{2} e^{-z^2} \mathrm{erfi}(z) = {\frac {i{\sqrt {\pi }}}{2}}\left[e^{-z^{2}}-w(z)\right]`. 
 
@@ -506,7 +506,7 @@ Dawson integral, `F(x)`
 Faddeeva function, `w(z)`
 -------------------------------------------------------------------------------
 
-.. method:: math53.faddeeva(z)
+.. method:: ctx.faddeeva(z)
 
     Returns the Faddeeva function function `\displaystyle w(z):=e^{-z^{2}}\operatorname {erfc} (-iz)=\operatorname {erfcx} (-iz)=e^{-z^{2}}\left(1+{\frac {2i}{\sqrt {\pi }}}\int _{0}^{z}e^{t^{2}}{\text{d}}t\right)`.
 

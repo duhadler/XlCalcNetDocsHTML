@@ -52,7 +52,7 @@
     <link rel="prev" title="Visualisation of functions and curves (2D)" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -1378,7 +1378,7 @@ document.write(`
 <p>To produce the figure as shown below, using the <code class="docutils literal notranslate"><span class="pre">math53</span></code> context, the try-block at the end of the file should look like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-        <span class="n">FuncPlot2d</span><span class="p">(</span><span class="n">ctx</span><span class="o">=</span><span class="n">math53</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="p">[</span><span class="n">math53</span><span class="o">.</span><span class="n">cos</span><span class="p">,</span> <span class="n">math53</span><span class="o">.</span><span class="n">sin</span><span class="p">],</span> <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+        <span class="n">FuncPlot2d</span><span class="p">(</span><span class="n">ctx</span><span class="o">=</span><span class="n">math53</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="p">[</span><span class="n">ctx</span><span class="o">.</span><span class="n">cos</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">sin</span><span class="p">],</span> <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
             <span class="n">Title</span> <span class="o">=</span> <span class="s1">&#39;Plot2dCosSin&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1399,7 +1399,7 @@ document.write(`
 <p>To produce the figure as shown below, the try-block at the end of the file should look like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-        <span class="n">FuncPlot2d</span><span class="p">(</span><span class="n">ctx</span><span class="o">=</span><span class="n">math53</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="p">[</span><span class="n">math53</span><span class="o">.</span><span class="n">acos</span><span class="p">,</span> <span class="n">math53</span><span class="o">.</span><span class="n">asin</span><span class="p">],</span> <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+        <span class="n">FuncPlot2d</span><span class="p">(</span><span class="n">ctx</span><span class="o">=</span><span class="n">math53</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="p">[</span><span class="n">ctx</span><span class="o">.</span><span class="n">acos</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">asin</span><span class="p">],</span> <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
             <span class="n">Title</span> <span class="o">=</span> <span class="s1">&#39;Simultaneous plot of asin and acos, using math53&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1420,7 +1420,7 @@ document.write(`
 <p>To produce the right figure as shown below, the try-block at the end of the file should look like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-        <span class="n">FuncPlot2d</span><span class="p">(</span><span class="n">ctx</span><span class="o">=</span><span class="n">math53</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="n">math53</span><span class="o">.</span><span class="n">cot</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+        <span class="n">FuncPlot2d</span><span class="p">(</span><span class="n">ctx</span><span class="o">=</span><span class="n">math53</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="n">ctx</span><span class="o">.</span><span class="n">cot</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
             <span class="n">Title</span> <span class="o">=</span> <span class="s1">&#39;Cotangent, singularities not specified, Math53&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1442,8 +1442,8 @@ document.write(`
 <p>To produce the right figure as shown below, the try-block at the end of the file should look like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-        <span class="n">FuncPlot2d</span><span class="p">(</span><span class="n">ctx</span><span class="o">=</span><span class="n">math53</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="n">math53</span><span class="o">.</span><span class="n">cot</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-            <span class="n">singularities</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="n">math53</span><span class="o">.</span><span class="n">pi</span><span class="p">(),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">math53</span><span class="o">.</span><span class="n">pi</span><span class="p">()],</span>
+        <span class="n">FuncPlot2d</span><span class="p">(</span><span class="n">ctx</span><span class="o">=</span><span class="n">math53</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="n">ctx</span><span class="o">.</span><span class="n">cot</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+            <span class="n">singularities</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="n">ctx</span><span class="o">.</span><span class="n">pi</span><span class="p">(),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">pi</span><span class="p">()],</span>
             <span class="n">Title</span> <span class="o">=</span> <span class="s1">&#39;Cotangent, singularities specified, math53&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1563,7 +1563,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

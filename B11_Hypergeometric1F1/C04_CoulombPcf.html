@@ -53,7 +53,7 @@
     <link rel="prev" title="Incomplete gamma functions" href="C03_IncompleteGamma.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -879,23 +879,23 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#whittaker-function-m-kappa-mu-x">Whittaker function <span class="math notranslate nohighlight">\(M_{\kappa, \mu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.whittaker_m"><code class="docutils literal notranslate"><span class="pre">math53.whittaker_m()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.whittaker_m"><code class="docutils literal notranslate"><span class="pre">ctx.whittaker_m()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#whittaker-function-w-kappa-mu-x">Whittaker function <span class="math notranslate nohighlight">\(W_{\kappa, \mu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.whittaker_w"><code class="docutils literal notranslate"><span class="pre">math53.whittaker_w()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.whittaker_w"><code class="docutils literal notranslate"><span class="pre">ctx.whittaker_w()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parabolic-cylinder-function-d-nu-x">Parabolic cylinder function <span class="math notranslate nohighlight">\(D_{\nu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.cylinder_d"><code class="docutils literal notranslate"><span class="pre">math53.cylinder_d()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.cylinder_d"><code class="docutils literal notranslate"><span class="pre">ctx.cylinder_d()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parabolic-cylinder-function-u-a-x">Parabolic cylinder function <span class="math notranslate nohighlight">\(U(a, x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.cylinder_u"><code class="docutils literal notranslate"><span class="pre">math53.cylinder_u()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.cylinder_u"><code class="docutils literal notranslate"><span class="pre">ctx.cylinder_u()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parabolic-cylinder-function-v-a-x">Parabolic cylinder function <span class="math notranslate nohighlight">\(V(a,x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.cylinder_v"><code class="docutils literal notranslate"><span class="pre">math53.cylinder_v()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.cylinder_v"><code class="docutils literal notranslate"><span class="pre">ctx.cylinder_v()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parabolic-cylinder-function-w-a-x">Parabolic cylinder function <span class="math notranslate nohighlight">\(W(a,x)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -1079,8 +1079,8 @@ parts of the complex plane.</p>
 <section id="whittaker-function-m-kappa-mu-x">
 <span id="rst-mpm-whitm"></span><h2>Whittaker function <span class="math notranslate nohighlight">\(M_{\kappa, \mu}(x)\)</span><a class="headerlink" href="#whittaker-function-m-kappa-mu-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.whittaker_m">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">whittaker_m</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.whittaker_m" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.whittaker_m">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">whittaker_m</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.whittaker_m" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(M_{\kappa, \mu}(x) = e^{-\frac{1}{2}x} x^{\frac{1}{2}+\mu} M(\tfrac{1}{2}+\mu-\kappa, 1+2\mu, x)\)</span>, the Whittaker function M.</p>
 <p>See also MathWorld <span id="id26">[<a class="reference internal" href="../99BackMatter/index.html#id1719" title="E. W. Weisstein. Whittaker Function M. From MathWorld - A Wolfram Web Resource, 2016. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/WhittakerFunction.html. . Wolfram Language Documentation : https://reference.wolfram.com/language/ref/WhittakerM.html.">1006</a>]</span>,  Wikipedia <span id="id27">[<a class="reference internal" href="../99BackMatter/index.html#id1208" title="Wikipedia. Whittaker function. Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Whittaker_function.">1356</a>]</span>, <span id="id28">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.8.9), NIST <span id="id29">[<a class="reference internal" href="../99BackMatter/index.html#id522" title="A. B. O. Daalhuis. Whittaker Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/13.14.">184</a>]</span>, Mpmath <span id="id30">[<a class="reference internal" href="../99BackMatter/index.html#id838" title="The Mpmath Development Team. Whittaker function M. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2018. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/bessel.html#whitm.">714</a>]</span>.</p>
 <div class="math notranslate nohighlight">
@@ -1132,8 +1132,8 @@ to the Whittaker differential equation</p>
 <section id="whittaker-function-w-kappa-mu-x">
 <span id="rst-mpm-whitw"></span><h2>Whittaker function <span class="math notranslate nohighlight">\(W_{\kappa, \mu}(x)\)</span><a class="headerlink" href="#whittaker-function-w-kappa-mu-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.whittaker_w">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">whittaker_w</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.whittaker_w" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.whittaker_w">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">whittaker_w</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.whittaker_w" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(W_{\kappa, \mu}(x) = e^{-\frac{1}{2}x} x^{\frac{1}{2}+\mu} U(\tfrac{1}{2}+\mu-\kappa, 1+2\mu, x)\)</span>, the Whittaker function W.</p>
 <p>See also MathWorld <span id="id31">[<a class="reference internal" href="../99BackMatter/index.html#id1720" title="E. W. Weisstein. Whittaker Function W. From MathWorld - A Wolfram Web Resource, 2016. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/WhittakerFunction.html. . Wolfram Language Documentation : https://reference.wolfram.com/language/ref/WhittakerW.html.">1007</a>]</span>,  Wikipedia <span id="id32">[<a class="reference internal" href="../99BackMatter/index.html#id1208" title="Wikipedia. Whittaker function. Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Whittaker_function.">1356</a>]</span>, <span id="id33">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.8.10), NIST <span id="id34">[<a class="reference internal" href="../99BackMatter/index.html#id522" title="A. B. O. Daalhuis. Whittaker Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/13.14.">184</a>]</span>, Mpmath <span id="id35">[<a class="reference internal" href="../99BackMatter/index.html#id839" title="The Mpmath Development Team. Whittaker function W. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2018. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/bessel.html#whitw.">715</a>]</span>.</p>
 <div class="math notranslate nohighlight">
@@ -1181,8 +1181,8 @@ solution to the Whittaker differential equation.</p>
 <section id="parabolic-cylinder-function-d-nu-x">
 <h2>Parabolic cylinder function <span class="math notranslate nohighlight">\(D_{\nu}(x)\)</span><a class="headerlink" href="#parabolic-cylinder-function-d-nu-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.cylinder_d">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">cylinder_d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.cylinder_d" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.cylinder_d">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">cylinder_d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.cylinder_d" title="Link to this definition">#</a></dt>
 <dd><p>Returns Whittaker’s parabolic cylinder function <span class="math notranslate nohighlight">\(D_n(z) = U(-n-1/2, z)\)</span> (see <a class="reference internal" href="#rst-mpm-pcfu"><span class="std std-ref">pcfu()</span></a>).</p>
 <p>See also: MathWorld <span id="id36">[<a class="reference internal" href="../99BackMatter/index.html#id1722" title="Wolfram Language Documentation. Parabolic Cylinder Function D. Wolfram Research, 2016. [Online; accessed 22-July-2024]. URL: https://reference.wolfram.com/language/ref/ParabolicCylinderD.html.">275</a>]</span>,  Wikipedia <span id="id37">[<a class="reference internal" href="../99BackMatter/index.html#id1209" title="Wikipedia. Parabolic cylinder function. Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Parabolic_cylinder_function.">1349</a>]</span>, NIST <span id="id38">[<a class="reference internal" href="../99BackMatter/index.html#id523" title="N. M. Temme. Parabolic Cylinder Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/12.2.">768</a>]</span>, Mpmath <span id="id39">[<a class="reference internal" href="../99BackMatter/index.html#id840" title="The Mpmath Development Team. Parabolic cylinder function D. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2018. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/bessel.html#pcfd.">708</a>]</span>, <span id="id40">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.8.11.1).</p>
 <p>An example in Python</p>
@@ -1228,8 +1228,8 @@ solution to the Whittaker differential equation.</p>
 <section id="parabolic-cylinder-function-u-a-x">
 <span id="rst-mpm-pcfu"></span><h2>Parabolic cylinder function <span class="math notranslate nohighlight">\(U(a, x)\)</span><a class="headerlink" href="#parabolic-cylinder-function-u-a-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.cylinder_u">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">cylinder_u</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.cylinder_u" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.cylinder_u">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">cylinder_u</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.cylinder_u" title="Link to this definition">#</a></dt>
 <dd><p>Returns the parabolic cylinder function <span class="math notranslate nohighlight">\(U(a, x)\)</span>.</p>
 <p>See also: MathWorld <span id="id41">[<a class="reference internal" href="../99BackMatter/index.html#id1721" title="E. W. Weisstein. Parabolic Cylinder Functions. From MathWorld - A Wolfram Web Resource, 2016. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ParabolicCylinderFunction.html.">1003</a>]</span>,  Wikipedia <span id="id42">[<a class="reference internal" href="../99BackMatter/index.html#id1209" title="Wikipedia. Parabolic cylinder function. Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Parabolic_cylinder_function.">1349</a>]</span>, <span id="id43">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.8.11.2), NIST <span id="id44">[<a class="reference internal" href="../99BackMatter/index.html#id523" title="N. M. Temme. Parabolic Cylinder Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/12.2.">768</a>]</span>, Mpmath <span id="id45">[<a class="reference internal" href="../99BackMatter/index.html#id841" title="The Mpmath Development Team. Parabolic cylinder function U. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2018. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/bessel.html#pcfu.">709</a>]</span>.</p>
 <p>The function is defined, for arbitrary <span class="math notranslate nohighlight">\(z\)</span>, as</p>
@@ -1287,8 +1287,8 @@ solution to the Whittaker differential equation.</p>
 <section id="parabolic-cylinder-function-v-a-x">
 <h2>Parabolic cylinder function <span class="math notranslate nohighlight">\(V(a,x)\)</span><a class="headerlink" href="#parabolic-cylinder-function-v-a-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.cylinder_v">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">cylinder_v</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.cylinder_v" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.cylinder_v">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">cylinder_v</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.cylinder_v" title="Link to this definition">#</a></dt>
 <dd><p>Returns the  parabolic cylinder function <span class="math notranslate nohighlight">\(\displaystyle V(a,x)\)</span>, which can be
 represented in terms of <a class="reference internal" href="#rst-mpm-pcfu"><span class="std std-ref">pcfu()</span></a> as</p>
 <div class="math notranslate nohighlight">
@@ -1444,23 +1444,23 @@ represented in terms of <a class="reference internal" href="#rst-mpm-pcfu"><span
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#whittaker-function-m-kappa-mu-x">Whittaker function <span class="math notranslate nohighlight">\(M_{\kappa, \mu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.whittaker_m"><code class="docutils literal notranslate"><span class="pre">math53.whittaker_m()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.whittaker_m"><code class="docutils literal notranslate"><span class="pre">ctx.whittaker_m()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#whittaker-function-w-kappa-mu-x">Whittaker function <span class="math notranslate nohighlight">\(W_{\kappa, \mu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.whittaker_w"><code class="docutils literal notranslate"><span class="pre">math53.whittaker_w()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.whittaker_w"><code class="docutils literal notranslate"><span class="pre">ctx.whittaker_w()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parabolic-cylinder-function-d-nu-x">Parabolic cylinder function <span class="math notranslate nohighlight">\(D_{\nu}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.cylinder_d"><code class="docutils literal notranslate"><span class="pre">math53.cylinder_d()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.cylinder_d"><code class="docutils literal notranslate"><span class="pre">ctx.cylinder_d()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parabolic-cylinder-function-u-a-x">Parabolic cylinder function <span class="math notranslate nohighlight">\(U(a, x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.cylinder_u"><code class="docutils literal notranslate"><span class="pre">math53.cylinder_u()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.cylinder_u"><code class="docutils literal notranslate"><span class="pre">ctx.cylinder_u()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parabolic-cylinder-function-v-a-x">Parabolic cylinder function <span class="math notranslate nohighlight">\(V(a,x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.cylinder_v"><code class="docutils literal notranslate"><span class="pre">math53.cylinder_v()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.cylinder_v"><code class="docutils literal notranslate"><span class="pre">ctx.cylinder_v()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parabolic-cylinder-function-w-a-x">Parabolic cylinder function <span class="math notranslate nohighlight">\(W(a,x)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -1500,7 +1500,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

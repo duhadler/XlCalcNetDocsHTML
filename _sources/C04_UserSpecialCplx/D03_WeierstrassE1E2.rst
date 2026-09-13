@@ -34,7 +34,7 @@ The Weierstrass functions take real values on the real axis iff the lattice is f
 Weierstrass function `\wp_e(x,e_1,e_2)` (also DAMath)
 -------------------------------------------------------------------------------
 
-.. method:: math53.weierstrass_p_e(x,e1,e2)  
+.. method:: ctx.weierstrass_p_e(x,e1,e2)  
 
     Returns the Weierstrass function `\wp_e(x,e_1,e_2)` using the lattice roots and the Jacobi functions (where the equation with the smallest `e_k \ge 0` is used). See also  Wikipedia :cite:p:`WikipediaFun195a`, MathWorld :cite:p:`WolframFun190`, :cite:t:`Ehrhardt2018` (3.2.17.2).
 
@@ -75,7 +75,7 @@ Weierstrass function `\wp_e(x,e_1,e_2)` (also DAMath)
 Weierstrass function `\wp'_e(x,e_1,e_2)` (also DAMath)
 -------------------------------------------------------------------------------
 
-.. method:: math53.weierstrass_pprime_e(x,e1,e2)
+.. method:: ctx.weierstrass_pprime_e(x,e1,e2)
 
     Returns the derivative of the Weierstrass function `\wp'_e(x,e_1,e_2)`. See also Wikipedia :cite:p:`WikipediaFun195a`, MathWorld :cite:p:`WolframFun190`, :cite:t:`Ehrhardt2018` (3.2.17.3).
 
@@ -109,7 +109,7 @@ Weierstrass function `\wp'_e(x,e_1,e_2)` (also DAMath)
 Inverse Weierstrass function `\wp^{-1}_e(y,e_1,e_2)` (also DAMath)
 -------------------------------------------------------------------------------
 
-.. method:: math53.weierstrass_p_inv_e(y,e1,e2) 
+.. method:: ctx.weierstrass_p_inv_e(y,e1,e2) 
 
     Returns the functional inverse `\wp^{-1}_e` of the Weierstrass function for `y \ge e_1`, i.e. the smallest positive `x` with `\wp_e(x,e_1,e_2) = y`. The result is computed with the symmetric Carlson integral,
 

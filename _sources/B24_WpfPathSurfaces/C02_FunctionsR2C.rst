@@ -130,7 +130,7 @@ The example below uses the following code in C\#, for real part only
 
 .. code-block:: csharp
 
-    var y = math53.bessel_j0(t);
+    var y = ctx.bessel_j0(t);
     var x = t;
     var z = 0;
 
@@ -140,7 +140,7 @@ The example below uses the following code in C\#, for imaginary part only
 
 .. code-block:: csharp
 
-    var z = -math53.bessel_y0(t);
+    var z = -ctx.bessel_y0(t);
     var x = t;
     var y = 0;
 
@@ -150,8 +150,8 @@ The example below uses the following code in C\#, for real and imaginary part co
 
 .. code-block:: csharp
 
-    var z = math53.bessel_j0(t);
-    var y = -math53.bessel_y0(t);
+    var z = ctx.bessel_j0(t);
+    var y = -ctx.bessel_y0(t);
     var x = t;
 
 
@@ -209,7 +209,7 @@ The example below uses the following code in C\#, for real part only
 
 .. code-block:: csharp
 
-    var y = math53.bessel_j0(t);
+    var y = ctx.bessel_j0(t);
     var x = t;
     var z = 0;
 
@@ -219,7 +219,7 @@ The example below uses the following code in C\#, for imaginary part only
 
 .. code-block:: csharp
 
-    var z = math53.bessel_y0(t);
+    var z = ctx.bessel_y0(t);
     var x = t;
     var y = 0;
 
@@ -229,8 +229,8 @@ The example below uses the following code in C\#, for real and imaginary part co
 
 .. code-block:: csharp
 
-    var z = math53.bessel_j0(t);
-    var y = math53.bessel_y0(t);
+    var z = ctx.bessel_j0(t);
+    var y = ctx.bessel_y0(t);
     var x = t;
 
 
@@ -292,19 +292,19 @@ The example below uses the following code in C\#, for the real part only
 
 .. code-block:: csharp
 
-    var a = math53.exp(t / math53.sqrt(2));
+    var a = ctx.exp(t / ctx.sqrt(2));
     var x = t;
     var y = 0;
-    var z = math53.kelvin_ber(1,t) / a;
+    var z = ctx.kelvin_ber(1,t) / a;
 
 
 The example below uses the following code in C\#, for the imaginary part only
 
 .. code-block:: csharp
 
-    var a = math53.exp(t / math53.sqrt(2));
+    var a = ctx.exp(t / ctx.sqrt(2));
     var x = t;
-    var y = math53.kelvin_bei(1,t) / a;
+    var y = ctx.kelvin_bei(1,t) / a;
     var z = 0;
 
 
@@ -313,10 +313,10 @@ The example below uses the following code in C\#, for the real and imaginary par
 
 .. code-block:: csharp
 
-    var a = math53.exp(t / math53.sqrt(2));
+    var a = ctx.exp(t / ctx.sqrt(2));
     var x = t;
-    var y = math53.kelvin_bei(1,t) / a;
-    var z = math53.kelvin_ber(1,t) / a;
+    var y = ctx.kelvin_bei(1,t) / a;
+    var z = ctx.kelvin_ber(1,t) / a;
 
 
 
@@ -375,10 +375,10 @@ The example below uses the following code in C\#, for real part only
 
 .. code-block:: csharp
 
-    var a = math53.exp(t / math53.sqrt(2));
+    var a = ctx.exp(t / ctx.sqrt(2));
     var x = t;
     var y = 0;
-    var z = math53.kelvin_ker(0,t) * a;
+    var z = ctx.kelvin_ker(0,t) * a;
 
 
 
@@ -386,9 +386,9 @@ The example below uses the following code in C\#, for imaginary part only
 
 .. code-block:: csharp
 
-    var a = math53.exp(t / math53.sqrt(2));
+    var a = ctx.exp(t / ctx.sqrt(2));
     var x = t;
-    var y = math53.kelvin_kei(0,t) * a;
+    var y = ctx.kelvin_kei(0,t) * a;
     var z = 0;
 
 
@@ -397,10 +397,10 @@ The example below uses the following code in C\#, for real and imaginary part co
 
 .. code-block:: csharp
 
-    var a = math53.exp(t / math53.sqrt(2));
+    var a = ctx.exp(t / ctx.sqrt(2));
     var x = t;
-    var y = math53.kelvin_kei(0,t) * a;
-    var z = math53.kelvin_ker(0,t) * a;
+    var y = ctx.kelvin_kei(0,t) * a;
+    var z = ctx.kelvin_ker(0,t) * a;
 
 
 

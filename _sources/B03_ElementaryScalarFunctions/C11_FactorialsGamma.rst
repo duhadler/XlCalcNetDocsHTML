@@ -130,7 +130,7 @@ Gamma function, `\Gamma(x)`
 Auxiliary function `\Gamma(x+1)-1`
 -------------------------------------------------------------------------------
 
-.. method:: ctx.real_gamma1pm1(z)
+.. method:: ctx.gamma1pm1(z)
 
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
@@ -610,7 +610,7 @@ Falling factorial, `(a)^{\underline{n}} = (a-n+1)^{\overline{n}}`
 Ratio of gamma functions, `\Gamma(a)/\Gamma(b)`
 -------------------------------------------------------------------------------
 
-.. method:: ctx.real_gamma_ratio(a, b)
+.. method:: ctx.gamma_ratio(a, b)
 
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
@@ -652,7 +652,7 @@ Ratio of gamma functions, `\Gamma(a)/\Gamma(b)`
 Gamma-delta ratio, `\Gamma(a)/\Gamma(a + \delta)`
 -------------------------------------------------------------------------------
 
-.. method:: ctx.real_gamma_delta_ratio(x, delta)
+.. method:: ctx.gamma_delta_ratio(x, delta)
 
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
@@ -704,7 +704,7 @@ Beta function, `B(a,b) = \Gamma(a)\Gamma(b)/\Gamma(a + b)`
 
     where ``ctx`` is ``math53``, ``ctxboost`` or ``ctxflint``.
 
-    Returns the beta dunction `\displaystyle B(a,b) = \frac{\Gamma(a)\Gamma(b)}{\Gamma(a + b}`
+    Returns the beta function `\displaystyle B(a,b) = \frac{\Gamma(a)\Gamma(b)}{\Gamma(a + b}`
 
 
 

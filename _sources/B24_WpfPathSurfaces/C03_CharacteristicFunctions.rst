@@ -298,7 +298,7 @@ The example below uses the following code in C\#
 
     double nu = 21.0;
     double mu = 40.0;
-    double G = math53.gamma(mu / 2 + nu / 2) / math53.gamma(nu / 2);
+    double G = ctx.gamma(mu / 2 + nu / 2) / ctx.gamma(nu / 2);
     Complex i1 = Complex.ImaginaryOne;
     var fz = dcplx.zero();
     fz = G * cmath53.hyperg_u(mu / 2, 1 - nu / 2, -(nu / mu) * i1 * t);
@@ -495,7 +495,7 @@ The example below uses the following code in C\#
     Complex i1 = Complex.ImaginaryOne;
     var fz = dcplx.zero();
     fz = cmath53.hyperg_2f1(-n1, -K, N - K - n1 + 1, cmath53.exp(i1 * t));
-    fz = fz * math53.binomial(N - K, n1) / math53.binomial(N, n1);
+    fz = fz * ctx.binomial(N - K, n1) / ctx.binomial(N, n1);
     var x = fz.Real;
     var y = -fz.Imaginary;
     var z = t;

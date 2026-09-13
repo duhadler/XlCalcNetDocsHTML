@@ -53,7 +53,7 @@
     <link rel="prev" title="Inverse hyperbolic functions" href="C10_InverseHyperbolic.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -867,7 +867,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auxiliary-function-gamma-x-1-1">Auxiliary function <span class="math notranslate nohighlight">\(\Gamma(x+1)-1\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.real_gamma1pm1"><code class="docutils literal notranslate"><span class="pre">ctx.real_gamma1pm1()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.gamma1pm1"><code class="docutils literal notranslate"><span class="pre">ctx.gamma1pm1()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-gamma-function-log-gamma-x">Log-gamma function, <span class="math notranslate nohighlight">\(\log\Gamma(x)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -895,11 +895,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ratio-of-gamma-functions-gamma-a-gamma-b">Ratio of gamma functions, <span class="math notranslate nohighlight">\(\Gamma(a)/\Gamma(b)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.real_gamma_ratio"><code class="docutils literal notranslate"><span class="pre">ctx.real_gamma_ratio()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.gamma_ratio"><code class="docutils literal notranslate"><span class="pre">ctx.gamma_ratio()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gamma-delta-ratio-gamma-a-gamma-a-delta">Gamma-delta ratio, <span class="math notranslate nohighlight">\(\Gamma(a)/\Gamma(a + \delta)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.real_gamma_delta_ratio"><code class="docutils literal notranslate"><span class="pre">ctx.real_gamma_delta_ratio()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.gamma_delta_ratio"><code class="docutils literal notranslate"><span class="pre">ctx.gamma_delta_ratio()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beta-function-b-a-b-gamma-a-gamma-b-gamma-a-b">Beta function, <span class="math notranslate nohighlight">\(B(a,b) = \Gamma(a)\Gamma(b)/\Gamma(a + b)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -992,8 +992,8 @@ document.write(`
 <section id="auxiliary-function-gamma-x-1-1">
 <h2>Auxiliary function <span class="math notranslate nohighlight">\(\Gamma(x+1)-1\)</span><a class="headerlink" href="#auxiliary-function-gamma-x-1-1" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.real_gamma1pm1">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">real_gamma1pm1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.real_gamma1pm1" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.gamma1pm1">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">gamma1pm1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.gamma1pm1" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns <span class="math notranslate nohighlight">\(\Gamma(1 + x) - 1\)</span>, accurate also for <span class="math notranslate nohighlight">\(x\)</span> near <span class="math notranslate nohighlight">\(0\)</span>.</p>
 <p>See also  Wikipedia <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1069" title="Wikipedia. Gamma function. Wikimedia Foundation, 2012. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Gamma_function.">1239</a>]</span>, MathWorld <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id1527" title="E. W. Weisstein. Gamma Function. From MathWorld - A Wolfram Web Resource, 2008. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/GammaFunction.html.">871</a>]</span>, NIST <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id462" title="R. Askey, R.A.; Roy. Gamma and Psi Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/5.2.">21</a>]</span>,  BoostMath <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id350" title="P. A. Bristow and H. Holin. Gamma. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/sf_gamma/tgamma.html.">100</a>]</span>, <span id="id14">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.5.1.2)., Flint <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id578" title="The FLINT Team. Arb: Gamma function and factorials. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/arb.html#gamma-function-and-factorials.">729</a>]</span>, Flint <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id579" title="The FLINT Team. Acb: Gamma function and factorials. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb.html#gamma-function.">719</a>]</span>.</p>
@@ -1306,8 +1306,8 @@ document.write(`
 <section id="ratio-of-gamma-functions-gamma-a-gamma-b">
 <span id="rst-mpm-gamma-ratio"></span><h2>Ratio of gamma functions, <span class="math notranslate nohighlight">\(\Gamma(a)/\Gamma(b)\)</span><a class="headerlink" href="#ratio-of-gamma-functions-gamma-a-gamma-b" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.real_gamma_ratio">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">real_gamma_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.real_gamma_ratio" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.gamma_ratio">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">gamma_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.gamma_ratio" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>This functions returns the ratio of gamma functions in the form</p>
 <div class="math notranslate nohighlight">
@@ -1337,8 +1337,8 @@ document.write(`
 <section id="gamma-delta-ratio-gamma-a-gamma-a-delta">
 <span id="rst-mpm-gamma-delta-ratio"></span><h2>Gamma-delta ratio, <span class="math notranslate nohighlight">\(\Gamma(a)/\Gamma(a + \delta)\)</span><a class="headerlink" href="#gamma-delta-ratio-gamma-a-gamma-a-delta" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.real_gamma_delta_ratio">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">real_gamma_delta_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.real_gamma_delta_ratio" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.gamma_delta_ratio">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">gamma_delta_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.gamma_delta_ratio" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns the tgamma_ratio function of <em>z</em> and <em>m</em>. See also   BoostMath <span id="id63">[<a class="reference internal" href="../99BackMatter/index.html#id368" title="P. A. Bristow and H. Holin. Ratios of Gamma Functions. Boost Math Toolkit Library, 2017. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/sf_gamma/gamma_ratios.html.">125</a>]</span>.</p>
 <p>Returns <span class="math notranslate nohighlight">\(\Gamma(x)/\Gamma(x+d)\)</span>, accurate even for <span class="math notranslate nohighlight">\(|d| &lt;&lt; |x|\)</span>.</p>
@@ -1376,7 +1376,7 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.beta">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">beta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.beta" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns the beta dunction <span class="math notranslate nohighlight">\(\displaystyle B(a,b) = \frac{\Gamma(a)\Gamma(b)}{\Gamma(a + b}\)</span></p>
+<p>Returns the beta function <span class="math notranslate nohighlight">\(\displaystyle B(a,b) = \frac{\Gamma(a)\Gamma(b)}{\Gamma(a + b}\)</span></p>
 </dd></dl>
 
 <p></p>
@@ -1454,7 +1454,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auxiliary-function-gamma-x-1-1">Auxiliary function <span class="math notranslate nohighlight">\(\Gamma(x+1)-1\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.real_gamma1pm1"><code class="docutils literal notranslate"><span class="pre">ctx.real_gamma1pm1()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.gamma1pm1"><code class="docutils literal notranslate"><span class="pre">ctx.gamma1pm1()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-gamma-function-log-gamma-x">Log-gamma function, <span class="math notranslate nohighlight">\(\log\Gamma(x)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -1482,11 +1482,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ratio-of-gamma-functions-gamma-a-gamma-b">Ratio of gamma functions, <span class="math notranslate nohighlight">\(\Gamma(a)/\Gamma(b)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.real_gamma_ratio"><code class="docutils literal notranslate"><span class="pre">ctx.real_gamma_ratio()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.gamma_ratio"><code class="docutils literal notranslate"><span class="pre">ctx.gamma_ratio()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gamma-delta-ratio-gamma-a-gamma-a-delta">Gamma-delta ratio, <span class="math notranslate nohighlight">\(\Gamma(a)/\Gamma(a + \delta)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.real_gamma_delta_ratio"><code class="docutils literal notranslate"><span class="pre">ctx.real_gamma_delta_ratio()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.gamma_delta_ratio"><code class="docutils literal notranslate"><span class="pre">ctx.gamma_delta_ratio()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beta-function-b-a-b-gamma-a-gamma-b-gamma-a-b">Beta function, <span class="math notranslate nohighlight">\(B(a,b) = \Gamma(a)\Gamma(b)/\Gamma(a + b)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -1530,7 +1530,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

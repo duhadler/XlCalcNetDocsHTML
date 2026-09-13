@@ -356,7 +356,7 @@ Hyperbolic cosine integral `\mathrm{Chi}(x)`
 
     where ``ctx`` is ``math53``, ``ctxflint``.
 
-    Note: Also math53.chi(z), ctx.coshIntegral(z)
+    Note: Also ctx.chi(z), ctx.coshIntegral(z)
 
     Returns the hyperbolic cosine integral `\displaystyle \mathrm{Chi}(x) = -\int_x^{\infty} \frac{\cosh(t)}{t} \, \mathrm{d}t = \gamma + \log(x) + \int_0^x \frac{\cosh(t) - 1}{t} \, \mathrm{d}t`.
 

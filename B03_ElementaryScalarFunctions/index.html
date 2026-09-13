@@ -53,7 +53,7 @@
     <link rel="prev" title="Mathematical Constants" href="../B02_BasicFloatingPointFunctions/C08_MathConstants.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -927,7 +927,7 @@ document.write(`
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="C02_Roots.html#nth-root-mathrm-nroot-x-n-sqrt-n-x">Nth root, <span class="math notranslate nohighlight">\(\mathrm{nroot}(x, n) = \sqrt[n]{x}\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C02_Roots.html#ctx.nroot"><code class="docutils literal notranslate"><span class="pre">ctx.nroot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C02_Roots.html#ctx.root_si"><code class="docutils literal notranslate"><span class="pre">ctx.root_si()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="C02_Roots.html#unit-root-mathrm-unitroot-n">Unit root, <span class="math notranslate nohighlight">\(\mathrm{unitroot}(n)\)</span></a><ul>
@@ -1012,15 +1012,15 @@ document.write(`
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="C05_PowerFunctions.html#auxiliary-function-mathrm-powi-x-n-x-n">Auxiliary function <span class="math notranslate nohighlight">\(\mathrm{powi}(x,n) = x^n\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C05_PowerFunctions.html#ctx.powi"><code class="docutils literal notranslate"><span class="pre">ctx.powi()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C05_PowerFunctions.html#ctx.pow_si"><code class="docutils literal notranslate"><span class="pre">ctx.pow_si()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="C05_PowerFunctions.html#auxiliary-function-mathrm-compound-x-n-1-x-n">Auxiliary function <span class="math notranslate nohighlight">\(\mathrm{compound}(x,n) = (1+x)^n\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C05_PowerFunctions.html#math53.compound"><code class="docutils literal notranslate"><span class="pre">math53.compound()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C05_PowerFunctions.html#ctx.compound"><code class="docutils literal notranslate"><span class="pre">ctx.compound()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="C05_PowerFunctions.html#auxiliary-function-mathrm-comprel-x-n-1-x-n-1">Auxiliary function <span class="math notranslate nohighlight">\(\mathrm{comprel}(x,n) = (1+x)^n - 1\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C05_PowerFunctions.html#math53.comprel"><code class="docutils literal notranslate"><span class="pre">math53.comprel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C05_PowerFunctions.html#ctx.comprel"><code class="docutils literal notranslate"><span class="pre">ctx.comprel()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="C05_PowerFunctions.html#auxiliary-function-mathrm-hypot-x-y-sqrt-x-2-y-2">Auxiliary function <span class="math notranslate nohighlight">\(\mathrm{hypot}(x,y) = \sqrt{x^2 + y^2}\)</span></a><ul>
@@ -1198,7 +1198,7 @@ document.write(`
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="C11_FactorialsGamma.html#auxiliary-function-gamma-x-1-1">Auxiliary function <span class="math notranslate nohighlight">\(\Gamma(x+1)-1\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C11_FactorialsGamma.html#ctx.real_gamma1pm1"><code class="docutils literal notranslate"><span class="pre">ctx.real_gamma1pm1()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C11_FactorialsGamma.html#ctx.gamma1pm1"><code class="docutils literal notranslate"><span class="pre">ctx.gamma1pm1()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="C11_FactorialsGamma.html#log-gamma-function-log-gamma-x">Log-gamma function, <span class="math notranslate nohighlight">\(\log\Gamma(x)\)</span></a><ul>
@@ -1226,11 +1226,11 @@ document.write(`
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="C11_FactorialsGamma.html#ratio-of-gamma-functions-gamma-a-gamma-b">Ratio of gamma functions, <span class="math notranslate nohighlight">\(\Gamma(a)/\Gamma(b)\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C11_FactorialsGamma.html#ctx.real_gamma_ratio"><code class="docutils literal notranslate"><span class="pre">ctx.real_gamma_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C11_FactorialsGamma.html#ctx.gamma_ratio"><code class="docutils literal notranslate"><span class="pre">ctx.gamma_ratio()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="C11_FactorialsGamma.html#gamma-delta-ratio-gamma-a-gamma-a-delta">Gamma-delta ratio, <span class="math notranslate nohighlight">\(\Gamma(a)/\Gamma(a + \delta)\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C11_FactorialsGamma.html#ctx.real_gamma_delta_ratio"><code class="docutils literal notranslate"><span class="pre">ctx.real_gamma_delta_ratio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C11_FactorialsGamma.html#ctx.gamma_delta_ratio"><code class="docutils literal notranslate"><span class="pre">ctx.gamma_delta_ratio()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="C11_FactorialsGamma.html#beta-function-b-a-b-gamma-a-gamma-b-gamma-a-b">Beta function, <span class="math notranslate nohighlight">\(B(a,b) = \Gamma(a)\Gamma(b)/\Gamma(a + b)\)</span></a><ul>
@@ -1330,7 +1330,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

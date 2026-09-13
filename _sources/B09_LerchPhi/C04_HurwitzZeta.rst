@@ -167,7 +167,7 @@ Hurwitz zeta function, `\zeta(s,a)`
 Generalized harmonic number function, `H_x^{(r)}`
 -------------------------------------------------------------------------------
 
-.. method:: math53.harmonic2(x, s)
+.. method:: ctx.harmonic2(x, s)
 
     Returns the generalized harmonic function  `H_x^{(r)} = \zeta(r) - \zeta(r,x+1)` for `r \ne 1` and `H_x^{(r)} = H_x` for `r = 1`. 
 
@@ -287,7 +287,7 @@ Bernoulli numbers, `B_n`
 Bernoulli polynomials, `B_n(x)`
 -------------------------------------------------------------------------------
 
-.. method:: math53.bernpoly(n, x)
+.. method:: ctx.bernpoly(n, x)
 
     Returns `\displaystyle B_n(x) = \sum_{n=0}^{\infty} \binom{n}{k} B_k x^{n-k}`, the Bernoulli polynomial of degree `n \ge 0`.
 
@@ -388,7 +388,7 @@ Euler numbers
 Euler polynomials, `E_n(x)`
 -------------------------------------------------------------------------------
 
-.. method:: math53.eulerpoly(n, x)
+.. method:: ctx.eulerpoly(n, x)
 
     Returns `\displaystyle E_n(x) = \frac{2}{n+1} \left( B_{n+1}(x)-2^{n+1}B_{n+1}\left(\frac{x}{2}\right) \right)`, the Euler polynomial of degree `n \ge 0`. Special values include the Euler numbers `E_n = 2^n E_n(1/2)`. 
 

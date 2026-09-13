@@ -53,7 +53,7 @@
     <link rel="prev" title="Gauss Hypergeometric Function \(\,_2F_1\)" href="C01_Hyper2F1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -871,11 +871,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-polynomials-of-the-third-kind-v-n-x">Chebyshev polynomials of the third kind, <span class="math notranslate nohighlight">\(V_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.chebyshev_v"><code class="docutils literal notranslate"><span class="pre">math53.chebyshev_v()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.chebyshev_v"><code class="docutils literal notranslate"><span class="pre">ctx.chebyshev_v()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-polynomials-of-the-fourth-kind-w-n-x">Chebyshev polynomials of the fourth kind, <span class="math notranslate nohighlight">\(W_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.chebyshev_w"><code class="docutils literal notranslate"><span class="pre">math53.chebyshev_w()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.chebyshev_w"><code class="docutils literal notranslate"><span class="pre">ctx.chebyshev_w()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gegenbauer-ultraspherical-polynomial-c-n-alpha-x">Gegenbauer (ultraspherical) polynomial, <span class="math notranslate nohighlight">\(C_{n}^{\alpha}(x)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -887,7 +887,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zernike-radial-polynomials-r-n-m-r">Zernike radial polynomials <span class="math notranslate nohighlight">\(R_n^m(r)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.zernike_r"><code class="docutils literal notranslate"><span class="pre">math53.zernike_r()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.zernike_r"><code class="docutils literal notranslate"><span class="pre">ctx.zernike_r()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1011,8 +1011,8 @@ document.write(`
 <section id="chebyshev-polynomials-of-the-third-kind-v-n-x">
 <h2>Chebyshev polynomials of the third kind, <span class="math notranslate nohighlight">\(V_n(x)\)</span><a class="headerlink" href="#chebyshev-polynomials-of-the-third-kind-v-n-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.chebyshev_v">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">chebyshev_v</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.chebyshev_v" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.chebyshev_v">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">chebyshev_v</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.chebyshev_v" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(\displaystyle V_n(x)\)</span>, the Chebyshev polynomial of the first kind.  The <span class="math notranslate nohighlight">\(V_n (x)\)</span> are orthogonal on the interval <span class="math notranslate nohighlight">\((-1, 1)\)</span>, with respect to the weight function <span class="math notranslate nohighlight">\(w(x) = (1 + x^2 )^{1/2}  (1 - x)^{-1/2}\)</span>.</p>
 <p>The function can also be calculated as <span class="math notranslate nohighlight">\(\displaystyle V_n(x) = (-1)^n (2n+1) {}_2F_1\left(-n,n+1,\frac{3}{2},\frac{1+x}{2}\right)\)</span>, which allows for complex <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <p>We also have <span class="math notranslate nohighlight">\(\displaystyle V_n(x) = \sqrt{\frac{2}{1+x}} T_{2n+1} \left( \sqrt{\frac{x+1}{2}} \right)\)</span> for <span class="math notranslate nohighlight">\(x \ge 0\)</span>, and <span class="math notranslate nohighlight">\(V_n (x) = (-1)^n W_{n}(-x)\)</span> for <span class="math notranslate nohighlight">\(x &lt; 0\)</span>.</p>
@@ -1038,8 +1038,8 @@ document.write(`
 <section id="chebyshev-polynomials-of-the-fourth-kind-w-n-x">
 <h2>Chebyshev polynomials of the fourth kind, <span class="math notranslate nohighlight">\(W_n(x)\)</span><a class="headerlink" href="#chebyshev-polynomials-of-the-fourth-kind-w-n-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.chebyshev_w">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">chebyshev_w</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.chebyshev_w" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.chebyshev_w">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">chebyshev_w</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.chebyshev_w" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(\displaystyle W_k(z)\)</span>, the Chebyshev polynomial of the fourth kind of degree <span class="math notranslate nohighlight">\(n \ge 0\)</span>.  The <span class="math notranslate nohighlight">\(W_n (x)\)</span> are orthogonal on the interval <span class="math notranslate nohighlight">\((-1, 1)\)</span>, with respect to the weight function <span class="math notranslate nohighlight">\(w(x) = (1 - x)^{1/2} (1 + x^2 )^{-1/2}\)</span>.</p>
 <p>The function can also be calculated as <span class="math notranslate nohighlight">\(\displaystyle W_n(z) = (-1)^n {}_2F_1\left(-n,n+1,\frac{1}{2},\frac{1+x}{2}\right)\)</span>, which allows for complex <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <p>We also have <span class="math notranslate nohighlight">\(\displaystyle W_n(x) = U_{2n} \left( \sqrt{\frac{x+1}{2}} \right)\)</span> for <span class="math notranslate nohighlight">\(x \ge 0\)</span>, and <span class="math notranslate nohighlight">\(W_n (x) = (-1)^n V_{n}(-x)\)</span> for <span class="math notranslate nohighlight">\(x &lt; 0\)</span>.</p>
@@ -1188,8 +1188,8 @@ direct methods.</p>
 <section id="zernike-radial-polynomials-r-n-m-r">
 <h2>Zernike radial polynomials <span class="math notranslate nohighlight">\(R_n^m(r)\)</span><a class="headerlink" href="#zernike-radial-polynomials-r-n-m-r" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.zernike_r">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">zernike_r</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.zernike_r" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.zernike_r">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">zernike_r</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.zernike_r" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Zernike radial polynomial <span class="math notranslate nohighlight">\(R_n^m(r)\)</span>, with  <span class="math notranslate nohighlight">\(r \ge 0\)</span>, and  <span class="math notranslate nohighlight">\(n \ge m \ge 0\)</span>, <span class="math notranslate nohighlight">\(n-m\)</span> even, zero otherwise. The orthogonality relation is</p>
 <div class="math notranslate nohighlight">
 \[\int_0^1 R_n^m(r) R_{n'}^m(r) r  \, \mathrm{d}r = \frac{1}{2(n+1)} \delta_{nn'}.\]</div>
@@ -1265,11 +1265,11 @@ direct methods.</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-polynomials-of-the-third-kind-v-n-x">Chebyshev polynomials of the third kind, <span class="math notranslate nohighlight">\(V_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.chebyshev_v"><code class="docutils literal notranslate"><span class="pre">math53.chebyshev_v()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.chebyshev_v"><code class="docutils literal notranslate"><span class="pre">ctx.chebyshev_v()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chebyshev-polynomials-of-the-fourth-kind-w-n-x">Chebyshev polynomials of the fourth kind, <span class="math notranslate nohighlight">\(W_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.chebyshev_w"><code class="docutils literal notranslate"><span class="pre">math53.chebyshev_w()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.chebyshev_w"><code class="docutils literal notranslate"><span class="pre">ctx.chebyshev_w()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gegenbauer-ultraspherical-polynomial-c-n-alpha-x">Gegenbauer (ultraspherical) polynomial, <span class="math notranslate nohighlight">\(C_{n}^{\alpha}(x)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -1281,7 +1281,7 @@ direct methods.</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zernike-radial-polynomials-r-n-m-r">Zernike radial polynomials <span class="math notranslate nohighlight">\(R_n^m(r)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.zernike_r"><code class="docutils literal notranslate"><span class="pre">math53.zernike_r()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.zernike_r"><code class="docutils literal notranslate"><span class="pre">ctx.zernike_r()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1317,7 +1317,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

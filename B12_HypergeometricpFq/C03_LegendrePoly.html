@@ -53,7 +53,7 @@
     <link rel="prev" title="Chebyshev, Gegenbauer and Jacobi polynomials" href="C02_ChebyshevPoly.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -883,15 +883,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toroidal-harmonics-p-m-l-1-2-x">Toroidal harmonics <span class="math notranslate nohighlight">\(P^m_{l-1/2}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.toroidal_plm"><code class="docutils literal notranslate"><span class="pre">math53.toroidal_plm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.toroidal_plm"><code class="docutils literal notranslate"><span class="pre">ctx.toroidal_plm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toroidal-harmonics-q-m-l-1-2-x">Toroidal harmonics <span class="math notranslate nohighlight">\(Q^m_{l-1/2}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.toroidal_qlm"><code class="docutils literal notranslate"><span class="pre">math53.toroidal_qlm()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#olver-s-associated-legendre-function-q-m-l-1-2-x">Olver’s associated Legendre function <span class="math notranslate nohighlight">\(Q^m_{l-1/2}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.olver_qlm"><code class="docutils literal notranslate"><span class="pre">math53.olver_qlm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.toroidal_qlm"><code class="docutils literal notranslate"><span class="pre">ctx.toroidal_qlm()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1127,7 +1123,7 @@ type 2 and type 3 in <em>Mathematica</em> and <em>mpmath</em>.</p>
 <dt class="sig sig-object py" id="ctx.spherical_harmonic">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">spherical_harmonic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.spherical_harmonic" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Note: math53.spherHarm(theta, phi, n, m), ctxboost.SphericalHarmonicR(theta, phi, n, m), ctxboost.SphericalHarmonicI(theta, phi, n, m)</p>
+<p>Note: ctx.spherHarm(theta, phi, n, m), ctxboost.SphericalHarmonicR(theta, phi, n, m), ctxboost.SphericalHarmonicI(theta, phi, n, m)</p>
 <p>!!! n and m need to be integer !!!</p>
 <p>Returns <span class="math notranslate nohighlight">\(\displaystyle  Y_l^m(\theta,\phi) = \sqrt{\frac{2l+1}{4\pi}\frac{(l-m)!}{(l+m)!}} P_l^m(\cos \theta) e^{i m \phi}\)</span> the spherical harmonic, where  <span class="math notranslate nohighlight">\(\displaystyle P_l^m(z)\)</span> is the Legendre function of the first kind of degree <span class="math notranslate nohighlight">\(l\)</span> and order <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(\theta \in [0, \pi]\)</span> denotes the polar coordinate (ranging from the north pole to the south pole) and <span class="math notranslate nohighlight">\(\phi \in [0, 2 \pi]\)</span> denotes the azimuthal coordinate on a sphere. Care should be used since many different conventions for spherical coordinate variables are used.</p>
 <p>See also  Wikipedia <span id="id32">[<a class="reference internal" href="../99BackMatter/index.html#id1117" title="Wikipedia. Spherical harmonics. Wikimedia Foundation, 2014. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Spherical_harmonics.">1294</a>]</span>, MathWorld <span id="id33">[<a class="reference internal" href="../99BackMatter/index.html#id1580" title="E. W. Weisstein. Spherical Harmonic. From MathWorld - A Wolfram Web Resource, 2010. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/SphericalHarmonic.html.">920</a>]</span>, NIST <span id="id34">[<a class="reference internal" href="../99BackMatter/index.html#id477" title="T.M. Dunster. Spherical and Spheroidal Harmonics. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/14.30.">283</a>]</span>,  BoostMath <span id="id35">[<a class="reference internal" href="../99BackMatter/index.html#id374" title="P. A. Bristow and H. Holin. Spherical Harmonics. Boost Math Toolkit Library, 2017. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/sf_poly/sph_harm.html.">129</a>]</span>, <span id="id36">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.7.17), Flint <span id="id37">[<a class="reference internal" href="../99BackMatter/index.html#id594" title="The FLINT Team. Acb: Orthogonal polynomials and functions. FLINT: Fast Library for Number Theory, 2020. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_hypgeom.html#orthogonal-polynomials-and-functions.">745</a>]</span>, Mpmath <span id="id38">[<a class="reference internal" href="../99BackMatter/index.html#id717" title="The Mpmath Development Team. Spherical Harmonic. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2012. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/orthogonal.html#spherical-harmonics.">627</a>]</span>.</p>
@@ -1173,8 +1169,8 @@ type 2 and type 3 in <em>Mathematica</em> and <em>mpmath</em>.</p>
 <section id="toroidal-harmonics-p-m-l-1-2-x">
 <h2>Toroidal harmonics <span class="math notranslate nohighlight">\(P^m_{l-1/2}(x)\)</span><a class="headerlink" href="#toroidal-harmonics-p-m-l-1-2-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.toroidal_plm">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">toroidal_plm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.toroidal_plm" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.toroidal_plm">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">toroidal_plm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.toroidal_plm" title="Link to this definition">#</a></dt>
 <dd><p>Returns the toroidal harmonic  <span class="math notranslate nohighlight">\(P^m_{l-1/2}(x)\)</span>, which is an associated Legendre function <span class="math notranslate nohighlight">\(P^m_l(x)\)</span> of the first kind with half-integer degree. The current implementation is based on Amath and is restricted to <span class="math notranslate nohighlight">\(l,m=0,1; x&gt;1\)</span>, using Legendre elliptic integrals or Bulirsch elliptic integrals for numerical evaluation.</p>
 <p>See also: <a class="reference external" href="https://mathworld.wolfram.com/ToroidalFunction.html">https://mathworld.wolfram.com/ToroidalFunction.html</a></p>
 <p>See also: <a class="reference external" href="https://dlmf.nist.gov/14.19">https://dlmf.nist.gov/14.19</a></p>
@@ -1197,8 +1193,8 @@ type 2 and type 3 in <em>Mathematica</em> and <em>mpmath</em>.</p>
 <section id="toroidal-harmonics-q-m-l-1-2-x">
 <h2>Toroidal harmonics <span class="math notranslate nohighlight">\(Q^m_{l-1/2}(x)\)</span><a class="headerlink" href="#toroidal-harmonics-q-m-l-1-2-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.toroidal_qlm">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">toroidal_qlm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.toroidal_qlm" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.toroidal_qlm">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">toroidal_qlm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.toroidal_qlm" title="Link to this definition">#</a></dt>
 <dd><p>Returns the toroidal harmonic <span class="math notranslate nohighlight">\(Q^m_{l-1/2}(x)\)</span>, which is an associated Legendre function <span class="math notranslate nohighlight">\(Q^m_l(x)\)</span> of the second kind with half-integer degree. The current implementation is based on Amath and is restricted to <span class="math notranslate nohighlight">\(l,m=0,1; x&gt;1\)</span>, using Legendre elliptic integrals or Bulirsch elliptic integrals for numerical evaluation.</p>
 <p>See also: Majic (2019), <a class="reference external" href="https://mathworld.wolfram.com/ToroidalFunction.html">https://mathworld.wolfram.com/ToroidalFunction.html</a></p>
 <p>See also:  <span id="id40">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">286</a>]</span> (3.7.18).</p>
@@ -1214,22 +1210,6 @@ type 2 and type 3 in <em>Mathematica</em> and <em>mpmath</em>.</p>
 <span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
 </pre></div>
 </div>
-</dd></dl>
-
-</section>
-<section id="olver-s-associated-legendre-function-q-m-l-1-2-x">
-<h2>Olver’s associated Legendre function <span class="math notranslate nohighlight">\(Q^m_{l-1/2}(x)\)</span><a class="headerlink" href="#olver-s-associated-legendre-function-q-m-l-1-2-x" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="math53.olver_qlm">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">olver_qlm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.olver_qlm" title="Link to this definition">#</a></dt>
-<dd><p>Defined as (see <a class="reference external" href="https://dlmf.nist.gov/14.3#E10">https://dlmf.nist.gov/14.3#E10</a>)</p>
-<div class="math notranslate nohighlight">
-\[\boldsymbol{Q}^{\mu}_{\nu}\left(x\right)=e^{-\mu\pi i}\frac{Q^{\mu}_{\nu}\left(x\right)}{\Gamma\left(\nu+\mu+1\right)}.\]</div>
-<p>Can be calculated as</p>
-<div class="math notranslate nohighlight">
-\[\boldsymbol{Q}^{\mu}_{\nu}\left(x\right)=\frac{2^{\nu}\Gamma\left(\nu+1\right)(x+1)^{\mu/2}}{(x-1)^{(\mu/2)+\nu+1}}\mathbf{F}\left(\nu+1,\nu+\mu+1;2\nu+2;\frac{2}{1-x}\right).\]</div>
-<p>For hypergeometric representations of Ferrers function and associated Legendre function</p>
-<p>see <a class="reference external" href="https://dlmf.nist.gov/14.3">https://dlmf.nist.gov/14.3</a></p>
 </dd></dl>
 
 </section>
@@ -1301,15 +1281,11 @@ type 2 and type 3 in <em>Mathematica</em> and <em>mpmath</em>.</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toroidal-harmonics-p-m-l-1-2-x">Toroidal harmonics <span class="math notranslate nohighlight">\(P^m_{l-1/2}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.toroidal_plm"><code class="docutils literal notranslate"><span class="pre">math53.toroidal_plm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.toroidal_plm"><code class="docutils literal notranslate"><span class="pre">ctx.toroidal_plm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toroidal-harmonics-q-m-l-1-2-x">Toroidal harmonics <span class="math notranslate nohighlight">\(Q^m_{l-1/2}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.toroidal_qlm"><code class="docutils literal notranslate"><span class="pre">math53.toroidal_qlm()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#olver-s-associated-legendre-function-q-m-l-1-2-x">Olver’s associated Legendre function <span class="math notranslate nohighlight">\(Q^m_{l-1/2}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.olver_qlm"><code class="docutils literal notranslate"><span class="pre">math53.olver_qlm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.toroidal_qlm"><code class="docutils literal notranslate"><span class="pre">ctx.toroidal_qlm()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1345,7 +1321,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

@@ -53,7 +53,7 @@
     <link rel="prev" title="Fraction and remainder related functions" href="C06_FractionRemainder.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -914,7 +914,7 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.epsilon">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">epsilon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ctx.epsilon" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns the machine epsilon in extended precision (<span class="math notranslate nohighlight">\(2^{-63}\)</span> = 1.084202E-19) or double precision (<span class="math notranslate nohighlight">\(2^{-52}\)</span> = 2.220446E-16).  See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1083" title="Wikipedia. Machine epsilon. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Machine_epsilon.">1244</a>]</span>.</p>
+<p>Returns the machine epsilon for the given data type. See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1083" title="Wikipedia. Machine epsilon. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Machine_epsilon.">1244</a>]</span>.</p>
 <p>See also: <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.float_info">https://docs.python.org/3/library/sys.html#sys.float_info</a></p>
 <p>In extended precision (32 bit version of xlcalcnet)</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
@@ -961,7 +961,7 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.maxvalue">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">maxvalue</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ctx.maxvalue" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns the largest representable number in extended (<span class="math notranslate nohighlight">\(2^{16384}\)</span> = 1.189731E+4932) or double precision (<span class="math notranslate nohighlight">\(2^{1024} - 2^{971}\)</span> = 1.7976931E+308).</p>
+<p>Returns the largest representable number for the given data type.</p>
 <p>See also: <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.float_info">https://docs.python.org/3/library/sys.html#sys.float_info</a></p>
 <p>In extended precision (32 bit version of xlcalcnet)</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
@@ -984,7 +984,7 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.lowestvalue">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">lowestvalue</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ctx.lowestvalue" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns the lowest representable number in extended (<span class="math notranslate nohighlight">\(-2^{16384}\)</span> = -1.189731E+4932) or double precision (<span class="math notranslate nohighlight">\(-2^{1024} - 2^{971}\)</span> = -1.7976931E+308).</p>
+<p>Returns the lowest representable number for the given data type.</p>
 <p>In extended precision (32 bit version of xlcalcnet)</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">MaxValue</span><span class="p">()</span>
@@ -1049,7 +1049,7 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.nextabove">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">nextabove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.nextabove" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Note: math53.pred(x),  math53.succ(x).</p>
+<p>Note: ctx.pred(x),  ctx.succ(x).</p>
 <p>Nextabove: Returns the next representable floating point number before <span class="math notranslate nohighlight">\(x\)</span> in the direction of <code class="docutils literal notranslate"><span class="pre">+Inf</span></code>.</p>
 <p>See also: <a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/math/nextafter">https://en.cppreference.com/w/cpp/numeric/math/nextafter</a></p>
 <p>An example in Python</p>
@@ -1069,7 +1069,7 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.nextbelow">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">nextbelow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.nextbelow" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Note: math53.pred(x),  math53.succ(x).</p>
+<p>Note: ctx.pred(x),  ctx.succ(x).</p>
 <p>Nextbelow: Returns the next representable floating point number before x in the direction of <code class="docutils literal notranslate"><span class="pre">-Inf</span></code>.</p>
 <p>See also: <a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/math/nextafter">https://en.cppreference.com/w/cpp/numeric/math/nextafter</a></p>
 <p>An example in Python</p>
@@ -1195,7 +1195,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>

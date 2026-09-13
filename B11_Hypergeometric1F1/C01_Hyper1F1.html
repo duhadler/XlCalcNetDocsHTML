@@ -53,7 +53,7 @@
     <link rel="prev" title="Hypergeometric function \(\,_1F_1\) and related" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 11, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 13, 2026"/>
   </head>
   
   
@@ -883,7 +883,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hermite-polynomials-probabilist-operatorname-he-n-x">Hermite polynomials (probabilist) <span class="math notranslate nohighlight">\(\operatorname{He}_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.hermite_he"><code class="docutils literal notranslate"><span class="pre">math53.hermite_he()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.hermite_he"><code class="docutils literal notranslate"><span class="pre">ctx.hermite_he()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1053,7 +1053,7 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.laguerre_l">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">laguerre_l</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.laguerre_l" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Note: math53.laguerre(z, n, alpha)</p>
+<p>Note: ctx.laguerre(z, n, alpha)</p>
 <p>Returns <span class="math notranslate nohighlight">\(\displaystyle L^{(a)}_n (x) = \binom{n+a}{n} M(-n,a+1,x) = \frac{\Gamma(n+a+1)}{\Gamma(n+1)\Gamma(a+1)} {}_1F_1(-n,a+1,x)\)</span>, the generalized Laguerre polynomials of degree <span class="math notranslate nohighlight">\(n \geq 0\)</span> with parameter <span class="math notranslate nohighlight">\(a; x \geq 0\)</span> and <span class="math notranslate nohighlight">\(a &gt; -1\)</span> are the standard ranges.</p>
 <p>For integer degree <span class="math notranslate nohighlight">\(n \ge 0\)</span> and integer order <span class="math notranslate nohighlight">\(m \ge 0\)</span>, we have, as a special case, the (associated) Laguerre polynomial  <span class="math notranslate nohighlight">\(L_n^m(x) = L_n^{(m)}(x)\)</span>. If <span class="math notranslate nohighlight">\(m = 0\)</span>, it is just called Laguerre polynomial: <span class="math notranslate nohighlight">\(L_n(x) = L_n^0(x) = L_n^{(0)}(x)\)</span></p>
 <p>These polynomials are orthogonal on the interval <span class="math notranslate nohighlight">\((0,\infty)\)</span>, with respect to the weight function <span class="math notranslate nohighlight">\(w(x) = e^{-x}x^a\)</span>. The following standard recurrence formulas are used:</p>
@@ -1105,8 +1105,8 @@ document.write(`
 <section id="hermite-polynomials-probabilist-operatorname-he-n-x">
 <h2>Hermite polynomials (probabilist) <span class="math notranslate nohighlight">\(\operatorname{He}_n(x)\)</span><a class="headerlink" href="#hermite-polynomials-probabilist-operatorname-he-n-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.hermite_he">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">hermite_he</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.hermite_he" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.hermite_he">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">hermite_he</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.hermite_he" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(\operatorname{He}_n(x) = 2^{-n/2} H_n(x/\sqrt{2})\)</span>, the  probabilist’s Hermite polynomial of degree <span class="math notranslate nohighlight">\(n \ge 0\)</span>.</p>
 <p>For integer <span class="math notranslate nohighlight">\(n\)</span>, the <span class="math notranslate nohighlight">\(\operatorname{He}_n\)</span> are orthogonal on the interval <span class="math notranslate nohighlight">\((-\infty, \infty)\)</span>, with respect to the weight function <span class="math notranslate nohighlight">\(w(x) = \exp(-x^2/2)\)</span>. They are computed with the standard recurrence formulas:</p>
 <div class="math notranslate nohighlight">
@@ -1194,7 +1194,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hermite-polynomials-probabilist-operatorname-he-n-x">Hermite polynomials (probabilist) <span class="math notranslate nohighlight">\(\operatorname{He}_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.hermite_he"><code class="docutils literal notranslate"><span class="pre">math53.hermite_he()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.hermite_he"><code class="docutils literal notranslate"><span class="pre">ctx.hermite_he()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1230,7 +1230,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 11, 2026.
+  Last updated on Sep 13, 2026.
   <br/>
 </p>
   </div>
