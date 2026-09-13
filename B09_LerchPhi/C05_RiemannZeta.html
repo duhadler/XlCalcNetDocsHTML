@@ -879,7 +879,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-landau-function-xi-s">Riemann (Landau) function <span class="math notranslate nohighlight">\(\xi(s)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.riemann_xi"><code class="docutils literal notranslate"><span class="pre">ctxflint.riemann_xi()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.riemann_xi"><code class="docutils literal notranslate"><span class="pre">ctx.riemann_xi()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirichlet-eta-function-eta-s">Dirichlet eta function, <span class="math notranslate nohighlight">\(\eta(s)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -899,7 +899,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zeros-of-the-riemann-zeta-function">Zeros of the Riemann zeta function</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.zeta_zero"><code class="docutils literal notranslate"><span class="pre">ctxflint.zeta_zero()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.zeta_zero"><code class="docutils literal notranslate"><span class="pre">ctx.zeta_zero()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1089,8 +1089,8 @@ and where <span class="math notranslate nohighlight">\(\theta(t)\)</span> denote
 <section id="riemann-landau-function-xi-s">
 <h2>Riemann (Landau) function <span class="math notranslate nohighlight">\(\xi(s)\)</span><a class="headerlink" href="#riemann-landau-function-xi-s" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctxflint.riemann_xi">
-<span class="sig-prename descclassname"><span class="pre">ctxflint.</span></span><span class="sig-name descname"><span class="pre">riemann_xi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctxflint.riemann_xi" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.riemann_xi">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">riemann_xi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.riemann_xi" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Riemann (Landau) function <span class="math notranslate nohighlight">\(\xi(s)\)</span>. See also MathWorld <span id="id25">[<a class="reference internal" href="../99BackMatter/index.html#id1674" title="E. W. Weisstein. Riemann Xi. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/Xi-Function.html.">983</a>]</span>, Wikipedia <span id="id26">[<a class="reference internal" href="../99BackMatter/index.html#id1170" title="Wikipedia. Riemann Xi. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Riemann_Xi_function.">1315</a>]</span>, Flint <span id="id27">[<a class="reference internal" href="../99BackMatter/index.html#id602" title="The FLINT Team. Riemann zeta function. FLINT: Fast Library for Number Theory, 2020. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_dirichlet.html#riemann-zeta-function.">752</a>]</span>.</p>
 <p>Landau’s lower-case <span class="math notranslate nohighlight">\(\xi\)</span> (“xi”) is defined as</p>
 <div class="math notranslate nohighlight">
@@ -1319,8 +1319,8 @@ and where <span class="math notranslate nohighlight">\(\theta(t)\)</span> denote
 <section id="zeros-of-the-riemann-zeta-function">
 <span id="rst-mpm-zetazero"></span><h2>Zeros of the Riemann zeta function<a class="headerlink" href="#zeros-of-the-riemann-zeta-function" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctxflint.zeta_zero">
-<span class="sig-prename descclassname"><span class="pre">ctxflint.</span></span><span class="sig-name descname"><span class="pre">zeta_zero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctxflint.zeta_zero" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.zeta_zero">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">zeta_zero</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.zeta_zero" title="Link to this definition">#</a></dt>
 <dd><p>Returns the zeros of the Riemann zeta function.  See also  Wikipedia <span id="id40">[<a class="reference internal" href="../99BackMatter/index.html#id1181" title="Wikipedia. Riemann hypothesis. Wikimedia Foundation, 2017. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Riemann_hypothesis.">1322</a>]</span>, MathWorld <span id="id41">[<a class="reference internal" href="../99BackMatter/index.html#id1689" title="E. W. Weisstein. Riemann Zeta Function Zeros. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/RiemannZetaFunctionZeros.html.">984</a>]</span>, NIST <span id="id42">[<a class="reference internal" href="../99BackMatter/index.html#id509" title="T. M. Apostol. Zeta function Zeros. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/25.10.">14</a>]</span>, Mpmath <span id="id43">[<a class="reference internal" href="../99BackMatter/index.html#id795" title="The Mpmath Development Team. Zeros of the Riemann zeta function. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2016. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/zeta.html#zetazero.">694</a>]</span>.</p>
 <p>This calls <code class="docutils literal notranslate"><span class="pre">acb_dirichlet_zeta_zero</span></code>.</p>
 <p>Computes the <span class="math notranslate nohighlight">\(n\)</span>-th nontrivial zero of <span class="math notranslate nohighlight">\(\zeta(s)\)</span> on the critical line,
@@ -1407,7 +1407,7 @@ imaginary part <span class="math notranslate nohighlight">\(t\)</span> is a zero
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-landau-function-xi-s">Riemann (Landau) function <span class="math notranslate nohighlight">\(\xi(s)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.riemann_xi"><code class="docutils literal notranslate"><span class="pre">ctxflint.riemann_xi()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.riemann_xi"><code class="docutils literal notranslate"><span class="pre">ctx.riemann_xi()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dirichlet-eta-function-eta-s">Dirichlet eta function, <span class="math notranslate nohighlight">\(\eta(s)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -1427,7 +1427,7 @@ imaginary part <span class="math notranslate nohighlight">\(t\)</span> is a zero
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zeros-of-the-riemann-zeta-function">Zeros of the Riemann zeta function</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.zeta_zero"><code class="docutils literal notranslate"><span class="pre">ctxflint.zeta_zero()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.zeta_zero"><code class="docutils literal notranslate"><span class="pre">ctx.zeta_zero()</span></code></a></li>
 </ul>
 </li>
 </ul>

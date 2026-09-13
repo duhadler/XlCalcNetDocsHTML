@@ -145,7 +145,7 @@ Weierstrass Zeta function `\zeta_e(z, e_1, e_2)`
 -------------------------------------------------------------------------------
 
 
-.. method:: ctxflint.weierstrass_zeta_e(z, e_1, e_2)
+.. method:: ctx.weierstrass_zeta_e(z, e_1, e_2)
 
 
     Computes the Weierstrass zeta function `\zeta_g(z; g_2, g_3)`. 
@@ -175,7 +175,7 @@ Weierstrass Sigma function `\sigma_e(z, e_1, e_2)`
 -------------------------------------------------------------------------------
 
 
-.. method:: ctxflint.weierstrass_sigma_e(z, e_1, e_2)
+.. method:: ctx.weierstrass_sigma_e(z, e_1, e_2)
 
 
     Computes the Weierstrass sigma function, `\sigma_g(z; g_2, g_3)`. We have `\sigma_g(tz; t^{-4} g_2, t^{-6} g_3) = t \sigma_g(z; g_2, g_3)`.  |newline|

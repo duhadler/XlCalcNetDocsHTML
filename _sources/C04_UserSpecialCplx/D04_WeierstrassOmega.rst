@@ -25,7 +25,7 @@ Weierstrass function `\wp_{\omega}(z| \omega_1, \omega_2)`
 -------------------------------------------------------------------------------
 
 
-.. method:: ctxflint.weierstrass_o(z, omega1, omega2)
+.. method:: ctx.weierstrass_o(z, omega1, omega2)
 
 
     Computes Weierstrass's elliptic function in terms of half-period `\omega_1` and elliptic period ratio `\tau`. 
@@ -96,7 +96,7 @@ Weierstrass function, first derivative: `\wp_{\omega}'(z| \omega_1, \omega_2)`
 -------------------------------------------------------------------------------
 
 
-.. method:: ctxflint.weierstrass_p_prime_o(z, omega1, omega2)
+.. method:: ctx.weierstrass_p_prime_o(z, omega1, omega2)
 
     Computes the  first derivative of Weierstrass's elliptic function in terms of half-period `\omega_1` and elliptic period ratio `\tau`. 
 
@@ -158,7 +158,7 @@ Inverse Weierstrass function `\wp_{\omega}^{-1}(z| \omega_1, \omega_2)`
 -------------------------------------------------------------------------------
 
 
-.. method:: ctxflint.weierstrass_p_inv_o(z, omega1, omega2)
+.. method:: ctx.weierstrass_p_inv_o(z, omega1, omega2)
 
 
     Computes the inverse of the Weierstrass elliptic function in terms of half-period `\omega_1` and elliptic period ratio `\tau`. It which satisfies `\wp(\wp^{-1}(z, \tau), \tau) = z`. This function is given  by the elliptic integral
@@ -222,7 +222,7 @@ Weierstrass Zeta function `\zeta_{\omega}(z, \omega_1, \omega_2)`
 -------------------------------------------------------------------------------
 
 
-.. method:: ctxflint.weierstrass_zeta_o(z, omega1, omega2)
+.. method:: ctx.weierstrass_zeta_o(z, omega1, omega2)
 
 
     Computes the Weierstrass zeta function in terms of half-period `\omega_1` and elliptic period ratio `\tau`. 
@@ -296,7 +296,7 @@ Weierstrass Sigma function `\sigma_{\omega}(z| \omega_1, \omega_2)`
 -------------------------------------------------------------------------------
 
 
-.. method:: ctxflint.weierstrass_sigma_o(z, omega1, omega2)
+.. method:: ctx.weierstrass_sigma_o(z, omega1, omega2)
 
 
     Computes the Weierstrass sigma function in terms of half-period `\omega_1` and elliptic period ratio `\tau`. We have `\sigma(tz| t \omega, \tau) = t \sigma(z| \omega, \tau)`.

@@ -887,7 +887,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#barnes-g-function">Barnes G-function</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.barnes_g"><code class="docutils literal notranslate"><span class="pre">ctxflint.barnes_g()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.barnes_g"><code class="docutils literal notranslate"><span class="pre">ctx.barnes_g()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logarithm-of-barnes-g-function">Logarithm of Barnes G function</a><ul class="visible nav section-nav flex-column">
@@ -895,11 +895,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperfactorial">Hyperfactorial</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.hyperfactorial"><code class="docutils literal notranslate"><span class="pre">ctxflint.hyperfactorial()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.hyperfactorial"><code class="docutils literal notranslate"><span class="pre">ctx.hyperfactorial()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#superfactorial">Superfactorial</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.superfactorial"><code class="docutils literal notranslate"><span class="pre">ctxflint.superfactorial()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.superfactorial"><code class="docutils literal notranslate"><span class="pre">ctx.superfactorial()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1180,8 +1180,8 @@ document.write(`
 <section id="barnes-g-function">
 <span id="rst-mpm-barnesg"></span><h2>Barnes G-function<a class="headerlink" href="#barnes-g-function" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctxflint.barnes_g">
-<span class="sig-prename descclassname"><span class="pre">ctxflint.</span></span><span class="sig-name descname"><span class="pre">barnes_g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctxflint.barnes_g" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.barnes_g">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">barnes_g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.barnes_g" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Barnes G-function of <em>z</em>. See also Wikipedia <span id="id31">[<a class="reference internal" href="../99BackMatter/index.html#id1111" title="Wikipedia. Barnes G-function. Wikimedia Foundation, 2014. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Barnes_G-function.">1275</a>]</span>, MathWorld <span id="id32">[<a class="reference internal" href="../99BackMatter/index.html#id1572" title="E. W. Weisstein. Barnes G-function. From MathWorld - A Wolfram Web Resource, 2010. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/BarnesG-Function.html.">901</a>]</span>, NIST <span id="id33">[<a class="reference internal" href="../99BackMatter/index.html#id474" title="R. Askey, R.A.; Roy. Barnes' G-Function (Double Gamma Function). NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/5.17.">20</a>]</span>, <span id="id34">Whittaker and Watson [<a class="reference internal" href="../99BackMatter/index.html#id267" title="Whittaker and Watson. A Course of Modern Analysis. Cambridge University Press, 4th edition, 1927.">1047</a>]</span>, Mpmath <span id="id35">[<a class="reference internal" href="../99BackMatter/index.html#id709" title="The Mpmath Development Team. Barnes G-function. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2012. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/gamma.html#barnesg.">616</a>]</span>.</p>
 <p>Evaluates the Barnes G-function, which generalizes the superfactorial (<a class="reference internal" href="#rst-mpm-superfac"><span class="std std-ref">superfac()</span></a>) and by extension also the hyperfactorial (<a class="reference internal" href="#rst-mpm-hyperfac"><span class="std std-ref">hyperfac()</span></a>) to the complex numbers in an analogous way to how the gamma function generalizes the ordinary factorial.</p>
 <p>The Barnes G-function may be defined in terms of a Weierstrass product:</p>
@@ -1273,8 +1273,8 @@ document.write(`
 <section id="hyperfactorial">
 <span id="rst-mpm-hyperfac"></span><h2>Hyperfactorial<a class="headerlink" href="#hyperfactorial" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctxflint.hyperfactorial">
-<span class="sig-prename descclassname"><span class="pre">ctxflint.</span></span><span class="sig-name descname"><span class="pre">hyperfactorial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctxflint.hyperfactorial" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.hyperfactorial">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">hyperfactorial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.hyperfactorial" title="Link to this definition">#</a></dt>
 <dd><p>Returns the hyperfactorial of <em>z</em>. See also Wikipedia <span id="id41">[<a class="reference internal" href="../99BackMatter/index.html#id1110" title="Wikipedia. Hyperfactorial. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Factorial#Hyperfactorial.">1266</a>]</span>, MathWorld <span id="id42">[<a class="reference internal" href="../99BackMatter/index.html#id1571" title="E. W. Weisstein. Hyperfactorial. From MathWorld - A Wolfram Web Resource, 2010. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Hyperfactorial.html.">912</a>]</span>, <span id="id43">of Integer Sequences [<a class="reference internal" href="../99BackMatter/index.html#id193" title="The On-Line Encyclopedia of Integer Sequences. Hyperfactorials: product_k = 1..n k^k. 2000.">421</a>]</span>, Mpmath <span id="id44">[<a class="reference internal" href="../99BackMatter/index.html#id708" title="The Mpmath Development Team. Hyperfactorial. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2012. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/gamma.html#hyperfac.">623</a>]</span>.</p>
 <p>Computes the hyperfactorial, defined for integers as the product</p>
 <div class="math notranslate nohighlight">
@@ -1315,8 +1315,8 @@ document.write(`
 <section id="superfactorial">
 <span id="rst-mpm-superfac"></span><h2>Superfactorial<a class="headerlink" href="#superfactorial" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctxflint.superfactorial">
-<span class="sig-prename descclassname"><span class="pre">ctxflint.</span></span><span class="sig-name descname"><span class="pre">superfactorial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctxflint.superfactorial" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.superfactorial">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">superfactorial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.superfactorial" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Superfactorial of <em>z</em>. See also Wikipedia <span id="id45">[<a class="reference internal" href="../99BackMatter/index.html#id1109" title="Wikipedia. Superfactorial. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Factorial#Superfactorial.">1271</a>]</span>, MathWorld <span id="id46">[<a class="reference internal" href="../99BackMatter/index.html#id1570" title="E. W. Weisstein. Superfactorial. From MathWorld - A Wolfram Web Resource, 2010. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Superfactorial.html.">921</a>]</span>, <span id="id47">of Integer Sequences [<a class="reference internal" href="../99BackMatter/index.html#id192" title="The On-Line Encyclopedia of Integer Sequences. Superfactorials: product of first n factorials. 2000.">422</a>]</span>, Mpmath <span id="id48">[<a class="reference internal" href="../99BackMatter/index.html#id707" title="The Mpmath Development Team. Superfactorial. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2012. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/gamma.html#superfac.">628</a>]</span>.</p>
 <p>Computes the superfactorial, defined as the product of consecutive factorials</p>
 <div class="math notranslate nohighlight">
@@ -1425,7 +1425,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#barnes-g-function">Barnes G-function</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.barnes_g"><code class="docutils literal notranslate"><span class="pre">ctxflint.barnes_g()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.barnes_g"><code class="docutils literal notranslate"><span class="pre">ctx.barnes_g()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logarithm-of-barnes-g-function">Logarithm of Barnes G function</a><ul class="visible nav section-nav flex-column">
@@ -1433,11 +1433,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperfactorial">Hyperfactorial</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.hyperfactorial"><code class="docutils literal notranslate"><span class="pre">ctxflint.hyperfactorial()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.hyperfactorial"><code class="docutils literal notranslate"><span class="pre">ctx.hyperfactorial()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#superfactorial">Superfactorial</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.superfactorial"><code class="docutils literal notranslate"><span class="pre">ctxflint.superfactorial()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.superfactorial"><code class="docutils literal notranslate"><span class="pre">ctx.superfactorial()</span></code></a></li>
 </ul>
 </li>
 </ul>

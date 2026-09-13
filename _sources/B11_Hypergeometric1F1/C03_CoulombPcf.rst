@@ -623,7 +623,7 @@ Parabolic cylinder function `V(a,x)`
 Parabolic cylinder function `W(a,x)`
 -------------------------------------------------------------------------------
 
-.. method:: ctxflint.cylinder_w(a, z)
+.. method:: ctx.cylinder_w(a, z)
 
 
     Returns the parabolic cylinder function `W(a,z)`.  See also  Wikipedia :cite:p:`WikipediaFun1057`, MathWorld :cite:p:`WolframFun1057`, NIST :cite:p:`DLMFun1057`, Mpmath :cite:p:`MpmathFun1060`.

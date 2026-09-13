@@ -338,7 +338,7 @@ Hardy (or Riemann-Siegel) Z function
 Riemann (Landau) function `\xi(s)`
 -------------------------------------------------------------------------------
 
-.. method:: ctxflint.riemann_xi(s)
+.. method:: ctx.riemann_xi(s)
 
 
 
@@ -656,7 +656,7 @@ The function is calculated as
 Zeros of the Riemann zeta function
 -------------------------------------------------------------------------------
 
-.. method:: ctxflint.zeta_zero(n)
+.. method:: ctx.zeta_zero(n)
 
 
 

@@ -863,19 +863,19 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dedekind-eta-function-eta-tau">Dedekind eta function <span class="math notranslate nohighlight">\(\eta(\tau)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.dedekind_eta"><code class="docutils literal notranslate"><span class="pre">ctxflint.dedekind_eta()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dedekind_eta"><code class="docutils literal notranslate"><span class="pre">ctx.dedekind_eta()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elliptic-modular-lambda-function-lambda-tau-also-damath">Elliptic modular lambda function <span class="math notranslate nohighlight">\(\lambda(\tau)\)</span> (also DAMath)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.ctx.elliptic_modular_lambda"><code class="docutils literal notranslate"><span class="pre">ctxflint.ctx.elliptic_modular_lambda()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.ctx.elliptic_modular_lambda"><code class="docutils literal notranslate"><span class="pre">ctx.ctx.elliptic_modular_lambda()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elliptic-modular-delta-function-delta-omega-tau">Elliptic modular delta function <span class="math notranslate nohighlight">\(\Delta(\omega, \tau)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.ctx.elliptic_modular_delta"><code class="docutils literal notranslate"><span class="pre">ctxflint.ctx.elliptic_modular_delta()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.ctx.elliptic_modular_delta"><code class="docutils literal notranslate"><span class="pre">ctx.ctx.elliptic_modular_delta()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klein-j-invariant-j-tau-also-damath">Klein j-invariant <span class="math notranslate nohighlight">\(j(\tau )\)</span> (also DAMath)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.klein_j"><code class="docutils literal notranslate"><span class="pre">ctxflint.klein_j()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.klein_j"><code class="docutils literal notranslate"><span class="pre">ctx.klein_j()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -895,8 +895,8 @@ document.write(`
 <section id="dedekind-eta-function-eta-tau">
 <span id="rst-mpm-dedekind-eta"></span><h2>Dedekind eta function <span class="math notranslate nohighlight">\(\eta(\tau)\)</span><a class="headerlink" href="#dedekind-eta-function-eta-tau" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctxflint.dedekind_eta">
-<span class="sig-prename descclassname"><span class="pre">ctxflint.</span></span><span class="sig-name descname"><span class="pre">dedekind_eta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctxflint.dedekind_eta" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.dedekind_eta">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dedekind_eta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dedekind_eta" title="Link to this definition">#</a></dt>
 <dd><p>Returns Dedekind <span class="math notranslate nohighlight">\(\eta\)</span> in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span>. . See also Flint <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id610" title="The FLINT Team. Acb: Dedekind eta function. FLINT: Fast Library for Number Theory, 2021. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_modular.html#dedekind-eta-function.">754</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1661" title="E. W. Weisstein. Dedekind Eta Function. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/DedekindEtaFunction.html.">955</a>]</span>, Mathworld, equation 20:</p>
 <div class="math notranslate nohighlight">
 \[\eta(\tau) = \frac{\theta_2(\pi/6, \bar{q}^{1/6})}{\sqrt{3}}, \quad \text{where }  \bar{q} = q^2 = e^{2 i \pi \tau}.\]</div>
@@ -935,8 +935,8 @@ document.write(`
 <section id="elliptic-modular-lambda-function-lambda-tau-also-damath">
 <span id="rst-mpm-modular-lambda-by-tau"></span><h2>Elliptic modular lambda function <span class="math notranslate nohighlight">\(\lambda(\tau)\)</span> (also DAMath)<a class="headerlink" href="#elliptic-modular-lambda-function-lambda-tau-also-damath" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctxflint.ctx.elliptic_modular_lambda">
-<span class="sig-prename descclassname"><span class="pre">ctxflint.ctx.</span></span><span class="sig-name descname"><span class="pre">elliptic_modular_lambda</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctxflint.ctx.elliptic_modular_lambda" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.ctx.elliptic_modular_lambda">
+<span class="sig-prename descclassname"><span class="pre">ctx.ctx.</span></span><span class="sig-name descname"><span class="pre">elliptic_modular_lambda</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.ctx.elliptic_modular_lambda" title="Link to this definition">#</a></dt>
 <dd><p>Computes the lambda function <span class="math notranslate nohighlight">\(\lambda(\tau) = \theta_2^4(0,\tau) / \theta_3^4(0,\tau)\)</span> in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span>. It is invariant under modular transformations <span class="math notranslate nohighlight">\((a, b; c, d)\)</span> where <span class="math notranslate nohighlight">\(a, d\)</span> are odd and <span class="math notranslate nohighlight">\(b, c\)</span> are even.</p>
 <p>See also MathWorld <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1657" title="E. W. Weisstein. Elliptic Lambda Function. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/EllipticLambdaFunction.html.">957</a>]</span>, Flint <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id609" title="The FLINT Team. Acb: Modular forms. FLINT: Fast Library for Number Theory, 2021. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_elliptic.html#weierstrass-elliptic-functions.">758</a>]</span>.</p>
 <p>See also: <a class="reference external" href="https://dlmf.nist.gov/23.15#ii">https://dlmf.nist.gov/23.15#ii</a></p>
@@ -974,8 +974,8 @@ document.write(`
 <section id="elliptic-modular-delta-function-delta-omega-tau">
 <span id="rst-mpm-modular-delta-by-tau"></span><h2>Elliptic modular delta function <span class="math notranslate nohighlight">\(\Delta(\omega, \tau)\)</span><a class="headerlink" href="#elliptic-modular-delta-function-delta-omega-tau" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctxflint.ctx.elliptic_modular_delta">
-<span class="sig-prename descclassname"><span class="pre">ctxflint.ctx.</span></span><span class="sig-name descname"><span class="pre">elliptic_modular_delta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctxflint.ctx.elliptic_modular_delta" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.ctx.elliptic_modular_delta">
+<span class="sig-prename descclassname"><span class="pre">ctx.ctx.</span></span><span class="sig-name descname"><span class="pre">elliptic_modular_delta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.ctx.elliptic_modular_delta" title="Link to this definition">#</a></dt>
 <dd><p>Computes the modular discriminant <span class="math notranslate nohighlight">\(\Delta(\tau) = \eta(\tau)^{24}\)</span> in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span>.  It transforms as</p>
 <div class="math notranslate nohighlight">
 \[\Delta\left(\frac{a\tau+b}{c\tau+d}\right) = (c\tau+d)^{12} \Delta(\tau).\]</div>
@@ -1022,8 +1022,8 @@ document.write(`
 <section id="klein-j-invariant-j-tau-also-damath">
 <span id="rst-mpm-kleinj-by-tau"></span><h2>Klein j-invariant <span class="math notranslate nohighlight">\(j(\tau )\)</span> (also DAMath)<a class="headerlink" href="#klein-j-invariant-j-tau-also-damath" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctxflint.klein_j">
-<span class="sig-prename descclassname"><span class="pre">ctxflint.</span></span><span class="sig-name descname"><span class="pre">klein_j</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctxflint.klein_j" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.klein_j">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">klein_j</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.klein_j" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Klein <span class="math notranslate nohighlight">\(j\)</span>-invariant in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span>. See also Wikipedia <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id1177" title="Wikipedia. j-invariant. Wikimedia Foundation, 2017. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/J-invariant.">1325</a>]</span>, MathWorld <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id1684" title="E. W. Weisstein. Klein's Absolute Invariant. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/KleinsAbsoluteInvariant.html.">979</a>]</span>, NIST <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">469</a>]</span>, Flint <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id609" title="The FLINT Team. Acb: Modular forms. FLINT: Fast Library for Number Theory, 2021. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_elliptic.html#weierstrass-elliptic-functions.">758</a>]</span>, Mpmath <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id790" title="The Mpmath Development Team. Klein j-invariant. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2015. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/elliptic.html#kleinj.">678</a>]</span>.</p>
 <p>See also: <a class="reference external" href="https://dlmf.nist.gov/23.15#ii">https://dlmf.nist.gov/23.15#ii</a></p>
 <p>Computes Klein’s <span class="math notranslate nohighlight">\(j\)</span>-invariant <span class="math notranslate nohighlight">\(j(\tau)\)</span> given <span class="math notranslate nohighlight">\(\tau\)</span> in the upper half-plane. The function is normalized so that <span class="math notranslate nohighlight">\(j(i) = 1728\)</span>. We first move <span class="math notranslate nohighlight">\(\tau\)</span> to the fundamental domain, which does not change the value of the function. Then we use the formula</p>
@@ -1112,19 +1112,19 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dedekind-eta-function-eta-tau">Dedekind eta function <span class="math notranslate nohighlight">\(\eta(\tau)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.dedekind_eta"><code class="docutils literal notranslate"><span class="pre">ctxflint.dedekind_eta()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dedekind_eta"><code class="docutils literal notranslate"><span class="pre">ctx.dedekind_eta()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elliptic-modular-lambda-function-lambda-tau-also-damath">Elliptic modular lambda function <span class="math notranslate nohighlight">\(\lambda(\tau)\)</span> (also DAMath)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.ctx.elliptic_modular_lambda"><code class="docutils literal notranslate"><span class="pre">ctxflint.ctx.elliptic_modular_lambda()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.ctx.elliptic_modular_lambda"><code class="docutils literal notranslate"><span class="pre">ctx.ctx.elliptic_modular_lambda()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elliptic-modular-delta-function-delta-omega-tau">Elliptic modular delta function <span class="math notranslate nohighlight">\(\Delta(\omega, \tau)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.ctx.elliptic_modular_delta"><code class="docutils literal notranslate"><span class="pre">ctxflint.ctx.elliptic_modular_delta()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.ctx.elliptic_modular_delta"><code class="docutils literal notranslate"><span class="pre">ctx.ctx.elliptic_modular_delta()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klein-j-invariant-j-tau-also-damath">Klein j-invariant <span class="math notranslate nohighlight">\(j(\tau )\)</span> (also DAMath)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctxflint.klein_j"><code class="docutils literal notranslate"><span class="pre">ctxflint.klein_j()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.klein_j"><code class="docutils literal notranslate"><span class="pre">ctx.klein_j()</span></code></a></li>
 </ul>
 </li>
 </ul>

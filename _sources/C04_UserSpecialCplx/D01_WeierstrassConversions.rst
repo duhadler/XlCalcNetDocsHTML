@@ -32,7 +32,7 @@ Conversions of parameters of Weierstrass `\wp`
 Elliptic lattice roots `e_1, e_2, e_3` from elliptic lattice invariants `g_2, g_3`
 ---------------------------------------------------------------------------------------
 
-.. method:: ctxflint.elliptic_roots_from_g2g3(g2, g3)
+.. method:: ctx.elliptic_roots_from_g2g3(g2, g3)
 
 
     Computes the lattice roots `e_1, e_2, e_3` from the lattice invariants `g_2, g_3`, using the equation
@@ -139,7 +139,7 @@ Elliptic half periods `\omega_1, \omega_2` from elliptic lattice invariants `g_2
 -----------------------------------------------------------------------------------------------------
 
 
-.. method:: ctxflint.elliptic_halfperiods_from_g2g3(g2, g3)
+.. method:: ctx.elliptic_halfperiods_from_g2g3(g2, g3)
 
 
 
@@ -265,7 +265,7 @@ Elliptic half-period `\omega_1` and elliptic period ratio `\tau` from elliptic l
 -----------------------------------------------------------------------------------------------------------------
 
 
-.. method:: ctxflint.OmegaAndTau(g2, g3)
+.. method:: ctx.OmegaAndTau(g2, g3)
 
     Given the (possibly complex) elliptic lattice invariants `g_2 \ne 0` and `g_3 \ne 0`, with `\Delta = g_2^3 - 27 g_3^2 \ne 0`, returns the elliptic half-period `\omega_1` and elliptic period ratio `\tau` as a tuple of complex numbers (`\omega_1, \tau`)  such that  `g_2 \omega_1^4 = g_{3, \tau}`,  `g_3 \omega_1^6 = g_{3, \tau}`, and `\displaystyle j(\tau) = 1728 \frac{g_2^3}{g_2^3 - 27 g_3^2}`, where  `(g_{2, \tau}, g_{3, \tau})` are the `(g_2, g_3)` values returned by calling  :ref:`EllipticInvariants() <rst_mpm_elliptic_invariants_by_tau>` with `\tau` as argument, and `j(\tau )` denotes the Klein `j`-invariant. The returned tuple (`\omega_1, \tau`) is not unique.
 

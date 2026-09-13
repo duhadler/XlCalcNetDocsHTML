@@ -37,7 +37,7 @@ Weierstrass function `\wp_g(z, g_2, g_3)` (also DAMath)
 -------------------------------------------------------------------------------
 
 
-.. method:: ctxflint.weierstrass_p_g(z, g2, g3)
+.. method:: ctx.weierstrass_p_g(z, g2, g3)
 
 
     Computes Weierstrass's elliptic function `\wp_g(z; g_2, g_3)`. 
@@ -164,7 +164,7 @@ Weierstrass function, first derivative: `\wp_g'(z, g_2, g_3)`
 -------------------------------------------------------------------------------
 
 
-.. method:: ctxflint.weierstrass_p_prime_(z, g2, g3)
+.. method:: ctx.weierstrass_p_prime_(z, g2, g3)
 
     Computes the first derivative of the Weierstrass function, `\wp_g'(z, g_2, g_3)`. 
 
@@ -277,7 +277,7 @@ Inverse Weierstrass function `\wp_g^{-1}(z, g_2, g_3)`
 -------------------------------------------------------------------------------
 
 
-.. method:: ctxflint.weierstrass_p_invG(z, g2, g3)
+.. method:: ctx.weierstrass_p_invG(z, g2, g3)
 
 
     Computes the Inverse Weierstrass function `\wp_g^{-1}(z, g_2, g_3)`
@@ -342,7 +342,7 @@ Weierstrass Zeta function `\zeta_g(z, g_2, g_3)`
 -------------------------------------------------------------------------------
 
 
-.. method:: ctxflint.weierstrass_zeta_g(z, g2, g3)
+.. method:: ctx.weierstrass_zeta_g(z, g2, g3)
 
 
     Computes the Weierstrass zeta function `\zeta_g(z; g_2, g_3)`. 
@@ -434,7 +434,7 @@ Weierstrass Sigma function `\sigma_g(z, g_2, g_3`)
 -------------------------------------------------------------------------------
 
 
-.. method:: ctxflint.weierstrass_sigma_g(z, g2, g3)
+.. method:: ctx.weierstrass_sigma_g(z, g2, g3)
 
 
     Computes the Weierstrass sigma function, `\sigma_g(z; g_2, g_3)`. We have `\sigma_g(tz; t^{-4} g_2, t^{-6} g_3) = t \sigma_g(z; g_2, g_3)`.  |newline|

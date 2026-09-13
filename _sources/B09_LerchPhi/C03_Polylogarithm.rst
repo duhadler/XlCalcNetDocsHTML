@@ -228,7 +228,7 @@ Dilogarithm Function, `\mathrm{Li}_2(z)`
 Generalized Clausen sine function
 -------------------------------------------------------------------------------
 
-.. method:: ctxflint.clausen_sin(s, z)
+.. method:: ctx.clausen_sin(s, z)
 
 
     Returns the Clausen sine function. See also  Wikipedia :cite:p:`WikipediaFun1017`, MathWorld :cite:p:`WolframFun1017`, Mpmath :cite:p:`MpmathFun1017`. 
@@ -319,7 +319,7 @@ Generalized Clausen sine function
 Generalized Clausen cosine function
 -------------------------------------------------------------------------------
 
-.. method:: ctxflint.clausen_cos(s, z)
+.. method:: ctx.clausen_cos(s, z)
 
 
     Returns the Clausen cosine function. See also  Wikipedia :cite:p:`WikipediaFun1017`, MathWorld :cite:p:`WolframFun1017`, Mpmath :cite:p:`MpmathFun1018`. 
@@ -651,7 +651,7 @@ Legendre's Chi function, `\chi_s(x)`
 Generalized inverse tangent integral
 -------------------------------------------------------------------------------
 
-.. method:: ctxflint.inverse_tan_integral(s, z)
+.. method:: ctx.inverse_tan_integral(s, z)
 
     Returns the generalized inverse tangent integral `Ti_s(z)`, which can be expressed in terms of polylogarithms:
     

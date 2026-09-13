@@ -457,7 +457,7 @@ Euler polynomials, `E_n(x)`
 Barnes G-function
 -------------------------------------------------------------------------------
 
-.. method:: ctxflint.barnes_g(z)
+.. method:: ctx.barnes_g(z)
 
 
     Returns the Barnes G-function of *z*. See also Wikipedia :cite:p:`WikipediaFun131`, MathWorld :cite:p:`WolframFun131`, NIST :cite:p:`DLMFun131`, :cite:t:`Whittaker1927`, Mpmath :cite:p:`MpmathFun131`.
@@ -591,7 +591,7 @@ Logarithm of Barnes G function
 Hyperfactorial
 -------------------------------------------------------------------------------
 
-.. method:: ctxflint.hyperfactorial(z)
+.. method:: ctx.hyperfactorial(z)
 
 
     Returns the hyperfactorial of *z*. See also Wikipedia :cite:p:`WikipediaFun130`, MathWorld :cite:p:`WolframFun130`, :cite:t:`OEISFun130`, Mpmath :cite:p:`MpmathFun130`.
@@ -648,7 +648,7 @@ Hyperfactorial
 Superfactorial
 -------------------------------------------------------------------------------
 
-.. method:: ctxflint.superfactorial(z)
+.. method:: ctx.superfactorial(z)
 
 
     Returns the Superfactorial of *z*. See also Wikipedia :cite:p:`WikipediaFun129`, MathWorld :cite:p:`WolframFun129`, :cite:t:`OEISFun129`, Mpmath :cite:p:`MpmathFun129`.

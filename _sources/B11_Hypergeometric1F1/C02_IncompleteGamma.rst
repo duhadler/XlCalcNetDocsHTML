@@ -293,7 +293,7 @@ Upper non-normalized incomplete gamma function, `\Gamma(a,x)`
 Tricomi's entire incomplete gamma function: `\gamma^*(a,x)`
 -------------------------------------------------------------------------------
 
-.. method:: ctxflint.gamma_tricomi(a, z, len)
+.. method:: ctx.gamma_tricomi(a, z, len)
 
 
 Returns Tricomi's entire incomplete gamma function `\gamma^*(a,x)`.
