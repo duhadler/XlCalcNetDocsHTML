@@ -503,10 +503,10 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../B11_Hypergeometric1F1/index.html">Hypergeometric function <span class="math notranslate nohighlight">\(\,_1F_1\)</span> and related</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../B11_Hypergeometric1F1/C01_Hyper1F1.html">Hypergeometric Functions <span class="math notranslate nohighlight">\(\,_1F_1\)</span> (Kummer) and <span class="math notranslate nohighlight">\(U\)</span> (Tricomi)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B11_Hypergeometric1F1/C03_IncompleteGamma.html">Incomplete gamma functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B11_Hypergeometric1F1/C04_CoulombPcf.html">Coulomb, Whittaker and parabolic cylinder function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B11_Hypergeometric1F1/C05_ErrorFunction.html">Error function and related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B11_Hypergeometric1F1/C06_ExponentialIntegrals.html">Exponential integrals, and related functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B11_Hypergeometric1F1/C02_IncompleteGamma.html">Incomplete gamma functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B11_Hypergeometric1F1/C03_CoulombPcf.html">Coulomb, Whittaker and parabolic cylinder function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B11_Hypergeometric1F1/C04_ErrorFunction.html">Error function and related functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B11_Hypergeometric1F1/C05_ExponentialIntegrals.html">Exponential integrals, and related functions</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../B12_HypergeometricpFq/index.html">Hypergeometric functions  <span class="math notranslate nohighlight">\(\,_2F_1\)</span> and <span class="math notranslate nohighlight">\(\,_1F_2\)</span> (and related functions)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -920,7 +920,7 @@ document.write(`
 <p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the Nakagami distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{cdf}(x) = P\left( \frac{m}{\omega} x^2 \right).\]</div>
-<p>Here <span class="math notranslate nohighlight">\(P(\cdot)\)</span> denotes the lower regularized incomplete gamma function (<a class="reference internal" href="../../B11_Hypergeometric1F1/C03_IncompleteGamma.html#rst-mpm-gamma-p"><span class="std std-ref">RealGammaP</span></a>).</p>
+<p>Here <span class="math notranslate nohighlight">\(P(\cdot)\)</span> denotes the lower regularized incomplete gamma function (<a class="reference internal" href="../../B11_Hypergeometric1F1/C02_IncompleteGamma.html#rst-mpm-gamma-p"><span class="std std-ref">RealGammaP</span></a>).</p>
 <p>The following example shows both forms of the syntax:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">t</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">;</span> <span class="n">x</span> <span class="o">=</span> <span class="mf">0.6</span><span class="p">;</span>
@@ -939,7 +939,7 @@ document.write(`
 <p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the Nakagami distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{qtf}(q) = \sqrt{ \frac{\omega}{m} P^{-1}(m, q)}.\]</div>
-<p>Here <span class="math notranslate nohighlight">\(P^{-1}(\cdot)\)</span> denotes the inverse of the lower regularized incomplete gamma function (<a class="reference internal" href="../../B11_Hypergeometric1F1/C03_IncompleteGamma.html#rst-mpm-real-gamma-p-inv"><span class="std std-ref">RealGammaPInv</span></a>).</p>
+<p>Here <span class="math notranslate nohighlight">\(P^{-1}(\cdot)\)</span> denotes the inverse of the lower regularized incomplete gamma function (<a class="reference internal" href="../../B11_Hypergeometric1F1/C02_IncompleteGamma.html#rst-mpm-real-gamma-p-inv"><span class="std std-ref">RealGammaPInv</span></a>).</p>
 <p>The following example shows both forms of the syntax:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">t</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">;</span> <span class="n">q</span> <span class="o">=</span> <span class="mf">0.6</span><span class="p">;</span>
