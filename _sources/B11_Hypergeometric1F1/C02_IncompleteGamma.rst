@@ -407,7 +407,7 @@ An example with complex input:
 Inverse of the real lower normalised incomplete gamma function, `P^{-1}(a, q)`
 ----------------------------------------------------------------------------------------
 
-.. method:: ctx.real_gamma_p_inv(a, q)
+.. method:: ctx.gamma_p_inv(a, q)
 
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
@@ -423,9 +423,9 @@ Inverse of the real lower normalised incomplete gamma function, `P^{-1}(a, q)`
 
         >>> from xlcalcnet import dec, mpm, ipm, fpm, gmp, apm
         >>> mpm.dps = 40; a = '10.4'; prob = '0.7'
-        >>> \mathrm{d}x = dec.real_gamma_p_inv(a, prob); mx = mpm.real_gamma_p_inv(a, prob)
-        >>> ix = ipm.real_gamma_p_inv(a, prob); fx = fpm.real_gamma_p_inv(a, prob)
-        >>> gx = gmp.real_gamma_p_inv(a, prob); ax = apm.real_gamma_p_inv(a, prob)
+        >>> \mathrm{d}x = dec.gamma_p_inv(a, prob); mx = mpm.gamma_p_inv(a, prob)
+        >>> ix = ipm.gamma_p_inv(a, prob); fx = fpm.gamma_p_inv(a, prob)
+        >>> gx = gmp.gamma_p_inv(a, prob); ax = apm.gamma_p_inv(a, prob)
         >>> mpm.show([\mathrm{d}x, mx, ix, fx, gx, ax])
         dec:  1.182065312732400158230548049644312582083E+1
         mpm:  1.182065312732400158230548049644312582083e+1
@@ -443,7 +443,7 @@ Inverse of the real lower normalised incomplete gamma function, `P^{-1}(a, q)`
 Inverse of the real upper normalised incomplete gamma function, `Q^{-1}(a, q)`
 -----------------------------------------------------------------------------------------
 
-.. method:: ctx.real_gamma_q_inv(a, q)
+.. method:: ctx.gamma_q_inv(a, q)
 
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
@@ -461,9 +461,9 @@ Inverse of the real upper normalised incomplete gamma function, `Q^{-1}(a, q)`
 
         >>> from xlcalcnet import dec, mpm, ipm, fpm, gmp, apm
         >>> mpm.dps = 40; a = '10.4'; prob = '0.7'
-        >>> \mathrm{d}x = dec.real_gamma_q_inv(a, prob); mx = mpm.real_gamma_q_inv(a, prob)
-        >>> ix = ipm.real_gamma_q_inv(a, prob); fx = fpm.real_gamma_q_inv(a, prob)
-        >>> gx = gmp.real_gamma_q_inv(a, prob); ax = apm.real_gamma_q_inv(a, prob)
+        >>> \mathrm{d}x = dec.gamma_q_inv(a, prob); mx = mpm.gamma_q_inv(a, prob)
+        >>> ix = ipm.gamma_q_inv(a, prob); fx = fpm.gamma_q_inv(a, prob)
+        >>> gx = gmp.gamma_q_inv(a, prob); ax = apm.gamma_q_inv(a, prob)
         >>> mpm.show([\mathrm{d}x, mx, ix, fx, gx, ax])
         dec:  8.499407282754637944300146456267086376957E+0
         mpm:  8.499407282754637944300146456267086376957e+0
@@ -484,7 +484,7 @@ Inverse of the real upper normalised incomplete gamma function, `Q^{-1}(a, q)`
 Inverse (on parameter `a`) of the real lower normalised incomplete gamma function
 ---------------------------------------------------------------------------------------------------
 
-.. method:: ctx.real_gamma_p_inva(x, q)
+.. method:: ctx.gamma_p_inva(x, q)
 
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
@@ -499,9 +499,9 @@ Inverse (on parameter `a`) of the real lower normalised incomplete gamma functio
 
         >>> from xlcalcnet import dec, mpm, ipm, fpm, gmp, apm
         >>> mpm.dps = 40; x = '10.4'; prob = '0.7'
-        >>> \mathrm{d}x = dec.real_gamma_p_inva(x, prob); mx = mpm.real_gamma_p_inva(x, prob)
-        >>> ix = ipm.real_gamma_p_inva(x, prob); fx = fpm.real_gamma_p_inva(x, prob)
-        >>> gx = gmp.real_gamma_p_inva(x, prob); ax = apm.real_gamma_p_inva(x, prob)
+        >>> \mathrm{d}x = dec.gamma_p_inva(x, prob); mx = mpm.gamma_p_inva(x, prob)
+        >>> ix = ipm.gamma_p_inva(x, prob); fx = fpm.gamma_p_inva(x, prob)
+        >>> gx = gmp.gamma_p_inva(x, prob); ax = apm.gamma_p_inva(x, prob)
         >>> mpm.show([\mathrm{d}x, mx, ix, fx, gx, ax])
         dec:  9.091223780657490024395740214633198685411E+0
         mpm:  9.091223780657490024395740214633198685411e+0
@@ -520,7 +520,7 @@ Inverse (on parameter `a`) of the real lower normalised incomplete gamma functio
 Inverse (on parameter `a`) of the real upper normalised incomplete gamma function
 -----------------------------------------------------------------------------------------
 
-.. method:: ctx.real_gamma_q_inva(x, q)
+.. method:: ctx.gamma_q_inva(x, q)
 
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
@@ -537,9 +537,9 @@ Inverse (on parameter `a`) of the real upper normalised incomplete gamma functio
 
         >>> from xlcalcnet import dec, mpm, ipm, fpm, gmp, apm
         >>> mpm.dps = 40; x = '10.4'; prob = '0.7'
-        >>> \mathrm{d}x = dec.real_gamma_q_inva(x, prob); mx = mpm.real_gamma_q_inva(x, prob)
-        >>> ix = ipm.real_gamma_q_inva(x, prob); fx = fpm.real_gamma_q_inva(x, prob)
-        >>> gx = gmp.real_gamma_q_inva(x, prob); ax = apm.real_gamma_q_inva(x, prob)
+        >>> \mathrm{d}x = dec.gamma_q_inva(x, prob); mx = mpm.gamma_q_inva(x, prob)
+        >>> ix = ipm.gamma_q_inva(x, prob); fx = fpm.gamma_q_inva(x, prob)
+        >>> gx = gmp.gamma_q_inva(x, prob); ax = apm.gamma_q_inva(x, prob)
         >>> mpm.show([\mathrm{d}x, mx, ix, fx, gx, ax])
         dec:  1.246374758284686223602899788651972294825E+1
         mpm:  1.246374758284686223602899788651972294825e+1

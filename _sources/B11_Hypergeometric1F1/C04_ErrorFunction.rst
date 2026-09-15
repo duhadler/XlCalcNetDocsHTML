@@ -221,8 +221,8 @@ Inverse of the real error function, `\mathrm{erf}^{-1}(x)`
 
         >>> from xlcalcnet import dec, mpm, ipm, fpm, gmp, apm
         >>> mpm.dps = 40; q = '0.007'
-        >>> \mathrm{d}x = dec.real_erfinv(q); mx = mpm.real_erfinv(q); ix = ipm.real_erfinv(q)
-        >>> fx = fpm.real_erfinv(q); gx = gmp.real_erfinv(q); ax = apm.real_erfinv(q)
+        >>> \mathrm{d}x = dec.erfinv(q); mx = mpm.erfinv(q); ix = ipm.erfinv(q)
+        >>> fx = fpm.erfinv(q); gx = gmp.erfinv(q); ax = apm.erfinv(q)
         >>> mpm.show([\mathrm{d}x, mx, ix, fx, gx, ax])
         dec:  6.203668061000835402417689089205287381720E-3
         mpm:  6.203668061000835531560785950441696784170e-3
@@ -256,8 +256,8 @@ Inverse of the real complementory error function, `\mathrm{erfc}^{-1}(x)`
     
         >>> from xlcalcnet import dec, mpm, ipm, fpm, gmp, apm
         >>> mpm.dps = 40; q = '0.007'
-        >>> \mathrm{d}x = dec.real_erfcinv(q); mx = mpm.real_erfcinv(q); ix = ipm.real_erfcinv(q)
-        >>> fx = fpm.real_erfcinv(q); gx = gmp.real_erfcinv(q); ax = apm.real_erfcinv(q)
+        >>> \mathrm{d}x = dec.erfcinv(q); mx = mpm.erfcinv(q); ix = ipm.erfcinv(q)
+        >>> fx = fpm.erfcinv(q); gx = gmp.erfcinv(q); ax = apm.erfcinv(q)
         >>> mpm.show([gx, fx, ax])
         dec:  1.906956864670945611335498085438891420125E+0
         mpm:  1.906956864670945606433652487714446631717e+0
@@ -349,6 +349,43 @@ Standard normal cumulative distribution function `\Phi(x)`
 
 
 
+
+.. _rst_mpm_ndis_inv: 
+
+Standard normal quantile function `\Phi^{-1}(q)`
+-------------------------------------------------------------------------------
+
+
+.. method:: math53.ndisx(q)
+
+    where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
+
+    Returns the standard normal quantile function `\Phi^{-1}(q)`, defined as `\displaystyle \Phi^{-1}(q) = -\sqrt{2} \: \mathrm{erfc\_inv}(2q)`.
+
+    See also BoostMath :cite:p:`BoostFun07`, Wikipedia :cite:p:`WikipediaFun07a`, MathWorld :cite:p:`WolframFun07b`, NIST :cite:p:`DLMFun07`, MathWorld :cite:p:`WolframFun187`, :cite:t:`Ehrhardt2018` (3.3.12.1) and (3.9.28).
+
+
+
+
+    An example:
+
+    .. code-block:: pycon
+
+        >>> from xlcalcnet import dec, mpm, ipm, fpm, gmp, apm
+        >>> mpm.dps = 40; q = '0.2'; mu = '0'; sd = '1';
+        >>> \mathrm{d}x = dec.normal_qtf(q, mu, sd); mx = mpm.normal_qtf(q, mu, sd)
+        >>> ix = ipm.normal_qtf(q, mu, sd); fx = fpm.normal_qtf(q, mu, sd)
+        >>> gx = gmp.normal_qtf(q, mu, sd); ax = apm.normal_qtf(q, mu, sd)
+        >>> mpm.show([\mathrm{d}x, mx, ix, fx, gx, ax])
+        dec:  -8.416212335729142051787061213632481006265E-1
+        mpm:  -8.416212335729142051787061213632481006263e-1
+        ipm:  -8.416212335729142051787061213632481006263e-1 (-2.728e-39%)
+        fpm:  -8.41621233572914E-01
+        gmp:  -8.416212335729142051787061213632481006263E-01
+        ipm:  -8.416212335729142051787061213632481006263e-1 (-2.728e-39%)
+
+
+        
 
 
 

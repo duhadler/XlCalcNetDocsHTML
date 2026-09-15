@@ -182,52 +182,6 @@ Auxiliary function `\mathrm{powi}(x,n) = x^n`
 
 
 
-Auxiliary function `\mathrm{compound}(x,n) = (1+x)^n`
--------------------------------------------------------------------------------
-
-.. method:: ctx.compound(a, b)
-
-    Returns `(1+x)^n`, computed accurately also when `x` is very close to 0. 
-
-
-    An example in Python
-
-    .. code-block:: pycon
-
-        >>> from xlcalcnet import ereal
-        >>> ereal.Compound(0.5, 2)
-        ereal('5.2359877559829887307E-1')
-        >>> ereal.Compound('0.51', 2)
-        ereal('5.3518479027559984754E-1')
-
-
-
-
-
-
-
-Auxiliary function `\mathrm{comprel}(x,n) = (1+x)^n - 1`
--------------------------------------------------------------------------------
-
-.. method:: ctx.comprel(x, n)
-
-    Returns `(1+x)^n - 1`, computed accurately also when `x` is very close to 0. 
-
-
-    An example in Python
-
-    .. code-block:: pycon
-
-        >>> from xlcalcnet import ereal
-        >>> ereal.Comprel(0.5, 2)
-        ereal('5.2359877559829887307E-1')
-        >>> ereal.Comprel('0.51', 2)
-        ereal('5.3518479027559984754E-1')
-
-
-
-
-
 
 
 Auxiliary function `\mathrm{hypot}(x,y) = \sqrt{x^2 + y^2}`

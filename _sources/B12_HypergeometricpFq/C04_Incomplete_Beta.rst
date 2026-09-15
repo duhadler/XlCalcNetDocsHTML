@@ -177,9 +177,9 @@ Derivative of the incomplete beta function
 
         >>> from xlcalcnet import dec, mpm, ipm, fpm, gmp, apm
         >>> mpm.dps = 40; a = '8.3'; b = '10.4'; x = '0.7'
-        >>> \mathrm{d}x = dec.real_beta_derivative(a, b, x); mx = mpm.real_beta_derivative(a, b, x)
-        >>> ix = ipm.real_beta_derivative(a, b, x); fx = fpm.real_beta_derivative(a, b, x)
-        >>> gx = gmp.real_beta_derivative(a, b, x); ax = apm.real_beta_derivative(a, b, x)
+        >>> \mathrm{d}x = dec.beta_derivative(a, b, x); mx = mpm.beta_derivative(a, b, x)
+        >>> ix = ipm.beta_derivative(a, b, x); fx = fpm.beta_derivative(a, b, x)
+        >>> gx = gmp.beta_derivative(a, b, x); ax = apm.beta_derivative(a, b, x)
         >>> mpm.show([\mathrm{d}x, mx, ix, fx, gx, ax])
         dec:  2.878999879544799566557091075303033672075E-1
         mpm:  2.878999879544799566557091075303033672075e-1
@@ -325,7 +325,7 @@ Real normalized complementory incomplete beta function, `I_{1-x}(a,b)`
 Inverse of the real normalised incomplete beta function
 -------------------------------------------------------------------------------
 
-.. method:: ctx.real_ibeta_inv(a, b, q)
+.. method:: ctx.ibeta_inv(a, b, q)
 
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
@@ -340,9 +340,9 @@ Inverse of the real normalised incomplete beta function
 
         >>> from xlcalcnet import dec, mpm, ipm, fpm, gmp, apm
         >>> mpm.dps = 40; a = '8.3'; b = '10.4'; prob = '0.7'
-        >>> \mathrm{d}x = dec.real_ibeta_inv(a, b, prob); mx = mpm.real_ibeta_inv(a, b, prob)
-        >>> ix = ipm.real_ibeta_inv(a, b, prob); fx = fpm.real_ibeta_inv(a, b, prob)
-        >>> gx = gmp.real_ibeta_inv(a, b, prob); ax = apm.real_ibeta_inv(a, b, prob)
+        >>> \mathrm{d}x = dec.ibeta_inv(a, b, prob); mx = mpm.ibeta_inv(a, b, prob)
+        >>> ix = ipm.ibeta_inv(a, b, prob); fx = fpm.ibeta_inv(a, b, prob)
+        >>> gx = gmp.ibeta_inv(a, b, prob); ax = apm.ibeta_inv(a, b, prob)
         >>> mpm.show([\mathrm{d}x, mx, ix, fx, gx, ax])
         dec:  5.031911971011064339721270139988401063680E-1
         mpm:  5.031911971011064339721270139988401063680e-1
@@ -351,9 +351,9 @@ Inverse of the real normalised incomplete beta function
         gmp:  5.031911971011064339721270139988401063680E-01
         apm:  5.031911971011064339721270139988401063680e-1 (1.141e-39%)
 
-        >>> fx = fpm.real_ibeta_inv(a, b, prob); mpm.show([fx]) # boost
+        >>> fx = fpm.ibeta_inv(a, b, prob); mpm.show([fx]) # boost
         fpm:  5.03191197101107E-01
-        >>> fx = fpm.real_ibeta(a, b, fx); mpm.show([fx]) # boost
+        >>> fx = fpm.ibeta(a, b, fx); mpm.show([fx]) # boost
         fpm:  7.00000000000000E-01
 
 
@@ -367,7 +367,7 @@ Inverse of the real normalised incomplete beta function
 Inverse of the real normalised complementary incomplete beta function
 -------------------------------------------------------------------------------
 
-.. method:: ctx.real_ibetac_inv(a, b, q)
+.. method:: ctx.ibetac_inv(a, b, q)
 
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
@@ -383,9 +383,9 @@ Inverse of the real normalised complementary incomplete beta function
 
         >>> from xlcalcnet import dec, mpm, ipm, fpm, gmp, apm
         >>> mpm.dps = 40; a = '8.3'; b = '10.4'; prob = '0.7'
-        >>> \mathrm{d}x = dec.real_ibetac_inv(a, b, prob); mx = mpm.real_ibetac_inv(a, b, prob)
-        >>> ix = ipm.real_ibetac_inv(a, b, prob); fx = fpm.real_ibetac_inv(a, b, prob)
-        >>> gx = gmp.real_ibetac_inv(a, b, prob); ax = apm.real_ibetac_inv(a, b, prob)
+        >>> \mathrm{d}x = dec.ibetac_inv(a, b, prob); mx = mpm.ibetac_inv(a, b, prob)
+        >>> ix = ipm.ibetac_inv(a, b, prob); fx = fpm.ibetac_inv(a, b, prob)
+        >>> gx = gmp.ibetac_inv(a, b, prob); ax = apm.ibetac_inv(a, b, prob)
         >>> mpm.show([\mathrm{d}x, mx, ix, fx, gx, ax])
         dec:  3.815974615561709692459929991591600387688E-1
         mpm:  3.815974615561709692459929991591600387688e-1
@@ -394,9 +394,9 @@ Inverse of the real normalised complementary incomplete beta function
         gmp:  3.815974615561709692459929991591600387688E-01
         apm:  3.815974615561709692459929991591600387688e-1 (7.521e-40%)
 
-        >>> fx = fpm.real_ibetac_inv(a, b, prob); mpm.show([fx]) # boost
+        >>> fx = fpm.ibetac_inv(a, b, prob); mpm.show([fx]) # boost
         fpm:  3.81597461556171E-01
-        >>> fx = fpm.real_ibetac(a, b, fx); mpm.show([fx]) # boost
+        >>> fx = fpm.ibetac(a, b, fx); mpm.show([fx]) # boost
         fpm:  7.00000000000000E-01
 
 
@@ -407,7 +407,7 @@ Inverse of the real normalised complementary incomplete beta function
 Inverse (on parameter `a`) of the real normalised incomplete beta function
 -------------------------------------------------------------------------------
 
-.. method:: ctx.real_ibeta_inva(b, x, q)
+.. method:: ctx.ibeta_inva(b, x, q)
 
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
@@ -422,9 +422,9 @@ Inverse (on parameter `a`) of the real normalised incomplete beta function
 
         >>> from xlcalcnet import dec, mpm, ipm, fpm, gmp, apm
         >>> mpm.dps = 40; x = '0.3'; b = '10.4'; prob = '0.7'
-        >>> \mathrm{d}x = dec.real_ibeta_inva(b, x, prob); mx = mpm.real_ibeta_inva(b, x, prob)
-        >>> ix = ipm.real_ibeta_inva(b, x, prob); fx = fpm.real_ibeta_inva(b, x, prob)
-        >>> gx = gmp.real_ibeta_inva(b, x, prob); ax = apm.real_ibeta_inva(b, x, prob)
+        >>> \mathrm{d}x = dec.ibeta_inva(b, x, prob); mx = mpm.ibeta_inva(b, x, prob)
+        >>> ix = ipm.ibeta_inva(b, x, prob); fx = fpm.ibeta_inva(b, x, prob)
+        >>> gx = gmp.ibeta_inva(b, x, prob); ax = apm.ibeta_inva(b, x, prob)
         >>> mpm.show([\mathrm{d}x, mx, ix, fx, gx, ax])
         dec:  3.434764629588725033018175504012263060447E+0
         mpm:  3.434764629588725033018175504012263060447e+0
@@ -433,9 +433,9 @@ Inverse (on parameter `a`) of the real normalised incomplete beta function
         gmp:  3.434764629588725033018175504012263060447E+00
         apm:  3.434764629588725033018175504012263060447e+0 (6.684e-40%)
 
-        >>> fxa = fpm.real_ibeta_inva(b, x, prob); mpm.show([fxa]) # boost
+        >>> fxa = fpm.ibeta_inva(b, x, prob); mpm.show([fxa]) # boost
         fpm:  3.43476462958872E+00
-        >>> fx = fpm.real_ibeta(fxa, b, x); mpm.show([fx]) # boost
+        >>> fx = fpm.ibeta(fxa, b, x); mpm.show([fx]) # boost
         fpm:  7.00000000000000E-01
 
 
@@ -447,7 +447,7 @@ Inverse (on parameter `a`) of the real normalised incomplete beta function
 Inverse (on parameter `a`) of the real normalised complementary incomplete beta function
 ---------------------------------------------------------------------------------------------
 
-.. method:: ctx.real_ibetac_inva(b, x, q)
+.. method:: ctx.ibetac_inva(b, x, q)
 
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
@@ -462,9 +462,9 @@ Inverse (on parameter `a`) of the real normalised complementary incomplete beta 
 
         >>> from xlcalcnet import dec, mpm, ipm, fpm, gmp, apm
         >>> mpm.dps = 40; x = '0.3'; b = '10.4'; prob = '0.7'
-        >>> \mathrm{d}x = dec.real_ibetac_inva(b, x, prob); mx = mpm.real_ibetac_inva(b, x, prob)
-        >>> ix = ipm.real_ibetac_inva(b, x, prob); fx = fpm.real_ibetac_inva(b, x, prob) 
-        >>> gx = gmp.real_ibetac_inva(b, x, prob); ax = apm.real_ibetac_inva(b, x, prob)
+        >>> \mathrm{d}x = dec.ibetac_inva(b, x, prob); mx = mpm.ibetac_inva(b, x, prob)
+        >>> ix = ipm.ibetac_inva(b, x, prob); fx = fpm.ibetac_inva(b, x, prob) 
+        >>> gx = gmp.ibetac_inva(b, x, prob); ax = apm.ibetac_inva(b, x, prob)
         >>> mpm.show([\mathrm{d}x, mx, ix, fx, gx, ax])
         dec:  6.022956553898772220485519886468373977550E+0
         mpm:  6.022956553898772220485519886468373977550e+0
@@ -473,9 +473,9 @@ Inverse (on parameter `a`) of the real normalised complementary incomplete beta 
         gmp:  6.022956553898772220485519886468373977550E+00
         apm:  6.022956553898772220485519886468373977550e+0 (7.624e-40%)
 
-        >>> fxa = fpm.real_ibetac_inva(b, x, prob); mpm.show([fxa]) # boost
+        >>> fxa = fpm.ibetac_inva(b, x, prob); mpm.show([fxa]) # boost
         fpm:  6.02295655389877E+00
-        >>> fx = fpm.real_ibetac(fxa, b, x); mpm.show([fx]) # boost
+        >>> fx = fpm.ibetac(fxa, b, x); mpm.show([fx]) # boost
         fpm:  7.00000000000000E-01
 
 
@@ -488,7 +488,7 @@ Inverse (on parameter `a`) of the real normalised complementary incomplete beta 
 Inverse (on parameter `b`) of the real normalised incomplete beta function
 -------------------------------------------------------------------------------
 
-.. method:: ctx.real_ibeta_invb(a, x, q)
+.. method:: ctx.ibeta_invb(a, x, q)
 
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
@@ -502,9 +502,9 @@ Inverse (on parameter `b`) of the real normalised incomplete beta function
 
         >>> from xlcalcnet import dec, mpm, ipm, fpm, gmp, apm
         >>> mpm.dps = 40; x = '0.3'; a = '7.8'; prob = '0.7'
-        >>> \mathrm{d}x = dec.real_ibeta_invb(a, x, prob); mx = mpm.real_ibeta_invb(a, x, prob)
-        >>> ix = ipm.real_ibeta_invb(a, x, prob); fx = fpm.real_ibeta_invb(a, x, prob)
-        >>> gx = gmp.real_ibeta_invb(a, x, prob); ax = apm.real_ibeta_invb(a, x, prob)
+        >>> \mathrm{d}x = dec.ibeta_invb(a, x, prob); mx = mpm.ibeta_invb(a, x, prob)
+        >>> ix = ipm.ibeta_invb(a, x, prob); fx = fpm.ibeta_invb(a, x, prob)
+        >>> gx = gmp.ibeta_invb(a, x, prob); ax = apm.ibeta_invb(a, x, prob)
         >>> mpm.show([\mathrm{d}x, mx, ix, fx, gx, ax])
         dec:  2.200429591655521454353795394649129346838E+1
         mpm:  2.200429591655521454353795394649129346838e+1
@@ -513,9 +513,9 @@ Inverse (on parameter `b`) of the real normalised incomplete beta function
         gmp:  2.200429591655521454353795394649129346838E+01
         apm:  2.200429591655521454353795394649129346838e+1 (8.347e-40%)
 
-        >>> fxb = fpm.real_ibeta_invb(a, x, prob); mpm.show([fxb]) # boost
+        >>> fxb = fpm.ibeta_invb(a, x, prob); mpm.show([fxb]) # boost
         fpm:  2.20042959165552E+01
-        >>> fx = fpm.real_ibeta(a, fxb, x); mpm.show([fx]) # boost
+        >>> fx = fpm.ibeta(a, fxb, x); mpm.show([fx]) # boost
         fpm:  7.00000000000000E-01
 
 
@@ -528,7 +528,7 @@ Inverse (on parameter `b`) of the real normalised incomplete beta function
 Inverse (on parameter `b`) of the real normalised complementary incomplete beta function
 ---------------------------------------------------------------------------------------------
 
-.. method:: ctx.real_ibetac_invb(a, x, q)
+.. method:: ctx.ibetac_invb(a, x, q)
 
     where ``ctx`` is ``math53``, ``ctxcpp``, ``ctxboost`` or ``ctxflint``.
 
@@ -543,9 +543,9 @@ Inverse (on parameter `b`) of the real normalised complementary incomplete beta 
 
         >>> from xlcalcnet import dec, mpm, ipm, fpm, gmp, apm
         >>> mpm.dps = 40; x = '0.3'; a = '7.8'; prob = '0.7'
-        >>> \mathrm{d}x = dec.real_ibetac_invb(a, x, prob); mx = mpm.real_ibetac_invb(a, x, prob)
-        >>> ix = ipm.real_ibetac_invb(a, x, prob); fx = fpm.real_ibetac_invb(a, x, prob)
-        >>> gx = gmp.real_ibetac_invb(a, x, prob); ax = apm.real_ibetac_invb(a, x, prob)
+        >>> \mathrm{d}x = dec.ibetac_invb(a, x, prob); mx = mpm.ibetac_invb(a, x, prob)
+        >>> ix = ipm.ibetac_invb(a, x, prob); fx = fpm.ibetac_invb(a, x, prob)
+        >>> gx = gmp.ibetac_invb(a, x, prob); ax = apm.ibetac_invb(a, x, prob)
         >>> mpm.show([gx, fx, ax])
         dec:  1.403576906076099557240805034104910405788E+1
         mpm:  1.403576906076099557240805034104910405788e+1
@@ -554,9 +554,9 @@ Inverse (on parameter `b`) of the real normalised complementary incomplete beta 
         gmp:  1.403576906076099557240805034104910405788E+01
         apm:  1.403576906076099557240805034104910405788e+1 (6.543e-40%)
 
-        >>> fxb = fpm.real_ibetac_invb(a, x, prob); mpm.show([fxb]) # boost
+        >>> fxb = fpm.ibetac_invb(a, x, prob); mpm.show([fxb]) # boost
         fpm:  1.40357690607610E+01
-        >>> fx = fpm.real_ibetac(a, fxb, x); mpm.show([fx]) # boost
+        >>> fx = fpm.ibetac(a, fxb, x); mpm.show([fx]) # boost
         fpm:  6.99999999999999E-01
 
 

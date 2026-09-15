@@ -205,6 +205,25 @@
 
 
     ######################################################
+    Additional functions in double precision
+    ######################################################
+
+
+
+    .. toctree ::
+        :caption: Additional functions in double precision
+        :maxdepth: 5
+
+        B26_MoreElementary/index.rst
+        B27_MoreElliptic/index.rst
+        B28_MoreLerchPhi/index.rst
+        B29_More0F1/index.rst
+        B30_More1F1AndOther/index.rst
+        B31_MoreComplex/index.rst
+
+
+
+    ######################################################
     User library: numerical
     ######################################################
 
@@ -217,8 +236,6 @@
         C01_UserGeneral/index.rst
         C02_UserDistributions/index.rst
         C03_UserInferentialStatistics/index.rst
-        C04_UserSpecialCplx/index.rst
-
 
 
     ######################################################
