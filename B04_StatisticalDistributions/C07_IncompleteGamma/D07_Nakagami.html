@@ -53,7 +53,7 @@
     <link rel="prev" title="!!!Boost: Maxwell Distribution" href="D06_Maxwell.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 15, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
   </head>
   
   
@@ -252,7 +252,7 @@
 </details></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Closed form distributions, based on the incomplete gamma function</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="D01_Chi.html">!!!Boost: Chi Distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="D02_ChiSquared.html">Boost: Chi-Squared distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="D02_Chi2.html">Boost: Chi2 distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="D03_Gamma.html">Boost: Gamma (Pearson Type III, Erlang) distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="D04_InverseChiSquared.html">Boost: Inverse chisquared distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="D05_InverseGamma.html">Boost: Inverse Gamma (Pearson Type V) distribution</a></li>
@@ -907,9 +907,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.nakagami_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.nakagami_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.nakagami_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.nakagami_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.nakagami_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.nakagami_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.nakagami_pdf"><code class="docutils literal notranslate"><span class="pre">math53.nakagami_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.nakagami_cdf"><code class="docutils literal notranslate"><span class="pre">math53.nakagami_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.nakagami_qtf"><code class="docutils literal notranslate"><span class="pre">math53.nakagami_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_nakagami"><code class="docutils literal notranslate"><span class="pre">ctx.dist_nakagami</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_nakagami.pdf"><code class="docutils literal notranslate"><span class="pre">dist_nakagami.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_nakagami.cdf"><code class="docutils literal notranslate"><span class="pre">dist_nakagami.cdf()</span></code></a></li>
@@ -941,10 +941,9 @@ document.write(`
 <p>See also: <a class="reference external" href="https://mathworld.wolfram.com/PochhammerSymbol.html">https://mathworld.wolfram.com/PochhammerSymbol.html</a></p>
 <p></p>
 <dl class="py method" id="ctx-nakagamipdf">
-<dt class="sig sig-object py" id="Ctx.nakagami_pdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">nakagami_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.nakagami_pdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{pdf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C03_BaseClassCont.html#dist-pdf"><span class="std std-ref">Pdf</span></a>) of the Nakagami distribution:</p>
+<dt class="sig sig-object py" id="math53.nakagami_pdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">nakagami_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.nakagami_pdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{pdf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C03_BaseClassCont.html#dist-pdf"><span class="std std-ref">Pdf</span></a>) of the Nakagami distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{pdf}(x) = \frac{2m^m x^{2m-1}}{\omega^m \Gamma(m)} \exp\left( -\frac{m}{\omega} x^2 \right).\]</div>
 <p>The following example shows both forms of the syntax:</p>
@@ -959,10 +958,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-nakagamicdf">
-<dt class="sig sig-object py" id="Ctx.nakagami_cdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">nakagami_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.nakagami_cdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the Nakagami distribution:</p>
+<dt class="sig sig-object py" id="math53.nakagami_cdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">nakagami_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.nakagami_cdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the Nakagami distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{cdf}(x) = P\left( \frac{m}{\omega} x^2 \right).\]</div>
 <p>Here <span class="math notranslate nohighlight">\(P(\cdot)\)</span> denotes the lower regularized incomplete gamma function (<a class="reference internal" href="../../B11_Hypergeometric1F1/C02_IncompleteGamma.html#rst-mpm-gamma-p"><span class="std std-ref">RealGammaP</span></a>).</p>
@@ -978,10 +976,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-nakagamiqtf">
-<dt class="sig sig-object py" id="Ctx.nakagami_qtf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">nakagami_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.nakagami_qtf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the Nakagami distribution:</p>
+<dt class="sig sig-object py" id="math53.nakagami_qtf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">nakagami_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.nakagami_qtf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the Nakagami distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{qtf}(q) = \sqrt{ \frac{\omega}{m} P^{-1}(m, q)}.\]</div>
 <p>Here <span class="math notranslate nohighlight">\(P^{-1}(\cdot)\)</span> denotes the inverse of the lower regularized incomplete gamma function (<a class="reference internal" href="../../B11_Hypergeometric1F1/C02_IncompleteGamma.html#rst-mpm-real-gamma-p-inv"><span class="std std-ref">RealGammaPInv</span></a>).</p>
@@ -1213,9 +1210,9 @@ Hauberg 2005: Moments</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.nakagami_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.nakagami_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.nakagami_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.nakagami_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.nakagami_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.nakagami_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.nakagami_pdf"><code class="docutils literal notranslate"><span class="pre">math53.nakagami_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.nakagami_cdf"><code class="docutils literal notranslate"><span class="pre">math53.nakagami_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.nakagami_qtf"><code class="docutils literal notranslate"><span class="pre">math53.nakagami_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_nakagami"><code class="docutils literal notranslate"><span class="pre">ctx.dist_nakagami</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_nakagami.pdf"><code class="docutils literal notranslate"><span class="pre">dist_nakagami.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_nakagami.cdf"><code class="docutils literal notranslate"><span class="pre">dist_nakagami.cdf()</span></code></a></li>
@@ -1260,7 +1257,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 15, 2026.
+  Last updated on Sep 16, 2026.
   <br/>
 </p>
   </div>

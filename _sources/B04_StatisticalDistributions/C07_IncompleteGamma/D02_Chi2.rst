@@ -21,7 +21,7 @@
 .. _rst_mpm_chi_squared_cdf: 
 
 
-Boost: Chi-Squared distribution 
+Boost: Chi2 distribution 
 ===============================================================================
 
 
@@ -36,9 +36,7 @@ See also  Wikipedia :cite:p:`WikipediaDis06`, MathWorld :cite:p:`WolframDis06`, 
 
 .. _Ctx_ChiSquaredPdf:
 
-.. method:: Ctx.chi_squared_pdf(x, a=0, b=1)
-
-    where ``Ctx`` is ``Math53`` or ``CtxBoost``.
+.. method:: math53.chi2_pdf(n, x)
 
     Returns `\text{pdf}(x)`, the value of the probability density function (:ref:`Pdf <Dist_Pdf>`) of the chi-squared distribution:
 
@@ -60,9 +58,7 @@ See also  Wikipedia :cite:p:`WikipediaDis06`, MathWorld :cite:p:`WolframDis06`, 
 
 .. _Ctx_ChiSquaredCdf:
 
-.. method:: Ctx.chi_squared_cdf(x, a=0, b=1)
-
-    where ``Ctx`` is ``Math53`` or ``CtxBoost``.
+.. method:: math53.chi2_cdf(n, x)
 
     Returns `\text{cdf}(x)`, the value of the cumulative distribution function (:ref:`Cdf <Dist_Cdf>`) of the chi-squared distribution:
 
@@ -86,9 +82,7 @@ See also  Wikipedia :cite:p:`WikipediaDis06`, MathWorld :cite:p:`WolframDis06`, 
 
 .. _Ctx_ChiSquaredQtf:
 
-.. method:: Ctx.chi_squared_qtf(q, a=0, b=1)
-
-    where ``Ctx`` is ``Math53`` or ``CtxBoost``.
+.. method:: math53.chi2_qtf(n, q)
 
     Returns `\text{qtf}(q)`, the value of the quantile function (:ref:`Qtf <Dist_Qtf>`) of the chi-squared distribution:
 
@@ -113,21 +107,12 @@ See also  Wikipedia :cite:p:`WikipediaDis06`, MathWorld :cite:p:`WolframDis06`, 
 
 
 
-.. py:class:: ctx.dist_chi_squared(n)
+.. py:class:: ctx.dist_chi2(n)
 
     where ``ctx`` is ``fpm``, ``mpm``, ``ipm``, ``dec``, ``gmp`` or ``apm``.
 
     The chi-squared distribution is a continuous probability distribution with `n > 0` degrees of freedom and the support interval `(0,+\infty)`.
     See also Wikipedia :cite:p:`WikipediaDis06`, MathWorld :cite:p:`WolframDis06`, BoostMath :cite:p:`BoostDis06`, :cite:t:`CharfunDis06`, R (Statistical System) :cite:p:`RDis06`.
-
-
-    See also: https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.chdtr.html#scipy.special.chdtr
-
-    See also: https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.chdtrc.html#scipy.special.chdtrc
-
-    See also: https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.chdtri.html#scipy.special.chdtri
-
-    See also: https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.chdtriv.html#scipy.special.chdtriv
 
 
 

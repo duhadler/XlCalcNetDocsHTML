@@ -53,7 +53,7 @@
     <link rel="prev" title="Boost: Bernoulli distribution" href="D01_Bernoulli.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 15, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
   </head>
   
   
@@ -252,7 +252,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../C07_IncompleteGamma/index.html">Closed form distributions, based on the incomplete gamma function</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D01_Chi.html">!!!Boost: Chi Distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_ChiSquared.html">Boost: Chi-Squared distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_Chi2.html">Boost: Chi2 distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D03_Gamma.html">Boost: Gamma (Pearson Type III, Erlang) distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D04_InverseChiSquared.html">Boost: Inverse chisquared distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D05_InverseGamma.html">Boost: Inverse Gamma (Pearson Type V) distribution</a></li>
@@ -907,9 +907,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.geometric_pmf"><code class="docutils literal notranslate"><span class="pre">Ctx.geometric_pmf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.geometric_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.geometric_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.geometric_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.geometric_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.geometric_pmf"><code class="docutils literal notranslate"><span class="pre">math53.geometric_pmf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.geometric_cdf"><code class="docutils literal notranslate"><span class="pre">math53.geometric_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.geometric_qtf"><code class="docutils literal notranslate"><span class="pre">math53.geometric_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_geometric"><code class="docutils literal notranslate"><span class="pre">ctx.dist_geometric</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_geometric.pmf"><code class="docutils literal notranslate"><span class="pre">dist_geometric.pmf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_geometric.cdf"><code class="docutils literal notranslate"><span class="pre">dist_geometric.cdf()</span></code></a></li>
@@ -938,10 +938,9 @@ document.write(`
 <p>See also   Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id982" title="Wikipedia. Geometric distribution. Wikimedia Foundation, 2008. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Geometric_distribution.">1192</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id1457" title="E. W. Weisstein. Geometric Distribution. From MathWorld - A Wolfram Web Resource, 2005. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/GeometricDistribution.html.">837</a>]</span>,  BoostMath <span id="id3">[<a class="reference internal" href="../../99BackMatter/index.html#id325" title="P. A. Bristow and H. Holin. Geometric Distribution. Boost Math Toolkit Library, 2015. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/dist_ref/dists/geometric_dist.html.">77</a>]</span> .</p>
 <p></p>
 <dl class="py method" id="ctx-geometricpmf">
-<dt class="sig sig-object py" id="Ctx.geometric_pmf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">geometric_pmf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.geometric_pmf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{pmf}(x)\)</span>, the value of the probability mass function (<a class="reference internal" href="../C04_BaseClassDiscrete.html#dist-pmf"><span class="std std-ref">Pmf</span></a>) of the geometric distribution:</p>
+<dt class="sig sig-object py" id="math53.geometric_pmf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">geometric_pmf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.geometric_pmf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{pmf}(x)\)</span>, the value of the probability mass function (<a class="reference internal" href="../C04_BaseClassDiscrete.html#dist-pmf"><span class="std std-ref">Pmf</span></a>) of the geometric distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{pmf}_X(k) = p (1-p)^k = p \cdot \exp\left(k \text{log1p}(-p)\right).\]</div>
 <p>The following example shows both forms of the syntax:</p>
@@ -956,10 +955,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-geometriccdf">
-<dt class="sig sig-object py" id="Ctx.geometric_cdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">geometric_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.geometric_cdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the geometric distribution. The cumulative distribution function returns the probability of obtaining <span class="math notranslate nohighlight">\(k\)</span> failures or fewer from <span class="math notranslate nohighlight">\(k\)</span> trials with success fraction <span class="math notranslate nohighlight">\(p\)</span> and success on the last trial.</p>
+<dt class="sig sig-object py" id="math53.geometric_cdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">geometric_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.geometric_cdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the geometric distribution. The cumulative distribution function returns the probability of obtaining <span class="math notranslate nohighlight">\(k\)</span> failures or fewer from <span class="math notranslate nohighlight">\(k\)</span> trials with success fraction <span class="math notranslate nohighlight">\(p\)</span> and success on the last trial.</p>
 <div class="math notranslate nohighlight">
 \[\text{cdf}(x) = 1 - (1-p)^{k+1} = -\text{expm1}\left(\text{log1p}(-p) (k+1)\right).\]</div>
 <p>The following example shows both forms of the syntax:</p>
@@ -974,10 +972,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-geometricqtf">
-<dt class="sig sig-object py" id="Ctx.geometric_qtf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">geometric_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.geometric_qtf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the geometric distribution. The quantile function returns the greatest number of failures <span class="math notranslate nohighlight">\(k\)</span> expected to be observed from <span class="math notranslate nohighlight">\(k\)</span> trials with success fraction <span class="math notranslate nohighlight">\(p\)</span>, at probability <span class="math notranslate nohighlight">\(q\)</span>. Note that the value returned is a real-number, and not an integer. Depending on the use case you may want to take either the floor or ceiling of the real result.</p>
+<dt class="sig sig-object py" id="math53.geometric_qtf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">geometric_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.geometric_qtf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the geometric distribution. The quantile function returns the greatest number of failures <span class="math notranslate nohighlight">\(k\)</span> expected to be observed from <span class="math notranslate nohighlight">\(k\)</span> trials with success fraction <span class="math notranslate nohighlight">\(p\)</span>, at probability <span class="math notranslate nohighlight">\(q\)</span>. Note that the value returned is a real-number, and not an integer. Depending on the use case you may want to take either the floor or ceiling of the real result.</p>
 <div class="math notranslate nohighlight">
 \[\text{qtf}(q) = \frac{\text{log1p}(-q)}{\text{log1p}(-p)} -1.\]</div>
 <p>The following example shows both forms of the syntax:</p>
@@ -1216,9 +1213,9 @@ following an geometric distribution. The cumulants are calculated from the momen
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.geometric_pmf"><code class="docutils literal notranslate"><span class="pre">Ctx.geometric_pmf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.geometric_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.geometric_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.geometric_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.geometric_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.geometric_pmf"><code class="docutils literal notranslate"><span class="pre">math53.geometric_pmf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.geometric_cdf"><code class="docutils literal notranslate"><span class="pre">math53.geometric_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.geometric_qtf"><code class="docutils literal notranslate"><span class="pre">math53.geometric_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_geometric"><code class="docutils literal notranslate"><span class="pre">ctx.dist_geometric</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_geometric.pmf"><code class="docutils literal notranslate"><span class="pre">dist_geometric.pmf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_geometric.cdf"><code class="docutils literal notranslate"><span class="pre">dist_geometric.cdf()</span></code></a></li>
@@ -1263,7 +1260,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 15, 2026.
+  Last updated on Sep 16, 2026.
   <br/>
 </p>
   </div>

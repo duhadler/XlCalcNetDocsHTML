@@ -53,7 +53,7 @@
     <link rel="prev" title="Boost: Binomial distribution" href="D04_binomial.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 15, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
   </head>
   
   
@@ -252,7 +252,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../C07_IncompleteGamma/index.html">Closed form distributions, based on the incomplete gamma function</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D01_Chi.html">!!!Boost: Chi Distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_ChiSquared.html">Boost: Chi-Squared distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_Chi2.html">Boost: Chi2 distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D03_Gamma.html">Boost: Gamma (Pearson Type III, Erlang) distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D04_InverseChiSquared.html">Boost: Inverse chisquared distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D05_InverseGamma.html">Boost: Inverse Gamma (Pearson Type V) distribution</a></li>
@@ -907,9 +907,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.negbinomial_pmf"><code class="docutils literal notranslate"><span class="pre">Ctx.negbinomial_pmf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.negbinomial_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.negbinomial_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.negbinomial_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.negbinomial_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.negbinomial_pmf"><code class="docutils literal notranslate"><span class="pre">math53.negbinomial_pmf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.negbinomial_cdf"><code class="docutils literal notranslate"><span class="pre">math53.negbinomial_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.negbinomial_qtf"><code class="docutils literal notranslate"><span class="pre">math53.negbinomial_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_negbinom"><code class="docutils literal notranslate"><span class="pre">ctx.dist_negbinom</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_negbinom.pmf"><code class="docutils literal notranslate"><span class="pre">dist_negbinom.pmf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_negbinom.cdf"><code class="docutils literal notranslate"><span class="pre">dist_negbinom.cdf()</span></code></a></li>
@@ -944,10 +944,9 @@ document.write(`
 <p>See also   Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id985" title="Wikipedia. Negative binomial distribution. Wikimedia Foundation, 2008. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Negative_binomial_distribution.">1204</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id1460" title="E. W. Weisstein. Negative Binomial Distribution. From MathWorld - A Wolfram Web Resource, 2005. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/NegativeBinomialDistribution.html.">848</a>]</span>,  BoostMath <span id="id3">[<a class="reference internal" href="../../99BackMatter/index.html#id328" title="P. A. Bristow and H. Holin. Negative Binomial Distribution. Boost Math Toolkit Library, 2015. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/dist_ref/dists/negative_binomial_dist.html.">84</a>]</span>, <span id="id4">Ehrhardt [<a class="reference internal" href="../../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">299</a>]</span> (3.9.23).</p>
 <p></p>
 <dl class="py method" id="ctx-negbinompmf">
-<dt class="sig sig-object py" id="Ctx.negbinomial_pmf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">negbinomial_pmf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.negbinomial_pmf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{pmf}(x)\)</span>, the value of the probability mass function (<a class="reference internal" href="../C04_BaseClassDiscrete.html#dist-pmf"><span class="std std-ref">Pmf</span></a>) of the negative binomial distribution:</p>
+<dt class="sig sig-object py" id="math53.negbinomial_pmf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">negbinomial_pmf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.negbinomial_pmf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{pmf}(x)\)</span>, the value of the probability mass function (<a class="reference internal" href="../C04_BaseClassDiscrete.html#dist-pmf"><span class="std std-ref">Pmf</span></a>) of the negative binomial distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{pmf}(x) = \frac{\Gamma(k+r)}{k! \Gamma(r)} p^r (1-p)^k.\]</div>
 <p>The following example shows both forms of the syntax:</p>
@@ -962,8 +961,8 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-negbinomcdf">
-<dt class="sig sig-object py" id="Ctx.negbinomial_cdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">negbinomial_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.negbinomial_cdf" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="math53.negbinomial_cdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">negbinomial_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.negbinomial_cdf" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
 <p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the negative binomial distribution:</p>
 <div class="math notranslate nohighlight">
@@ -981,10 +980,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-negbinomqtf">
-<dt class="sig sig-object py" id="Ctx.negbinomial_qtf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">negbinomial_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.negbinomial_qtf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the negative binomial distribution:</p>
+<dt class="sig sig-object py" id="math53.negbinomial_qtf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">negbinomial_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.negbinomial_qtf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the negative binomial distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{qtf}(q) = \mathrm{ibeta\_invb}(r, p, q) - 1.\]</div>
 <p>Here <span class="math notranslate nohighlight">\(\mathrm{ibeta\_invb}(\cdot)\)</span> denotes the inverse (on parameter b) of the real normalised incomplete beta function (<a class="reference internal" href="../../B12_HypergeometricpFq/C04_Incomplete_Beta.html#rst-mpm-real-ibeta-invb"><span class="std std-ref">RealIBetaInvb</span></a>).</p>
@@ -1285,9 +1283,9 @@ following an negative binomial distribution. The cumulants are calculated from t
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.negbinomial_pmf"><code class="docutils literal notranslate"><span class="pre">Ctx.negbinomial_pmf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.negbinomial_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.negbinomial_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.negbinomial_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.negbinomial_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.negbinomial_pmf"><code class="docutils literal notranslate"><span class="pre">math53.negbinomial_pmf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.negbinomial_cdf"><code class="docutils literal notranslate"><span class="pre">math53.negbinomial_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.negbinomial_qtf"><code class="docutils literal notranslate"><span class="pre">math53.negbinomial_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_negbinom"><code class="docutils literal notranslate"><span class="pre">ctx.dist_negbinom</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_negbinom.pmf"><code class="docutils literal notranslate"><span class="pre">dist_negbinom.pmf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_negbinom.cdf"><code class="docutils literal notranslate"><span class="pre">dist_negbinom.cdf()</span></code></a></li>
@@ -1337,7 +1335,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 15, 2026.
+  Last updated on Sep 16, 2026.
   <br/>
 </p>
   </div>

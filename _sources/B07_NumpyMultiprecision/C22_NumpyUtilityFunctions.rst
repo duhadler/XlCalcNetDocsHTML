@@ -1353,11 +1353,11 @@ When a_min is greater than a_max, ``clip`` returns an array in which all values 
 
 
 
-**numpy.real1_if_close**
+**numpy.real_if_close**
 
 For a detailed description of parameters and return values see: 
 
-https://numpy.org/doc/stable/reference/generated/numpy.real1_if_close.html
+https://numpy.org/doc/stable/reference/generated/numpy.real_if_close.html
 
 If input is complex with all imaginary parts close to zero, return real parts.
 
@@ -1372,9 +1372,9 @@ Machine epsilon varies from machine to machine and between data types but Python
     >>> np.finfo(float).eps
     2.2204460492503131e-16 # may vary
 
-    >>> np.real1_if_close([2.1 + 4e-14j, 5.2 + 3e-15j], tol=1000)
+    >>> np.real_if_close([2.1 + 4e-14j, 5.2 + 3e-15j], tol=1000)
     array([2.1, 5.2])
-    >>> np.real1_if_close([2.1 + 4e-13j, 5.2 + 3e-15j], tol=1000)
+    >>> np.real_if_close([2.1 + 4e-13j, 5.2 + 3e-15j], tol=1000)
     array([2.1+4.e-13j, 5.2 + 3e-15j])
 
 

@@ -53,7 +53,7 @@
     <link rel="prev" title="Boost: Gumbel (Generalized Extreme Value distribution Type-I) distribution" href="D04_Gumbel.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 15, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
   </head>
   
   
@@ -252,7 +252,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../C07_IncompleteGamma/index.html">Closed form distributions, based on the incomplete gamma function</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D01_Chi.html">!!!Boost: Chi Distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_ChiSquared.html">Boost: Chi-Squared distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_Chi2.html">Boost: Chi2 distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D03_Gamma.html">Boost: Gamma (Pearson Type III, Erlang) distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D04_InverseChiSquared.html">Boost: Inverse chisquared distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D05_InverseGamma.html">Boost: Inverse Gamma (Pearson Type V) distribution</a></li>
@@ -907,9 +907,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.hyperexponential_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.hyperexponential_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.hyperexponential_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.hyperexponential_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.hyperexponential_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.hyperexponential_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.hyperexponential_pdf"><code class="docutils literal notranslate"><span class="pre">math53.hyperexponential_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.hyperexponential_cdf"><code class="docutils literal notranslate"><span class="pre">math53.hyperexponential_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.hyperexponential_qtf"><code class="docutils literal notranslate"><span class="pre">math53.hyperexponential_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_hyperexponential"><code class="docutils literal notranslate"><span class="pre">ctx.dist_hyperexponential</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_hyperexponential.pdf"><code class="docutils literal notranslate"><span class="pre">dist_hyperexponential.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_hyperexponential.cdf"><code class="docutils literal notranslate"><span class="pre">dist_hyperexponential.cdf()</span></code></a></li>
@@ -939,10 +939,9 @@ document.write(`
 <p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id990" title="Wikipedia. Hyperexponential distribution. Wikimedia Foundation, 2008. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Hyperexponential_distribution.">1194</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id1466" title="Wolfram Language Documentation. Hyperexponential Distribution. Wolfram Research, 2005. [Online; accessed 22-July-2024]. URL: https://reference.wolfram.com/language/ref/HyperexponentialDistribution.html.">250</a>]</span>,  BoostMath <span id="id3">[<a class="reference internal" href="../../99BackMatter/index.html#id330" title="P. A. Bristow and H. Holin. Hyperexponential Distribution. Boost Math Toolkit Library, 2015. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/1_74_0/libs/math/doc/html/math_toolkit/dist_ref/dists/hyperexponential_dist.html.">78</a>]</span>.</p>
 <p></p>
 <dl class="py method" id="ctx-hyperexppdf">
-<dt class="sig sig-object py" id="Ctx.hyperexponential_pdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">hyperexponential_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambdaj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.hyperexponential_pdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{pdf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C03_BaseClassCont.html#dist-pdf"><span class="std std-ref">Pdf</span></a>) of the hyperexponential distribution:</p>
+<dt class="sig sig-object py" id="math53.hyperexponential_pdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">hyperexponential_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lambdaj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.hyperexponential_pdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{pdf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C03_BaseClassCont.html#dist-pdf"><span class="std std-ref">Pdf</span></a>) of the hyperexponential distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{pdf}(x) = \sum_{j=1}^{k} w_j \cdot \lambda_j e^{-\lambda_j x}.\]</div>
 <p>The following example shows both forms of the syntax:</p>
@@ -957,10 +956,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-hyperexpcdf">
-<dt class="sig sig-object py" id="Ctx.hyperexponential_cdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">hyperexponential_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambdaj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.hyperexponential_cdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the hyperexponential distribution:</p>
+<dt class="sig sig-object py" id="math53.hyperexponential_cdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">hyperexponential_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lambdaj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.hyperexponential_cdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the hyperexponential distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{cdf}(x) = \sum_{j=1}^{k} w_j (1-e^{-\lambda_j x}) =  -\sum_{j=1}^{k} w_j \cdot \mathrm{expm1}(-\lambda_j x).\]</div>
 <p>The following example shows both forms of the syntax:</p>
@@ -975,10 +973,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-hyperexpqtf">
-<dt class="sig sig-object py" id="Ctx.hyperexponential_qtf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">hyperexponential_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambdaj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.hyperexponential_qtf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the hyperexponential distribution:</p>
+<dt class="sig sig-object py" id="math53.hyperexponential_qtf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">hyperexponential_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lambdaj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.hyperexponential_qtf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the hyperexponential distribution:</p>
 <p>There is no known closed form for <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>. The function is computed  with the starting value <span class="math notranslate nohighlight">\(x_0 = -\mathrm{log1p}(-q) \sum_{j=1}^{k} (w_j/\lambda_j)\)</span> using Newton iterations.</p>
 <p>The following example shows both forms of the syntax:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
@@ -993,7 +990,7 @@ document.write(`
 <p></p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ctx.dist_hyperexponential">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dist_hyperexponential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambdaj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dist_hyperexponential" title="Link to this definition">#</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dist_hyperexponential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambdaj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dist_hyperexponential" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, <code class="docutils literal notranslate"><span class="pre">ipm</span></code>, <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">gmp</span></code> or <code class="docutils literal notranslate"><span class="pre">apm</span></code>.</p>
 <p>The hyperexponential distribution is a continuous probability mixture distribution with weights <span class="math notranslate nohighlight">\(w_j &gt; 0\)</span>,
 rate parameters <span class="math notranslate nohighlight">\(\lambda_j &gt; 0\)</span>, <span class="math notranslate nohighlight">\(j=1 \ldots k\)</span>, and the support interval <span class="math notranslate nohighlight">\((0, +\infty)\)</span>.
@@ -1205,9 +1202,9 @@ The weights are interpreted as relative weights, to ensure that <span class="mat
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.hyperexponential_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.hyperexponential_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.hyperexponential_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.hyperexponential_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.hyperexponential_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.hyperexponential_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.hyperexponential_pdf"><code class="docutils literal notranslate"><span class="pre">math53.hyperexponential_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.hyperexponential_cdf"><code class="docutils literal notranslate"><span class="pre">math53.hyperexponential_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.hyperexponential_qtf"><code class="docutils literal notranslate"><span class="pre">math53.hyperexponential_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_hyperexponential"><code class="docutils literal notranslate"><span class="pre">ctx.dist_hyperexponential</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_hyperexponential.pdf"><code class="docutils literal notranslate"><span class="pre">dist_hyperexponential.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_hyperexponential.cdf"><code class="docutils literal notranslate"><span class="pre">dist_hyperexponential.cdf()</span></code></a></li>
@@ -1252,7 +1249,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 15, 2026.
+  Last updated on Sep 16, 2026.
   <br/>
 </p>
   </div>

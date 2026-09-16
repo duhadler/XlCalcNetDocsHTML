@@ -53,7 +53,7 @@
     <link rel="prev" title="Boost: Lognormal (Johnson \(S_L\)) distribution" href="D02_Lognormal.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 15, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
   </head>
   
   
@@ -252,7 +252,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../C07_IncompleteGamma/index.html">Closed form distributions, based on the incomplete gamma function</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D01_Chi.html">!!!Boost: Chi Distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_ChiSquared.html">Boost: Chi-Squared distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_Chi2.html">Boost: Chi2 distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D03_Gamma.html">Boost: Gamma (Pearson Type III, Erlang) distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D04_InverseChiSquared.html">Boost: Inverse chisquared distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D05_InverseGamma.html">Boost: Inverse Gamma (Pearson Type V) distribution</a></li>
@@ -907,9 +907,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.moyal_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.moyal_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.moyal_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.moyal_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.moyal_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.moyal_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.moyal_pdf"><code class="docutils literal notranslate"><span class="pre">math53.moyal_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.moyal_cdf"><code class="docutils literal notranslate"><span class="pre">math53.moyal_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.moyal_qtf"><code class="docutils literal notranslate"><span class="pre">math53.moyal_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_moyal"><code class="docutils literal notranslate"><span class="pre">ctx.dist_moyal</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_moyal.pdf"><code class="docutils literal notranslate"><span class="pre">dist_moyal.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_moyal.cdf"><code class="docutils literal notranslate"><span class="pre">dist_moyal.cdf()</span></code></a></li>
@@ -939,10 +939,9 @@ document.write(`
 <p>See also MathWorld <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id1463" title="Wolfram Language Documentation. Moyal Distribution. Wolfram Research, 2005. [Online; accessed 22-July-2024]. URL: https://reference.wolfram.com/language/ref/MoyalDistribution.html.">255</a>]</span>, <span id="id2">G. [<a class="reference internal" href="../../99BackMatter/index.html#id51" title="Cordeiro G. The beta moyal: a useful skew distribution. International Journal of Research and Reviews in Applied Sciences, 10:171–192, 2012. Aavailable at http://www.arpapress.com/Volumes/Vol10Issue2/IJRRAS_10_2_02.pdf.">345</a>]</span>, <span id="id3">Walck [<a class="reference internal" href="../../99BackMatter/index.html#id261" title="C. Walck. Handbook on Statistical Distributions for experimentalists. University of Stockholm, Internal Report SUF-PFY/96–01, 2007. Available as http://www.stat.rice.edu/ dobelman/textfiles/DistributionsHandbook.pdf.">806</a>]</span>, <span id="id4">Ehrhardt [<a class="reference internal" href="../../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">299</a>]</span> (3.9.21).</p>
 <p></p>
 <dl class="py method" id="ctx-moyalpdf">
-<dt class="sig sig-object py" id="Ctx.moyal_pdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">moyal_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.moyal_pdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{pdf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C03_BaseClassCont.html#dist-pdf"><span class="std std-ref">Pdf</span></a>) of the Moyal distribution:</p>
+<dt class="sig sig-object py" id="math53.moyal_pdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">moyal_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.moyal_pdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{pdf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C03_BaseClassCont.html#dist-pdf"><span class="std std-ref">Pdf</span></a>) of the Moyal distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{pdf}(x) = \frac{1}{\sqrt{2\pi}b}   \exp\left( -\frac{x-a}{2b} -\frac{1}{2} e^{-\frac{x-a}{b}} \right).\]</div>
 <p>The following example shows both forms of the syntax:</p>
@@ -957,10 +956,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-moyalcdf">
-<dt class="sig sig-object py" id="Ctx.moyal_cdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">moyal_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.moyal_cdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the Moyal distribution:</p>
+<dt class="sig sig-object py" id="math53.moyal_cdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">moyal_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.moyal_cdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the Moyal distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{cdf}(x) = 1 - P \left( \frac{1}{2}, \frac{e^{-x}}{2} \right) = \text{erfc}\left( \frac{e^{-\frac{x-a}{2b}}}{\sqrt{2}} \right).\]</div>
 <p>The following example shows both forms of the syntax:</p>
@@ -975,10 +973,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-moyalqtf">
-<dt class="sig sig-object py" id="Ctx.moyal_qtf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">moyal_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.moyal_qtf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the Moyal distribution:</p>
+<dt class="sig sig-object py" id="math53.moyal_qtf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">moyal_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.moyal_qtf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the Moyal distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{qtf}(q) =  a - b \log\left( 2 (\text{erfc}^{-1}(q))^2 \right)\]</div>
 <p>The following example shows both forms of the syntax:</p>
@@ -1207,9 +1204,9 @@ following an Moyal distribution. The cumulants are calculated from the moments.<
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.moyal_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.moyal_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.moyal_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.moyal_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.moyal_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.moyal_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.moyal_pdf"><code class="docutils literal notranslate"><span class="pre">math53.moyal_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.moyal_cdf"><code class="docutils literal notranslate"><span class="pre">math53.moyal_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.moyal_qtf"><code class="docutils literal notranslate"><span class="pre">math53.moyal_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_moyal"><code class="docutils literal notranslate"><span class="pre">ctx.dist_moyal</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_moyal.pdf"><code class="docutils literal notranslate"><span class="pre">dist_moyal.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_moyal.cdf"><code class="docutils literal notranslate"><span class="pre">dist_moyal.cdf()</span></code></a></li>
@@ -1254,7 +1251,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 15, 2026.
+  Last updated on Sep 16, 2026.
   <br/>
 </p>
   </div>

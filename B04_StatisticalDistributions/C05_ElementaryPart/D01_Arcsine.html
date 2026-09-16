@@ -53,7 +53,7 @@
     <link rel="prev" title="Closed form distributions, based on elementary functions" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 15, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
   </head>
   
   
@@ -252,7 +252,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../C07_IncompleteGamma/index.html">Closed form distributions, based on the incomplete gamma function</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D01_Chi.html">!!!Boost: Chi Distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_ChiSquared.html">Boost: Chi-Squared distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_Chi2.html">Boost: Chi2 distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D03_Gamma.html">Boost: Gamma (Pearson Type III, Erlang) distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D04_InverseChiSquared.html">Boost: Inverse chisquared distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D05_InverseGamma.html">Boost: Inverse Gamma (Pearson Type V) distribution</a></li>
@@ -907,9 +907,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.arcsine_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.arcsine_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.arcsine_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.arcsine_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.arcsine_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.arcsine_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.arcsine_pdf"><code class="docutils literal notranslate"><span class="pre">math53.arcsine_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.arcsine_cdf"><code class="docutils literal notranslate"><span class="pre">math53.arcsine_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.arcsine_qtf"><code class="docutils literal notranslate"><span class="pre">math53.arcsine_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_arcsine"><code class="docutils literal notranslate"><span class="pre">ctx.dist_arcsine</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_arcsine.pdf"><code class="docutils literal notranslate"><span class="pre">dist_arcsine.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_arcsine.cdf"><code class="docutils literal notranslate"><span class="pre">dist_arcsine.cdf()</span></code></a></li>
@@ -938,10 +938,9 @@ document.write(`
 <p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id961" title="Wikipedia. Arcsine distribution. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Arcsine_distribution.">1161</a>]</span>,  BoostMath <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id308" title="P. A. Bristow and H. Holin. Arcsine Distribution. Boost Math Toolkit Library, 2014. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/dist_ref/dists/arcine_dist.html.">51</a>]</span>.</p>
 <p></p>
 <dl class="py method" id="ctx-arcsinepdf">
-<dt class="sig sig-object py" id="Ctx.arcsine_pdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">arcsine_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.arcsine_pdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{pdf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C03_BaseClassCont.html#dist-pdf"><span class="std std-ref">Pdf</span></a>) of the arcsine distribution:</p>
+<dt class="sig sig-object py" id="math53.arcsine_pdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">arcsine_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.arcsine_pdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{pdf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C03_BaseClassCont.html#dist-pdf"><span class="std std-ref">Pdf</span></a>) of the arcsine distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{pdf}(x) = \frac{1}{\pi \sqrt{(x-a)(b-x)}}.\]</div>
 <p>The following example shows both forms of the syntax:</p>
@@ -956,10 +955,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-arcsinecdf">
-<dt class="sig sig-object py" id="Ctx.arcsine_cdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">arcsine_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.arcsine_cdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the arcsine distribution:</p>
+<dt class="sig sig-object py" id="math53.arcsine_cdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">arcsine_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.arcsine_cdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the arcsine distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{cdf}(x) = \frac{2}{\pi} \arcsin \left(\sqrt{\frac{x-a}{b-a}} \right)\]</div>
 <p>The following example shows both forms of the syntax:</p>
@@ -974,8 +972,8 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-arcsineqtf">
-<dt class="sig sig-object py" id="Ctx.arcsine_qtf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">arcsine_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.arcsine_qtf" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="math53.arcsine_qtf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">arcsine_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.arcsine_qtf" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
 <p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the arcsine distribution:</p>
 <div class="math notranslate nohighlight">
@@ -992,7 +990,7 @@ document.write(`
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ctx.dist_arcsine">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dist_arcsine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dist_arcsine" title="Link to this definition">#</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dist_arcsine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dist_arcsine" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, <code class="docutils literal notranslate"><span class="pre">ipm</span></code>, <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">gmp</span></code> or <code class="docutils literal notranslate"><span class="pre">apm</span></code>.</p>
 <p>The arcsine distribution is a continuous probability distribution with endpoints <span class="math notranslate nohighlight">\(a \in \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(b \in \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(a&lt;b\)</span>, and the support interval <span class="math notranslate nohighlight">\((a, b)\)</span>.</p>
 <p>See also Wikipedia <span id="id3">[<a class="reference internal" href="../../99BackMatter/index.html#id961" title="Wikipedia. Arcsine distribution. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Arcsine_distribution.">1161</a>]</span>, MathWorld <span id="id4">[<a class="reference internal" href="../../99BackMatter/index.html#id1440" title="Wolfram Language Documentation. Arcsine Distribution. Wolfram Research, 2004. [Online; accessed 22-July-2024]. URL: https://reference.wolfram.com/language/ref/ArcSinDistribution.html.">244</a>]</span>, BoostMath <span id="id5">[<a class="reference internal" href="../../99BackMatter/index.html#id308" title="P. A. Bristow and H. Holin. Arcsine Distribution. Boost Math Toolkit Library, 2014. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/dist_ref/dists/arcine_dist.html.">51</a>]</span>, <span id="id6">Witkovský [<a class="reference internal" href="../../99BackMatter/index.html#id420" title="V. Witkovský. Arcsine Distribution. CharFunTool: The characteristic functions toolbox, 2017. [Online; accessed 22-July-2024]. URL: https://github.com/witkovsky/CharFunTool/blob/master/CF_Repository/cfS_Arcsine.m.">1496</a>]</span>.</p>
@@ -1205,9 +1203,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.arcsine_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.arcsine_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.arcsine_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.arcsine_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.arcsine_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.arcsine_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.arcsine_pdf"><code class="docutils literal notranslate"><span class="pre">math53.arcsine_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.arcsine_cdf"><code class="docutils literal notranslate"><span class="pre">math53.arcsine_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.arcsine_qtf"><code class="docutils literal notranslate"><span class="pre">math53.arcsine_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_arcsine"><code class="docutils literal notranslate"><span class="pre">ctx.dist_arcsine</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_arcsine.pdf"><code class="docutils literal notranslate"><span class="pre">dist_arcsine.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_arcsine.cdf"><code class="docutils literal notranslate"><span class="pre">dist_arcsine.cdf()</span></code></a></li>
@@ -1252,7 +1250,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 15, 2026.
+  Last updated on Sep 16, 2026.
   <br/>
 </p>
   </div>

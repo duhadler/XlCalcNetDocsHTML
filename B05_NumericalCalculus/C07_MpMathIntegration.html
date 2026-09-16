@@ -53,7 +53,7 @@
     <link rel="prev" title="Boost/Math: Numerical integration" href="C06_BoostQuadrature.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 15, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
   </head>
   
   
@@ -252,7 +252,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/index.html">Closed form distributions, based on the incomplete gamma function</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/D01_Chi.html">!!!Boost: Chi Distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/D02_ChiSquared.html">Boost: Chi-Squared distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/D02_Chi2.html">Boost: Chi2 distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/D03_Gamma.html">Boost: Gamma (Pearson Type III, Erlang) distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/D04_InverseChiSquared.html">Boost: Inverse chisquared distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/D05_InverseGamma.html">Boost: Inverse Gamma (Pearson Type V) distribution</a></li>
@@ -1447,7 +1447,7 @@ N = n, \quad M=n-\lfloor \log(\alpha/\beta)/h \rfloor, &amp; \text{for } \alpha 
 <p>The main challenge in implementing the algorithm is to determine a rigorous upper bound for <span class="math notranslate nohighlight">\(K\)</span>. We are going to achieve this by using the complex interval arithmetic which is implemented in mpmath. Since the domain <span class="math notranslate nohighlight">\(\mathcal{D}\)</span> is not of rectangular shape, we need to compute a rectangular domain, say <span class="math notranslate nohighlight">\(\mathcal{D}_{\text{Rect}}\)</span>, which includes <span class="math notranslate nohighlight">\(\mathcal{D}\)</span>: <span class="math notranslate nohighlight">\(\mathcal{D} \subset \mathcal{D}_{\text{Rect}}\)</span>.</p>
 <p>The rectangular domain <span class="math notranslate nohighlight">\(\mathcal{D}_{\text{Rect}}\)</span> corresponds to a complex interval, say <span class="math notranslate nohighlight">\(z_1\)</span>. The function <span class="math notranslate nohighlight">\(g\)</span> is then evaluated in complex interval arithmetic with <span class="math notranslate nohighlight">\(z_1\)</span> as argument: <span class="math notranslate nohighlight">\(z_2 = g(z_1)\)</span>. The absolute value of <span class="math notranslate nohighlight">\(z_2\)</span> is a real interval, say <span class="math notranslate nohighlight">\(x_1\)</span>. The supremum of <span class="math notranslate nohighlight">\(x_1\)</span> is a rigorous upper bound of <span class="math notranslate nohighlight">\(K\)</span> (see equation ref{eq:BoundFor_K_G}).</p>
 <p>The choice of <span class="math notranslate nohighlight">\(d\)</span> has a great impact on <span class="math notranslate nohighlight">\(M+N+1\)</span>, the total number of function evaluations, which are required to achieve the desired absolute error. To be able to select a near-optimal value of <span class="math notranslate nohighlight">\(d\)</span> resulting in the lowest number of function evaluations, we calculate <span class="math notranslate nohighlight">\(n\)</span> for a number of values for <span class="math notranslate nohighlight">\(d\)</span>, ranging from  <span class="math notranslate nohighlight">\(d=1.5\)</span> to <span class="math notranslate nohighlight">\(d=0.1\)</span>, using pre-computed values for the matching rectangular domains <span class="math notranslate nohighlight">\(\mathcal{D}_{\text{Rect}}\)</span>, and choose the value for <span class="math notranslate nohighlight">\(d\)</span> which results in the smallest <span class="math notranslate nohighlight">\(n\)</span>.</p>
-<p>If equation ref{eq:gFormula} does not give a useful alternative representation of <span class="math notranslate nohighlight">\(f\)</span>, we set <span class="math notranslate nohighlight">\(\alpha = \beta = 1\)</span>, so that <span class="math notranslate nohighlight">\(f(x) = g(x)\)</span>. However, taking <span class="math notranslate nohighlight">\(a=0, b=1\)</span>, <span class="math notranslate nohighlight">\(\alpha=\tfrac{1}{2}\)</span> and <span class="math notranslate nohighlight">\(\beta=1\)</span> let us consider the integral</p>
+<p>If equation ref{eq:gFormula} does not give a useful alternative representation of <span class="math notranslate nohighlight">\(f\)</span>, we set <span class="math notranslate nohighlight">\(\alpha = \beta = 1\)</span>, so that <span class="math notranslate nohighlight">\(f(x) = g(x)\)</span>. However, taking <span class="math notranslate nohighlight">\(a, b\)</span>, <span class="math notranslate nohighlight">\(\alpha=\tfrac{1}{2}\)</span> and <span class="math notranslate nohighlight">\(\beta=1\)</span> let us consider the integral</p>
 <div class="math notranslate nohighlight">
 \[I = \int_{0}^{1} \frac{\sin(\exp(x))}{\sqrt{x}} \mathrm{d} x = \int_{0}^{1} f(x) \mathrm{d} x =  \int_{0}^{1} \frac{g(x)}{\sqrt{x}} \mathrm{d} x, \text{ i.e}\]</div>
 <div class="math notranslate nohighlight">
@@ -1728,7 +1728,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 15, 2026.
+  Last updated on Sep 16, 2026.
   <br/>
 </p>
   </div>

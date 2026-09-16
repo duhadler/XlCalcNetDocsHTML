@@ -53,7 +53,7 @@
     <link rel="prev" title="Boost: Noncentral Fisher \(F\) distribution" href="D03_noncentral_fisher_f.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 15, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
   </head>
   
   
@@ -252,7 +252,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../C07_IncompleteGamma/index.html">Closed form distributions, based on the incomplete gamma function</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D01_Chi.html">!!!Boost: Chi Distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_ChiSquared.html">Boost: Chi-Squared distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_Chi2.html">Boost: Chi2 distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D03_Gamma.html">Boost: Gamma (Pearson Type III, Erlang) distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D04_InverseChiSquared.html">Boost: Inverse chisquared distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D05_InverseGamma.html">Boost: Inverse Gamma (Pearson Type V) distribution</a></li>
@@ -907,9 +907,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.beta_nc_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.beta_nc_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.beta_nc_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.beta_nc_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.beta_nc_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.beta_nc_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.beta_nc_pdf"><code class="docutils literal notranslate"><span class="pre">math53.beta_nc_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.beta_nc_cdf"><code class="docutils literal notranslate"><span class="pre">math53.beta_nc_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.beta_nc_qtf"><code class="docutils literal notranslate"><span class="pre">math53.beta_nc_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_beta_nc_type_I"><code class="docutils literal notranslate"><span class="pre">ctx.dist_beta_nc_type_I</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_beta_nc_type_I.pdf"><code class="docutils literal notranslate"><span class="pre">dist_beta_nc_type_I.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_beta_nc_type_I.cdf"><code class="docutils literal notranslate"><span class="pre">dist_beta_nc_type_I.cdf()</span></code></a></li>
@@ -939,13 +939,12 @@ document.write(`
 <p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id955" title="Wikipedia. Noncentral beta distribution. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Noncentral_beta_distribution.">1179</a>]</span>,  BoostMath <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id303" title="P. A. Bristow and H. Holin. Noncentral Beta Distribution. Boost Math Toolkit Library, 2014. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/dist_ref/dists/nc_beta_dist.html.">64</a>]</span>, <span id="id3">Wang and Gray [<a class="reference internal" href="../../99BackMatter/index.html#id263" title="S. Wang and H.L. Gray. Approximating tail probabilities of noncentral distributions. Computational Statistics &amp; Data Analysis, 15(3):343 – 352, 1993. Available at: http://www.sciencedirect.com/science/article/pii/016794739390261Q. URL: http://www.sciencedirect.com/science/article/pii/016794739390261Q, doi:http://dx.doi.org/10.1016/0167-9473(93)90261-Q.">809</a>]</span>, <span id="id4">Johansson [<a class="reference internal" href="../../99BackMatter/index.html#id154" title="F. Johansson. Characteristic functions in the prob package. 2018. Available as https://cran.r-project.org/web/packages/prob/vignettes/charfunc.pdf.">395</a>]</span>.</p>
 <p></p>
 <dl class="py method" id="ctx-betancpdf">
-<dt class="sig sig-object py" id="Ctx.beta_nc_pdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">beta_nc_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.beta_nc_pdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{pdf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C03_BaseClassCont.html#dist-pdf"><span class="std std-ref">Pdf</span></a>) of the noncentral beta distribution:</p>
+<dt class="sig sig-object py" id="math53.beta_nc_pdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">beta_nc_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.beta_nc_pdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{pdf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C03_BaseClassCont.html#dist-pdf"><span class="std std-ref">Pdf</span></a>) of the noncentral beta distribution:</p>
 <div class="math notranslate nohighlight" id="equation-beta-nc-pdf-chou">
 <span class="eqno">(1)<a class="headerlink" href="#equation-beta-nc-pdf-chou" title="Link to this equation">#</a></span>\[\text{pdf}(x) = f_{\text{Beta}}(x;a, b;\lambda_1) = \frac{a}{b} \int_{0}^{\infty} y  \cdot  f_{\chi^2} \left(x \cdot y  \cdot a/b, 2a, \lambda_1\right) \cdot f_{\chi^2}(y, n) \: \mathrm{d}y\]</div>
-<p>Here <span class="math notranslate nohighlight">\(f_{\chi^2}(\cdot, m, \lambda_1)\)</span> denotes the pdf of the noncentral <span class="math notranslate nohighlight">\(\chi^2\)</span> distribution with <span class="math notranslate nohighlight">\(m\)</span> degrees of freedom and noncentrality parameter <span class="math notranslate nohighlight">\(\lambda_1\)</span> (see <a class="reference internal" href="D01_noncentral_chi_squared.html#rst-mpm-chi2-nc-pdf"><span class="std std-ref">chi2_nc_pdf()</span></a>), and <span class="math notranslate nohighlight">\(f_{\chi^2}(\cdot, n)\)</span> denotes the pdf of the central <span class="math notranslate nohighlight">\(\chi^2\)</span> distribution with <span class="math notranslate nohighlight">\(n\)</span> degrees of freedom  (see <a class="reference internal" href="../C07_IncompleteGamma/D02_ChiSquared.html#rst-mpm-chi-squared-pdf"><span class="std std-ref">chi_squared_pdf()</span></a>).</p>
+<p>Here <span class="math notranslate nohighlight">\(f_{\chi^2}(\cdot, m, \lambda_1)\)</span> denotes the pdf of the noncentral <span class="math notranslate nohighlight">\(\chi^2\)</span> distribution with <span class="math notranslate nohighlight">\(m\)</span> degrees of freedom and noncentrality parameter <span class="math notranslate nohighlight">\(\lambda_1\)</span> (see <a class="reference internal" href="D01_noncentral_chi_squared.html#rst-mpm-chi2-nc-pdf"><span class="std std-ref">chi2_nc_pdf()</span></a>), and <span class="math notranslate nohighlight">\(f_{\chi^2}(\cdot, n)\)</span> denotes the pdf of the central <span class="math notranslate nohighlight">\(\chi^2\)</span> distribution with <span class="math notranslate nohighlight">\(n\)</span> degrees of freedom  (see <a class="reference internal" href="../C07_IncompleteGamma/D02_Chi2.html#rst-mpm-chi-squared-pdf"><span class="std std-ref">chi_squared_pdf()</span></a>).</p>
 <p>Alternatively, the pdf can be written in a form which shows the relationship to the central distribution more clearly:</p>
 <div class="math notranslate nohighlight" id="equation-beta-nc-pdf-hyper">
 <span class="eqno">(2)<a class="headerlink" href="#equation-beta-nc-pdf-hyper" title="Link to this equation">#</a></span>\[\text{pdf}(x) = f_{\text{Beta}'}(x;a,b,\lambda_1) = e^{-\lambda_1/2} f_{\text{Beta}}(x;a,b) \times  {}_1F_1 \left((a+b), b, \tfrac{n x \lambda_1}{2(m+n x)}\right)\]</div>
@@ -962,10 +961,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-betanccdf">
-<dt class="sig sig-object py" id="Ctx.beta_nc_cdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">beta_nc_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.beta_nc_cdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the noncentral beta distribution:</p>
+<dt class="sig sig-object py" id="math53.beta_nc_cdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">beta_nc_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.beta_nc_cdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the noncentral beta distribution:</p>
 <div class="math notranslate nohighlight" id="equation-beta-nc-cdf-chou">
 <span class="eqno">(3)<a class="headerlink" href="#equation-beta-nc-cdf-chou" title="Link to this equation">#</a></span>\[\text{cdf}(x) =  F_{\text{Beta}}(x;a, b;\lambda_1) = \frac{a z}{b}\int_{0}^{\infty} f_{\chi^2} \left(z \cdot y  \cdot a/b, 2a; \lambda_1\right) \cdot  [1-F_{\chi^2}(y, 2b)] \: \mathrm{d}y, \quad z = \frac{bx}{a(1-x)}\]</div>
 <p>Here <span class="math notranslate nohighlight">\(f_{\chi^2}(\cdot, m, \lambda_1)\)</span> denotes the pdf of the noncentral <span class="math notranslate nohighlight">\(\chi^2\)</span> distribution with <span class="math notranslate nohighlight">\(m\)</span> degrees of freedom and noncentrality parameter <span class="math notranslate nohighlight">\(\lambda_1\)</span> (see <a class="reference internal" href="D01_noncentral_chi_squared.html#rst-mpm-chi2-nc-pdf"><span class="std std-ref">chi2_nc_pdf()</span></a>).</p>
@@ -981,10 +979,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-betancqtf">
-<dt class="sig sig-object py" id="Ctx.beta_nc_qtf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">beta_nc_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.beta_nc_qtf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the noncentral beta distribution:</p>
+<dt class="sig sig-object py" id="math53.beta_nc_qtf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">beta_nc_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.beta_nc_qtf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the noncentral beta distribution:</p>
 <p>There is no known closed exact form for <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>. For <code class="docutils literal notranslate"><span class="pre">fpm.</span></code> the default method is to call the function provided by Boost.</p>
 <p>The following example shows both forms of the syntax:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
@@ -1230,9 +1227,9 @@ following a Type I noncentral beta distribution. The cumulants are calculated fr
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.beta_nc_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.beta_nc_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.beta_nc_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.beta_nc_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.beta_nc_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.beta_nc_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.beta_nc_pdf"><code class="docutils literal notranslate"><span class="pre">math53.beta_nc_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.beta_nc_cdf"><code class="docutils literal notranslate"><span class="pre">math53.beta_nc_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.beta_nc_qtf"><code class="docutils literal notranslate"><span class="pre">math53.beta_nc_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_beta_nc_type_I"><code class="docutils literal notranslate"><span class="pre">ctx.dist_beta_nc_type_I</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_beta_nc_type_I.pdf"><code class="docutils literal notranslate"><span class="pre">dist_beta_nc_type_I.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_beta_nc_type_I.cdf"><code class="docutils literal notranslate"><span class="pre">dist_beta_nc_type_I.cdf()</span></code></a></li>
@@ -1277,7 +1274,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 15, 2026.
+  Last updated on Sep 16, 2026.
   <br/>
 </p>
   </div>

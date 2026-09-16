@@ -33,9 +33,7 @@ See also   Wikipedia :cite:p:`WikipediaDis35`, MathWorld :cite:p:`WolframDis35`,
 
 .. _Ctx_HypergeoPmf:
 
-.. method:: Ctx.hypergeometric_pmf(k, n, K, N)
-
-    where ``Ctx`` is ``Math53`` or ``CtxBoost``.
+.. method:: math53.hypergeometric_pmf(r, n, N, k)
 
     Returns `\text{pmf}(k)`, the value of the probability mass function (:ref:`Pmf <Dist_Pmf>`) of the hypergeometric distribution. 
 
@@ -57,9 +55,7 @@ See also   Wikipedia :cite:p:`WikipediaDis35`, MathWorld :cite:p:`WolframDis35`,
 
 .. _Ctx_HypergeoCdf:
 
-.. method:: Ctx.hypergeometric_cdf(k, n, K, N)
-
-    where ``Ctx`` is ``Math53`` or ``CtxBoost``.
+.. method:: math53.hypergeometric_cdf(r, n, N, k)
 
     Returns `\text{cdf}(x)`, the value of the cumulative distribution function (:ref:`Cdf <Dist_Cdf>`) of the hypergeometric distribution:
 
@@ -81,9 +77,7 @@ See also   Wikipedia :cite:p:`WikipediaDis35`, MathWorld :cite:p:`WolframDis35`,
 
 .. _Ctx_HypergeoQtf:
 
-.. method:: Ctx.hypergeometric_qtf(q, n, K, N)
-
-    where ``Ctx`` is ``Math53`` or ``CtxBoost``.
+.. method:: math53.hypergeometric_qtf(r, n, N, q)
 
     Returns `\text{qtf}(q)`, the value of the quantile function (:ref:`Qtf <Dist_Qtf>`) of the hypergeometric distribution:
 

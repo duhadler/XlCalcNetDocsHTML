@@ -50,10 +50,10 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Boost: Inverse chisquared distribution" href="D04_InverseChiSquared.html" />
-    <link rel="prev" title="Boost: Chi-Squared distribution" href="D02_ChiSquared.html" />
+    <link rel="prev" title="Boost: Chi2 distribution" href="D02_Chi2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 15, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
   </head>
   
   
@@ -252,7 +252,7 @@
 </details></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Closed form distributions, based on the incomplete gamma function</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="D01_Chi.html">!!!Boost: Chi Distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="D02_ChiSquared.html">Boost: Chi-Squared distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="D02_Chi2.html">Boost: Chi2 distribution</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Boost: Gamma (Pearson Type III, Erlang) distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="D04_InverseChiSquared.html">Boost: Inverse chisquared distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="D05_InverseGamma.html">Boost: Inverse Gamma (Pearson Type V) distribution</a></li>
@@ -907,9 +907,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.gamma_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.gamma_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.gamma_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.gamma_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.gamma_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.gamma_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.gamma_pdf"><code class="docutils literal notranslate"><span class="pre">math53.gamma_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.gamma_cdf"><code class="docutils literal notranslate"><span class="pre">math53.gamma_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.gamma_qtf"><code class="docutils literal notranslate"><span class="pre">math53.gamma_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_gamma"><code class="docutils literal notranslate"><span class="pre">ctx.dist_gamma</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_gamma.pdf"><code class="docutils literal notranslate"><span class="pre">dist_gamma.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_gamma.cdf"><code class="docutils literal notranslate"><span class="pre">dist_gamma.cdf()</span></code></a></li>
@@ -939,10 +939,9 @@ document.write(`
 <p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id965" title="Wikipedia. Gamma distribution. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Gamma_distribution.">1168</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id1444" title="E. W. Weisstein. Gamma Distribution. From MathWorld - A Wolfram Web Resource, 2005. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/GammaDistribution.html.">836</a>]</span>,  BoostMath <span id="id3">[<a class="reference internal" href="../../99BackMatter/index.html#id312" title="P. A. Bristow and H. Holin. Gamma (and Erlang) Distribution. Boost Math Toolkit Library, 2014. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/dist_ref/dists/gamma_dist.html.">58</a>]</span>, <span id="id4">Ehrhardt [<a class="reference internal" href="../../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">299</a>]</span> (3.9.10).</p>
 <p></p>
 <dl class="py method" id="ctx-gammapdf">
-<dt class="sig sig-object py" id="Ctx.gamma_pdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">gamma_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.gamma_pdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{pdf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C03_BaseClassCont.html#dist-pdf"><span class="std std-ref">Pdf</span></a>) of the gamma distribution:</p>
+<dt class="sig sig-object py" id="math53.gamma_pdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">gamma_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.gamma_pdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{pdf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C03_BaseClassCont.html#dist-pdf"><span class="std std-ref">Pdf</span></a>) of the gamma distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{pdf}(x) = \frac{x^{a-1}e^{-x/b}}{\Gamma(a) b^a}.\]</div>
 <p>The following example shows both forms of the syntax:</p>
@@ -957,10 +956,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-gammacdf">
-<dt class="sig sig-object py" id="Ctx.gamma_cdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">gamma_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.gamma_cdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the gamma distribution:</p>
+<dt class="sig sig-object py" id="math53.gamma_cdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">gamma_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.gamma_cdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the gamma distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{cdf}(x) = P(a,x/b).\]</div>
 <p>Here <span class="math notranslate nohighlight">\(P(\cdot)\)</span> denotes the lower regularized incomplete gamma function (<a class="reference internal" href="../../B11_Hypergeometric1F1/C02_IncompleteGamma.html#rst-mpm-gamma-p"><span class="std std-ref">RealGammaP</span></a>).</p>
@@ -976,10 +974,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-gammaqtf">
-<dt class="sig sig-object py" id="Ctx.gamma_qtf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">gamma_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.gamma_qtf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the gamma distribution:</p>
+<dt class="sig sig-object py" id="math53.gamma_qtf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">gamma_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.gamma_qtf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the gamma distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{qtf}(q) =  b \cdot P^{-1}(a,q).\]</div>
 <p>Here <span class="math notranslate nohighlight">\(P^{-1}(\cdot)\)</span> denotes the inverse of the lower regularized incomplete gamma function (<a class="reference internal" href="../../B11_Hypergeometric1F1/C02_IncompleteGamma.html#rst-mpm-real-gamma-p-inv"><span class="std std-ref">RealGammaPInv</span></a>).</p>
@@ -1180,12 +1177,12 @@ See also Wikipedia <span id="id5">[<a class="reference internal" href="../../99B
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="D02_ChiSquared.html"
+       href="D02_Chi2.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Boost: Chi-Squared distribution</p>
+        <p class="prev-next-title">Boost: Chi2 distribution</p>
       </div>
     </a>
     <a class="right-next"
@@ -1213,9 +1210,9 @@ See also Wikipedia <span id="id5">[<a class="reference internal" href="../../99B
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.gamma_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.gamma_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.gamma_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.gamma_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.gamma_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.gamma_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.gamma_pdf"><code class="docutils literal notranslate"><span class="pre">math53.gamma_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.gamma_cdf"><code class="docutils literal notranslate"><span class="pre">math53.gamma_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.gamma_qtf"><code class="docutils literal notranslate"><span class="pre">math53.gamma_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_gamma"><code class="docutils literal notranslate"><span class="pre">ctx.dist_gamma</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_gamma.pdf"><code class="docutils literal notranslate"><span class="pre">dist_gamma.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_gamma.cdf"><code class="docutils literal notranslate"><span class="pre">dist_gamma.cdf()</span></code></a></li>
@@ -1260,7 +1257,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 15, 2026.
+  Last updated on Sep 16, 2026.
   <br/>
 </p>
   </div>

@@ -53,7 +53,7 @@
     <link rel="prev" title="Boost: Poisson distribution" href="D03_poisson.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 15, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
   </head>
   
   
@@ -252,7 +252,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../C07_IncompleteGamma/index.html">Closed form distributions, based on the incomplete gamma function</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D01_Chi.html">!!!Boost: Chi Distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_ChiSquared.html">Boost: Chi-Squared distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_Chi2.html">Boost: Chi2 distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D03_Gamma.html">Boost: Gamma (Pearson Type III, Erlang) distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D04_InverseChiSquared.html">Boost: Inverse chisquared distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D05_InverseGamma.html">Boost: Inverse Gamma (Pearson Type V) distribution</a></li>
@@ -907,9 +907,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.binomial_pmf"><code class="docutils literal notranslate"><span class="pre">Ctx.binomial_pmf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.binomial_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.binomial_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.binomial_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.binomial_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.binomial_pmf"><code class="docutils literal notranslate"><span class="pre">math53.binomial_pmf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.binomial_cdf"><code class="docutils literal notranslate"><span class="pre">math53.binomial_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.binomial_qtf"><code class="docutils literal notranslate"><span class="pre">math53.binomial_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_binomial"><code class="docutils literal notranslate"><span class="pre">ctx.dist_binomial</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_binomial.pmf"><code class="docutils literal notranslate"><span class="pre">dist_binomial.pmf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_binomial.cdf"><code class="docutils literal notranslate"><span class="pre">dist_binomial.cdf()</span></code></a></li>
@@ -946,10 +946,9 @@ document.write(`
 <p>See also   Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id984" title="Wikipedia. Binomial distribution. Wikimedia Foundation, 2008. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Binomial_distribution.">1189</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id1459" title="E. W. Weisstein. Binomial Distribution. From MathWorld - A Wolfram Web Resource, 2005. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/BinomialDistribution.html.">832</a>]</span>,  BoostMath <span id="id3">[<a class="reference internal" href="../../99BackMatter/index.html#id327" title="P. A. Bristow and H. Holin. Binomial Distribution. Boost Math Toolkit Library, 2015. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/dist_ref/dists/binomial_dist.html.">72</a>]</span>, <span id="id4">Ehrhardt [<a class="reference internal" href="../../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">299</a>]</span> (3.9.3).</p>
 <p></p>
 <dl class="py method" id="ctx-binomialpmf">
-<dt class="sig sig-object py" id="Ctx.binomial_pmf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">binomial_pmf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.binomial_pmf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{pmf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C04_BaseClassDiscrete.html#dist-pmf"><span class="std std-ref">Pmf</span></a>) of the binomial distribution:</p>
+<dt class="sig sig-object py" id="math53.binomial_pmf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">binomial_pmf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.binomial_pmf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{pmf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C04_BaseClassDiscrete.html#dist-pmf"><span class="std std-ref">Pmf</span></a>) of the binomial distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{pmf}(x) = \binom{n}{k} p^k (1-p)^{n-k} = f_{\text{Beta}}(k+1,n-k+1,p)/(n+1).\]</div>
 <p>Here <span class="math notranslate nohighlight">\(f_{\text{Beta}}(\cdot)\)</span> denotes the PDF of the central beta distribution.</p>
@@ -965,10 +964,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-binomialcdf">
-<dt class="sig sig-object py" id="Ctx.binomial_cdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">binomial_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.binomial_cdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the binomial distribution:</p>
+<dt class="sig sig-object py" id="math53.binomial_cdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">binomial_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.binomial_cdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the binomial distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{cdf}(x) = \sum_{j=0}^{k} \text{pmf}_X(j) = \text{ibetac}(k+1, n-k, p).\]</div>
 <p>Here <span class="math notranslate nohighlight">\(\text{ibetac}(\cdot)\)</span> denotes the real normalised complementary incomplete beta function (<a class="reference internal" href="../../B12_HypergeometricpFq/C04_Incomplete_Beta.html#rst-mpm-ibetac"><span class="std std-ref">RealIBetac</span></a>).</p>
@@ -984,10 +982,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-binomialqtf">
-<dt class="sig sig-object py" id="Ctx.binomial_qtf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">binomial_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.binomial_qtf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the binomial distribution:</p>
+<dt class="sig sig-object py" id="math53.binomial_qtf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">binomial_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.binomial_qtf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the binomial distribution:</p>
 <p>There is no known closed form for <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>: it is computed with Newton iterations where the starting values are from the corresponding Boost functions.</p>
 <p>The following example shows both forms of the syntax:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
@@ -1297,9 +1294,9 @@ following an binomial distribution. The cumulants are calculated from the moment
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.binomial_pmf"><code class="docutils literal notranslate"><span class="pre">Ctx.binomial_pmf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.binomial_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.binomial_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.binomial_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.binomial_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.binomial_pmf"><code class="docutils literal notranslate"><span class="pre">math53.binomial_pmf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.binomial_cdf"><code class="docutils literal notranslate"><span class="pre">math53.binomial_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.binomial_qtf"><code class="docutils literal notranslate"><span class="pre">math53.binomial_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_binomial"><code class="docutils literal notranslate"><span class="pre">ctx.dist_binomial</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_binomial.pmf"><code class="docutils literal notranslate"><span class="pre">dist_binomial.pmf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_binomial.cdf"><code class="docutils literal notranslate"><span class="pre">dist_binomial.cdf()</span></code></a></li>
@@ -1351,7 +1348,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 15, 2026.
+  Last updated on Sep 16, 2026.
   <br/>
 </p>
   </div>

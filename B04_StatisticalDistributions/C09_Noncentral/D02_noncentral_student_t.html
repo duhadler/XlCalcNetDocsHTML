@@ -53,7 +53,7 @@
     <link rel="prev" title="Boost: Noncentral \(\chi^2\) distribution" href="D01_noncentral_chi_squared.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 15, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
   </head>
   
   
@@ -252,7 +252,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../C07_IncompleteGamma/index.html">Closed form distributions, based on the incomplete gamma function</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D01_Chi.html">!!!Boost: Chi Distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_ChiSquared.html">Boost: Chi-Squared distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_Chi2.html">Boost: Chi2 distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D03_Gamma.html">Boost: Gamma (Pearson Type III, Erlang) distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D04_InverseChiSquared.html">Boost: Inverse chisquared distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D05_InverseGamma.html">Boost: Inverse Gamma (Pearson Type V) distribution</a></li>
@@ -907,9 +907,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.student_t_nc_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.student_t_nc_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.student_t_nc_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.student_t_nc_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.student_t_nc_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.student_t_nc_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.student_t_nc_pdf"><code class="docutils literal notranslate"><span class="pre">math53.student_t_nc_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.student_t_nc_cdf"><code class="docutils literal notranslate"><span class="pre">math53.student_t_nc_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.student_t_nc_qtf"><code class="docutils literal notranslate"><span class="pre">math53.student_t_nc_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_student_t_nc"><code class="docutils literal notranslate"><span class="pre">ctx.dist_student_t_nc</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_student_t_nc.pdf"><code class="docutils literal notranslate"><span class="pre">dist_student_t_nc.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_student_t_nc.cdf"><code class="docutils literal notranslate"><span class="pre">dist_student_t_nc.cdf()</span></code></a></li>
@@ -941,13 +941,12 @@ document.write(`
 <p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id954" title="Wikipedia. Noncentral t-distribution. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Noncentral_t-distribution.">1181</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id1433" title="E. W. Weisstein. Noncentral Student's t-Distribution. From MathWorld - A Wolfram Web Resource, 2004. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/NoncentralStudentst-Distribution.html.">826</a>]</span>,  BoostMath <span id="id3">[<a class="reference internal" href="../../99BackMatter/index.html#id302" title="P. A. Bristow and H. Holin. Noncentral T Distribution. Boost Math Toolkit Library, 2014. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/dist_ref/dists/nc_t_dist.html.">67</a>]</span>, <span id="id4">Benton and Krishnamoorthy [<a class="reference internal" href="../../99BackMatter/index.html#id20" title="Denise Benton and K. Krishnamoorthy. Computing discrete mixtures of continuous distributions: noncentral chisquare, noncentral t and the distribution of the square of the sample multiple correlation coefficient. Computational Statistics &amp; Data Analysis, 14:249–267, 2003. Available as http://www.ucs.louisiana.edu/ kxk4695/CSDA-03.pdf.">31</a>]</span>, <span id="id5">Broda and Paolella [<a class="reference internal" href="../../99BackMatter/index.html#id29" title="S.A. Broda and M. Paolella. Saddlepoint approximations for the doubly noncentral t distribution. Computational Statistics &amp; Data Analysis, 51:2907–2918, 2007. Postprint available as http://www.zora.uzh.ch/16956/2/broda_dnct_07V.pdf.">161</a>]</span>, <span id="id6">Owen [<a class="reference internal" href="../../99BackMatter/index.html#id199" title="D. B. Owen. A survey of properties and applications of the noncentral `t`-distribution. Technometrics, 10:445–478, 1968.">466</a>]</span>, <span id="id7">Wang and Gray [<a class="reference internal" href="../../99BackMatter/index.html#id263" title="S. Wang and H.L. Gray. Approximating tail probabilities of noncentral distributions. Computational Statistics &amp; Data Analysis, 15(3):343 – 352, 1993. Available at: http://www.sciencedirect.com/science/article/pii/016794739390261Q. URL: http://www.sciencedirect.com/science/article/pii/016794739390261Q, doi:http://dx.doi.org/10.1016/0167-9473(93)90261-Q.">809</a>]</span>, <span id="id8">Witkovský [<a class="reference internal" href="../../99BackMatter/index.html#id278" title="V. Witkovský. A note on Computing Extreme Tail Probabilities of the Noncentral T Distribution with Large Noncentrality Parameter. ArXiv e-prints, 2013.">1495</a>]</span>, <span id="id9">Johansson [<a class="reference internal" href="../../99BackMatter/index.html#id154" title="F. Johansson. Characteristic functions in the prob package. 2018. Available as https://cran.r-project.org/web/packages/prob/vignettes/charfunc.pdf.">395</a>]</span>.</p>
 <p></p>
 <dl class="py method" id="ctx-studenttncpdf">
-<dt class="sig sig-object py" id="Ctx.student_t_nc_pdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">student_t_nc_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.student_t_nc_pdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{pdf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C03_BaseClassCont.html#dist-pdf"><span class="std std-ref">Pdf</span></a>) of the non-central Student t distribution:</p>
+<dt class="sig sig-object py" id="math53.student_t_nc_pdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">student_t_nc_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.student_t_nc_pdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{pdf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C03_BaseClassCont.html#dist-pdf"><span class="std std-ref">Pdf</span></a>) of the non-central Student t distribution:</p>
 <div class="math notranslate nohighlight" id="equation-student-t-nc-pdf-witkovsky">
 <span class="eqno">(1)<a class="headerlink" href="#equation-student-t-nc-pdf-witkovsky" title="Link to this equation">#</a></span>\[\text{pdf}(x) = f_{\text{StudentT}}\left(n,x, \delta\right) = \int_{0}^{\infty} \phi \left(x \sqrt{\frac{y}{n}} -\delta\right) f_{\chi^2}(y, n) \sqrt{\frac{y}{n}} \: \mathrm{d}y,\]</div>
-<p>where <span class="math notranslate nohighlight">\(\phi(\cdot)\)</span> denotes the pdf of the standard normal distribution and <span class="math notranslate nohighlight">\(f_{\chi^2}(\cdot, n)\)</span> denotes the pdf of the <span class="math notranslate nohighlight">\(\chi^2\)</span> distribution with <span class="math notranslate nohighlight">\(n\)</span> degrees of freedom (see <a class="reference internal" href="../C07_IncompleteGamma/D02_ChiSquared.html#rst-mpm-chi-squared-pdf"><span class="std std-ref">chi_squared_pdf()</span></a>).</p>
+<p>where <span class="math notranslate nohighlight">\(\phi(\cdot)\)</span> denotes the pdf of the standard normal distribution and <span class="math notranslate nohighlight">\(f_{\chi^2}(\cdot, n)\)</span> denotes the pdf of the <span class="math notranslate nohighlight">\(\chi^2\)</span> distribution with <span class="math notranslate nohighlight">\(n\)</span> degrees of freedom (see <a class="reference internal" href="../C07_IncompleteGamma/D02_Chi2.html#rst-mpm-chi-squared-pdf"><span class="std std-ref">chi_squared_pdf()</span></a>).</p>
 <p>Alternatively, the pdf can be written in a form which shows the relationship to the central distribution more clearly:</p>
 <div class="math notranslate nohighlight" id="equation-student-t-nc-pdf-hyper">
 <span class="eqno">(2)<a class="headerlink" href="#equation-student-t-nc-pdf-hyper" title="Link to this equation">#</a></span>\[\text{pdf}(x) = f_{t'}(x; n, \delta) = \frac{n^m \Gamma(n+1) \exp(-\tfrac{1}{2}\delta^2)}{2^n a^m\Gamma(m)} \left[ \frac{\sqrt{2} \delta x \cdot {}_1F_1(m+1;\tfrac{3}{2};y^2)}{a \Gamma(m+\tfrac{1}{2})}  -   \frac{ {}_1F_1(m+\tfrac{1}{2}; \tfrac{1}{2};y^2)}{\sqrt{a} \Gamma(m+1)} \right],\]</div>
@@ -966,10 +965,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-studenttnccdf">
-<dt class="sig sig-object py" id="Ctx.student_t_nc_cdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">student_t_nc_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.student_t_nc_cdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the non-central Student t distribution:</p>
+<dt class="sig sig-object py" id="math53.student_t_nc_cdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">student_t_nc_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.student_t_nc_cdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the non-central Student t distribution:</p>
 <div class="math notranslate nohighlight" id="equation-student-t-nc-cdf-witkovsky">
 <span class="eqno">(3)<a class="headerlink" href="#equation-student-t-nc-cdf-witkovsky" title="Link to this equation">#</a></span>\[\text{cdf}(x) =  F_{\text{StudentT}}\left(x, n, \delta\right) = \int_{0}^{\infty} \Phi \left(x \sqrt{\frac{y}{n}} -\delta\right) f_{\chi^2}(y, n) \: \mathrm{d}y,\]</div>
 <p>for <span class="math notranslate nohighlight">\(x&lt;0\)</span> by <span class="math notranslate nohighlight">\(F_{\text{StudentT}}\left(n,x, \delta\right) = 1-F_{\text{StudentT}}\left(n,-x, -\delta\right)\)</span>, and for <span class="math notranslate nohighlight">\(x=0\)</span> by <span class="math notranslate nohighlight">\(F_{\text{StudentT}}\left(n,x, \delta\right) = \Phi(-\delta)\)</span>.</p>
@@ -986,10 +984,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-studenttncqtf">
-<dt class="sig sig-object py" id="Ctx.student_t_nc_qtf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">student_t_nc_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.student_t_nc_qtf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the non-central Student t distribution:</p>
+<dt class="sig sig-object py" id="math53.student_t_nc_qtf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">student_t_nc_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.student_t_nc_qtf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the non-central Student t distribution:</p>
 <p>There is no known closed exact form for <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>. For <code class="docutils literal notranslate"><span class="pre">fpm.</span></code> the default method is to call the function provided by Boost.</p>
 <p>The following example shows both forms of the syntax:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
@@ -1229,9 +1226,9 @@ following a non-central Student t distribution. The cumulants are calculated fro
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.student_t_nc_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.student_t_nc_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.student_t_nc_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.student_t_nc_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.student_t_nc_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.student_t_nc_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.student_t_nc_pdf"><code class="docutils literal notranslate"><span class="pre">math53.student_t_nc_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.student_t_nc_cdf"><code class="docutils literal notranslate"><span class="pre">math53.student_t_nc_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.student_t_nc_qtf"><code class="docutils literal notranslate"><span class="pre">math53.student_t_nc_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_student_t_nc"><code class="docutils literal notranslate"><span class="pre">ctx.dist_student_t_nc</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_student_t_nc.pdf"><code class="docutils literal notranslate"><span class="pre">dist_student_t_nc.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_student_t_nc.cdf"><code class="docutils literal notranslate"><span class="pre">dist_student_t_nc.cdf()</span></code></a></li>
@@ -1278,7 +1275,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 15, 2026.
+  Last updated on Sep 16, 2026.
   <br/>
 </p>
   </div>

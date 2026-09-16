@@ -53,7 +53,7 @@
     <link rel="prev" title="Boost: Inverse chisquared distribution" href="D04_InverseChiSquared.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 15, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
   </head>
   
   
@@ -252,7 +252,7 @@
 </details></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Closed form distributions, based on the incomplete gamma function</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="D01_Chi.html">!!!Boost: Chi Distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="D02_ChiSquared.html">Boost: Chi-Squared distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="D02_Chi2.html">Boost: Chi2 distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="D03_Gamma.html">Boost: Gamma (Pearson Type III, Erlang) distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="D04_InverseChiSquared.html">Boost: Inverse chisquared distribution</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Boost: Inverse Gamma (Pearson Type V) distribution</a></li>
@@ -907,10 +907,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.invgamma_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.invgamma_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.invgamma_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.invgamma_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.invgamma_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.invgamma_qtf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_invgamma"><code class="docutils literal notranslate"><span class="pre">ctx.dist_invgamma</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.inverse_gamma_pdf"><code class="docutils literal notranslate"><span class="pre">math53.inverse_gamma_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.inverse_gamma_cdf"><code class="docutils literal notranslate"><span class="pre">math53.inverse_gamma_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.inverse_gamma_qtf"><code class="docutils literal notranslate"><span class="pre">math53.inverse_gamma_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_inverse_gamma"><code class="docutils literal notranslate"><span class="pre">ctx.dist_inverse_gamma</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_invgamma.pdf"><code class="docutils literal notranslate"><span class="pre">dist_invgamma.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_invgamma.cdf"><code class="docutils literal notranslate"><span class="pre">dist_invgamma.cdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_invgamma.sf"><code class="docutils literal notranslate"><span class="pre">dist_invgamma.sf()</span></code></a></li>
@@ -939,10 +939,9 @@ document.write(`
 <p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id966" title="Wikipedia. Inverse-gamma distribution. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Inverse-gamma_distribution.">1172</a>]</span>,  BoostMath <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id313" title="P. A. Bristow and H. Holin. Inverse Gamma Distribution. Boost Math Toolkit Library, 2014. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/dist_ref/dists/inverse_gamma_dist.html.">59</a>]</span>, <span id="id3">Witkovský [<a class="reference internal" href="../../99BackMatter/index.html#id277" title="V. Witkovský. Computing the distribution of a linear combination of inverted gamma variables. Kybernetika, 37(1):79–90, 2001.">1493</a>]</span>, <span id="id4">Ehrhardt [<a class="reference internal" href="../../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">299</a>]</span> (3.9.12).</p>
 <p></p>
 <dl class="py method" id="ctx-invgammapdf">
-<dt class="sig sig-object py" id="Ctx.invgamma_pdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">invgamma_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.invgamma_pdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{pdf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C03_BaseClassCont.html#dist-pdf"><span class="std std-ref">Pdf</span></a>) of the inverse gamma distribution:</p>
+<dt class="sig sig-object py" id="math53.inverse_gamma_pdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">inverse_gamma_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.inverse_gamma_pdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{pdf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C03_BaseClassCont.html#dist-pdf"><span class="std std-ref">Pdf</span></a>) of the inverse gamma distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{pdf}(x) = \left(\frac{b}{x}\right)^a \frac{e^{-\frac{b}{x}}}{x\Gamma(a)}.\]</div>
 <p>The following example shows both forms of the syntax:</p>
@@ -957,10 +956,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-invgammacdf">
-<dt class="sig sig-object py" id="Ctx.invgamma_cdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">invgamma_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.invgamma_cdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the inverse gamma distribution:</p>
+<dt class="sig sig-object py" id="math53.inverse_gamma_cdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">inverse_gamma_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.inverse_gamma_cdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the inverse gamma distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{cdf}(x) = Q \left(a, -\frac{b}{x} \right).\]</div>
 <p>Here <span class="math notranslate nohighlight">\(Q(\cdot)\)</span> denotes the upper regularized incomplete gamma function (<a class="reference internal" href="../../B11_Hypergeometric1F1/C02_IncompleteGamma.html#rst-mpm-gamma-q"><span class="std std-ref">RealGammaQ</span></a>).</p>
@@ -976,10 +974,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-invgammaqtf">
-<dt class="sig sig-object py" id="Ctx.invgamma_qtf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">invgamma_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.invgamma_qtf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the inverse gamma distribution:</p>
+<dt class="sig sig-object py" id="math53.inverse_gamma_qtf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">inverse_gamma_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.inverse_gamma_qtf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the inverse gamma distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{qtf}(q) =   \frac{b}{Q^{-1}(a, q)}.\]</div>
 <p>Here <span class="math notranslate nohighlight">\(Q^{-1}(\cdot)\)</span> denotes the inverse of the upper regularized incomplete gamma function (<a class="reference internal" href="../../B11_Hypergeometric1F1/C02_IncompleteGamma.html#rst-mpm-real-gamma-q-inv"><span class="std std-ref">RealGammaQInv</span></a>).</p>
@@ -995,8 +992,8 @@ document.write(`
 
 <p></p>
 <dl class="py class">
-<dt class="sig sig-object py" id="ctx.dist_invgamma">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dist_invgamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dist_invgamma" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.dist_inverse_gamma">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dist_inverse_gamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dist_inverse_gamma" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, <code class="docutils literal notranslate"><span class="pre">ipm</span></code>, <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">gmp</span></code> or <code class="docutils literal notranslate"><span class="pre">apm</span></code>.</p>
 <p>The inverse gamma distribution is a continuous probability distribution with shape <span class="math notranslate nohighlight">\(a &gt; 0\)</span>, scale <span class="math notranslate nohighlight">\(b &gt; 0\)</span>, and the support interval <span class="math notranslate nohighlight">\((0,+\infty)\)</span>.
 See also Wikipedia <span id="id5">[<a class="reference internal" href="../../99BackMatter/index.html#id966" title="Wikipedia. Inverse-gamma distribution. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Inverse-gamma_distribution.">1172</a>]</span>, MathWorld <span id="id6">[<a class="reference internal" href="../../99BackMatter/index.html#id1445" title="Wolfram Language Documentation. Inverse Gamma Distribution. Wolfram Research, 2004. [Online; accessed 22-July-2024]. URL: https://reference.wolfram.com/language/ref/InverseGammaDistribution.html.">245</a>]</span>, BoostMath <span id="id7">[<a class="reference internal" href="../../99BackMatter/index.html#id313" title="P. A. Bristow and H. Holin. Inverse Gamma Distribution. Boost Math Toolkit Library, 2014. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/dist_ref/dists/inverse_gamma_dist.html.">59</a>]</span>, <span id="id8">Witkovský [<a class="reference internal" href="../../99BackMatter/index.html#id424" title="V. Witkovský. Inverse Gamma Distribution. CharFunTool: The characteristic functions toolbox, 2017. [Online; accessed 22-July-2024]. URL: https://github.com/witkovsky/CharFunTool/blob/master/CF_Repository/cfX_InverseGamma.m.">1503</a>]</span>, <span id="id9">Witkovský [<a class="reference internal" href="../../99BackMatter/index.html#id277" title="V. Witkovský. Computing the distribution of a linear combination of inverted gamma variables. Kybernetika, 37(1):79–90, 2001.">1493</a>]</span>.</p>
@@ -1192,10 +1189,10 @@ See also Wikipedia <span id="id5">[<a class="reference internal" href="../../99B
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.invgamma_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.invgamma_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.invgamma_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.invgamma_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.invgamma_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.invgamma_qtf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_invgamma"><code class="docutils literal notranslate"><span class="pre">ctx.dist_invgamma</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.inverse_gamma_pdf"><code class="docutils literal notranslate"><span class="pre">math53.inverse_gamma_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.inverse_gamma_cdf"><code class="docutils literal notranslate"><span class="pre">math53.inverse_gamma_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.inverse_gamma_qtf"><code class="docutils literal notranslate"><span class="pre">math53.inverse_gamma_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_inverse_gamma"><code class="docutils literal notranslate"><span class="pre">ctx.dist_inverse_gamma</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_invgamma.pdf"><code class="docutils literal notranslate"><span class="pre">dist_invgamma.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_invgamma.cdf"><code class="docutils literal notranslate"><span class="pre">dist_invgamma.cdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_invgamma.sf"><code class="docutils literal notranslate"><span class="pre">dist_invgamma.sf()</span></code></a></li>
@@ -1239,7 +1236,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 15, 2026.
+  Last updated on Sep 16, 2026.
   <br/>
 </p>
   </div>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Boost: Chi-Squared distribution &#8212; XlCalcNet 0.1.0 documentation</title>
+    <title>Boost: Chi2 distribution &#8212; XlCalcNet 0.1.0 documentation</title>
   
   
   
@@ -45,7 +45,7 @@
     <script src="../../_static/copybutton.js?v=4ea706d9"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'B04_StatisticalDistributions/C07_IncompleteGamma/D02_ChiSquared';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'B04_StatisticalDistributions/C07_IncompleteGamma/D02_Chi2';</script>
     <script src="../../_static/custom-icon.js?v=74687d30"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -53,7 +53,7 @@
     <link rel="prev" title="!!!Boost: Chi Distribution" href="D01_Chi.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 15, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
   </head>
   
   
@@ -252,7 +252,7 @@
 </details></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Closed form distributions, based on the incomplete gamma function</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="D01_Chi.html">!!!Boost: Chi Distribution</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Boost: Chi-Squared distribution</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Boost: Chi2 distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="D03_Gamma.html">Boost: Gamma (Pearson Type III, Erlang) distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="D04_InverseChiSquared.html">Boost: Inverse chisquared distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="D05_InverseGamma.html">Boost: Inverse Gamma (Pearson Type V) distribution</a></li>
@@ -813,7 +813,7 @@
       
       
       
-      <li><a href="../../_sources/B04_StatisticalDistributions/C07_IncompleteGamma/D02_ChiSquared.rst" target="_blank"
+      <li><a href="../../_sources/B04_StatisticalDistributions/C07_IncompleteGamma/D02_Chi2.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -897,7 +897,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Boost: Chi-Squared distribution</h1>
+    <h1>Boost: Chi2 distribution</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -907,10 +907,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.chi_squared_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.chi_squared_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.chi_squared_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.chi_squared_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.chi_squared_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.chi_squared_qtf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_chi_squared"><code class="docutils literal notranslate"><span class="pre">ctx.dist_chi_squared</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.chi2_pdf"><code class="docutils literal notranslate"><span class="pre">math53.chi2_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.chi2_cdf"><code class="docutils literal notranslate"><span class="pre">math53.chi2_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.chi2_qtf"><code class="docutils literal notranslate"><span class="pre">math53.chi2_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_chi2"><code class="docutils literal notranslate"><span class="pre">ctx.dist_chi2</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_chi_squared.pdf"><code class="docutils literal notranslate"><span class="pre">dist_chi_squared.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_chi_squared.cdf"><code class="docutils literal notranslate"><span class="pre">dist_chi_squared.cdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_chi_squared.sf"><code class="docutils literal notranslate"><span class="pre">dist_chi_squared.sf()</span></code></a></li>
@@ -939,16 +939,15 @@ document.write(`
                 <article class="bd-article">
                   
   <p></p>
-<section id="boost-chi-squared-distribution">
-<span id="rst-mpm-chi-squared-cdf"></span><span id="rst-mpm-chi-squared-pdf"></span><span id="rst-dist-chi-squared"></span><h1>Boost: Chi-Squared distribution<a class="headerlink" href="#boost-chi-squared-distribution" title="Link to this heading">#</a></h1>
+<section id="boost-chi2-distribution">
+<span id="rst-mpm-chi-squared-cdf"></span><span id="rst-mpm-chi-squared-pdf"></span><span id="rst-dist-chi-squared"></span><h1>Boost: Chi2 distribution<a class="headerlink" href="#boost-chi2-distribution" title="Link to this heading">#</a></h1>
 <p>The following functions return the pdf, cdf, qtf or boost class of the chi-squared distribution with <span class="math notranslate nohighlight">\(n &gt; 0\)</span> degrees of freedom and the support interval <span class="math notranslate nohighlight">\((0,+\infty)\)</span>.</p>
 <p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id957" title="Wikipedia. Chi-squared distribution. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Chi-squared_distribution.">1164</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id1436" title="E. W. Weisstein. Chi-Squared Distribution. From MathWorld - A Wolfram Web Resource, 2004. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Chi-SquaredDistribution.html.">812</a>]</span>,  BoostMath <span id="id3">[<a class="reference internal" href="../../99BackMatter/index.html#id304" title="P. A. Bristow and H. Holin. Chi Squared Distribution. Boost Math Toolkit Library, 2014. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/dist_ref/dists/chi_squared_dist.html.">54</a>]</span>, <span id="id4">Ehrhardt [<a class="reference internal" href="../../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">299</a>]</span> (3.9.6)</p>
 <p></p>
 <dl class="py method" id="ctx-chisquaredpdf">
-<dt class="sig sig-object py" id="Ctx.chi_squared_pdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">chi_squared_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.chi_squared_pdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{pdf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C03_BaseClassCont.html#dist-pdf"><span class="std std-ref">Pdf</span></a>) of the chi-squared distribution:</p>
+<dt class="sig sig-object py" id="math53.chi2_pdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">chi2_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.chi2_pdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{pdf}(x)\)</span>, the value of the probability density function (<a class="reference internal" href="../C03_BaseClassCont.html#dist-pdf"><span class="std std-ref">Pdf</span></a>) of the chi-squared distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{pdf}(x) = f_{\chi^2}\left(x, n\right) = \frac{1}{2^{n/2} \Gamma(n/2)} x^{(n-2)/2}e^{-x/2}.\]</div>
 <p>The following example shows both forms of the syntax:</p>
@@ -963,10 +962,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-chisquaredcdf">
-<dt class="sig sig-object py" id="Ctx.chi_squared_cdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">chi_squared_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.chi_squared_cdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the chi-squared distribution:</p>
+<dt class="sig sig-object py" id="math53.chi2_cdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">chi2_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.chi2_cdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the chi-squared distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{cdf}(x) =  F_{\chi^2}\left(x, n\right) = P(n/2, x/2).\]</div>
 <p>Here <span class="math notranslate nohighlight">\(P(\cdot)\)</span> denotes the lower regularized incomplete gamma function (<a class="reference internal" href="../../B11_Hypergeometric1F1/C02_IncompleteGamma.html#rst-mpm-gamma-p"><span class="std std-ref">RealGammaP</span></a>).</p>
@@ -982,10 +980,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-chisquaredqtf">
-<dt class="sig sig-object py" id="Ctx.chi_squared_qtf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">chi_squared_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.chi_squared_qtf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the chi-squared distribution:</p>
+<dt class="sig sig-object py" id="math53.chi2_qtf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">chi2_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.chi2_qtf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the chi-squared distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{qtf}(q) = 2 P^{-1}(n/2, q).\]</div>
 <p>Here <span class="math notranslate nohighlight">\(P^{-1}(\cdot)\)</span> denotes the inverse of the lower regularized incomplete gamma function (<a class="reference internal" href="../../B11_Hypergeometric1F1/C02_IncompleteGamma.html#rst-mpm-real-gamma-p-inv"><span class="std std-ref">RealGammaPInv</span></a>).</p>
@@ -1001,15 +998,11 @@ document.write(`
 
 <p></p>
 <dl class="py class">
-<dt class="sig sig-object py" id="ctx.dist_chi_squared">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dist_chi_squared</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dist_chi_squared" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.dist_chi2">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dist_chi2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dist_chi2" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, <code class="docutils literal notranslate"><span class="pre">ipm</span></code>, <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">gmp</span></code> or <code class="docutils literal notranslate"><span class="pre">apm</span></code>.</p>
 <p>The chi-squared distribution is a continuous probability distribution with <span class="math notranslate nohighlight">\(n &gt; 0\)</span> degrees of freedom and the support interval <span class="math notranslate nohighlight">\((0,+\infty)\)</span>.
 See also Wikipedia <span id="id5">[<a class="reference internal" href="../../99BackMatter/index.html#id957" title="Wikipedia. Chi-squared distribution. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Chi-squared_distribution.">1164</a>]</span>, MathWorld <span id="id6">[<a class="reference internal" href="../../99BackMatter/index.html#id1436" title="E. W. Weisstein. Chi-Squared Distribution. From MathWorld - A Wolfram Web Resource, 2004. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Chi-SquaredDistribution.html.">812</a>]</span>, BoostMath <span id="id7">[<a class="reference internal" href="../../99BackMatter/index.html#id304" title="P. A. Bristow and H. Holin. Chi Squared Distribution. Boost Math Toolkit Library, 2014. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/dist_ref/dists/chi_squared_dist.html.">54</a>]</span>, <span id="id8">Witkovský [<a class="reference internal" href="../../99BackMatter/index.html#id416" title="V. Witkovský. Chi-Squared Dsitribution. CharFunTool: The characteristic functions toolbox, 2017. [Online; accessed 22-July-2024]. URL: https://github.com/witkovsky/CharFunTool/blob/master/CF_Repository/cf_ChiSquare.m.">1498</a>]</span>, R (Statistical System) <span id="id9">[<a class="reference internal" href="../../99BackMatter/index.html#id861" title="R Core Team. The Chi-Squared Distribution. The R Project for Statistical Computing, 2019. [Online; accessed 22-July-2024]. URL: https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/Chisquare.">535</a>]</span>.</p>
-<p>See also: <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.chdtr.html#scipy.special.chdtr">https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.chdtr.html#scipy.special.chdtr</a></p>
-<p>See also: <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.chdtrc.html#scipy.special.chdtrc">https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.chdtrc.html#scipy.special.chdtrc</a></p>
-<p>See also: <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.chdtri.html#scipy.special.chdtri">https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.chdtri.html#scipy.special.chdtri</a></p>
-<p>See also: <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.chdtriv.html#scipy.special.chdtriv">https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.chdtriv.html#scipy.special.chdtriv</a></p>
 </dd></dl>
 
 <p></p>
@@ -1272,10 +1265,10 @@ See also Wikipedia <span id="id5">[<a class="reference internal" href="../../99B
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.chi_squared_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.chi_squared_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.chi_squared_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.chi_squared_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.chi_squared_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.chi_squared_qtf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_chi_squared"><code class="docutils literal notranslate"><span class="pre">ctx.dist_chi_squared</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.chi2_pdf"><code class="docutils literal notranslate"><span class="pre">math53.chi2_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.chi2_cdf"><code class="docutils literal notranslate"><span class="pre">math53.chi2_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.chi2_qtf"><code class="docutils literal notranslate"><span class="pre">math53.chi2_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_chi2"><code class="docutils literal notranslate"><span class="pre">ctx.dist_chi2</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_chi_squared.pdf"><code class="docutils literal notranslate"><span class="pre">dist_chi_squared.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_chi_squared.cdf"><code class="docutils literal notranslate"><span class="pre">dist_chi_squared.cdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_chi_squared.sf"><code class="docutils literal notranslate"><span class="pre">dist_chi_squared.sf()</span></code></a></li>
@@ -1325,7 +1318,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 15, 2026.
+  Last updated on Sep 16, 2026.
   <br/>
 </p>
   </div>

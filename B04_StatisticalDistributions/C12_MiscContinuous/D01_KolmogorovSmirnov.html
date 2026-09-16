@@ -53,7 +53,7 @@
     <link rel="prev" title="Miscellaneous continuous distributions" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 15, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
   </head>
   
   
@@ -252,7 +252,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../C07_IncompleteGamma/index.html">Closed form distributions, based on the incomplete gamma function</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D01_Chi.html">!!!Boost: Chi Distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_ChiSquared.html">Boost: Chi-Squared distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_Chi2.html">Boost: Chi2 distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D03_Gamma.html">Boost: Gamma (Pearson Type III, Erlang) distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D04_InverseChiSquared.html">Boost: Inverse chisquared distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D05_InverseGamma.html">Boost: Inverse Gamma (Pearson Type V) distribution</a></li>
@@ -907,9 +907,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.kolmogorov_smirnov_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.kolmogorov_smirnov_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.kolmogorov_smirnov_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.kolmogorov_smirnov_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.kolmogorov_smirnov_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.kolmogorov_smirnov_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kolmogorov_smirnov_pdf"><code class="docutils literal notranslate"><span class="pre">math53.kolmogorov_smirnov_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kolmogorov_smirnov_cdf"><code class="docutils literal notranslate"><span class="pre">math53.kolmogorov_smirnov_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kolmogorov_smirnov_qtf"><code class="docutils literal notranslate"><span class="pre">math53.kolmogorov_smirnov_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxBoost.dist_kolmogorov_smirnov"><code class="docutils literal notranslate"><span class="pre">CtxBoost.dist_kolmogorov_smirnov()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_kolmogorov_smirnov.pdf"><code class="docutils literal notranslate"><span class="pre">dist_kolmogorov_smirnov.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_kolmogorov_smirnov.cdf"><code class="docutils literal notranslate"><span class="pre">dist_kolmogorov_smirnov.cdf()</span></code></a></li>
@@ -948,10 +948,9 @@ document.write(`
 <p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id959" title="Wikipedia. Beta distribution. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Beta_distribution.">1162</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id1438" title="E. W. Weisstein. Beta Distribution. From MathWorld - A Wolfram Web Resource, 2004. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/BetaDistribution.html.">811</a>]</span>,  BoostMath <span id="id3">[<a class="reference internal" href="../../99BackMatter/index.html#id306" title="P. A. Bristow and H. Holin. Beta Distribution. Boost Math Toolkit Library, 2014. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/dist_ref/dists/beta_dist.html.">52</a>]</span>, <span id="id4">Ehrhardt [<a class="reference internal" href="../../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">299</a>]</span> (3.9.2).</p>
 <p></p>
 <dl class="py method" id="ctx-kolmogorovsmirnov-pdf">
-<dt class="sig sig-object py" id="Ctx.kolmogorov_smirnov_pdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">kolmogorov_smirnov_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.kolmogorov_smirnov_pdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns the pdf of the limiting form of the Kolmogorov distribution, for <span class="math notranslate nohighlight">\(x \in [0, \infty)\)</span>.</p>
+<dt class="sig sig-object py" id="math53.kolmogorov_smirnov_pdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">kolmogorov_smirnov_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.kolmogorov_smirnov_pdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns the pdf of the limiting form of the Kolmogorov distribution, for <span class="math notranslate nohighlight">\(x \in [0, \infty)\)</span>.</p>
 <p>The following example shows both forms of the syntax:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">t</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">;</span> <span class="n">x</span> <span class="o">=</span> <span class="mf">0.6</span><span class="p">;</span>
@@ -964,10 +963,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-kolmogorovsmirnov-cdf">
-<dt class="sig sig-object py" id="Ctx.kolmogorov_smirnov_cdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">kolmogorov_smirnov_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.kolmogorov_smirnov_cdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\displaystyle \mathrm{KF}(x) = 1-2\sum_{k=1}^{\infty}(-1)^k e^{-2k^2x^2}\)</span>, the CDF of the limiting form of the Kolmogorov distribution, for <span class="math notranslate nohighlight">\(x \in [0, \infty)\)</span>.</p>
+<dt class="sig sig-object py" id="math53.kolmogorov_smirnov_cdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">kolmogorov_smirnov_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.kolmogorov_smirnov_cdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\displaystyle \mathrm{KF}(x) = 1-2\sum_{k=1}^{\infty}(-1)^k e^{-2k^2x^2}\)</span>, the CDF of the limiting form of the Kolmogorov distribution, for <span class="math notranslate nohighlight">\(x \in [0, \infty)\)</span>.</p>
 <p>See also  <span id="id5">Ehrhardt [<a class="reference internal" href="../../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">299</a>]</span> (3.9.14).</p>
 <p>The following example shows both forms of the syntax:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
@@ -981,10 +979,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-kolmogorovsmirnov-qtf">
-<dt class="sig sig-object py" id="Ctx.kolmogorov_smirnov_qtf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">kolmogorov_smirnov_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.kolmogorov_smirnov_qtf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\mathrm{KF}^{-1}(x)\)</span>, the functional inverse of the CDF of the Kolmogorov distribution (limiting form), ie <span class="math notranslate nohighlight">\(\mathrm{KF}(\mathrm{KF}^{-1}(x)) = x\)</span>.</p>
+<dt class="sig sig-object py" id="math53.kolmogorov_smirnov_qtf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">kolmogorov_smirnov_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.kolmogorov_smirnov_qtf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\mathrm{KF}^{-1}(x)\)</span>, the functional inverse of the CDF of the Kolmogorov distribution (limiting form), ie <span class="math notranslate nohighlight">\(\mathrm{KF}(\mathrm{KF}^{-1}(x)) = x\)</span>.</p>
 <p>See also  <span id="id6">Ehrhardt [<a class="reference internal" href="../../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">299</a>]</span> (3.9.14).</p>
 <p>The following example shows both forms of the syntax:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
@@ -999,7 +996,7 @@ document.write(`
 <p></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="CtxBoost.dist_kolmogorov_smirnov">
-<span class="sig-prename descclassname"><span class="pre">CtxBoost.</span></span><span class="sig-name descname"><span class="pre">dist_kolmogorov_smirnov</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CtxBoost.dist_kolmogorov_smirnov" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">CtxBoost.</span></span><span class="sig-name descname"><span class="pre">dist_kolmogorov_smirnov</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CtxBoost.dist_kolmogorov_smirnov" title="Link to this definition">#</a></dt>
 <dd><p>Returns an <code class="docutils literal notranslate"><span class="pre">dist_kolmogorov_smirnov</span></code> object, which gives access to the functions descibed below:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">SReal</span><span class="p">,</span> <span class="n">FReal</span><span class="p">,</span> <span class="n">ereal</span><span class="p">,</span> <span class="n">QReal</span><span class="p">,</span> <span class="n">CReal</span><span class="p">,</span> <span class="n">OReal</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
@@ -1295,9 +1292,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.kolmogorov_smirnov_pdf"><code class="docutils literal notranslate"><span class="pre">Ctx.kolmogorov_smirnov_pdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.kolmogorov_smirnov_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.kolmogorov_smirnov_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.kolmogorov_smirnov_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.kolmogorov_smirnov_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kolmogorov_smirnov_pdf"><code class="docutils literal notranslate"><span class="pre">math53.kolmogorov_smirnov_pdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kolmogorov_smirnov_cdf"><code class="docutils literal notranslate"><span class="pre">math53.kolmogorov_smirnov_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kolmogorov_smirnov_qtf"><code class="docutils literal notranslate"><span class="pre">math53.kolmogorov_smirnov_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxBoost.dist_kolmogorov_smirnov"><code class="docutils literal notranslate"><span class="pre">CtxBoost.dist_kolmogorov_smirnov()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_kolmogorov_smirnov.pdf"><code class="docutils literal notranslate"><span class="pre">dist_kolmogorov_smirnov.pdf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_kolmogorov_smirnov.cdf"><code class="docutils literal notranslate"><span class="pre">dist_kolmogorov_smirnov.cdf()</span></code></a></li>
@@ -1351,7 +1348,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 15, 2026.
+  Last updated on Sep 16, 2026.
   <br/>
 </p>
   </div>

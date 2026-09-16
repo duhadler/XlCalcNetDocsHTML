@@ -53,7 +53,7 @@
     <link rel="prev" title="Boost: Geometric distribution" href="D02_geometric.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 15, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
   </head>
   
   
@@ -252,7 +252,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../C07_IncompleteGamma/index.html">Closed form distributions, based on the incomplete gamma function</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D01_Chi.html">!!!Boost: Chi Distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_ChiSquared.html">Boost: Chi-Squared distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D02_Chi2.html">Boost: Chi2 distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D03_Gamma.html">Boost: Gamma (Pearson Type III, Erlang) distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D04_InverseChiSquared.html">Boost: Inverse chisquared distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../C07_IncompleteGamma/D05_InverseGamma.html">Boost: Inverse Gamma (Pearson Type V) distribution</a></li>
@@ -907,9 +907,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.poisson_pmf"><code class="docutils literal notranslate"><span class="pre">Ctx.poisson_pmf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.poisson_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.poisson_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.poisson_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.poisson_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.poisson_pmf"><code class="docutils literal notranslate"><span class="pre">math53.poisson_pmf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.poisson_cdf"><code class="docutils literal notranslate"><span class="pre">math53.poisson_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.poisson_qtf"><code class="docutils literal notranslate"><span class="pre">math53.poisson_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_poisson"><code class="docutils literal notranslate"><span class="pre">ctx.dist_poisson</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_poisson.pmf"><code class="docutils literal notranslate"><span class="pre">dist_poisson.pmf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_poisson.cdf"><code class="docutils literal notranslate"><span class="pre">dist_poisson.cdf()</span></code></a></li>
@@ -944,10 +944,9 @@ document.write(`
 <p>See also   Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id983" title="Wikipedia. Poisson distribution. Wikimedia Foundation, 2008. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Poisson_distribution.">1205</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id1458" title="E. W. Weisstein. Poisson Distribution. From MathWorld - A Wolfram Web Resource, 2005. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/PoissonDistribution.html.">851</a>]</span>,  BoostMath <span id="id3">[<a class="reference internal" href="../../99BackMatter/index.html#id326" title="P. A. Bristow and H. Holin. Poisson Distribution. Boost Math Toolkit Library, 2015. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/dist_ref/dists/poisson_dist.html.">85</a>]</span>, <span id="id4">Ehrhardt [<a class="reference internal" href="../../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">299</a>]</span> (3.9.26).</p>
 <p></p>
 <dl class="py method" id="ctx-poissonpmf">
-<dt class="sig sig-object py" id="Ctx.poisson_pmf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">poisson_pmf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.poisson_pmf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{pmf}(x)\)</span>, the value of the probability mass function (<a class="reference internal" href="../C04_BaseClassDiscrete.html#dist-pmf"><span class="std std-ref">Pmf</span></a>) of the Poisson distribution:</p>
+<dt class="sig sig-object py" id="math53.poisson_pmf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">poisson_pmf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.poisson_pmf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{pmf}(x)\)</span>, the value of the probability mass function (<a class="reference internal" href="../C04_BaseClassDiscrete.html#dist-pmf"><span class="std std-ref">Pmf</span></a>) of the Poisson distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{pmf}(x) = \frac{\mu^k}{k!} e^{-\mu}.\]</div>
 <p>The following example shows both forms of the syntax:</p>
@@ -962,10 +961,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-poissoncdf">
-<dt class="sig sig-object py" id="Ctx.poisson_cdf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">poisson_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.poisson_cdf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the Poisson distribution:</p>
+<dt class="sig sig-object py" id="math53.poisson_cdf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">poisson_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.poisson_cdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the Poisson distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{cdf}(x) = e^{-\mu} \sum_{i=0}^k \frac{\mu^i}{i!} = Q(1+k,\mu).\]</div>
 <p>Here <span class="math notranslate nohighlight">\(Q(\cdot)\)</span> denotes the upper regularized incomplete gamma function (<a class="reference internal" href="../../B11_Hypergeometric1F1/C02_IncompleteGamma.html#rst-mpm-gamma-q"><span class="std std-ref">RealGammaQ</span></a>).</p>
@@ -981,10 +979,9 @@ document.write(`
 
 <p></p>
 <dl class="py method" id="ctx-poissonqtf">
-<dt class="sig sig-object py" id="Ctx.poisson_qtf">
-<span class="sig-prename descclassname"><span class="pre">Ctx.</span></span><span class="sig-name descname"><span class="pre">poisson_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Ctx.poisson_qtf" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">Ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">Math53</span></code> or <code class="docutils literal notranslate"><span class="pre">CtxBoost</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the Poisson distribution:</p>
+<dt class="sig sig-object py" id="math53.poisson_qtf">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">poisson_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.poisson_qtf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{qtf}(q)\)</span>, the value of the quantile function (<a class="reference internal" href="../C02_BaseClass.html#dist-qtf"><span class="std std-ref">Qtf</span></a>) of the Poisson distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{qtf}(q) = \mathrm{gammaq\_inva}(\mu, p) - 1.\]</div>
 <p>Here <span class="math notranslate nohighlight">\(\mathrm{gammaq\_inva}(\cdot)\)</span> denotes the inverse (on parameter <span class="math notranslate nohighlight">\(a\)</span>) of the real upper normalised incomplete gamma function (<a class="reference internal" href="../../B11_Hypergeometric1F1/C02_IncompleteGamma.html#rst-mpm-real-gamma-q-inva"><span class="std std-ref">RealGammaQInva</span></a>).</p>
@@ -1272,9 +1269,9 @@ following a Poisson distribution:</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.poisson_pmf"><code class="docutils literal notranslate"><span class="pre">Ctx.poisson_pmf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.poisson_cdf"><code class="docutils literal notranslate"><span class="pre">Ctx.poisson_cdf()</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Ctx.poisson_qtf"><code class="docutils literal notranslate"><span class="pre">Ctx.poisson_qtf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.poisson_pmf"><code class="docutils literal notranslate"><span class="pre">math53.poisson_pmf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.poisson_cdf"><code class="docutils literal notranslate"><span class="pre">math53.poisson_cdf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.poisson_qtf"><code class="docutils literal notranslate"><span class="pre">math53.poisson_qtf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.dist_poisson"><code class="docutils literal notranslate"><span class="pre">ctx.dist_poisson</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_poisson.pmf"><code class="docutils literal notranslate"><span class="pre">dist_poisson.pmf()</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dist_poisson.cdf"><code class="docutils literal notranslate"><span class="pre">dist_poisson.cdf()</span></code></a></li>
@@ -1324,7 +1321,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 15, 2026.
+  Last updated on Sep 16, 2026.
   <br/>
 </p>
   </div>

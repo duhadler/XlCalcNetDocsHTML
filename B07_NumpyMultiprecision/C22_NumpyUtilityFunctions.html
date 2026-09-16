@@ -53,7 +53,7 @@
     <link rel="prev" title="Numpy mathematical functions: Miscellaneous" href="C21_Miscellaneous.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 15, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
   </head>
   
   
@@ -252,7 +252,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/index.html">Closed form distributions, based on the incomplete gamma function</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/D01_Chi.html">!!!Boost: Chi Distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/D02_ChiSquared.html">Boost: Chi-Squared distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/D02_Chi2.html">Boost: Chi2 distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/D03_Gamma.html">Boost: Gamma (Pearson Type III, Erlang) distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/D04_InverseChiSquared.html">Boost: Inverse chisquared distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/D05_InverseGamma.html">Boost: Inverse Gamma (Pearson Type V) distribution</a></li>
@@ -1809,9 +1809,9 @@ in the presence of small rounding errors.</p>
 <span class="go">array([3, 4, 2, 3, 4, 5, 6, 7, 8, 8])</span>
 </pre></div>
 </div>
-<p><strong>numpy.real1_if_close</strong></p>
+<p><strong>numpy.real_if_close</strong></p>
 <p>For a detailed description of parameters and return values see:</p>
-<p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.real1_if_close.html">https://numpy.org/doc/stable/reference/generated/numpy.real1_if_close.html</a></p>
+<p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.real_if_close.html">https://numpy.org/doc/stable/reference/generated/numpy.real_if_close.html</a></p>
 <p>If input is complex with all imaginary parts close to zero, return real parts.</p>
 <p>“Close to zero” is defined as tol * (machine epsilon of the type for a).</p>
 <p>Machine epsilon varies from machine to machine and between data types but Python floats on most platforms have a machine epsilon equal to 2.2204460492503131e-16. You can use ‘np.finfo(float).eps’ to print out the machine epsilon for floats.</p>
@@ -1819,9 +1819,9 @@ in the presence of small rounding errors.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">finfo</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">eps</span>
 <span class="go">2.2204460492503131e-16 # may vary</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">real1_if_close</span><span class="p">([</span><span class="mf">2.1</span> <span class="o">+</span> <span class="mf">4e-14j</span><span class="p">,</span> <span class="mf">5.2</span> <span class="o">+</span> <span class="mf">3e-15j</span><span class="p">],</span> <span class="n">tol</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">real_if_close</span><span class="p">([</span><span class="mf">2.1</span> <span class="o">+</span> <span class="mf">4e-14j</span><span class="p">,</span> <span class="mf">5.2</span> <span class="o">+</span> <span class="mf">3e-15j</span><span class="p">],</span> <span class="n">tol</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
 <span class="go">array([2.1, 5.2])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">real1_if_close</span><span class="p">([</span><span class="mf">2.1</span> <span class="o">+</span> <span class="mf">4e-13j</span><span class="p">,</span> <span class="mf">5.2</span> <span class="o">+</span> <span class="mf">3e-15j</span><span class="p">],</span> <span class="n">tol</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">real_if_close</span><span class="p">([</span><span class="mf">2.1</span> <span class="o">+</span> <span class="mf">4e-13j</span><span class="p">,</span> <span class="mf">5.2</span> <span class="o">+</span> <span class="mf">3e-15j</span><span class="p">],</span> <span class="n">tol</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
 <span class="go">array([2.1+4.e-13j, 5.2 + 3e-15j])</span>
 </pre></div>
 </div>
@@ -1959,7 +1959,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 15, 2026.
+  Last updated on Sep 16, 2026.
   <br/>
 </p>
   </div>

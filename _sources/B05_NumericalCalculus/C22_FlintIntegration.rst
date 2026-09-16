@@ -105,7 +105,7 @@ The choice of `d` has a great impact on `M+N+1`, the total number of function ev
 
 
 
-If equation \ref{eq:gFormula} does not give a useful alternative representation of `f`, we set `\alpha = \beta = 1`, so that `f(x) = g(x)`. However, taking `a=0, b=1`, `\alpha=\tfrac{1}{2}` and `\beta=1` let us consider the integral 
+If equation \ref{eq:gFormula} does not give a useful alternative representation of `f`, we set `\alpha = \beta = 1`, so that `f(x) = g(x)`. However, taking `a, b`, `\alpha=\tfrac{1}{2}` and `\beta=1` let us consider the integral 
 
 .. math:: I = \int_{0}^{1} \frac{\sin(\exp(x))}{\sqrt{x}} dx = \int_{0}^{1} f(x) dx =  \int_{0}^{1} \frac{g(x)}{\sqrt{x}} dx, \text{ i.e}
 

@@ -53,7 +53,7 @@
     <link rel="prev" title="Setup and general usage" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 15, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
   </head>
   
   
@@ -252,7 +252,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/index.html">Closed form distributions, based on the incomplete gamma function</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/D01_Chi.html">!!!Boost: Chi Distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/D02_ChiSquared.html">Boost: Chi-Squared distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/D02_Chi2.html">Boost: Chi2 distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/D03_Gamma.html">Boost: Gamma (Pearson Type III, Erlang) distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/D04_InverseChiSquared.html">Boost: Inverse chisquared distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C07_IncompleteGamma/D05_InverseGamma.html">Boost: Inverse Gamma (Pearson Type V) distribution</a></li>
@@ -931,6 +931,11 @@ document.write(`
 <span id="rst-setting-up-xlcalcnet"></span><h1>Setting up XlCalcNet<a class="headerlink" href="#setting-up-xlcalcnet" title="Link to this heading">#</a></h1>
 <section id="downloading-and-installing-the-right-version-of-cpython">
 <h2>Downloading and installing the “right” version of CPython<a class="headerlink" href="#downloading-and-installing-the-right-version-of-cpython" title="Link to this heading">#</a></h2>
+<p>Although the Python language is available in many different implementations, we will focus on the “official” implementation of Python, which is called CPython. The official CPython implementation is available for download from <a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>.</p>
+<p>The XlCalcNet package is compatible with CPython versions 3.8 - 3.14. It is recommended to use a version of CPython, which is both mature and supported. In this manual, we will use CPython version 3.13.12.</p>
+<p>Python can be installed in different ways. It is recommended to install Python as a dedicated version for use with MS Excel, which does not require uninstalling any previous versions of Python, and does not interfere with other Python installations, and does not require administrative privileges.</p>
+<p>As installation directory any directory can be used for which the user has read and write access. In the following we will assume that the installation directory is <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code>. Since we do not assume that the path to this directory is added to the PATH environment variable, we will always use the full path to the python.exe executable, which is <code class="docutils literal notranslate"><span class="pre">C:\Python313\python.exe</span></code>.</p>
+<p>It is convenient to create a shortcut to the python.exe executable on the desktop, and rename it to <code class="docutils literal notranslate"><span class="pre">Python313</span></code>. This allows starting Python by doubleclicking on this shortcut.</p>
 <p>Describe the dependency on Python.Net.</p>
 <p>Explain The 3 folder concept: user, application local data, python installation</p>
 <p>The data which are directly maniplated by the user are located in:</p>
@@ -939,9 +944,6 @@ document.write(`
 <p>The data which are directly maniplated by the user are located in:</p>
 <p>The data which generated as a result of running a python script or C# program are written to:</p>
 <p>The data which contain the installation are located in:</p>
-<p>Describe the choices for downloading python</p>
-<p>Describe how to install python as a “free-standing” version without need to uninstall.</p>
-<p>Describe choices for locating this version of python</p>
 <p>Describe copying the batch files into</p>
 <p></p>
 </section>
@@ -972,12 +974,12 @@ document.write(`
 <p>Follow the steps to make the Tiny IDE available:</p>
 <ul class="simple">
 <li><p>In the Python installation folder, rightclick on <code class="docutils literal notranslate"><span class="pre">pythonw.exe</span></code>.</p></li>
-<li><p>Select <code class="docutils literal notranslate"><span class="pre">Verknüpfung</span> <span class="pre">erstellen</span></code> -&gt; Result: <code class="docutils literal notranslate"><span class="pre">pythonw.exe-Verknüpfung</span></code>.</p></li>
-<li><p>Rightclick on <code class="docutils literal notranslate"><span class="pre">pythonw.exe-Verknüpfung</span></code>; Select Properties.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">shortcut</span></code> -&gt; Result: <code class="docutils literal notranslate"><span class="pre">pythonw.exe-shortcut</span></code>.</p></li>
+<li><p>Rightclick on <code class="docutils literal notranslate"><span class="pre">pythonw.exe-shortcut</span></code>; Select Properties.</p></li>
 <li><p>In the dialogue Properties, select “Target”, and type:<code class="docutils literal notranslate"><span class="pre">C:\Python313\pythonw.exe</span> <span class="pre">C:\Python313\Lib\site-packages\xlcalcnet\ShowEditor.py</span></code>. Then save.</p></li>
-<li><p>Rename <code class="docutils literal notranslate"><span class="pre">pythonw.exe-Verknüpfung</span></code> to <code class="docutils literal notranslate"><span class="pre">TinyIDE_Python313</span></code></p></li>
+<li><p>Rename <code class="docutils literal notranslate"><span class="pre">pythonw.exe-shortcut</span></code> to <code class="docutils literal notranslate"><span class="pre">TinyIDE_Python313</span></code></p></li>
 <li><p>Doubleclick on <code class="docutils literal notranslate"><span class="pre">TinyIDE_Python313</span></code></p></li>
-<li><p>In the task-bar, rightclick on the appearing symbol, and select “An Taskleiste anheften”</p></li>
+<li><p>In the task-bar, rightclick on the appearing symbol, and select “Pin to taskbar”</p></li>
 </ul>
 <p></p>
 </section>
@@ -1187,7 +1189,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 15, 2026.
+  Last updated on Sep 16, 2026.
   <br/>
 </p>
   </div>

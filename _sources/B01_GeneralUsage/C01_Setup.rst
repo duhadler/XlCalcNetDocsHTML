@@ -20,6 +20,17 @@ Setting up XlCalcNet
 Downloading and installing the "right" version of CPython
 -------------------------------------------------------------
 
+Although the Python language is available in many different implementations, we will focus on the "official" implementation of Python, which is called CPython. The official CPython implementation is available for download from https://www.python.org/downloads/.
+
+The XlCalcNet package is compatible with CPython versions 3.8 - 3.14. It is recommended to use a version of CPython, which is both mature and supported. In this manual, we will use CPython version 3.13.12.
+
+Python can be installed in different ways. It is recommended to install Python as a dedicated version for use with MS Excel, which does not require uninstalling any previous versions of Python, and does not interfere with other Python installations, and does not require administrative privileges.
+
+As installation directory any directory can be used for which the user has read and write access. In the following we will assume that the installation directory is ``C:\Python313``. Since we do not assume that the path to this directory is added to the PATH environment variable, we will always use the full path to the python.exe executable, which is ``C:\Python313\python.exe``.
+
+It is convenient to create a shortcut to the python.exe executable on the desktop, and rename it to ``Python313``. This allows starting Python by doubleclicking on this shortcut.
+
+
 Describe the dependency on Python.Net.
 
 Explain The 3 folder concept: user, application local data, python installation
@@ -40,11 +51,6 @@ The data which generated as a result of running a python script or C\# program a
 The data which contain the installation are located in:
 
 
-Describe the choices for downloading python
-
-Describe how to install python as a "free-standing" version without need to uninstall.
-
-Describe choices for locating this version of python
 
 Describe copying the batch files into 
 
@@ -116,18 +122,18 @@ Follow the steps to make the Tiny IDE available:
 
 * In the Python installation folder, rightclick on ``pythonw.exe``.
 
-* Select ``Verknüpfung erstellen`` -> Result: ``pythonw.exe-Verknüpfung``.
+* Select ``Create shortcut`` -> Result: ``pythonw.exe-shortcut``.
 
-* Rightclick on ``pythonw.exe-Verknüpfung``; Select Properties.
+* Rightclick on ``pythonw.exe-shortcut``; Select Properties.
 
 
 * In the dialogue Properties, select "Target", and type:``C:\Python313\pythonw.exe C:\Python313\Lib\site-packages\xlcalcnet\ShowEditor.py``. Then save.
 
-* Rename ``pythonw.exe-Verknüpfung`` to ``TinyIDE_Python313``
+* Rename ``pythonw.exe-shortcut`` to ``TinyIDE_Python313``
 
 * Doubleclick on ``TinyIDE_Python313``
 
-* In the task-bar, rightclick on the appearing symbol, and select "An Taskleiste anheften"
+* In the task-bar, rightclick on the appearing symbol, and select "Pin to taskbar"
 
 
 
