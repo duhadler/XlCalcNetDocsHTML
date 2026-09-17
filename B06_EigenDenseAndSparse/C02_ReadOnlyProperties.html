@@ -52,7 +52,7 @@
     <link rel="prev" title="Creating scalars and matrices" href="C01_CreatingMatrices.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 17, 2026"/>
   </head>
   
   
@@ -907,15 +907,15 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rows-of-a-matrix">Rows of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.Rows"><code class="docutils literal notranslate"><span class="pre">mat.Rows()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_rows"><code class="docutils literal notranslate"><span class="pre">ctx.mat_rows()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#columns-of-a-matrix">Columns of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.Cols"><code class="docutils literal notranslate"><span class="pre">mat.Cols()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.cols"><code class="docutils literal notranslate"><span class="pre">ctx.cols()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#size-of-a-matrix">Size of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.Size"><code class="docutils literal notranslate"><span class="pre">mat.Size()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.size"><code class="docutils literal notranslate"><span class="pre">ctx.size()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -935,9 +935,9 @@ document.write(`
 <section id="rows-of-a-matrix">
 <h2>Rows of a matrix<a class="headerlink" href="#rows-of-a-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.Rows">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">Rows</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.Rows" title="Link to this definition">#</a></dt>
-<dd><p>Returns the number of rows of the matrix.</p>
+<dt class="sig sig-object py" id="ctx.mat_rows">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_rows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_rows" title="Link to this definition">#</a></dt>
+<dd><p>Returns the number of rows of the matrix. Writing <code class="docutils literal notranslate"><span class="pre">matA.rows()</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
@@ -951,9 +951,9 @@ document.write(`
 <section id="columns-of-a-matrix">
 <h2>Columns of a matrix<a class="headerlink" href="#columns-of-a-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.Cols">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">Cols</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.Cols" title="Link to this definition">#</a></dt>
-<dd><p>Returns the number of columns of the matrix.</p>
+<dt class="sig sig-object py" id="ctx.cols">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">cols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.cols" title="Link to this definition">#</a></dt>
+<dd><p>Returns the number of columns of the matrix. Writing <code class="docutils literal notranslate"><span class="pre">matA.cols()</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
@@ -967,9 +967,9 @@ document.write(`
 <section id="size-of-a-matrix">
 <h2>Size of a matrix<a class="headerlink" href="#size-of-a-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.Size">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">Size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.Size" title="Link to this definition">#</a></dt>
-<dd><p>Returns the size of the matrix.</p>
+<dt class="sig sig-object py" id="ctx.size">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.size" title="Link to this definition">#</a></dt>
+<dd><p>Returns the size of the matrix. Writing <code class="docutils literal notranslate"><span class="pre">matA.size()</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
@@ -1028,15 +1028,15 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rows-of-a-matrix">Rows of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.Rows"><code class="docutils literal notranslate"><span class="pre">mat.Rows()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_rows"><code class="docutils literal notranslate"><span class="pre">ctx.mat_rows()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#columns-of-a-matrix">Columns of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.Cols"><code class="docutils literal notranslate"><span class="pre">mat.Cols()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.cols"><code class="docutils literal notranslate"><span class="pre">ctx.cols()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#size-of-a-matrix">Size of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.Size"><code class="docutils literal notranslate"><span class="pre">mat.Size()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.size"><code class="docutils literal notranslate"><span class="pre">ctx.size()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1072,7 +1072,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 16, 2026.
+  Last updated on Sep 17, 2026.
   <br/>
 </p>
   </div>

@@ -39,10 +39,12 @@ Eigen: Functions of matrix argument
 Matrix Exponential
 --------------------------------------------------------------------
 
-.. method:: matA.Expm()
+.. method:: ctx.mat_expm(matA)
 
 
     Computes the matrix exponential of a square matrix `A`, which is defined by the power series  `\displaystyle  \exp(A) = I + A + \frac{A^2}{2!} + \frac{A^3}{3!} + \ldots`
+
+    Writing ``matA.Expm()`` has the same effect
 
 
     See also:   Wikipedia :cite:p:`WikipediaMat140`,  Wikipedia :cite:p:`WikipediaMat141`.
@@ -107,10 +109,12 @@ Matrix Exponential
 Matrix Sine
 ------------------------------------------------------------
 
-.. method:: matA.Sinm(A)
+.. method:: ctx.mat_sinm(matA)
 
 
     Calculates the sine function of the matrix.
+
+    Writing ``matA.Sinm()`` has the same effect
 
     See also:   Wikipedia :cite:p:`WikipediaMat140`,  Wikipedia :cite:p:`WikipediaMat142`.
 
@@ -169,10 +173,12 @@ Matrix Cosine
 -------------------------------------------------------------
 
 
-.. method:: matA.Cosm()
+.. method:: ctx.mat_cosm(matA)
 
 
     Calculates the cosine function of the matrix.
+
+    Writing ``matA.Cosm()`` has the same effect
 
     See also:   Wikipedia :cite:p:`WikipediaMat140`,  Wikipedia :cite:p:`WikipediaMat142`.
 
@@ -227,10 +233,12 @@ Matrix Cosine
 Matrix Hyperbolic Sine
 ---------------------------------------------------------
 
-.. method:: matA.Sinhm()
+.. method:: ctx.mat_sinhm(matA)
 
 
     Calculates the hyperbolic sine function of the matrix.
+
+    Writing ``matA.Sinhm()`` has the same effect
 
     See also:   Wikipedia :cite:p:`WikipediaMat140`,  Wikipedia :cite:p:`WikipediaMat142`.
 
@@ -309,16 +317,18 @@ Matrix Hyperbolic Cosine
 -------------------------------------------
 
 
-.. method:: matA.Coshm()
+.. method:: ctx.mat_coshm(matA)
+
+
+    Calculates the hyperbolic cosine function of the matrix.
+
+    Writing ``matA.Coshm()`` has the same effect
 
 
     See also:   Wikipedia :cite:p:`WikipediaMat140`,  Wikipedia :cite:p:`WikipediaMat142`.
 
     See also: Eigen :cite:p:`EigenMat190`, Eigen :cite:p:`EigenMat195`.
 
-
-
-    Calculates the hyperbolic cosine function of the matrix.
 
     The hyperbolic cosine of a square matrix `A` is defined in analogy with the matrix exponential.
 
@@ -447,10 +457,12 @@ Matrix Square Root
 -------------------------------------
 
 
-.. method:: matA.Sqrtm()
+.. method:: ctx.mat_sqrtm(matA)
 
 
     Computes a square root of the square matrix `A`, i.e. returns a matrix `B = A^{1/2}` such that `B^2 = A`. The square root of a matrix, if it exists, is not unique.
+
+    Writing ``matA.Sqrtm()`` has the same effect
 
 
     See also:   Wikipedia :cite:p:`WikipediaMat140`,  Wikipedia :cite:p:`WikipediaMat144`.
@@ -564,10 +576,12 @@ Matrix Logarithm
 --------------------------------------
 
 
-.. method:: matA.Logm()
+.. method:: ctx.mat_logm(matA)
 
 
     Calculates the logarithm of the matrix.
+
+    Writing ``matA.Logm()`` has the same effect
 
     See also:   Wikipedia :cite:p:`WikipediaMat140`,  Wikipedia :cite:p:`WikipediaMat143`.
 
@@ -664,10 +678,12 @@ Matrix Logarithm
 Matrix power
 -------------------------------------------------
 
-.. method:: mat.Powm(r)
+.. method:: ctx.mat_powm(matA, r)
 
 
     Computes `A^r = \exp(A \log r)` for a matrix `A` and complex number `r`.
+
+    Writing ``matA.Powm(r)`` has the same effect
 
     See also:   Wikipedia :cite:p:`WikipediaMat140`,  Wikipedia :cite:p:`WikipediaMat141`,  Wikipedia :cite:p:`WikipediaMat143`.
 

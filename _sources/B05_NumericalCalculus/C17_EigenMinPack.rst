@@ -31,9 +31,9 @@ Multidimensional Rootfinding: Powell Hybrid
 
 .. method:: ctxboost.PowellHybrid(f, fjac, guess)
 
-This is a modified version of Powell's Hybrid method as implemented in the hybrj algorithm in minpack.  The Hybrid algorithm retains the fast convergence of Newton's method but will also reduce the residual when Newton's method is unreliable. The algorithm uses a generalized trust region to keep each step under control. 
+    This is a modified version of Powell's Hybrid method as implemented in the hybrj algorithm in minpack.  The Hybrid algorithm retains the fast convergence of Newton's method but will also reduce the residual when Newton's method is unreliable. The algorithm uses a generalized trust region to keep each step under control. 
 
-See also: :cite:t:`Moré1980`, Eigen :cite:p:`EigenMat130`,  Wikipedia :cite:p:`WikipediaMat131`, :cite:t:`Powell1970`.
+    See also: :cite:t:`Moré1980`, Eigen :cite:p:`EigenMat130`,  Wikipedia :cite:p:`WikipediaMat131`, :cite:t:`Powell1970`.
 
 
 
@@ -60,7 +60,7 @@ This is an example from the original manual of MINPACK (:cite:t:`Moré1980`).
 
 The routine in Python:
 
-.. code-block:: pycon
+.. code-block:: python
 
     def demo_PowellHybridCtx(ctx):
 
@@ -143,12 +143,12 @@ The output of these routines:
 Nonlinear LeastSquares: Levenberg-Marquardt
 ------------------------------------------------------------------
 
-.. method:: ctxboost.LevenbergMarquardt(f, fjac, matInput)
+.. method:: ctxboost.Levenberg(f, fjac, matInput)
 
-This is a robust and efficient version of the Levenberg-Marquardt algorithm as implemented
-in the scaled lmder routine in minpack. The algorithm uses a generalized trust region to keep each step under control. 
+    This is a robust and efficient version of the Levenberg-Marquardt algorithm as implemented
+    in the scaled lmder routine in minpack. The algorithm uses a generalized trust region to keep each step under control. 
 
-See also: :cite:t:`Moré1980`, Eigen :cite:p:`EigenMat130`,  Wikipedia :cite:p:`WikipediaMat132`.
+    See also: :cite:t:`Moré1980`, Eigen :cite:p:`EigenMat130`,  Wikipedia :cite:p:`WikipediaMat132`.
 
 
 **Parameters:**
@@ -170,11 +170,11 @@ See also: :cite:t:`Moré1980`, Eigen :cite:p:`EigenMat130`,  Wikipedia :cite:p:`
 **Example:**
 
 
-This is an example from the original manual of MINPACK (`Moré1980`).
+This is an example from the original manual of MINPACK (:cite:t:`Moré1980`).
 
 The routine in Python:
 
-.. code-block:: pycon
+.. code-block:: python
 
     def demo_LevenbergCtx(ctx):
 

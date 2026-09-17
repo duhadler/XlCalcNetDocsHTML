@@ -31,9 +31,9 @@ Descriptive Statistics
 Partial Sum
 -------------------------------------------------------------------------------
 
-.. method:: mat.PartialSum(partialmode)
+.. method:: ctx.mat_partial_sum(mat, partialmode)
 
-    Calculates the PartialSum
+    Calculates the PartialSum.  Writing ``matA.PartialSum(partialmode)`` has the same effect
 
     See also: Eigen :cite:p:`EigenMat101`.
 
@@ -43,9 +43,9 @@ Partial Sum
 Partial Product
 -------------------------------------------------------------------------------
 
-.. method:: mat.PartialProd(partialmode)
+.. method:: ctx.mat_partial_prod(matA, partialmode)
 
-    Calculates the PartialProd
+    Calculates the PartialProd.   Writing ``matA.PartialProd(partialmode)`` has the same effect
 
     See also: Eigen :cite:p:`EigenMat101`.
 
@@ -55,9 +55,9 @@ Partial Product
 Partial Arithmetic Mean
 -------------------------------------------------------------------------------
 
-.. method:: mat.PartialMean(partialmode)
+.. method:: ctx.mat_partial_mean(matA, partialmode)
 
-    Calculates the PartialMean
+    Calculates the PartialMean.   Writing ``matA.PartialMean(partialmode)`` has the same effect
 
 
     See also: Eigen :cite:p:`EigenMat101`.
@@ -69,9 +69,9 @@ Partial Arithmetic Mean
 Partial Minimal Coefficient
 -------------------------------------------------------------------------------
 
-.. method:: mat.PartialMinCoeff(partialmode)
+.. method:: ctx.mat_partial_min_coeff(matA, partialmode)
 
-    Calculates the PartialMinCoeff
+    Calculates the PartialMinCoeff.   Writing ``matA.PartialMinCoeff(partialmode)`` has the same effect
 
 
     See also: Eigen :cite:p:`EigenMat101`.
@@ -83,9 +83,9 @@ Partial Minimal Coefficient
 Partial Maximal Coefficient
 -------------------------------------------------------------------------------
 
-.. method:: mat.PartialMaxCoeff(partialmode)
+.. method:: ctx.mat_partial_max_coeff(matA, partialmode)
 
-    Calculates the PartialMaxCoeff
+    Calculates the PartialMaxCoeff.  Writing ``matA.PartialMaxCoeff(partialmode)`` has the same effect
 
 
     See also: Eigen :cite:p:`EigenMat101`.
@@ -97,9 +97,9 @@ Partial Maximal Coefficient
 Trace
 -------------------------------------------------------------------------------
 
-.. method:: mat.Trace()
+.. method:: ctx.mat_trace(matA)
 
-    Returns the trace of the matrix `A`.
+    Returns the trace of the matrix `A`.  Writing ``mat.Trace()`` has the same effect
 
 
     See also: Eigen :cite:p:`EigenMat101`,  Wikipedia :cite:p:`WikipediaMat10`.
@@ -113,9 +113,9 @@ Trace
 Partial Squared Norm
 -------------------------------------------------------------------------------
 
-.. method:: mat.PartialSquaredNorm(partialmode)
+.. method:: ctx.mat_partial_squared_norm(matA, partialmode)
 
-    Calculates the PartialSquaredNorm
+    Calculates the PartialSquaredNorm.  Writing ``matA.PartialSquaredNorm(partialmode)`` has the same effect
 
     See also: Eigen :cite:p:`EigenMat101`.
 
@@ -125,9 +125,9 @@ Partial Squared Norm
 Partial Norm
 -------------------------------------------------------------------------------
 
-.. method:: mat.PartialNorm(partialmode)
+.. method:: ctx.mat_partial_norm(matA, partialmode)
 
-    Calculates the PartialNorm
+    Calculates the PartialNorm.  Writing ``matA.PartialNorm(partialmode)`` has the same effect
 
 
     See also: Eigen :cite:p:`EigenMat101`.
@@ -139,9 +139,9 @@ Partial Norm
 Partial Stable Norm
 -------------------------------------------------------------------------------
 
-.. method:: mat.PartialStableNorm(partialmode)
+.. method:: ctx.mat_partial_stable_norm(matA, partialmode)
 
-    Calculates the PartialStableNorm.
+    Calculates the PartialStableNorm.  Writing ``matA.PartialStableNorm(partialmode)`` has the same effect
 
 
     See also: Eigen :cite:p:`EigenMat101`.
@@ -153,9 +153,9 @@ Partial Stable Norm
 Covariance matrix
 -------------------------------------------------------------------------------
 
-.. method:: mat.Covariance()
+.. method:: ctx.mat_covariance(matA)
 
-    Calculates the covariance matrix.
+    Calculates the covariance matrix.  Writing ``matA.Covariance()`` has the same effect
 
     See also:  Wikipedia :cite:p:`WikipediaMat11`,  Wikipedia :cite:p:`WikipediaMat12`.
 
@@ -166,9 +166,9 @@ Covariance matrix
 Correlation matrix
 -------------------------------------------------------------------------------
 
-.. method:: mat.Correlation_mat()
+.. method:: ctx.mat_correlation(matA)
 
-    Calculates the correlation matrix.
+    Calculates the correlation matrix.  Writing ``matA.Correlation_mat()`` has the same effect
 
     See also:  Wikipedia :cite:p:`WikipediaMat13`.
 

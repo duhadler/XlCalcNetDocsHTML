@@ -53,7 +53,7 @@
     <link rel="prev" title="Read-only properties: information about a matrix" href="C02_ReadOnlyProperties.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 17, 2026"/>
   </head>
   
   
@@ -908,104 +908,29 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-matrix-coefficient">Getting and setting a matrix coefficient</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block">Getting and setting a block</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_get_block"><code class="docutils literal notranslate"><span class="pre">ctx.mat_get_block()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_set_block"><code class="docutils literal notranslate"><span class="pre">ctx.mat_set_block()</span></code></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-matrix-row">Getting and setting a matrix row</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetRow"><code class="docutils literal notranslate"><span class="pre">mat.GetRow()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetRow"><code class="docutils literal notranslate"><span class="pre">mat.SetRow()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_get_row"><code class="docutils literal notranslate"><span class="pre">ctx.mat_get_row()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_set_row"><code class="docutils literal notranslate"><span class="pre">ctx.mat_set_row()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-matrix-column">Getting and setting a matrix column</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetCol"><code class="docutils literal notranslate"><span class="pre">mat.GetCol()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetCol"><code class="docutils literal notranslate"><span class="pre">mat.SetCol()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block">Getting and setting a block</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetBlock"><code class="docutils literal notranslate"><span class="pre">mat.GetBlock()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetBlock"><code class="docutils literal notranslate"><span class="pre">mat.SetBlock()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block-in-the-top-left-corner">Getting and setting a block in the top left corner</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetTopLeftCorner"><code class="docutils literal notranslate"><span class="pre">mat.GetTopLeftCorner()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetTopLeftCorner"><code class="docutils literal notranslate"><span class="pre">mat.SetTopLeftCorner()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block-in-the-bottom-left-corner">Getting and setting a block in the bottom left corner</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetBottomLeftCorner"><code class="docutils literal notranslate"><span class="pre">mat.GetBottomLeftCorner()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetBottomLeftCorner"><code class="docutils literal notranslate"><span class="pre">mat.SetBottomLeftCorner()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block-in-the-top-right-corner">Getting and setting a block in the top right corner</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetTopRightCorner"><code class="docutils literal notranslate"><span class="pre">mat.GetTopRightCorner()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetTopRightCorner"><code class="docutils literal notranslate"><span class="pre">mat.SetTopRightCorner()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block-in-the-bottom-right-corner">Getting and setting a block in the bottom right corner</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetBottomRightCorner"><code class="docutils literal notranslate"><span class="pre">mat.GetBottomRightCorner()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetBottomRightCorner"><code class="docutils literal notranslate"><span class="pre">mat.SetBottomRightCorner()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block-containing-the-first-q-rows">Getting and setting a block containing the first q rows</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetTopRows"><code class="docutils literal notranslate"><span class="pre">mat.GetTopRows()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetTopRows"><code class="docutils literal notranslate"><span class="pre">mat.SetTopRows()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block-containing-the-last-q-rows">Getting and setting a block containing the last q rows</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetBottomRows"><code class="docutils literal notranslate"><span class="pre">mat.GetBottomRows()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetBottomRows"><code class="docutils literal notranslate"><span class="pre">mat.SetBottomRows()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block-containing-the-first-p-columns">Getting and setting a block containing the first p columns</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetLeftCols"><code class="docutils literal notranslate"><span class="pre">mat.GetLeftCols()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetLeftCols"><code class="docutils literal notranslate"><span class="pre">mat.SetLeftCols()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block-containing-the-last-q-columns">Getting and setting a block containing the last q columns</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetRightCols"><code class="docutils literal notranslate"><span class="pre">mat.GetRightCols()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetRightCols"><code class="docutils literal notranslate"><span class="pre">mat.SetRightCols()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_get_col"><code class="docutils literal notranslate"><span class="pre">ctx.mat_get_col()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_set_col"><code class="docutils literal notranslate"><span class="pre">ctx.mat_set_col()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-diagonal">Getting and setting a diagonal</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetDiagonal"><code class="docutils literal notranslate"><span class="pre">mat.GetDiagonal()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetDiagonal"><code class="docutils literal notranslate"><span class="pre">mat.SetDiagonal()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_get_diagonal"><code class="docutils literal notranslate"><span class="pre">ctx.mat_get_diagonal()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_set_diagonal"><code class="docutils literal notranslate"><span class="pre">ctx.mat_set_diagonal()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-middle-rows">Getting and setting middle rows</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetMiddleRows"><code class="docutils literal notranslate"><span class="pre">mat.GetMiddleRows()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetMiddleRows"><code class="docutils literal notranslate"><span class="pre">mat.SetMiddleRows()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-middle-columns">Getting and setting middle columns</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetMiddleCols"><code class="docutils literal notranslate"><span class="pre">mat.GetMiddleCols()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetMiddleCols"><code class="docutils literal notranslate"><span class="pre">mat.SetMiddleCols()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-the-lower-triangle">Getting and setting the lower triangle</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetLowerTriangle"><code class="docutils literal notranslate"><span class="pre">mat.GetLowerTriangle()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetLowerTriangle"><code class="docutils literal notranslate"><span class="pre">mat.SetLowerTriangle()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-the-upper-triangle">Getting and setting the upper triangle</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetUpperTriangle"><code class="docutils literal notranslate"><span class="pre">mat.GetUpperTriangle()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetUpperTriangle"><code class="docutils literal notranslate"><span class="pre">mat.SetUpperTriangle()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-the-strictly-lower-triangle">Getting and setting the strictly lower triangle</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetStrictlyLowerTriangle"><code class="docutils literal notranslate"><span class="pre">mat.GetStrictlyLowerTriangle()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetStrictlyLowerTriangle"><code class="docutils literal notranslate"><span class="pre">mat.SetStrictlyLowerTriangle()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-the-strictly-upper-triangle">Getting and setting the strictly upper triangle</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetStrictlyUpperTriangle"><code class="docutils literal notranslate"><span class="pre">mat.GetStrictlyUpperTriangle()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetStrictlyUpperTriangle"><code class="docutils literal notranslate"><span class="pre">mat.SetStrictlyUpperTriangle()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-the-unit-lower-triangle">Getting and setting the unit lower triangle</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetUnitLowerTriangle"><code class="docutils literal notranslate"><span class="pre">mat.GetUnitLowerTriangle()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetUnitLowerTriangle"><code class="docutils literal notranslate"><span class="pre">mat.SetUnitLowerTriangle()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-the-unit-upper-triangle">Getting and setting the unit upper triangle</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetUnitUpperTriangle"><code class="docutils literal notranslate"><span class="pre">mat.GetUnitUpperTriangle()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetUnitUpperTriangle"><code class="docutils literal notranslate"><span class="pre">mat.SetUnitUpperTriangle()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-triangular-view">Getting and setting a triangular view</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_get_triangular_view"><code class="docutils literal notranslate"><span class="pre">ctx.mat_get_triangular_view()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_set_triangular_view"><code class="docutils literal notranslate"><span class="pre">ctx.mat_set_triangular_view()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1052,12 +977,58 @@ document.write(`
 </pre></div>
 </div>
 </section>
+<section id="getting-and-setting-a-block">
+<h2>Getting and setting a block<a class="headerlink" href="#getting-and-setting-a-block" title="Link to this heading">#</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="ctx.mat_get_block">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_get_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_get_block" title="Link to this definition">#</a></dt>
+<dd><p>Gets a block of the matrix, starting at row <span class="math notranslate nohighlight">\(i\)</span> and column <span class="math notranslate nohighlight">\(j\)</span>, with <span class="math notranslate nohighlight">\(p\)</span> row elements and <span class="math notranslate nohighlight">\(q\)</span> column elements. Writing <code class="docutils literal notranslate"><span class="pre">matA.get_Block(i,</span> <span class="pre">j,</span> <span class="pre">p,</span> <span class="pre">q)</span></code> has the same effect</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="go">A:</span>
+<span class="go">11,  12,  13,  14,</span>
+<span class="go">21,  22,  23,  24,</span>
+<span class="go">31,  32,  33,  34,</span>
+<span class="go">41,  42,  43,  44,</span>
+<span class="go">51,  52,  53,  54,</span>
+<span class="go">61,  62,  63,  64,</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># gets a block, beginning at A[1, 1], stretching to A[1+3, 1+2]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">block</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="n">b1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span>
+<span class="go">b1:</span>
+<span class="go">22,  23,</span>
+<span class="go">32,  33,</span>
+<span class="go">42,  43,</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ctx.mat_set_block">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_set_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_set_block" title="Link to this definition">#</a></dt>
+<dd><p>Sets a block of the matrix to <em>matB</em>, starting at row <span class="math notranslate nohighlight">\(i\)</span> and column <span class="math notranslate nohighlight">\(j\)</span>, with <span class="math notranslate nohighlight">\(p\)</span> row elements and <span class="math notranslate nohighlight">\(q\)</span> column elements. Writing <code class="docutils literal notranslate"><span class="pre">matA.set_Block(i,</span> <span class="pre">j,</span> <span class="pre">p,</span> <span class="pre">q,</span> <span class="pre">matB)</span></code> has the same effect</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets b1 into a block, beginning at A[0, 0], stretching to A[0+3, 0+2]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_Block</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">b1</span><span class="p">);</span> <span class="p">;</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="go">A:</span>
+<span class="go">22,  23,  13,  14,</span>
+<span class="go">32,  33,  23,  24,</span>
+<span class="go">42,  43,  33,  34,</span>
+<span class="go">41,  42,  43,  44,</span>
+<span class="go">51,  52,  53,  54,</span>
+<span class="go">61,  62,  63,  64,</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
 <section id="getting-and-setting-a-matrix-row">
 <h2>Getting and setting a matrix row<a class="headerlink" href="#getting-and-setting-a-matrix-row" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.GetRow">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetRow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetRow" title="Link to this definition">#</a></dt>
-<dd><p>Gets the <span class="math notranslate nohighlight">\(i^{\text{th}}\)</span> row.</p>
+<dt class="sig sig-object py" id="ctx.mat_get_row">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_get_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_get_row" title="Link to this definition">#</a></dt>
+<dd><p>Gets the <span class="math notranslate nohighlight">\(i^{\text{th}}\)</span> row. Writing <code class="docutils literal notranslate"><span class="pre">matA.get_Row(i)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1078,12 +1049,12 @@ document.write(`
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.SetRow">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetRow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetRow" title="Link to this definition">#</a></dt>
-<dd><p>Sets the <span class="math notranslate nohighlight">\(i^{\text{th}}\)</span> row to <em>matB</em>.</p>
+<dt class="sig sig-object py" id="ctx.mat_set_row">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_set_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_set_row" title="Link to this definition">#</a></dt>
+<dd><p>Sets the <span class="math notranslate nohighlight">\(i^{\text{th}}\)</span> row to <em>matB</em>. Writing <code class="docutils literal notranslate"><span class="pre">matA.set_Row(i,</span> <span class="pre">matB)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets the content of row number 5 to the content of row number 2</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_row</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">row</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_Row</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">get_Row</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
 <span class="go">A:</span>
 <span class="go">11,  12,  13,  14,</span>
 <span class="go">21,  22,  23,  24,</span>
@@ -1099,9 +1070,9 @@ document.write(`
 <section id="getting-and-setting-a-matrix-column">
 <h2>Getting and setting a matrix column<a class="headerlink" href="#getting-and-setting-a-matrix-column" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.GetCol">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetCol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetCol" title="Link to this definition">#</a></dt>
-<dd><p>Gets the <span class="math notranslate nohighlight">\(j^{\text{th}}\)</span> column.</p>
+<dt class="sig sig-object py" id="ctx.mat_get_col">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_get_col</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_get_col" title="Link to this definition">#</a></dt>
+<dd><p>Gets the <span class="math notranslate nohighlight">\(j^{\text{th}}\)</span> column. Writing <code class="docutils literal notranslate"><span class="pre">matA.get_Col(j)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1127,12 +1098,12 @@ document.write(`
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.SetCol">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetCol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetCol" title="Link to this definition">#</a></dt>
-<dd><p>Sets the <span class="math notranslate nohighlight">\(j^{\text{th}}\)</span> column to <em>matB</em>.</p>
+<dt class="sig sig-object py" id="ctx.mat_set_col">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_set_col</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_set_col" title="Link to this definition">#</a></dt>
+<dd><p>Sets the <span class="math notranslate nohighlight">\(j^{\text{th}}\)</span> column to <em>matB</em>. Writing <code class="docutils literal notranslate"><span class="pre">matA.set_Col(j,</span> <span class="pre">matB)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets the content of column number 3 to the content of column number 1</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_col</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_Col</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">get_Col</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
 <span class="go">A:</span>
 <span class="go">11,  12,  13,  12,</span>
 <span class="go">21,  22,  23,  22,</span>
@@ -1145,430 +1116,12 @@ document.write(`
 </dd></dl>
 
 </section>
-<section id="getting-and-setting-a-block">
-<h2>Getting and setting a block<a class="headerlink" href="#getting-and-setting-a-block" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.GetBlock">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetBlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetBlock" title="Link to this definition">#</a></dt>
-<dd><p>Gets a block of the matrix, starting at row <span class="math notranslate nohighlight">\(i\)</span> and column <span class="math notranslate nohighlight">\(j\)</span>, with <span class="math notranslate nohighlight">\(p\)</span> row elements and <span class="math notranslate nohighlight">\(q\)</span> column elements.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11,  12,  13,  14,</span>
-<span class="go">21,  22,  23,  24,</span>
-<span class="go">31,  32,  33,  34,</span>
-<span class="go">41,  42,  43,  44,</span>
-<span class="go">51,  52,  53,  54,</span>
-<span class="go">61,  62,  63,  64,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># gets a block, beginning at A[1, 1], stretching to A[1+3, 1+2]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">block</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="n">b1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span>
-<span class="go">b1:</span>
-<span class="go">22,  23,</span>
-<span class="go">32,  33,</span>
-<span class="go">42,  43,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.SetBlock">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetBlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetBlock" title="Link to this definition">#</a></dt>
-<dd><p>Sets a block of the matrix to <em>matB</em>, starting at row <span class="math notranslate nohighlight">\(i\)</span> and column <span class="math notranslate nohighlight">\(j\)</span>, with <span class="math notranslate nohighlight">\(p\)</span> row elements and <span class="math notranslate nohighlight">\(q\)</span> column elements.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets b1 into a block, beginning at A[0, 0], stretching to A[0+3, 0+2]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_block</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">b1</span><span class="p">);</span> <span class="p">;</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">22,  23,  13,  14,</span>
-<span class="go">32,  33,  23,  24,</span>
-<span class="go">42,  43,  33,  34,</span>
-<span class="go">41,  42,  43,  44,</span>
-<span class="go">51,  52,  53,  54,</span>
-<span class="go">61,  62,  63,  64,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="getting-and-setting-a-block-in-the-top-left-corner">
-<h2>Getting and setting a block in the top left corner<a class="headerlink" href="#getting-and-setting-a-block-in-the-top-left-corner" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.GetTopLeftCorner">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetTopLeftCorner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetTopLeftCorner" title="Link to this definition">#</a></dt>
-<dd><p>Gets the <span class="math notranslate nohighlight">\(p\)</span> by <span class="math notranslate nohighlight">\(q\)</span> top left corner of the matrix.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11,  12,  13,  14,</span>
-<span class="go">21,  22,  23,  24,</span>
-<span class="go">31,  32,  33,  34,</span>
-<span class="go">41,  42,  43,  44,</span>
-<span class="go">51,  52,  53,  54,</span>
-<span class="go">61,  62,  63,  64,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># gets the `3` by `2` block top left corner</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">top_left_corner</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="n">b1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span>
-<span class="go">b1:</span>
-<span class="go">11,  12,</span>
-<span class="go">21,  22,</span>
-<span class="go">31,  32,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.SetTopLeftCorner">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetTopLeftCorner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetTopLeftCorner" title="Link to this definition">#</a></dt>
-<dd><p>Sets the <span class="math notranslate nohighlight">\(p\)</span> by <span class="math notranslate nohighlight">\(q\)</span> top left corner of the matrix to <em>matB</em>.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets the `3` by `2` top left corner to the `3` by `2` bottom left corner</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_top_left_corner</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">bottom_left_corner</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">41,  42,  13,  14,</span>
-<span class="go">51,  52,  23,  24,</span>
-<span class="go">61,  62,  33,  34,</span>
-<span class="go">41,  42,  43,  44,</span>
-<span class="go">51,  52,  53,  54,</span>
-<span class="go">61,  62,  63,  64,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="getting-and-setting-a-block-in-the-bottom-left-corner">
-<h2>Getting and setting a block in the bottom left corner<a class="headerlink" href="#getting-and-setting-a-block-in-the-bottom-left-corner" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.GetBottomLeftCorner">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetBottomLeftCorner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetBottomLeftCorner" title="Link to this definition">#</a></dt>
-<dd><p>Gets the <span class="math notranslate nohighlight">\(p\)</span> by <span class="math notranslate nohighlight">\(q\)</span> bottom left corner of the matrix.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11,  12,  13,  14,</span>
-<span class="go">21,  22,  23,  24,</span>
-<span class="go">31,  32,  33,  34,</span>
-<span class="go">41,  42,  43,  44,</span>
-<span class="go">51,  52,  53,  54,</span>
-<span class="go">61,  62,  63,  64,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># gets the `3` by `2` bottom left corner</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">bottom_left_corner</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="n">b1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span><span class="s2">&quot;</span>
-<span class="go">b1:</span>
-<span class="go">41,  42,</span>
-<span class="go">51,  52,</span>
-<span class="go">61,  62,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.SetBottomLeftCorner">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetBottomLeftCorner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetBottomLeftCorner" title="Link to this definition">#</a></dt>
-<dd><p>Sets the <span class="math notranslate nohighlight">\(p\)</span> by <span class="math notranslate nohighlight">\(q\)</span> bottom left corner of the matrix to <em>matB</em>.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets the `3` by `2` bottom left corner to the `3` by `2` top left corner</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_bottom_left_corner</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">top_left_corner</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11,  12,  13,  14,</span>
-<span class="go">21,  22,  23,  24,</span>
-<span class="go">31,  32,  33,  34,</span>
-<span class="go">11,  12,  43,  44,</span>
-<span class="go">21,  22,  53,  54,</span>
-<span class="go">31,  32,  63,  64,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="getting-and-setting-a-block-in-the-top-right-corner">
-<h2>Getting and setting a block in the top right corner<a class="headerlink" href="#getting-and-setting-a-block-in-the-top-right-corner" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.GetTopRightCorner">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetTopRightCorner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetTopRightCorner" title="Link to this definition">#</a></dt>
-<dd><p>Gets the <span class="math notranslate nohighlight">\(p\)</span> by <span class="math notranslate nohighlight">\(q\)</span> top right corner of the matrix.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11,  12,  13,  14,</span>
-<span class="go">21,  22,  23,  24,</span>
-<span class="go">31,  32,  33,  34,</span>
-<span class="go">41,  42,  43,  44,</span>
-<span class="go">51,  52,  53,  54,</span>
-<span class="go">61,  62,  63,  64,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># gets the `3` by `2` top right corner</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">top_right_corner</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="n">b1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span>
-<span class="go">b1:</span>
-<span class="go">13,  14,</span>
-<span class="go">23,  24,</span>
-<span class="go">33,  34,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.SetTopRightCorner">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetTopRightCorner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetTopRightCorner" title="Link to this definition">#</a></dt>
-<dd><p>Sets the <span class="math notranslate nohighlight">\(p\)</span> by <span class="math notranslate nohighlight">\(q\)</span> top right corner of the matrix to <em>matB</em>.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets the `3` by `2` top right corner to the `3` by `2` bottom right corner</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_top_right_corner</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">bottom_right_corner</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11,  12,  43,  44,</span>
-<span class="go">21,  22,  53,  54,</span>
-<span class="go">31,  32,  63,  64,</span>
-<span class="go">41,  42,  43,  44,</span>
-<span class="go">51,  52,  53,  54,</span>
-<span class="go">61,  62,  63,  64,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="getting-and-setting-a-block-in-the-bottom-right-corner">
-<h2>Getting and setting a block in the bottom right corner<a class="headerlink" href="#getting-and-setting-a-block-in-the-bottom-right-corner" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.GetBottomRightCorner">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetBottomRightCorner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetBottomRightCorner" title="Link to this definition">#</a></dt>
-<dd><p>Gets the <span class="math notranslate nohighlight">\(p\)</span> by <span class="math notranslate nohighlight">\(q\)</span> bottom right corner of the matrix.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11,  12,  13,  14,</span>
-<span class="go">21,  22,  23,  24,</span>
-<span class="go">31,  32,  33,  34,</span>
-<span class="go">41,  42,  43,  44,</span>
-<span class="go">51,  52,  53,  54,</span>
-<span class="go">61,  62,  63,  64,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># gets the `3` by `2` top right corner</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">bottom_right_corner</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="n">b1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span>
-<span class="go">b1:</span>
-<span class="go">43,  44,</span>
-<span class="go">53,  54,</span>
-<span class="go">63,  64,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.SetBottomRightCorner">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetBottomRightCorner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetBottomRightCorner" title="Link to this definition">#</a></dt>
-<dd><p>Sets the <span class="math notranslate nohighlight">\(p\)</span> by <span class="math notranslate nohighlight">\(q\)</span> bottom right corner of the matrix to <em>matB</em>.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets the `3` by `2` top right corner to the `3` by `2` bottom right corner</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_bottom_right_corner</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">top_right_corner</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11,  12,  13,  14,</span>
-<span class="go">21,  22,  23,  24,</span>
-<span class="go">31,  32,  33,  34,</span>
-<span class="go">41,  42,  13,  14,</span>
-<span class="go">51,  52,  23,  24,</span>
-<span class="go">61,  62,  33,  34,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="getting-and-setting-a-block-containing-the-first-q-rows">
-<h2>Getting and setting a block containing the first q rows<a class="headerlink" href="#getting-and-setting-a-block-containing-the-first-q-rows" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.GetTopRows">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetTopRows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetTopRows" title="Link to this definition">#</a></dt>
-<dd><p>Gets the top <span class="math notranslate nohighlight">\(q\)</span> rows of the matrix.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11,  12,  13,  14,</span>
-<span class="go">21,  22,  23,  24,</span>
-<span class="go">31,  32,  33,  34,</span>
-<span class="go">41,  42,  43,  44,</span>
-<span class="go">51,  52,  53,  54,</span>
-<span class="go">61,  62,  63,  64,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># gets the 2 top rows</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">top_rows</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="n">b1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span>
-<span class="go">b1:</span>
-<span class="go">11,  12,  13,  14,</span>
-<span class="go">21,  22,  23,  24,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.SetTopRows">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetTopRows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetTopRows" title="Link to this definition">#</a></dt>
-<dd><p>Sets the top <span class="math notranslate nohighlight">\(q\)</span> rows of the matrix to <em>matB</em>.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets the 2 top rows to the 2 bottom rows</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_top_rows</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">bottom_rows</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">51,  52,  53,  54,</span>
-<span class="go">61,  62,  63,  64,</span>
-<span class="go">31,  32,  33,  34,</span>
-<span class="go">41,  42,  43,  44,</span>
-<span class="go">51,  52,  53,  54,</span>
-<span class="go">61,  62,  63,  64,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="getting-and-setting-a-block-containing-the-last-q-rows">
-<h2>Getting and setting a block containing the last q rows<a class="headerlink" href="#getting-and-setting-a-block-containing-the-last-q-rows" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.GetBottomRows">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetBottomRows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetBottomRows" title="Link to this definition">#</a></dt>
-<dd><p>Gets the bottom <span class="math notranslate nohighlight">\(q\)</span> rows of the matrix.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11,  12,  13,  14,</span>
-<span class="go">21,  22,  23,  24,</span>
-<span class="go">31,  32,  33,  34,</span>
-<span class="go">41,  42,  43,  44,</span>
-<span class="go">51,  52,  53,  54,</span>
-<span class="go">61,  62,  63,  64,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># gets the 2 bottom rows</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">bottom_rows</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="n">b1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span>
-<span class="go">b1:</span>
-<span class="go">51,  52,  53,  54,</span>
-<span class="go">61,  62,  63,  64,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.SetBottomRows">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetBottomRows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetBottomRows" title="Link to this definition">#</a></dt>
-<dd><p>Sets the bottom <span class="math notranslate nohighlight">\(q\)</span> rows of the matrix to <em>matB</em>.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets the 2 bottom rows to the 2 top rows</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_bottom_rows</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">top_rows</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11,  12,  13,  14,</span>
-<span class="go">21,  22,  23,  24,</span>
-<span class="go">31,  32,  33,  34,</span>
-<span class="go">41,  42,  43,  44,</span>
-<span class="go">11,  12,  13,  14,</span>
-<span class="go">21,  22,  23,  24,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="getting-and-setting-a-block-containing-the-first-p-columns">
-<h2>Getting and setting a block containing the first p columns<a class="headerlink" href="#getting-and-setting-a-block-containing-the-first-p-columns" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.GetLeftCols">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetLeftCols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetLeftCols" title="Link to this definition">#</a></dt>
-<dd><p>Gets the first <span class="math notranslate nohighlight">\(p\)</span> (leftmost) columns of the matrix.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11,  12,  13,  14,</span>
-<span class="go">21,  22,  23,  24,</span>
-<span class="go">31,  32,  33,  34,</span>
-<span class="go">41,  42,  43,  44,</span>
-<span class="go">51,  52,  53,  54,</span>
-<span class="go">61,  62,  63,  64,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># gets the first 2 (leftmost) columns</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">left_cols</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="n">b1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span>
-<span class="go">b1:</span>
-<span class="go">11,  12,</span>
-<span class="go">21,  22,</span>
-<span class="go">31,  32,</span>
-<span class="go">41,  42,</span>
-<span class="go">51,  52,</span>
-<span class="go">61,  62,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.SetLeftCols">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetLeftCols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetLeftCols" title="Link to this definition">#</a></dt>
-<dd><p>Sets the first <span class="math notranslate nohighlight">\(p\)</span> (leftmost) columns of the matrix to <em>matB</em>.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets the first 2 (leftmost) columns to the last 2 (rightmost) columns</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_left_cols</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">right_cols</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">13,  14,  13,  14,</span>
-<span class="go">23,  24,  23,  24,</span>
-<span class="go">33,  34,  33,  34,</span>
-<span class="go">43,  44,  43,  44,</span>
-<span class="go">53,  54,  53,  54,</span>
-<span class="go">63,  64,  63,  64,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="getting-and-setting-a-block-containing-the-last-q-columns">
-<h2>Getting and setting a block containing the last q columns<a class="headerlink" href="#getting-and-setting-a-block-containing-the-last-q-columns" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.GetRightCols">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetRightCols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetRightCols" title="Link to this definition">#</a></dt>
-<dd><p>Gets the last <span class="math notranslate nohighlight">\(p\)</span> (rightmost) columns of the matrix.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11,  12,  13,  14,</span>
-<span class="go">21,  22,  23,  24,</span>
-<span class="go">31,  32,  33,  34,</span>
-<span class="go">41,  42,  43,  44,</span>
-<span class="go">51,  52,  53,  54,</span>
-<span class="go">61,  62,  63,  64,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># gets the last 2 (rightmost) columns</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">right_cols</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="n">b1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span>
-<span class="go">b1:</span>
-<span class="go">13,  14,</span>
-<span class="go">23,  24,</span>
-<span class="go">33,  34,</span>
-<span class="go">43,  44,</span>
-<span class="go">53,  54,</span>
-<span class="go">63,  64,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.SetRightCols">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetRightCols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetRightCols" title="Link to this definition">#</a></dt>
-<dd><p>Sets the first <span class="math notranslate nohighlight">\(p\)</span> (rightmost) columns of the matrix to <em>matB</em>.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets the last 2 (rightmost) columns to the first 2 (leftmost) columns</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_right_cols</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">left_cols</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11,  12,  11,  12,</span>
-<span class="go">21,  22,  21,  22,</span>
-<span class="go">31,  32,  31,  32,</span>
-<span class="go">41,  42,  41,  42,</span>
-<span class="go">51,  52,  51,  52,</span>
-<span class="go">61,  62,  61,  62,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
 <section id="getting-and-setting-a-diagonal">
 <h2>Getting and setting a diagonal<a class="headerlink" href="#getting-and-setting-a-diagonal" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.GetDiagonal">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetDiagonal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetDiagonal" title="Link to this definition">#</a></dt>
-<dd><p>Gets the diagonal or a subdiagonal of the matrix.</p>
+<dt class="sig sig-object py" id="ctx.mat_get_diagonal">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_get_diagonal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_get_diagonal" title="Link to this definition">#</a></dt>
+<dd><p>Gets the diagonal or a subdiagonal of the matrix. Writing <code class="docutils literal notranslate"><span class="pre">matA.get_Diagonal(q=0)</span></code> has the same effect.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1592,12 +1145,12 @@ document.write(`
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.SetDiagonal">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetDiagonal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetDiagonal" title="Link to this definition">#</a></dt>
-<dd><p>Sets the diagonal or a subdiagonal of the matrix to <em>matB</em>.</p>
+<dt class="sig sig-object py" id="ctx.mat_set_diagonal">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_set_diagonal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_set_diagonal" title="Link to this definition">#</a></dt>
+<dd><p>Sets the diagonal or a subdiagonal of the matrix to <em>matB</em>. Writing <code class="docutils literal notranslate"><span class="pre">matA.set_Diagonal(q,</span> <span class="pre">matB)</span></code> has the same effect.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets the diagonal to the first lower subdiagonal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_diagonal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">b1</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_Diagonal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">b1</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
 <span class="go">A:</span>
 <span class="go">21,  12,  13,  14,</span>
 <span class="go">21,  32,  23,  24,</span>
@@ -1610,12 +1163,12 @@ document.write(`
 </dd></dl>
 
 </section>
-<section id="getting-and-setting-middle-rows">
-<h2>Getting and setting middle rows<a class="headerlink" href="#getting-and-setting-middle-rows" title="Link to this heading">#</a></h2>
+<section id="getting-and-setting-a-triangular-view">
+<h2>Getting and setting a triangular view<a class="headerlink" href="#getting-and-setting-a-triangular-view" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.GetMiddleRows">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetMiddleRows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetMiddleRows" title="Link to this definition">#</a></dt>
-<dd><p>Gets a block containing <span class="math notranslate nohighlight">\(q\)</span> rows of the matrix, starting at row <span class="math notranslate nohighlight">\(p\)</span>.</p>
+<dt class="sig sig-object py" id="ctx.mat_get_triangular_view">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_get_triangular_view</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">View</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_get_triangular_view" title="Link to this definition">#</a></dt>
+<dd><p>Gets the triangular view of the matrix. Writing <code class="docutils literal notranslate"><span class="pre">matA.get_TriangularView(View</span> <span class="pre">=</span> <span class="pre">1)</span></code> has the same effect.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1627,431 +1180,31 @@ document.write(`
 <span class="go">51,  52,  53,  54,</span>
 <span class="go">61,  62,  63,  64,</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># gets a block containing 2 rows, starting at row 1</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">middle_rows</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="n">b1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span>
-<span class="go">b1:</span>
-<span class="go">21,  22,  23,  24,</span>
-<span class="go">31,  32,  33,  34,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># gets the first lower subdiagonal</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">diagonal</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span> <span class="n">b1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span>
+<span class="go">b1 = A.diagonal(-1):</span>
+<span class="go">21,</span>
+<span class="go">32,</span>
+<span class="go">43,</span>
+<span class="go">54,</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.SetMiddleRows">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetMiddleRows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetMiddleRows" title="Link to this definition">#</a></dt>
-<dd><p>Sets a block containing <span class="math notranslate nohighlight">\(q\)</span> rows of the matrix to <em>matB</em>, starting at row <span class="math notranslate nohighlight">\(p\)</span>.</p>
+<dt class="sig sig-object py" id="ctx.mat_set_triangular_view">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_set_triangular_view</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">View</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_set_triangular_view" title="Link to this definition">#</a></dt>
+<dd><p>Sets the triangular view of the matrix to <em>matB</em>. Writing <code class="docutils literal notranslate"><span class="pre">matA.set_TriangularView(View,</span> <span class="pre">matB)</span></code> has the same effect.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets a block containing 2 rows, starting at row 3, to b1</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_middle_rows</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">b1</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets the diagonal to the first lower subdiagonal</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_Diagonal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">b1</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
 <span class="go">A:</span>
-<span class="go">11,  12,  13,  14,</span>
-<span class="go">21,  22,  23,  24,</span>
-<span class="go">31,  32,  33,  34,</span>
-<span class="go">21,  22,  23,  24,</span>
-<span class="go">31,  32,  33,  34,</span>
-<span class="go">61,  62,  63,  64,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="getting-and-setting-middle-columns">
-<h2>Getting and setting middle columns<a class="headerlink" href="#getting-and-setting-middle-columns" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.GetMiddleCols">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetMiddleCols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetMiddleCols" title="Link to this definition">#</a></dt>
-<dd><p>Gets a block containing <span class="math notranslate nohighlight">\(q\)</span> columns of the matrix, starting at column <span class="math notranslate nohighlight">\(p\)</span>.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11,  12,  13,  14,</span>
-<span class="go">21,  22,  23,  24,</span>
-<span class="go">31,  32,  33,  34,</span>
-<span class="go">41,  42,  43,  44,</span>
+<span class="go">21,  12,  13,  14,</span>
+<span class="go">21,  32,  23,  24,</span>
+<span class="go">31,  32,  43,  34,</span>
+<span class="go">41,  42,  43,  54,</span>
 <span class="go">51,  52,  53,  54,</span>
 <span class="go">61,  62,  63,  64,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># gets a block containing 2 columns, starting at column 0</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">middle_cols</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="n">b1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span>
-<span class="go">b1:</span>
-<span class="go">11,  12,</span>
-<span class="go">21,  22,</span>
-<span class="go">31,  32,</span>
-<span class="go">41,  42,</span>
-<span class="go">51,  52,</span>
-<span class="go">61,  62,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.SetMiddleCols">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetMiddleCols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetMiddleCols" title="Link to this definition">#</a></dt>
-<dd><p>Sets a block containing <span class="math notranslate nohighlight">\(q\)</span> columns of the matrix to <em>matB</em>, starting at column <span class="math notranslate nohighlight">\(p\)</span>.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets a block containing 2 columns, starting at column 1, to b1</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_middle_cols</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">b1</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11,  11,  12,  14,</span>
-<span class="go">21,  21,  22,  24,</span>
-<span class="go">31,  31,  32,  34,</span>
-<span class="go">41,  41,  42,  44,</span>
-<span class="go">51,  51,  52,  54,</span>
-<span class="go">61,  61,  62,  64,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="getting-and-setting-the-lower-triangle">
-<h2>Getting and setting the lower triangle<a class="headerlink" href="#getting-and-setting-the-lower-triangle" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.GetLowerTriangle">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetLowerTriangle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetLowerTriangle" title="Link to this definition">#</a></dt>
-<dd><p>Gets the lower triangle (including the diagonal).</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11, 12, 13, 14, 15, 16,</span>
-<span class="go">21, 22, 23, 24, 25, 26,</span>
-<span class="go">31, 32, 33, 34, 35, 36,</span>
-<span class="go">41, 42, 43, 44, 45, 46,</span>
-<span class="go">51, 52, 53, 54, 55, 56,</span>
-<span class="go">61, 62, 63, 64, 65, 66,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># gets the lower triangle (including the diagonal)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">lower_triangle</span><span class="p">();</span> <span class="n">b1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span>
-<span class="go">b1:</span>
-<span class="go">11,  0,  0,  0,  0,  0,</span>
-<span class="go">21, 22,  0,  0,  0,  0,</span>
-<span class="go">31, 32, 33,  0,  0,  0,</span>
-<span class="go">41, 42, 43, 44,  0,  0,</span>
-<span class="go">51, 52, 53, 54, 55,  0,</span>
-<span class="go">61, 62, 63, 64, 65, 66,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.SetLowerTriangle">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetLowerTriangle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetLowerTriangle" title="Link to this definition">#</a></dt>
-<dd><p>Sets the lower triangle (including the diagonal)  to <em>matB</em>.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># read and display another matrix, B</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">B</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableB6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">B</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
-<span class="go">B:</span>
-<span class="go">911, 912, 913, 914, 915, 916,</span>
-<span class="go">921, 922, 923, 924, 925, 926,</span>
-<span class="go">931, 932, 933, 934, 935, 936,</span>
-<span class="go">941, 942, 943, 944, 945, 946,</span>
-<span class="go">951, 952, 953, 954, 955, 956,</span>
-<span class="go">961, 962, 963, 964, 965, 966,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets the lower triangle (including the diagonal) of A to B</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_lower_triangle</span><span class="p">(</span><span class="n">B</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">911,  12,  13,  14,  15,  16,</span>
-<span class="go">921, 922,  23,  24,  25,  26,</span>
-<span class="go">931, 932, 933,  34,  35,  36,</span>
-<span class="go">941, 942, 943, 944,  45,  46,</span>
-<span class="go">951, 952, 953, 954, 955,  56,</span>
-<span class="go">961, 962, 963, 964, 965, 966,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="getting-and-setting-the-upper-triangle">
-<h2>Getting and setting the upper triangle<a class="headerlink" href="#getting-and-setting-the-upper-triangle" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.GetUpperTriangle">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetUpperTriangle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetUpperTriangle" title="Link to this definition">#</a></dt>
-<dd><p>Gets the lower triangle (including the diagonal).</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11, 12, 13, 14, 15, 16,</span>
-<span class="go">21, 22, 23, 24, 25, 26,</span>
-<span class="go">31, 32, 33, 34, 35, 36,</span>
-<span class="go">41, 42, 43, 44, 45, 46,</span>
-<span class="go">51, 52, 53, 54, 55, 56,</span>
-<span class="go">61, 62, 63, 64, 65, 66,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># gets the upper triangle (including the diagonal)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">upper_triangle</span><span class="p">();</span> <span class="n">b1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span>
-<span class="go">b1:</span>
-<span class="go">11, 12, 13, 14, 15, 16,</span>
-<span class="go"> 0, 22, 23, 24, 25, 26,</span>
-<span class="go"> 0,  0, 33, 34, 35, 36,</span>
-<span class="go"> 0,  0,  0, 44, 45, 46,</span>
-<span class="go"> 0,  0,  0,  0, 55, 56,</span>
-<span class="go"> 0,  0,  0,  0,  0, 66,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.SetUpperTriangle">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetUpperTriangle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetUpperTriangle" title="Link to this definition">#</a></dt>
-<dd><p>Sets the lower triangle (including the diagonal)  to <em>matB</em>.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># read and display another matrix, B</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">B</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableB6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">B</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
-<span class="go">B:</span>
-<span class="go">911, 912, 913, 914, 915, 916,</span>
-<span class="go">921, 922, 923, 924, 925, 926,</span>
-<span class="go">931, 932, 933, 934, 935, 936,</span>
-<span class="go">941, 942, 943, 944, 945, 946,</span>
-<span class="go">951, 952, 953, 954, 955, 956,</span>
-<span class="go">961, 962, 963, 964, 965, 966,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets the upper triangle (including the diagonal) of A to B</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_upper_triangle</span><span class="p">(</span><span class="n">B</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">911, 912, 913, 914, 915, 916,</span>
-<span class="go"> 21, 922, 923, 924, 925, 926,</span>
-<span class="go"> 31,  32, 933, 934, 935, 936,</span>
-<span class="go"> 41,  42,  43, 944, 945, 946,</span>
-<span class="go"> 51,  52,  53,  54, 955, 956,</span>
-<span class="go"> 61,  62,  63,  64,  65, 966,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="getting-and-setting-the-strictly-lower-triangle">
-<h2>Getting and setting the strictly lower triangle<a class="headerlink" href="#getting-and-setting-the-strictly-lower-triangle" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.GetStrictlyLowerTriangle">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetStrictlyLowerTriangle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetStrictlyLowerTriangle" title="Link to this definition">#</a></dt>
-<dd><p>Gets the strictly lower triangle (without the diagonal).</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11, 12, 13, 14, 15, 16,</span>
-<span class="go">21, 22, 23, 24, 25, 26,</span>
-<span class="go">31, 32, 33, 34, 35, 36,</span>
-<span class="go">41, 42, 43, 44, 45, 46,</span>
-<span class="go">51, 52, 53, 54, 55, 56,</span>
-<span class="go">61, 62, 63, 64, 65, 66,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># gets the strictly lower triangle (without the diagonal)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">strictly_lower_triangle</span><span class="p">();</span> <span class="n">b1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span>
-<span class="go">b1:</span>
-<span class="go"> 0,  0,  0,  0,  0,  0,</span>
-<span class="go">21,  0,  0,  0,  0,  0,</span>
-<span class="go">31, 32,  0,  0,  0,  0,</span>
-<span class="go">41, 42, 43,  0,  0,  0,</span>
-<span class="go">51, 52, 53, 54,  0,  0,</span>
-<span class="go">61, 62, 63, 64, 65,  0,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.SetStrictlyLowerTriangle">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetStrictlyLowerTriangle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetStrictlyLowerTriangle" title="Link to this definition">#</a></dt>
-<dd><p>Sets the strictly lower triangle (without the diagonal)  to <em>matB</em>.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># read and display another matrix, B</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">B</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableB6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">B</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
-<span class="go">B:</span>
-<span class="go">911, 912, 913, 914, 915, 916,</span>
-<span class="go">921, 922, 923, 924, 925, 926,</span>
-<span class="go">931, 932, 933, 934, 935, 936,</span>
-<span class="go">941, 942, 943, 944, 945, 946,</span>
-<span class="go">951, 952, 953, 954, 955, 956,</span>
-<span class="go">961, 962, 963, 964, 965, 966,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets the strictly lower triangle (without the diagonal) of A to B</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_strictly_lower_triangle</span><span class="p">(</span><span class="n">B</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go"> 11,  12,  13,  14,  15,  16,</span>
-<span class="go">921,  22,  23,  24,  25,  26,</span>
-<span class="go">931, 932,  33,  34,  35,  36,</span>
-<span class="go">941, 942, 943,  44,  45,  46,</span>
-<span class="go">951, 952, 953, 954,  55,  56,</span>
-<span class="go">961, 962, 963, 964, 965,  66,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="getting-and-setting-the-strictly-upper-triangle">
-<h2>Getting and setting the strictly upper triangle<a class="headerlink" href="#getting-and-setting-the-strictly-upper-triangle" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.GetStrictlyUpperTriangle">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetStrictlyUpperTriangle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetStrictlyUpperTriangle" title="Link to this definition">#</a></dt>
-<dd><p>Gets the strictly upper triangle (without the diagonal).</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11, 12, 13, 14, 15, 16,</span>
-<span class="go">21, 22, 23, 24, 25, 26,</span>
-<span class="go">31, 32, 33, 34, 35, 36,</span>
-<span class="go">41, 42, 43, 44, 45, 46,</span>
-<span class="go">51, 52, 53, 54, 55, 56,</span>
-<span class="go">61, 62, 63, 64, 65, 66,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># gets the strictly upper triangle (without the diagonal)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">strictly_upper_triangle</span><span class="p">();</span> <span class="n">b1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span>
-<span class="go">b1:</span>
-<span class="go"> 0, 12, 13, 14, 15, 16,</span>
-<span class="go"> 0,  0, 23, 24, 25, 26,</span>
-<span class="go"> 0,  0,  0, 34, 35, 36,</span>
-<span class="go"> 0,  0,  0,  0, 45, 46,</span>
-<span class="go"> 0,  0,  0,  0,  0, 56,</span>
-<span class="go"> 0,  0,  0,  0,  0,  0,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.SetStrictlyUpperTriangle">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetStrictlyUpperTriangle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetStrictlyUpperTriangle" title="Link to this definition">#</a></dt>
-<dd><p>Sets the strictly upper triangle (without the diagonal)  to <em>matB</em>: <code class="docutils literal notranslate"><span class="pre">set_strictly_upper_triangle(matB)</span></code>.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># read and display another matrix, B</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">B</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableB6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">B</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
-<span class="go">B:</span>
-<span class="go">911, 912, 913, 914, 915, 916,</span>
-<span class="go">921, 922, 923, 924, 925, 926,</span>
-<span class="go">931, 932, 933, 934, 935, 936,</span>
-<span class="go">941, 942, 943, 944, 945, 946,</span>
-<span class="go">951, 952, 953, 954, 955, 956,</span>
-<span class="go">961, 962, 963, 964, 965, 966,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets the strictly upper triangle (without the diagonal) of A to B</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_strictly_upper_triangle</span><span class="p">(</span><span class="n">B</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go"> 11, 912, 913, 914, 915, 916,</span>
-<span class="go"> 21,  22, 923, 924, 925, 926,</span>
-<span class="go"> 31,  32,  33, 934, 935, 936,</span>
-<span class="go"> 41,  42,  43,  44, 945, 946,</span>
-<span class="go"> 51,  52,  53,  54,  55, 956,</span>
-<span class="go"> 61,  62,  63,  64,  65,  66,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="getting-and-setting-the-unit-lower-triangle">
-<h2>Getting and setting the unit lower triangle<a class="headerlink" href="#getting-and-setting-the-unit-lower-triangle" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.GetUnitLowerTriangle">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetUnitLowerTriangle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetUnitLowerTriangle" title="Link to this definition">#</a></dt>
-<dd><p>Gets the unit lower triangle (returning 1s for the diagonal).</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11, 12, 13, 14, 15, 16,</span>
-<span class="go">21, 22, 23, 24, 25, 26,</span>
-<span class="go">31, 32, 33, 34, 35, 36,</span>
-<span class="go">41, 42, 43, 44, 45, 46,</span>
-<span class="go">51, 52, 53, 54, 55, 56,</span>
-<span class="go">61, 62, 63, 64, 65, 66,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># gets the unit lower triangle (without the diagonal)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">unit_lower_triangle</span><span class="p">();</span> <span class="n">b1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span>
-<span class="go">b1:</span>
-<span class="go"> 1,  0,  0,  0,  0,  0,</span>
-<span class="go">21,  1,  0,  0,  0,  0,</span>
-<span class="go">31, 32,  1,  0,  0,  0,</span>
-<span class="go">41, 42, 43,  1,  0,  0,</span>
-<span class="go">51, 52, 53, 54,  1,  0,</span>
-<span class="go">61, 62, 63, 64, 65,  1,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.SetUnitLowerTriangle">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetUnitLowerTriangle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetUnitLowerTriangle" title="Link to this definition">#</a></dt>
-<dd><p>Sets the unit lower triangle (without changing the diagonal)  to <em>matB</em>.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># continued from above</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># read and display another matrix, B</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">B</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableB6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">B</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
-<span class="go">B:</span>
-<span class="go">911, 912, 913, 914, 915, 916,</span>
-<span class="go">921, 922, 923, 924, 925, 926,</span>
-<span class="go">931, 932, 933, 934, 935, 936,</span>
-<span class="go">941, 942, 943, 944, 945, 946,</span>
-<span class="go">951, 952, 953, 954, 955, 956,</span>
-<span class="go">961, 962, 963, 964, 965, 966,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets the unit lower triangle (without the diagonal) of A to B</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_unit_lower_triangle</span><span class="p">(</span><span class="n">B</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go"> 11,  12,  13,  14,  15,  16,</span>
-<span class="go">921,  22,  23,  24,  25,  26,</span>
-<span class="go">931, 932,  33,  34,  35,  36,</span>
-<span class="go">941, 942, 943,  44,  45,  46,</span>
-<span class="go">951, 952, 953, 954,  55,  56,</span>
-<span class="go">961, 962, 963, 964, 965,  66,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="getting-and-setting-the-unit-upper-triangle">
-<h2>Getting and setting the unit upper triangle<a class="headerlink" href="#getting-and-setting-the-unit-upper-triangle" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.GetUnitUpperTriangle">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">GetUnitUpperTriangle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.GetUnitUpperTriangle" title="Link to this definition">#</a></dt>
-<dd><p>Gets the unit upper triangle (returning 1s for the diagonal).</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11, 12, 13, 14, 15, 16,</span>
-<span class="go">21, 22, 23, 24, 25, 26,</span>
-<span class="go">31, 32, 33, 34, 35, 36,</span>
-<span class="go">41, 42, 43, 44, 45, 46,</span>
-<span class="go">51, 52, 53, 54, 55, 56,</span>
-<span class="go">61, 62, 63, 64, 65, 66,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># gets the unit upper triangle (without the diagonal)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">unit_upper_triangle</span><span class="p">();</span> <span class="n">b1</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;b1&quot;</span><span class="p">)</span>
-<span class="go">b1:</span>
-<span class="go"> 1, 12, 13, 14, 15, 16,</span>
-<span class="go"> 0,  1, 23, 24, 25, 26,</span>
-<span class="go"> 0,  0,  1, 34, 35, 36,</span>
-<span class="go"> 0,  0,  0,  1, 45, 46,</span>
-<span class="go"> 0,  0,  0,  0,  1, 56,</span>
-<span class="go"> 0,  0,  0,  0,  0,  1,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.SetUnitUpperTriangle">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SetUnitUpperTriangle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SetUnitUpperTriangle" title="Link to this definition">#</a></dt>
-<dd><p>Sets the unit upper triangle (without changing the diagonal)  to <em>matB</em>.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># read and display another matrix, B</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">B</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableB6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">B</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
-<span class="go">B:</span>
-<span class="go">911, 912, 913, 914, 915, 916,</span>
-<span class="go">921, 922, 923, 924, 925, 926,</span>
-<span class="go">931, 932, 933, 934, 935, 936,</span>
-<span class="go">941, 942, 943, 944, 945, 946,</span>
-<span class="go">951, 952, 953, 954, 955, 956,</span>
-<span class="go">961, 962, 963, 964, 965, 966,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sets the unit upper triangle (without the diagonal) of A to B</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">set_unit_upper_triangle</span><span class="p">(</span><span class="n">B</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go"> 11, 912, 913, 914, 915, 916,</span>
-<span class="go"> 21,  22, 923, 924, 925, 926,</span>
-<span class="go"> 31,  32,  33, 934, 935, 936,</span>
-<span class="go"> 41,  42,  43,  44, 945, 946,</span>
-<span class="go"> 51,  52,  53,  54,  55, 956,</span>
-<span class="go"> 61,  62,  63,  64,  65,  66,</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -2105,104 +1258,29 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-matrix-coefficient">Getting and setting a matrix coefficient</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block">Getting and setting a block</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_get_block"><code class="docutils literal notranslate"><span class="pre">ctx.mat_get_block()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_set_block"><code class="docutils literal notranslate"><span class="pre">ctx.mat_set_block()</span></code></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-matrix-row">Getting and setting a matrix row</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetRow"><code class="docutils literal notranslate"><span class="pre">mat.GetRow()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetRow"><code class="docutils literal notranslate"><span class="pre">mat.SetRow()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_get_row"><code class="docutils literal notranslate"><span class="pre">ctx.mat_get_row()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_set_row"><code class="docutils literal notranslate"><span class="pre">ctx.mat_set_row()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-matrix-column">Getting and setting a matrix column</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetCol"><code class="docutils literal notranslate"><span class="pre">mat.GetCol()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetCol"><code class="docutils literal notranslate"><span class="pre">mat.SetCol()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block">Getting and setting a block</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetBlock"><code class="docutils literal notranslate"><span class="pre">mat.GetBlock()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetBlock"><code class="docutils literal notranslate"><span class="pre">mat.SetBlock()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block-in-the-top-left-corner">Getting and setting a block in the top left corner</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetTopLeftCorner"><code class="docutils literal notranslate"><span class="pre">mat.GetTopLeftCorner()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetTopLeftCorner"><code class="docutils literal notranslate"><span class="pre">mat.SetTopLeftCorner()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block-in-the-bottom-left-corner">Getting and setting a block in the bottom left corner</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetBottomLeftCorner"><code class="docutils literal notranslate"><span class="pre">mat.GetBottomLeftCorner()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetBottomLeftCorner"><code class="docutils literal notranslate"><span class="pre">mat.SetBottomLeftCorner()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block-in-the-top-right-corner">Getting and setting a block in the top right corner</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetTopRightCorner"><code class="docutils literal notranslate"><span class="pre">mat.GetTopRightCorner()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetTopRightCorner"><code class="docutils literal notranslate"><span class="pre">mat.SetTopRightCorner()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block-in-the-bottom-right-corner">Getting and setting a block in the bottom right corner</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetBottomRightCorner"><code class="docutils literal notranslate"><span class="pre">mat.GetBottomRightCorner()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetBottomRightCorner"><code class="docutils literal notranslate"><span class="pre">mat.SetBottomRightCorner()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block-containing-the-first-q-rows">Getting and setting a block containing the first q rows</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetTopRows"><code class="docutils literal notranslate"><span class="pre">mat.GetTopRows()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetTopRows"><code class="docutils literal notranslate"><span class="pre">mat.SetTopRows()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block-containing-the-last-q-rows">Getting and setting a block containing the last q rows</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetBottomRows"><code class="docutils literal notranslate"><span class="pre">mat.GetBottomRows()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetBottomRows"><code class="docutils literal notranslate"><span class="pre">mat.SetBottomRows()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block-containing-the-first-p-columns">Getting and setting a block containing the first p columns</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetLeftCols"><code class="docutils literal notranslate"><span class="pre">mat.GetLeftCols()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetLeftCols"><code class="docutils literal notranslate"><span class="pre">mat.SetLeftCols()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-block-containing-the-last-q-columns">Getting and setting a block containing the last q columns</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetRightCols"><code class="docutils literal notranslate"><span class="pre">mat.GetRightCols()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetRightCols"><code class="docutils literal notranslate"><span class="pre">mat.SetRightCols()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_get_col"><code class="docutils literal notranslate"><span class="pre">ctx.mat_get_col()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_set_col"><code class="docutils literal notranslate"><span class="pre">ctx.mat_set_col()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-diagonal">Getting and setting a diagonal</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetDiagonal"><code class="docutils literal notranslate"><span class="pre">mat.GetDiagonal()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetDiagonal"><code class="docutils literal notranslate"><span class="pre">mat.SetDiagonal()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_get_diagonal"><code class="docutils literal notranslate"><span class="pre">ctx.mat_get_diagonal()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_set_diagonal"><code class="docutils literal notranslate"><span class="pre">ctx.mat_set_diagonal()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-middle-rows">Getting and setting middle rows</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetMiddleRows"><code class="docutils literal notranslate"><span class="pre">mat.GetMiddleRows()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetMiddleRows"><code class="docutils literal notranslate"><span class="pre">mat.SetMiddleRows()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-middle-columns">Getting and setting middle columns</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetMiddleCols"><code class="docutils literal notranslate"><span class="pre">mat.GetMiddleCols()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetMiddleCols"><code class="docutils literal notranslate"><span class="pre">mat.SetMiddleCols()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-the-lower-triangle">Getting and setting the lower triangle</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetLowerTriangle"><code class="docutils literal notranslate"><span class="pre">mat.GetLowerTriangle()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetLowerTriangle"><code class="docutils literal notranslate"><span class="pre">mat.SetLowerTriangle()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-the-upper-triangle">Getting and setting the upper triangle</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetUpperTriangle"><code class="docutils literal notranslate"><span class="pre">mat.GetUpperTriangle()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetUpperTriangle"><code class="docutils literal notranslate"><span class="pre">mat.SetUpperTriangle()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-the-strictly-lower-triangle">Getting and setting the strictly lower triangle</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetStrictlyLowerTriangle"><code class="docutils literal notranslate"><span class="pre">mat.GetStrictlyLowerTriangle()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetStrictlyLowerTriangle"><code class="docutils literal notranslate"><span class="pre">mat.SetStrictlyLowerTriangle()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-the-strictly-upper-triangle">Getting and setting the strictly upper triangle</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetStrictlyUpperTriangle"><code class="docutils literal notranslate"><span class="pre">mat.GetStrictlyUpperTriangle()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetStrictlyUpperTriangle"><code class="docutils literal notranslate"><span class="pre">mat.SetStrictlyUpperTriangle()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-the-unit-lower-triangle">Getting and setting the unit lower triangle</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetUnitLowerTriangle"><code class="docutils literal notranslate"><span class="pre">mat.GetUnitLowerTriangle()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetUnitLowerTriangle"><code class="docutils literal notranslate"><span class="pre">mat.SetUnitLowerTriangle()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-the-unit-upper-triangle">Getting and setting the unit upper triangle</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.GetUnitUpperTriangle"><code class="docutils literal notranslate"><span class="pre">mat.GetUnitUpperTriangle()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SetUnitUpperTriangle"><code class="docutils literal notranslate"><span class="pre">mat.SetUnitUpperTriangle()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-setting-a-triangular-view">Getting and setting a triangular view</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_get_triangular_view"><code class="docutils literal notranslate"><span class="pre">ctx.mat_get_triangular_view()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_set_triangular_view"><code class="docutils literal notranslate"><span class="pre">ctx.mat_set_triangular_view()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -2238,7 +1316,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 16, 2026.
+  Last updated on Sep 17, 2026.
   <br/>
 </p>
   </div>

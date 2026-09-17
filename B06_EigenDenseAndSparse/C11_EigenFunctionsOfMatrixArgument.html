@@ -53,7 +53,7 @@
     <link rel="prev" title="Eigen decompositions of general square matrices" href="C09_GeneralEigensystems.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 17, 2026"/>
   </head>
   
   
@@ -908,35 +908,35 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-exponential">Matrix Exponential</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matA.Expm"><code class="docutils literal notranslate"><span class="pre">matA.Expm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_expm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_expm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-sine">Matrix Sine</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matA.Sinm"><code class="docutils literal notranslate"><span class="pre">matA.Sinm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_sinm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_sinm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-cosine">Matrix Cosine</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matA.Cosm"><code class="docutils literal notranslate"><span class="pre">matA.Cosm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_cosm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_cosm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-hyperbolic-sine">Matrix Hyperbolic Sine</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matA.Sinhm"><code class="docutils literal notranslate"><span class="pre">matA.Sinhm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_sinhm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_sinhm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-hyperbolic-cosine">Matrix Hyperbolic Cosine</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matA.Coshm"><code class="docutils literal notranslate"><span class="pre">matA.Coshm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_coshm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_coshm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-square-root">Matrix Square Root</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matA.Sqrtm"><code class="docutils literal notranslate"><span class="pre">matA.Sqrtm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_sqrtm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_sqrtm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-logarithm">Matrix Logarithm</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matA.Logm"><code class="docutils literal notranslate"><span class="pre">matA.Logm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_logm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_logm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-power">Matrix power</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.Powm"><code class="docutils literal notranslate"><span class="pre">mat.Powm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_powm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_powm()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -956,10 +956,11 @@ document.write(`
 <section id="matrix-exponential">
 <h2>Matrix Exponential<a class="headerlink" href="#matrix-exponential" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="matA.Expm">
-<span class="sig-prename descclassname"><span class="pre">matA.</span></span><span class="sig-name descname"><span class="pre">Expm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matA.Expm" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_expm">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_expm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_expm" title="Link to this definition">#</a></dt>
 <dd><p>Computes the matrix exponential of a square matrix <span class="math notranslate nohighlight">\(A\)</span>, which is defined by the power series  <span class="math notranslate nohighlight">\(\displaystyle  \exp(A) = I + A + \frac{A^2}{2!} + \frac{A^3}{3!} + \ldots\)</span></p>
-<p>See also:   Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1455</a>]</span>,  Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1247" title="Wikipedia. Matrix exponential. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_exponential.">1465</a>]</span>.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.Expm()</span></code> has the same effect</p>
+<p>See also:   Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1454</a>]</span>,  Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1247" title="Wikipedia. Matrix exponential. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_exponential.">1464</a>]</span>.</p>
 <p>See also: Eigen <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id553" title="Eigen Core Developers. Matrix functions module. Eigen, a C++ linear algebra library, 2023. [Online; accessed 22-July-2024]. URL: http://eigen.tuxfamily.org/dox/unsupported/group__MatrixFunctions__Module.html.">210</a>]</span>, Eigen <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id554" title="Eigen Core Developers. Matrix exponential. Eigen, a C++ linear algebra library, 2023. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/unsupported/group__MatrixFunctions__Module.html#matrixbase_exp.">209</a>]</span>.</p>
 <p>Basic examples:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
@@ -1013,10 +1014,11 @@ noncommuting matrices:</p>
 <section id="matrix-sine">
 <h2>Matrix Sine<a class="headerlink" href="#matrix-sine" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="matA.Sinm">
-<span class="sig-prename descclassname"><span class="pre">matA.</span></span><span class="sig-name descname"><span class="pre">Sinm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#matA.Sinm" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_sinm">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_sinm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_sinm" title="Link to this definition">#</a></dt>
 <dd><p>Calculates the sine function of the matrix.</p>
-<p>See also:   Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1455</a>]</span>,  Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1248" title="Wikipedia. Trigonometric functions of matrices. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions_of_matrices.">1473</a>]</span>.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.Sinm()</span></code> has the same effect</p>
+<p>See also:   Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1454</a>]</span>,  Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1248" title="Wikipedia. Trigonometric functions of matrices. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions_of_matrices.">1472</a>]</span>.</p>
 <p>See also: Eigen <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id553" title="Eigen Core Developers. Matrix functions module. Eigen, a C++ linear algebra library, 2023. [Online; accessed 22-July-2024]. URL: http://eigen.tuxfamily.org/dox/unsupported/group__MatrixFunctions__Module.html.">210</a>]</span>, Eigen <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id555" title="Eigen Core Developers. Matrix sine. Eigen, a C++ linear algebra library, 2023. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/unsupported/group__MatrixFunctions__Module.html#matrixbase_sin.">215</a>]</span>.</p>
 <p>The cosine of a square matrix <span class="math notranslate nohighlight">\(A\)</span> is defined in analogy with the matrix exponential.</p>
 <div class="math notranslate nohighlight">
@@ -1055,10 +1057,11 @@ noncommuting matrices:</p>
 <section id="matrix-cosine">
 <h2>Matrix Cosine<a class="headerlink" href="#matrix-cosine" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="matA.Cosm">
-<span class="sig-prename descclassname"><span class="pre">matA.</span></span><span class="sig-name descname"><span class="pre">Cosm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matA.Cosm" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_cosm">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_cosm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_cosm" title="Link to this definition">#</a></dt>
 <dd><p>Calculates the cosine function of the matrix.</p>
-<p>See also:   Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1455</a>]</span>,  Wikipedia <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1248" title="Wikipedia. Trigonometric functions of matrices. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions_of_matrices.">1473</a>]</span>.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.Cosm()</span></code> has the same effect</p>
+<p>See also:   Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1454</a>]</span>,  Wikipedia <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1248" title="Wikipedia. Trigonometric functions of matrices. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions_of_matrices.">1472</a>]</span>.</p>
 <p>See also: Eigen <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id553" title="Eigen Core Developers. Matrix functions module. Eigen, a C++ linear algebra library, 2023. [Online; accessed 22-July-2024]. URL: http://eigen.tuxfamily.org/dox/unsupported/group__MatrixFunctions__Module.html.">210</a>]</span>, Eigen <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id556" title="Eigen Core Developers. Matrix cosine. Eigen, a C++ linear algebra library, 2023. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/unsupported/group__MatrixFunctions__Module.html#matrixbase_cos.">208</a>]</span>.</p>
 <p>The cosine of a square matrix <span class="math notranslate nohighlight">\(A\)</span> is defined in analogy with the matrix exponential.</p>
 <div class="math notranslate nohighlight">
@@ -1098,10 +1101,11 @@ noncommuting matrices:</p>
 <section id="matrix-hyperbolic-sine">
 <h2>Matrix Hyperbolic Sine<a class="headerlink" href="#matrix-hyperbolic-sine" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="matA.Sinhm">
-<span class="sig-prename descclassname"><span class="pre">matA.</span></span><span class="sig-name descname"><span class="pre">Sinhm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matA.Sinhm" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_sinhm">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_sinhm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_sinhm" title="Link to this definition">#</a></dt>
 <dd><p>Calculates the hyperbolic sine function of the matrix.</p>
-<p>See also:   Wikipedia <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1455</a>]</span>,  Wikipedia <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id1248" title="Wikipedia. Trigonometric functions of matrices. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions_of_matrices.">1473</a>]</span>.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.Sinhm()</span></code> has the same effect</p>
+<p>See also:   Wikipedia <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1454</a>]</span>,  Wikipedia <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id1248" title="Wikipedia. Trigonometric functions of matrices. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions_of_matrices.">1472</a>]</span>.</p>
 <p>See also: Eigen <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id553" title="Eigen Core Developers. Matrix functions module. Eigen, a C++ linear algebra library, 2023. [Online; accessed 22-July-2024]. URL: http://eigen.tuxfamily.org/dox/unsupported/group__MatrixFunctions__Module.html.">210</a>]</span>, Eigen <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id557" title="Eigen Core Developers. Matrix hyperbolic sine. Eigen, a C++ linear algebra library, 2023. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/unsupported/group__MatrixFunctions__Module.html#matrixbase_sinh.">212</a>]</span>.</p>
 <p>The hyperbolic sine of a square matrix <span class="math notranslate nohighlight">\(A\)</span> is defined in analogy with the matrix exponential.</p>
 <div class="math notranslate nohighlight">
@@ -1161,11 +1165,12 @@ C * C - B * B:
 <section id="matrix-hyperbolic-cosine">
 <h2>Matrix Hyperbolic Cosine<a class="headerlink" href="#matrix-hyperbolic-cosine" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="matA.Coshm">
-<span class="sig-prename descclassname"><span class="pre">matA.</span></span><span class="sig-name descname"><span class="pre">Coshm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matA.Coshm" title="Link to this definition">#</a></dt>
-<dd><p>See also:   Wikipedia <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1455</a>]</span>,  Wikipedia <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id1248" title="Wikipedia. Trigonometric functions of matrices. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions_of_matrices.">1473</a>]</span>.</p>
+<dt class="sig sig-object py" id="ctx.mat_coshm">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_coshm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_coshm" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the hyperbolic cosine function of the matrix.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.Coshm()</span></code> has the same effect</p>
+<p>See also:   Wikipedia <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1454</a>]</span>,  Wikipedia <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id1248" title="Wikipedia. Trigonometric functions of matrices. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions_of_matrices.">1472</a>]</span>.</p>
 <p>See also: Eigen <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id553" title="Eigen Core Developers. Matrix functions module. Eigen, a C++ linear algebra library, 2023. [Online; accessed 22-July-2024]. URL: http://eigen.tuxfamily.org/dox/unsupported/group__MatrixFunctions__Module.html.">210</a>]</span>, Eigen <span id="id20">[<a class="reference internal" href="../99BackMatter/index.html#id558" title="Eigen Core Developers. Matrix hyberbolic cosine. Eigen, a C++ linear algebra library, 2023. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/unsupported/group__MatrixFunctions__Module.html#matrixbase_cosh.">211</a>]</span>.</p>
-<p>Calculates the hyperbolic cosine function of the matrix.</p>
 <p>The hyperbolic cosine of a square matrix <span class="math notranslate nohighlight">\(A\)</span> is defined in analogy with the matrix exponential.</p>
 <div class="math notranslate nohighlight">
 \[\cosh(A) =  \frac{e^{A} + e^{-A}}{2}\]</div>
@@ -1281,10 +1286,11 @@ C * C - B * B:
 <section id="matrix-square-root">
 <h2>Matrix Square Root<a class="headerlink" href="#matrix-square-root" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="matA.Sqrtm">
-<span class="sig-prename descclassname"><span class="pre">matA.</span></span><span class="sig-name descname"><span class="pre">Sqrtm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matA.Sqrtm" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_sqrtm">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_sqrtm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_sqrtm" title="Link to this definition">#</a></dt>
 <dd><p>Computes a square root of the square matrix <span class="math notranslate nohighlight">\(A\)</span>, i.e. returns a matrix <span class="math notranslate nohighlight">\(B = A^{1/2}\)</span> such that <span class="math notranslate nohighlight">\(B^2 = A\)</span>. The square root of a matrix, if it exists, is not unique.</p>
-<p>See also:   Wikipedia <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1455</a>]</span>,  Wikipedia <span id="id22">[<a class="reference internal" href="../99BackMatter/index.html#id1250" title="Wikipedia. Square root of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Square_root_of_a_matrix.">1472</a>]</span>.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.Sqrtm()</span></code> has the same effect</p>
+<p>See also:   Wikipedia <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1454</a>]</span>,  Wikipedia <span id="id22">[<a class="reference internal" href="../99BackMatter/index.html#id1250" title="Wikipedia. Square root of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Square_root_of_a_matrix.">1471</a>]</span>.</p>
 <p>See also: Eigen <span id="id23">[<a class="reference internal" href="../99BackMatter/index.html#id553" title="Eigen Core Developers. Matrix functions module. Eigen, a C++ linear algebra library, 2023. [Online; accessed 22-July-2024]. URL: http://eigen.tuxfamily.org/dox/unsupported/group__MatrixFunctions__Module.html.">210</a>]</span>, Eigen <span id="id24">[<a class="reference internal" href="../99BackMatter/index.html#id559" title="Eigen Core Developers. Matrix square root. Eigen, a C++ linear algebra library, 2023. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/unsupported/group__MatrixFunctions__Module.html#matrixbase_sqrt.">216</a>]</span>.</p>
 <p><strong>Examples</strong></p>
 <p>Square roots of some simple matrices:</p>
@@ -1384,10 +1390,11 @@ half-angle rotation matrix:</p>
 <section id="matrix-logarithm">
 <h2>Matrix Logarithm<a class="headerlink" href="#matrix-logarithm" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="matA.Logm">
-<span class="sig-prename descclassname"><span class="pre">matA.</span></span><span class="sig-name descname"><span class="pre">Logm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#matA.Logm" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_logm">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_logm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_logm" title="Link to this definition">#</a></dt>
 <dd><p>Calculates the logarithm of the matrix.</p>
-<p>See also:   Wikipedia <span id="id25">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1455</a>]</span>,  Wikipedia <span id="id26">[<a class="reference internal" href="../99BackMatter/index.html#id1249" title="Wikipedia. Logarithm of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Logarithm_of_a_matrix.">1463</a>]</span>.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.Logm()</span></code> has the same effect</p>
+<p>See also:   Wikipedia <span id="id25">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1454</a>]</span>,  Wikipedia <span id="id26">[<a class="reference internal" href="../99BackMatter/index.html#id1249" title="Wikipedia. Logarithm of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Logarithm_of_a_matrix.">1462</a>]</span>.</p>
 <p>See also: Eigen <span id="id27">[<a class="reference internal" href="../99BackMatter/index.html#id553" title="Eigen Core Developers. Matrix functions module. Eigen, a C++ linear algebra library, 2023. [Online; accessed 22-July-2024]. URL: http://eigen.tuxfamily.org/dox/unsupported/group__MatrixFunctions__Module.html.">210</a>]</span>, Eigen <span id="id28">[<a class="reference internal" href="../99BackMatter/index.html#id560" title="Eigen Core Developers. Matrix logarithm. Eigen, a C++ linear algebra library, 2023. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/unsupported/group__MatrixFunctions__Module.html#matrixbase_log.">213</a>]</span>.</p>
 <p>Computes a logarithm of the square matrix <span class="math notranslate nohighlight">\(A\)</span>, i.e. returns a matrix <span class="math notranslate nohighlight">\(B = \log(A)\)</span> such that <span class="math notranslate nohighlight">\(\exp(B) = A\)</span>.
 The logarithm of a matrix, if it exists, is not unique.</p>
@@ -1472,10 +1479,11 @@ the rotation:</p>
 <section id="matrix-power">
 <h2>Matrix power<a class="headerlink" href="#matrix-power" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.Powm">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">Powm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.Powm" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_powm">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_powm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_powm" title="Link to this definition">#</a></dt>
 <dd><p>Computes <span class="math notranslate nohighlight">\(A^r = \exp(A \log r)\)</span> for a matrix <span class="math notranslate nohighlight">\(A\)</span> and complex number <span class="math notranslate nohighlight">\(r\)</span>.</p>
-<p>See also:   Wikipedia <span id="id29">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1455</a>]</span>,  Wikipedia <span id="id30">[<a class="reference internal" href="../99BackMatter/index.html#id1247" title="Wikipedia. Matrix exponential. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_exponential.">1465</a>]</span>,  Wikipedia <span id="id31">[<a class="reference internal" href="../99BackMatter/index.html#id1249" title="Wikipedia. Logarithm of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Logarithm_of_a_matrix.">1463</a>]</span>.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.Powm(r)</span></code> has the same effect</p>
+<p>See also:   Wikipedia <span id="id29">[<a class="reference internal" href="../99BackMatter/index.html#id1246" title="Wikipedia. Analytic function of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Analytic_function_of_a_matrix.">1454</a>]</span>,  Wikipedia <span id="id30">[<a class="reference internal" href="../99BackMatter/index.html#id1247" title="Wikipedia. Matrix exponential. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_exponential.">1464</a>]</span>,  Wikipedia <span id="id31">[<a class="reference internal" href="../99BackMatter/index.html#id1249" title="Wikipedia. Logarithm of a matrix. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Logarithm_of_a_matrix.">1462</a>]</span>.</p>
 <p>See also: Eigen <span id="id32">[<a class="reference internal" href="../99BackMatter/index.html#id553" title="Eigen Core Developers. Matrix functions module. Eigen, a C++ linear algebra library, 2023. [Online; accessed 22-July-2024]. URL: http://eigen.tuxfamily.org/dox/unsupported/group__MatrixFunctions__Module.html.">210</a>]</span>, Eigen <span id="id33">[<a class="reference internal" href="../99BackMatter/index.html#id561" title="Eigen Core Developers. Matrix raised to arbitrary real power. Eigen, a C++ linear algebra library, 2023. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/unsupported/group__MatrixFunctions__Module.html#matrixbase_pow.">214</a>]</span>.</p>
 <p><strong>Examples</strong></p>
 <p>Powers and inverse powers of a matrix:</p>
@@ -1573,35 +1581,35 @@ the rotation:</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-exponential">Matrix Exponential</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matA.Expm"><code class="docutils literal notranslate"><span class="pre">matA.Expm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_expm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_expm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-sine">Matrix Sine</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matA.Sinm"><code class="docutils literal notranslate"><span class="pre">matA.Sinm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_sinm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_sinm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-cosine">Matrix Cosine</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matA.Cosm"><code class="docutils literal notranslate"><span class="pre">matA.Cosm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_cosm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_cosm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-hyperbolic-sine">Matrix Hyperbolic Sine</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matA.Sinhm"><code class="docutils literal notranslate"><span class="pre">matA.Sinhm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_sinhm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_sinhm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-hyperbolic-cosine">Matrix Hyperbolic Cosine</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matA.Coshm"><code class="docutils literal notranslate"><span class="pre">matA.Coshm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_coshm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_coshm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-square-root">Matrix Square Root</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matA.Sqrtm"><code class="docutils literal notranslate"><span class="pre">matA.Sqrtm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_sqrtm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_sqrtm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-logarithm">Matrix Logarithm</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matA.Logm"><code class="docutils literal notranslate"><span class="pre">matA.Logm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_logm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_logm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-power">Matrix power</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.Powm"><code class="docutils literal notranslate"><span class="pre">mat.Powm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_powm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_powm()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1637,7 +1645,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 16, 2026.
+  Last updated on Sep 17, 2026.
   <br/>
 </p>
   </div>

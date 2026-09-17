@@ -53,7 +53,7 @@
     <link rel="prev" title="Eigen: Dense and Sparse Matrices" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 17, 2026"/>
   </head>
   
   
@@ -908,39 +908,39 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-matrix-and-converting-from-compatible-data-types">Creating a matrix, and converting from compatible data types</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxEigen.MatT"><code class="docutils literal notranslate"><span class="pre">CtxEigen.MatT()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_t"><code class="docutils literal notranslate"><span class="pre">ctx.mat_t()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-matrix-of-zeros">Creating a matrix of zeros</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxEigen.MatZeros"><code class="docutils literal notranslate"><span class="pre">CtxEigen.MatZeros()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_zeros"><code class="docutils literal notranslate"><span class="pre">ctx.mat_zeros()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-matrix-of-ones">Creating a matrix of ones</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxEigen.MatOnes"><code class="docutils literal notranslate"><span class="pre">CtxEigen.MatOnes()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_ones"><code class="docutils literal notranslate"><span class="pre">ctx.mat_ones()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-an-identity-matrix">Creating an identity matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxEigen.MatIdentity"><code class="docutils literal notranslate"><span class="pre">CtxEigen.MatIdentity()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-matrix-with-linearly-increasing-values">Creating a matrix with linearly increasing values</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxEigen.MatLinspace"><code class="docutils literal notranslate"><span class="pre">CtxEigen.MatLinspace()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_identity"><code class="docutils literal notranslate"><span class="pre">ctx.mat_identity()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-general-random-matrix">Creating a general random matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxEigen.MatRandom"><code class="docutils literal notranslate"><span class="pre">CtxEigen.MatRandom()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_random"><code class="docutils literal notranslate"><span class="pre">ctx.mat_random()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-symmetric-random-matrix">Creating a symmetric random matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxEigen.MatRandomSymmetric"><code class="docutils literal notranslate"><span class="pre">CtxEigen.MatRandomSymmetric()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_random_symmetric"><code class="docutils literal notranslate"><span class="pre">ctx.mat_random_symmetric()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-self-adjoint-random-matrix">Creating a self-adjoint random matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxEigen.MatRandomHermitian"><code class="docutils literal notranslate"><span class="pre">CtxEigen.MatRandomHermitian()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_random_selfadjoint"><code class="docutils literal notranslate"><span class="pre">ctx.mat_random_selfadjoint()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-positive-definite-self-adjoint-matrix">Creating a positive definite self-adjoint matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxEigen.MatRandomPosDefinite"><code class="docutils literal notranslate"><span class="pre">CtxEigen.MatRandomPosDefinite()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_random_selfadjoint_posdef"><code class="docutils literal notranslate"><span class="pre">ctx.mat_random_selfadjoint_posdef()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-matrix-with-linearly-increasing-values">Creating a matrix with linearly increasing values</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_fill_linear"><code class="docutils literal notranslate"><span class="pre">ctx.mat_fill_linear()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -959,17 +959,17 @@ document.write(`
 <section id="creating-a-matrix-and-converting-from-compatible-data-types">
 <h2>Creating a matrix, and converting from compatible data types<a class="headerlink" href="#creating-a-matrix-and-converting-from-compatible-data-types" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="CtxEigen.MatT">
-<span class="sig-prename descclassname"><span class="pre">CtxEigen.</span></span><span class="sig-name descname"><span class="pre">MatT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CtxEigen.MatT" title="Link to this definition">#</a></dt>
-<dd><p>Creates a real or complex matrix of the data type corresponding to the context.</p>
+<dt class="sig sig-object py" id="ctx.mat_t">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_t</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_t" title="Link to this definition">#</a></dt>
+<dd><p>Converts from a real scalar of type dreal</p>
 </dd></dl>
 
 </section>
 <section id="creating-a-matrix-of-zeros">
 <h2>Creating a matrix of zeros<a class="headerlink" href="#creating-a-matrix-of-zeros" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="CtxEigen.MatZeros">
-<span class="sig-prename descclassname"><span class="pre">CtxEigen.</span></span><span class="sig-name descname"><span class="pre">MatZeros</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CtxEigen.MatZeros" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_zeros">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_zeros</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_zeros" title="Link to this definition">#</a></dt>
 <dd><p>Creates a <span class="math notranslate nohighlight">\(n \times m\)</span> matrix of the indicated type and sets all entries to zero.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">4</span>
@@ -988,8 +988,8 @@ document.write(`
 <section id="creating-a-matrix-of-ones">
 <h2>Creating a matrix of ones<a class="headerlink" href="#creating-a-matrix-of-ones" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="CtxEigen.MatOnes">
-<span class="sig-prename descclassname"><span class="pre">CtxEigen.</span></span><span class="sig-name descname"><span class="pre">MatOnes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CtxEigen.MatOnes" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_ones">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_ones</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_ones" title="Link to this definition">#</a></dt>
 <dd><p>Creates a <span class="math notranslate nohighlight">\(n \times m\)</span> matrix of the indicated type and sets all entries to one.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">4</span>
@@ -1008,8 +1008,8 @@ document.write(`
 <section id="creating-an-identity-matrix">
 <h2>Creating an identity matrix<a class="headerlink" href="#creating-an-identity-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="CtxEigen.MatIdentity">
-<span class="sig-prename descclassname"><span class="pre">CtxEigen.</span></span><span class="sig-name descname"><span class="pre">MatIdentity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CtxEigen.MatIdentity" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_identity">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_identity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_identity" title="Link to this definition">#</a></dt>
 <dd><p>Creates a <span class="math notranslate nohighlight">\(n \times m\)</span> identity matrix of the indicated type.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">4</span>
@@ -1025,31 +1025,11 @@ document.write(`
 </dd></dl>
 
 </section>
-<section id="creating-a-matrix-with-linearly-increasing-values">
-<h2>Creating a matrix with linearly increasing values<a class="headerlink" href="#creating-a-matrix-with-linearly-increasing-values" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="CtxEigen.MatLinspace">
-<span class="sig-prename descclassname"><span class="pre">CtxEigen.</span></span><span class="sig-name descname"><span class="pre">MatLinspace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CtxEigen.MatLinspace" title="Link to this definition">#</a></dt>
-<dd><p>Creates a <span class="math notranslate nohighlight">\(n \times m\)</span> matrix of the indicated type and sets all entries to incresing values <span class="math notranslate nohighlight">\(x\)</span>.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">matA</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">mat_fill_linear</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">matA</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;matA, mat_fill_linear(n) :&quot;</span><span class="p">)</span>
-<span class="go">matA, mat_fill_linear(n) :</span>
-<span class="go"> 0,  0,  0,  0,</span>
-<span class="go"> 0,  0,  0,  0,</span>
-<span class="go"> 0,  0,  0,  0,</span>
-<span class="go"> 0,  0,  0,  0,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
 <section id="creating-a-general-random-matrix">
 <h2>Creating a general random matrix<a class="headerlink" href="#creating-a-general-random-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="CtxEigen.MatRandom">
-<span class="sig-prename descclassname"><span class="pre">CtxEigen.</span></span><span class="sig-name descname"><span class="pre">MatRandom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CtxEigen.MatRandom" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_random">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_random</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_random" title="Link to this definition">#</a></dt>
 <dd><p>Creates a <span class="math notranslate nohighlight">\(n \times m\)</span> matrix of the indicated type and sets all entries to random values.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">4</span>
@@ -1068,14 +1048,14 @@ document.write(`
 <section id="creating-a-symmetric-random-matrix">
 <h2>Creating a symmetric random matrix<a class="headerlink" href="#creating-a-symmetric-random-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="CtxEigen.MatRandomSymmetric">
-<span class="sig-prename descclassname"><span class="pre">CtxEigen.</span></span><span class="sig-name descname"><span class="pre">MatRandomSymmetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CtxEigen.MatRandomSymmetric" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_random_symmetric">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_random_symmetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_random_symmetric" title="Link to this definition">#</a></dt>
 <dd><p>Creates a <span class="math notranslate nohighlight">\(n \times n\)</span> symmetric matrix of the indicated type and sets all entries to random values.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">matA</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">mat_random_sym</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">matA</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;matA, mat_random_sym(n) :&quot;</span><span class="p">)</span>
-<span class="go">matA, mat_random_sym(n) :</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matA</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">mat_random_symmetric</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matA</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;matA, mat_random_symmetric(n) :&quot;</span><span class="p">)</span>
+<span class="go">matA, mat_random_symmetric(n) :</span>
 <span class="go"> 0.23816644795068,  0.53633228553118,  0.17514572588275,  0.43491927854244,</span>
 <span class="go"> 0.53633228553118,  1.1423688467055,  1.2648091067232,  1.2148503067110,</span>
 <span class="go"> 0.17514572588275,  1.2648091067232,  0.90157780693990,  1.1354411450545,</span>
@@ -1088,9 +1068,9 @@ document.write(`
 <section id="creating-a-self-adjoint-random-matrix">
 <h2>Creating a self-adjoint random matrix<a class="headerlink" href="#creating-a-self-adjoint-random-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="CtxEigen.MatRandomHermitian">
-<span class="sig-prename descclassname"><span class="pre">CtxEigen.</span></span><span class="sig-name descname"><span class="pre">MatRandomHermitian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CtxEigen.MatRandomHermitian" title="Link to this definition">#</a></dt>
-<dd><p>Creates a <span class="math notranslate nohighlight">\(n \times n\)</span> hermitian matrix of the indicated type and sets all entries to random values.</p>
+<dt class="sig sig-object py" id="ctx.mat_random_selfadjoint">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_random_selfadjoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_random_selfadjoint" title="Link to this definition">#</a></dt>
+<dd><p>Creates a <span class="math notranslate nohighlight">\(n \times n\)</span> selfadjoint matrix of the indicated type and sets all entries to random values.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">matA</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">mat_random_sa</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
@@ -1108,8 +1088,8 @@ document.write(`
 <section id="creating-a-positive-definite-self-adjoint-matrix">
 <h2>Creating a positive definite self-adjoint matrix<a class="headerlink" href="#creating-a-positive-definite-self-adjoint-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="CtxEigen.MatRandomPosDefinite">
-<span class="sig-prename descclassname"><span class="pre">CtxEigen.</span></span><span class="sig-name descname"><span class="pre">MatRandomPosDefinite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#CtxEigen.MatRandomPosDefinite" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_random_selfadjoint_posdef">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_random_selfadjoint_posdef</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_random_selfadjoint_posdef" title="Link to this definition">#</a></dt>
 <dd><p>Creates a <span class="math notranslate nohighlight">\(n \times n\)</span> positive definite random matrix of the indicated type.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">4</span>
@@ -1120,6 +1100,26 @@ document.write(`
 <span class="go"> 0.37328104299787,  0.23220359390837,  0.27432857744706,  0.35913470470614,</span>
 <span class="go"> 0.64671931578811,  0.27432857744706,  0.55785829596540,  0.52838216584663,</span>
 <span class="go"> 1.0725029543798,  0.35913470470614,  0.52838216584663,  1.4188647561723,</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="creating-a-matrix-with-linearly-increasing-values">
+<h2>Creating a matrix with linearly increasing values<a class="headerlink" href="#creating-a-matrix-with-linearly-increasing-values" title="Link to this heading">#</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="ctx.mat_fill_linear">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_fill_linear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_fill_linear" title="Link to this definition">#</a></dt>
+<dd><p>Creates a <span class="math notranslate nohighlight">\(n \times m\)</span> matrix of the indicated type and sets all entries to increasing values.</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matA</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">mat_linspace</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matA</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;matA, mat_linspace(n, m, x) :&quot;</span><span class="p">)</span>
+<span class="go">matA, mat_linspace(n, m, x) :</span>
+<span class="go"> 0,  0,  0,  0,</span>
+<span class="go"> 0,  0,  0,  0,</span>
+<span class="go"> 0,  0,  0,  0,</span>
+<span class="go"> 0,  0,  0,  0,</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1173,39 +1173,39 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-matrix-and-converting-from-compatible-data-types">Creating a matrix, and converting from compatible data types</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxEigen.MatT"><code class="docutils literal notranslate"><span class="pre">CtxEigen.MatT()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_t"><code class="docutils literal notranslate"><span class="pre">ctx.mat_t()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-matrix-of-zeros">Creating a matrix of zeros</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxEigen.MatZeros"><code class="docutils literal notranslate"><span class="pre">CtxEigen.MatZeros()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_zeros"><code class="docutils literal notranslate"><span class="pre">ctx.mat_zeros()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-matrix-of-ones">Creating a matrix of ones</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxEigen.MatOnes"><code class="docutils literal notranslate"><span class="pre">CtxEigen.MatOnes()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_ones"><code class="docutils literal notranslate"><span class="pre">ctx.mat_ones()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-an-identity-matrix">Creating an identity matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxEigen.MatIdentity"><code class="docutils literal notranslate"><span class="pre">CtxEigen.MatIdentity()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-matrix-with-linearly-increasing-values">Creating a matrix with linearly increasing values</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxEigen.MatLinspace"><code class="docutils literal notranslate"><span class="pre">CtxEigen.MatLinspace()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_identity"><code class="docutils literal notranslate"><span class="pre">ctx.mat_identity()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-general-random-matrix">Creating a general random matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxEigen.MatRandom"><code class="docutils literal notranslate"><span class="pre">CtxEigen.MatRandom()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_random"><code class="docutils literal notranslate"><span class="pre">ctx.mat_random()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-symmetric-random-matrix">Creating a symmetric random matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxEigen.MatRandomSymmetric"><code class="docutils literal notranslate"><span class="pre">CtxEigen.MatRandomSymmetric()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_random_symmetric"><code class="docutils literal notranslate"><span class="pre">ctx.mat_random_symmetric()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-self-adjoint-random-matrix">Creating a self-adjoint random matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxEigen.MatRandomHermitian"><code class="docutils literal notranslate"><span class="pre">CtxEigen.MatRandomHermitian()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_random_selfadjoint"><code class="docutils literal notranslate"><span class="pre">ctx.mat_random_selfadjoint()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-positive-definite-self-adjoint-matrix">Creating a positive definite self-adjoint matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#CtxEigen.MatRandomPosDefinite"><code class="docutils literal notranslate"><span class="pre">CtxEigen.MatRandomPosDefinite()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_random_selfadjoint_posdef"><code class="docutils literal notranslate"><span class="pre">ctx.mat_random_selfadjoint_posdef()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-matrix-with-linearly-increasing-values">Creating a matrix with linearly increasing values</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_fill_linear"><code class="docutils literal notranslate"><span class="pre">ctx.mat_fill_linear()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1241,7 +1241,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 16, 2026.
+  Last updated on Sep 17, 2026.
   <br/>
 </p>
   </div>

@@ -22,9 +22,13 @@ Singular Value and Eigen (selfadjoint) decompositions
 Singular Value Decomposition, only singular values
 -----------------------------------------------------------------------------------------------
 
-.. method:: mat.JacobiSVD(Query, , matB=None, threshold=0, preconditioner="ColPivQR")
+.. method:: ctx.mat_jacobi_svd(matA, Query, matB=None, threshold=0, preconditioner="ColPivQR")
+
 
     Returns the two-sided Jacobi SVD decomposition of a rectangular matrix.
+
+    Writing ``matA.JacobiSVD(Query, matB=None, threshold=0, preconditioner="ColPivQR")`` has the same effect
+
 
     See also:  Wikipedia :cite:p:`WikipediaMat109`.
 
@@ -223,10 +227,12 @@ Example for a complex matrix: only singular values
 Singular Value Decomposition, singular values and thin singular vectors
 -----------------------------------------------------------------------------------------------
 
-.. method:: mat.JacobiThinSVD(Query, , matB=None, threshold=0, preconditioner="ColPivQR")
+.. method:: ctx.mat_jacobi_thin_svd(matA, Query, matB=None, threshold=0, preconditioner="ColPivQR")
 
 
     Returns the two-sided Jacobi SVD decomposition of a rectangular matrix.
+
+    Writing ``matA.JacobiThinSVD(Query, matB=None, threshold=0, preconditioner="ColPivQR")`` has the same effect
 
     See also:  Wikipedia :cite:p:`WikipediaMat109`,  Wikipedia :cite:p:`WikipediaMat104a`.
 
@@ -583,10 +589,12 @@ Example for a complex matrix: the singular values, pseudoinverse and thin singul
 Singular Value Decomposition, singular values and full singular vectors
 -----------------------------------------------------------------------------------------------
 
-.. method:: mat.JacobiFullSVD(Query, matB=None, threshold=0, preconditioner="ColPivQR")
+.. method:: ctx.mat_jacobi_full_svd(matA, Query, matB=None, threshold=0, preconditioner="ColPivQR")
 
 
     Returns the two-sided Jacobi SVD decomposition of a rectangular matrix.
+
+    Writing ``matA.JacobiFullSVD(Query, matB=None, threshold=0, preconditioner="ColPivQR")`` has the same effect
 
     See also Eigen :cite:p:`EigenMat109`,  Wikipedia :cite:p:`WikipediaMat109`,  Wikipedia :cite:p:`WikipediaMat104a`,  Wikipedia :cite:p:`WikipediaMat130`.
 
@@ -981,10 +989,12 @@ Example for a complex matrix: the singular values, pseudoinverse and full singul
 Symmetric/Hermitian Eigensystem, only eigen values
 ------------------------------------------------------------
 
-.. method:: mat.SelfAdjointEigenValues(Query)
+.. method:: ctx.mat_self_adjoint_eigen_values(matA, Query)
 
 
     Returns the eigendecomposition of the symmetric/hermitian matrix *matA* `=A`.
+
+    Writing ``matA.SelfAdjointEigenValues(Query)`` has the same effect
 
 
     See also Eigen :cite:p:`EigenMat110`,  Wikipedia :cite:p:`WikipediaMat112`,  Wikipedia :cite:p:`WikipediaMat112a`,  Wikipedia :cite:p:`WikipediaMat130`.
@@ -1135,10 +1145,12 @@ Example for a hermitian matrix: only eigenvalues
 Symmetric/Hermitian Eigensystem, eigenvalues and eigenvectors
 -----------------------------------------------------------------
 
-.. method:: mat.SelfAdjointEigenSystem(Query)
+.. method:: ctx.mat_self_adjoint_eigen_system(matA, Query)
 
 
     Returns the eigendecomposition of the symmetric/hermitian matrix *matA* `=A`.
+
+    Writing ``matA.SelfAdjointEigenSystem(Query)`` has the same effect
 
 
     See also Eigen :cite:p:`EigenMat110`,  Wikipedia :cite:p:`WikipediaMat112`,  Wikipedia :cite:p:`WikipediaMat112a`,  Wikipedia :cite:p:`WikipediaMat130`.
@@ -1423,10 +1435,12 @@ Example for a hermitian matrix: eigenvalues and eigenvectors
 Generalized Selfadjoint Eigensystem, only eigenvalues
 --------------------------------------------------------
 
-.. method:: mat.GeneralizedSelfAdjointEigenValues(Query)
+.. method:: ctx.mat_generalized_self_adjoint_eigen_values(matA, Query)
 
 
     Returns the eigendecomposition of a generalized selfadjoint eigensystem.
+
+    Writing ``matA.GeneralizedSelfAdjointEigenValues(Query)`` has the same effect
 
 
     See also Eigen :cite:p:`EigenMat122`,  Wikipedia :cite:p:`WikipediaMat123`,  Wikipedia :cite:p:`WikipediaMat130`,  Wikipedia :cite:p:`WikipediaMat112b`.
@@ -1618,10 +1632,12 @@ Example for a hermitian matrix: eigenvalues only
 Generalized Selfadjoint Eigensystem: eigenvalues and eigenvectors
 ------------------------------------------------------------------------------
 
-.. method:: mat.GeneralizedSelfAdjointEigenSystem(Query)
+.. method:: ctx.mat_generalized_self_adjoint_eigen_system(matA, Query)
 
 
     Returns the eigendecomposition of a generalized selfadjoint eigensystem.
+
+    Writing ``matA.GeneralizedSelfAdjointEigenSystem(Query)`` has the same effect
 
 
     See also Eigen :cite:p:`EigenMat122`,  Wikipedia :cite:p:`WikipediaMat123`,  Wikipedia :cite:p:`WikipediaMat130`,  Wikipedia :cite:p:`WikipediaMat112b`.
@@ -1920,10 +1936,12 @@ Example for a hermitian matrix: eigenvalues and eigenvectors
 Tridiagonalization
 -----------------------------
 
-.. method:: mat.Tridiagonalization(Query)
+.. method:: ctx.mat_tridiagonalization(matA, Query)
 
 
     Returns the tridiagonal decomposition of a selfadjoint matrix.
+
+    Writing ``matA.Tridiagonalization(Query)`` has the same effect
 
     See also Eigen :cite:p:`EigenMat111`,  Wikipedia :cite:p:`WikipediaMat111`,  Wikipedia :cite:p:`WikipediaMat111a`,  Wikipedia :cite:p:`WikipediaMat112a`,  Wikipedia :cite:p:`WikipediaMat130`.
 
@@ -2178,10 +2196,12 @@ Example for a complex matrix
 Square root of a selfadjoint matrix
 -----------------------------------------
 
-.. method:: mat.MatrixSquareRootSA(Query)
+.. method:: ctx.mat_matrix_square_root_sa(matA, Query)
 
 
     Returns the tridiagonal decomposition of a selfadjoint matrix.
+
+    Writing ``matA.MatrixSquareRootSA(Query)`` has the same effect
 
     See also Eigen :cite:p:`EigenMat111`,  Wikipedia :cite:p:`WikipediaMat111`,  Wikipedia :cite:p:`WikipediaMat111a`,  Wikipedia :cite:p:`WikipediaMat112a`,  Wikipedia :cite:p:`WikipediaMat130`.
 

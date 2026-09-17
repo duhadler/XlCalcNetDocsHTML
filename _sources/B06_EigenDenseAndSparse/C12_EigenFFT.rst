@@ -53,9 +53,11 @@ How Eigen/FFT differs: The full spectrum is returned from the forward transform.
 FFT FORWARD(X)
 ------------------------------------------------------------------------------------------------------------
 
-.. method:: matA.FFTFwd()
+.. method:: ctx.mat_fft_fwd(matA)
 
     Calculates the Fourier transform.
+
+    Writing ``matA.FFTFwd()`` has the same effect
 
     See also: Eigen :cite:p:`EigenMat180`.
 
@@ -65,9 +67,11 @@ FFT FORWARD(X)
 FFT BACKWARD(X)
 ------------------------------------------------------------------------------------------------------------
 
-.. method:: matA.FFTInv()
+.. method:: ctx.mat_fft_inv(matA)
 
     Calculates the Fourier transform.
+
+    Writing ``matA.FFTInv()`` has the same effect
 
 
     See also: Eigen :cite:p:`EigenMat180`.

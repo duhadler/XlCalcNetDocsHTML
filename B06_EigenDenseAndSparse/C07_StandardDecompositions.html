@@ -53,7 +53,7 @@
     <link rel="prev" title="Descriptive Statistics" href="C06_DescriptiveStatistics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 17, 2026"/>
   </head>
   
   
@@ -908,49 +908,49 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cholesky-decomposition-with-pivoting">Cholesky Decomposition with Pivoting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.CholeskyLDLT"><code class="docutils literal notranslate"><span class="pre">mat.CholeskyLDLT()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_cholesky_ldlt"><code class="docutils literal notranslate"><span class="pre">ctx.mat_cholesky_ldlt()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-real-symmetric-matrix">Example for a real symmetric matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-hermitian-matrix">Example for a hermitian matrix</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lu-decomposition-with-partial-pivoting">LU Decomposition with partial Pivoting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.PartialPivLU"><code class="docutils literal notranslate"><span class="pre">mat.PartialPivLU()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_partial_piv_lu"><code class="docutils literal notranslate"><span class="pre">ctx.mat_partial_piv_lu()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-real-general-square-matrix-python">Example for a real general square matrix (Python)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-complex-matrix">Example for a complex matrix</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lu-decomposition-with-full-pivoting">LU Decomposition with full Pivoting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.FullPivLU"><code class="docutils literal notranslate"><span class="pre">mat.FullPivLU()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_full_piv_lu"><code class="docutils literal notranslate"><span class="pre">ctx.mat_full_piv_lu()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-real-matrix">Example for a real matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Example for a complex matrix</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cholesky-decomposition-without-pivoting">Cholesky Decomposition without Pivoting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.CholeskyLLT"><code class="docutils literal notranslate"><span class="pre">mat.CholeskyLLT()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_cholesky_llt"><code class="docutils literal notranslate"><span class="pre">ctx.mat_cholesky_llt()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Example for a real symmetric matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Example for a hermitian matrix</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qr-decomposition-without-pivoting">QR Decomposition without Pivoting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.HouseholderQR"><code class="docutils literal notranslate"><span class="pre">mat.HouseholderQR()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_householder_qr"><code class="docutils literal notranslate"><span class="pre">ctx.mat_householder_qr()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Example for a real general square matrix (Python)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Example for a complex matrix</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qr-decomposition-with-column-pivoting">QR Decomposition with column Pivoting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ColPivHouseholderQR"><code class="docutils literal notranslate"><span class="pre">mat.ColPivHouseholderQR()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_col_piv_householder_qr"><code class="docutils literal notranslate"><span class="pre">ctx.mat_col_piv_householder_qr()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Example for a real matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Example for a complex matrix</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qr-decomposition-with-full-pivoting">QR Decomposition with full Pivoting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.FullPivHouseholderQR"><code class="docutils literal notranslate"><span class="pre">mat.FullPivHouseholderQR()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_full_piv_householder_qr"><code class="docutils literal notranslate"><span class="pre">ctx.mat_full_piv_householder_qr()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Example for a real matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Example for a complex matrix</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-orthogonal-decomposition-cod">Complete orthogonal decomposition (COD)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.CODHouseholderQR"><code class="docutils literal notranslate"><span class="pre">mat.CODHouseholderQR()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_cod_householder_qr"><code class="docutils literal notranslate"><span class="pre">ctx.mat_cod_householder_qr()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">Example for a real matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">Example for a complex matrix</a></li>
 </ul>
@@ -972,10 +972,11 @@ document.write(`
 <section id="cholesky-decomposition-with-pivoting">
 <h2>Cholesky Decomposition with Pivoting<a class="headerlink" href="#cholesky-decomposition-with-pivoting" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.CholeskyLDLT">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">CholeskyLDLT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.CholeskyLDLT" title="Link to this definition">#</a></dt>
-<dd><p>Returns the Cholesky decomposition of the symmetric matrix <em>matA</em> <span class="math notranslate nohighlight">\(=A = A = P^TLDLP\)</span>, with partial pivoting.
-See also Eigen <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id539" title="Eigen Core Developers. LDLT. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1LDLT.html.">231</a>]</span>,  Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1233" title="Wikipedia. LDL decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Cholesky_decomposition#LDL_decomposition_2.">1459</a>]</span>,  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1464</a>]</span>.</p>
+<dt class="sig sig-object py" id="ctx.mat_cholesky_ldlt">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_cholesky_ldlt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_cholesky_ldlt" title="Link to this definition">#</a></dt>
+<dd><p>Returns the Cholesky decomposition of the symmetric matrix <em>matA</em> <span class="math notranslate nohighlight">\(=A = A = P^TLDLP\)</span>, with partial pivoting.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.CholeskyLDLT(Query,</span> <span class="pre">matB)</span></code> has the same effect</p>
+<p>See also Eigen <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id539" title="Eigen Core Developers. LDLT. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1LDLT.html.">231</a>]</span>,  Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1233" title="Wikipedia. LDL decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Cholesky_decomposition#LDL_decomposition_2.">1458</a>]</span>,  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1463</a>]</span>.</p>
 </dd></dl>
 
 <p><strong>Parameters:</strong></p>
@@ -1292,10 +1293,11 @@ MatrixBase::isApprox() directly, for instance like this:</p>
 <section id="lu-decomposition-with-partial-pivoting">
 <h2>LU Decomposition with partial Pivoting<a class="headerlink" href="#lu-decomposition-with-partial-pivoting" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.PartialPivLU">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">PartialPivLU</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.PartialPivLU" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_partial_piv_lu">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_partial_piv_lu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_partial_piv_lu" title="Link to this definition">#</a></dt>
 <dd><p>Returns the LU decomposition of the general square matrix <em>matA</em> <span class="math notranslate nohighlight">\(= A = PLU\)</span>, with partial pivoting.</p>
-<p>See also Eigen <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id530" title="Eigen Core Developers. PartialPivLU. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1PartialPivLU.html.">233</a>]</span>,  Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1224" title="Wikipedia. LU factorization with partial pivoting. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/LU_decomposition#LU_factorization_with_partial_pivoting.">1444</a>]</span>,  Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1464</a>]</span>.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.PartialPivLU(Query,</span> <span class="pre">matB)</span></code> has the same effect</p>
+<p>See also Eigen <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id530" title="Eigen Core Developers. PartialPivLU. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1PartialPivLU.html.">233</a>]</span>,  Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1224" title="Wikipedia. LU factorization with partial pivoting. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/LU_decomposition#LU_factorization_with_partial_pivoting.">1444</a>]</span>,  Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1463</a>]</span>.</p>
 </dd></dl>
 
 <p><strong>Parameters:</strong></p>
@@ -1554,10 +1556,11 @@ The data of the LU decomposition can be directly accessed through the methods ma
 <section id="lu-decomposition-with-full-pivoting">
 <h2>LU Decomposition with full Pivoting<a class="headerlink" href="#lu-decomposition-with-full-pivoting" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.FullPivLU">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">FullPivLU</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.FullPivLU" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_full_piv_lu">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_full_piv_lu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_full_piv_lu" title="Link to this definition">#</a></dt>
 <dd><p>Returns the LU decomposition of the general square matrix <em>matA</em> <span class="math notranslate nohighlight">\(= A = PLUQ\)</span>, with full pivoting.
-See also Eigen <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id540" title="Eigen Core Developers. FullPivLU. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1FullPivLU.html.">225</a>]</span>,  Wikipedia <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1234" title="Wikipedia. LU factorization with full pivoting. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/LU_decomposition#LU_factorization_with_full_pivoting.">1460</a>]</span>,  Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1464</a>]</span>.</p>
+See also Eigen <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id540" title="Eigen Core Developers. FullPivLU. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1FullPivLU.html.">225</a>]</span>,  Wikipedia <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1234" title="Wikipedia. LU factorization with full pivoting. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/LU_decomposition#LU_factorization_with_full_pivoting.">1459</a>]</span>,  Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1463</a>]</span>.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.FullPivLU(Query,</span> <span class="pre">matB)</span></code> has the same effect</p>
 </dd></dl>
 
 <p><strong>Parameters:</strong></p>
@@ -1853,10 +1856,11 @@ values of the matrix, something that the LU decomposition doesn’t see.</p>
 <section id="cholesky-decomposition-without-pivoting">
 <h2>Cholesky Decomposition without Pivoting<a class="headerlink" href="#cholesky-decomposition-without-pivoting" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.CholeskyLLT">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">CholeskyLLT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.CholeskyLLT" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_cholesky_llt">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_cholesky_llt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_cholesky_llt" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Cholesky decomposition of the symmetric matrix <em>matA</em> <span class="math notranslate nohighlight">\(= A = LL^T = U^TU\)</span>, without pivoting.</p>
-<p>See also Eigen <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id529" title="Eigen Core Developers. LLT. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1LLT.html.">232</a>]</span>,  Wikipedia <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1223" title="Wikipedia. Cholesky decomposition. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Cholesky_decomposition.">1430</a>]</span>,  Wikipedia <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1464</a>]</span>.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.CholeskyLLT(Query,</span> <span class="pre">matB)</span></code> has the same effect</p>
+<p>See also Eigen <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id529" title="Eigen Core Developers. LLT. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1LLT.html.">232</a>]</span>,  Wikipedia <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1223" title="Wikipedia. Cholesky decomposition. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Cholesky_decomposition.">1430</a>]</span>,  Wikipedia <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1463</a>]</span>.</p>
 </dd></dl>
 
 <p><strong>Parameters:</strong></p>
@@ -2087,10 +2091,11 @@ values of the matrix, something that the LU decomposition doesn’t see.</p>
 <section id="qr-decomposition-without-pivoting">
 <h2>QR Decomposition without Pivoting<a class="headerlink" href="#qr-decomposition-without-pivoting" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.HouseholderQR">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">HouseholderQR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.HouseholderQR" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_householder_qr">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_householder_qr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_householder_qr" title="Link to this definition">#</a></dt>
 <dd><p>Returns the QR decomposition of the symmetric matrix <em>matA</em> <span class="math notranslate nohighlight">\(=A = QR\)</span>, without pivoting.</p>
-<p>See also Eigen <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id531" title="Eigen Core Developers. HouseholderQR. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1HouseholderQR.html.">229</a>]</span>,  Wikipedia <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id1236" title="Wikipedia. QR decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/QR_decomposition.">1468</a>]</span>,  Wikipedia <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1464</a>]</span>.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">mat.HouseholderQR(Query,</span> <span class="pre">matB)</span></code> has the same effect</p>
+<p>See also Eigen <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id531" title="Eigen Core Developers. HouseholderQR. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1HouseholderQR.html.">229</a>]</span>,  Wikipedia <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id1236" title="Wikipedia. QR decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/QR_decomposition.">1467</a>]</span>,  Wikipedia <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1463</a>]</span>.</p>
 </dd></dl>
 
 <p><strong>Parameters:</strong></p>
@@ -2340,10 +2345,11 @@ is stored in a compact way compatible with LAPACK. Note that no pivoting is perf
 <section id="qr-decomposition-with-column-pivoting">
 <h2>QR Decomposition with column Pivoting<a class="headerlink" href="#qr-decomposition-with-column-pivoting" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.ColPivHouseholderQR">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">ColPivHouseholderQR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.ColPivHouseholderQR" title="Link to this definition">#</a></dt>
-<dd><p>Returns the QR decomposition of the symmetric matrix <em>matA</em> <span class="math notranslate nohighlight">\(=A = QR\)</span>, with column pivoting.
-See also: Eigen <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id541" title="Eigen Core Developers. ColPivHouseholderQR. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1ColPivHouseholderQR.html.">220</a>]</span>,  Wikipedia <span id="id22">[<a class="reference internal" href="../99BackMatter/index.html#id1235" title="Wikipedia. QR decomposition: Column pivoting. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/QR_decomposition#Column_pivoting.">1470</a>]</span>,  Wikipedia <span id="id23">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1464</a>]</span>.</p>
+<dt class="sig sig-object py" id="ctx.mat_col_piv_householder_qr">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_col_piv_householder_qr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_col_piv_householder_qr" title="Link to this definition">#</a></dt>
+<dd><p>Returns the QR decomposition of the symmetric matrix <em>matA</em> <span class="math notranslate nohighlight">\(=A = QR\)</span>, with column pivoting.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.ColPivHouseholderQR(Query,</span> <span class="pre">matB,</span> <span class="pre">threshold)</span></code> has the same effect</p>
+<p>See also: Eigen <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id541" title="Eigen Core Developers. ColPivHouseholderQR. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1ColPivHouseholderQR.html.">220</a>]</span>,  Wikipedia <span id="id22">[<a class="reference internal" href="../99BackMatter/index.html#id1235" title="Wikipedia. QR decomposition: Column pivoting. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/QR_decomposition#Column_pivoting.">1469</a>]</span>,  Wikipedia <span id="id23">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1463</a>]</span>.</p>
 </dd></dl>
 
 <p><strong>Parameters:</strong></p>
@@ -2712,10 +2718,11 @@ inefficient.This method just tries to find as good a solution as possible. If yo
 <section id="qr-decomposition-with-full-pivoting">
 <h2>QR Decomposition with full Pivoting<a class="headerlink" href="#qr-decomposition-with-full-pivoting" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.FullPivHouseholderQR">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">FullPivHouseholderQR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.FullPivHouseholderQR" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_full_piv_householder_qr">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_full_piv_householder_qr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_full_piv_householder_qr" title="Link to this definition">#</a></dt>
 <dd><p>Returns the QR decomposition (with full pivoting) of the general matrix <em>matA</em> such that`PAP’` = QR` by using Householder transformations. Here, <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(P'\)</span> are permutation matrices, <span class="math notranslate nohighlight">\(Q\)</span> is a unitary matrix and <span class="math notranslate nohighlight">\(R\)</span> is an upper triangular matrix.</p>
-<p>See also Eigen <span id="id26">[<a class="reference internal" href="../99BackMatter/index.html#id542" title="Eigen Core Developers. FullPivHouseholderQR. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1FullPivHouseholderQR.html.">224</a>]</span>,  Wikipedia <span id="id27">[<a class="reference internal" href="../99BackMatter/index.html#id1235" title="Wikipedia. QR decomposition: Column pivoting. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/QR_decomposition#Column_pivoting.">1470</a>]</span>,  Wikipedia <span id="id28">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1464</a>]</span>.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.FullPivHouseholderQR(Query,</span> <span class="pre">matB,</span> <span class="pre">threshold)</span></code> has the same effect</p>
+<p>See also Eigen <span id="id26">[<a class="reference internal" href="../99BackMatter/index.html#id542" title="Eigen Core Developers. FullPivHouseholderQR. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1FullPivHouseholderQR.html.">224</a>]</span>,  Wikipedia <span id="id27">[<a class="reference internal" href="../99BackMatter/index.html#id1235" title="Wikipedia. QR decomposition: Column pivoting. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/QR_decomposition#Column_pivoting.">1469</a>]</span>,  Wikipedia <span id="id28">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1463</a>]</span>.</p>
 </dd></dl>
 
 <p><strong>Parameters:</strong></p>
@@ -3063,9 +3070,10 @@ arbitrary solution otherwise. Note: The case where b is a matrix is not yet impl
 <section id="complete-orthogonal-decomposition-cod">
 <h2>Complete orthogonal decomposition (COD)<a class="headerlink" href="#complete-orthogonal-decomposition-cod" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.CODHouseholderQR">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">CODHouseholderQR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.CODHouseholderQR" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_cod_householder_qr">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_cod_householder_qr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_cod_householder_qr" title="Link to this definition">#</a></dt>
 <dd><p>Returns a rank-revealing complete orthogonal decomposition (COD) of the general matrix <em>matA</em> <span class="math notranslate nohighlight">\(=A\)</span>  into matrices <span class="math notranslate nohighlight">\(P\)</span>, <span class="math notranslate nohighlight">\(Q\)</span>, <span class="math notranslate nohighlight">\(T\)</span>, and <span class="math notranslate nohighlight">\(Z\)</span> such that</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.CODHouseholderQR(results,</span> <span class="pre">matB)</span></code> has the same effect</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\mathbf{A} \, \mathbf{P} = \mathbf{Q} \,
 \begin{bmatrix}
@@ -3074,7 +3082,7 @@ arbitrary solution otherwise. Note: The case where b is a matrix is not yet impl
 \end{bmatrix} \,
 \mathbf{Z}\end{split}\]</div>
 <p>by using Householder transformations. Here, <span class="math notranslate nohighlight">\(P\)</span> is a permutation matrix, <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(Z\)</span> are unitary matrices and <span class="math notranslate nohighlight">\(T\)</span> an upper triangular matrix of size rank-by-rank. <span class="math notranslate nohighlight">\(A\)</span> may be rank deficient.</p>
-<p>See also Eigen <span id="id31">[<a class="reference internal" href="../99BackMatter/index.html#id543" title="Eigen Core Developers. CompleteOrthogonalDecomposition. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1CompleteOrthogonalDecomposition.html.">221</a>]</span>,  Wikipedia <span id="id32">[<a class="reference internal" href="../99BackMatter/index.html#id1236" title="Wikipedia. QR decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/QR_decomposition.">1468</a>]</span>,  Wikipedia <span id="id33">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1464</a>]</span>.</p>
+<p>See also Eigen <span id="id31">[<a class="reference internal" href="../99BackMatter/index.html#id543" title="Eigen Core Developers. CompleteOrthogonalDecomposition. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1CompleteOrthogonalDecomposition.html.">221</a>]</span>,  Wikipedia <span id="id32">[<a class="reference internal" href="../99BackMatter/index.html#id1236" title="Wikipedia. QR decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/QR_decomposition.">1467</a>]</span>,  Wikipedia <span id="id33">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1463</a>]</span>.</p>
 </dd></dl>
 
 <p><strong>Parameters:</strong></p>
@@ -3521,49 +3529,49 @@ arbitrary solution otherwise. Note: The case where b is a matrix is not yet impl
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cholesky-decomposition-with-pivoting">Cholesky Decomposition with Pivoting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.CholeskyLDLT"><code class="docutils literal notranslate"><span class="pre">mat.CholeskyLDLT()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_cholesky_ldlt"><code class="docutils literal notranslate"><span class="pre">ctx.mat_cholesky_ldlt()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-real-symmetric-matrix">Example for a real symmetric matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-hermitian-matrix">Example for a hermitian matrix</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lu-decomposition-with-partial-pivoting">LU Decomposition with partial Pivoting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.PartialPivLU"><code class="docutils literal notranslate"><span class="pre">mat.PartialPivLU()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_partial_piv_lu"><code class="docutils literal notranslate"><span class="pre">ctx.mat_partial_piv_lu()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-real-general-square-matrix-python">Example for a real general square matrix (Python)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-complex-matrix">Example for a complex matrix</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lu-decomposition-with-full-pivoting">LU Decomposition with full Pivoting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.FullPivLU"><code class="docutils literal notranslate"><span class="pre">mat.FullPivLU()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_full_piv_lu"><code class="docutils literal notranslate"><span class="pre">ctx.mat_full_piv_lu()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-real-matrix">Example for a real matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Example for a complex matrix</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cholesky-decomposition-without-pivoting">Cholesky Decomposition without Pivoting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.CholeskyLLT"><code class="docutils literal notranslate"><span class="pre">mat.CholeskyLLT()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_cholesky_llt"><code class="docutils literal notranslate"><span class="pre">ctx.mat_cholesky_llt()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Example for a real symmetric matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Example for a hermitian matrix</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qr-decomposition-without-pivoting">QR Decomposition without Pivoting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.HouseholderQR"><code class="docutils literal notranslate"><span class="pre">mat.HouseholderQR()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_householder_qr"><code class="docutils literal notranslate"><span class="pre">ctx.mat_householder_qr()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Example for a real general square matrix (Python)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Example for a complex matrix</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qr-decomposition-with-column-pivoting">QR Decomposition with column Pivoting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ColPivHouseholderQR"><code class="docutils literal notranslate"><span class="pre">mat.ColPivHouseholderQR()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_col_piv_householder_qr"><code class="docutils literal notranslate"><span class="pre">ctx.mat_col_piv_householder_qr()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Example for a real matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Example for a complex matrix</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qr-decomposition-with-full-pivoting">QR Decomposition with full Pivoting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.FullPivHouseholderQR"><code class="docutils literal notranslate"><span class="pre">mat.FullPivHouseholderQR()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_full_piv_householder_qr"><code class="docutils literal notranslate"><span class="pre">ctx.mat_full_piv_householder_qr()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Example for a real matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Example for a complex matrix</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-orthogonal-decomposition-cod">Complete orthogonal decomposition (COD)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.CODHouseholderQR"><code class="docutils literal notranslate"><span class="pre">mat.CODHouseholderQR()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_cod_householder_qr"><code class="docutils literal notranslate"><span class="pre">ctx.mat_cod_householder_qr()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">Example for a real matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">Example for a complex matrix</a></li>
 </ul>
@@ -3601,7 +3609,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 16, 2026.
+  Last updated on Sep 17, 2026.
   <br/>
 </p>
   </div>

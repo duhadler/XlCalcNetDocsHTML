@@ -52,9 +52,9 @@ Nelder-Mead Solver
 
 .. method:: ctxboost.NelderMead(f, fjac, matInput)
 
-The Nelder-Mead method (or downhill simplex method) is a commonly applied numerical method used to find the minimum or maximum of an objective function in a multidimensional space. 
+    The Nelder-Mead method (or downhill simplex method) is a commonly applied numerical method used to find the minimum or maximum of an objective function in a multidimensional space. 
 
-See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat136`.
+    See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat136`.
 
 
 **Parameters:**
@@ -79,7 +79,7 @@ See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat136`.
 
 The routine in Python:
 
-.. code-block:: pycon
+.. code-block:: python
 
     def demo_NelderMeadCtx(ctx):
 
@@ -121,12 +121,12 @@ This produces the following output:
 
     Hello DemoNelderMeadSolverDbl() 
     matRes: 
-     1.000014; 
-     1.000029; 
+        1.000014; 
+        1.000029; 
 
     Y = F(matRes): 
-     0.000000; 
-     0.000000; 
+        0.000000; 
+        0.000000; 
 
     Norm: 2.96378497762668E-10
 
@@ -150,9 +150,9 @@ CMAes solver
 
 .. method:: ctxboost.CMAes(f, fjac, matInput)
 
-CMA-ES stands for covariance matrix adaptation evolution strategy. Evolution strategies (ES) are stochastic, derivative-free methods for numerical optimization of non-linear or non-convex continuous optimization problems. 
+    CMA-ES stands for covariance matrix adaptation evolution strategy. Evolution strategies (ES) are stochastic, derivative-free methods for numerical optimization of non-linear or non-convex continuous optimization problems. 
 
-See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat135`.
+    See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat135`.
 
 
 
@@ -178,7 +178,7 @@ See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat135`.
 
 The routine in Python:
 
-.. code-block:: pycon
+.. code-block:: python
 
     def demo_CMAesCtx(ctx):
 
@@ -220,12 +220,12 @@ This produces the following output:
 
     Hello DemoCMAesSolverDbl() 
     matRes: 
-     0.999140; 
-     0.998260; 
+        0.999140; 
+        0.998260; 
 
     Y = F(matRes): 
-     0.000001; 
-     0.000000; 
+        0.000001; 
+        0.000000; 
 
     Norm: 7.83903245823684E-07
 
@@ -241,9 +241,9 @@ BFGS Solver
 
 .. method:: ctxboost.BFGS(f, fjac, matInput)
 
-The Broyden-Fletcher-Goldfarb-Shanno (BFGS) algorithm is an iterative method for solving unconstrained nonlinear optimization problems.
+    The Broyden-Fletcher-Goldfarb-Shanno (BFGS) algorithm is an iterative method for solving unconstrained nonlinear optimization problems.
 
-See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat133`.
+    See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat133`.
 
 
 **Parameters:**
@@ -266,7 +266,7 @@ See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat133`.
 
 The routine in Python:
 
-.. code-block:: pycon
+.. code-block:: python
 
     def demo_BfgsCtx(ctx):
 
@@ -331,9 +331,9 @@ L-BFGS Solver
 
 .. method:: ctxboost.LBFGS(f, fjac, matInput)
 
-Limited-memory BFGS (L-BFGS or LM-BFGS) is an optimization algorithm in the family of quasi-Newton methods that approximates the Broyden-Fletcher-Goldfarb-Shanno algorithm (BFGS) using a limited amount of computer memory.
+    Limited-memory BFGS (L-BFGS or LM-BFGS) is an optimization algorithm in the family of quasi-Newton methods that approximates the Broyden-Fletcher-Goldfarb-Shanno algorithm (BFGS) using a limited amount of computer memory.
 
-See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat134`.
+    See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat134`.
 
 
 
@@ -358,7 +358,7 @@ See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat134`.
 
 The routine in Python:
 
-.. code-block:: pycon
+.. code-block:: python
 
     def demo_LBfgsCtx(ctx):
 
@@ -400,12 +400,12 @@ This produces the following output:
 
     Hello DemoLbfgsSolverDbl() 
     matRes: 
-     1.000000; 
-     1.000000; 
+        1.000000; 
+        1.000000; 
 
     Y = F(matRes): 
-     0.000000; 
-     0.000000; 
+        0.000000; 
+        0.000000; 
 
     Norm: 7.41089272169439E-14
 
@@ -419,9 +419,9 @@ Gradient descent solver
 
 .. method:: ctxboost.GradientDescent(f, fjac, matInput)
 
-Gradient descent is a first-order iterative optimization algorithm for finding a local minimum of a differentiable function. 
+    Gradient descent is a first-order iterative optimization algorithm for finding a local minimum of a differentiable function. 
 
-See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat133`. and  https://en.wikipedia.org/wiki/Gradient_descent.
+    See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat133`. and  https://en.wikipedia.org/wiki/Gradient_descent.
 
 
 **Parameters:**
@@ -443,7 +443,7 @@ See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat133`. and  
 
 The routine in Python:
 
-.. code-block:: pycon
+.. code-block:: python
 
     def demo_GradientDescentCtx(ctx):
 
@@ -504,9 +504,9 @@ Conjugate gradient descent solver
 
 .. method:: ctxboost.ConjugateGradientDescent(f, fjac, matInput)
 
-The conjugate gradient method is an algorithm for the numerical solution of particular systems of linear equations, namely those whose matrix is symmetric and positive-definite. The conjugate gradient method can also be used to solve unconstrained optimization problems such as energy minimization.  
+    The conjugate gradient method is an algorithm for the numerical solution of particular systems of linear equations, namely those whose matrix is symmetric and positive-definite. The conjugate gradient method can also be used to solve unconstrained optimization problems such as energy minimization.  
 
-See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat133`. and  https://en.wikipedia.org/wiki/Conjugate\_gradient\_method.
+    See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat133`. and  https://en.wikipedia.org/wiki/Conjugate\_gradient\_method.
 
 
 **Parameters:**
@@ -528,7 +528,7 @@ See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat133`. and  
 
 The routine in Python:
 
-.. code-block:: pycon
+.. code-block:: python
 
     def demo_GradientDescentCtx(ctx):
 
@@ -597,7 +597,7 @@ The routine in Python:
         Dim nrm = Math.Sqrt( Y(0)*Y(0) + Y(1)*Y(1)) 
         Console.WriteLine("Norm: {0}", nrm)
         Console.WriteLine("")
-   End Sub
+    End Sub
 
 
 This produces the following output: 
@@ -606,12 +606,12 @@ This produces the following output:
 
     Hello DemoConjugatedGradientDescentSolverDbl() 
     matRes: 
-     0.999964; 
-     0.999928; 
+        0.999964; 
+        0.999928; 
 
     Y = F(matRes): 
-     0.000000; 
-     0.000000; 
+        0.000000; 
+        0.000000; 
 
     Norm: 1.3055097726625E-09
 
@@ -625,9 +625,9 @@ Newton descent solver (description needs correction)
 
 .. method:: ctxboost.NewtonDescent(f, fjac, matInput)
 
-The conjugate gradient method is an algorithm for the numerical solution of particular systems of linear equations, namely those whose matrix is symmetric and positive-definite. The conjugate gradient method can also be used to solve unconstrained optimization problems such as energy minimization.  
+    The conjugate gradient method is an algorithm for the numerical solution of particular systems of linear equations, namely those whose matrix is symmetric and positive-definite. The conjugate gradient method can also be used to solve unconstrained optimization problems such as energy minimization.  
 
-See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat133`. and  https://en.wikipedia.org/wiki/Conjugate\_gradient\_method.
+    See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat133`. and  https://en.wikipedia.org/wiki/Conjugate\_gradient\_method.
 
 
 **Parameters:**
@@ -649,7 +649,7 @@ See also: :cite:t:`Wieschollek2016`,  Wikipedia :cite:p:`WikipediaMat133`. and  
 
 The routine in Python:
 
-.. code-block:: pycon
+.. code-block:: python
 
     def demo_GradientDescentCtx(ctx):
 
@@ -718,7 +718,7 @@ The routine in Python:
         Dim nrm = Math.Sqrt( Y(0)*Y(0) + Y(1)*Y(1)) 
         Console.WriteLine("Norm: {0}", nrm)
         Console.WriteLine("")
-   End Sub
+    End Sub
 
 
 This produces the following output: 
@@ -727,12 +727,12 @@ This produces the following output:
 
     Hello DemoConjugatedGradientDescentSolverDbl() 
     matRes: 
-     0.999964; 
-     0.999928; 
+        0.999964; 
+        0.999928; 
 
     Y = F(matRes): 
-     0.000000; 
-     0.000000; 
+        0.000000; 
+        0.000000; 
 
     Norm: 1.3055097726625E-09
 

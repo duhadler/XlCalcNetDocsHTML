@@ -52,7 +52,7 @@
     <link rel="prev" title="Accessing and setting parts of a matrix" href="C03_GettingAndSetting.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 16, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 17, 2026"/>
   </head>
   
   
@@ -907,75 +907,71 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-a-whole-matrix">Sorting  a whole matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.Sorted"><code class="docutils literal notranslate"><span class="pre">mat.Sorted()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_sort"><code class="docutils literal notranslate"><span class="pre">ctx.mat_sort()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-the-rows-of-a-matrix-by-a-given-column">Sorting the rows of a matrix by a given column</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SortedRowsByCol"><code class="docutils literal notranslate"><span class="pre">mat.SortedRowsByCol()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_sort_rows_by_col"><code class="docutils literal notranslate"><span class="pre">ctx.mat_sort_rows_by_col()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-a-whole-matrix-in-place">Sorting a whole matrix in place</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SortInplace"><code class="docutils literal notranslate"><span class="pre">mat.SortInplace()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-the-rows-of-a-matrix-by-a-given-column-in-place">Sorting the rows of a matrix by a given column, in place</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SortRowsByCol"><code class="docutils literal notranslate"><span class="pre">mat.SortRowsByCol()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resize-a-matrix-like-another-matrix">Resize a matrix like another matrix</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_resize_like"><code class="docutils literal notranslate"><span class="pre">ctx.mat_resize_like()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resize-a-matrix">Resize a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.Resize"><code class="docutils literal notranslate"><span class="pre">mat.Resize()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_resize"><code class="docutils literal notranslate"><span class="pre">ctx.mat_resize()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservatively-resize-a-matrix">Conservatively resize a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ConservativeResize"><code class="docutils literal notranslate"><span class="pre">mat.ConservativeResize()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_conservative_resize"><code class="docutils literal notranslate"><span class="pre">ctx.mat_conservative_resize()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-vector-to-diagonal-matrix">Convert vector to diagonal matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.AsDiagonal"><code class="docutils literal notranslate"><span class="pre">mat.AsDiagonal()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_as_diagonal"><code class="docutils literal notranslate"><span class="pre">ctx.mat_as_diagonal()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adjoint-of-a-matrix">Adjoint of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.Adjoint"><code class="docutils literal notranslate"><span class="pre">mat.Adjoint()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_adjoint"><code class="docutils literal notranslate"><span class="pre">ctx.mat_adjoint()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conjugate-of-a-matrix">Conjugate of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.Conjugate"><code class="docutils literal notranslate"><span class="pre">mat.Conjugate()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_conjugate"><code class="docutils literal notranslate"><span class="pre">ctx.mat_conjugate()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transpose-of-a-matrix">Transpose of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.Transpose"><code class="docutils literal notranslate"><span class="pre">mat.Transpose()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_transpose"><code class="docutils literal notranslate"><span class="pre">ctx.mat_transpose()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#full-reverse-of-a-matrix">Full Reverse of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ReverseFull"><code class="docutils literal notranslate"><span class="pre">mat.ReverseFull()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_reverse_full"><code class="docutils literal notranslate"><span class="pre">ctx.mat_reverse_full()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#row-wise-reverse-of-a-matrix">Row-wise Reverse of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ReverseRowwise"><code class="docutils literal notranslate"><span class="pre">mat.ReverseRowwise()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_reverse_row_wise"><code class="docutils literal notranslate"><span class="pre">ctx.mat_reverse_row_wise()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#column-wise-reverse-of-a-matrix">Column-wise Reverse of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ReverseColwise"><code class="docutils literal notranslate"><span class="pre">mat.ReverseColwise()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_reverse_col_wise"><code class="docutils literal notranslate"><span class="pre">ctx.mat_reverse_col_wise()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#full-replication-of-a-matrix">Full Replication of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ReplicateFull"><code class="docutils literal notranslate"><span class="pre">mat.ReplicateFull()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_replicate_full"><code class="docutils literal notranslate"><span class="pre">ctx.mat_replicate_full()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#row-wise-replication-of-a-matrix">Row-wise Replication of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ReplicateRowwise"><code class="docutils literal notranslate"><span class="pre">mat.ReplicateRowwise()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_replicate_row_wise"><code class="docutils literal notranslate"><span class="pre">ctx.mat_replicate_row_wise()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#column-wise-replication-of-a-matrix">Column-wise Replication of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ReplicateColwise"><code class="docutils literal notranslate"><span class="pre">mat.ReplicateColwise()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_replicate_col_wise"><code class="docutils literal notranslate"><span class="pre">ctx.mat_replicate_col_wise()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#horizontal-concatenation-of-two-matrices">Horizontal concatenation of two matrices</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ConcatHorizontal"><code class="docutils literal notranslate"><span class="pre">mat.ConcatHorizontal()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_concat_horizontal"><code class="docutils literal notranslate"><span class="pre">ctx.mat_concat_horizontal()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vertical-concatenation-of-two-matrices">Vertical concatenation of two matrices</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ConcatVertical"><code class="docutils literal notranslate"><span class="pre">mat.ConcatVertical()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_concat_vertical"><code class="docutils literal notranslate"><span class="pre">ctx.mat_concat_vertical()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -995,9 +991,10 @@ document.write(`
 <section id="sorting-a-whole-matrix">
 <h2>Sorting  a whole matrix<a class="headerlink" href="#sorting-a-whole-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.Sorted">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">Sorted</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">SortOrder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SortCriterion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.Sorted" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_sort">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_sort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SortOrder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SortCriterion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_sort" title="Link to this definition">#</a></dt>
 <dd><p>Returns a sorted version of the matrix, sorted according to SortOrder and SortCriterion.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.Sort(SortOrder=0,</span> <span class="pre">SortCriterion=1)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1036,9 +1033,10 @@ document.write(`
 <section id="sorting-the-rows-of-a-matrix-by-a-given-column">
 <h2>Sorting the rows of a matrix by a given column<a class="headerlink" href="#sorting-the-rows-of-a-matrix-by-a-given-column" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.SortedRowsByCol">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SortedRowsByCol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ColumnToSortBy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SortOrder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SortCriterion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SortedRowsByCol" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_sort_rows_by_col">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_sort_rows_by_col</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ColumnToSortBy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SortOrder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SortCriterion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_sort_rows_by_col" title="Link to this definition">#</a></dt>
 <dd><p>Returns a sorted version of the matrix, sorted by column ColumnToSortBy, according to SortOrder and SortCriterion.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.SortRowsByCol(ColumnToSortBy=0,</span> <span class="pre">SortOrder=0,</span> <span class="pre">SortCriterion=1)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1074,12 +1072,13 @@ document.write(`
 </dd></dl>
 
 </section>
-<section id="sorting-a-whole-matrix-in-place">
-<h2>Sorting a whole matrix in place<a class="headerlink" href="#sorting-a-whole-matrix-in-place" title="Link to this heading">#</a></h2>
+<section id="resize-a-matrix-like-another-matrix">
+<h2>Resize a matrix like another matrix<a class="headerlink" href="#resize-a-matrix-like-another-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.SortInplace">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SortInplace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">SortOrder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SortCriterion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SortInplace" title="Link to this definition">#</a></dt>
-<dd><p>Sorts the matrix inplace, sorting according to SortOrder and SortCriterion.</p>
+<dt class="sig sig-object py" id="ctx.mat_resize_like">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_resize_like</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_resize_like" title="Link to this definition">#</a></dt>
+<dd><p>Resizes the matrix inplace, setting values of coefficients to zero.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.ResizeLike(r,</span> <span class="pre">c)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1091,66 +1090,12 @@ document.write(`
 <span class="go">51, 52, 53, 54,</span>
 <span class="go">61, 62, 63, 64,</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sorts the whole matrix in ascending order (SortOrder=0)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">SortOrder</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># resizes the matrix to 3 rows and 2 columns, setting values of coefficients to zero.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
 <span class="go">A:</span>
-<span class="go">11, 23, 41, 53,</span>
-<span class="go">12, 24, 42, 54,</span>
-<span class="go">13, 31, 43, 61,</span>
-<span class="go">14, 32, 44, 62,</span>
-<span class="go">21, 33, 51, 63,</span>
-<span class="go">22, 34, 52, 64,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sorts the whole matrix in descending order (SortOrder=1)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">SortOrder</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">64, 52, 34, 22,</span>
-<span class="go">63, 51, 33, 21,</span>
-<span class="go">62, 44, 32, 14,</span>
-<span class="go">61, 43, 31, 13,</span>
-<span class="go">54, 42, 24, 12,</span>
-<span class="go">53, 41, 23, 11,</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="sorting-the-rows-of-a-matrix-by-a-given-column-in-place">
-<h2>Sorting the rows of a matrix by a given column, in place<a class="headerlink" href="#sorting-the-rows-of-a-matrix-by-a-given-column-in-place" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="mat.SortRowsByCol">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">SortRowsByCol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ColumnToSortBy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SortOrder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SortCriterion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.SortRowsByCol" title="Link to this definition">#</a></dt>
-<dd><p>Sorts the matrix inplace, sorting according to sortmode.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11, 12, 13, 14,</span>
-<span class="go">21, 22, 23, 24,</span>
-<span class="go">31, 32, 33, 34,</span>
-<span class="go">41, 42, 43, 44,</span>
-<span class="go">51, 52, 53, 54,</span>
-<span class="go">61, 62, 63, 64,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sorts the whole matrix by column 0 in descending order (SortOrder=1)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">sort_rows_by_col</span><span class="p">(</span><span class="n">ColumnToSortBy</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">SortOrder</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">61, 62, 63, 64,</span>
-<span class="go">51, 52, 53, 54,</span>
-<span class="go">41, 42, 43, 44,</span>
-<span class="go">31, 32, 33, 34,</span>
-<span class="go">21, 22, 23, 24,</span>
-<span class="go">11, 12, 13, 14,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># sorts the whole matrix in descending order (SortOrder=0)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">SortOrder</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">11, 12, 13, 14,</span>
-<span class="go">21, 22, 23, 24,</span>
-<span class="go">31, 32, 33, 34,</span>
-<span class="go">41, 42, 43, 44,</span>
-<span class="go">51, 52, 53, 54,</span>
-<span class="go">61, 62, 63, 64,</span>
+<span class="go">0, 0,</span>
+<span class="go">0, 0,</span>
+<span class="go">0, 0,</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1159,9 +1104,10 @@ document.write(`
 <section id="resize-a-matrix">
 <h2>Resize a matrix<a class="headerlink" href="#resize-a-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.Resize">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">Resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.Resize" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_resize">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_resize" title="Link to this definition">#</a></dt>
 <dd><p>Resizes the matrix inplace, setting values of coefficients to zero.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.Resize(r,</span> <span class="pre">c)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1187,9 +1133,10 @@ document.write(`
 <section id="conservatively-resize-a-matrix">
 <h2>Conservatively resize a matrix<a class="headerlink" href="#conservatively-resize-a-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.ConservativeResize">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">ConservativeResize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.ConservativeResize" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_conservative_resize">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_conservative_resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_conservative_resize" title="Link to this definition">#</a></dt>
 <dd><p>Resizes the matrix inplace, retaining values of existing coefficients.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.ConservativeResize(r,</span> <span class="pre">c)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1215,9 +1162,10 @@ document.write(`
 <section id="convert-vector-to-diagonal-matrix">
 <h2>Convert vector to diagonal matrix<a class="headerlink" href="#convert-vector-to-diagonal-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.AsDiagonal">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">AsDiagonal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.AsDiagonal" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_as_diagonal">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_as_diagonal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_as_diagonal" title="Link to this definition">#</a></dt>
 <dd><p>Returns the first column vector of a matrix as a diagonal matrix.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.AsDiagonal()</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># read the first column from the matrix</span>
@@ -1247,9 +1195,9 @@ document.write(`
 <section id="adjoint-of-a-matrix">
 <h2>Adjoint of a matrix<a class="headerlink" href="#adjoint-of-a-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.Adjoint">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">Adjoint</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.Adjoint" title="Link to this definition">#</a></dt>
-<dd><p>Returns the adjoint matrix of the matrix</p>
+<dt class="sig sig-object py" id="ctx.mat_adjoint">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_adjoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_adjoint" title="Link to this definition">#</a></dt>
+<dd><p>Returns the adjoint matrix of the matrix.  Writing <code class="docutils literal notranslate"><span class="pre">matA.Adjoint()</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># example with a real matrix</span>
@@ -1304,9 +1252,9 @@ document.write(`
 <section id="conjugate-of-a-matrix">
 <h2>Conjugate of a matrix<a class="headerlink" href="#conjugate-of-a-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.Conjugate">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">Conjugate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.Conjugate" title="Link to this definition">#</a></dt>
-<dd><p>Returns the conjugate matrix of matrix ?matA.</p>
+<dt class="sig sig-object py" id="ctx.mat_conjugate">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_conjugate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_conjugate" title="Link to this definition">#</a></dt>
+<dd><p>Returns the conjugate matrix of matrix ?matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.Conjugate()</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># example with a real matrix</span>
@@ -1361,9 +1309,9 @@ document.write(`
 <section id="transpose-of-a-matrix">
 <h2>Transpose of a matrix<a class="headerlink" href="#transpose-of-a-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.Transpose">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">Transpose</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.Transpose" title="Link to this definition">#</a></dt>
-<dd><p>Returns the transposed matrix of matrix ?matA.</p>
+<dt class="sig sig-object py" id="ctx.mat_transpose">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_transpose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_transpose" title="Link to this definition">#</a></dt>
+<dd><p>Returns the transposed matrix of matrix ?matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.Transpose()</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1390,9 +1338,9 @@ document.write(`
 <section id="full-reverse-of-a-matrix">
 <h2>Full Reverse of a matrix<a class="headerlink" href="#full-reverse-of-a-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.ReverseFull">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">ReverseFull</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.ReverseFull" title="Link to this definition">#</a></dt>
-<dd><p>Returns the full reverse of matrix ?matA.</p>
+<dt class="sig sig-object py" id="ctx.mat_reverse_full">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_reverse_full</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_reverse_full" title="Link to this definition">#</a></dt>
+<dd><p>Returns the full reverse of matrix ?matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.ReverseFull()</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1421,9 +1369,9 @@ document.write(`
 <section id="row-wise-reverse-of-a-matrix">
 <h2>Row-wise Reverse of a matrix<a class="headerlink" href="#row-wise-reverse-of-a-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.ReverseRowwise">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">ReverseRowwise</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.ReverseRowwise" title="Link to this definition">#</a></dt>
-<dd><p>Returns the row-wise reverse of matrix ?matA.</p>
+<dt class="sig sig-object py" id="ctx.mat_reverse_row_wise">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_reverse_row_wise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_reverse_row_wise" title="Link to this definition">#</a></dt>
+<dd><p>Returns the row-wise reverse of matrix ?matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.ReverseRowwise()</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1451,9 +1399,9 @@ document.write(`
 <section id="column-wise-reverse-of-a-matrix">
 <h2>Column-wise Reverse of a matrix<a class="headerlink" href="#column-wise-reverse-of-a-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.ReverseColwise">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">ReverseColwise</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mat.ReverseColwise" title="Link to this definition">#</a></dt>
-<dd><p>Returns the column-wise reverse of matrix ?matA.</p>
+<dt class="sig sig-object py" id="ctx.mat_reverse_col_wise">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_reverse_col_wise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_reverse_col_wise" title="Link to this definition">#</a></dt>
+<dd><p>Returns the column-wise reverse of matrix matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.ReverseColwise()</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1482,9 +1430,9 @@ document.write(`
 <section id="full-replication-of-a-matrix">
 <h2>Full Replication of a matrix<a class="headerlink" href="#full-replication-of-a-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.ReplicateFull">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">ReplicateFull</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Vertical</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Horizontal</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.ReplicateFull" title="Link to this definition">#</a></dt>
-<dd><p>Returns a full replication of matrix ?matA.</p>
+<dt class="sig sig-object py" id="ctx.mat_replicate_full">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_replicate_full</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Vertical</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Horizontal</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_replicate_full" title="Link to this definition">#</a></dt>
+<dd><p>Returns a full replication of matrix matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.ReplicateFull(Vertical,</span> <span class="pre">Horizontal)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1519,9 +1467,9 @@ document.write(`
 <section id="row-wise-replication-of-a-matrix">
 <h2>Row-wise Replication of a matrix<a class="headerlink" href="#row-wise-replication-of-a-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.ReplicateRowwise">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">ReplicateRowwise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Horizontal</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.ReplicateRowwise" title="Link to this definition">#</a></dt>
-<dd><p>Returns a row-wise replication of matrix ?matA.</p>
+<dt class="sig sig-object py" id="ctx.mat_replicate_row_wise">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_replicate_row_wise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Horizontal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_replicate_row_wise" title="Link to this definition">#</a></dt>
+<dd><p>Returns a row-wise replication of matrix matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.ReplicateRowwise(Horizontal=1)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1550,9 +1498,9 @@ document.write(`
 <section id="column-wise-replication-of-a-matrix">
 <h2>Column-wise Replication of a matrix<a class="headerlink" href="#column-wise-replication-of-a-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.ReplicateColwise">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">ReplicateColwise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Vertical</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.ReplicateColwise" title="Link to this definition">#</a></dt>
-<dd><p>Returns a column-wise replication of matrix ?matA.</p>
+<dt class="sig sig-object py" id="ctx.mat_replicate_col_wise">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_replicate_col_wise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Vertical</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_replicate_col_wise" title="Link to this definition">#</a></dt>
+<dd><p>Returns a column-wise replication of matrix matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.ReplicateColwise(Vertical=1)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1587,9 +1535,9 @@ document.write(`
 <section id="horizontal-concatenation-of-two-matrices">
 <h2>Horizontal concatenation of two matrices<a class="headerlink" href="#horizontal-concatenation-of-two-matrices" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.ConcatHorizontal">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">ConcatHorizontal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.ConcatHorizontal" title="Link to this definition">#</a></dt>
-<dd><p>Returns the horizontal concatenation of matrix ?matA with matrix matB.</p>
+<dt class="sig sig-object py" id="ctx.mat_concat_horizontal">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_concat_horizontal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_concat_horizontal" title="Link to this definition">#</a></dt>
+<dd><p>Returns the horizontal concatenation of matrix matA with matrix matB.  Writing <code class="docutils literal notranslate"><span class="pre">matA.ConcatHorizontal(matB)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1627,9 +1575,10 @@ document.write(`
 <section id="vertical-concatenation-of-two-matrices">
 <h2>Vertical concatenation of two matrices<a class="headerlink" href="#vertical-concatenation-of-two-matrices" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mat.ConcatVertical">
-<span class="sig-prename descclassname"><span class="pre">mat.</span></span><span class="sig-name descname"><span class="pre">ConcatVertical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mat.ConcatVertical" title="Link to this definition">#</a></dt>
-<dd><p>Returns the vertical concatenation of matrix ?matA with matrix matB.</p>
+<dt class="sig sig-object py" id="ctx.mat_concat_vertical">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_concat_vertical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_concat_vertical" title="Link to this definition">#</a></dt>
+<dd><p>Returns the vertical concatenation of matrix matA with matrix matB.</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.ConcatVertical(matB)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1718,75 +1667,71 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-a-whole-matrix">Sorting  a whole matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.Sorted"><code class="docutils literal notranslate"><span class="pre">mat.Sorted()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_sort"><code class="docutils literal notranslate"><span class="pre">ctx.mat_sort()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-the-rows-of-a-matrix-by-a-given-column">Sorting the rows of a matrix by a given column</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SortedRowsByCol"><code class="docutils literal notranslate"><span class="pre">mat.SortedRowsByCol()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_sort_rows_by_col"><code class="docutils literal notranslate"><span class="pre">ctx.mat_sort_rows_by_col()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-a-whole-matrix-in-place">Sorting a whole matrix in place</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SortInplace"><code class="docutils literal notranslate"><span class="pre">mat.SortInplace()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sorting-the-rows-of-a-matrix-by-a-given-column-in-place">Sorting the rows of a matrix by a given column, in place</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.SortRowsByCol"><code class="docutils literal notranslate"><span class="pre">mat.SortRowsByCol()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resize-a-matrix-like-another-matrix">Resize a matrix like another matrix</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_resize_like"><code class="docutils literal notranslate"><span class="pre">ctx.mat_resize_like()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resize-a-matrix">Resize a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.Resize"><code class="docutils literal notranslate"><span class="pre">mat.Resize()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_resize"><code class="docutils literal notranslate"><span class="pre">ctx.mat_resize()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservatively-resize-a-matrix">Conservatively resize a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ConservativeResize"><code class="docutils literal notranslate"><span class="pre">mat.ConservativeResize()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_conservative_resize"><code class="docutils literal notranslate"><span class="pre">ctx.mat_conservative_resize()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-vector-to-diagonal-matrix">Convert vector to diagonal matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.AsDiagonal"><code class="docutils literal notranslate"><span class="pre">mat.AsDiagonal()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_as_diagonal"><code class="docutils literal notranslate"><span class="pre">ctx.mat_as_diagonal()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adjoint-of-a-matrix">Adjoint of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.Adjoint"><code class="docutils literal notranslate"><span class="pre">mat.Adjoint()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_adjoint"><code class="docutils literal notranslate"><span class="pre">ctx.mat_adjoint()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conjugate-of-a-matrix">Conjugate of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.Conjugate"><code class="docutils literal notranslate"><span class="pre">mat.Conjugate()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_conjugate"><code class="docutils literal notranslate"><span class="pre">ctx.mat_conjugate()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transpose-of-a-matrix">Transpose of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.Transpose"><code class="docutils literal notranslate"><span class="pre">mat.Transpose()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_transpose"><code class="docutils literal notranslate"><span class="pre">ctx.mat_transpose()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#full-reverse-of-a-matrix">Full Reverse of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ReverseFull"><code class="docutils literal notranslate"><span class="pre">mat.ReverseFull()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_reverse_full"><code class="docutils literal notranslate"><span class="pre">ctx.mat_reverse_full()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#row-wise-reverse-of-a-matrix">Row-wise Reverse of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ReverseRowwise"><code class="docutils literal notranslate"><span class="pre">mat.ReverseRowwise()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_reverse_row_wise"><code class="docutils literal notranslate"><span class="pre">ctx.mat_reverse_row_wise()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#column-wise-reverse-of-a-matrix">Column-wise Reverse of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ReverseColwise"><code class="docutils literal notranslate"><span class="pre">mat.ReverseColwise()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_reverse_col_wise"><code class="docutils literal notranslate"><span class="pre">ctx.mat_reverse_col_wise()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#full-replication-of-a-matrix">Full Replication of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ReplicateFull"><code class="docutils literal notranslate"><span class="pre">mat.ReplicateFull()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_replicate_full"><code class="docutils literal notranslate"><span class="pre">ctx.mat_replicate_full()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#row-wise-replication-of-a-matrix">Row-wise Replication of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ReplicateRowwise"><code class="docutils literal notranslate"><span class="pre">mat.ReplicateRowwise()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_replicate_row_wise"><code class="docutils literal notranslate"><span class="pre">ctx.mat_replicate_row_wise()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#column-wise-replication-of-a-matrix">Column-wise Replication of a matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ReplicateColwise"><code class="docutils literal notranslate"><span class="pre">mat.ReplicateColwise()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_replicate_col_wise"><code class="docutils literal notranslate"><span class="pre">ctx.mat_replicate_col_wise()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#horizontal-concatenation-of-two-matrices">Horizontal concatenation of two matrices</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ConcatHorizontal"><code class="docutils literal notranslate"><span class="pre">mat.ConcatHorizontal()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_concat_horizontal"><code class="docutils literal notranslate"><span class="pre">ctx.mat_concat_horizontal()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vertical-concatenation-of-two-matrices">Vertical concatenation of two matrices</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mat.ConcatVertical"><code class="docutils literal notranslate"><span class="pre">mat.ConcatVertical()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_concat_vertical"><code class="docutils literal notranslate"><span class="pre">ctx.mat_concat_vertical()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1822,7 +1767,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 16, 2026.
+  Last updated on Sep 17, 2026.
   <br/>
 </p>
   </div>
