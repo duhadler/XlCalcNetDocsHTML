@@ -17,7 +17,7 @@ Setting up XlCalcNet
 =========================
 
 
-Downloading and installing the "right" version of CPython
+Downloading and installing the "right" version of CPython 2
 -------------------------------------------------------------
 
 Although the Python language is available in many different implementations, we will focus on the "official" implementation of Python, which is called CPython. The official CPython implementation is available for download from https://www.python.org/downloads/.
