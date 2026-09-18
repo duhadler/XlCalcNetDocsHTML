@@ -52,7 +52,7 @@
     <link rel="prev" title="Accessing and setting parts of a matrix" href="C03_GettingAndSetting.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 17, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 18, 2026"/>
   </head>
   
   
@@ -914,12 +914,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_sort_rows_by_col"><code class="docutils literal notranslate"><span class="pre">ctx.mat_sort_rows_by_col()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resize-a-matrix-like-another-matrix">Resize a matrix like another matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_resize_like"><code class="docutils literal notranslate"><span class="pre">ctx.mat_resize_like()</span></code></a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resize-a-matrix">Resize a matrix</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_resize"><code class="docutils literal notranslate"><span class="pre">ctx.mat_resize()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resize-a-matrix-like-another-matrix">Resize a matrix like another matrix</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_resize_like"><code class="docutils literal notranslate"><span class="pre">ctx.mat_resize_like()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservatively-resize-a-matrix">Conservatively resize a matrix</a><ul class="visible nav section-nav flex-column">
@@ -992,9 +992,9 @@ document.write(`
 <h2>Sorting  a whole matrix<a class="headerlink" href="#sorting-a-whole-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="ctx.mat_sort">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_sort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SortOrder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SortCriterion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_sort" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_sort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_criterion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_sort" title="Link to this definition">#</a></dt>
 <dd><p>Returns a sorted version of the matrix, sorted according to SortOrder and SortCriterion.</p>
-<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.Sort(SortOrder=0,</span> <span class="pre">SortCriterion=1)</span></code> has the same effect</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.Sort(sort_order=0,</span> <span class="pre">sort_criterion=1)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1034,9 +1034,9 @@ document.write(`
 <h2>Sorting the rows of a matrix by a given column<a class="headerlink" href="#sorting-the-rows-of-a-matrix-by-a-given-column" title="Link to this heading">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="ctx.mat_sort_rows_by_col">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_sort_rows_by_col</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ColumnToSortBy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SortOrder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SortCriterion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_sort_rows_by_col" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_sort_rows_by_col</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_to_sort_by</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_criterion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_sort_rows_by_col" title="Link to this definition">#</a></dt>
 <dd><p>Returns a sorted version of the matrix, sorted by column ColumnToSortBy, according to SortOrder and SortCriterion.</p>
-<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.SortRowsByCol(ColumnToSortBy=0,</span> <span class="pre">SortOrder=0,</span> <span class="pre">SortCriterion=1)</span></code> has the same effect</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.SortRowsByCol(column_to_sort_by=0,</span> <span class="pre">sort_order=0,</span> <span class="pre">sort_criterion=1)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1072,13 +1072,13 @@ document.write(`
 </dd></dl>
 
 </section>
-<section id="resize-a-matrix-like-another-matrix">
-<h2>Resize a matrix like another matrix<a class="headerlink" href="#resize-a-matrix-like-another-matrix" title="Link to this heading">#</a></h2>
+<section id="resize-a-matrix">
+<h2>Resize a matrix<a class="headerlink" href="#resize-a-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.mat_resize_like">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_resize_like</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_resize_like" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_resize">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_resize" title="Link to this definition">#</a></dt>
 <dd><p>Resizes the matrix inplace, setting values of coefficients to zero.</p>
-<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.ResizeLike(r,</span> <span class="pre">c)</span></code> has the same effect</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.Resize(r,</span> <span class="pre">c)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1101,13 +1101,13 @@ document.write(`
 </dd></dl>
 
 </section>
-<section id="resize-a-matrix">
-<h2>Resize a matrix<a class="headerlink" href="#resize-a-matrix" title="Link to this heading">#</a></h2>
+<section id="resize-a-matrix-like-another-matrix">
+<h2>Resize a matrix like another matrix<a class="headerlink" href="#resize-a-matrix-like-another-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.mat_resize">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_resize" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_resize_like">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_resize_like</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_resize_like" title="Link to this definition">#</a></dt>
 <dd><p>Resizes the matrix inplace, setting values of coefficients to zero.</p>
-<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.Resize(r,</span> <span class="pre">c)</span></code> has the same effect</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.ResizeLike(matB)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1254,7 +1254,7 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="ctx.mat_conjugate">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_conjugate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_conjugate" title="Link to this definition">#</a></dt>
-<dd><p>Returns the conjugate matrix of matrix ?matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.Conjugate()</span></code> has the same effect</p>
+<dd><p>Returns the conjugate matrix of matrix matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.Conjugate()</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># example with a real matrix</span>
@@ -1311,7 +1311,7 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="ctx.mat_transpose">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_transpose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_transpose" title="Link to this definition">#</a></dt>
-<dd><p>Returns the transposed matrix of matrix ?matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.Transpose()</span></code> has the same effect</p>
+<dd><p>Returns the transposed matrix of matrix matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.Transpose()</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1340,7 +1340,7 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="ctx.mat_reverse_full">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_reverse_full</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_reverse_full" title="Link to this definition">#</a></dt>
-<dd><p>Returns the full reverse of matrix ?matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.ReverseFull()</span></code> has the same effect</p>
+<dd><p>Returns the full reverse of matrix matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.ReverseFull()</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1371,7 +1371,7 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="ctx.mat_reverse_row_wise">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_reverse_row_wise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_reverse_row_wise" title="Link to this definition">#</a></dt>
-<dd><p>Returns the row-wise reverse of matrix ?matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.ReverseRowwise()</span></code> has the same effect</p>
+<dd><p>Returns the row-wise reverse of matrix matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.ReverseRowwise()</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1431,8 +1431,8 @@ document.write(`
 <h2>Full Replication of a matrix<a class="headerlink" href="#full-replication-of-a-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="ctx.mat_replicate_full">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_replicate_full</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Vertical</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Horizontal</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_replicate_full" title="Link to this definition">#</a></dt>
-<dd><p>Returns a full replication of matrix matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.ReplicateFull(Vertical,</span> <span class="pre">Horizontal)</span></code> has the same effect</p>
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_replicate_full</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vertical</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">horizontal</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_replicate_full" title="Link to this definition">#</a></dt>
+<dd><p>Returns a full replication of matrix matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.ReplicateFull(vertical,</span> <span class="pre">horizontal)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1468,8 +1468,8 @@ document.write(`
 <h2>Row-wise Replication of a matrix<a class="headerlink" href="#row-wise-replication-of-a-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="ctx.mat_replicate_row_wise">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_replicate_row_wise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Horizontal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_replicate_row_wise" title="Link to this definition">#</a></dt>
-<dd><p>Returns a row-wise replication of matrix matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.ReplicateRowwise(Horizontal=1)</span></code> has the same effect</p>
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_replicate_row_wise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">horizontal</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_replicate_row_wise" title="Link to this definition">#</a></dt>
+<dd><p>Returns a row-wise replication of matrix matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.ReplicateRowwise(horizontal)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1499,8 +1499,8 @@ document.write(`
 <h2>Column-wise Replication of a matrix<a class="headerlink" href="#column-wise-replication-of-a-matrix" title="Link to this heading">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="ctx.mat_replicate_col_wise">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_replicate_col_wise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Vertical</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_replicate_col_wise" title="Link to this definition">#</a></dt>
-<dd><p>Returns a column-wise replication of matrix matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.ReplicateColwise(Vertical=1)</span></code> has the same effect</p>
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_replicate_col_wise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vertical</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_replicate_col_wise" title="Link to this definition">#</a></dt>
+<dd><p>Returns a column-wise replication of matrix matA.  Writing <code class="docutils literal notranslate"><span class="pre">matA.ReplicateColwise(vertical)</span></code> has the same effect</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x4&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1674,12 +1674,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_sort_rows_by_col"><code class="docutils literal notranslate"><span class="pre">ctx.mat_sort_rows_by_col()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resize-a-matrix-like-another-matrix">Resize a matrix like another matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_resize_like"><code class="docutils literal notranslate"><span class="pre">ctx.mat_resize_like()</span></code></a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resize-a-matrix">Resize a matrix</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_resize"><code class="docutils literal notranslate"><span class="pre">ctx.mat_resize()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resize-a-matrix-like-another-matrix">Resize a matrix like another matrix</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_resize_like"><code class="docutils literal notranslate"><span class="pre">ctx.mat_resize_like()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservatively-resize-a-matrix">Conservatively resize a matrix</a><ul class="visible nav section-nav flex-column">
@@ -1767,7 +1767,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 17, 2026.
+  Last updated on Sep 18, 2026.
   <br/>
 </p>
   </div>

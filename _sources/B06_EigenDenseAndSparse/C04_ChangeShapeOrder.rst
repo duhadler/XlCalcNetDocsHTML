@@ -35,11 +35,11 @@ Sorting  a whole matrix
 -------------------------------------------------------------------------------
 
 
-.. method:: ctx.mat_sort(matA, SortOrder=0, SortCriterion=1)
+.. method:: ctx.mat_sort(matA, sort_order=0, sort_criterion=1)
 
     Returns a sorted version of the matrix, sorted according to SortOrder and SortCriterion. 
 
-    Writing ``matA.Sort(SortOrder=0, SortCriterion=1)`` has the same effect
+    Writing ``matA.Sort(sort_order=0, sort_criterion=1)`` has the same effect
 
 
     .. code-block:: pycon
@@ -81,11 +81,11 @@ Sorting  a whole matrix
 Sorting the rows of a matrix by a given column
 -------------------------------------------------------------------------------
 
-.. method:: ctx.mat_sort_rows_by_col(matA, ColumnToSortBy=0, SortOrder=0, SortCriterion=1)
+.. method:: ctx.mat_sort_rows_by_col(matA, column_to_sort_by=0, sort_order=0, sort_criterion=1)
 
     Returns a sorted version of the matrix, sorted by column ColumnToSortBy, according to SortOrder and SortCriterion.
 
-    Writing ``matA.SortRowsByCol(ColumnToSortBy=0, SortOrder=0, SortCriterion=1)`` has the same effect
+    Writing ``matA.SortRowsByCol(column_to_sort_by=0, sort_order=0, sort_criterion=1)`` has the same effect
 
 
     .. code-block:: pycon
@@ -125,18 +125,14 @@ Sorting the rows of a matrix by a given column
 
 
 
-
-
-
-Resize a matrix like another matrix
+Resize a matrix
 -------------------------------------------------------------------------------
 
-.. method:: ctx.mat_resize_like(matA, r, c)
+.. method:: ctx.mat_resize(matA, r, c)
 
     Resizes the matrix inplace, setting values of coefficients to zero.
 
-    Writing ``matA.ResizeLike(r, c)`` has the same effect
-
+    Writing ``matA.Resize(r, c)`` has the same effect
 
     .. code-block:: pycon
 
@@ -160,14 +156,17 @@ Resize a matrix like another matrix
 
 
 
-Resize a matrix
+
+
+Resize a matrix like another matrix
 -------------------------------------------------------------------------------
 
-.. method:: ctx.mat_resize(matA, r, c)
+.. method:: ctx.mat_resize_like(matA, matB)
 
     Resizes the matrix inplace, setting values of coefficients to zero.
 
-    Writing ``matA.Resize(r, c)`` has the same effect
+    Writing ``matA.ResizeLike(matB)`` has the same effect
+
 
     .. code-block:: pycon
 
@@ -338,7 +337,7 @@ Conjugate of a matrix
 
 .. method:: ctx.mat_conjugate(matA)
 
-    Returns the conjugate matrix of matrix ?matA.  Writing ``matA.Conjugate()`` has the same effect
+    Returns the conjugate matrix of matrix matA.  Writing ``matA.Conjugate()`` has the same effect
 
 
     .. code-block:: pycon
@@ -399,7 +398,7 @@ Transpose of a matrix
 
 .. method:: ctx.mat_transpose(matA)
 
-    Returns the transposed matrix of matrix ?matA.  Writing ``matA.Transpose()`` has the same effect
+    Returns the transposed matrix of matrix matA.  Writing ``matA.Transpose()`` has the same effect
 
 
     .. code-block:: pycon
@@ -433,7 +432,7 @@ Full Reverse of a matrix
 
 .. method:: ctx.mat_reverse_full(matA)
 
-    Returns the full reverse of matrix ?matA.  Writing ``matA.ReverseFull()`` has the same effect
+    Returns the full reverse of matrix matA.  Writing ``matA.ReverseFull()`` has the same effect
 
 
     .. code-block:: pycon
@@ -470,7 +469,7 @@ Row-wise Reverse of a matrix
 .. method:: ctx.mat_reverse_row_wise(matA)
 
 
-    Returns the row-wise reverse of matrix ?matA.  Writing ``matA.ReverseRowwise()`` has the same effect
+    Returns the row-wise reverse of matrix matA.  Writing ``matA.ReverseRowwise()`` has the same effect
 
 
     .. code-block:: pycon
@@ -536,9 +535,9 @@ Column-wise Reverse of a matrix
 Full Replication of a matrix
 -------------------------------------------------------------------------------
 
-.. method:: ctx.mat_replicate_full(matA, Vertical, Horizontal)
+.. method:: ctx.mat_replicate_full(matA, vertical, horizontal)
 
-    Returns a full replication of matrix matA.  Writing ``matA.ReplicateFull(Vertical, Horizontal)`` has the same effect
+    Returns a full replication of matrix matA.  Writing ``matA.ReplicateFull(vertical, horizontal)`` has the same effect
 
 
     .. code-block:: pycon
@@ -578,9 +577,9 @@ Full Replication of a matrix
 Row-wise Replication of a matrix
 -------------------------------------------------------------------------------
 
-.. method:: ctx.mat_replicate_row_wise(matA, Horizontal=1)
+.. method:: ctx.mat_replicate_row_wise(matA, horizontal)
 
-    Returns a row-wise replication of matrix matA.  Writing ``matA.ReplicateRowwise(Horizontal=1)`` has the same effect
+    Returns a row-wise replication of matrix matA.  Writing ``matA.ReplicateRowwise(horizontal)`` has the same effect
 
 
     .. code-block:: pycon
@@ -614,9 +613,9 @@ Row-wise Replication of a matrix
 Column-wise Replication of a matrix
 -------------------------------------------------------------------------------
 
-.. method:: ctx.mat_replicate_col_wise(matA, Vertical=1)
+.. method:: ctx.mat_replicate_col_wise(matA, vertical)
 
-    Returns a column-wise replication of matrix matA.  Writing ``matA.ReplicateColwise(Vertical=1)`` has the same effect
+    Returns a column-wise replication of matrix matA.  Writing ``matA.ReplicateColwise(vertical)`` has the same effect
 
 
     .. code-block:: pycon

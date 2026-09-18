@@ -53,7 +53,7 @@
     <link rel="prev" title="Standard decompositions and linear solving" href="C07_StandardDecompositions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 17, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 18, 2026"/>
   </head>
   
   
@@ -914,13 +914,13 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#singular-value-decomposition-singular-values-and-thin-singular-vectors">Singular Value Decomposition, singular values and thin singular vectors</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_jacobi_thin_svd"><code class="docutils literal notranslate"><span class="pre">ctx.mat_jacobi_thin_svd()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_jacobi_svd_thin"><code class="docutils literal notranslate"><span class="pre">ctx.mat_jacobi_svd_thin()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-real-matrix-the-singular-values-pseudoinverse-and-thin-singular-vectors">Example for a real matrix: the singular values, pseudoinverse and thin singular vectors</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-complex-matrix-the-singular-values-pseudoinverse-and-thin-singular-vectors">Example for a complex matrix: the singular values, pseudoinverse and thin singular vectors</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#singular-value-decomposition-singular-values-and-full-singular-vectors">Singular Value Decomposition, singular values and full singular vectors</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_jacobi_full_svd"><code class="docutils literal notranslate"><span class="pre">ctx.mat_jacobi_full_svd()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_jacobi_svd_full"><code class="docutils literal notranslate"><span class="pre">ctx.mat_jacobi_svd_full()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-complex-matrix-the-singular-values-pseudoinverse-and-full-singular-vectors">Example for a complex matrix: the singular values, pseudoinverse and full singular vectors</a></li>
 </ul>
 </li>
@@ -954,12 +954,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-complex-matrix">Example for a complex matrix</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#square-root-of-a-selfadjoint-matrix">Square root of a selfadjoint matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_matrix_square_root_sa"><code class="docutils literal notranslate"><span class="pre">ctx.mat_matrix_square_root_sa()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">Example for a real matrix</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">Example for a complex matrix</a></li>
-</ul>
-</li>
 </ul>
             </nav>
         </div>
@@ -978,9 +972,9 @@ document.write(`
 <h2>Singular Value Decomposition, only singular values<a class="headerlink" href="#singular-value-decomposition-only-singular-values" title="Link to this heading">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="ctx.mat_jacobi_svd">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_jacobi_svd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preconditioner</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ColPivQR'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_jacobi_svd" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_jacobi_svd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_jacobi_svd" title="Link to this definition">#</a></dt>
 <dd><p>Returns the two-sided Jacobi SVD decomposition of a rectangular matrix.</p>
-<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.JacobiSVD(Query,</span> <span class="pre">matB=None,</span> <span class="pre">threshold=0,</span> <span class="pre">preconditioner=&quot;ColPivQR&quot;)</span></code> has the same effect</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.JacobiSVD(Query)</span></code> has the same effect</p>
 <p>See also:  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1225" title="Wikipedia. Singular value decomposition. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Singular_value_decomposition.">1450</a>]</span>.</p>
 </dd></dl>
 
@@ -988,15 +982,6 @@ document.write(`
 <dl class="field-list simple">
 <dt class="field-odd">Query<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Required. A string specifying which items of the result section should be computed.</p>
-</dd>
-<dt class="field-even">matB<span class="colon">:</span></dt>
-<dd class="field-even"><p>Optional. A general n-by-m matrix of the same type as <span class="math notranslate nohighlight">\(A\)</span>. You need to specify <span class="math notranslate nohighlight">\(B\)</span> only if you want to solve the linear equation <span class="math notranslate nohighlight">\(AX = B\)</span></p>
-</dd>
-<dt class="field-odd">threshold<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional. The threshold that will be used by certain methods such as rank(). A value of 0 means that the default value (which is determined internally) will be used.</p>
-</dd>
-<dt class="field-even">preconditioner<span class="colon">:</span></dt>
-<dd class="field-even"><p>Optional. A string specifying the the type of QR decomposition that will be used internally for the R-SVD step for non-square matrices. See discussion of possible values below.</p>
 </dd>
 </dl>
 <p><strong>Results:</strong></p>
@@ -1007,26 +992,8 @@ document.write(`
 <dt class="field-even">rank<span class="colon">:</span></dt>
 <dd class="field-even"><p>An integer. The rank of <span class="math notranslate nohighlight">\(A\)</span> (equal to the number of non-zero singular values)</p>
 </dd>
-<dt class="field-odd">X<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A general matrix of the same type and dimension as <span class="math notranslate nohighlight">\(B\)</span>. The solution to <span class="math notranslate nohighlight">\(AX = B\)</span>.</p>
-</dd>
-<dt class="field-even">pseudoInverse<span class="colon">:</span></dt>
-<dd class="field-even"><p>A square matrix of the same type and dimension as <span class="math notranslate nohighlight">\(A\)</span>. The pseudo-inverse of <span class="math notranslate nohighlight">\(A, A^{-1}\)</span>.</p>
-</dd>
 <dt class="field-odd">SV<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A vector of the same type`A`. The singular values <span class="math notranslate nohighlight">\(A\)</span> (see below).</p>
-</dd>
-<dt class="field-even">thinU<span class="colon">:</span></dt>
-<dd class="field-even"><p>A square matrix of the same type and dimension as <span class="math notranslate nohighlight">\(A\)</span>. The thin singular vectors <span class="math notranslate nohighlight">\(U\)</span> (see below).</p>
-</dd>
-<dt class="field-odd">thinV<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A square matrix of the same type and dimension as <span class="math notranslate nohighlight">\(A\)</span>. The thin singular vectors <span class="math notranslate nohighlight">\(V\)</span> (see below).</p>
-</dd>
-<dt class="field-even">fullU<span class="colon">:</span></dt>
-<dd class="field-even"><p>A square matrix of the same type and dimension as <span class="math notranslate nohighlight">\(A\)</span>. The full singular vectors <span class="math notranslate nohighlight">\(U\)</span> (see below).</p>
-</dd>
-<dt class="field-odd">fullV<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A square matrix of the same type and dimension as <span class="math notranslate nohighlight">\(A\)</span>. The full singular vectors <span class="math notranslate nohighlight">\(V\)</span> (see below).</p>
 </dd>
 </dl>
 <p>The singular value decomposition of an <span class="math notranslate nohighlight">\(m\times n\)</span> complex matrix <span class="math notranslate nohighlight">\(\mathbf {M}\)</span> is a factorization of the form <span class="math notranslate nohighlight">\(\mathbf {M} = \mathbf {U\Sigma V^{*}}\)</span>, where <span class="math notranslate nohighlight">\(\mathbf {U}\)</span> is an <span class="math notranslate nohighlight">\(m\times m\)</span> complex unitary matrix, <span class="math notranslate nohighlight">\(\mathbf {\Sigma}\)</span> is an <span class="math notranslate nohighlight">\(m\times n\)</span> rectangular diagonal matrix with non-negative real numbers on the diagonal, and <span class="math notranslate nohighlight">\(\mathbf {V}\)</span> is an <span class="math notranslate nohighlight">\(n\times n\)</span> complex unitary matrix. If <span class="math notranslate nohighlight">\(\mathbf {M}\)</span> is real, <span class="math notranslate nohighlight">\(\mathbf {U}\)</span> and <span class="math notranslate nohighlight">\(\mathbf {V} ^{\textsf {T}}=\mathbf {V^{*}}\)</span> are real orthogonal matrices.</p>
@@ -1147,10 +1114,10 @@ document.write(`
 <section id="singular-value-decomposition-singular-values-and-thin-singular-vectors">
 <h2>Singular Value Decomposition, singular values and thin singular vectors<a class="headerlink" href="#singular-value-decomposition-singular-values-and-thin-singular-vectors" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.mat_jacobi_thin_svd">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_jacobi_thin_svd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preconditioner</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ColPivQR'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_jacobi_thin_svd" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_jacobi_svd_thin">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_jacobi_svd_thin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_jacobi_svd_thin" title="Link to this definition">#</a></dt>
 <dd><p>Returns the two-sided Jacobi SVD decomposition of a rectangular matrix.</p>
-<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.JacobiThinSVD(Query,</span> <span class="pre">matB=None,</span> <span class="pre">threshold=0,</span> <span class="pre">preconditioner=&quot;ColPivQR&quot;)</span></code> has the same effect</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.JacobiSvdThin(Query,</span> <span class="pre">matB)</span></code> has the same effect</p>
 <p>See also:  Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1225" title="Wikipedia. Singular value decomposition. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Singular_value_decomposition.">1450</a>]</span>,  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1221" title="Wikipedia. Moore-Penrose inverse. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse.">1448</a>]</span>.</p>
 </dd></dl>
 
@@ -1161,12 +1128,6 @@ document.write(`
 </dd>
 <dt class="field-even">matB<span class="colon">:</span></dt>
 <dd class="field-even"><p>Optional. A general n-by-m matrix of the same type as <span class="math notranslate nohighlight">\(A\)</span>. You need to specify <span class="math notranslate nohighlight">\(B\)</span> only if you want to solve the linear equation <span class="math notranslate nohighlight">\(AX = B\)</span></p>
-</dd>
-<dt class="field-odd">threshold<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional. The threshold that will be used by certain methods such as rank(). A value of 0 means that the default value (which is determined internally) will be used.</p>
-</dd>
-<dt class="field-even">preconditioner<span class="colon">:</span></dt>
-<dd class="field-even"><p>Optional. A string specifying the the type of QR decomposition that will be used internally for the R-SVD step for non-square matrices. See discussion of possible values below.</p>
 </dd>
 </dl>
 <p><strong>Results:</strong></p>
@@ -1191,12 +1152,6 @@ document.write(`
 </dd>
 <dt class="field-odd">thinV<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A square matrix of the same type and dimension as <span class="math notranslate nohighlight">\(A\)</span>. The thin singular vectors <span class="math notranslate nohighlight">\(V\)</span> (see below).</p>
-</dd>
-<dt class="field-even">fullU<span class="colon">:</span></dt>
-<dd class="field-even"><p>A square matrix of the same type and dimension as <span class="math notranslate nohighlight">\(A\)</span>. The full singular vectors <span class="math notranslate nohighlight">\(U\)</span> (see below).</p>
-</dd>
-<dt class="field-odd">fullV<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A square matrix of the same type and dimension as <span class="math notranslate nohighlight">\(A\)</span>. The full singular vectors <span class="math notranslate nohighlight">\(V\)</span> (see below).</p>
 </dd>
 </dl>
 <section id="example-for-a-real-matrix-the-singular-values-pseudoinverse-and-thin-singular-vectors">
@@ -1491,10 +1446,10 @@ document.write(`
 <section id="singular-value-decomposition-singular-values-and-full-singular-vectors">
 <h2>Singular Value Decomposition, singular values and full singular vectors<a class="headerlink" href="#singular-value-decomposition-singular-values-and-full-singular-vectors" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.mat_jacobi_full_svd">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_jacobi_full_svd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preconditioner</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ColPivQR'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_jacobi_full_svd" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_jacobi_svd_full">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_jacobi_svd_full</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_jacobi_svd_full" title="Link to this definition">#</a></dt>
 <dd><p>Returns the two-sided Jacobi SVD decomposition of a rectangular matrix.</p>
-<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.JacobiFullSVD(Query,</span> <span class="pre">matB=None,</span> <span class="pre">threshold=0,</span> <span class="pre">preconditioner=&quot;ColPivQR&quot;)</span></code> has the same effect</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.JacobiSvdFull(Query,</span> <span class="pre">matB)</span></code> has the same effect</p>
 <p>See also Eigen <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id532" title="Eigen Core Developers. JacobiSVD. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1JacobiSVD.html.">230</a>]</span>,  Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1225" title="Wikipedia. Singular value decomposition. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Singular_value_decomposition.">1450</a>]</span>,  Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1221" title="Wikipedia. Moore-Penrose inverse. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse.">1448</a>]</span>,  Wikipedia <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1463</a>]</span>.</p>
 </dd></dl>
 
@@ -1505,12 +1460,6 @@ document.write(`
 </dd>
 <dt class="field-even">matB<span class="colon">:</span></dt>
 <dd class="field-even"><p>Optional. A general n-by-m matrix of the same type as <span class="math notranslate nohighlight">\(A\)</span>. You need to specify <span class="math notranslate nohighlight">\(B\)</span> only if you want to solve the linear equation <span class="math notranslate nohighlight">\(AX = B\)</span></p>
-</dd>
-<dt class="field-odd">threshold<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional. The threshold that will be used by certain methods such as rank(). A value of 0 means that the default value (which is determined internally) will be used.</p>
-</dd>
-<dt class="field-even">preconditioner<span class="colon">:</span></dt>
-<dd class="field-even"><p>Optional. A string specifying the the type of QR decomposition that will be used internally for the R-SVD step for non-square matrices. See discussion of possible values below.</p>
 </dd>
 </dl>
 <p><strong>Results:</strong></p>
@@ -1529,12 +1478,6 @@ document.write(`
 </dd>
 <dt class="field-odd">SV<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A vector of the same type`A`. The singular values <span class="math notranslate nohighlight">\(A\)</span> (see below).</p>
-</dd>
-<dt class="field-even">thinU<span class="colon">:</span></dt>
-<dd class="field-even"><p>A square matrix of the same type and dimension as <span class="math notranslate nohighlight">\(A\)</span>. The thin singular vectors <span class="math notranslate nohighlight">\(U\)</span> (see below).</p>
-</dd>
-<dt class="field-odd">thinV<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A square matrix of the same type and dimension as <span class="math notranslate nohighlight">\(A\)</span>. The thin singular vectors <span class="math notranslate nohighlight">\(V\)</span> (see below).</p>
 </dd>
 <dt class="field-even">fullU<span class="colon">:</span></dt>
 <dd class="field-even"><p>A square matrix of the same type and dimension as <span class="math notranslate nohighlight">\(A\)</span>. The full singular vectors <span class="math notranslate nohighlight">\(U\)</span> (see below).</p>
@@ -2422,7 +2365,7 @@ According to options, this function computes eigenvalues and (if requested) the 
 <dt class="sig sig-object py" id="ctx.mat_generalized_self_adjoint_eigen_system">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_generalized_self_adjoint_eigen_system</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_generalized_self_adjoint_eigen_system" title="Link to this definition">#</a></dt>
 <dd><p>Returns the eigendecomposition of a generalized selfadjoint eigensystem.</p>
-<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.GeneralizedSelfAdjointEigenSystem(Query)</span></code> has the same effect</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.GeneralizedSelfAdjointEigenSolver(Query)</span></code> has the same effect</p>
 <p>See also Eigen <span id="id20">[<a class="reference internal" href="../99BackMatter/index.html#id544" title="Eigen Core Developers. GeneralizedSelfAdjointEigenSolver. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1GeneralizedSelfAdjointEigenSolver.html.">227</a>]</span>,  Wikipedia <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id1237" title="Wikipedia. QR decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix#Generalized_eigenvalue_problem.">1468</a>]</span>,  Wikipedia <span id="id22">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1463</a>]</span>,  Wikipedia <span id="id23">[<a class="reference internal" href="../99BackMatter/index.html#id1230" title="Wikipedia. Eigendecomposition of a matrix: Generalized_eigenvalue_problem. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix#Generalized_eigenvalue_problem.">1435</a>]</span>.</p>
 </dd></dl>
 
@@ -2703,7 +2646,7 @@ According to options, this function computes eigenvalues and (if requested) the 
 <dt class="sig sig-object py" id="ctx.mat_tridiagonalization">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_tridiagonalization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_tridiagonalization" title="Link to this definition">#</a></dt>
 <dd><p>Returns the tridiagonal decomposition of a selfadjoint matrix.</p>
-<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.Tridiagonalization(Query)</span></code> has the same effect</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.Tridiag(Query)</span></code> has the same effect</p>
 <p>See also Eigen <span id="id26">[<a class="reference internal" href="../99BackMatter/index.html#id534" title="Eigen Core Developers. Tridiagonalization. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1Tridiagonalization.html.">240</a>]</span>,  Wikipedia <span id="id27">[<a class="reference internal" href="../99BackMatter/index.html#id1226" title="Wikipedia. Tridiagonal matrix. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Tridiagonal_matrix.">1453</a>]</span>,  Wikipedia <span id="id28">[<a class="reference internal" href="../99BackMatter/index.html#id1227" title="Wikipedia. Householder transformation: Tridiagonalization. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Householder_transformation#Tridiagonalization.">1441</a>]</span>,  Wikipedia <span id="id29">[<a class="reference internal" href="../99BackMatter/index.html#id1229" title="Wikipedia. Eigendecomposition of a matrix: Useful facts. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix#Useful_facts.">1436</a>]</span>,  Wikipedia <span id="id30">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1463</a>]</span>.</p>
 </dd></dl>
 
@@ -2940,252 +2883,6 @@ According to options, this function computes eigenvalues and (if requested) the 
 <span class="go">4:   250 + 0j,  1.12E-23 + 3.03E-26j,     1.19E-23 + 0j,</span>
 </pre></div>
 </div>
-<p></p>
-</section>
-</section>
-<section id="square-root-of-a-selfadjoint-matrix">
-<h2>Square root of a selfadjoint matrix<a class="headerlink" href="#square-root-of-a-selfadjoint-matrix" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="ctx.mat_matrix_square_root_sa">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_matrix_square_root_sa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_matrix_square_root_sa" title="Link to this definition">#</a></dt>
-<dd><p>Returns the tridiagonal decomposition of a selfadjoint matrix.</p>
-<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.MatrixSquareRootSA(Query)</span></code> has the same effect</p>
-<p>See also Eigen <span id="id31">[<a class="reference internal" href="../99BackMatter/index.html#id534" title="Eigen Core Developers. Tridiagonalization. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1Tridiagonalization.html.">240</a>]</span>,  Wikipedia <span id="id32">[<a class="reference internal" href="../99BackMatter/index.html#id1226" title="Wikipedia. Tridiagonal matrix. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Tridiagonal_matrix.">1453</a>]</span>,  Wikipedia <span id="id33">[<a class="reference internal" href="../99BackMatter/index.html#id1227" title="Wikipedia. Householder transformation: Tridiagonalization. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Householder_transformation#Tridiagonalization.">1441</a>]</span>,  Wikipedia <span id="id34">[<a class="reference internal" href="../99BackMatter/index.html#id1229" title="Wikipedia. Eigendecomposition of a matrix: Useful facts. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix#Useful_facts.">1436</a>]</span>,  Wikipedia <span id="id35">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1463</a>]</span>.</p>
-</dd></dl>
-
-<p><strong>Parameters:</strong></p>
-<dl class="field-list simple">
-<dt class="field-odd">Query<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Required. A string specifying which items of the result section should be computed.</p>
-</dd>
-</dl>
-<p><strong>Results:</strong></p>
-<dl class="field-list simple">
-<dt class="field-odd">Q<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Returns the unitary matrix Q in the decomposition.</p>
-</dd>
-<dt class="field-even">T<span class="colon">:</span></dt>
-<dd class="field-even"><p>Returns an expression of the tridiagonal matrix T in the decomposition..</p>
-</dd>
-<dt class="field-odd">packed<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Returns the internal representation of the decomposition.</p>
-</dd>
-<dt class="field-even">hcoeff<span class="colon">:</span></dt>
-<dd class="field-even"><p>Returns the Householder coefficients..</p>
-</dd>
-<dt class="field-odd">diag<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Returns the diagonal of the tridiagonal matrix T in the decomposition.</p>
-</dd>
-<dt class="field-even">subdiag<span class="colon">:</span></dt>
-<dd class="field-even"><p>Returns the subdiagonal of the tridiagonal matrix T in the decomposition.</p>
-</dd>
-</dl>
-<p>This class performs a tridiagonal decomposition of a selfadjoint matrix <span class="math notranslate nohighlight">\(A\)</span> such that: <span class="math notranslate nohighlight">\(A = QTQ^*\)</span> where <span class="math notranslate nohighlight">\(Q\)</span> is unitary and T a real symmetric tridiagonal matrix. A tridiagonal matrix is a matrix which has nonzero elements only on the main diagonal and the first diagonal below and above it. The Hessenberg decomposition of a selfadjoint matrix is in fact a tridiagonal decomposition. This class is used in SelfAdjointEigenSolver to compute the eigenvalues and eigenvectors of a selfadjoint matrix.</p>
-<section id="id36">
-<h3>Example for a real matrix<a class="headerlink" href="#id36" title="Link to this heading">#</a></h3>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">();</span> <span class="n">mp14</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">35</span><span class="p">);</span> <span class="n">mp14</span><span class="o">.</span><span class="n">setshowdps</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableRandomSAA6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">44.9, 25.5, 50.0, 47.9, 26.4, 62.0,</span>
-<span class="go">25.5, 24.3, 49.1, 95.0, 29.0, 46.6,</span>
-<span class="go">50.0, 49.1, 55.5, 84.0, 44.4, 26.7,</span>
-<span class="go">47.9, 95.0, 84.0, 64.5, 39.5, 87.5,</span>
-<span class="go">26.4, 29.0, 44.4, 39.5, 39.8, 12.3,</span>
-<span class="go">62.0, 46.6, 26.7, 87.5, 12.3, 85.0,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Query</span> <span class="o">=</span> <span class="s2">&quot;Q, T, Packed, Hcoeff, Diag, Subdiag&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Res</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">eigen_tridiag2</span><span class="p">(</span><span class="n">Query</span><span class="p">)</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Q</span> <span class="o">=</span> <span class="n">Res</span><span class="p">[</span><span class="s2">&quot;Q&quot;</span><span class="p">];</span> <span class="n">Q</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;Q&quot;</span><span class="p">)</span>
-<span class="go">Q:</span>
-<span class="go">1,      0,        0,      0,      0,      0,</span>
-<span class="go">0, -0.255,    0.648,  0.267,  0.628,  0.220,</span>
-<span class="go">0, -0.500,   -0.254,  0.734, -0.127, -0.361,</span>
-<span class="go">0, -0.479,    0.538, -0.386, -0.470, -0.332,</span>
-<span class="go">0, -0.264, -0.00888,  0.149, -0.455,  0.837,</span>
-<span class="go">0, -0.620,   -0.474, -0.468,  0.401,  0.101,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">T</span> <span class="o">=</span> <span class="n">Res</span><span class="p">[</span><span class="s2">&quot;T&quot;</span><span class="p">];</span> <span class="n">T</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">)</span>
-<span class="go">T:</span>
-<span class="go"> 44.9, -99.9,     0,     0,     0,     0,</span>
-<span class="go">-99.9,   255, -73.7,     0,     0,     0,</span>
-<span class="go">    0, -73.7,  11.5,  21.7,     0,     0,</span>
-<span class="go">    0,     0,  21.7,  20.2, -49.4,     0,</span>
-<span class="go">    0,     0,     0, -49.4, -18.5, -24.2,</span>
-<span class="go">    0,     0,     0,     0, -24.2, 0.966,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Res</span><span class="p">[</span><span class="s2">&quot;Packed&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;Packed&quot;</span><span class="p">)</span>
-<span class="go">Packed:</span>
-<span class="go"> 44.9,   25.5,    50.0,   47.9,  26.4,  62.0,</span>
-<span class="go">-99.9,    255,    49.1,   95.0,  29.0,  46.6,</span>
-<span class="go">0.399,  -73.7,    11.5,   84.0,  44.4,  26.7,</span>
-<span class="go">0.382, -0.192,    21.7,   20.2,  39.5,  87.5,</span>
-<span class="go">0.210, 0.0961, -0.0240,  -49.4, -18.5,  12.3,</span>
-<span class="go">0.494,  0.526,   0.680, -0.524, -24.2, 0.966,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Check that Q is unitary, i.e. that QQ^H = I</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">CheckResult</span> <span class="o">=</span> <span class="p">(</span><span class="n">Q</span><span class="o">.</span><span class="n">I</span> <span class="o">-</span> <span class="n">Q</span> <span class="o">*</span> <span class="n">Q</span><span class="o">.</span><span class="n">H</span><span class="p">)</span><span class="o">.</span><span class="n">norm</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;||I - Q * Q.H|| (should be zero): &quot;</span><span class="p">,</span> <span class="n">CheckResult</span><span class="o">.</span><span class="n">s</span><span class="p">())</span>
-<span class="go">    ||I - Q * Q.H|| (should be zero):  1.44E-35</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Check the defining property of the decomposition, i.e. A = QTQ^H</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">CheckResult</span> <span class="o">=</span> <span class="p">(</span><span class="n">A</span> <span class="o">-</span> <span class="n">Q</span> <span class="o">*</span> <span class="n">T</span> <span class="o">*</span> <span class="n">Q</span><span class="o">.</span><span class="n">H</span><span class="p">)</span><span class="o">.</span><span class="n">norm</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;||A - Q * T * Q^H|| (should be zero): &quot;</span><span class="p">,</span> <span class="n">CheckResult</span><span class="o">.</span><span class="n">s</span><span class="p">())</span>
-<span class="go">    ||A - Q * T * Q^H|| (should be zero):  3.96E-33</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">diag</span> <span class="o">=</span> <span class="n">Res</span><span class="p">[</span><span class="s2">&quot;Diag&quot;</span><span class="p">];</span> <span class="n">subdiag</span> <span class="o">=</span> <span class="n">Res</span><span class="p">[</span><span class="s2">&quot;Subdiag&quot;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Query</span> <span class="o">=</span> <span class="s2">&quot;eval, evec&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">evaltridiag</span> <span class="o">=</span> <span class="n">diag</span><span class="o">.</span><span class="n">eigen_SelfAdjointEigenSystemFromTridiag2</span><span class="p">(</span><span class="n">Query</span><span class="p">,</span> <span class="n">subdiag</span><span class="p">)</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="o">=</span> <span class="n">evaltridiag</span><span class="p">[</span><span class="s2">&quot;Eval&quot;</span><span class="p">];</span> <span class="n">ct</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;L[i]&quot;</span><span class="p">];</span> <span class="n">rt</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;i&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">L</span><span class="o">.</span><span class="n">rows</span><span class="p">)]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;Vector L of eigenvalues of T&quot;</span><span class="p">,</span> <span class="n">coltitles</span> <span class="o">=</span> <span class="n">ct</span><span class="p">,</span> <span class="n">rowtitles</span> <span class="o">=</span> <span class="n">rt</span><span class="p">)</span>
-<span class="go">Vector L of eigenvalues of T:</span>
-<span class="go">i   L[i]</span>
-<span class="go">0: -61.7,</span>
-<span class="go">1: -27.7,</span>
-<span class="go">2:  4.34,</span>
-<span class="go">3:  25.8,</span>
-<span class="go">4:  62.5,</span>
-<span class="go">5:   311,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span> <span class="o">=</span>  <span class="n">evaltridiag</span><span class="p">[</span><span class="s2">&quot;Evec&quot;</span><span class="p">];</span> <span class="n">mt</span> <span class="o">=</span> <span class="s2">&quot;Matrix V of eigenvectors of T (V0, ... , V&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">V</span><span class="o">.</span><span class="n">cols</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">mt</span><span class="p">,</span> <span class="n">coltitles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;V#&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">V</span><span class="o">.</span><span class="n">cols</span><span class="p">))</span>
-<span class="go">Matrix V of eigenvectors of T (V0, ... , V5):</span>
-<span class="go">    V0      V1        V2      V3      V4        V5</span>
-<span class="go">0.0719, -0.497,   -0.271,  0.730, -0.157,    0.343,</span>
-<span class="go">0.0767, -0.361,   -0.110,  0.139, 0.0275,   -0.912,</span>
-<span class="go"> 0.232, -0.711, -0.00659, -0.555,  0.284,    0.226,</span>
-<span class="go">-0.521, 0.0579,   -0.370,  0.108,  0.759,   0.0173,</span>
-<span class="go">-0.760, -0.257,   -0.122, -0.257, -0.525, -0.00262,</span>
-<span class="go">-0.293, -0.216,    0.873,  0.249,  0.206, 0.000204,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">CheckResult</span> <span class="o">=</span> <span class="p">(</span><span class="n">T</span> <span class="o">-</span> <span class="n">V</span> <span class="o">*</span> <span class="n">L</span><span class="o">.</span><span class="n">D</span> <span class="o">*</span> <span class="n">V</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">norm</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;||T - V * diag(L) * V^T|| (should be zero): &quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">CheckResult</span><span class="p">)</span><span class="o">.</span><span class="n">s</span><span class="p">())</span>
-<span class="go">    ||T - V * diag(L) * V^T|| (should be zero):  6.70E-33</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">XA</span> <span class="o">=</span> <span class="o">+</span><span class="n">A</span><span class="p">;</span> <span class="n">AD</span> <span class="o">=</span> <span class="n">XA</span><span class="o">.</span><span class="n">diagonal</span><span class="p">();</span> <span class="n">DetA</span> <span class="o">=</span> <span class="n">L</span> <span class="o">*</span> <span class="mi">0</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">XT</span> <span class="o">=</span> <span class="o">+</span><span class="n">T</span><span class="p">;</span> <span class="n">TD</span> <span class="o">=</span> <span class="n">XT</span><span class="o">.</span><span class="n">diagonal</span><span class="p">();</span> <span class="n">DetT</span> <span class="o">=</span> <span class="n">L</span> <span class="o">*</span> <span class="mi">0</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">rows</span><span class="p">):</span>
-<span class="gp">&gt;&gt;&gt; </span>    <span class="n">XA</span><span class="o">.</span><span class="n">set_diagonal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">AD</span> <span class="o">-</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span> <span class="n">DetA</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">XA</span><span class="o">.</span><span class="n">eigen_det</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span>    <span class="n">XT</span><span class="o">.</span><span class="n">set_diagonal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">TD</span> <span class="o">-</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span> <span class="n">DetT</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">XT</span><span class="o">.</span><span class="n">eigen_det</span><span class="p">()</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Result</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">concat_horizontal</span><span class="p">(</span><span class="n">DetA</span><span class="p">)</span><span class="o">.</span><span class="n">concat_horizontal</span><span class="p">(</span><span class="n">DetT</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mt</span> <span class="o">=</span> <span class="s2">&quot;Checking the Eigenvalues: Det(A - I * L[i]) and Det(T - I * L[i]) should be zero&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ct</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;L[i]&quot;</span><span class="p">,</span> <span class="s2">&quot;Det(A - I * L[i])&quot;</span><span class="p">,</span> <span class="s2">&quot;Det(T - I * L[i])&quot;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">rt</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;i&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">L</span><span class="o">.</span><span class="n">rows</span><span class="p">)]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Result</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">mt</span><span class="p">,</span> <span class="n">coltitles</span> <span class="o">=</span> <span class="n">ct</span><span class="p">,</span> <span class="n">rowtitles</span> <span class="o">=</span> <span class="n">rt</span><span class="p">)</span>
-<span class="go">Checking the Eigenvalues: Det(A - I * L[i]) and Det(T - I * L[i]) should be zero:</span>
-<span class="go">i   L[i]  Det(A - I * L[i])  Det(T - I * L[i])</span>
-<span class="go">0: -61.7,          8.41E-24,          8.69E-24,</span>
-<span class="go">1: -27.7,         -4.36E-25,         -5.06E-25,</span>
-<span class="go">2:  4.34,          3.49E-26,          4.32E-26,</span>
-<span class="go">3:  25.8,          4.92E-25,          2.75E-25,</span>
-<span class="go">4:  62.5,         -1.13E-23,         -1.08E-23,</span>
-<span class="go">5:   311,         -6.62E-21,         -8.92E-21,</span>
-</pre></div>
-</div>
-</section>
-<section id="id37">
-<h3>Example for a complex matrix<a class="headerlink" href="#id37" title="Link to this heading">#</a></h3>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">dcf</span><span class="p">();</span> <span class="n">mp14</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">35</span><span class="p">);</span> <span class="n">mp14</span><span class="o">.</span><span class="n">setshowdps</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecCplxTableRandomSAA6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">top_left_corner</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
-<span class="go">A:</span>
-<span class="go">   80.0 + 0j, 50.0 - 23.0j, 85.0 + 5.00j, 36.0 - 4.30j, 16.0 - 18.0j,</span>
-<span class="go">50.0 + 23.0j,    30.0 + 0j, 43.0 + 9.50j, 27.0 + 11.0j, 50.0 - 24.0j,</span>
-<span class="go">85.0 - 5.00j, 43.0 - 9.50j,    85.0 + 0j, 55.0 - 7.00j, 34.0 + 8.50j,</span>
-<span class="go">36.0 + 4.30j, 27.0 - 11.0j, 55.0 + 7.00j,    23.0 + 0j, 49.0 + 40.0j,</span>
-<span class="go">16.0 + 18.0j, 50.0 + 24.0j, 34.0 - 8.50j, 49.0 - 40.0j,    85.0 + 0j,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Query</span> <span class="o">=</span> <span class="s2">&quot;Q, T, Packed, Hcoeff, Diag, Subdiag&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Res</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">eigen_tridiag2</span><span class="p">(</span><span class="n">Query</span><span class="p">)</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Q</span> <span class="o">=</span> <span class="n">Res</span><span class="p">[</span><span class="s2">&quot;Q&quot;</span><span class="p">];</span> <span class="n">Q</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;Q&quot;</span><span class="p">)</span>
-<span class="go">Q:</span>
-<span class="go">1.00 + 0j,           0 + 0j,           0 + 0j,            0 + 0j,           0 + 0j,</span>
-<span class="go">   0 + 0j,  -0.453 - 0.208j, -0.0465 - 0.186j,    0.480 - 0.389j,   0.144 + 0.558j,</span>
-<span class="go">   0 + 0j, -0.770 + 0.0453j,  -0.158 + 0.243j, 0.00105 + 0.0880j,  -0.417 - 0.372j,</span>
-<span class="go">   0 + 0j, -0.326 - 0.0390j,   0.258 + 0.207j,   -0.228 + 0.640j,   0.456 + 0.336j,</span>
-<span class="go">   0 + 0j,  -0.145 - 0.163j,   0.864 - 0.153j,   -0.224 - 0.314j, -0.0891 - 0.162j,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">T</span> <span class="o">=</span> <span class="n">Res</span><span class="p">[</span><span class="s2">&quot;T&quot;</span><span class="p">];</span> <span class="n">T</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">)</span>
-<span class="go">T:</span>
-<span class="go">80.0 + 0j,  -110 + 0j,     0 + 0j,     0 + 0j,     0 + 0j,</span>
-<span class="go">-110 + 0j,   153 + 0j, -59.2 + 0j,     0 + 0j,     0 + 0j,</span>
-<span class="go">   0 + 0j, -59.2 + 0j,   104 + 0j,  24.4 + 0j,     0 + 0j,</span>
-<span class="go">   0 + 0j,     0 + 0j,  24.4 + 0j, -30.1 + 0j, -19.0 + 0j,</span>
-<span class="go">   0 + 0j,     0 + 0j,     0 + 0j, -19.0 + 0j, -4.47 + 0j,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Res</span><span class="p">[</span><span class="s2">&quot;Packed&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;Packed&quot;</span><span class="p">)</span>
-<span class="go">Packed:</span>
-<span class="go">       80.0 + 0j,    50.0 - 23.0j,   85.0 + 5.00j, 36.0 - 4.30j, 16.0 - 18.0j,</span>
-<span class="go">       -110 + 0j,        153 + 0j,   43.0 + 9.50j, 27.0 + 11.0j, 50.0 - 24.0j,</span>
-<span class="go">  0.515 - 0.105j,      -59.2 + 0j,       104 + 0j, 55.0 - 7.00j, 34.0 + 8.50j,</span>
-<span class="go">0.224 - 0.00528j, -0.161 - 0.271j,      24.4 + 0j,   -30.1 + 0j, 49.0 + 40.0j,</span>
-<span class="go"> 0.114 + 0.0960j, -0.732 - 0.105j, 0.251 + 0.187j,   -19.0 + 0j,   -4.47 + 0j,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Check that Q is unitary, i.e. that QQ^H = I</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">CheckResult</span> <span class="o">=</span> <span class="p">(</span><span class="n">Q</span><span class="o">.</span><span class="n">I</span> <span class="o">-</span> <span class="n">Q</span> <span class="o">*</span> <span class="n">Q</span><span class="o">.</span><span class="n">H</span><span class="p">)</span><span class="o">.</span><span class="n">norm</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;||I - Q * Q.H|| (should be zero): &quot;</span><span class="p">,</span> <span class="n">CheckResult</span><span class="o">.</span><span class="n">s</span><span class="p">())</span>
-<span class="go">    ||I - Q * Q.H|| (should be zero):  1.46E-35 + 0j</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Check the defining property of the decomposition, i.e. A = QTQ^H</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">CheckResult</span> <span class="o">=</span> <span class="p">(</span><span class="n">A</span> <span class="o">-</span> <span class="n">Q</span> <span class="o">*</span> <span class="n">T</span> <span class="o">*</span> <span class="n">Q</span><span class="o">.</span><span class="n">H</span><span class="p">)</span><span class="o">.</span><span class="n">norm</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;||A - Q * T * Q^H|| (should be zero): &quot;</span><span class="p">,</span> <span class="n">CheckResult</span><span class="o">.</span><span class="n">s</span><span class="p">())</span>
-<span class="go">    ||A - Q * T * Q^H|| (should be zero):  2.51E-33 + 0j</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">diag</span> <span class="o">=</span> <span class="n">Res</span><span class="p">[</span><span class="s2">&quot;Diag&quot;</span><span class="p">];</span> <span class="n">subdiag</span> <span class="o">=</span> <span class="n">Res</span><span class="p">[</span><span class="s2">&quot;Subdiag&quot;</span><span class="p">];</span> <span class="n">T</span> <span class="o">=</span> <span class="n">Res</span><span class="p">[</span><span class="s2">&quot;T&quot;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Query</span> <span class="o">=</span> <span class="s2">&quot;eval, evec&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">evaltridiag</span> <span class="o">=</span> <span class="n">diag</span><span class="o">.</span><span class="n">eigen_SelfAdjointEigenSystemFromTridiag2</span><span class="p">(</span><span class="n">Query</span><span class="p">,</span> <span class="n">subdiag</span><span class="p">)</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="o">=</span> <span class="n">evaltridiag</span><span class="p">[</span><span class="s2">&quot;Eval&quot;</span><span class="p">];</span> <span class="n">ct</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;L[i]&quot;</span><span class="p">];</span> <span class="n">rt</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;i&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">L</span><span class="o">.</span><span class="n">rows</span><span class="p">)]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;Vector L of eigenvalues of T&quot;</span><span class="p">,</span> <span class="n">coltitles</span> <span class="o">=</span> <span class="n">ct</span><span class="p">,</span> <span class="n">rowtitles</span> <span class="o">=</span> <span class="n">rt</span><span class="p">)</span>
-<span class="go">Vector L of eigenvalues of T:</span>
-<span class="go">i        L[i]</span>
-<span class="go">0: -44.4 + 0j,</span>
-<span class="go">1: -10.3 + 0j,</span>
-<span class="go">2:  5.28 + 0j,</span>
-<span class="go">3:   103 + 0j,</span>
-<span class="go">4:   250 + 0j,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span> <span class="o">=</span>  <span class="n">evaltridiag</span><span class="p">[</span><span class="s2">&quot;Evec&quot;</span><span class="p">];</span> <span class="n">mt</span> <span class="o">=</span> <span class="s2">&quot;Matrix V of eigenvectors of T (V0, ... , V&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">V</span><span class="o">.</span><span class="n">cols</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">mt</span><span class="p">,</span> <span class="n">coltitles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;V#&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">V</span><span class="o">.</span><span class="n">cols</span><span class="p">))</span>
-<span class="go">Matrix V of eigenvectors of T (V0, ... , V4):</span>
-<span class="go">          V0            V1            V2            V3             V4</span>
-<span class="go">-0.0991 + 0j,  -0.708 + 0j,   0.190 + 0j,  -0.432 + 0j,    0.515 + 0j,</span>
-<span class="go"> -0.112 + 0j,  -0.580 + 0j,   0.129 + 0j,  0.0896 + 0j,   -0.792 + 0j,</span>
-<span class="go"> -0.189 + 0j,  -0.282 + 0j, -0.0325 + 0j,   0.881 + 0j,    0.327 + 0j,</span>
-<span class="go">  0.876 + 0j, -0.0839 + 0j,   0.443 + 0j,   0.166 + 0j,   0.0288 + 0j,</span>
-<span class="go">  0.418 + 0j,  -0.274 + 0j,  -0.866 + 0j, -0.0295 + 0j, -0.00216 + 0j,</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">CheckResult</span> <span class="o">=</span> <span class="p">(</span><span class="n">T</span> <span class="o">-</span> <span class="n">V</span> <span class="o">*</span> <span class="n">L</span><span class="o">.</span><span class="n">D</span> <span class="o">*</span> <span class="n">V</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">norm</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;||T - V * diag(L) * V^T|| (should be zero): &quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">CheckResult</span><span class="p">)</span><span class="o">.</span><span class="n">s</span><span class="p">())</span>
-<span class="go">    ||T - V * diag(L) * V^T|| (should be zero):  9.71E-33 + 0j</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">XA</span> <span class="o">=</span> <span class="o">+</span><span class="n">A</span><span class="p">;</span> <span class="n">AD</span> <span class="o">=</span> <span class="n">XA</span><span class="o">.</span><span class="n">diagonal</span><span class="p">();</span> <span class="n">DetA</span> <span class="o">=</span> <span class="n">L</span> <span class="o">*</span> <span class="mi">0</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">XT</span> <span class="o">=</span> <span class="o">+</span><span class="n">T</span><span class="p">;</span> <span class="n">TD</span> <span class="o">=</span> <span class="n">XT</span><span class="o">.</span><span class="n">diagonal</span><span class="p">();</span> <span class="n">DetT</span> <span class="o">=</span> <span class="n">L</span> <span class="o">*</span> <span class="mi">0</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">rows</span><span class="p">):</span>
-<span class="gp">&gt;&gt;&gt; </span>    <span class="n">XA</span><span class="o">.</span><span class="n">set_diagonal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">AD</span> <span class="o">-</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span> <span class="n">DetA</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">XA</span><span class="o">.</span><span class="n">eigen_det</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span>    <span class="n">XT</span><span class="o">.</span><span class="n">set_diagonal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">TD</span> <span class="o">-</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span> <span class="n">DetT</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">XT</span><span class="o">.</span><span class="n">eigen_det</span><span class="p">()</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Result</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">concat_horizontal</span><span class="p">(</span><span class="n">DetA</span><span class="p">)</span><span class="o">.</span><span class="n">concat_horizontal</span><span class="p">(</span><span class="n">DetT</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mt</span> <span class="o">=</span> <span class="s2">&quot;Checking the Eigenvalues: Det(A - I * L[i]) and Det(T - I * L[i]) should be zero&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ct</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;L[i]&quot;</span><span class="p">,</span> <span class="s2">&quot;Det(A - I * L[i])&quot;</span><span class="p">,</span> <span class="s2">&quot;Det(T - I * L[i])&quot;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">rt</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;i&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">L</span><span class="o">.</span><span class="n">rows</span><span class="p">)]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Result</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">mt</span><span class="p">,</span> <span class="n">coltitles</span> <span class="o">=</span> <span class="n">ct</span><span class="p">,</span> <span class="n">rowtitles</span> <span class="o">=</span> <span class="n">rt</span><span class="p">)</span>
-<span class="go">Checking the Eigenvalues: Det(A - I * L[i]) and Det(T - I * L[i]) should be zero:</span>
-<span class="go">i        L[i]      Det(A - I * L[i])  Det(T - I * L[i])</span>
-<span class="go">0: -44.4 + 0j, -5.09E-26 - 2.12E-27j,    -2.15E-26 + 0j,</span>
-<span class="go">1: -10.3 + 0j,  5.47E-27 + 2.47E-28j,     8.81E-28 + 0j,</span>
-<span class="go">2:  5.28 + 0j, -6.37E-29 + 1.87E-27j,     9.68E-28 + 0j,</span>
-<span class="go">3:   103 + 0j, -5.10E-25 - 1.96E-26j,    -4.86E-25 + 0j,</span>
-<span class="go">4:   250 + 0j,  1.12E-23 + 3.03E-26j,     1.19E-23 + 0j,</span>
-</pre></div>
-</div>
 </section>
 </section>
 </section>
@@ -3242,13 +2939,13 @@ According to options, this function computes eigenvalues and (if requested) the 
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#singular-value-decomposition-singular-values-and-thin-singular-vectors">Singular Value Decomposition, singular values and thin singular vectors</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_jacobi_thin_svd"><code class="docutils literal notranslate"><span class="pre">ctx.mat_jacobi_thin_svd()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_jacobi_svd_thin"><code class="docutils literal notranslate"><span class="pre">ctx.mat_jacobi_svd_thin()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-real-matrix-the-singular-values-pseudoinverse-and-thin-singular-vectors">Example for a real matrix: the singular values, pseudoinverse and thin singular vectors</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-complex-matrix-the-singular-values-pseudoinverse-and-thin-singular-vectors">Example for a complex matrix: the singular values, pseudoinverse and thin singular vectors</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#singular-value-decomposition-singular-values-and-full-singular-vectors">Singular Value Decomposition, singular values and full singular vectors</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_jacobi_full_svd"><code class="docutils literal notranslate"><span class="pre">ctx.mat_jacobi_full_svd()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_jacobi_svd_full"><code class="docutils literal notranslate"><span class="pre">ctx.mat_jacobi_svd_full()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-complex-matrix-the-singular-values-pseudoinverse-and-full-singular-vectors">Example for a complex matrix: the singular values, pseudoinverse and full singular vectors</a></li>
 </ul>
 </li>
@@ -3280,12 +2977,6 @@ According to options, this function computes eigenvalues and (if requested) the 
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_tridiagonalization"><code class="docutils literal notranslate"><span class="pre">ctx.mat_tridiagonalization()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-real-matrix">Example for a real matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-complex-matrix">Example for a complex matrix</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#square-root-of-a-selfadjoint-matrix">Square root of a selfadjoint matrix</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_matrix_square_root_sa"><code class="docutils literal notranslate"><span class="pre">ctx.mat_matrix_square_root_sa()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">Example for a real matrix</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">Example for a complex matrix</a></li>
 </ul>
 </li>
 </ul>
@@ -3321,7 +3012,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 17, 2026.
+  Last updated on Sep 18, 2026.
   <br/>
 </p>
   </div>

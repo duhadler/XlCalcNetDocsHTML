@@ -53,7 +53,7 @@
     <link rel="prev" title="Changing the shape of a matrix and/or the order of coefficients" href="C04_ChangeShapeOrder.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 17, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 18, 2026"/>
   </head>
   
   
@@ -994,7 +994,7 @@ document.write(`
 </section>
 <section id="general-matrix-addition">
 <h2>General matrix addition<a class="headerlink" href="#general-matrix-addition" title="Link to this heading">#</a></h2>
-<p>Returns the sum of matrix ?matA and matrix matB. ?matA and matB need to be of the same type and need to have the same dimensions. The returned matrix is of the same type as ?matA. Special rules apply for mixing real and complex matrices.</p>
+<p>Returns the sum of matrix matA and matrix matB. matA and matB need to be of the same type and need to have the same dimensions. The returned matrix is of the same type as matA. Special rules apply for mixing real and complex matrices.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1026,7 +1026,7 @@ document.write(`
 </section>
 <section id="matrix-addition-of-a-vector-as-diagonal-matrix">
 <h2>Matrix addition of a vector as diagonal matrix<a class="headerlink" href="#matrix-addition-of-a-vector-as-diagonal-matrix" title="Link to this heading">#</a></h2>
-<p>Returns the matrix product of matrix ?matA and matrix matB. ?matA and matB need to be of the same type and need to have compatible dimensions. The returned matrix is of the same type as ?matA. Special rules apply for mixing real and complex matrices.</p>
+<p>Returns the matrix product of matrix matA and matrix matB. matA and matB need to be of the same type and need to have compatible dimensions. The returned matrix is of the same type as matA. Special rules apply for mixing real and complex matrices.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># read the first column from the matrix</span>
@@ -1080,7 +1080,7 @@ document.write(`
 </section>
 <section id="matrix-addition-of-a-scalar">
 <h2>Matrix: addition of a scalar<a class="headerlink" href="#matrix-addition-of-a-scalar" title="Link to this heading">#</a></h2>
-<p>Returns the sum of matrix ?matA and scalar <span class="math notranslate nohighlight">\(b\)</span>, applied to each coefficient of ?matA. The coefficients of ?matA and <span class="math notranslate nohighlight">\(b\)</span> need to be of the same type. The returned matrix is of the same type as ?matA. Special rules apply for mixing real and complex matrices and real and complex scalars.</p>
+<p>Returns the sum of matrix matA and scalar <span class="math notranslate nohighlight">\(b\)</span>, applied to each coefficient of matA. The coefficients of matA and <span class="math notranslate nohighlight">\(b\)</span> need to be of the same type. The returned matrix is of the same type as matA. Special rules apply for mixing real and complex matrices and real and complex scalars.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1104,7 +1104,7 @@ document.write(`
 </section>
 <section id="general-matrix-subtraction">
 <h2>General matrix subtraction<a class="headerlink" href="#general-matrix-subtraction" title="Link to this heading">#</a></h2>
-<p>Returns the difference of matrix ?matA and matrix matB. ?matA and matB need to be of the same type and need to have the same dimensions. The returned matrix is of the same type as ?matA. Special rules apply for mixing real and complex matrices.</p>
+<p>Returns the difference of matrix matA and matrix matB. matA and matB need to be of the same type and need to have the same dimensions. The returned matrix is of the same type as matA. Special rules apply for mixing real and complex matrices.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1136,7 +1136,7 @@ document.write(`
 </section>
 <section id="matrix-subtraction-of-a-scalar">
 <h2>Matrix: subtraction of a scalar<a class="headerlink" href="#matrix-subtraction-of-a-scalar" title="Link to this heading">#</a></h2>
-<p>Returns the difference of matrix ?matA and scalar <span class="math notranslate nohighlight">\(b\)</span>, applied to each coefficient of ?matA. The coefficients of ?matA and <span class="math notranslate nohighlight">\(b\)</span> need to be of the same type. The returned matrix is of the same type as ?matA. Special rules apply for mixing real and complex matrices and real and complex scalars.</p>
+<p>Returns the difference of matrix matA and scalar <span class="math notranslate nohighlight">\(b\)</span>, applied to each coefficient of matA. The coefficients of matA and <span class="math notranslate nohighlight">\(b\)</span> need to be of the same type. The returned matrix is of the same type as matA. Special rules apply for mixing real and complex matrices and real and complex scalars.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">mp14</span><span class="o">.</span><span class="n">drf</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">read_from_sqlite</span><span class="p">(</span><span class="n">mp14</span><span class="o">.</span><span class="n">dbpath</span><span class="p">(),</span> <span class="s2">&quot;DecTableA6x6&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="n">A</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
@@ -1393,7 +1393,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 17, 2026.
+  Last updated on Sep 18, 2026.
   <br/>
 </p>
   </div>

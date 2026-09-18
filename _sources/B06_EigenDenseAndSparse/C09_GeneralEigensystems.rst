@@ -381,7 +381,7 @@ Eigensystem of a general square matrix: only eigenvalues
 
     Returns the eigendecomposition of a general square matrix *matA* `=A`.
 
-    Writing ``matA.Eigenvalues(Query)`` has the same effect
+    Writing ``matA.EigenValues(Query)`` has the same effect
 
     See also Eigen :cite:p:`EigenMat112`,  Wikipedia :cite:p:`WikipediaMat112`,  Wikipedia :cite:p:`WikipediaMat112a`,  Wikipedia :cite:p:`WikipediaMat130`.
 
@@ -553,7 +553,7 @@ Eigensystem of a general square matrix: eigenvalues and eigenvectors
 
     Returns the eigendecomposition of a general square matrix *matA* `=A`.
 
-    Writing ``matA.Eigensystem(Query)`` has the same effect
+    Writing ``matA.EigenSystem(Query)`` has the same effect
 
     See also Eigen :cite:p:`EigenMat112`,  Wikipedia :cite:p:`WikipediaMat112`,  Wikipedia :cite:p:`WikipediaMat112a`,  Wikipedia :cite:p:`WikipediaMat130`.
 
@@ -955,12 +955,12 @@ If computeQZ==false, some time is saved by not computing matrices `Q` and `Z`.
 PseudoEigenSystem
 --------------------------
 
-.. method:: ctx.mat_pseudo_eigen_values(matA, Query)
+.. method:: ctx.mat_pseudo_eigen_system(matA, Query)
 
 
     Returns the eigenvalues of the general square matrix *matA* `=A`. 
 
-    Writing ``matA.PseudoEigenValues(Query)`` has the same effect
+    Writing ``matA.PseudoEigenSystem(Query)`` has the same effect
 
     See also Eigen :cite:p:`EigenMat125`, Eigen :cite:p:`EigenMat126`.
 
@@ -1073,13 +1073,13 @@ true, and 10n3 if computeEigenvectors is false. This method reuses of the alloca
 Real Generalized Nonsymmetric Eigenvalues
 -----------------------------------------------------
 
-.. method:: ctx.mat_gen_eigen_values(matA, Query)
+.. method:: ctx.mat_gen_eigen_values(matA, Query, matB)
 
 
 
     Returns the Generalized Nonsymmetric Eigensystem; Eigenvalues only of the general matrix *matA* `=A`.
 
-    Writing ``matA.GenEigenValues(Query)`` has the same effect
+    Writing ``matA.GenEigenValues(Query, matB)`` has the same effect
 
 
     See also Eigen :cite:p:`EigenMat123`,  Wikipedia :cite:p:`WikipediaMat123`,  Wikipedia :cite:p:`WikipediaMat130`.
@@ -1177,13 +1177,13 @@ The generalized eigenvalues and eigenvectors of a matrix pair may be complex, ev
 Real Generalized Nonsymmetric Eigensystem
 -----------------------------------------------------
 
-.. method:: ctx.mat_gen_eigen_system(matA, Query)
+.. method:: ctx.mat_gen_eigen_system(matA, Query, matB)
 
 
 
     Returns the Generalized Nonsymmetric Eigensystem; Eigenvalues only of the general matrix *matA* `=A`.
 
-    Writing ``matA.GenEigenSystem(Query)`` has the same effect
+    Writing ``matA.GenEigenSystem(Query, matB)`` has the same effect
 
 
     See also Eigen :cite:p:`EigenMat123`,  Wikipedia :cite:p:`WikipediaMat123`,  Wikipedia :cite:p:`WikipediaMat130`.

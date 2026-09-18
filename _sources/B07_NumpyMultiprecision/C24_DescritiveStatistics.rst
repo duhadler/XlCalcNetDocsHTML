@@ -315,7 +315,7 @@ Correlation matrix
 
 .. method:: mat.correlation(use_crossproduct=False)
 
-    Returns the correlation matrix of matrix ?matA. See also Wikipedia :cite:p:`WikipediaMat13`.
+    Returns the correlation matrix of matrix matA. See also Wikipedia :cite:p:`WikipediaMat13`.
 
 
     .. code-block:: pycon

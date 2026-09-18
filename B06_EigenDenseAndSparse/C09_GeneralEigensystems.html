@@ -53,7 +53,7 @@
     <link rel="prev" title="Singular Value and Eigen (selfadjoint) decompositions" href="C08_SvdAndEigenSA.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 17, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 18, 2026"/>
   </head>
   
   
@@ -937,7 +937,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pseudoeigensystem">PseudoEigenSystem</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_pseudo_eigen_values"><code class="docutils literal notranslate"><span class="pre">ctx.mat_pseudo_eigen_values()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_pseudo_eigen_system"><code class="docutils literal notranslate"><span class="pre">ctx.mat_pseudo_eigen_system()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-generalized-nonsymmetric-eigenvalues">Real Generalized Nonsymmetric Eigenvalues</a><ul class="visible nav section-nav flex-column">
@@ -1254,7 +1254,7 @@ such that <span class="math notranslate nohighlight">\(A = Q H Q^T =  Q^T H Q\)<
 <dt class="sig sig-object py" id="ctx.mat_eigen_values">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_eigen_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_eigen_values" title="Link to this definition">#</a></dt>
 <dd><p>Returns the eigendecomposition of a general square matrix <em>matA</em> <span class="math notranslate nohighlight">\(=A\)</span>.</p>
-<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.Eigenvalues(Query)</span></code> has the same effect</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.EigenValues(Query)</span></code> has the same effect</p>
 <p>See also Eigen <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id535" title="Eigen Core Developers. ComplexEigenSolver. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1ComplexEigenSolver.html.">222</a>]</span>,  Wikipedia <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1228" title="Wikipedia. Eigendecomposition of a matrix. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix#Eigendecomposition_of_a_matrix.">1434</a>]</span>,  Wikipedia <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1229" title="Wikipedia. Eigendecomposition of a matrix: Useful facts. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix#Useful_facts.">1436</a>]</span>,  Wikipedia <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1463</a>]</span>.</p>
 </dd></dl>
 
@@ -1400,7 +1400,7 @@ true, and 10n3 if computeEigenvectors is false. This method reuses of the alloca
 <dt class="sig sig-object py" id="ctx.mat_eigen_system">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_eigen_system</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_eigen_system" title="Link to this definition">#</a></dt>
 <dd><p>Returns the eigendecomposition of a general square matrix <em>matA</em> <span class="math notranslate nohighlight">\(=A\)</span>.</p>
-<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.Eigensystem(Query)</span></code> has the same effect</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.EigenSystem(Query)</span></code> has the same effect</p>
 <p>See also Eigen <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id535" title="Eigen Core Developers. ComplexEigenSolver. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1ComplexEigenSolver.html.">222</a>]</span>,  Wikipedia <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id1228" title="Wikipedia. Eigendecomposition of a matrix. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix#Eigendecomposition_of_a_matrix.">1434</a>]</span>,  Wikipedia <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id1229" title="Wikipedia. Eigendecomposition of a matrix: Useful facts. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix#Useful_facts.">1436</a>]</span>,  Wikipedia <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1463</a>]</span>.</p>
 </dd></dl>
 
@@ -1768,10 +1768,10 @@ If computeQZ==false, some time is saved by not computing matrices <span class="m
 <section id="pseudoeigensystem">
 <h2>PseudoEigenSystem<a class="headerlink" href="#pseudoeigensystem" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.mat_pseudo_eigen_values">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_pseudo_eigen_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_pseudo_eigen_values" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_pseudo_eigen_system">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_pseudo_eigen_system</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_pseudo_eigen_system" title="Link to this definition">#</a></dt>
 <dd><p>Returns the eigenvalues of the general square matrix <em>matA</em> <span class="math notranslate nohighlight">\(=A\)</span>.</p>
-<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.PseudoEigenValues(Query)</span></code> has the same effect</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.PseudoEigenSystem(Query)</span></code> has the same effect</p>
 <p>See also Eigen <span id="id22">[<a class="reference internal" href="../99BackMatter/index.html#id547" title="Eigen Core Developers. PseudoEigenvalueMatrix. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1EigenSolver.html#a4979eafe0aeef06b19ada7fa5e19db17.">234</a>]</span>, Eigen <span id="id23">[<a class="reference internal" href="../99BackMatter/index.html#id548" title="Eigen Core Developers. PseudoEigenvectors. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1EigenSolver.html#a4979eafe0aeef06b19ada7fa5e19db17.">235</a>]</span>.</p>
 </dd></dl>
 
@@ -1860,9 +1860,9 @@ true, and 10n3 if computeEigenvectors is false. This method reuses of the alloca
 <h2>Real Generalized Nonsymmetric Eigenvalues<a class="headerlink" href="#real-generalized-nonsymmetric-eigenvalues" title="Link to this heading">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="ctx.mat_gen_eigen_values">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_gen_eigen_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_gen_eigen_values" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_gen_eigen_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_gen_eigen_values" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Generalized Nonsymmetric Eigensystem; Eigenvalues only of the general matrix <em>matA</em> <span class="math notranslate nohighlight">\(=A\)</span>.</p>
-<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.GenEigenValues(Query)</span></code> has the same effect</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.GenEigenValues(Query,</span> <span class="pre">matB)</span></code> has the same effect</p>
 <p>See also Eigen <span id="id24">[<a class="reference internal" href="../99BackMatter/index.html#id545" title="Eigen Core Developers. GeneralizedEigenSolver. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1GeneralizedEigenSolver.html.">226</a>]</span>,  Wikipedia <span id="id25">[<a class="reference internal" href="../99BackMatter/index.html#id1237" title="Wikipedia. QR decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix#Generalized_eigenvalue_problem.">1468</a>]</span>,  Wikipedia <span id="id26">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1463</a>]</span>.</p>
 </dd></dl>
 
@@ -1946,9 +1946,9 @@ true, and 10n3 if computeEigenvectors is false. This method reuses of the alloca
 <h2>Real Generalized Nonsymmetric Eigensystem<a class="headerlink" href="#real-generalized-nonsymmetric-eigensystem" title="Link to this heading">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="ctx.mat_gen_eigen_system">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_gen_eigen_system</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_gen_eigen_system" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_gen_eigen_system</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_gen_eigen_system" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Generalized Nonsymmetric Eigensystem; Eigenvalues only of the general matrix <em>matA</em> <span class="math notranslate nohighlight">\(=A\)</span>.</p>
-<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.GenEigenSystem(Query)</span></code> has the same effect</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.GenEigenSystem(Query,</span> <span class="pre">matB)</span></code> has the same effect</p>
 <p>See also Eigen <span id="id27">[<a class="reference internal" href="../99BackMatter/index.html#id545" title="Eigen Core Developers. GeneralizedEigenSolver. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1GeneralizedEigenSolver.html.">226</a>]</span>,  Wikipedia <span id="id28">[<a class="reference internal" href="../99BackMatter/index.html#id1237" title="Wikipedia. QR decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix#Generalized_eigenvalue_problem.">1468</a>]</span>,  Wikipedia <span id="id29">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1463</a>]</span>.</p>
 </dd></dl>
 
@@ -2157,7 +2157,7 @@ true, and 10n3 if computeEigenvectors is false. This method reuses of the alloca
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pseudoeigensystem">PseudoEigenSystem</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_pseudo_eigen_values"><code class="docutils literal notranslate"><span class="pre">ctx.mat_pseudo_eigen_values()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_pseudo_eigen_system"><code class="docutils literal notranslate"><span class="pre">ctx.mat_pseudo_eigen_system()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-generalized-nonsymmetric-eigenvalues">Real Generalized Nonsymmetric Eigenvalues</a><ul class="visible nav section-nav flex-column">
@@ -2201,7 +2201,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 17, 2026.
+  Last updated on Sep 18, 2026.
   <br/>
 </p>
   </div>

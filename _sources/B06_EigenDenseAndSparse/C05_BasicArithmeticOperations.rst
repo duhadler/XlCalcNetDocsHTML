@@ -105,7 +105,7 @@ Returns the matrix multiplied with -1.
 General matrix addition
 -------------------------------------------------------------------------------
 
-Returns the sum of matrix ?matA and matrix matB. ?matA and matB need to be of the same type and need to have the same dimensions. The returned matrix is of the same type as ?matA. Special rules apply for mixing real and complex matrices.
+Returns the sum of matrix matA and matrix matB. matA and matB need to be of the same type and need to have the same dimensions. The returned matrix is of the same type as matA. Special rules apply for mixing real and complex matrices.
 
 
     >>> from xlcalcnet import *
@@ -143,7 +143,7 @@ Matrix addition of a vector as diagonal matrix
 -------------------------------------------------------------------------------
 
 
-Returns the matrix product of matrix ?matA and matrix matB. ?matA and matB need to be of the same type and need to have compatible dimensions. The returned matrix is of the same type as ?matA. Special rules apply for mixing real and complex matrices.
+Returns the matrix product of matrix matA and matrix matB. matA and matB need to be of the same type and need to have compatible dimensions. The returned matrix is of the same type as matA. Special rules apply for mixing real and complex matrices.
 
 
 .. code-block:: pycon
@@ -202,7 +202,7 @@ Returns the matrix product of matrix ?matA and matrix matB. ?matA and matB need 
 Matrix: addition of a scalar
 -------------------------------------------------------------------------------
 
-Returns the sum of matrix ?matA and scalar `b`, applied to each coefficient of ?matA. The coefficients of ?matA and `b` need to be of the same type. The returned matrix is of the same type as ?matA. Special rules apply for mixing real and complex matrices and real and complex scalars.
+Returns the sum of matrix matA and scalar `b`, applied to each coefficient of matA. The coefficients of matA and `b` need to be of the same type. The returned matrix is of the same type as matA. Special rules apply for mixing real and complex matrices and real and complex scalars.
 
 
 .. code-block:: pycon
@@ -233,7 +233,7 @@ General matrix subtraction
 -------------------------------------------------------------------------------
 
 
-Returns the difference of matrix ?matA and matrix matB. ?matA and matB need to be of the same type and need to have the same dimensions. The returned matrix is of the same type as ?matA. Special rules apply for mixing real and complex matrices.
+Returns the difference of matrix matA and matrix matB. matA and matB need to be of the same type and need to have the same dimensions. The returned matrix is of the same type as matA. Special rules apply for mixing real and complex matrices.
 
 
     >>> from xlcalcnet import *
@@ -271,7 +271,7 @@ Matrix: subtraction of a scalar
 -------------------------------------------------------------------------------
 
 
-Returns the difference of matrix ?matA and scalar `b`, applied to each coefficient of ?matA. The coefficients of ?matA and `b` need to be of the same type. The returned matrix is of the same type as ?matA. Special rules apply for mixing real and complex matrices and real and complex scalars.
+Returns the difference of matrix matA and scalar `b`, applied to each coefficient of matA. The coefficients of matA and `b` need to be of the same type. The returned matrix is of the same type as matA. Special rules apply for mixing real and complex matrices and real and complex scalars.
 
 
 .. code-block:: pycon

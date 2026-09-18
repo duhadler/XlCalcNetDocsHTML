@@ -37,7 +37,7 @@ Rows of a matrix
 .. method:: ctx.mat_rows(matA)
 
 
-    Returns the number of rows of the matrix. Writing ``matA.rows()`` has the same effect
+    Returns the number of rows of the matrix. Writing ``matA.rows`` has the same effect.
 
 
     .. code-block:: pycon
@@ -55,10 +55,10 @@ Rows of a matrix
 Columns of a matrix
 -------------------------------------------------------------------------------
 
-.. method:: ctx.cols(matA)
+.. method:: ctx.mat_cols(matA)
 
 
-    Returns the number of columns of the matrix. Writing ``matA.cols()`` has the same effect
+    Returns the number of columns of the matrix. Writing ``matA.cols`` has the same effect,
 
 
     .. code-block:: pycon
@@ -75,9 +75,9 @@ Columns of a matrix
 Size of a matrix
 -------------------------------------------------------------------------------
 
-.. method:: ctx.size(matA)
+.. method:: ctx.mat_size(matA)
 
-    Returns the size of the matrix. Writing ``matA.size()`` has the same effect
+    Returns the size of the matrix. Writing ``matA.size`` has the same effect.
 
 
 

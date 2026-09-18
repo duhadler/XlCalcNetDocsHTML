@@ -31,9 +31,13 @@ Descriptive Statistics
 Partial Sum
 -------------------------------------------------------------------------------
 
-.. method:: ctx.mat_partial_sum(mat, partialmode)
+.. method:: ctx.mat_sum(mat, partialmode)
 
-    Calculates the PartialSum.  Writing ``matA.PartialSum(partialmode)`` has the same effect
+    Calculates the PartialSum.  Writing ``matA.sum(partialmode)`` has the same effect
+
+
+    Here partialmode is set as follows: 1 for full matrix calculation, 2 for rowwise calculation, 3 for columnwise calculation.
+
 
     See also: Eigen :cite:p:`EigenMat101`.
 
@@ -43,9 +47,12 @@ Partial Sum
 Partial Product
 -------------------------------------------------------------------------------
 
-.. method:: ctx.mat_partial_prod(matA, partialmode)
+.. method:: ctx.mat_prod(matA, partialmode)
 
-    Calculates the PartialProd.   Writing ``matA.PartialProd(partialmode)`` has the same effect
+    Calculates the PartialProd.   Writing ``matA.prod(partialmode)`` has the same effect
+
+    Here partialmode is set as follows: 1 for full matrix calculation, 2 for rowwise calculation, 3 for columnwise calculation.
+
 
     See also: Eigen :cite:p:`EigenMat101`.
 
@@ -55,9 +62,12 @@ Partial Product
 Partial Arithmetic Mean
 -------------------------------------------------------------------------------
 
-.. method:: ctx.mat_partial_mean(matA, partialmode)
+.. method:: ctx.mat_mean(matA, partialmode)
 
-    Calculates the PartialMean.   Writing ``matA.PartialMean(partialmode)`` has the same effect
+    Calculates the PartialMean.   Writing ``matA.mean(partialmode)`` has the same effect
+
+    Here partialmode is set as follows: 1 for full matrix calculation, 2 for rowwise calculation, 3 for columnwise calculation.
+
 
 
     See also: Eigen :cite:p:`EigenMat101`.
@@ -69,9 +79,12 @@ Partial Arithmetic Mean
 Partial Minimal Coefficient
 -------------------------------------------------------------------------------
 
-.. method:: ctx.mat_partial_min_coeff(matA, partialmode)
+.. method:: ctx.mat_min_coeff(matA, partialmode)
 
-    Calculates the PartialMinCoeff.   Writing ``matA.PartialMinCoeff(partialmode)`` has the same effect
+    Calculates the PartialMinCoeff.   Writing ``matA.min_coeff(partialmode)`` has the same effect
+
+    Here partialmode is set as follows: 1 for full matrix calculation, 2 for rowwise calculation, 3 for columnwise calculation.
+
 
 
     See also: Eigen :cite:p:`EigenMat101`.
@@ -83,9 +96,12 @@ Partial Minimal Coefficient
 Partial Maximal Coefficient
 -------------------------------------------------------------------------------
 
-.. method:: ctx.mat_partial_max_coeff(matA, partialmode)
+.. method:: ctx.mat_max_coeff(matA, partialmode)
 
-    Calculates the PartialMaxCoeff.  Writing ``matA.PartialMaxCoeff(partialmode)`` has the same effect
+    Calculates the PartialMaxCoeff.  Writing ``matA.max_coeff(partialmode)`` has the same effect
+
+    Here partialmode is set as follows: 1 for full matrix calculation, 2 for rowwise calculation, 3 for columnwise calculation.
+
 
 
     See also: Eigen :cite:p:`EigenMat101`.
@@ -99,7 +115,8 @@ Trace
 
 .. method:: ctx.mat_trace(matA)
 
-    Returns the trace of the matrix `A`.  Writing ``mat.Trace()`` has the same effect
+    Returns the trace of the matrix `A`.  Writing ``matA.Trace()`` has the same effect
+
 
 
     See also: Eigen :cite:p:`EigenMat101`,  Wikipedia :cite:p:`WikipediaMat10`.
@@ -113,9 +130,12 @@ Trace
 Partial Squared Norm
 -------------------------------------------------------------------------------
 
-.. method:: ctx.mat_partial_squared_norm(matA, partialmode)
+.. method:: ctx.mat_squared_norm(matA, partialmode)
 
     Calculates the PartialSquaredNorm.  Writing ``matA.PartialSquaredNorm(partialmode)`` has the same effect
+
+    Here partialmode is set as follows: 1 for full matrix calculation, 2 for rowwise calculation, 3 for columnwise calculation.
+
 
     See also: Eigen :cite:p:`EigenMat101`.
 
@@ -125,9 +145,12 @@ Partial Squared Norm
 Partial Norm
 -------------------------------------------------------------------------------
 
-.. method:: ctx.mat_partial_norm(matA, partialmode)
+.. method:: ctx.mat_norm(matA, partialmode)
 
     Calculates the PartialNorm.  Writing ``matA.PartialNorm(partialmode)`` has the same effect
+
+    Here partialmode is set as follows: 1 for full matrix calculation, 2 for rowwise calculation, 3 for columnwise calculation.
+
 
 
     See also: Eigen :cite:p:`EigenMat101`.
@@ -139,9 +162,12 @@ Partial Norm
 Partial Stable Norm
 -------------------------------------------------------------------------------
 
-.. method:: ctx.mat_partial_stable_norm(matA, partialmode)
+.. method:: ctx.mat_stable_norm(matA, partialmode)
 
     Calculates the PartialStableNorm.  Writing ``matA.PartialStableNorm(partialmode)`` has the same effect
+
+    Here partialmode is set as follows: 1 for full matrix calculation, 2 for rowwise calculation, 3 for columnwise calculation.
+
 
 
     See also: Eigen :cite:p:`EigenMat101`.

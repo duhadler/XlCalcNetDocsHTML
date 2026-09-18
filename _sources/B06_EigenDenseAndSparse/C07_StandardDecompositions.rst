@@ -23,11 +23,11 @@ Cholesky Decomposition with Pivoting
 --------------------------------------------------
 
 
-.. method:: ctx.mat_cholesky_ldlt(matA, Query, matB)
+.. method:: ctx.mat_ldlt(matA, Query, matB)
 
     Returns the Cholesky decomposition of the symmetric matrix *matA* `=A = A = P^TLDLP`, with partial pivoting.
 
-    Writing ``matA.CholeskyLDLT(Query, matB)`` has the same effect
+    Writing ``matA.LDLT(Query, matB)`` has the same effect
 
 
     See also Eigen :cite:p:`EigenMat117`,  Wikipedia :cite:p:`WikipediaMat117`,  Wikipedia :cite:p:`WikipediaMat130`.
@@ -969,12 +969,12 @@ Example for a complex matrix
 Cholesky Decomposition without Pivoting
 ---------------------------------------------------------------
 
-.. method:: ctx.mat_cholesky_llt(matA, Query, matB)
+.. method:: ctx.mat_llt(matA, Query, matB)
 
 
     Returns the Cholesky decomposition of the symmetric matrix *matA* `= A = LL^T = U^TU`, without pivoting. 
 
-    Writing ``matA.CholeskyLLT(Query, matB)`` has the same effect
+    Writing ``matA.LLT(Query, matB)`` has the same effect
 
     See also Eigen :cite:p:`EigenMat106`,  Wikipedia :cite:p:`WikipediaMat106`,  Wikipedia :cite:p:`WikipediaMat130`.
 

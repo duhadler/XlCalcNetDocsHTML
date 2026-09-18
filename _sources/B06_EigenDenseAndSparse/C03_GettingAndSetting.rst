@@ -269,7 +269,7 @@ Getting and setting a diagonal
 Getting and setting a triangular view
 -------------------------------------------------------------------------------
 
-.. method:: ctx.mat_get_triangular_view(matA, View = 1)
+.. method:: ctx.mat_get_triangular_view(matA, view = 1)
 
     Gets the triangular view of the matrix. Writing ``matA.get_TriangularView(View = 1)`` has the same effect.
 
@@ -297,7 +297,7 @@ Getting and setting a triangular view
 
 
 
-.. method:: ctx.mat_set_triangular_view(matA, View, matB)
+.. method:: ctx.mat_set_triangular_view(matA, view, matB)
 
     Sets the triangular view of the matrix to *matB*. Writing ``matA.set_TriangularView(View, matB)`` has the same effect.
 

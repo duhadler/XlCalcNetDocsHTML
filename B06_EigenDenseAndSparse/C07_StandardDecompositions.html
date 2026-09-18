@@ -53,7 +53,7 @@
     <link rel="prev" title="Descriptive Statistics" href="C06_DescriptiveStatistics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 17, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 18, 2026"/>
   </head>
   
   
@@ -908,7 +908,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cholesky-decomposition-with-pivoting">Cholesky Decomposition with Pivoting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_cholesky_ldlt"><code class="docutils literal notranslate"><span class="pre">ctx.mat_cholesky_ldlt()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_ldlt"><code class="docutils literal notranslate"><span class="pre">ctx.mat_ldlt()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-real-symmetric-matrix">Example for a real symmetric matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-hermitian-matrix">Example for a hermitian matrix</a></li>
 </ul>
@@ -926,7 +926,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cholesky-decomposition-without-pivoting">Cholesky Decomposition without Pivoting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_cholesky_llt"><code class="docutils literal notranslate"><span class="pre">ctx.mat_cholesky_llt()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_llt"><code class="docutils literal notranslate"><span class="pre">ctx.mat_llt()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Example for a real symmetric matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Example for a hermitian matrix</a></li>
 </ul>
@@ -972,10 +972,10 @@ document.write(`
 <section id="cholesky-decomposition-with-pivoting">
 <h2>Cholesky Decomposition with Pivoting<a class="headerlink" href="#cholesky-decomposition-with-pivoting" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.mat_cholesky_ldlt">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_cholesky_ldlt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_cholesky_ldlt" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_ldlt">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_ldlt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_ldlt" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Cholesky decomposition of the symmetric matrix <em>matA</em> <span class="math notranslate nohighlight">\(=A = A = P^TLDLP\)</span>, with partial pivoting.</p>
-<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.CholeskyLDLT(Query,</span> <span class="pre">matB)</span></code> has the same effect</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.LDLT(Query,</span> <span class="pre">matB)</span></code> has the same effect</p>
 <p>See also Eigen <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id539" title="Eigen Core Developers. LDLT. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1LDLT.html.">231</a>]</span>,  Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1233" title="Wikipedia. LDL decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Cholesky_decomposition#LDL_decomposition_2.">1458</a>]</span>,  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1463</a>]</span>.</p>
 </dd></dl>
 
@@ -1856,10 +1856,10 @@ values of the matrix, something that the LU decomposition doesn’t see.</p>
 <section id="cholesky-decomposition-without-pivoting">
 <h2>Cholesky Decomposition without Pivoting<a class="headerlink" href="#cholesky-decomposition-without-pivoting" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.mat_cholesky_llt">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_cholesky_llt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_cholesky_llt" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_llt">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_llt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_llt" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Cholesky decomposition of the symmetric matrix <em>matA</em> <span class="math notranslate nohighlight">\(= A = LL^T = U^TU\)</span>, without pivoting.</p>
-<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.CholeskyLLT(Query,</span> <span class="pre">matB)</span></code> has the same effect</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">matA.LLT(Query,</span> <span class="pre">matB)</span></code> has the same effect</p>
 <p>See also Eigen <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id529" title="Eigen Core Developers. LLT. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/classEigen_1_1LLT.html.">232</a>]</span>,  Wikipedia <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1223" title="Wikipedia. Cholesky decomposition. Wikimedia Foundation, 2019. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Cholesky_decomposition.">1430</a>]</span>,  Wikipedia <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1239" title="Wikipedia. Matrix decomposition. Wikimedia Foundation, 2020. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Matrix_decomposition.">1463</a>]</span>.</p>
 </dd></dl>
 
@@ -3529,7 +3529,7 @@ arbitrary solution otherwise. Note: The case where b is a matrix is not yet impl
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cholesky-decomposition-with-pivoting">Cholesky Decomposition with Pivoting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_cholesky_ldlt"><code class="docutils literal notranslate"><span class="pre">ctx.mat_cholesky_ldlt()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_ldlt"><code class="docutils literal notranslate"><span class="pre">ctx.mat_ldlt()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-real-symmetric-matrix">Example for a real symmetric matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-a-hermitian-matrix">Example for a hermitian matrix</a></li>
 </ul>
@@ -3547,7 +3547,7 @@ arbitrary solution otherwise. Note: The case where b is a matrix is not yet impl
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cholesky-decomposition-without-pivoting">Cholesky Decomposition without Pivoting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_cholesky_llt"><code class="docutils literal notranslate"><span class="pre">ctx.mat_cholesky_llt()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_llt"><code class="docutils literal notranslate"><span class="pre">ctx.mat_llt()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Example for a real symmetric matrix</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Example for a hermitian matrix</a></li>
 </ul>
@@ -3609,7 +3609,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 17, 2026.
+  Last updated on Sep 18, 2026.
   <br/>
 </p>
   </div>

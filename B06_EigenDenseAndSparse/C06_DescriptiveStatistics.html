@@ -53,7 +53,7 @@
     <link rel="prev" title="Basic arithmetic operations" href="C05_BasicArithmeticOperations.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 17, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 18, 2026"/>
   </head>
   
   
@@ -908,23 +908,23 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-sum">Partial Sum</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_partial_sum"><code class="docutils literal notranslate"><span class="pre">ctx.mat_partial_sum()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_sum"><code class="docutils literal notranslate"><span class="pre">ctx.mat_sum()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-product">Partial Product</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_partial_prod"><code class="docutils literal notranslate"><span class="pre">ctx.mat_partial_prod()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_prod"><code class="docutils literal notranslate"><span class="pre">ctx.mat_prod()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-arithmetic-mean">Partial Arithmetic Mean</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_partial_mean"><code class="docutils literal notranslate"><span class="pre">ctx.mat_partial_mean()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_mean"><code class="docutils literal notranslate"><span class="pre">ctx.mat_mean()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-minimal-coefficient">Partial Minimal Coefficient</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_partial_min_coeff"><code class="docutils literal notranslate"><span class="pre">ctx.mat_partial_min_coeff()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_min_coeff"><code class="docutils literal notranslate"><span class="pre">ctx.mat_min_coeff()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-maximal-coefficient">Partial Maximal Coefficient</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_partial_max_coeff"><code class="docutils literal notranslate"><span class="pre">ctx.mat_partial_max_coeff()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_max_coeff"><code class="docutils literal notranslate"><span class="pre">ctx.mat_max_coeff()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trace">Trace</a><ul class="visible nav section-nav flex-column">
@@ -932,15 +932,15 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-squared-norm">Partial Squared Norm</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_partial_squared_norm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_partial_squared_norm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_squared_norm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_squared_norm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-norm">Partial Norm</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_partial_norm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_partial_norm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_norm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_norm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-stable-norm">Partial Stable Norm</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_partial_stable_norm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_partial_stable_norm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_stable_norm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_stable_norm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#covariance-matrix">Covariance matrix</a><ul class="visible nav section-nav flex-column">
@@ -968,9 +968,10 @@ document.write(`
 <section id="partial-sum">
 <h2>Partial Sum<a class="headerlink" href="#partial-sum" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.mat_partial_sum">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_partial_sum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_partial_sum" title="Link to this definition">#</a></dt>
-<dd><p>Calculates the PartialSum.  Writing <code class="docutils literal notranslate"><span class="pre">matA.PartialSum(partialmode)</span></code> has the same effect</p>
+<dt class="sig sig-object py" id="ctx.mat_sum">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_sum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_sum" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the PartialSum.  Writing <code class="docutils literal notranslate"><span class="pre">matA.sum(partialmode)</span></code> has the same effect</p>
+<p>Here partialmode is set as follows: 1 for full matrix calculation, 2 for rowwise calculation, 3 for columnwise calculation.</p>
 <p>See also: Eigen <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/group__TutorialReductionsVisitorsBroadcasting.html.">238</a>]</span>.</p>
 </dd></dl>
 
@@ -978,9 +979,10 @@ document.write(`
 <section id="partial-product">
 <h2>Partial Product<a class="headerlink" href="#partial-product" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.mat_partial_prod">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_partial_prod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_partial_prod" title="Link to this definition">#</a></dt>
-<dd><p>Calculates the PartialProd.   Writing <code class="docutils literal notranslate"><span class="pre">matA.PartialProd(partialmode)</span></code> has the same effect</p>
+<dt class="sig sig-object py" id="ctx.mat_prod">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_prod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_prod" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the PartialProd.   Writing <code class="docutils literal notranslate"><span class="pre">matA.prod(partialmode)</span></code> has the same effect</p>
+<p>Here partialmode is set as follows: 1 for full matrix calculation, 2 for rowwise calculation, 3 for columnwise calculation.</p>
 <p>See also: Eigen <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/group__TutorialReductionsVisitorsBroadcasting.html.">238</a>]</span>.</p>
 </dd></dl>
 
@@ -988,9 +990,10 @@ document.write(`
 <section id="partial-arithmetic-mean">
 <h2>Partial Arithmetic Mean<a class="headerlink" href="#partial-arithmetic-mean" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.mat_partial_mean">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_partial_mean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_partial_mean" title="Link to this definition">#</a></dt>
-<dd><p>Calculates the PartialMean.   Writing <code class="docutils literal notranslate"><span class="pre">matA.PartialMean(partialmode)</span></code> has the same effect</p>
+<dt class="sig sig-object py" id="ctx.mat_mean">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_mean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_mean" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the PartialMean.   Writing <code class="docutils literal notranslate"><span class="pre">matA.mean(partialmode)</span></code> has the same effect</p>
+<p>Here partialmode is set as follows: 1 for full matrix calculation, 2 for rowwise calculation, 3 for columnwise calculation.</p>
 <p>See also: Eigen <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/group__TutorialReductionsVisitorsBroadcasting.html.">238</a>]</span>.</p>
 </dd></dl>
 
@@ -998,9 +1001,10 @@ document.write(`
 <section id="partial-minimal-coefficient">
 <h2>Partial Minimal Coefficient<a class="headerlink" href="#partial-minimal-coefficient" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.mat_partial_min_coeff">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_partial_min_coeff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_partial_min_coeff" title="Link to this definition">#</a></dt>
-<dd><p>Calculates the PartialMinCoeff.   Writing <code class="docutils literal notranslate"><span class="pre">matA.PartialMinCoeff(partialmode)</span></code> has the same effect</p>
+<dt class="sig sig-object py" id="ctx.mat_min_coeff">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_min_coeff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_min_coeff" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the PartialMinCoeff.   Writing <code class="docutils literal notranslate"><span class="pre">matA.min_coeff(partialmode)</span></code> has the same effect</p>
+<p>Here partialmode is set as follows: 1 for full matrix calculation, 2 for rowwise calculation, 3 for columnwise calculation.</p>
 <p>See also: Eigen <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/group__TutorialReductionsVisitorsBroadcasting.html.">238</a>]</span>.</p>
 </dd></dl>
 
@@ -1008,9 +1012,10 @@ document.write(`
 <section id="partial-maximal-coefficient">
 <h2>Partial Maximal Coefficient<a class="headerlink" href="#partial-maximal-coefficient" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.mat_partial_max_coeff">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_partial_max_coeff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_partial_max_coeff" title="Link to this definition">#</a></dt>
-<dd><p>Calculates the PartialMaxCoeff.  Writing <code class="docutils literal notranslate"><span class="pre">matA.PartialMaxCoeff(partialmode)</span></code> has the same effect</p>
+<dt class="sig sig-object py" id="ctx.mat_max_coeff">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_max_coeff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_max_coeff" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the PartialMaxCoeff.  Writing <code class="docutils literal notranslate"><span class="pre">matA.max_coeff(partialmode)</span></code> has the same effect</p>
+<p>Here partialmode is set as follows: 1 for full matrix calculation, 2 for rowwise calculation, 3 for columnwise calculation.</p>
 <p>See also: Eigen <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/group__TutorialReductionsVisitorsBroadcasting.html.">238</a>]</span>.</p>
 </dd></dl>
 
@@ -1020,7 +1025,7 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="ctx.mat_trace">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_trace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_trace" title="Link to this definition">#</a></dt>
-<dd><p>Returns the trace of the matrix <span class="math notranslate nohighlight">\(A\)</span>.  Writing <code class="docutils literal notranslate"><span class="pre">mat.Trace()</span></code> has the same effect</p>
+<dd><p>Returns the trace of the matrix <span class="math notranslate nohighlight">\(A\)</span>.  Writing <code class="docutils literal notranslate"><span class="pre">matA.Trace()</span></code> has the same effect</p>
 <p>See also: Eigen <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/group__TutorialReductionsVisitorsBroadcasting.html.">238</a>]</span>,  Wikipedia <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1214" title="Wikipedia. Trace (linear algebra). Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Determinant.">1423</a>]</span>.</p>
 </dd></dl>
 
@@ -1028,9 +1033,10 @@ document.write(`
 <section id="partial-squared-norm">
 <h2>Partial Squared Norm<a class="headerlink" href="#partial-squared-norm" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.mat_partial_squared_norm">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_partial_squared_norm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_partial_squared_norm" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_squared_norm">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_squared_norm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_squared_norm" title="Link to this definition">#</a></dt>
 <dd><p>Calculates the PartialSquaredNorm.  Writing <code class="docutils literal notranslate"><span class="pre">matA.PartialSquaredNorm(partialmode)</span></code> has the same effect</p>
+<p>Here partialmode is set as follows: 1 for full matrix calculation, 2 for rowwise calculation, 3 for columnwise calculation.</p>
 <p>See also: Eigen <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/group__TutorialReductionsVisitorsBroadcasting.html.">238</a>]</span>.</p>
 </dd></dl>
 
@@ -1038,9 +1044,10 @@ document.write(`
 <section id="partial-norm">
 <h2>Partial Norm<a class="headerlink" href="#partial-norm" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.mat_partial_norm">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_partial_norm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_partial_norm" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_norm">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_norm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_norm" title="Link to this definition">#</a></dt>
 <dd><p>Calculates the PartialNorm.  Writing <code class="docutils literal notranslate"><span class="pre">matA.PartialNorm(partialmode)</span></code> has the same effect</p>
+<p>Here partialmode is set as follows: 1 for full matrix calculation, 2 for rowwise calculation, 3 for columnwise calculation.</p>
 <p>See also: Eigen <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/group__TutorialReductionsVisitorsBroadcasting.html.">238</a>]</span>.</p>
 </dd></dl>
 
@@ -1048,9 +1055,10 @@ document.write(`
 <section id="partial-stable-norm">
 <h2>Partial Stable Norm<a class="headerlink" href="#partial-stable-norm" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.mat_partial_stable_norm">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_partial_stable_norm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_partial_stable_norm" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.mat_stable_norm">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">mat_stable_norm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partialmode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.mat_stable_norm" title="Link to this definition">#</a></dt>
 <dd><p>Calculates the PartialStableNorm.  Writing <code class="docutils literal notranslate"><span class="pre">matA.PartialStableNorm(partialmode)</span></code> has the same effect</p>
+<p>Here partialmode is set as follows: 1 for full matrix calculation, 2 for rowwise calculation, 3 for columnwise calculation.</p>
 <p>See also: Eigen <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id528" title="Eigen Core Developers. Reductions and Partial Reductions. Eigen, a C++ linear algebra library, 2024. [Online; accessed 22-July-2024]. URL: https://libeigen.gitlab.io/eigen/docs-nightly/group__TutorialReductionsVisitorsBroadcasting.html.">238</a>]</span>.</p>
 </dd></dl>
 
@@ -1123,23 +1131,23 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-sum">Partial Sum</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_partial_sum"><code class="docutils literal notranslate"><span class="pre">ctx.mat_partial_sum()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_sum"><code class="docutils literal notranslate"><span class="pre">ctx.mat_sum()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-product">Partial Product</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_partial_prod"><code class="docutils literal notranslate"><span class="pre">ctx.mat_partial_prod()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_prod"><code class="docutils literal notranslate"><span class="pre">ctx.mat_prod()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-arithmetic-mean">Partial Arithmetic Mean</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_partial_mean"><code class="docutils literal notranslate"><span class="pre">ctx.mat_partial_mean()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_mean"><code class="docutils literal notranslate"><span class="pre">ctx.mat_mean()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-minimal-coefficient">Partial Minimal Coefficient</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_partial_min_coeff"><code class="docutils literal notranslate"><span class="pre">ctx.mat_partial_min_coeff()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_min_coeff"><code class="docutils literal notranslate"><span class="pre">ctx.mat_min_coeff()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-maximal-coefficient">Partial Maximal Coefficient</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_partial_max_coeff"><code class="docutils literal notranslate"><span class="pre">ctx.mat_partial_max_coeff()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_max_coeff"><code class="docutils literal notranslate"><span class="pre">ctx.mat_max_coeff()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trace">Trace</a><ul class="visible nav section-nav flex-column">
@@ -1147,15 +1155,15 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-squared-norm">Partial Squared Norm</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_partial_squared_norm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_partial_squared_norm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_squared_norm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_squared_norm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-norm">Partial Norm</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_partial_norm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_partial_norm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_norm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_norm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-stable-norm">Partial Stable Norm</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_partial_stable_norm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_partial_stable_norm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.mat_stable_norm"><code class="docutils literal notranslate"><span class="pre">ctx.mat_stable_norm()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#covariance-matrix">Covariance matrix</a><ul class="visible nav section-nav flex-column">
@@ -1199,7 +1207,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 17, 2026.
+  Last updated on Sep 18, 2026.
   <br/>
 </p>
   </div>

@@ -44,7 +44,7 @@ Matrix Exponential
 
     Computes the matrix exponential of a square matrix `A`, which is defined by the power series  `\displaystyle  \exp(A) = I + A + \frac{A^2}{2!} + \frac{A^3}{3!} + \ldots`
 
-    Writing ``matA.Expm()`` has the same effect
+    Writing ``matA.ExpMat()`` has the same effect
 
 
     See also:   Wikipedia :cite:p:`WikipediaMat140`,  Wikipedia :cite:p:`WikipediaMat141`.
@@ -114,7 +114,7 @@ Matrix Sine
 
     Calculates the sine function of the matrix.
 
-    Writing ``matA.Sinm()`` has the same effect
+    Writing ``matA.SinMat()`` has the same effect
 
     See also:   Wikipedia :cite:p:`WikipediaMat140`,  Wikipedia :cite:p:`WikipediaMat142`.
 
@@ -178,7 +178,7 @@ Matrix Cosine
 
     Calculates the cosine function of the matrix.
 
-    Writing ``matA.Cosm()`` has the same effect
+    Writing ``matA.CosMat()`` has the same effect
 
     See also:   Wikipedia :cite:p:`WikipediaMat140`,  Wikipedia :cite:p:`WikipediaMat142`.
 
@@ -238,7 +238,7 @@ Matrix Hyperbolic Sine
 
     Calculates the hyperbolic sine function of the matrix.
 
-    Writing ``matA.Sinhm()`` has the same effect
+    Writing ``matA.SinhMat()`` has the same effect
 
     See also:   Wikipedia :cite:p:`WikipediaMat140`,  Wikipedia :cite:p:`WikipediaMat142`.
 
@@ -322,7 +322,7 @@ Matrix Hyperbolic Cosine
 
     Calculates the hyperbolic cosine function of the matrix.
 
-    Writing ``matA.Coshm()`` has the same effect
+    Writing ``matA.CoshMat()`` has the same effect
 
 
     See also:   Wikipedia :cite:p:`WikipediaMat140`,  Wikipedia :cite:p:`WikipediaMat142`.
@@ -462,7 +462,7 @@ Matrix Square Root
 
     Computes a square root of the square matrix `A`, i.e. returns a matrix `B = A^{1/2}` such that `B^2 = A`. The square root of a matrix, if it exists, is not unique.
 
-    Writing ``matA.Sqrtm()`` has the same effect
+    Writing ``matA.SqrtMat()`` has the same effect
 
 
     See also:   Wikipedia :cite:p:`WikipediaMat140`,  Wikipedia :cite:p:`WikipediaMat144`.
@@ -581,7 +581,7 @@ Matrix Logarithm
 
     Calculates the logarithm of the matrix.
 
-    Writing ``matA.Logm()`` has the same effect
+    Writing ``matA.LogMat()`` has the same effect
 
     See also:   Wikipedia :cite:p:`WikipediaMat140`,  Wikipedia :cite:p:`WikipediaMat143`.
 
@@ -683,7 +683,7 @@ Matrix power
 
     Computes `A^r = \exp(A \log r)` for a matrix `A` and complex number `r`.
 
-    Writing ``matA.Powm(r)`` has the same effect
+    Writing ``matA.PowMat(r)`` has the same effect
 
     See also:   Wikipedia :cite:p:`WikipediaMat140`,  Wikipedia :cite:p:`WikipediaMat141`,  Wikipedia :cite:p:`WikipediaMat143`.
 
