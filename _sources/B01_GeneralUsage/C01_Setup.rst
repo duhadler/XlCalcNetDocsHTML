@@ -17,7 +17,7 @@ Setting up XlCalcNet
 =========================
 
 
-Downloading and installing the "right" version of CPython 2
+Installing XlCalcNet
 -------------------------------------------------------------
 
 Although the Python language is available in many different implementations, we will focus on the "official" implementation of Python, which is called CPython. The official CPython implementation is available for download from https://www.python.org/downloads/.
@@ -42,13 +42,11 @@ The data which generated as a result of running a python script or C\# program a
 The data which contain the installation are located in:
 
 
+Describe installing XlCalcNet from PyPI
 
 
-The data which are directly maniplated by the user are located in:
 
-The data which generated as a result of running a python script or C\# program are written to: 
-
-The data which contain the installation are located in:
+Describe the copying and exploring the DataXlCalcNet folder
 
 
 
@@ -89,22 +87,10 @@ In terms of usability, the .NET Framework 4.x runtime does not include an IDE; w
 
 |newpage|
 
-Installing XlCalcNet
---------------------------------------------------------
-
-Describe installing from PyPI
 
 
+.. _rst_TinyIde: 
 
-Describe the copying and exploring the DataXlCalcNet folder
-
-Describe the copying and exploring the DataXlCalcNet folder
-
-
-
-
-
-|newpage|
 
 Installing and using the Tiny IDE as a Python application
 ----------------------------------------------------------------
@@ -113,7 +99,7 @@ Editing and compiling can be done with "Tiny C\#/Python IDE":
 
 
 
-.. image:: ../_static/TinyEditor.png
+.. image:: ../_static/TinyIDE.png
    :width: 50 %
    :align: center
 
@@ -127,13 +113,115 @@ Follow the steps to make the Tiny IDE available:
 * Rightclick on ``pythonw.exe-shortcut``; Select Properties.
 
 
-* In the dialogue Properties, select "Target", and type:``C:\Python313\pythonw.exe C:\Python313\Lib\site-packages\xlcalcnet\ShowEditor.py``. Then save.
+* In the dialogue Properties, select "Target", and type:``C:\Python313\pythonw.exe C:\Users\DUHad\Documents\DataXlCalcNet\A01_ExamplesPython\B01_GeneralUsage\C01_Setup\D03_ShowEditor.py``. Here the path to the documents folder (in our case ``C:\Users\DUHad\Documents``) needs to be changed to meet the settings of your system. Then save.
 
 * Rename ``pythonw.exe-shortcut`` to ``TinyIDE_Python313``
 
 * Doubleclick on ``TinyIDE_Python313``
 
 * In the task-bar, rightclick on the appearing symbol, and select "Pin to taskbar"
+
+
+Descibe starting an additional instance of the IDE
+
+
+The Python source code for starting the IDE can be found here: https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowEditor.py
+
+
+The C\# source code for the IDE can be found here: https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/TinyEditor
+
+
+
+
+
+
+.. _rst_ClientServer: 
+
+Starting and calling the socket server
+--------------------------------------------------------------------------------
+
+A running socket server is critical for the use of XlCalcNet from Microsoft Excel.
+
+
+.. image:: ../_static/SocketServer.png
+    :width: 50 %
+    :align: center
+
+The socket server can be startet in various ways:
+
+
+Starting the socketserver from the TinyIDE or GalleryOfPlots application
+...................................................................................
+
+Explain use of menu.
+
+
+
+
+Starting the socketserver from the Navigator dialog in Excel
+...................................................................................
+
+Explain use of dialog.
+
+
+
+
+Starting the socketserver programmatically from Python
+...................................................................................
+
+
+.. method:: gui.socketserver()
+
+    Describe the start of the socket server
+
+    .. code-block:: pycon
+
+        >>> from xlcalcnet import gui
+        >>> gui.socketserver()
+
+
+
+
+Calling the socketserver from Python
+.............................................
+
+Describe calling the socketserver from Python
+
+
+.. code-block:: pycon
+
+    >>> import socket
+
+    >>> host = socket.gethostname()
+    >>> port = 11958  # socket server port number
+    >>> client_socket = socket.socket()  # instantiate
+    >>> client_socket.connect((host, port))  # connect to the server
+
+    >>> client_socket.send(SnippetToSend.encode())  # send message
+    >>> DataReceived = client_socket.recv(1024).decode()  # receive response
+    >>> print('Received from server: ' + DataReceived)  # show in terminal
+
+    >>> client_socket.close()  # close the connection
+
+
+Calling the socketserver from C\#
+.............................................
+
+Describe calling the socketserver from C\#
+
+
+
+
+Source code
+.............................................
+
+
+The Python source code for the socketserver can be found here: https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Bin/socketspy.py
+
+The C\# source code for the socket client can be found here: https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/ClientServer
+
+
+
 
 
 
@@ -365,7 +453,7 @@ Availability: It is available anyway, as a component of Windows.
 Rebuilding the .dll files of XlCalcNet and XlCalcNet2 from source code
 --------------------------------------------------------------------------
 
-The XlCalcNet and XlCalcNet2 repositories contain both precompiled .dll files and their source code.
+The XlCalcNet and XlCalcNet2 python packages contain both precompiled .dll files and their source code.
 
 This section descibes how to rebuild the .dll files of XlCalcNet and XlCalcNet2 from source code, either completely or only in part. The building process itself is not particularly difficult, but it requires the installation of MSYS2 (version 3.4.9.x86_64 or later: about 4 GB in size), Free Pascal (version 2.6.4 or later: about 320 MB in size), and Visual Studio Community (version 2019 or later: about 4.6 GB in size).
 
@@ -380,26 +468,30 @@ Free Pascal is required to build  the file ``libwe64d.dll`` in the XlCalcNet ``B
 
 Erverything else can be done in Visual Studio Community:
 
-The details of the building the file ``FixedPrecNet.dll`` in the XlCalcNet ``Bin`` folder are described in :ref:`FixedPrec <rst_FixedPrec>`.
+The details of  building the file ``FixedPrecNet.dll`` in the XlCalcNet ``Bin`` folder are described in :ref:`FixedPrec <rst_FixedPrec>`.
 
-The details of the building the file ``ArbPrecNet.dll`` in the XlCalcNet2 ``Bin`` folder are described in :ref:`ArbPrec <rst_ArbPrec>`.
-
-
-The details of the building the file ``ArbPrecNet.dll`` in the XlCalcNet ``Bin`` folder are described in :ref:`ClientServer <rst_ClientServer>`.
+The details of  building the file ``ArbPrecNet.dll`` in the XlCalcNet2 ``Bin`` folder are described in :ref:`ArbPrec <rst_ArbPrec>`.
 
 
-The details of the building the file ``ArbPrecNet.dll`` in the XlCalcNet ``Bin`` folder are described in :ref:`OutputMonitor <rst_OutputMonitor>`.
+The details of  building the files ``MpFunLabClient.dll`` and ``MpFunLabAddin64.dll`` in the XlCalcNet ``Bin`` folder are described in :ref:`ClientServer <rst_ClientServer>`.
 
 
-The details of the building the file ``ArbPrecNet.dll`` in the XlCalcNet ``Bin`` folder are described in :ref:`TinyIde <rst_TinyIde>`.
+The details of  building the file ``TinyOutputMonitorUserCtrl.dll`` in the XlCalcNet ``Bin`` folder are described in :ref:`OutputMonitor <rst_OutputMonitor>`.
 
 
-The details of the building the file ``ArbPrecNet.dll`` in the XlCalcNet ``Bin`` folder are described in :ref:`GalleryOfPlots <rst_GalleryOfPlots>`.
+The details of  building the file ``TinyIDEUserCtrl.dll`` and ``FindReplaceSD.dll`` in the XlCalcNet ``Bin`` folder are described in :ref:`TinyIde <rst_TinyIde>`.
 
 
-The details of the building the file ``ArbPrecNet.dll`` in the XlCalcNet ``Bin`` folder are described in :ref:`Wpf3D <rst_Wpf3D>`.
+The details of  building the file ``TinyPlot2DUserCtrl.dll`` in the XlCalcNet ``Bin`` folder are described in :ref:`GalleryOfPlots <rst_GalleryOfPlots>`.
 
 
+The details of  building the file ``TinyPlot3DUserCtrl.dll`` in the XlCalcNet ``Bin`` folder are described in :ref:`Wpf3D <rst_Wpf3D>`.
+
+
+The details of  building the file ``TinyDataViewerUserCtrl.dll`` in the XlCalcNet ``Bin`` folder are described in :ref:`DataViewer <rst_DataViewer>`.
+
+
+All other .dll files in the XlCalcNet ``Bin`` folder have been aquired via https://www.nuget.org/ from the supporting libraries and should probably not be changed.
 
 
 

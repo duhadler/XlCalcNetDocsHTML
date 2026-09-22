@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Numpy: use with multiprecision data types &#8212; XlCalcNet 0.1.0 documentation</title>
+    <title>Numpy: use with multiprecision data types &#8212; XlCalcNet 0.2.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=a1637f0b"></script>
+    <script src="../_static/documentation_options.js?v=7f7c277e"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -49,10 +49,10 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Numpy array creation from shape or value" href="C01_ArraysFromShapeOrValue.html" />
-    <link rel="prev" title="Eigen: Fast Fourier Transform" href="../B06_EigenDenseAndSparse/C12_EigenFFT.html" />
+    <link rel="prev" title="Eigen and Numpy (Multiprecision): Functions of matrix argument" href="../B06_EigenDenseAndSparse/C12_EigenFunctionsOfMatrixArgument.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 18, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 22, 2026"/>
   </head>
   
   
@@ -161,7 +161,7 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B01_GeneralUsage/index.html">Setup and general usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C01_Setup.html">Setting up XlCalcNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C02_GuiFunctions.html">General and user interface functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C02_GuiFunctions.html">General user interface and functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
@@ -340,21 +340,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D03_Holtsmark.html">Boost: Holtsmark distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D04_MapAiry.html">Boost: Map-Airy distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D05_Saspoint5.html">Boost: Saspoint5 distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D06_levy_alpha_stable.html">Lévy alpha-stable distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D07_pearson_type_IV.html">Pearson Type IV distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D08_meixner.html">Meixner distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D09_voigt_profile.html">Voigt Profile Distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D10_wrapped_cauchy.html">Wrapped Cauchy distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D11_wrapped_normal.html">Wrapped normal distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D12_von_mises.html">Von Mises distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D13_generalized_inverse_gaussian.html">Generalized inverse Gaussian distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D14_harmonic.html">Harmonic distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D15_Halphen_A.html">Halphen A distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D16_Halphen_B.html">Halphen B distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D17_Inverse_Halphen_B.html">Halphen IB distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D18_generalized_hyperbolic.html">Generalized hyperbolic distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D19_hyperbolic.html">Hyperbolic distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D20_variance_gamma.html">Variance-gamma distribution</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/index.html">Elementary discrete (lattice) distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -364,17 +349,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D04_binomial.html">Boost: Binomial distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D05_negative_binomial.html">Boost: Negative binomial distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D06_hypergeometric.html">Boost: Classical hypergeometric distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D07_log_series.html">Log-series distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D08_zeta.html">Zeta distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D09_skellam.html">Skellam distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D10_delaporte.html">Delaporte distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D11_beta_poisson.html">Beta-Poisson distribution (Quinkert)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D12_beta_binomial.html">Beta-binomial distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D13_beta_negbinomial.html">Beta-negative binomial distribution (Waring)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D14_neghypergeo.html">Negative hypergeometric distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D15_polya.html">Pólya-Eggenberger distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D16_genhypergeo.html">General hypergeometric distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D17_hypergeo_nc_fisher.html">Noncentral hypergeometric distribution, Fisher alternatives</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../B04_StatisticalDistributions/C14_LattticeRank/index.html">Discrete (lattice) distributions related to (stratified) rank tests</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -410,15 +384,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../B05_NumericalCalculus/C11_MpMathAsymptoticExpansions.html">Mpmath: Asymptotic expansions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B05_NumericalCalculus/C12_MpMathFunctionsApproximation.html">Mpmath: Function approximation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B05_NumericalCalculus/C13_MpMathSumsLimits.html">Mpmath: Sums, products, limits and extrapolation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B05_NumericalCalculus/C14_MpMathNumberIdentification.html">Mpmath: Number identification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B05_NumericalCalculus/C15_MpMathPolynomials.html">Mpmath: Polynomials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B05_NumericalCalculus/C16_EigenPolynomials.html">Eigen: Polynomials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B05_NumericalCalculus/C17_EigenMinPack.html">Eigen/MinPack: non linear optimization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B05_NumericalCalculus/C18_EigenCppOptLib.html">Eigen/CppOptLib: multidimensional optimization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B05_NumericalCalculus/C19_FlintPolynomials.html">Flint/Functions for polynomials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B05_NumericalCalculus/C20_FlintPowerSeries.html">Flint/Power series and Taylor arithmetic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B05_NumericalCalculus/C21_FlintDifferentiation.html">Flint/Verified numerical differentiation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B05_NumericalCalculus/C22_FlintIntegration.html">Flint/Verified numerical integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B05_NumericalCalculus/C14_MpMathPolynomials.html">Mpmath: Polynomials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B05_NumericalCalculus/C15_EigenMinPack.html">Eigen/MinPack: non linear optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B05_NumericalCalculus/C16_EigenCppOptLib.html">Eigen/CppOptLib: multidimensional optimization</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B06_EigenDenseAndSparse/index.html">Eigen: Dense and Sparse Matrices</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -431,8 +399,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../B06_EigenDenseAndSparse/C07_StandardDecompositions.html">Standard decompositions and linear solving</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B06_EigenDenseAndSparse/C08_SvdAndEigenSA.html">Singular Value and Eigen (selfadjoint) decompositions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B06_EigenDenseAndSparse/C09_GeneralEigensystems.html">Eigen decompositions of general square matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B06_EigenDenseAndSparse/C11_EigenFunctionsOfMatrixArgument.html">Eigen: Functions of matrix argument</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B06_EigenDenseAndSparse/C12_EigenFFT.html">Eigen: Fast Fourier Transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B06_EigenDenseAndSparse/C10_EigenPolynomials.html">Eigen: Polynomials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B06_EigenDenseAndSparse/C11_EigenFFT.html">Eigen: Fast Fourier Transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B06_EigenDenseAndSparse/C12_EigenFunctionsOfMatrixArgument.html">Eigen and Numpy (Multiprecision): Functions of matrix argument</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Numpy: use with multiprecision data types</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -459,12 +428,9 @@
 <li class="toctree-l2"><a class="reference internal" href="C21_Miscellaneous.html">Numpy mathematical functions: Miscellaneous</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C22_NumpyUtilityFunctions.html">Summary and examples: Numpy utility functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C23_ArithmeticScalarsAndIterables.html">Arithmetic operations with scalars and iterables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C24_DescritiveStatistics.html">Numerical transformations and descriptive statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C24_DescriptiveStatistics.html">Numerical transformations and descriptive statistics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C25_LinearSolving.html">Standard decompositions and linear solving</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C26_EigenAndSVD.html">Singular Value and Eigen decompositions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C27_MatrixFunctions.html">Analytic functions of a matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C28_DFT.html">Discrete Fourier transform (DFT)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C29_Flint_Matrices.html">Flint/Functions for matrices</a></li>
 </ul>
 </details></li>
 </ul>
@@ -1564,45 +1530,45 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="C24_DescritiveStatistics.html">Numerical transformations and descriptive statistics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C24_DescritiveStatistics.html#centering-of-a-matrix">Centering of a matrix</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C24_DescritiveStatistics.html#mat.centered"><code class="docutils literal notranslate"><span class="pre">mat.centered()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="C24_DescriptiveStatistics.html">Numerical transformations and descriptive statistics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="C24_DescriptiveStatistics.html#centering-of-a-matrix">Centering of a matrix</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C24_DescriptiveStatistics.html#mat.centered"><code class="docutils literal notranslate"><span class="pre">mat.centered()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C24_DescritiveStatistics.html#standardization-of-a-matrix">Standardization of a matrix</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C24_DescritiveStatistics.html#mat.standardized"><code class="docutils literal notranslate"><span class="pre">mat.standardized()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C24_DescriptiveStatistics.html#standardization-of-a-matrix">Standardization of a matrix</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C24_DescriptiveStatistics.html#mat.standardized"><code class="docutils literal notranslate"><span class="pre">mat.standardized()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C24_DescritiveStatistics.html#trace">Trace</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C24_DescritiveStatistics.html#mat.trace"><code class="docutils literal notranslate"><span class="pre">mat.trace()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C24_DescriptiveStatistics.html#trace">Trace</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C24_DescriptiveStatistics.html#mat.trace"><code class="docutils literal notranslate"><span class="pre">mat.trace()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C24_DescritiveStatistics.html#squared-norm">Squared Norm</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C24_DescritiveStatistics.html#mat.squaredNorm"><code class="docutils literal notranslate"><span class="pre">mat.squaredNorm()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C24_DescriptiveStatistics.html#squared-norm">Squared Norm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C24_DescriptiveStatistics.html#mat.squaredNorm"><code class="docutils literal notranslate"><span class="pre">mat.squaredNorm()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C24_DescritiveStatistics.html#euclidian-norm">Euclidian Norm</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C24_DescritiveStatistics.html#mat.Norm"><code class="docutils literal notranslate"><span class="pre">mat.Norm()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C24_DescriptiveStatistics.html#euclidian-norm">Euclidian Norm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C24_DescriptiveStatistics.html#mat.Norm"><code class="docutils literal notranslate"><span class="pre">mat.Norm()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C24_DescritiveStatistics.html#covariance-matrix">Covariance matrix</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C24_DescritiveStatistics.html#mat.covariance_matrix"><code class="docutils literal notranslate"><span class="pre">mat.covariance_matrix()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C24_DescriptiveStatistics.html#covariance-matrix">Covariance matrix</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C24_DescriptiveStatistics.html#mat.covariance_matrix"><code class="docutils literal notranslate"><span class="pre">mat.covariance_matrix()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C24_DescritiveStatistics.html#correlation-matrix">Correlation matrix</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C24_DescritiveStatistics.html#mat.correlation"><code class="docutils literal notranslate"><span class="pre">mat.correlation()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C24_DescriptiveStatistics.html#correlation-matrix">Correlation matrix</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C24_DescriptiveStatistics.html#mat.correlation"><code class="docutils literal notranslate"><span class="pre">mat.correlation()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C24_DescritiveStatistics.html#summary-statistic">Summary statistic</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C24_DescritiveStatistics.html#mat.summary"><code class="docutils literal notranslate"><span class="pre">mat.summary()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C24_DescriptiveStatistics.html#summary-statistic">Summary statistic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C24_DescriptiveStatistics.html#mat.summary"><code class="docutils literal notranslate"><span class="pre">mat.summary()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C24_DescritiveStatistics.html#vector-norm-of-a-matrix">Vector norm of a matrix</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C24_DescritiveStatistics.html#ctx.norm"><code class="docutils literal notranslate"><span class="pre">ctx.norm()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C24_DescriptiveStatistics.html#vector-norm-of-a-matrix">Vector norm of a matrix</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C24_DescriptiveStatistics.html#ctx.norm"><code class="docutils literal notranslate"><span class="pre">ctx.norm()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C24_DescritiveStatistics.html#matrix-norm">Matrix norm</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C24_DescritiveStatistics.html#ctx.mnorm"><code class="docutils literal notranslate"><span class="pre">ctx.mnorm()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C24_DescriptiveStatistics.html#matrix-norm">Matrix norm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C24_DescriptiveStatistics.html#ctx.mnorm"><code class="docutils literal notranslate"><span class="pre">ctx.mnorm()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1709,139 +1675,6 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="C27_MatrixFunctions.html">Analytic functions of a matrix</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C27_MatrixFunctions.html#matrix-exponential">Matrix Exponential</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C27_MatrixFunctions.html#ctx.expm"><code class="docutils literal notranslate"><span class="pre">ctx.expm()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C27_MatrixFunctions.html#matrix-sine">Matrix Sine</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C27_MatrixFunctions.html#ctx.sinm"><code class="docutils literal notranslate"><span class="pre">ctx.sinm()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C27_MatrixFunctions.html#matrix-cosine">Matrix Cosine</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C27_MatrixFunctions.html#ctx.cosm"><code class="docutils literal notranslate"><span class="pre">ctx.cosm()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C27_MatrixFunctions.html#cosm_"><code class="docutils literal notranslate"><span class="pre">cosm_()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C27_MatrixFunctions.html#matrix-hyperbolic-sine">Matrix Hyperbolic Sine</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C27_MatrixFunctions.html#ctx.sinhm"><code class="docutils literal notranslate"><span class="pre">ctx.sinhm()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C27_MatrixFunctions.html#matrix-hyperbolic-cosine">Matrix Hyperbolic Cosine</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C27_MatrixFunctions.html#ctx.coshm"><code class="docutils literal notranslate"><span class="pre">ctx.coshm()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C27_MatrixFunctions.html#matrix-square-root">Matrix Square Root</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C27_MatrixFunctions.html#ctx.sqrtm"><code class="docutils literal notranslate"><span class="pre">ctx.sqrtm()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C27_MatrixFunctions.html#matrix-logarithm">Matrix Logarithm</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C27_MatrixFunctions.html#ctx.logm"><code class="docutils literal notranslate"><span class="pre">ctx.logm()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C27_MatrixFunctions.html#matrix-power">Matrix power</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C27_MatrixFunctions.html#ctx.powm"><code class="docutils literal notranslate"><span class="pre">ctx.powm()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="C28_DFT.html">Discrete Fourier transform (DFT)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C28_DFT.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C28_DFT.html#one-dimensional-discrete-fourier-transform-fft">One-dimensional discrete Fourier Transform (fft)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C28_DFT.html#ctx.fft"><code class="docutils literal notranslate"><span class="pre">ctx.fft()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C28_DFT.html#one-dimensional-inverse-discrete-fourier-transform-ifft">One-dimensional inverse discrete Fourier Transform (ifft)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C28_DFT.html#ctx.ifft"><code class="docutils literal notranslate"><span class="pre">ctx.ifft()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C28_DFT.html#one-dimensional-discrete-fourier-transform-for-real-input-rfft">One-dimensional discrete Fourier Transform for real input (rfft)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C28_DFT.html#ctx.rfft"><code class="docutils literal notranslate"><span class="pre">ctx.rfft()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C28_DFT.html#one-dimensional-inverse-discrete-fourier-transform-of-rfft-irfft">One-dimensional inverse discrete Fourier Transform of rfft (irfft)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C28_DFT.html#ctx.irfft"><code class="docutils literal notranslate"><span class="pre">ctx.irfft()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C28_DFT.html#fft-of-a-signal-that-has-hermitian-symmetry-i-e-a-real-spectrum-hfft">FFT of a signal that has Hermitian symmetry, i.e., a real spectrum (hfft)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C28_DFT.html#ctx.hfft"><code class="docutils literal notranslate"><span class="pre">ctx.hfft()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C28_DFT.html#inverse-fft-of-a-signal-that-has-hermitian-symmetry-ihfft">Inverse FFT of a signal that has Hermitian symmetry (ihfft)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C28_DFT.html#ctx.ihfft"><code class="docutils literal notranslate"><span class="pre">ctx.ihfft()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C28_DFT.html#discrete-fourier-transform-sample-frequencies-fftfreq">Discrete Fourier Transform sample frequencies (fftfreq)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C28_DFT.html#ctx.fftfreq"><code class="docutils literal notranslate"><span class="pre">ctx.fftfreq()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C28_DFT.html#discrete-fourier-transform-sample-frequencies-for-usage-with-rfft-irfft-rfftfreq">Discrete Fourier Transform sample frequencies for usage with rfft, irfft (rfftfreq)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C28_DFT.html#ctx.rfftfreq"><code class="docutils literal notranslate"><span class="pre">ctx.rfftfreq()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="C29_Flint_Matrices.html">Flint/Functions for matrices</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C29_Flint_Matrices.html#matrix-multiplication-special-options-for-fmpq-arb-acb">Matrix multiplication: special options for FMPQ, ARB, ACB</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C29_Flint_Matrices.html#ArbMatTimes"><code class="docutils literal notranslate"><span class="pre">ArbMatTimes()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C29_Flint_Matrices.html#determinant-incl-special-options-for-fmpq-arb-acb">Determinant (incl. special options for FMPQ, ARB, ACB)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C29_Flint_Matrices.html#mat.Det"><code class="docutils literal notranslate"><span class="pre">mat.Det()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C29_Flint_Matrices.html#inverse-incl-special-options-for-fmpq-arb-acb">Inverse (incl. special options for FMPQ, ARB, ACB)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C29_Flint_Matrices.html#mat.Inverse"><code class="docutils literal notranslate"><span class="pre">mat.Inverse()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C29_Flint_Matrices.html#solve-incl-special-options-for-fmpq-arb-acb">Solve (incl. special options for FMPQ, ARB, ACB)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C29_Flint_Matrices.html#mat.Solve"><code class="docutils literal notranslate"><span class="pre">mat.Solve()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C29_Flint_Matrices.html#mat.ArbSolve"><code class="docutils literal notranslate"><span class="pre">mat.ArbSolve()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C29_Flint_Matrices.html#mat.FmpzSolve"><code class="docutils literal notranslate"><span class="pre">mat.FmpzSolve()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C29_Flint_Matrices.html#mat.FmpzSolveFflu"><code class="docutils literal notranslate"><span class="pre">mat.FmpzSolveFflu()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C29_Flint_Matrices.html#mat.FmpzSolveCramer"><code class="docutils literal notranslate"><span class="pre">mat.FmpzSolveCramer()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C29_Flint_Matrices.html#mat.FmpzSolveDixon"><code class="docutils literal notranslate"><span class="pre">mat.FmpzSolveDixon()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C29_Flint_Matrices.html#matrix-exponential">Matrix Exponential</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C29_Flint_Matrices.html#mat.ApcExpm"><code class="docutils literal notranslate"><span class="pre">mat.ApcExpm()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C29_Flint_Matrices.html#matrix-sine">Matrix Sine</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C29_Flint_Matrices.html#mat.ApcSinm"><code class="docutils literal notranslate"><span class="pre">mat.ApcSinm()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C29_Flint_Matrices.html#matrix-cosine">Matrix Cosine</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C29_Flint_Matrices.html#mat.ApcCosm"><code class="docutils literal notranslate"><span class="pre">mat.ApcCosm()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C29_Flint_Matrices.html#matrix-hyperbolic-sine">Matrix Hyperbolic Sine</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C29_Flint_Matrices.html#mat.ApcSinhm"><code class="docutils literal notranslate"><span class="pre">mat.ApcSinhm()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C29_Flint_Matrices.html#matrix-hyperbolic-cosine">Matrix Hyperbolic Cosine</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C29_Flint_Matrices.html#mat.ApcCoshm"><code class="docutils literal notranslate"><span class="pre">mat.ApcCoshm()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C29_Flint_Matrices.html#characteristic-polynomial">Characteristic polynomial</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C29_Flint_Matrices.html#mat.ApcCharpoly"><code class="docutils literal notranslate"><span class="pre">mat.ApcCharpoly()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C29_Flint_Matrices.html#calculating-eigenvalues-via-characteristic-polynomials">Calculating eigenvalues via characteristic polynomials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C29_Flint_Matrices.html#eigenvalue-enclosure-rump">Eigenvalue enclosure (Rump)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C29_Flint_Matrices.html#mat.ApcEigEnclosureRump"><code class="docutils literal notranslate"><span class="pre">mat.ApcEigEnclosureRump()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C29_Flint_Matrices.html#eigenvalues-step-by-setp">Eigenvalues, step by setp</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C29_Flint_Matrices.html#mat.ApcEigSimple"><code class="docutils literal notranslate"><span class="pre">mat.ApcEigSimple()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C29_Flint_Matrices.html#eigenvalues-multiple">Eigenvalues, multiple</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C29_Flint_Matrices.html#mat.ApcEigMultiple"><code class="docutils literal notranslate"><span class="pre">mat.ApcEigMultiple()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 </div>
 </section>
@@ -1858,12 +1691,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../B06_EigenDenseAndSparse/C12_EigenFFT.html"
+       href="../B06_EigenDenseAndSparse/C12_EigenFunctionsOfMatrixArgument.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Eigen: Fast Fourier Transform</p>
+        <p class="prev-next-title">Eigen and Numpy (Multiprecision): Functions of matrix argument</p>
       </div>
     </a>
     <a class="right-next"
@@ -1910,7 +1743,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 18, 2026.
+  Last updated on Sep 22, 2026.
   <br/>
 </p>
   </div>

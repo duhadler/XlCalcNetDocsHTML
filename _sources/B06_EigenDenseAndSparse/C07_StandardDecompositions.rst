@@ -1971,7 +1971,7 @@ QR Decomposition with full Pivoting
 
 
 
-This class performs a rank-revealing QR decomposition of a matrix `A` into matrices `P`, `P'`, `Q` and `R` such that`PAP'` = QR` by using Householder transformations. Here, `P` and `P'` is a permutation matrices, `Q` a unitary matrix and `R` an upper triangular matrix.
+This class performs a rank-revealing QR decomposition of a matrix `A` into matrices `P`, `P'`, `Q` and `R` such that`PAP' = QR` by using Householder transformations. Here, `P` and `P'` are permutation matrices, `Q` a unitary matrix and `R` an upper triangular matrix.
 
 This decomposition performs full pivoting in order to be rank-revealing and achieve optimal numerical stability.
 The trade-off is that it is slower than HouseholderQR and ColPivHouseholderQR.

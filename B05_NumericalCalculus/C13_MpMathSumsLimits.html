@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Mpmath: Sums, products, limits and extrapolation &#8212; XlCalcNet 0.1.0 documentation</title>
+    <title>Mpmath: Sums, products, limits and extrapolation &#8212; XlCalcNet 0.2.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=a1637f0b"></script>
+    <script src="../_static/documentation_options.js?v=7f7c277e"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -49,11 +49,11 @@
     <script src="../_static/custom-icon.js?v=74687d30"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Mpmath: Number identification" href="C14_MpMathNumberIdentification.html" />
+    <link rel="next" title="Mpmath: Polynomials" href="C14_MpMathPolynomials.html" />
     <link rel="prev" title="Mpmath: Function approximation" href="C12_MpMathFunctionsApproximation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 18, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 22, 2026"/>
   </head>
   
   
@@ -162,7 +162,7 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B01_GeneralUsage/index.html">Setup and general usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C01_Setup.html">Setting up XlCalcNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C02_GuiFunctions.html">General and user interface functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C02_GuiFunctions.html">General user interface and functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B01_GeneralUsage/C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
@@ -341,21 +341,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D03_Holtsmark.html">Boost: Holtsmark distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D04_MapAiry.html">Boost: Map-Airy distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D05_Saspoint5.html">Boost: Saspoint5 distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D06_levy_alpha_stable.html">Lévy alpha-stable distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D07_pearson_type_IV.html">Pearson Type IV distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D08_meixner.html">Meixner distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D09_voigt_profile.html">Voigt Profile Distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D10_wrapped_cauchy.html">Wrapped Cauchy distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D11_wrapped_normal.html">Wrapped normal distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D12_von_mises.html">Von Mises distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D13_generalized_inverse_gaussian.html">Generalized inverse Gaussian distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D14_harmonic.html">Harmonic distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D15_Halphen_A.html">Halphen A distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D16_Halphen_B.html">Halphen B distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D17_Inverse_Halphen_B.html">Halphen IB distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D18_generalized_hyperbolic.html">Generalized hyperbolic distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D19_hyperbolic.html">Hyperbolic distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C12_MiscContinuous/D20_variance_gamma.html">Variance-gamma distribution</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/index.html">Elementary discrete (lattice) distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -365,17 +350,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D04_binomial.html">Boost: Binomial distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D05_negative_binomial.html">Boost: Negative binomial distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D06_hypergeometric.html">Boost: Classical hypergeometric distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D07_log_series.html">Log-series distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D08_zeta.html">Zeta distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D09_skellam.html">Skellam distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D10_delaporte.html">Delaporte distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D11_beta_poisson.html">Beta-Poisson distribution (Quinkert)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D12_beta_binomial.html">Beta-binomial distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D13_beta_negbinomial.html">Beta-negative binomial distribution (Waring)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D14_neghypergeo.html">Negative hypergeometric distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D15_polya.html">Pólya-Eggenberger distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D16_genhypergeo.html">General hypergeometric distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../B04_StatisticalDistributions/C13_ElementaryDiscrete/D17_hypergeo_nc_fisher.html">Noncentral hypergeometric distribution, Fisher alternatives</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../B04_StatisticalDistributions/C14_LattticeRank/index.html">Discrete (lattice) distributions related to (stratified) rank tests</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -411,15 +385,9 @@
 <li class="toctree-l2"><a class="reference internal" href="C11_MpMathAsymptoticExpansions.html">Mpmath: Asymptotic expansions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C12_MpMathFunctionsApproximation.html">Mpmath: Function approximation</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Mpmath: Sums, products, limits and extrapolation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C14_MpMathNumberIdentification.html">Mpmath: Number identification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C15_MpMathPolynomials.html">Mpmath: Polynomials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C16_EigenPolynomials.html">Eigen: Polynomials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C17_EigenMinPack.html">Eigen/MinPack: non linear optimization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C18_EigenCppOptLib.html">Eigen/CppOptLib: multidimensional optimization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C19_FlintPolynomials.html">Flint/Functions for polynomials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C20_FlintPowerSeries.html">Flint/Power series and Taylor arithmetic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C21_FlintDifferentiation.html">Flint/Verified numerical differentiation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C22_FlintIntegration.html">Flint/Verified numerical integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C14_MpMathPolynomials.html">Mpmath: Polynomials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C15_EigenMinPack.html">Eigen/MinPack: non linear optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C16_EigenCppOptLib.html">Eigen/CppOptLib: multidimensional optimization</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B06_EigenDenseAndSparse/index.html">Eigen: Dense and Sparse Matrices</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -432,8 +400,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../B06_EigenDenseAndSparse/C07_StandardDecompositions.html">Standard decompositions and linear solving</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B06_EigenDenseAndSparse/C08_SvdAndEigenSA.html">Singular Value and Eigen (selfadjoint) decompositions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B06_EigenDenseAndSparse/C09_GeneralEigensystems.html">Eigen decompositions of general square matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B06_EigenDenseAndSparse/C11_EigenFunctionsOfMatrixArgument.html">Eigen: Functions of matrix argument</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B06_EigenDenseAndSparse/C12_EigenFFT.html">Eigen: Fast Fourier Transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B06_EigenDenseAndSparse/C10_EigenPolynomials.html">Eigen: Polynomials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B06_EigenDenseAndSparse/C11_EigenFFT.html">Eigen: Fast Fourier Transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B06_EigenDenseAndSparse/C12_EigenFunctionsOfMatrixArgument.html">Eigen and Numpy (Multiprecision): Functions of matrix argument</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B07_NumpyMultiprecision/index.html">Numpy: use with multiprecision data types</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -460,12 +429,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../B07_NumpyMultiprecision/C21_Miscellaneous.html">Numpy mathematical functions: Miscellaneous</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B07_NumpyMultiprecision/C22_NumpyUtilityFunctions.html">Summary and examples: Numpy utility functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B07_NumpyMultiprecision/C23_ArithmeticScalarsAndIterables.html">Arithmetic operations with scalars and iterables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B07_NumpyMultiprecision/C24_DescritiveStatistics.html">Numerical transformations and descriptive statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B07_NumpyMultiprecision/C24_DescriptiveStatistics.html">Numerical transformations and descriptive statistics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B07_NumpyMultiprecision/C25_LinearSolving.html">Standard decompositions and linear solving</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B07_NumpyMultiprecision/C26_EigenAndSVD.html">Singular Value and Eigen decompositions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B07_NumpyMultiprecision/C27_MatrixFunctions.html">Analytic functions of a matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B07_NumpyMultiprecision/C28_DFT.html">Discrete Fourier transform (DFT)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B07_NumpyMultiprecision/C29_Flint_Matrices.html">Flint/Functions for matrices</a></li>
 </ul>
 </details></li>
 </ul>
@@ -963,7 +929,7 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.nsum">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">nsum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">intervals</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.nsum" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, or <code class="docutils literal notranslate"><span class="pre">gmp</span></code>.</p>
-<p>See also: Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id917" title="Wikipedia. Series acceleration. Wikimedia Foundation, 2005. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Series_acceleration.">1133</a>]</span>.</p>
+<p>See also: Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id917" title="Wikipedia. Series acceleration. Wikimedia Foundation, 2005. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Series_acceleration.">1118</a>]</span>.</p>
 <p>Computes the sum</p>
 <div class="math notranslate nohighlight">
 \[S = \sum_{k=a}^b f(k)\]</div>
@@ -1320,7 +1286,7 @@ summation indices:</p>
 </pre></div>
 </div>
 <p>Some nice examples of double series with analytic solutions or
-reductions to single-dimensional series (see MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1736" title="E. W. Weisstein. Double Series. From MathWorld - A Wolfram Web Resource, 2016. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/DoubleSeries.html.">1046</a>]</span>):</p>
+reductions to single-dimensional series (see MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1736" title="E. W. Weisstein. Double Series. From MathWorld - A Wolfram Web Resource, 2016. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/DoubleSeries.html.">1031</a>]</span>):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">nsum</span><span class="p">(</span><span class="k">lambda</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="o">**</span><span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">n</span><span class="p">),</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="n">inf</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="n">inf</span><span class="p">])</span>
 <span class="go">1.60669515241529</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">nsum</span><span class="p">(</span><span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="n">inf</span><span class="p">])</span>
@@ -1355,7 +1321,7 @@ reductions to single-dimensional series (see MathWorld <span id="id2">[<a class=
 </pre></div>
 </div>
 <p>A hard example of a multidimensional sum is the Madelung constant
-in three dimensions (see MathWorld <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1737" title="E. W. Weisstein. Madelung Constants. From MathWorld - A Wolfram Web Resource, 2016. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/MadelungConstants.html.">1050</a>]</span>). The defining sum converges very
+in three dimensions (see MathWorld <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1737" title="E. W. Weisstein. Madelung Constants. From MathWorld - A Wolfram Web Resource, 2016. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/MadelungConstants.html.">1035</a>]</span>). The defining sum converges very
 slowly and only conditionally, so <code class="xref py py-func docutils literal notranslate"><span class="pre">nsum()</span></code> is lucky to
 obtain an accurate value through convergence acceleration. The
 second evaluation below uses a much more efficient, rapidly
@@ -1519,7 +1485,7 @@ summation is requested.</p>
 </div>
 <p>A large number of infinite products have known exact values,
 and can therefore be used as a reference. Most of the following
-examples are taken from MathWorld (see MathWorld <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1738" title="E. W. Weisstein. Infinite Product. From MathWorld - A Wolfram Web Resource, 2016. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/InfiniteProduct.html.">1048</a>]</span>).</p>
+examples are taken from MathWorld (see MathWorld <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1738" title="E. W. Weisstein. Infinite Product. From MathWorld - A Wolfram Web Resource, 2016. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/InfiniteProduct.html.">1033</a>]</span>).</p>
 <p>A few infinite products with simple values are:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span><span class="o">*</span><span class="n">nprod</span><span class="p">(</span><span class="k">lambda</span> <span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">k</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">k</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">inf</span><span class="p">])</span>
 <span class="go">3.141592653589793238462643</span>
@@ -1702,7 +1668,7 @@ however gives a perfect result:</p>
 <dt class="sig sig-object py" id="ctx.richardson">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">richardson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.richardson" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, or <code class="docutils literal notranslate"><span class="pre">gmp</span></code>.</p>
-<p>See also: Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id918" title="Wikipedia. Richardson extrapolation. Wikimedia Foundation, 2005. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Richardson_extrapolation.">1130</a>]</span> and <span id="id6">C.M. and Orszag [<a class="reference internal" href="../99BackMatter/index.html#id18" title="Bender C.M. and S.A. Orszag. Advanced Mathematical Methods for Scientists and Engineers. Springer New York, 1999.">170</a>]</span>, pp. 375-376.</p>
+<p>See also: Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id918" title="Wikipedia. Richardson extrapolation. Wikimedia Foundation, 2005. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Richardson_extrapolation.">1115</a>]</span> and <span id="id6">C.M. and Orszag [<a class="reference internal" href="../99BackMatter/index.html#id18" title="Bender C.M. and S.A. Orszag. Advanced Mathematical Methods for Scientists and Engineers. Springer New York, 1999.">169</a>]</span>, pp. 375-376.</p>
 <p>Given a list <code class="docutils literal notranslate"><span class="pre">seq</span></code> of the first <span class="math notranslate nohighlight">\(N\)</span> elements of a slowly convergent
 infinite sequence, <code class="xref py py-func docutils literal notranslate"><span class="pre">richardson()</span></code> computes the <span class="math notranslate nohighlight">\(N\)</span>-term
 Richardson extrapolate for the limit.</p>
@@ -1759,7 +1725,7 @@ applies extrapolation only to the even-index elements.</p>
 <dt class="sig sig-object py" id="ctx.shanks">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">shanks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">randomized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.shanks" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, or <code class="docutils literal notranslate"><span class="pre">gmp</span></code>.</p>
-<p>See also: Wikipedia <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id919" title="Wikipedia. Shanks transformation. Wikimedia Foundation, 2005. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Shanks_transformation.">1134</a>]</span>, MathWorld <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1430" title="E. W. Weisstein. Wynn's Epsilon Method. From MathWorld - A Wolfram Web Resource, 2004. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/WynnsEpsilonMethod.html.">830</a>]</span>.</p>
+<p>See also: Wikipedia <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id919" title="Wikipedia. Shanks transformation. Wikimedia Foundation, 2005. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Shanks_transformation.">1119</a>]</span>, MathWorld <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1430" title="E. W. Weisstein. Wynn's Epsilon Method. From MathWorld - A Wolfram Web Resource, 2004. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/WynnsEpsilonMethod.html.">815</a>]</span>.</p>
 <p>Given a list <code class="docutils literal notranslate"><span class="pre">seq</span></code> of the first <span class="math notranslate nohighlight">\(N\)</span> elements of a slowly
 convergent infinite sequence <span class="math notranslate nohighlight">\((A_k)\)</span>, <code class="xref py py-func docutils literal notranslate"><span class="pre">shanks()</span></code> computes the iterated
 Shanks transformation <span class="math notranslate nohighlight">\(S(A), S(S(A)), \ldots, S^{N/2}(A)\)</span>. The Shanks
@@ -1784,7 +1750,7 @@ This can be used to efficiently extend a previous computation after
 new elements have been appended to the sequence. The table will
 then be updated in-place.</p>
 <p><strong>The Shanks transformation</strong></p>
-<p>The Shanks transformation is defined as follows (see <span id="id9">C.M. and Orszag [<a class="reference internal" href="../99BackMatter/index.html#id18" title="Bender C.M. and S.A. Orszag. Advanced Mathematical Methods for Scientists and Engineers. Springer New York, 1999.">170</a>]</span>, pp. 368-375): given
+<p>The Shanks transformation is defined as follows (see <span id="id9">C.M. and Orszag [<a class="reference internal" href="../99BackMatter/index.html#id18" title="Bender C.M. and S.A. Orszag. Advanced Mathematical Methods for Scientists and Engineers. Springer New York, 1999.">169</a>]</span>, pp. 368-375): given
 the input sequence <span class="math notranslate nohighlight">\((A_0, A_1, \ldots)\)</span>, the transformed sequence is
 given by</p>
 <div class="math notranslate nohighlight">
@@ -1799,7 +1765,7 @@ obtained by applying it iteratively:
 <p>Wynn’s epsilon algorithm provides an efficient way to generate
 the table of iterated Shanks transformations. It reduces the
 computation of each element to essentially a single division, at
-the cost of requiring dummy elements in the table. See <span id="id10">Graves-Morris <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id106" title="P.R. Graves-Morris, D.E. Roberts, and A. Salam. The epsilon algorithm and related topics. Journal of Computational and Applied Mathematics, 2000.">356</a>]</span> for
+the cost of requiring dummy elements in the table. See <span id="id10">Graves-Morris <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id106" title="P.R. Graves-Morris, D.E. Roberts, and A. Salam. The epsilon algorithm and related topics. Journal of Computational and Applied Mathematics, 2000.">352</a>]</span> for
 details.</p>
 <p><strong>Precision issues</strong></p>
 <p>Due to cancellation effects, the sequence must be typically be
@@ -1870,7 +1836,7 @@ is immediate (the sum is exactly 1):</p>
 convergence acceleration and summation of divergent series. It performs
 better than the Shanks/Wynn-epsilon algorithm for logarithmic convergent
 or alternating divergent series.</p>
-<p>See also:  <span id="id11">Weniger [<a class="reference internal" href="../99BackMatter/index.html#id265" title="E.J. Weniger. Nonlinear sequence transformations for the acceleration of convergence and the summation of divergent series. Computer Physics Reports, 10(5-6):189–371, 1989. URL: https://arxiv.org/abs/math/0306302.">1094</a>]</span>,  <span id="id12">Sidi [<a class="reference internal" href="../99BackMatter/index.html#id232" title="A. Sidi. Practical Extrapolation Methods: Theory and Applications. Cambridge Monographs on Applied and Computational Mathematics). Cambridge: Cambridge University Press., 2003.">515</a>]</span>,  <span id="id13">Homeier [<a class="reference internal" href="../99BackMatter/index.html#id130" title="H.H.H. Homeier. Scalar levin-type sequence transformations. J. Comp. Appl. Math., 122:81–147, 2000. Available as https://arxiv.org/abs/math/0005209.">381</a>]</span>.</p>
+<p>See also:  <span id="id11">Weniger [<a class="reference internal" href="../99BackMatter/index.html#id265" title="E.J. Weniger. Nonlinear sequence transformations for the acceleration of convergence and the summation of divergent series. Computer Physics Reports, 10(5-6):189–371, 1989. URL: https://arxiv.org/abs/math/0306302.">1079</a>]</span>,  <span id="id12">Sidi [<a class="reference internal" href="../99BackMatter/index.html#id232" title="A. Sidi. Practical Extrapolation Methods: Theory and Applications. Cambridge Monographs on Applied and Computational Mathematics). Cambridge: Cambridge University Press., 2003.">501</a>]</span>,  <span id="id13">Homeier [<a class="reference internal" href="../99BackMatter/index.html#id130" title="H.H.H. Homeier. Scalar levin-type sequence transformations. J. Comp. Appl. Math., 122:81–147, 2000. Available as https://arxiv.org/abs/math/0005209.">374</a>]</span>.</p>
 <p>Let <em>A</em> be the series we want to sum:</p>
 <div class="math notranslate nohighlight">
 \[A = \sum_{k=0}^{\infty} a_k\]</div>
@@ -1985,7 +1951,7 @@ must be chosen.</p>
 </pre></div>
 </div>
 <p>Now we sum the divergent asymptotic expansion of an integral related to the
-exponential integral (see also <span id="id14">Sidi [<a class="reference internal" href="../99BackMatter/index.html#id232" title="A. Sidi. Practical Extrapolation Methods: Theory and Applications. Cambridge Monographs on Applied and Computational Mathematics). Cambridge: Cambridge University Press., 2003.">515</a>]</span> p.373). The Sidi-S transform works best here:</p>
+exponential integral (see also <span id="id14">Sidi [<a class="reference internal" href="../99BackMatter/index.html#id232" title="A. Sidi. Practical Extrapolation Methods: Theory and Applications. Cambridge Monographs on Applied and Computational Mathematics). Cambridge: Cambridge University Press., 2003.">501</a>]</span> p.373). The Sidi-S transform works best here:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">z</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">mpf</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">exact</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">quad</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">mp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">x</span><span class="o">/</span><span class="n">z</span><span class="p">),[</span><span class="mi">0</span><span class="p">,</span><span class="n">mp</span><span class="o">.</span><span class="n">inf</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># exact = z * mp.exp(z) * mp.expint(1,z) # this is the symbolic expression for the integral</span>
@@ -2075,7 +2041,7 @@ point where the Levin transform converges resulting in numerical overflow/garbag
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">cohen_alt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">randomized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.cohen_alt" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, or <code class="docutils literal notranslate"><span class="pre">gmp</span></code>.</p>
 <p>This interface implements the convergence acceleration of alternating series
-as described in <span id="id15">Cohen <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id48" title="H. Cohen, F. Rodriguez Villegas, and D. Zagier. Convergence acceleration of alternating series. Experiment. Math, 9(1):3–12, 2000.">183</a>]</span>.</p>
+as described in <span id="id15">Cohen <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id48" title="H. Cohen, F. Rodriguez Villegas, and D. Zagier. Convergence acceleration of alternating series. Experiment. Math, 9(1):3–12, 2000.">182</a>]</span>.</p>
 <p>This series transformation works only well if the
 individual terms of the series have an alternating sign. It belongs to the
 class of linear series transformations (in contrast to the Shanks/Wynn-epsilon
@@ -2170,11 +2136,11 @@ simply the difference between the current estimate and the last estimate.</p>
       </div>
     </a>
     <a class="right-next"
-       href="C14_MpMathNumberIdentification.html"
+       href="C14_MpMathPolynomials.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Mpmath: Number identification</p>
+        <p class="prev-next-title">Mpmath: Polynomials</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -2263,7 +2229,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 18, 2026.
+  Last updated on Sep 22, 2026.
   <br/>
 </p>
   </div>
