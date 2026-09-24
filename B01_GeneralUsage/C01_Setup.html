@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Setting up XlCalcNet &#8212; XlCalcNet 0.2.0 documentation</title>
+    <title>Setting up XlCalcNet &#8212; XlCalcNet 0.3.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=7f7c277e"></script>
+    <script src="../_static/documentation_options.js?v=83a61292"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Setup and general usage" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 22, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 24, 2026"/>
   </head>
   
   
@@ -163,16 +163,11 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Setup and general usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html">General user interface and functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel and LibreOffice Calc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C08_Numpy.html">A quick look at Numpy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C11_Scipy.html">A quick look at Scipy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C12_RBasics.html">A quick look at R, RStudio and Rpy2</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/index.html">Basic floating point functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -876,7 +871,15 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-xlcalcnet">Installing XlCalcNet</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-python-net-calling-c-from-python">Installing and using Python.NET: Calling C# from Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-the-tiny-ide-as-a-python-application">Installing and using the Tiny IDE as a Python application</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-and-calling-the-socket-server">Starting and calling the socket server</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-numpy-matplotlib-pandas-and-scipy">Installing and using Numpy, Matplotlib, Pandas and Scipy</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">Numpy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib">Matplotlib</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas">Pandas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scipy">Scipy</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-libreoffice-calc-for-using-xlcalcnet-first-steps">Preparing LibreOffice Calc for using XlCalcNet: first steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-and-calling-the-socket-server-from-c">Starting and calling the socket server from C#</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-from-the-tinyide-or-galleryofplots-application">Starting the socketserver from the TinyIDE or GalleryOfPlots application</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-from-the-navigator-dialog-in-excel">Starting the socketserver from the Navigator dialog in Excel</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-programmatically-from-python">Starting the socketserver programmatically from Python</a><ul class="nav section-nav flex-column">
@@ -953,9 +956,45 @@ document.write(`
 <p>Descibe starting an additional instance of the IDE</p>
 <p>The Python source code for starting the IDE can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowEditor.py">duhadler/XlCalcNet</a></p>
 <p>The C# source code for the IDE can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/TinyEditor">duhadler/XlCalcNet</a></p>
+<p></p>
 </section>
-<section id="starting-and-calling-the-socket-server">
-<span id="rst-clientserver"></span><h2>Starting and calling the socket server<a class="headerlink" href="#starting-and-calling-the-socket-server" title="Link to this heading">#</a></h2>
+<section id="installing-and-using-numpy-matplotlib-pandas-and-scipy">
+<h2>Installing and using Numpy, Matplotlib, Pandas and Scipy<a class="headerlink" href="#installing-and-using-numpy-matplotlib-pandas-and-scipy" title="Link to this heading">#</a></h2>
+<section id="numpy">
+<h3>Numpy<a class="headerlink" href="#numpy" title="Link to this heading">#</a></h3>
+<p>Some text</p>
+</section>
+<section id="matplotlib">
+<h3>Matplotlib<a class="headerlink" href="#matplotlib" title="Link to this heading">#</a></h3>
+<p>Some text</p>
+</section>
+<section id="pandas">
+<h3>Pandas<a class="headerlink" href="#pandas" title="Link to this heading">#</a></h3>
+<p>Some text</p>
+</section>
+<section id="scipy">
+<h3>Scipy<a class="headerlink" href="#scipy" title="Link to this heading">#</a></h3>
+<p>Some text</p>
+<p></p>
+</section>
+</section>
+<section id="preparing-libreoffice-calc-for-using-xlcalcnet-first-steps">
+<span id="rst-setting-up-localc"></span><h2>Preparing LibreOffice Calc for using XlCalcNet: first steps<a class="headerlink" href="#preparing-libreoffice-calc-for-using-xlcalcnet-first-steps" title="Link to this heading">#</a></h2>
+<p>Describe the installation of the LibreOffice Calc extension: MpFunlab.oxt and MpfunlabLocal.oxt.</p>
+<p>LibreOffice Calc: LODemoAPY.xlsx and LODemoAPY.ods</p>
+<a class="reference internal image-reference" href="../_images/LO_FunctionArguments.png"><img alt="../_images/LO_FunctionArguments.png" class="align-center" src="../_images/LO_FunctionArguments.png" style="width: 50%;" />
+</a>
+<p>LibreOffice Calc: LODemoAPY.xlsx and LODemoAPY.ods</p>
+<a class="reference internal image-reference" href="../_images/LO_MainMenu.png"><img alt="../_images/LO_MainMenu.png" class="align-center" src="../_images/LO_MainMenu.png" style="width: 30%;" />
+</a>
+<p>LibreOffice Calc: LODemoAPY.xlsx and LODemoAPY.ods</p>
+<a class="reference internal image-reference" href="../_images/LO_NavigatorXlCalcNet.png"><img alt="../_images/LO_NavigatorXlCalcNet.png" class="align-center" src="../_images/LO_NavigatorXlCalcNet.png" style="width: 50%;" />
+</a>
+<p>LibreOffice Calc: LODemoAPY.xlsx and LODemoAPY.ods</p>
+<p></p>
+</section>
+<section id="starting-and-calling-the-socket-server-from-c">
+<span id="rst-clientserver"></span><h2>Starting and calling the socket server from C#<a class="headerlink" href="#starting-and-calling-the-socket-server-from-c" title="Link to this heading">#</a></h2>
 <p>A running socket server is critical for the use of XlCalcNet from Microsoft Excel.</p>
 <a class="reference internal image-reference" href="../_images/SocketServer.png"><img alt="../_images/SocketServer.png" class="align-center" src="../_images/SocketServer.png" style="width: 50%;" />
 </a>
@@ -1011,18 +1050,18 @@ document.write(`
 </section>
 </section>
 <section id="preparing-ms-excel-for-using-xlcalcnet-first-steps">
-<span id="rst-setting-up-mpfunlab"></span><h2>Preparing MS Excel for using XlCalcNet: first steps<a class="headerlink" href="#preparing-ms-excel-for-using-xlcalcnet-first-steps" title="Link to this heading">#</a></h2>
+<span id="rst-setting-up-msexcel"></span><h2>Preparing MS Excel for using XlCalcNet: first steps<a class="headerlink" href="#preparing-ms-excel-for-using-xlcalcnet-first-steps" title="Link to this heading">#</a></h2>
 <p>!!! Describe the need for starting  the socket server first !!!</p>
 <p>When starting the socket server for the first time from a specific installation of python.exe, a dialog will appear to allow access of this version of Python to networks. Confirm, since this is required for the socket server to work properly. If you have multiple installations of Python, you may have to do this for each installation.</p>
 <p>Describe the installation of the MS Excel addin: Mpfunlab.xll and Mpfunlab.xlam addins.</p>
 <p>MS Excel: TestCPython.xlsx</p>
-<a class="reference internal image-reference" href="../_images/FunctionArguments.png"><img alt="../_images/FunctionArguments.png" class="align-center" src="../_images/FunctionArguments.png" style="width: 50%;" />
+<a class="reference internal image-reference" href="../_images/XL_FunctionArguments.png"><img alt="../_images/XL_FunctionArguments.png" class="align-center" src="../_images/XL_FunctionArguments.png" style="width: 50%;" />
 </a>
 <p>MS Excel: TestCPython.xlsx</p>
-<a class="reference internal image-reference" href="../_images/ContextMenu.png"><img alt="../_images/ContextMenu.png" class="align-center" src="../_images/ContextMenu.png" style="width: 30%;" />
+<a class="reference internal image-reference" href="../_images/XL_ContextMenu.png"><img alt="../_images/XL_ContextMenu.png" class="align-center" src="../_images/XL_ContextMenu.png" style="width: 30%;" />
 </a>
 <p>MS Excel: TestCPython.xlsx</p>
-<a class="reference internal image-reference" href="../_images/NavigatorXlCalcNet.png"><img alt="../_images/NavigatorXlCalcNet.png" class="align-center" src="../_images/NavigatorXlCalcNet.png" style="width: 50%;" />
+<a class="reference internal image-reference" href="../_images/XL_NavigatorXlCalcNet.png"><img alt="../_images/XL_NavigatorXlCalcNet.png" class="align-center" src="../_images/XL_NavigatorXlCalcNet.png" style="width: 50%;" />
 </a>
 <p>MS Excel: TestCPython.xlsx</p>
 <p></p>
@@ -1180,7 +1219,15 @@ x_{2}
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-xlcalcnet">Installing XlCalcNet</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-python-net-calling-c-from-python">Installing and using Python.NET: Calling C# from Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-the-tiny-ide-as-a-python-application">Installing and using the Tiny IDE as a Python application</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-and-calling-the-socket-server">Starting and calling the socket server</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-numpy-matplotlib-pandas-and-scipy">Installing and using Numpy, Matplotlib, Pandas and Scipy</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">Numpy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib">Matplotlib</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas">Pandas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scipy">Scipy</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-libreoffice-calc-for-using-xlcalcnet-first-steps">Preparing LibreOffice Calc for using XlCalcNet: first steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-and-calling-the-socket-server-from-c">Starting and calling the socket server from C#</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-from-the-tinyide-or-galleryofplots-application">Starting the socketserver from the TinyIDE or GalleryOfPlots application</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-from-the-navigator-dialog-in-excel">Starting the socketserver from the Navigator dialog in Excel</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-programmatically-from-python">Starting the socketserver programmatically from Python</a><ul class="nav section-nav flex-column">
@@ -1229,7 +1276,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 22, 2026.
+  Last updated on Sep 24, 2026.
   <br/>
 </p>
   </div>

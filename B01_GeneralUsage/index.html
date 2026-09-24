@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Setup and general usage &#8212; XlCalcNet 0.2.0 documentation</title>
+    <title>Setup and general usage &#8212; XlCalcNet 0.3.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=7f7c277e"></script>
+    <script src="../_static/documentation_options.js?v=83a61292"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -52,7 +52,7 @@
     <link rel="prev" title="Preface" href="../000_Preface/01_preface.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 22, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 24, 2026"/>
   </head>
   
   
@@ -162,16 +162,11 @@
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Setup and general usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html">General user interface and functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel and LibreOffice Calc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C08_Numpy.html">A quick look at Numpy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C11_Scipy.html">A quick look at Scipy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C12_RBasics.html">A quick look at R, RStudio and Rpy2</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/index.html">Basic floating point functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -876,13 +871,13 @@ document.write(`
                   
   <section id="setup-and-general-usage">
 <h1>Setup and general usage<a class="headerlink" href="#setup-and-general-usage" title="Link to this heading">#</a></h1>
-<p>XlCalcNet is a numerical library with parts written in Python and other parts written in C#, C++, C and Pascal, focussing on numerical calculations in multiple precision and data visualisation.</p>
-<p>Since the main goal is to give access to software written in Python (or via PythonNet software written in C#) from within spreadsheet formulas, a dedicated CPython installation is strongly recommend, to make it easier to configure the interaction with Microsoft Excel, without disturbing existing Python installations.</p>
+<p>XlCalcNet is a numerical library with parts written in Python and other parts written in C#, C++, C and Pascal, with focus on numerical calculations in multiple precision and data visualisation.</p>
+<p>Since one of the main goals is to give access to software written in Python (or via PythonNet software written in C#) from within spreadsheet formulas, a dedicated CPython installation is strongly recommend, to make it easier to configure the interaction with Microsoft Excel and/or LibreOffice Calc, without disturbing existing Python installations.</p>
+<p>The interaction with LibreOffice Calc is based on the fact that LibreOffice has built-in support for writing spreadsheet functions (which appear in the Function Wizard) in Python.</p>
 <p>The interaction with Microsoft Excel is achieved by running a socket server written in Python, which is called from spreadsheet formulas using the functionality provided by Excel.Dna.</p>
-<p>The code which is necessary to make this work overall contains much more C# and C/C++ than Python, so the project is not really suitable as a project on PyPI, but is provided as a Github project only. Both the source code and precompiled binaries are included, since compiling all of the source code requires MSYS2, Free Pascal and Visual Studio, which not all Excel users will be familiar with.</p>
 <p>On the Python side XlCalcNet uses Mpmath 4.0 to provide a rich set of functions in arbitrary precision, using not only Mpmath’s binary and interval data types, but also Python’s built-in Decimal and Fraction data types. If GMP2 is installed, its data types can be used in many cases instead of Mpmath’s binary data types, being much faster. Likewise, if Python-Flint is installed, its data types  can be used in many cases instead of Mpmath’s interval data types, being much faster, and often also more accurate.</p>
 <p>On the C/C++ side, XlCalcNet uses DAMath, Boost Math, Boost Multiprecision and Eigen to provide numerical functions in single, double, extended, quadruple and octuple precision, which are available to the user both from C# and Python.</p>
-<p>The XlCalcNet2 library, which is licensed under the LGPL-3.0 and is therefore provided as a separate project, is based on Boost Math, Boost Multiprecision, Eigen, GMP, MPFR, MPC and Flint and provides functions for the same data types as XlCalcNet and also in arbitrary precision.</p>
+<p>The XlCalcNet2 library, which is licensed under the LGPL-3.0 and is therefore provided as a separate project, is based on Boost Math, Boost Multiprecision, Eigen, GMP, MPFR, MPC and Flint and provides additional functions for the same fixed-precision data types as XlCalcNet and also in arbitrary precision.</p>
 <p>XlCalcNet is intended to be used together with existing Python libraries like NumPy, Matplotlib, Pandas, SciPy. It can also be used from recent versions of RStudio and R, using the reticulate package.</p>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup and general usage</span></p>
@@ -891,7 +886,15 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-xlcalcnet">Installing XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-and-using-python-net-calling-c-from-python">Installing and using Python.NET: Calling C# from Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-and-using-the-tiny-ide-as-a-python-application">Installing and using the Tiny IDE as a Python application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#starting-and-calling-the-socket-server">Starting and calling the socket server</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-and-using-numpy-matplotlib-pandas-and-scipy">Installing and using Numpy, Matplotlib, Pandas and Scipy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#numpy">Numpy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#matplotlib">Matplotlib</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#pandas">Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#scipy">Scipy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#preparing-libreoffice-calc-for-using-xlcalcnet-first-steps">Preparing LibreOffice Calc for using XlCalcNet: first steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#starting-and-calling-the-socket-server-from-c">Starting and calling the socket server from C#</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#starting-the-socketserver-from-the-tinyide-or-galleryofplots-application">Starting the socketserver from the TinyIDE or GalleryOfPlots application</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#starting-the-socketserver-from-the-navigator-dialog-in-excel">Starting the socketserver from the Navigator dialog in Excel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#starting-the-socketserver-programmatically-from-python">Starting the socketserver programmatically from Python</a><ul>
@@ -955,7 +958,7 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel and LibreOffice Calc</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#exploring-with-an-example-spreadsheet-simple-formulas-multiple-precision">Exploring with an example spreadsheet: simple formulas, multiple precision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#exploring-with-an-example-spreadsheet-array-formulas">Exploring with an example spreadsheet: array formulas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#exploring-with-an-example-spreadsheet-small-python-programs-syntax-rules">Exploring with an example spreadsheet: small Python programs, syntax rules</a></li>
@@ -1022,6 +1025,10 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#id6">Implementation in Python</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html#numpy-support-for-multiprecision-data-types-npm">Numpy support for multiprecision data types: <code class="docutils literal notranslate"><span class="pre">npm</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C05_ContextsMpmath.html#id7">Overview</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a><ul>
@@ -1080,6 +1087,7 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#id5">Notes regarding the implementation in C# and C++</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html#use-of-numpy-with-scalar-functions-written-in-c-np53-np53c">Use of Numpy with scalar functions written in C#: <code class="docutils literal notranslate"><span class="pre">np53</span></code>, <code class="docutils literal notranslate"><span class="pre">np53c</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html#building-the-underlying-c-c-c-and-pascal-libraries">Building the underlying C#, C/C++ and Pascal libraries</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#installing-msys2">Installing MSYS2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C06_ContextsFixedPrec.html#eigen-version-5-0-1">Eigen, (version 5.0.1)</a></li>
@@ -1165,51 +1173,6 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="C08_Numpy.html">A quick look at Numpy</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C08_Numpy.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C08_Numpy.html#using-numpy-for-vectorization-of-scalar-functions">Using Numpy for vectorization of scalar functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C08_Numpy.html#using-numpy-with-numba">Using Numpy with Numba</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C08_Numpy.html#use-of-numpy-with-data-types-based-on-mpmath-gmpy2-and-python-flint">Use of Numpy with data types based on Mpmath, Gmpy2 and Python-Flint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C08_Numpy.html#use-of-numpy-with-scalar-functions-written-in-c-np53-np53c">Use of Numpy with scalar functions written in C#:: <code class="docutils literal notranslate"><span class="pre">np53</span></code>, <code class="docutils literal notranslate"><span class="pre">np53c</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="C08_Numpy.html#using-numpy-in-a-spreadsheet-formula">Using Numpy in a spreadsheet formula</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C09_Matplotlib.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C09_Matplotlib.html#using-matplotlib-in-a-spreadsheet-formula-without-blocking-function-return">Using Matplotlib in a spreadsheet formula (without blocking function return)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C09_Matplotlib.html#seaborn">Seaborn</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C09_Matplotlib.html#cartopy">Cartopy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C09_Matplotlib.html#networkx">Networkx</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C09_Matplotlib.html#matplotlib-and-3d-plots-based-on-s3dlib">Matplotlib and 3D plots (based on S3dlib)</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="C10_Pandas.html">A quick look at Pandas and Xlxswriter</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C10_Pandas.html#reading-dataframes-from-xlsx-files">Reading dataframes from <code class="docutils literal notranslate"><span class="pre">*.xlsx</span></code> files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C10_Pandas.html#writing-a-dataframe-object-to-an-xlsx-file">Writing a dataframe object to an <code class="docutils literal notranslate"><span class="pre">*.xlsx</span></code> file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C10_Pandas.html#reading-a-dataframe-from-a-csv-file">Reading a dataframe from a <code class="docutils literal notranslate"><span class="pre">*.csv</span></code> file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C10_Pandas.html#writing-a-dataframe-to-a-csv-file">Writing a dataframe to a <code class="docutils literal notranslate"><span class="pre">*.csv</span></code> file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C10_Pandas.html#transforming-data-in-a-dataframe">Transforming data in a dataframe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C10_Pandas.html#xlsxwriter-creating-files-in-the-xlsx-format">Xlsxwriter: creating files in the <code class="docutils literal notranslate"><span class="pre">*.xlsx</span></code> format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C10_Pandas.html#python-docx-creating-files-in-the-docx-format">Python-docx: creating files in the <code class="docutils literal notranslate"><span class="pre">*.docx</span></code> format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C10_Pandas.html#python-pptx-creating-files-in-the-pptx-format">Python-pptx: creating files in the <code class="docutils literal notranslate"><span class="pre">*.pptx</span></code> format</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="C11_Scipy.html">A quick look at Scipy</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C11_Scipy.html#example-numerical-integration">Example: Numerical integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C11_Scipy.html#example-one-dimensional-root-finding">Example: One-dimensional root-finding</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C11_Scipy.html#example-special-functions">Example: Special functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C11_Scipy.html#example-linear-regression">Example: Linear regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C11_Scipy.html#statsmodels">Statsmodels</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C11_Scipy.html#scikit-learn">Scikit-learn</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="C12_RBasics.html">A quick look at R, RStudio and Rpy2</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C12_RBasics.html#installing-r-rstudio-and-the-reticulate-package">Installing R, RStudio, and the reticulate package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C12_RBasics.html#installing-additional-r-packges">Installing additional R packges</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C12_RBasics.html#using-the-python-command-line-in-the-rstudio-console">Using the python command line in the  RStudio console</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C12_RBasics.html#using-the-python-editor-line-in-the-rstudio-editor-panel">Using the python editor line in the  RStudio editor panel</a></li>
-</ul>
-</li>
 </ul>
 </div>
 </section>
@@ -1278,7 +1241,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 22, 2026.
+  Last updated on Sep 24, 2026.
   <br/>
 </p>
   </div>

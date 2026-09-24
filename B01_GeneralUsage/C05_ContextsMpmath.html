@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python) &#8212; XlCalcNet 0.2.0 documentation</title>
+    <title>Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python) &#8212; XlCalcNet 0.3.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=7f7c277e"></script>
+    <script src="../_static/documentation_options.js?v=83a61292"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -52,7 +52,7 @@
     <link rel="prev" title="Calling Python from C#" href="C04_PythonFromCSharp.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 22, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 24, 2026"/>
   </head>
   
   
@@ -162,16 +162,11 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Setup and general usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html">General user interface and functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel and LibreOffice Calc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C08_Numpy.html">A quick look at Numpy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C11_Scipy.html">A quick look at Scipy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C12_RBasics.html">A quick look at R, RStudio and Rpy2</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/index.html">Basic floating point functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -920,6 +915,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-for-apm-real-input">Examples for <code class="docutils literal notranslate"><span class="pre">apm</span></code>, real input</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-for-apm-complex-input">Examples for <code class="docutils literal notranslate"><span class="pre">apm</span></code>, complex input</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Implementation in Python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-support-for-multiprecision-data-types-npm">Numpy support for multiprecision data types: <code class="docutils literal notranslate"><span class="pre">npm</span></code></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Overview</a></li>
 </ul>
 </li>
 </ul>
@@ -2642,6 +2641,14 @@ document.write(`
 <section id="id6">
 <h3>Implementation in Python<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <p>The Python source code for this module can be found here: <a class="reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ctx_apm.py">ctx_apm.py</a>.</p>
+<p></p>
+</section>
+</section>
+<section id="numpy-support-for-multiprecision-data-types-npm">
+<h2>Numpy support for multiprecision data types: <code class="docutils literal notranslate"><span class="pre">npm</span></code><a class="headerlink" href="#numpy-support-for-multiprecision-data-types-npm" title="Link to this heading">#</a></h2>
+<section id="id7">
+<h3>Overview<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Numpy supports general objects as elements, and this can be used to use numpy functions for the above data types.</p>
 </section>
 </section>
 </section>
@@ -2741,6 +2748,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Implementation in Python</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-support-for-multiprecision-data-types-npm">Numpy support for multiprecision data types: <code class="docutils literal notranslate"><span class="pre">npm</span></code></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Overview</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -2774,7 +2785,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 22, 2026.
+  Last updated on Sep 24, 2026.
   <br/>
 </p>
   </div>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Overview &#8212; XlCalcNet 0.2.0 documentation</title>
+    <title>Overview &#8212; XlCalcNet 0.3.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=7f7c277e"></script>
+    <script src="_static/documentation_options.js?v=83a61292"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -52,7 +52,7 @@
     <link rel="next" title="Preface" href="000_Preface/01_preface.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 22, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 24, 2026"/>
   </head>
   
   
@@ -164,16 +164,11 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="B01_GeneralUsage/index.html">Setup and general usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C01_Setup.html">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C02_GuiFunctions.html">General user interface and functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel and LibreOffice Calc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C08_Numpy.html">A quick look at Numpy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C09_Matplotlib.html">A quick look at Matplotlib and related libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C10_Pandas.html">A quick look at Pandas and Xlxswriter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C11_Scipy.html">A quick look at Scipy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C12_RBasics.html">A quick look at R, RStudio and Rpy2</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="B02_BasicFloatingPointFunctions/index.html">Basic floating point functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -876,6 +871,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Overview</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#use-with-microsoft-excel">Use with Microsoft Excel</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#use-with-libreoffice-calc">Use with LibreOffice Calc</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-the-manual">Navigating the manual</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#searching">Searching</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sidebars">Sidebars</a></li>
@@ -901,23 +897,40 @@ document.write(`
 <p><br /></p>
 <section id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h1>
-<p>Welcome to the documentation of <strong>XlCalcNet</strong> (Microsoft E<strong>X</strong>ce<strong>l</strong> addin for <strong>Calc</strong>ulations in multiprecision, based on Python<strong>Net</strong>), a python library that focusses on numerical calculations in multiple precision and data visualisation, which can also be used within MS Excel spreadsheet formulas. This edition of the documentation describes release 0.2.0. The documentation can also be downloaded in PDF format from <a class="reference external" href="https://github.com/duhadler/DocsXlCalcNet/blob/master/pdf/xlcalcnet.pdf">here</a>.</p>
+<p>Welcome to the documentation of <strong>XlCalcNet</strong> (Microsoft E<strong>x</strong>ce<strong>l</strong> and LibreOffice <strong>Calc</strong> addin, based on Python<strong>Net</strong>), a python library with focus on numerical calculations in multiple precision and data visualisation, which can also be used within MS Excel and LibreOffice Calc spreadsheet formulas. This edition of the documentation describes release 0.3.0. The documentation can also be downloaded in PDF format from <a class="reference external" href="https://github.com/duhadler/DocsXlCalcNet/raw/master/pdf/xlcalcnet.pdf">here</a>.</p>
 <p>XlCalcNet is free software released under the Mozilla Public License <span class="math notranslate nohighlight">\(2.0\)</span> (see  <a class="reference internal" href="99BackMatter/10_License.html#rst-mpl-2-0-license"><span class="std std-ref">License</span></a>). The git repository is <a class="github reference external" href="https://github.com/duhadler/XlCalcNet">duhadler/XlCalcNet</a>.</p>
 <p>XlCalcNet can be installed as a python package from <a class="reference external" href="https://pypi.org/project/xlcalcnet/">PyPI</a>. More detailed information regarding the installation and general usage of XlCalcNet can be found <a class="reference internal" href="B01_GeneralUsage/C01_Setup.html#rst-setting-up-xlcalcnet"><span class="std std-ref">here</span></a>.</p>
-<p>Since one of the main goals of XlCalcNet is to enable the use of functions written in Python or C# within spreadsheet formulas, it is assumed that Microsoft Excel (2010 or later, 64 bit) is installed on the users system, running under Windows (7.1 or later, 64 bit), with .NET Framework 4.8/4.8.1 installed.</p>
+<p>Since one of the main goals of XlCalcNet is to enable the use of functions written in Python or C# within spreadsheet formulas, it is assumed that Microsoft Excel (2010 or later, 64 bit) and/or LibreOffice (version 7.0 or later, 64 bit) is installed on the users system, running under Windows (7.1 or later, 64 bit).</p>
 </section>
 <section id="use-with-microsoft-excel">
 <h1>Use with Microsoft Excel<a class="headerlink" href="#use-with-microsoft-excel" title="Link to this heading">#</a></h1>
-<p>Once MS Excel has been prepared for using XlCalcNet (see <a class="reference internal" href="B01_GeneralUsage/C01_Setup.html#rst-setting-up-mpfunlab"><span class="std std-ref">here</span></a> for details), one can call small Python scripts in spreadsheet formulas and pass parameters from other spreadsheet cells. If the example workbook “Simple.xlsx” has been loaded, the following dialog box will appear when the user clicks on the “Insert Function” button in Excel’s formula bar:</p>
-<a class="reference internal image-reference" href="_images/FunctionArguments.png"><img alt="_images/FunctionArguments.png" class="align-center" src="_images/FunctionArguments.png" style="width: 60%;" />
+<p>Once MS Excel has been prepared for using XlCalcNet (see <a class="reference internal" href="B01_GeneralUsage/C01_Setup.html#rst-setting-up-msexcel"><span class="std std-ref">here</span></a> for details), one can run small Python scripts in spreadsheet formulas, using parameters which are passed from other spreadsheet cells. If the example workbook “Simple.xlsx” has been loaded, the following dialog box will appear when the user clicks on the “Insert Function” button in Excel’s formula bar:</p>
+<a class="reference internal image-reference" href="_images/XL_FunctionArguments.png"><img alt="_images/XL_FunctionArguments.png" class="align-center" src="_images/XL_FunctionArguments.png" style="width: 60%;" />
 </a>
 <p><br /></p>
 <p>XlCalcNet can also be used for procedures. To access the relevant dialog, right-click anywhere on the spreadsheet. The following context menu will appear:</p>
-<a class="reference internal image-reference" href="_images/ContextMenu.png"><img alt="_images/ContextMenu.png" class="align-center" src="_images/ContextMenu.png" style="width: 50%;" />
+<a class="reference internal image-reference" href="_images/XL_ContextMenu.png"><img alt="_images/XL_ContextMenu.png" class="align-center" src="_images/XL_ContextMenu.png" style="width: 40%;" />
 </a>
 <p><br /></p>
 <p>Click on Navigator for XlCalcNet. The following dialog box will appear:</p>
-<a class="reference internal image-reference" href="_images/NavigatorXlCalcNet.png"><img alt="_images/NavigatorXlCalcNet.png" class="align-center" src="_images/NavigatorXlCalcNet.png" style="width: 60%;" />
+<a class="reference internal image-reference" href="_images/XL_NavigatorXlCalcNet.png"><img alt="_images/XL_NavigatorXlCalcNet.png" class="align-center" src="_images/XL_NavigatorXlCalcNet.png" style="width: 60%;" />
+</a>
+<p><br /></p>
+<p>This can be used to call external procedures, which are not used in spreadsheet formulas. The procedures can be used to generate plots, for example. The generated plots can be saved as bitmap files or as interactive 3D plots in a separate window.</p>
+<p><br /></p>
+</section>
+<section id="use-with-libreoffice-calc">
+<h1>Use with LibreOffice Calc<a class="headerlink" href="#use-with-libreoffice-calc" title="Link to this heading">#</a></h1>
+<p>Once LibreOffice Calc has been prepared for using XlCalcNet (see <a class="reference internal" href="B01_GeneralUsage/C01_Setup.html#rst-setting-up-localc"><span class="std std-ref">here</span></a> for details), one can run small Python scripts in spreadsheet formulas, using parameters which are passed from other spreadsheet cells. If the example workbook “Simple.xlsx” has been loaded, the following dialog box will appear when the user clicks on the “Insert Function” button in LibreOffice Calc’s formula bar:</p>
+<a class="reference internal image-reference" href="_images/LO_FunctionArguments.png"><img alt="_images/LO_FunctionArguments.png" class="align-center" src="_images/LO_FunctionArguments.png" style="width: 80%;" />
+</a>
+<p><br /></p>
+<p>XlCalcNet can also be used for procedures. To access the relevant dialog, click on the XlCalcNet logo (in orange) on the main menu bar. The following context menu will appear:</p>
+<a class="reference internal image-reference" href="_images/LO_MainMenu.png"><img alt="_images/LO_MainMenu.png" class="align-center" src="_images/LO_MainMenu.png" style="width: 40%;" />
+</a>
+<p><br /></p>
+<p>Click on Navigator for XlCalcNet. The following dialog box will appear:</p>
+<a class="reference internal image-reference" href="_images/LO_NavigatorXlCalcNet.png"><img alt="_images/LO_NavigatorXlCalcNet.png" class="align-center" src="_images/LO_NavigatorXlCalcNet.png" style="width: 60%;" />
 </a>
 <p><br /></p>
 <p>This can be used to call external procedures, which are not used in spreadsheet formulas. The procedures can be used to generate plots, for example. The generated plots can be saved as bitmap files or as interactive 3D plots in a separate window.</p>
@@ -974,6 +987,7 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Overview</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#use-with-microsoft-excel">Use with Microsoft Excel</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#use-with-libreoffice-calc">Use with LibreOffice Calc</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-the-manual">Navigating the manual</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#searching">Searching</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sidebars">Sidebars</a></li>
@@ -1013,7 +1027,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 22, 2026.
+  Last updated on Sep 24, 2026.
   <br/>
 </p>
   </div>
