@@ -52,7 +52,7 @@
     <link rel="prev" title="Preface" href="../000_Preface/01_preface.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 24, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 27, 2026"/>
   </head>
   
   
@@ -162,7 +162,7 @@
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Setup and general usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html">General user interface and functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel and LibreOffice Calc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html">Building user libraries and documenting them</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
@@ -883,9 +883,18 @@ document.write(`
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup and general usage</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="C01_Setup.html">Setting up XlCalcNet</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-xlcalcnet">Installing XlCalcNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-xlcalcnet">Installing XlCalcNet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#installing-a-version-of-python-which-is-dedicated-to-ms-excel-and-or-libreoffice-calc">Installing a version of Python which is dedicated to MS Excel and/or LibreOffice Calc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#first-steps-with-xlcalcnet">First steps with XlCalcNet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#the-3-folders-which-are-used-by-xlcalcnet">The 3 folders which are used by XlCalcNet</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-and-using-python-net-calling-c-from-python">Installing and using Python.NET: Calling C# from Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-and-using-the-tiny-ide-as-a-python-application">Installing and using the Tiny IDE as a Python application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-and-using-the-tiny-ide-as-a-python-application">Installing and using the Tiny IDE as a Python application</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#source-code">Source code</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-and-using-numpy-matplotlib-pandas-and-scipy">Installing and using Numpy, Matplotlib, Pandas and Scipy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#numpy">Numpy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#matplotlib">Matplotlib</a></li>
@@ -893,7 +902,18 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#scipy">Scipy</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#preparing-libreoffice-calc-for-using-xlcalcnet-first-steps">Preparing LibreOffice Calc for using XlCalcNet: first steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#preparing-libreoffice-calc-for-using-xlcalcnet-first-steps">Preparing LibreOffice Calc for using XlCalcNet: first steps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#installing-mpfunlablocal-oxt-and-mpfunlab-oxt">Installing MpfunlabLocal.oxt and Mpfunlab.oxt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#using-xlcalcnet-within-libreoffice-calc">Using XlCalcNet within LibreOffice Calc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#simple-formulas-multiple-precision">Simple formulas, multiple precision</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#array-formulas">Array formulas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#small-python-programs-syntax-rules">Small Python programs, syntax rules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#multiple-precision-data">Multiple precision data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#managing-procedures-instead-of-functions">Managing procedures instead of functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#exporting-changes-in-mpfunlablocal-to-mpfunlablocal-oxt">Exporting changes in MpfunlabLocal to MpfunlabLocal.oxt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#uninstalling-mpfunlablocal-oxt-and-mpfunlab-oxt">Uninstalling MpfunlabLocal.oxt and Mpfunlab.oxt</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#starting-and-calling-the-socket-server-from-c">Starting and calling the socket server from C#</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#starting-the-socketserver-from-the-tinyide-or-galleryofplots-application">Starting the socketserver from the TinyIDE or GalleryOfPlots application</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#starting-the-socketserver-from-the-navigator-dialog-in-excel">Starting the socketserver from the Navigator dialog in Excel</a></li>
@@ -903,10 +923,19 @@ document.write(`
 </li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#calling-the-socketserver-from-python">Calling the socketserver from Python</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#calling-the-socketserver-from-c">Calling the socketserver from C#</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#source-code">Source code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#id1">Source code</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#preparing-ms-excel-for-using-xlcalcnet-first-steps">Preparing MS Excel for using XlCalcNet: first steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#preparing-ms-excel-for-using-xlcalcnet-first-steps">Preparing MS Excel for using XlCalcNet: first steps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#installing-mpfunlablocal-xlam-and-mpfunlab-xll">Installing Mpfunlablocal.xlam and Mpfunlab.xll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#id2">Simple formulas, multiple precision</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#id3">Array formulas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#id4">Small Python programs, syntax rules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#id5">Multiple precision data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#id6">Managing procedures instead of functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#uninstalling-mpfunlab-xlam-and-mpfunlab-xll">Uninstalling Mpfunlab.xlam and Mpfunlab.xll</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#reasons-for-using-multiprecision-arithmetic">Reasons for using multiprecision arithmetic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#reasons-for-calling-c-from-python">Reasons for calling C# from Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#rebuilding-the-dll-files-of-xlcalcnet-and-xlcalcnet2-from-source-code">Rebuilding the .dll files of XlCalcNet and XlCalcNet2 from source code</a></li>
@@ -958,12 +987,7 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel and LibreOffice Calc</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#exploring-with-an-example-spreadsheet-simple-formulas-multiple-precision">Exploring with an example spreadsheet: simple formulas, multiple precision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#exploring-with-an-example-spreadsheet-array-formulas">Exploring with an example spreadsheet: array formulas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#exploring-with-an-example-spreadsheet-small-python-programs-syntax-rules">Exploring with an example spreadsheet: small Python programs, syntax rules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#entering-multi-precision-data-into-a-spreadsheet-text-formatting-and-asdouble">Entering multi-precision data into a spreadsheet (text formatting and AsDouble)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#managing-procedures-instead-of-functions">Managing procedures instead of functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C03_SpreadsheetFormulas.html">Building user libraries and documenting them</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#building-a-library-of-user-defined-python-functions">Building a library of user defined python functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#building-a-library-of-user-defined-functions-in-c">Building a library of user defined functions in C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#sphinx-building-documentation-for-software-with-python-html-and-pdf">Sphinx: building documentation for software with Python (html and pdf)</a></li>
@@ -1241,7 +1265,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 24, 2026.
+  Last updated on Sep 27, 2026.
   <br/>
 </p>
   </div>

@@ -53,7 +53,7 @@
     <link rel="prev" title="Setup and general usage" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 24, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 27, 2026"/>
   </head>
   
   
@@ -163,7 +163,7 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Setup and general usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Setting up XlCalcNet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html">General user interface and functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html">More on XlCalcNet with MS Excel and LibreOffice Calc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html">Building user libraries and documenting them</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_PythonFromCSharp.html">Calling Python from C#</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
@@ -868,9 +868,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-xlcalcnet">Installing XlCalcNet</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-xlcalcnet">Installing XlCalcNet</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-a-version-of-python-which-is-dedicated-to-ms-excel-and-or-libreoffice-calc">Installing a version of Python which is dedicated to MS Excel and/or LibreOffice Calc</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-steps-with-xlcalcnet">First steps with XlCalcNet</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-3-folders-which-are-used-by-xlcalcnet">The 3 folders which are used by XlCalcNet</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-python-net-calling-c-from-python">Installing and using Python.NET: Calling C# from Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-the-tiny-ide-as-a-python-application">Installing and using the Tiny IDE as a Python application</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-the-tiny-ide-as-a-python-application">Installing and using the Tiny IDE as a Python application</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code">Source code</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-numpy-matplotlib-pandas-and-scipy">Installing and using Numpy, Matplotlib, Pandas and Scipy</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">Numpy</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib">Matplotlib</a></li>
@@ -878,7 +887,18 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scipy">Scipy</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-libreoffice-calc-for-using-xlcalcnet-first-steps">Preparing LibreOffice Calc for using XlCalcNet: first steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-libreoffice-calc-for-using-xlcalcnet-first-steps">Preparing LibreOffice Calc for using XlCalcNet: first steps</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-mpfunlablocal-oxt-and-mpfunlab-oxt">Installing MpfunlabLocal.oxt and Mpfunlab.oxt</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-xlcalcnet-within-libreoffice-calc">Using XlCalcNet within LibreOffice Calc</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-formulas-multiple-precision">Simple formulas, multiple precision</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#array-formulas">Array formulas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#small-python-programs-syntax-rules">Small Python programs, syntax rules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-precision-data">Multiple precision data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-procedures-instead-of-functions">Managing procedures instead of functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-changes-in-mpfunlablocal-to-mpfunlablocal-oxt">Exporting changes in MpfunlabLocal to MpfunlabLocal.oxt</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uninstalling-mpfunlablocal-oxt-and-mpfunlab-oxt">Uninstalling MpfunlabLocal.oxt and Mpfunlab.oxt</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-and-calling-the-socket-server-from-c">Starting and calling the socket server from C#</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-from-the-tinyide-or-galleryofplots-application">Starting the socketserver from the TinyIDE or GalleryOfPlots application</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-from-the-navigator-dialog-in-excel">Starting the socketserver from the Navigator dialog in Excel</a></li>
@@ -888,10 +908,19 @@ document.write(`
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-the-socketserver-from-python">Calling the socketserver from Python</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-the-socketserver-from-c">Calling the socketserver from C#</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code">Source code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Source code</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-ms-excel-for-using-xlcalcnet-first-steps">Preparing MS Excel for using XlCalcNet: first steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-ms-excel-for-using-xlcalcnet-first-steps">Preparing MS Excel for using XlCalcNet: first steps</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-mpfunlablocal-xlam-and-mpfunlab-xll">Installing Mpfunlablocal.xlam and Mpfunlab.xll</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Simple formulas, multiple precision</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Array formulas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Small Python programs, syntax rules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Multiple precision data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Managing procedures instead of functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uninstalling-mpfunlab-xlam-and-mpfunlab-xll">Uninstalling Mpfunlab.xlam and Mpfunlab.xll</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reasons-for-using-multiprecision-arithmetic">Reasons for using multiprecision arithmetic</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reasons-for-calling-c-from-python">Reasons for calling C# from Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rebuilding-the-dll-files-of-xlcalcnet-and-xlcalcnet2-from-source-code">Rebuilding the .dll files of XlCalcNet and XlCalcNet2 from source code</a></li>
@@ -911,76 +940,385 @@ document.write(`
 <span id="rst-setting-up-xlcalcnet"></span><h1>Setting up XlCalcNet<a class="headerlink" href="#setting-up-xlcalcnet" title="Link to this heading">#</a></h1>
 <section id="installing-xlcalcnet">
 <h2>Installing XlCalcNet<a class="headerlink" href="#installing-xlcalcnet" title="Link to this heading">#</a></h2>
-<p>Although the Python language is available in many different implementations, we will focus on the “official” implementation of Python, which is called CPython. The official CPython implementation is available for download from <a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>.</p>
-<p>The XlCalcNet package is compatible with CPython versions 3.8 - 3.14. It is recommended to use a version of CPython, which is both mature and supported. In this manual, we will use CPython version 3.13.12.</p>
-<p>Python can be installed in different ways. It is recommended to install Python as a dedicated version for use with MS Excel, which does not require uninstalling any previous versions of Python, and does not interfere with other Python installations, and does not require administrative privileges.</p>
-<p>As installation directory any directory can be used for which the user has read and write access. In the following we will assume that the installation directory is <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code>. Since we do not assume that the path to this directory is added to the PATH environment variable, we will always use the full path to the python.exe executable, which is <code class="docutils literal notranslate"><span class="pre">C:\Python313\python.exe</span></code>.</p>
-<p>It is convenient to create a shortcut to the python.exe executable on the desktop, and rename it to <code class="docutils literal notranslate"><span class="pre">Python313</span></code>. This allows starting Python by doubleclicking on this shortcut.</p>
-<p>Describe the dependency on Python.Net.</p>
-<p>Explain The 3 folder concept: user, application local data, python installation</p>
-<p>The data which are directly maniplated by the user are located in:</p>
-<p>The data which generated as a result of running a python script or C# program are written to:</p>
-<p>The data which contain the installation are located in:</p>
-<p>Describe installing XlCalcNet from PyPI</p>
-<p>Describe the copying and exploring the DataXlCalcNet folder</p>
-<p>Describe copying the batch files into</p>
+<section id="installing-a-version-of-python-which-is-dedicated-to-ms-excel-and-or-libreoffice-calc">
+<h3>Installing a version of Python which is dedicated to MS Excel and/or LibreOffice Calc<a class="headerlink" href="#installing-a-version-of-python-which-is-dedicated-to-ms-excel-and-or-libreoffice-calc" title="Link to this heading">#</a></h3>
+<p>The XlCalcNet package is compatible with Python versions 3.8 - 3.15. It is recommended to use a version of CPython which is both mature and supported. In this manual, we will use Python version 3.13.15.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>However, if we want to use XlCalcNet with LibreOffice (version 7.0 or later, 64 bit), we need to make sure that the version which we install is compatible with the main Python core installation of LibreOffice, which means that the first 2 numbers of the version number <code class="docutils literal notranslate"><span class="pre">x.y.z</span></code> must match.</p>
+</div>
+<p>To find out which version this is, follow these steps: In the folder <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\LibreOffice\program</span></code> double-click on <code class="docutils literal notranslate"><span class="pre">python.exe</span></code>. This opens the python console, which in the first line states which Python version is used. At the time of writing (October 2026), the most current version of LibreOffice is version 26.8, which uses Python version 3.13.15. Earlier version of LibreOffice use different versions of Python.</p>
+<p>Python can be installed in different ways. It is recommended to install Python as a dedicated version for use with MS Excel and/or LibreOffice Calc, which does not require uninstalling any previous versions of Python, does not interfere with other Python installations, and does not require administrative privileges.</p>
+<p>As installation folder any folder can be used for which the user has read and write access. In the following we will assume that the installation folder is <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code>. We assume that the path to this folder is NOT added to the PATH environment variable.</p>
+<p>As an example of the installation process, we download the windows installer of version 3.13.15 (64 bit) from <a class="reference external" href="https://www.python.org/downloads/release/python-31315/">https://www.python.org/downloads/release/python-31315/</a>. We will install this version into the folder <code class="docutils literal notranslate"><span class="pre">C:\Temp</span></code>, so we make sure beforehand that this folder exists and is empty.</p>
+<p>In the Download folder, double-click on the downloaded file <code class="docutils literal notranslate"><span class="pre">python-3.13.15-amd64.exe</span></code> to start the installation. Click on “Customize installation”.</p>
+<p>In the next dialog page “Optional Features” unselect “Documentation”, “Python test suite”, “py launcher” and “for all users”. Click on “Next”.</p>
+<p>In the next dialog page “Advanced Options” unselect all items, including “Create shortcuts”. In the line below “Customize install location” enter <code class="docutils literal notranslate"><span class="pre">C:\Temp</span></code>. Click on <code class="docutils literal notranslate"><span class="pre">Install</span></code>. Once the installation has been completed, the last dialog page “Setup was successful” appears. Click on <code class="docutils literal notranslate"><span class="pre">Close</span></code>.</p>
+<p>In the Windows explorer, navigate to the folder <code class="docutils literal notranslate"><span class="pre">C:\Temp</span></code>. Open another Windows explorer instance, navigate to  <code class="docutils literal notranslate"><span class="pre">C:\</span></code>, and create the folder <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code>. Copy (DO NOT move!) the content of <code class="docutils literal notranslate"><span class="pre">C:\Temp</span></code> into <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code>.</p>
+<p>Click the Start button and open <strong>Settings</strong> (or press <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Key</span> <span class="pre">+</span> <span class="pre">I</span></code>). Click on <strong>Apps</strong> on the left menu. Select <strong>Installed apps</strong> to view and manage all programs installed on your PC. Navigate to “Python 3.13.15 (64-bit)” and click on the <code class="docutils literal notranslate"><span class="pre">...</span></code> symbol. Select <code class="docutils literal notranslate"><span class="pre">Uninstall</span></code> and confirm. Once Uninstall has been completed, the last dialog page “Uninstall was successful” appears. Click on <code class="docutils literal notranslate"><span class="pre">Close</span></code>.</p>
+<p>Now the folder <code class="docutils literal notranslate"><span class="pre">C:\Temp</span></code> can be deleted. The folder <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> contains the (“freestanding”) Python version that we will work with in this manual.</p>
+</section>
+<section id="first-steps-with-xlcalcnet">
+<h3>First steps with XlCalcNet<a class="headerlink" href="#first-steps-with-xlcalcnet" title="Link to this heading">#</a></h3>
+<p>Since the path to <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> is not added to the PATH environment variable, it is convenient to prepare, within the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder, batch files for the installation of the Python packages which one wishes to install and possibly update later.</p>
+<p>The first batch file will ensure that our version of pip is up to date. Right-click over any free space in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder, select <code class="docutils literal notranslate"><span class="pre">New</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Document</span></code>. Rename this document to <code class="docutils literal notranslate"><span class="pre">A1upgradepip.bat</span></code>, ignoring the warning. Open this file for editing in the Windows standard editor. Type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">--no-warn-script-location</span> <span class="pre">pip</span></code> as install command, begin a new line, type <code class="docutils literal notranslate"><span class="pre">pause</span></code>, save the file, and close the editor.</p>
+<p>Now double-click on <code class="docutils literal notranslate"><span class="pre">A1upgradepip.bat</span></code>. This will update pip as needed.</p>
+<p>In the same way prepare a batch file named <code class="docutils literal notranslate"><span class="pre">A2installxlcalcnet.bat</span></code>, using <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span>&#160; <span class="pre">xlcalcnet</span></code> as install command. Double-click on <code class="docutils literal notranslate"><span class="pre">A2installxlcalcnet.bat</span></code>. This will install the latest version of the XlCalcNet package.</p>
+<p>To check that this installation was successful, double-click on <code class="docutils literal notranslate"><span class="pre">python.exe</span></code>, which will open the python console:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">mpm</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">    mpf(&#39;1.414213562373095048801688724209698078569662&#39;)</span>
+</pre></div>
+</div>
+</section>
+<section id="the-3-folders-which-are-used-by-xlcalcnet">
+<h3>The 3 folders which are used by XlCalcNet<a class="headerlink" href="#the-3-folders-which-are-used-by-xlcalcnet" title="Link to this heading">#</a></h3>
+<p>XlCalcNet uses the following 3 folders:</p>
+<ul class="simple">
+<li><p>The installation folder (in our example <code class="docutils literal notranslate"><span class="pre">C:\Python313\Lib\site-packages\xlcalcnet</span></code>), which contains the program code of the package (which should not be changed by the user during normal use). This folder is automatically created during the installation of XlCalcNet.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the Documents folder, which contains code examples and data which are directly manipulated by the user. This folder needs to created manually by the user (see below).</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">XlCalcNetIDE</span></code> folder in the AppDataLocal folder, which contains data or executable binaries which are generated as a result of running a Python script or C# program. This folder is automatically created while using XlCalcNet.</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>That the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder is located in the Documents folder is crucial for the correct functioning of XlCalcNet. This folder has already been downloaded during the installation of XlCalcNet; it is located in the installation folder (in our example <code class="docutils literal notranslate"><span class="pre">C:\Python313\Lib\site-packages\xlcalcnet</span></code>). The user needs to copy it manually from the installation folder into the Documents folder.</p>
+</div>
+<p>With the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the Documents folder we are ready for the next step: installing Python.NET.</p>
 <p></p>
+</section>
 </section>
 <section id="installing-and-using-python-net-calling-c-from-python">
 <h2>Installing and using Python.NET: Calling C# from Python<a class="headerlink" href="#installing-and-using-python-net-calling-c-from-python" title="Link to this heading">#</a></h2>
 <p>Python.NET is a package that gives Python programmers nearly seamless integration with the .NET Common Language Runtime (CLR) and provides a powerful application scripting tool for .NET developers. It allows Python code to interact with the CLR, and may also be used to embed Python into a .NET application.</p>
 <p>See <a class="github reference external" href="https://github.com/pythonnet/pythonnet">pythonnet/pythonnet</a></p>
+<p>Right-click over any free space in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder, select <code class="docutils literal notranslate"><span class="pre">New</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Document</span></code>. Rename this document to <code class="docutils literal notranslate"><span class="pre">A3installpythonnet.bat</span></code>, ignoring the warning. Open this file for editing in the Windows standard editor. Type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pythonnet</span></code> as install command, begin a new line, type <code class="docutils literal notranslate"><span class="pre">pause</span></code>, save the file, and close the editor.</p>
+<p>Double-click on <code class="docutils literal notranslate"><span class="pre">A3installpythonnet.bat</span></code>. This will install the latest version of the Python.NET package.</p>
+<p>To check that this installation was successful, double-click on <code class="docutils literal notranslate"><span class="pre">python.exe</span></code>, which will open the python console. With Python.NET installed, we can access the C# module <code class="docutils literal notranslate"><span class="pre">qreal</span></code>, which provides functions in quadruple precision:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">qreal</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">qreal</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">    qreal(&#39;1.4142135623730950488016887242097&#39;)</span>
+</pre></div>
+</div>
+<p>Soem background information:</p>
 <p>.NET Framework is part of the Microsoft Windows operating system since Windows Vista; .NET Framework 4.x can be installed since Windows XP. Recent versions of Windows (Windows 7 - Windows 11), which have been kept fully maintained, have .NET Framework 4.8 installed, which is the latest version of .NET Framework and will continue to be distributed with future releases of Windows. As long as it is installed on a supported version of Windows, .NET Framework 4.8 will continue to also be supported (see <a class="reference external" href="https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-framework">https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-framework</a>).</p>
 <p>As part of the  .NET Framework 4.x runtime, 3 different compilers are provided: csc.exe (C#), vbc.exe (Visual Basic), and jsc.exe (JScript).</p>
 <p>The 32 bit targeting versions are located in <code class="docutils literal notranslate"><span class="pre">C:\Windows\Microsoft.NET\Framework\v4.0.30319</span></code> and those for 64 bit in <code class="docutils literal notranslate"><span class="pre">C:\Windows\Microsoft.NET\Framework64\v4.0.30319</span></code>.</p>
 <p>It is important to note that these compilers are not part of Visual Studio but part of Windows; they are, in a way, the closest to a compiler as part of the operating system that Windows has ever come up with. On the other hand, these compilers have been tugged away with the rest of the .NET Framework 4.x runtime; in that sense, they are “hidden” compilers.</p>
 <p>In the following, we will ignore the Visual Basic and JScript compilers, but focus only on C#. The C# compiler supports only language versions up to C# 5. Luckily, this still provides us with all language features which we need for our purposes.</p>
-<p>In terms of usability, the .NET Framework 4.x runtime does not include an IDE; we therefore include a tiny IDE as described below.</p>
+<p>In terms of usability, the .NET Framework 4.x runtime does not include an IDE; we therefore include a Tiny IDE as described below.</p>
 <p></p>
 </section>
 <section id="installing-and-using-the-tiny-ide-as-a-python-application">
 <span id="rst-tinyide"></span><h2>Installing and using the Tiny IDE as a Python application<a class="headerlink" href="#installing-and-using-the-tiny-ide-as-a-python-application" title="Link to this heading">#</a></h2>
-<p>Editing and compiling can be done with “Tiny C#/Python IDE”:</p>
+<section id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h3>
+<p>With the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the Documents folder and Python.NET installed, we can start using the “Tiny C#/Python IDE”, which makes it easy to edit and run small programs written in Python or C#. The Tiny IDE is a Python program (it is started with <code class="docutils literal notranslate"><span class="pre">pythonw.exe</span></code>) which loads a UserControl written in C#. This is made possible by Python.NET.</p>
 <a class="reference internal image-reference" href="../_images/TinyIDE.png"><img alt="../_images/TinyIDE.png" class="align-center" src="../_images/TinyIDE.png" style="width: 50%;" />
 </a>
-<p>Follow the steps to make the Tiny IDE available:</p>
+<p>Follow these steps to make the Tiny IDE available:</p>
 <ul class="simple">
 <li><p>In the Python installation folder, rightclick on <code class="docutils literal notranslate"><span class="pre">pythonw.exe</span></code>.</p></li>
-<li><p>Select <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">shortcut</span></code> -&gt; Result: <code class="docutils literal notranslate"><span class="pre">pythonw.exe-shortcut</span></code>.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">shortcut</span></code> -&gt; Result: <code class="docutils literal notranslate"><span class="pre">pythonw.exe-Shortcut</span></code>. (On Windows 11: Select <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">more</span> <span class="pre">options</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">shortcut</span></code> -&gt; Result: <code class="docutils literal notranslate"><span class="pre">pythonw.exe-Shortcut</span></code>.)</p></li>
 <li><p>Rightclick on <code class="docutils literal notranslate"><span class="pre">pythonw.exe-shortcut</span></code>; Select Properties.</p></li>
 <li><p>In the dialogue Properties, select “Target”, and type:<code class="docutils literal notranslate"><span class="pre">C:\Python313\pythonw.exe</span> <span class="pre">C:\Users\DUHad\Documents\DataXlCalcNet\A01_ExamplesPython\B01_GeneralUsage\C01_Setup\D03_ShowEditor.py</span></code>. Here the path to the documents folder (in our case <code class="docutils literal notranslate"><span class="pre">C:\Users\DUHad\Documents</span></code>) needs to be changed to meet the settings of your system. Then save.</p></li>
-<li><p>Rename <code class="docutils literal notranslate"><span class="pre">pythonw.exe-shortcut</span></code> to <code class="docutils literal notranslate"><span class="pre">TinyIDE_Python313</span></code></p></li>
+<li><p>Rename <code class="docutils literal notranslate"><span class="pre">pythonw.exe-Shortcut</span></code> to <code class="docutils literal notranslate"><span class="pre">TinyIDE_Python313</span></code></p></li>
 <li><p>Doubleclick on <code class="docutils literal notranslate"><span class="pre">TinyIDE_Python313</span></code></p></li>
-<li><p>In the task-bar, rightclick on the appearing symbol, and select “Pin to taskbar”</p></li>
+<li><p>In the task-bar, right-click on the appearing Python symbol, and select “Pin to taskbar”</p></li>
 </ul>
-<p>Descibe starting an additional instance of the IDE</p>
+<p>From now on, you can start the Tiny IDE by clicking on this Python symbol on the taskbar. To start an additional instance of the Tiny IDE when the Tiny IDE is already running, click in the main menu on <code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">IDE</span> <span class="pre">(external)</span></code>. Note that the Python source code for starting the Tiny IDE is also the Python code example which is shown after starting the  Tiny IDE (in <code class="docutils literal notranslate"><span class="pre">A01_ExamplesPython\B01_GeneralUsage\C01_Setup\D03_ShowEditor.py</span></code>), so clicking on <code class="docutils literal notranslate"><span class="pre">Run</span></code> will also start an additional instance. However, now the program does not return until it is closed, as it is not running in an additional instance of Python; running the program like this is useful for debugging and testing purposes, like modifying title, width and height of the window, which can be changed on lines 67-68.</p>
+</section>
+<section id="source-code">
+<h3>Source code<a class="headerlink" href="#source-code" title="Link to this heading">#</a></h3>
 <p>The Python source code for starting the IDE can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowEditor.py">duhadler/XlCalcNet</a></p>
 <p>The C# source code for the IDE can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/TinyEditor">duhadler/XlCalcNet</a></p>
 <p></p>
+</section>
 </section>
 <section id="installing-and-using-numpy-matplotlib-pandas-and-scipy">
 <h2>Installing and using Numpy, Matplotlib, Pandas and Scipy<a class="headerlink" href="#installing-and-using-numpy-matplotlib-pandas-and-scipy" title="Link to this heading">#</a></h2>
 <section id="numpy">
 <h3>Numpy<a class="headerlink" href="#numpy" title="Link to this heading">#</a></h3>
-<p>Some text</p>
+<p>Numpy is “The fundamental package for scientific computing with Python”. For more information, see  <a class="reference external" href="https://numpy.org/">https://numpy.org/</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/NumPy">https://en.wikipedia.org/wiki/NumPy</a>.</p>
+<p>To install Numpy, follow these steps:</p>
+<p>Right-click over any free space in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder, select <code class="docutils literal notranslate"><span class="pre">New</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Document</span></code>. Rename this document to <code class="docutils literal notranslate"><span class="pre">A4installnumpy.bat</span></code>, ignoring the warning. Open this file for editing in the Windows standard editor. Type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">--no-warn-script-location</span> <span class="pre">numpy</span></code> as install command, begin a new line, type <code class="docutils literal notranslate"><span class="pre">pause</span></code>, save the file, and close the editor.</p>
+<p>Double-click on <code class="docutils literal notranslate"><span class="pre">A4installnumpy.bat</span></code>. This will install the latest version of Numpy.</p>
+<p>The following example shows how Numpy can be used with the Decimal type to calculate the mean:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">dpm</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">demo_mp</span><span class="p">():</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">dpm</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">30</span>
+    <span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">((</span><span class="n">r</span><span class="p">,</span><span class="n">c</span><span class="p">),</span><span class="n">dtype</span><span class="o">=</span><span class="n">dpm</span><span class="o">.</span><span class="n">realtype</span><span class="p">)</span>
+    <span class="n">d1</span> <span class="o">=</span> <span class="n">dpm</span><span class="o">.</span><span class="n">t</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+            <span class="n">R</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">d1</span><span class="o">/</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">7</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;res = np.mean(R): </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">res</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;res = np.mean(R, axis=0): </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">res</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;res = np.mean(R, axis=1): </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">res</span><span class="p">))</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">demo_all</span><span class="p">():</span>
+    <span class="n">demo_mp</span><span class="p">()</span>
+
+<span class="n">demo_all</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The output looks like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[[Decimal(&#39;10.1428571428571428571428571429&#39;) Decimal(&#39;10.125&#39;)]
+ [Decimal(&#39;20.1428571428571428571428571429&#39;) Decimal(&#39;20.125&#39;)]
+ [Decimal(&#39;30.1428571428571428571428571429&#39;) Decimal(&#39;30.125&#39;)]
+ [Decimal(&#39;40.1428571428571428571428571429&#39;) Decimal(&#39;40.125&#39;)]
+ [Decimal(&#39;50.1428571428571428571428571429&#39;) Decimal(&#39;50.125&#39;)]
+ [Decimal(&#39;60.1428571428571428571428571429&#39;) Decimal(&#39;60.125&#39;)]
+ [Decimal(&#39;70.1428571428571428571428571429&#39;) Decimal(&#39;70.125&#39;)]
+ [Decimal(&#39;80.1428571428571428571428571429&#39;) Decimal(&#39;80.125&#39;)]]
+
+res = np.mean(R):
+ 45.1339285714285714285714285715 &lt;class &#39;decimal.Decimal&#39;&gt;
+
+res = np.mean(R, axis=0):
+ [Decimal(&#39;45.142857142857142857142857143&#39;) Decimal(&#39;45.125&#39;)] &lt;class &#39;numpy.ndarray&#39;&gt;
+
+res = np.mean(R, axis=1):
+ [Decimal(&#39;10.1339285714285714285714285714&#39;)
+ Decimal(&#39;20.1339285714285714285714285714&#39;)
+ Decimal(&#39;30.1339285714285714285714285714&#39;)
+ Decimal(&#39;40.1339285714285714285714285714&#39;)
+ Decimal(&#39;50.1339285714285714285714285715&#39;)
+ Decimal(&#39;60.1339285714285714285714285715&#39;)
+ Decimal(&#39;70.1339285714285714285714285715&#39;)
+ Decimal(&#39;80.1339285714285714285714285715&#39;)] &lt;class &#39;numpy.ndarray&#39;&gt;
+</pre></div>
+</div>
+<p></p>
 </section>
 <section id="matplotlib">
 <h3>Matplotlib<a class="headerlink" href="#matplotlib" title="Link to this heading">#</a></h3>
-<p>Some text</p>
+<p>Matplotlib is “a comprehensive library for creating static, animated, and interactive visualizations in Python”. For more information, see  <a class="reference external" href="https://matplotlib.org/">https://matplotlib.org/</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Matplotlib">https://en.wikipedia.org/wiki/Matplotlib</a>.</p>
+<p>To install Matplotlib, follow these steps:</p>
+<p>Right-click over any free space in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder, select <code class="docutils literal notranslate"><span class="pre">New</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Document</span></code>. Rename this document to <code class="docutils literal notranslate"><span class="pre">A5installmatplotlib.bat</span></code>, ignoring the warning. Open this file for editing in the Windows standard editor. Type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">--no-warn-script-location</span> <span class="pre">matplotlib</span></code> as install command, begin a new line, type <code class="docutils literal notranslate"><span class="pre">pause</span></code>, save the file, and close the editor.</p>
+<p>Double-click on <code class="docutils literal notranslate"><span class="pre">A5installmatplotlib.bat</span></code>. This will install the latest version of Matplotlib.</p>
+<p>The following example shows how Matplotlib can be used to produce a boxplot. This code example shows how parameters can be passed:</p>
+<p>The Python code for the example below can also be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C04_BoxViolinRaincloudplots/D01_BoxplotSimple.py">D01_BoxplotSimple.py</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">BoxplotSimple</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">OutputDir</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;OutputDir&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;OutputDir&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="s1">&#39;OutputMonitor&#39;</span>
+    <span class="n">Title</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;Title&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;Title&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="s1">&#39;BoxplotSimple&#39;</span>
+    <span class="n">PlotStyle</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;PlotStyle&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;PlotStyle&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="s1">&#39;default&#39;</span>
+    <span class="n">OutputMode</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;OutputMode&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;OutputMode&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="s1">&#39;gui&#39;</span>
+    <span class="n">FigSizeX</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;FigSizeX&#39;</span><span class="p">])</span> <span class="k">if</span> <span class="s1">&#39;FigSizeX&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="mi">4</span>
+    <span class="n">FigSizeY</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;FigSizeY&#39;</span><span class="p">])</span> <span class="k">if</span> <span class="s1">&#39;FigSizeY&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="mi">4</span>
+    <span class="n">Resolution</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;Resolution&#39;</span><span class="p">])</span> <span class="k">if</span> <span class="s1">&#39;Resolution&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="mi">300</span>
+<span class="c1"># End of standard key word arguments</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="c1"># End of custom key word arguments</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">PlotStyle</span><span class="p">)</span>
+
+    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">19680801</span><span class="p">)</span>
+    <span class="n">fruit_weights</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">130</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;peaches&#39;</span><span class="p">,</span> <span class="s1">&#39;oranges&#39;</span><span class="p">,</span> <span class="s1">&#39;tomatoes&#39;</span><span class="p">]</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;peachpuff&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;tomato&#39;</span><span class="p">]</span>
+
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;fruit weight (g)&#39;</span><span class="p">)</span>
+
+    <span class="n">bplot</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">fruit_weights</span><span class="p">,</span>
+                       <span class="n">patch_artist</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># will be used to label x-ticks</span>
+
+    <span class="c1"># fill with colors</span>
+    <span class="k">for</span> <span class="n">patch</span><span class="p">,</span> <span class="n">color</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">bplot</span><span class="p">[</span><span class="s1">&#39;boxes&#39;</span><span class="p">],</span> <span class="n">colors</span><span class="p">):</span>
+        <span class="n">patch</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+
+<span class="c1"># Start of output choices</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">OutputMode</span> <span class="o">==</span> <span class="s1">&#39;plt&#39;</span><span class="p">):</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">OutputMode</span> <span class="o">==</span> <span class="s1">&#39;gui&#39;</span><span class="p">):</span>
+        <span class="n">gui</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="vm">__file__</span><span class="p">,</span> <span class="n">Title</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">FName</span> <span class="o">=</span> <span class="s1">&#39;Temp&#39;</span>
+        <span class="k">if</span> <span class="n">OutputDir</span> <span class="o">!=</span> <span class="s1">&#39;Temp&#39;</span><span class="p">:</span> <span class="n">FName</span> <span class="o">=</span> <span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">stem</span><span class="p">)</span>
+        <span class="n">LocalDir</span> <span class="o">=</span> <span class="n">gui</span><span class="o">.</span><span class="n">get_local_appdata_xlcalcnet</span><span class="p">()</span>
+        <span class="n">FullPath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">LocalDir</span><span class="p">,</span> <span class="n">OutputDir</span><span class="p">,</span> <span class="n">FName</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span> <span class="o">+</span> <span class="n">OutputMode</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">FullPath</span><span class="p">,</span>  <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">OutputDir</span> <span class="o">!=</span> <span class="s1">&#39;Temp&#39;</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Graphics written to: &#39;</span><span class="p">,</span> <span class="n">FullPath</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+        <span class="n">BoxplotSimple</span><span class="p">()</span>
+
+
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">traceback</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>This produces the following output:</p>
+<p><img alt="Boxplots2a" src="../_images/Boxplots2.svg" /></p>
+<p></p>
 </section>
 <section id="pandas">
 <h3>Pandas<a class="headerlink" href="#pandas" title="Link to this heading">#</a></h3>
-<p>Some text</p>
+<p>Pandas is “a fast, powerful, flexible and easy to use open source data analysis and manipulation tool,
+built on top of the Python programming language”. For more information, see  <a class="reference external" href="https://pandas.pydata.org/">https://pandas.pydata.org/</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Pandas_(software">https://en.wikipedia.org/wiki/Pandas_(software</a>)</p>
+<p>To install Pandas, follow these steps:</p>
+<p>Right-click over any free space in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder, select <code class="docutils literal notranslate"><span class="pre">New</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Document</span></code>. Rename this document to <code class="docutils literal notranslate"><span class="pre">A6installpandas.bat</span></code>, ignoring the warning. Open this file for editing in the Windows standard editor. Type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">&quot;pandas[excel]</span></code> as install command, begin a new line, type <code class="docutils literal notranslate"><span class="pre">pause</span></code>, save the file, and close the editor.</p>
+<p>Double-click on <code class="docutils literal notranslate"><span class="pre">A6installpandas.bat</span></code>. This will install the latest version of Pandas.</p>
+<p>The following example shows how Pandas can be used to access data in an Excel workbook:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main_tests</span><span class="p">():</span>
+    <span class="n">get_irisdata</span><span class="p">()</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_documents_folder</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the documents folder.&quot;&quot;&quot;</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">ctypes</span><span class="o">,</span><span class="w"> </span><span class="nn">ctypes.wintypes</span>
+    <span class="n">buf</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">create_unicode_buffer</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">wintypes</span><span class="o">.</span><span class="n">MAX_PATH</span><span class="p">)</span>
+    <span class="n">ctypes</span><span class="o">.</span><span class="n">windll</span><span class="o">.</span><span class="n">shell32</span><span class="o">.</span><span class="n">SHGetFolderPathW</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mh">0x0005</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">buf</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">buf</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_irisdata</span><span class="p">():</span>
+    <span class="n">fn</span> <span class="o">=</span> <span class="n">get_documents_folder</span><span class="p">()</span>
+    <span class="n">fn</span> <span class="o">+=</span> <span class="sa">r</span><span class="s1">&#39;\DataXlCalcNet\DataExamples\MainExamples\Workbooks\Datasets.xlsx&#39;</span>
+    <span class="n">datasets</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">ExcelFile</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">datasets</span><span class="p">,</span> <span class="s1">&#39;iris&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+        <span class="n">start0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">main_tests</span><span class="p">()</span>
+        <span class="n">end0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Elapsed time:&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="p">(</span><span class="n">end0</span> <span class="o">-</span> <span class="n">start0</span><span class="p">,</span> <span class="s1">&#39;.4g&#39;</span><span class="p">),</span> <span class="s1">&#39;seconds&#39;</span> <span class="p">)</span>
+
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">traceback</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>The output looks like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>     Sepal.Length  Sepal.Width  Petal.Length  Petal.Width    Species
+0             5.1          3.5           1.4          0.2     setosa
+1             4.9          3.0           1.4          0.2     setosa
+2             4.7          3.2           1.3          0.2     setosa
+3             4.6          3.1           1.5          0.2     setosa
+4             5.0          3.6           1.4          0.2     setosa
+..            ...          ...           ...          ...        ...
+145           6.7          3.0           5.2          2.3  virginica
+146           6.3          2.5           5.0          1.9  virginica
+147           6.5          3.0           5.2          2.0  virginica
+148           6.2          3.4           5.4          2.3  virginica
+149           5.9          3.0           5.1          1.8  virginica
+
+[150 rows x 5 columns]
+   Sepal.Length  Sepal.Width  Petal.Length  Petal.Width Species
+0           5.1          3.5           1.4          0.2  setosa
+1           4.9          3.0           1.4          0.2  setosa
+2           4.7          3.2           1.3          0.2  setosa
+3           4.6          3.1           1.5          0.2  setosa
+4           5.0          3.6           1.4          0.2  setosa
+5           5.4          3.9           1.7          0.4  setosa
+6           4.6          3.4           1.4          0.3  setosa
+7           5.0          3.4           1.5          0.2  setosa
+Sepal.Length    float64
+Sepal.Width     float64
+Petal.Length    float64
+Petal.Width     float64
+Species          object
+dtype: object
+Elapsed time: 0.4529 seconds
+</pre></div>
+</div>
 </section>
 <section id="scipy">
 <h3>Scipy<a class="headerlink" href="#scipy" title="Link to this heading">#</a></h3>
-<p>Some text</p>
+<p>Scipy is “a fast, powerful, flexible and easy to use open source data analysis and manipulation tool,
+built on top of the Python programming language”. For more information, see  <a class="reference external" href="https://scipy.org/">https://scipy.org/</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/SciPy">https://en.wikipedia.org/wiki/SciPy</a>.</p>
+<p>To install Scipy, follow these steps:</p>
+<p>Right-click over any free space in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder, select <code class="docutils literal notranslate"><span class="pre">New</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Document</span></code>. Rename this document to <code class="docutils literal notranslate"><span class="pre">A7installscipy.bat</span></code>, ignoring the warning. Open this file for editing in the Windows standard editor. Type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">scipy</span></code> as install command, begin a new line, type <code class="docutils literal notranslate"><span class="pre">pause</span></code>, save the file, and close the editor.</p>
+<p>Double-click on <code class="docutils literal notranslate"><span class="pre">A7installscipy.bat</span></code>. This will install the latest version of Scipy.</p>
+<p>The following example shows how Scipy can be used for fitting data:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.optimize</span><span class="w"> </span><span class="kn">import</span> <span class="n">curve_fit</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_curvefit</span><span class="p">():</span>
+    <span class="c1"># See https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello from test_curvefit!&#39;</span><span class="p">)</span>
+
+    <span class="n">xdata</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">xdata</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
+    <span class="n">y_noise</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="o">*</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">xdata</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+    <span class="n">ydata</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">y_noise</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
+
+    <span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">popt</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xdata</span><span class="p">,</span> <span class="n">func</span><span class="p">(</span><span class="n">xdata</span><span class="p">,</span> <span class="o">*</span><span class="n">popt</span><span class="p">),</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span>
+             <span class="n">label</span><span class="o">=</span><span class="s1">&#39;fit: a=</span><span class="si">%5.3f</span><span class="s1">, b=</span><span class="si">%5.3f</span><span class="s1">, c=</span><span class="si">%5.3f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">popt</span><span class="p">))</span>
+
+    <span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">xdata</span><span class="p">,</span> <span class="n">ydata</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="mf">3.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">popt</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xdata</span><span class="p">,</span> <span class="n">func</span><span class="p">(</span><span class="n">xdata</span><span class="p">,</span> <span class="o">*</span><span class="n">popt</span><span class="p">),</span> <span class="s1">&#39;g--&#39;</span><span class="p">,</span>
+             <span class="n">label</span><span class="o">=</span><span class="s1">&#39;fit: a=</span><span class="si">%5.3f</span><span class="s1">, b=</span><span class="si">%5.3f</span><span class="s1">, c=</span><span class="si">%5.3f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">popt</span><span class="p">))</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="n">test_curvefit</span><span class="p">()</span>
+
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">traceback</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">())</span>
+</pre></div>
+</div>
 <p></p>
 </section>
 </section>
 <section id="preparing-libreoffice-calc-for-using-xlcalcnet-first-steps">
 <span id="rst-setting-up-localc"></span><h2>Preparing LibreOffice Calc for using XlCalcNet: first steps<a class="headerlink" href="#preparing-libreoffice-calc-for-using-xlcalcnet-first-steps" title="Link to this heading">#</a></h2>
-<p>Describe the installation of the LibreOffice Calc extension: MpFunlab.oxt and MpfunlabLocal.oxt.</p>
+<p>To enable the use of XlCalcNet in LibreOffice Calc, two extensions need to be installed: the first, named <code class="docutils literal notranslate"><span class="pre">MpfunlabLocal.oxt</span></code>, contains functions and dialogs written in LibreOffice Basic and is intended to be modified by the user during normal use. The second, named <code class="docutils literal notranslate"><span class="pre">Mpfunlab.oxt</span></code>, contains the functionality behind the spreadsheet functions <code class="docutils literal notranslate"><span class="pre">APY0</span></code> - <code class="docutils literal notranslate"><span class="pre">APY9</span></code> and <code class="docutils literal notranslate"><span class="pre">ASDOUBLE</span></code>. It has been compiled using the SDK of LibreOfffice 7.4 and is NOT intended to be modified by the user during normal use. Both extensions are located in a subfolder of the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the <code class="docutils literal notranslate"><span class="pre">Documents</span></code> folder: <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet\SpreadsheetAddins\LibreOfficeCalc</span></code>.</p>
+<section id="installing-mpfunlablocal-oxt-and-mpfunlab-oxt">
+<h3>Installing MpfunlabLocal.oxt and Mpfunlab.oxt<a class="headerlink" href="#installing-mpfunlablocal-oxt-and-mpfunlab-oxt" title="Link to this heading">#</a></h3>
+<p>To install these two extensions properly, following the correct order is important. First install <code class="docutils literal notranslate"><span class="pre">MpfunlabLocal.oxt</span></code> within a normally launched LibreOffice Calc (i.e. without administrator privileges): Open the Extension dialog from the main menu:<code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Extensions...</span></code>. In the Extension dialog click the <code class="docutils literal notranslate"><span class="pre">Add</span></code> button and in the <code class="docutils literal notranslate"><span class="pre">Documents</span></code> folder navigate to the folder <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet\SpreadsheetAddins\LibreOfficeCalc</span></code>. Double- click on <code class="docutils literal notranslate"><span class="pre">MpfunlabLocal.oxt</span></code>. Then click on the <code class="docutils literal notranslate"><span class="pre">Close</span></code> button in the Extension dialog. In the dialog <code class="docutils literal notranslate"><span class="pre">Restart</span> <span class="pre">LibreOffice</span></code>, click on <code class="docutils literal notranslate"><span class="pre">Restart</span> <span class="pre">Now</span></code>. This will close LibreOffice Calc and will open the general LibreOffice desktop. Exit LibreOffice.</p>
+<p>Now start LibreOffice with administrator privileges: Right-click on the desktop icon of LibreOffice and select <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">as</span> <span class="pre">administrator</span></code>. In the following dialog, confirm that you want to proceed. In the LibreOffice desktop, open a <code class="docutils literal notranslate"><span class="pre">Calc</span> <span class="pre">Spreadsheet</span></code>. Open the Extension dialog from the main menu:<code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Extensions...</span></code>. In the Extension dialog click the <code class="docutils literal notranslate"><span class="pre">Add</span></code> button and in the <code class="docutils literal notranslate"><span class="pre">Documents</span></code> folder navigate to the folder <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet\SpreadsheetAddins\LibreOfficeCalc</span></code>. Double- click on <code class="docutils literal notranslate"><span class="pre">Mpfunlab.oxt</span></code>. In the following dialog box “For whom do you want to install the extension?”, click on <code class="docutils literal notranslate"><span class="pre">For</span> <span class="pre">all</span> <span class="pre">users</span></code>. In the following “License Agreement” dialog, click on <code class="docutils literal notranslate"><span class="pre">Accept</span></code>. Then click on the <code class="docutils literal notranslate"><span class="pre">Close</span></code> button in the Extension dialog. In the dialog <code class="docutils literal notranslate"><span class="pre">Restart</span> <span class="pre">LibreOffice</span></code>, click on <code class="docutils literal notranslate"><span class="pre">Restart</span> <span class="pre">Now</span></code>. This will close LibreOffice Calc and will open the general LibreOffice desktop. Exit LibreOffice.</p>
+<p>Within a normally launched LibreOffice Calc, open the Macro Editor from the main menu: <code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Macros</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Macros...</span></code>. In the Object Catalog of the Macro Editor, select <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">Macros</span> <span class="pre">&amp;</span> <span class="pre">Dialogs</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">MpFunlabLocal</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">CallsFromPython</span></code>: In the function <code class="docutils literal notranslate"><span class="pre">GetCPythonExeDirLocal</span></code> set the path of the external Python installation which matches the main internal Python version, e.g. <code class="docutils literal notranslate"><span class="pre">GetCPythonExeDirLocal</span> <span class="pre">=&quot;C:\Python313&quot;</span></code>. Then close the Macro Editor.</p>
+</section>
+<section id="using-xlcalcnet-within-libreoffice-calc">
+<h3>Using XlCalcNet within LibreOffice Calc<a class="headerlink" href="#using-xlcalcnet-within-libreoffice-calc" title="Link to this heading">#</a></h3>
 <p>LibreOffice Calc: LODemoAPY.xlsx and LODemoAPY.ods</p>
 <a class="reference internal image-reference" href="../_images/LO_FunctionArguments.png"><img alt="../_images/LO_FunctionArguments.png" class="align-center" src="../_images/LO_FunctionArguments.png" style="width: 50%;" />
 </a>
@@ -991,11 +1329,45 @@ document.write(`
 <a class="reference internal image-reference" href="../_images/LO_NavigatorXlCalcNet.png"><img alt="../_images/LO_NavigatorXlCalcNet.png" class="align-center" src="../_images/LO_NavigatorXlCalcNet.png" style="width: 50%;" />
 </a>
 <p>LibreOffice Calc: LODemoAPY.xlsx and LODemoAPY.ods</p>
+</section>
+<section id="simple-formulas-multiple-precision">
+<h3>Simple formulas, multiple precision<a class="headerlink" href="#simple-formulas-multiple-precision" title="Link to this heading">#</a></h3>
+<p>Explain <code class="docutils literal notranslate"><span class="pre">APY0</span></code> to <code class="docutils literal notranslate"><span class="pre">APY0</span></code>.</p>
+</section>
+<section id="array-formulas">
+<h3>Array formulas<a class="headerlink" href="#array-formulas" title="Link to this heading">#</a></h3>
+<p>Some text</p>
+</section>
+<section id="small-python-programs-syntax-rules">
+<h3>Small Python programs, syntax rules<a class="headerlink" href="#small-python-programs-syntax-rules" title="Link to this heading">#</a></h3>
+<p>Some text</p>
+</section>
+<section id="multiple-precision-data">
+<h3>Multiple precision data<a class="headerlink" href="#multiple-precision-data" title="Link to this heading">#</a></h3>
+<p>Entering multi-precision data into a spreadsheet (text formatting and AsDouble)</p>
+</section>
+<section id="managing-procedures-instead-of-functions">
+<h3>Managing procedures instead of functions<a class="headerlink" href="#managing-procedures-instead-of-functions" title="Link to this heading">#</a></h3>
+<p>Entering multi-precision data into a spreadsheet (text formatting and AsDouble)</p>
+</section>
+<section id="exporting-changes-in-mpfunlablocal-to-mpfunlablocal-oxt">
+<h3>Exporting changes in MpfunlabLocal to MpfunlabLocal.oxt<a class="headerlink" href="#exporting-changes-in-mpfunlablocal-to-mpfunlablocal-oxt" title="Link to this heading">#</a></h3>
+<p>Changes which are made in the MpfunlabLocal library are stored in the script folders of LibreOffice and are not automatically saved to MpfunlabLocal.oxt. However, they can be exported to MpfunlabLocal.oxt, so that they are available for installation (re-installation at the current LibreOffice installation or new installation for another LibreOffice installation).</p>
+<p>To export the MpfunlabLocal library to MpfunlabLocal.oxt, follow these steps:
+open the Macro Editor from the main menu of LibreOffice Calc: <code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Macros</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Macros...</span></code>. In the main menu of the Macro Editor, select <code class="docutils literal notranslate"><span class="pre">Dialogs</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Organize</span> <span class="pre">Dialogs</span></code>. In the dialog “Basic Macro Organizer” select the tab “Libraries”. “Location” should be set to “My Macros &amp; Dialogs” and “Library: Name” should be “MpFunlabLocal”. Click on <code class="docutils literal notranslate"><span class="pre">Export...</span></code>. In the following dialog box select “Export as extension”, and click on <code class="docutils literal notranslate"><span class="pre">OK</span></code>. In the dialog “Export library as extension” navigate to the documents folder, and within this folder to <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet\SpreadsheetAddins\LibreOfficeCalc</span></code>. Select <code class="docutils literal notranslate"><span class="pre">MpfunlabLocal.oxt</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Save</span></code>. Confirm to replace. In the dialog “Basic Macro Organizer” click on <code class="docutils literal notranslate"><span class="pre">Close</span></code>. Then close the Macro Editor.</p>
+</section>
+<section id="uninstalling-mpfunlablocal-oxt-and-mpfunlab-oxt">
+<h3>Uninstalling MpfunlabLocal.oxt and Mpfunlab.oxt<a class="headerlink" href="#uninstalling-mpfunlablocal-oxt-and-mpfunlab-oxt" title="Link to this heading">#</a></h3>
+<p>To uninstall these two extensions properly, following the correct order is important.</p>
+<p>First start LibreOffice with administrator privileges: Right-click on the desktop icon of LibreOffice and select <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">as</span> <span class="pre">administrator</span></code>. In the following dialog, confirm that you want to proceed. In the LibreOffice desktop, open a <code class="docutils literal notranslate"><span class="pre">Calc</span> <span class="pre">Spreadsheet</span></code>. Open the Extension dialog from the main menu:<code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Extensions...</span></code>. In the Extension dialog select <code class="docutils literal notranslate"><span class="pre">MpFunlab.oxt</span></code>, click the <code class="docutils literal notranslate"><span class="pre">Remove</span></code> button and click on <code class="docutils literal notranslate"><span class="pre">OK</span></code> in the confirmation dialog. Then click on the <code class="docutils literal notranslate"><span class="pre">Close</span></code> button in the Extension dialog. In the dialog <code class="docutils literal notranslate"><span class="pre">Restart</span> <span class="pre">LibreOffice</span></code>, click on <code class="docutils literal notranslate"><span class="pre">Restart</span> <span class="pre">Now</span></code>. This will close LibreOffice Calc and will open the general LibreOffice desktop. Exit LibreOffice.</p>
+<p>Now uninstall <code class="docutils literal notranslate"><span class="pre">MpfunlabLocal.oxt</span></code> within a normally launched LibreOffice Calc (i.e. without administrator privileges): Open the Extension dialog from the main menu: <code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Extensions...</span></code>. In the Extension dialog select <code class="docutils literal notranslate"><span class="pre">MpfunlabLocal.oxt</span></code>, click the <code class="docutils literal notranslate"><span class="pre">Remove</span></code> button and click on <code class="docutils literal notranslate"><span class="pre">OK</span></code> in the confirmation dialog. Then click on the <code class="docutils literal notranslate"><span class="pre">Close</span></code> button in the Extension dialog. In the dialog <code class="docutils literal notranslate"><span class="pre">Restart</span> <span class="pre">LibreOffice</span></code>, click on <code class="docutils literal notranslate"><span class="pre">Restart</span> <span class="pre">Now</span></code>. This will close LibreOffice Calc and will open the general LibreOffice desktop. Exit LibreOffice.</p>
 <p></p>
+</section>
 </section>
 <section id="starting-and-calling-the-socket-server-from-c">
 <span id="rst-clientserver"></span><h2>Starting and calling the socket server from C#<a class="headerlink" href="#starting-and-calling-the-socket-server-from-c" title="Link to this heading">#</a></h2>
 <p>A running socket server is critical for the use of XlCalcNet from Microsoft Excel.</p>
+<p>When starting the socket server for the first time from a specific installation of python.exe, a dialog will appear to allow access of this version of Python to networks. Confirm, since this is required for the socket server to work properly. If you have multiple installations of Python, you may have to do this for each installation.</p>
 <a class="reference internal image-reference" href="../_images/SocketServer.png"><img alt="../_images/SocketServer.png" class="align-center" src="../_images/SocketServer.png" style="width: 50%;" />
 </a>
 <p>The socket server can be startet in various ways:</p>
@@ -1042,8 +1414,8 @@ document.write(`
 <h3>Calling the socketserver from C#<a class="headerlink" href="#calling-the-socketserver-from-c" title="Link to this heading">#</a></h3>
 <p>Describe calling the socketserver from C#</p>
 </section>
-<section id="source-code">
-<h3>Source code<a class="headerlink" href="#source-code" title="Link to this heading">#</a></h3>
+<section id="id1">
+<h3>Source code<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>The Python source code for the socketserver can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Bin/socketspy.py">duhadler/XlCalcNet</a></p>
 <p>The C# source code for the socket client can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/ClientServer">duhadler/XlCalcNet</a></p>
 <p></p>
@@ -1051,9 +1423,21 @@ document.write(`
 </section>
 <section id="preparing-ms-excel-for-using-xlcalcnet-first-steps">
 <span id="rst-setting-up-msexcel"></span><h2>Preparing MS Excel for using XlCalcNet: first steps<a class="headerlink" href="#preparing-ms-excel-for-using-xlcalcnet-first-steps" title="Link to this heading">#</a></h2>
-<p>!!! Describe the need for starting  the socket server first !!!</p>
-<p>When starting the socket server for the first time from a specific installation of python.exe, a dialog will appear to allow access of this version of Python to networks. Confirm, since this is required for the socket server to work properly. If you have multiple installations of Python, you may have to do this for each installation.</p>
-<p>Describe the installation of the MS Excel addin: Mpfunlab.xll and Mpfunlab.xlam addins.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Before beginning to install the MS Excel addins, make sure that the socket server is up and running as expected (see the section above). When calling a function, which calls the socket server, for the first time, MS Excel will seem to freeze if the socket server does not respond quickly. However, subsequent calls will return quickly when the socket server is not up and running (there seems to be a learning effect).</p>
+</div>
+<section id="installing-mpfunlablocal-xlam-and-mpfunlab-xll">
+<h3>Installing Mpfunlablocal.xlam and Mpfunlab.xll<a class="headerlink" href="#installing-mpfunlablocal-xlam-and-mpfunlab-xll" title="Link to this heading">#</a></h3>
+<p>Again, make sure that the socket server is up and running.</p>
+<p>To enable the use of XlCalcNet in MS Excel, two add-ins need to be installed: the first, named <code class="docutils literal notranslate"><span class="pre">Mpfunlablocal.xlam</span></code>, contains functions written in Visual Basic for Applications (VBA), including functions populating the XlCalcNet Navigator dialog, and is intended to be modified by the user during normal use. This add-in is located in a subfolder of the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the <code class="docutils literal notranslate"><span class="pre">Documents</span></code> folder: <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet\SpreadsheetAddins\MSExcel</span></code>.</p>
+<p>The second, named <code class="docutils literal notranslate"><span class="pre">Mpfunlab.xll</span></code>, contains the functionality behind the spreadsheet functions <code class="docutils literal notranslate"><span class="pre">CPY_0</span></code> - <code class="docutils literal notranslate"><span class="pre">CPY_9</span></code> and <code class="docutils literal notranslate"><span class="pre">ASDOUBLE</span></code> and the XlCalcNet Navigator dialog container. The files comprising the whole add-in (<code class="docutils literal notranslate"><span class="pre">Mpfunlab.xll</span></code>, <code class="docutils literal notranslate"><span class="pre">ExcelDna.Integration.dll</span></code>, <code class="docutils literal notranslate"><span class="pre">MpFunLabAddin64.dll</span></code>, <code class="docutils literal notranslate"><span class="pre">MpFunLabClient.dll</span></code>, <code class="docutils literal notranslate"><span class="pre">MpFunLab.Dna</span></code>) have been compiled using Visual Studio and are NOT intended to be modified by the user during normal use. This add-in is located in the <code class="docutils literal notranslate"><span class="pre">Bin</span></code> folder in the <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span></code> package: <code class="docutils literal notranslate"><span class="pre">PathToPython\Lib\site-packages\xlcalcnet\Addin\NET48\Bin</span></code>, where <code class="docutils literal notranslate"><span class="pre">PathToPython</span></code> is the path to the Python installation which is used to run the TinyIDE, the socketserver etc. (in our example <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code>).</p>
+<p>To install these two add-ins properly, follow these steps:
+Within MS Excel, on an Excel worksheet, open the Add-ins dialog from the main menu/ribbon: <code class="docutils literal notranslate"><span class="pre">Developer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Excel</span> <span class="pre">Add-ins</span></code>. In the Add-ins dialog,
+click on <code class="docutils literal notranslate"><span class="pre">Browse...</span></code> and in the <code class="docutils literal notranslate"><span class="pre">Documents</span></code> folder navigate to the folder <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet\SpreadsheetAddins\MSExcel</span></code>. Double-click on <code class="docutils literal notranslate"><span class="pre">Mpfunlablocal.xlam</span></code>, which will then appear in the Add-ins dialog under “Add-ins available”. Still in the Add-ins dialog,
+click on <code class="docutils literal notranslate"><span class="pre">Browse...</span></code> again, and navigate to the folder <code class="docutils literal notranslate"><span class="pre">PathToPython\Lib\site-packages\xlcalcnet\Addin\NET48\Bin</span></code> (see above). Double-click on <code class="docutils literal notranslate"><span class="pre">MpFunlab.xll</span></code>, which will then appear in the Add-ins dialog under “Add-ins available”. Still in the Add-ins dialog,
+click on <code class="docutils literal notranslate"><span class="pre">OK</span></code>. Exit MS Excel.</p>
+<p>When starting MS Excel the next time, both add-ins will be loaded.</p>
 <p>MS Excel: TestCPython.xlsx</p>
 <a class="reference internal image-reference" href="../_images/XL_FunctionArguments.png"><img alt="../_images/XL_FunctionArguments.png" class="align-center" src="../_images/XL_FunctionArguments.png" style="width: 50%;" />
 </a>
@@ -1064,11 +1448,37 @@ document.write(`
 <a class="reference internal image-reference" href="../_images/XL_NavigatorXlCalcNet.png"><img alt="../_images/XL_NavigatorXlCalcNet.png" class="align-center" src="../_images/XL_NavigatorXlCalcNet.png" style="width: 50%;" />
 </a>
 <p>MS Excel: TestCPython.xlsx</p>
+</section>
+<section id="id2">
+<h3>Simple formulas, multiple precision<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Explain <code class="docutils literal notranslate"><span class="pre">CPY_0</span></code> to <code class="docutils literal notranslate"><span class="pre">CPY_0</span></code>.</p>
+</section>
+<section id="id3">
+<h3>Array formulas<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Some text</p>
+</section>
+<section id="id4">
+<h3>Small Python programs, syntax rules<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Some text</p>
+</section>
+<section id="id5">
+<h3>Multiple precision data<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Entering multi-precision data into a spreadsheet (text formatting and AsDouble)</p>
+</section>
+<section id="id6">
+<h3>Managing procedures instead of functions<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Entering multi-precision data into a spreadsheet (text formatting and AsDouble)</p>
+</section>
+<section id="uninstalling-mpfunlab-xlam-and-mpfunlab-xll">
+<h3>Uninstalling Mpfunlab.xlam and Mpfunlab.xll<a class="headerlink" href="#uninstalling-mpfunlab-xlam-and-mpfunlab-xll" title="Link to this heading">#</a></h3>
+<p>To uninstall these two extensions properly, follow these steps:
+Within MS Excel, on an Excel worksheet, open the Add-ins dialog from the main menu/ribbon: <code class="docutils literal notranslate"><span class="pre">Developer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Excel</span> <span class="pre">Add-ins</span></code>. In the Add-ins dialog, unselect <code class="docutils literal notranslate"><span class="pre">MpFunlab</span></code> and <code class="docutils literal notranslate"><span class="pre">Mpfunlablocal</span></code>,  and click on <code class="docutils literal notranslate"><span class="pre">OK</span></code>. Close MS Excel. When Excel is started the next time these Add-ins will not be loaded, however, they will still appear (unselected) in the Add-ins dialog (this seems to be a decade-old bug/feature). To remove them also from the Add-ins dialog, you need to rename them in their original location, start Excel again, and start the Add-ins dialog again. When you then re-select these unselected items, a dialog stating that the add-in cannot be found will appear, followed by “Delete from list?”. Click on <span class="math notranslate nohighlight">\(Yes\)</span>, and the add-in will be removed from the list.</p>
 <p></p>
+</section>
 </section>
 <section id="reasons-for-using-multiprecision-arithmetic">
 <h2>Reasons for using multiprecision arithmetic<a class="headerlink" href="#reasons-for-using-multiprecision-arithmetic" title="Link to this heading">#</a></h2>
-<p>An introduction to the problems of rounding errors and catastrophic cancellation can be found in <span id="id1">Goldberg [<a class="reference internal" href="../99BackMatter/index.html#id105" title="David Goldberg. What every computer scientist should know about floating point arithmetic. ACM Computing Surveys, 23(1):5–48, 1991. Extended and edited reprint from http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.22.6768.">351</a>]</span>. Excellent reference texts are <span id="id2">Higham [<a class="reference internal" href="../99BackMatter/index.html#id125" title="Nicholas J. Higham. Accuracy and Stability of Numerical Algorithms. SIAM, 1st edition, 2002. Online resource: http://www.maths.manchester.ac.uk/ higham/asna/.">370</a>]</span> and <span id="id3">Higham [<a class="reference internal" href="../99BackMatter/index.html#id126" title="Nicholas J. Higham. Accuracy and stability of numerical algorithms - presentation given at 3rd many-core and reconﬁgurable supercomputing network workshop queen’s university, belfast, january 15-16, 2009. 2009. Available as http://cpc.cs.qub.ac.uk/MRSN/higham.pdf.">371</a>]</span>.</p>
+<p>An introduction to the problems of rounding errors and catastrophic cancellation can be found in <span id="id7">Goldberg [<a class="reference internal" href="../99BackMatter/index.html#id105" title="David Goldberg. What every computer scientist should know about floating point arithmetic. ACM Computing Surveys, 23(1):5–48, 1991. Extended and edited reprint from http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.22.6768.">351</a>]</span>. Excellent reference texts are <span id="id8">Higham [<a class="reference internal" href="../99BackMatter/index.html#id125" title="Nicholas J. Higham. Accuracy and Stability of Numerical Algorithms. SIAM, 1st edition, 2002. Online resource: http://www.maths.manchester.ac.uk/ higham/asna/.">370</a>]</span> and <span id="id9">Higham [<a class="reference internal" href="../99BackMatter/index.html#id126" title="Nicholas J. Higham. Accuracy and stability of numerical algorithms - presentation given at 3rd many-core and reconﬁgurable supercomputing network workshop queen’s university, belfast, january 15-16, 2009. 2009. Available as http://cpc.cs.qub.ac.uk/MRSN/higham.pdf.">371</a>]</span>.</p>
 <p>In the following sections we will give a few examples of how the use of double precision without special precaution can give wrong results.</p>
 <p><strong>Example: Sums</strong></p>
 <p>Sums are often calculated exactly if all summands have an exact representation. If this is not the case, results can be unpredictable. In MS Excel, the formula</p>
@@ -1083,7 +1493,7 @@ document.write(`
 <p><strong>Example: Overflow and underflow</strong></p>
 <p>In many situations where the final result is representable in double precision, some of the interim results cause overflow or underflow. A popular example is the function <span class="math notranslate nohighlight">\(f(x,y) = \sqrt{x^2+y^2}\)</span>. With <span class="math notranslate nohighlight">\(x=3 \cdot 10^{300}\)</span> and <span class="math notranslate nohighlight">\(y=4 \cdot 10^{300}\)</span> the result <span class="math notranslate nohighlight">\(f(x,y) = 5 \cdot 10^{300}\)</span> is representable in double precision, but the (naive) calculation will overflow.</p>
 <p><strong>Example: Polynomials</strong></p>
-<p>Consider the following example from <span id="id4">Cuyt <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id56" title="A.A.M. Cuyt, B. Verdonk, S. Becuve, and P. Kuterna. A remarkable example of catastrophic cancellation unraveled. Computing, 66(3):309–320, 2001.">190</a>]</span>:</p>
+<p>Consider the following example from <span id="id10">Cuyt <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id56" title="A.A.M. Cuyt, B. Verdonk, S. Becuve, and P. Kuterna. A remarkable example of catastrophic cancellation unraveled. Computing, 66(3):309–320, 2001.">190</a>]</span>:</p>
 <p>For <span class="math notranslate nohighlight">\(a=77617\)</span> and <span class="math notranslate nohighlight">\(b=33096\)</span>, calculate</p>
 <div class="math notranslate nohighlight">
 \[Y = 333.75 b^6 + a^2  (11 a^2  b^2 - b^6 - 121 b^4 - 2) + 5.5  b^8 + \frac{a}{2b}\]</div>
@@ -1093,7 +1503,7 @@ document.write(`
 <p>In double precision and binary floating point arithmetic, the tangent of <span class="math notranslate nohighlight">\(x = 1.57079632679489\)</span> is calculated as <span class="math notranslate nohighlight">\(\tan(x) = 1.48752 \cdot 10^{14}\)</span>, whereas the correct result is <span class="math notranslate nohighlight">\(\tan(x) = 1.51075 \cdot 10^{14}\)</span>. This amounts to an absolute error of <span class="math notranslate nohighlight">\(2.32287  \cdot 10^{12}\)</span> and a relative error of <span class="math notranslate nohighlight">\(1.54\%\)</span>.</p>
 <p>There are also limits on the range of arguments, e.g. <span class="math notranslate nohighlight">\(\sin(10^{8})\)</span> returns the value  <span class="math notranslate nohighlight">\(-9.31639 \cdot 10^{-1}\)</span>   (with an relative error of <span class="math notranslate nohighlight">\(-6.22776 \cdot 10^{-13}\)</span>), whereas  <span class="math notranslate nohighlight">\(\sin(10^{9})\)</span> returns an invalid result (the exact result is  <span class="math notranslate nohighlight">\(5.45843 \cdot 10^{-1}\)</span>)</p>
 <p><strong>Example: Logarithms and Exponential Functions</strong></p>
-<p>Consider the following example from <span id="id5">Kaveh R. Ghazi and Vincent Lefèvre and Philippe Théveny and Paul Zimmermann [<a class="reference internal" href="../99BackMatter/index.html#id102" title="Kaveh R. Ghazi and Vincent Lefèvre and Philippe Théveny and Paul Zimmermann. Why and how to use arbitrary precision. Computing in Science and Engineering, 12(3):62–65, 2010. Preprint available at http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.212.6321&amp;rep=rep1&amp;type=pdf.">1504</a>]</span>:</p>
+<p>Consider the following example from <span id="id11">Kaveh R. Ghazi and Vincent Lefèvre and Philippe Théveny and Paul Zimmermann [<a class="reference internal" href="../99BackMatter/index.html#id102" title="Kaveh R. Ghazi and Vincent Lefèvre and Philippe Théveny and Paul Zimmermann. Why and how to use arbitrary precision. Computing in Science and Engineering, 12(3):62–65, 2010. Preprint available at http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.212.6321&amp;rep=rep1&amp;type=pdf.">1504</a>]</span>:</p>
 <p>Determine 10 decimal digits of the constant</p>
 <div class="math notranslate nohighlight">
 \[Y = 173746a + 94228b - 78487c, \quad \text{where }\]</div>
@@ -1101,7 +1511,7 @@ document.write(`
 \[a = \sin(10^{22}), b = \log(17.1), c = \exp(0.42).\]</div>
 <p>The expected result is <span class="math notranslate nohighlight">\(Y = -1.341818958 \cdot 10^{-12}\)</span>.</p>
 <p><strong>Example: Linear Algebra</strong></p>
-<p>The following example is from <span id="id6">W. Hofschuster and W. Krämer [<a class="reference internal" href="../99BackMatter/index.html#id129" title="W. Hofschuster and W. Krämer. C-xsc 2.0: a c++ library for extended scientific computing. In R. Alt, A. Frommer, R.B. Kearfott, and W. Luther, editors, Numerical Software with Result Verification, Lecture notes in Computer Science, pages 15–35. Springer-Verlag, Heidelberg, 2004.">1505</a>]</span>:</p>
+<p>The following example is from <span id="id12">W. Hofschuster and W. Krämer [<a class="reference internal" href="../99BackMatter/index.html#id129" title="W. Hofschuster and W. Krämer. C-xsc 2.0: a c++ library for extended scientific computing. In R. Alt, A. Frommer, R.B. Kearfott, and W. Luther, editors, Numerical Software with Result Verification, Lecture notes in Computer Science, pages 15–35. Springer-Verlag, Heidelberg, 2004.">1505</a>]</span>:</p>
 <p>We want to solve the (ill-conditioned) system of linear equations <span class="math notranslate nohighlight">\(Ax = b\)</span> with</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix}
@@ -1128,7 +1538,7 @@ x_{2}
 <p>Calculating this directly in double precision gives the following wrong result:</p>
 <p><span class="math notranslate nohighlight">\(x_1 = 102558961\)</span>, <span class="math notranslate nohighlight">\(x_2 = 41869520.5\)</span></p>
 <p><strong>Example: Eigenvalues</strong></p>
-<p>The following example is from <span id="id7">Brown <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id30" title="B. Malcolm Brown, Matthias Langer, Marco Marletta, Christiane Tretter, and Markus Wagenhofer. Eigenvalue enclosures and exclosures for non-self-adjoint problems in hydrodynamics. LMS J. Comput. Math., 13:65 – 81, 2010.">161</a>]</span>:</p>
+<p>The following example is from <span id="id13">Brown <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id30" title="B. Malcolm Brown, Matthias Langer, Marco Marletta, Christiane Tretter, and Markus Wagenhofer. Eigenvalue enclosures and exclosures for non-self-adjoint problems in hydrodynamics. LMS J. Comput. Math., 13:65 – 81, 2010.">161</a>]</span>:</p>
 <p>The behaviour and stability of many physical systems are connected with the spectral properties of non-self-adjoint operators. However, numerical approximations of eigenvalues of non-selfadjoint operators (even matrices) may fail dramatically. For example, the non-normal 7 <span class="math notranslate nohighlight">\(\times\)</span> 7 matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix}
@@ -1216,9 +1626,18 @@ x_{2}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-xlcalcnet">Installing XlCalcNet</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-xlcalcnet">Installing XlCalcNet</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-a-version-of-python-which-is-dedicated-to-ms-excel-and-or-libreoffice-calc">Installing a version of Python which is dedicated to MS Excel and/or LibreOffice Calc</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-steps-with-xlcalcnet">First steps with XlCalcNet</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-3-folders-which-are-used-by-xlcalcnet">The 3 folders which are used by XlCalcNet</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-python-net-calling-c-from-python">Installing and using Python.NET: Calling C# from Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-the-tiny-ide-as-a-python-application">Installing and using the Tiny IDE as a Python application</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-the-tiny-ide-as-a-python-application">Installing and using the Tiny IDE as a Python application</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code">Source code</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-numpy-matplotlib-pandas-and-scipy">Installing and using Numpy, Matplotlib, Pandas and Scipy</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">Numpy</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib">Matplotlib</a></li>
@@ -1226,7 +1645,18 @@ x_{2}
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scipy">Scipy</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-libreoffice-calc-for-using-xlcalcnet-first-steps">Preparing LibreOffice Calc for using XlCalcNet: first steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-libreoffice-calc-for-using-xlcalcnet-first-steps">Preparing LibreOffice Calc for using XlCalcNet: first steps</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-mpfunlablocal-oxt-and-mpfunlab-oxt">Installing MpfunlabLocal.oxt and Mpfunlab.oxt</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-xlcalcnet-within-libreoffice-calc">Using XlCalcNet within LibreOffice Calc</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-formulas-multiple-precision">Simple formulas, multiple precision</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#array-formulas">Array formulas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#small-python-programs-syntax-rules">Small Python programs, syntax rules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-precision-data">Multiple precision data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-procedures-instead-of-functions">Managing procedures instead of functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-changes-in-mpfunlablocal-to-mpfunlablocal-oxt">Exporting changes in MpfunlabLocal to MpfunlabLocal.oxt</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uninstalling-mpfunlablocal-oxt-and-mpfunlab-oxt">Uninstalling MpfunlabLocal.oxt and Mpfunlab.oxt</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-and-calling-the-socket-server-from-c">Starting and calling the socket server from C#</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-from-the-tinyide-or-galleryofplots-application">Starting the socketserver from the TinyIDE or GalleryOfPlots application</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-from-the-navigator-dialog-in-excel">Starting the socketserver from the Navigator dialog in Excel</a></li>
@@ -1236,10 +1666,19 @@ x_{2}
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-the-socketserver-from-python">Calling the socketserver from Python</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-the-socketserver-from-c">Calling the socketserver from C#</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code">Source code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Source code</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-ms-excel-for-using-xlcalcnet-first-steps">Preparing MS Excel for using XlCalcNet: first steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-ms-excel-for-using-xlcalcnet-first-steps">Preparing MS Excel for using XlCalcNet: first steps</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-mpfunlablocal-xlam-and-mpfunlab-xll">Installing Mpfunlablocal.xlam and Mpfunlab.xll</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Simple formulas, multiple precision</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Array formulas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Small Python programs, syntax rules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Multiple precision data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Managing procedures instead of functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uninstalling-mpfunlab-xlam-and-mpfunlab-xll">Uninstalling Mpfunlab.xlam and Mpfunlab.xll</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reasons-for-using-multiprecision-arithmetic">Reasons for using multiprecision arithmetic</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reasons-for-calling-c-from-python">Reasons for calling C# from Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rebuilding-the-dll-files-of-xlcalcnet-and-xlcalcnet2-from-source-code">Rebuilding the .dll files of XlCalcNet and XlCalcNet2 from source code</a></li>
@@ -1276,7 +1715,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 24, 2026.
+  Last updated on Sep 27, 2026.
   <br/>
 </p>
   </div>
