@@ -7,6 +7,12 @@
 
 
 
+.. |br| raw:: html
+
+   <br />
+
+
+
 
 |newpage|
 
@@ -85,7 +91,7 @@ XlCalcNet uses the following 3 folders:
 
 
 .. important::
-    That the ``DataXlCalcNet`` folder is located in the Documents folder is crucial for the correct functioning of XlCalcNet. This folder has already been downloaded during the installation of XlCalcNet; it is located in the installation folder (in our example ``C:\Python313\Lib\site-packages\xlcalcnet``). The user needs to copy it manually from the installation folder into the Documents folder.
+    It is crucial for the correct functioning of XlCalcNetThat that the ``DataXlCalcNet`` folder is located in the Documents folder. The ``DataXlCalcNet`` folder has already been downloaded during the installation of XlCalcNet; it is located in the installation folder (in our example ``C:\Python313\Lib\site-packages\xlcalcnet``). **The user needs to copy it manually from the installation folder into the Documents folder**.
 
 
 With the ``DataXlCalcNet`` folder in the Documents folder we are ready for the next step: installing Python.NET.
@@ -195,8 +201,8 @@ The C\# source code for the IDE can be found here: https://github.com/duhadler/X
 
 |newpage|
 
-Installing and using Numpy, Matplotlib, Pandas and Scipy
-------------------------------------------------------------------
+Installing and using Numpy, Matplotlib, Pandas, Scipy and Seaborn
+---------------------------------------------------------------------
 
 
 Numpy
@@ -301,83 +307,76 @@ Double-click on ``A5installmatplotlib.bat``. This will install the latest versio
 The following example shows how Matplotlib can be used to produce a boxplot. This code example shows how parameters can be passed:
 
 
-The Python code for the example below can also be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D01_BoxplotSimple.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C04_BoxViolinRaincloudplots/D01_BoxplotSimple.py>`__.
+The Python code for the example below can also be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D04b_Matplotlib3D.py <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C04_BoxViolinRaincloudplots/D04b_Matplotlib3D.py>`__.
 
 
 
 .. code-block:: python
 
     from xlcalcnet import gui
-    from pathlib import Path
-    import os
-    import matplotlib.pyplot as plt
+    import os, re
     import numpy as np
+    import mpl_toolkits.mplot3d.axes3d as axes3d
+    import matplotlib.pyplot as plt
 
-
-    def BoxplotSimple(**kwargs):
+    def ProjectFilledContour(**kwargs):
         OutputDir = kwargs['OutputDir'] if 'OutputDir' in kwargs else 'OutputMonitor'
-        Title = kwargs['Title'] if 'Title' in kwargs else 'BoxplotSimple'
+        Title = kwargs['Title'] if 'Title' in kwargs else 'ProjectFilledContour'
         PlotStyle = kwargs['PlotStyle'] if 'PlotStyle' in kwargs else 'default'
         OutputMode = kwargs['OutputMode'] if 'OutputMode' in kwargs else 'gui'
         FigSizeX = float(kwargs['FigSizeX']) if 'FigSizeX' in kwargs else 4
         FigSizeY = float(kwargs['FigSizeY']) if 'FigSizeY' in kwargs else 4
         Resolution = int(kwargs['Resolution']) if 'Resolution' in kwargs else 300
     # End of standard key word arguments
-        a = 1;
-    # End of custom key word arguments
 
         plt.style.use(PlotStyle)
 
-        np.random.seed(19680801)
-        fruit_weights = [
-            np.random.normal(130, 10, size=100),
-            np.random.normal(125, 20, size=100),
-            np.random.normal(120, 30, size=100),
-        ]
-        labels = ['peaches', 'oranges', 'tomatoes']
-        colors = ['peachpuff', 'orange', 'tomato']
+        fig = plt.figure()
+        ax = fig.add_subplot(projection='3d')
+        X, Y, Z = axes3d.get_test_data(0.05)
 
-        fig, ax = plt.subplots()
-        ax.set_ylabel('fruit weight (g)')
+        # Plot the 3D surface
+        ax.plot_surface(X, Y, Z, edgecolor='royalblue', lw=0.5, rstride=8, cstride=8,
+                        alpha=0.3)
 
-        bplot = ax.boxplot(fruit_weights,
-                           patch_artist=True)  # will be used to label x-ticks
+        # Plot projections of the contours for each dimension.  By choosing offsets
+        # that match the appropriate axes limits, the projected contours will sit on
+        # the 'walls' of the graph
+        ax.contourf(X, Y, Z, zdir='z', offset=-100, cmap='coolwarm')
+        ax.contourf(X, Y, Z, zdir='x', offset=-40, cmap='coolwarm')
+        ax.contourf(X, Y, Z, zdir='y', offset=40, cmap='coolwarm')
 
-        # fill with colors
-        for patch, color in zip(bplot['boxes'], colors):
-            patch.set_facecolor(color)
+        ax.set(xlim=(-40, 40), ylim=(-40, 40), zlim=(-100, 100),
+               xlabel='X', ylabel='Y', zlabel='Z')
+        fig.tight_layout()
 
     # Start of output choices
-        if (OutputMode == 'plt'):
-            plt.show()
-        elif (OutputMode == 'gui'):
+        if (OutputMode == 'gui'):
             gui.plot(fig, __file__, Title)
         else:
             FName = 'Temp'
-            if OutputDir != 'Temp': FName = (Path(__file__).stem)
+            if OutputDir != 'Temp': FName = re.sub('[^a-zA-Z0-9]', '', Title)
             LocalDir = gui.get_local_appdata_xlcalcnet()
-            FullPath = os.sep.join([LocalDir, OutputDir, FName + '.' + OutputMode])
-            plt.savefig(FullPath,  bbox_inches='tight')
-            if OutputDir != 'Temp': print('Graphics written to: ', FullPath)
+            FullPath = os.sep.join([LocalDir, OutputDir, FName])
+            plt.savefig(FullPath + '.' + OutputMode,  bbox_inches='tight')
         plt.close('all')
-
 
     try:
         if __name__ == '__main__':
-            BoxplotSimple()
-
+            ProjectFilledContour()
 
     except Exception:
         import traceback
         print(traceback.format_exc())
 
+
+
+
+
 This produces the following output:
 
-
-|Boxplots2a|
-
-.. |Boxplots2a| image:: ../_static/FuncPlots2D/Statistics/Boxplots2.*
-
+.. image:: ../_static/Graphics3D/Matplotlib/ProjectFilledContour.*
+    :align: center
 
 
 
@@ -477,6 +476,8 @@ The output looks like this:
 
 
 
+|newpage|
+
 
 Scipy
 ...................................................................................
@@ -543,12 +544,11 @@ The following example shows how Scipy can be used for fitting data:
 
 
 
+This produces the following output:
 
 
-
-
-
-
+.. image:: ../_static/CurveFit.*
+    :align: center
 
 
 
@@ -556,119 +556,80 @@ The following example shows how Scipy can be used for fitting data:
 |newpage|
 
 
+Seaborn
+...................................................................................
 
-.. _rst_setting_up_LOCalc: 
-
-Preparing LibreOffice Calc for using XlCalcNet: first steps
----------------------------------------------------------------------------------------------
-
-To enable the use of XlCalcNet in LibreOffice Calc, two extensions need to be installed: the first, named ``MpfunlabLocal.oxt``, contains functions and dialogs written in LibreOffice Basic and is intended to be modified by the user during normal use. The second, named ``Mpfunlab.oxt``, contains the functionality behind the spreadsheet functions ``APY0`` - ``APY9`` and ``ASDOUBLE``. It has been compiled using the SDK of LibreOfffice 7.4 and is NOT intended to be modified by the user during normal use. Both extensions are located in a subfolder of the ``DataXlCalcNet`` folder in the ``Documents`` folder: ``DataXlCalcNet\SpreadsheetAddins\LibreOfficeCalc``.
+Seaborn is "a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics". For more information, see  https://seaborn.pydata.org/.
 
 
-Installing MpfunlabLocal.oxt and Mpfunlab.oxt
-...................................................
+To install Seaborn, follow these steps:
 
-To install these two extensions properly, following the correct order is important. First install ``MpfunlabLocal.oxt`` within a normally launched LibreOffice Calc (i.e. without administrator privileges): Open the Extension dialog from the main menu:``Tools`` -> ``Extensions...``. In the Extension dialog click the ``Add`` button and in the ``Documents`` folder navigate to the folder ``DataXlCalcNet\SpreadsheetAddins\LibreOfficeCalc``. Double- click on ``MpfunlabLocal.oxt``. Then click on the ``Close`` button in the Extension dialog. In the dialog ``Restart LibreOffice``, click on ``Restart Now``. This will close LibreOffice Calc and will open the general LibreOffice desktop. Exit LibreOffice.
+Right-click over any free space in the ``C:\Python313`` folder, select ``New`` -> ``Text Document``. Rename this document to ``A8installseaborn.bat``, ignoring the warning. Open this file for editing in the Windows standard editor. Type ``python -m pip install seaborn`` as install command, begin a new line, type ``pause``, save the file, and close the editor.
 
-Now start LibreOffice with administrator privileges: Right-click on the desktop icon of LibreOffice and select ``Run as administrator``. In the following dialog, confirm that you want to proceed. In the LibreOffice desktop, open a ``Calc Spreadsheet``. Open the Extension dialog from the main menu:``Tools`` -> ``Extensions...``. In the Extension dialog click the ``Add`` button and in the ``Documents`` folder navigate to the folder ``DataXlCalcNet\SpreadsheetAddins\LibreOfficeCalc``. Double- click on ``Mpfunlab.oxt``. In the following dialog box "For whom do you want to install the extension?", click on ``For all users``. In the following "License Agreement" dialog, click on ``Accept``. Then click on the ``Close`` button in the Extension dialog. In the dialog ``Restart LibreOffice``, click on ``Restart Now``. This will close LibreOffice Calc and will open the general LibreOffice desktop. Exit LibreOffice.
-
-Within a normally launched LibreOffice Calc, open the Macro Editor from the main menu: ``Tools`` -> ``Macros`` -> ``Edit Macros...``. In the Object Catalog of the Macro Editor, select ``My Macros & Dialogs`` -> ``MpFunlabLocal`` -> ``CallsFromPython``: In the function ``GetCPythonExeDirLocal`` set the path of the external Python installation which matches the main internal Python version, e.g. ``GetCPythonExeDirLocal ="C:\Python313"``. Then close the Macro Editor.
+Double-click on ``A8installseaborn.bat``. This will install the latest version of Seaborn.
 
 
+The following example shows how Seaborn can be used to produce a scatterplot matrix:
 
 
-Using XlCalcNet within LibreOffice Calc
-...................................................
+.. code-block:: python
 
-LibreOffice Calc: LODemoAPY.xlsx and LODemoAPY.ods
+    from xlcalcnet import gui
+    from pathlib import Path
+    import os
+    import seaborn as sns
+    import matplotlib.pyplot as plt
+
+    # See also: https://seaborn.pydata.org/examples/scatterplot_matrix.html
+
+    def ScatterplotMatrix(**kwargs):
+        OutputDir = kwargs['OutputDir'] if 'OutputDir' in kwargs else 'OutputMonitor'
+        Title = kwargs['Title'] if 'Title' in kwargs else 'ScatterplotMatrix'
+        PlotStyle = kwargs['PlotStyle'] if 'PlotStyle' in kwargs else 'default'
+        OutputMode = kwargs['OutputMode'] if 'OutputMode' in kwargs else 'svg'
+        FigSizeX = float(kwargs['FigSizeX']) if 'FigSizeX' in kwargs else 4
+        FigSizeY = float(kwargs['FigSizeY']) if 'FigSizeY' in kwargs else 4
+        Resolution = int(kwargs['Resolution']) if 'Resolution' in kwargs else 300
+    # End of standard key word arguments
+
+        plt.style.use(PlotStyle)
+
+        sns.set_theme(style='ticks')
+        df = sns.load_dataset('penguins')
+        sns.pairplot(df, hue='species')
+        fig = plt.gcf()
+
+    # Start of output choices
+        if (OutputMode == 'plt'):
+            plt.show()
+        elif (OutputMode == 'gui'):
+            gui.plot(fig, __file__, Title)
+        else:
+            FName = 'Temp'
+            if OutputDir != 'Temp': FName = (Path(__file__).stem)
+            LocalDir = gui.get_local_appdata_xlcalcnet()
+            FullPath = os.sep.join([LocalDir, OutputDir, FName + '.' + OutputMode])
+            plt.savefig(FullPath,  bbox_inches='tight')
+            if OutputDir != 'Temp': print('Graphics written to: ', FullPath)
+        plt.close('all')
+
+    try:
+        if __name__ == '__main__':
+            ScatterplotMatrix(OutputMode='gui')
+
+    except Exception:
+        import traceback
+        print(traceback.format_exc())
 
 
 
-.. image:: ../_static/LO_FunctionArguments.png
-    :width: 50 %
+
+
+This produces the following output:
+
+
+.. image:: ../_static/Seaborn/scatterplot_matrix.*
     :align: center
-
-
-
-LibreOffice Calc: LODemoAPY.xlsx and LODemoAPY.ods
-
-
-
-.. image:: ../_static/LO_MainMenu.png
-    :width: 30 %
-    :align: center
-
-
-
-LibreOffice Calc: LODemoAPY.xlsx and LODemoAPY.ods
-
-
-.. image:: ../_static/LO_NavigatorXlCalcNet.png
-    :width: 50 %
-    :align: center
-
-
-LibreOffice Calc: LODemoAPY.xlsx and LODemoAPY.ods
-
-
-
-Simple formulas, multiple precision
-...................................................
-
-Explain ``APY0`` to ``APY0``.
-
-
-
-Array formulas
-...................................................
-
-Some text
-
-
-Small Python programs, syntax rules
-...................................................
-
-Some text
-
-
-
-Multiple precision data
-...................................................
-
-Entering multi-precision data into a spreadsheet (text formatting and AsDouble)
-
-
-
-Managing procedures instead of functions
-...................................................
-
-Entering multi-precision data into a spreadsheet (text formatting and AsDouble)
-
-
-
-
-
-Exporting changes in MpfunlabLocal to MpfunlabLocal.oxt
-...............................................................
-
-Changes which are made in the MpfunlabLocal library are stored in the script folders of LibreOffice and are not automatically saved to MpfunlabLocal.oxt. However, they can be exported to MpfunlabLocal.oxt, so that they are available for installation (re-installation at the current LibreOffice installation or new installation for another LibreOffice installation). 
-
-To export the MpfunlabLocal library to MpfunlabLocal.oxt, follow these steps: 
-open the Macro Editor from the main menu of LibreOffice Calc: ``Tools`` -> ``Macros`` -> ``Edit Macros...``. In the main menu of the Macro Editor, select ``Dialogs`` -> ``Organize Dialogs``. In the dialog "Basic Macro Organizer" select the tab "Libraries". "Location" should be set to "My Macros & Dialogs" and "Library: Name" should be "MpFunlabLocal". Click on ``Export...``. In the following dialog box select "Export as extension", and click on ``OK``. In the dialog "Export library as extension" navigate to the documents folder, and within this folder to ``DataXlCalcNet\SpreadsheetAddins\LibreOfficeCalc``. Select ``MpfunlabLocal.oxt`` and click on ``Save``. Confirm to replace. In the dialog "Basic Macro Organizer" click on ``Close``. Then close the Macro Editor.
-
-
-
-
-
-Uninstalling MpfunlabLocal.oxt and Mpfunlab.oxt
-...................................................
-
-To uninstall these two extensions properly, following the correct order is important. 
-
-First start LibreOffice with administrator privileges: Right-click on the desktop icon of LibreOffice and select ``Run as administrator``. In the following dialog, confirm that you want to proceed. In the LibreOffice desktop, open a ``Calc Spreadsheet``. Open the Extension dialog from the main menu:``Tools`` -> ``Extensions...``. In the Extension dialog select ``MpFunlab.oxt``, click the ``Remove`` button and click on ``OK`` in the confirmation dialog. Then click on the ``Close`` button in the Extension dialog. In the dialog ``Restart LibreOffice``, click on ``Restart Now``. This will close LibreOffice Calc and will open the general LibreOffice desktop. Exit LibreOffice.
-
-Now uninstall ``MpfunlabLocal.oxt`` within a normally launched LibreOffice Calc (i.e. without administrator privileges): Open the Extension dialog from the main menu: ``Tools`` -> ``Extensions...``. In the Extension dialog select ``MpfunlabLocal.oxt``, click the ``Remove`` button and click on ``OK`` in the confirmation dialog. Then click on the ``Close`` button in the Extension dialog. In the dialog ``Restart LibreOffice``, click on ``Restart Now``. This will close LibreOffice Calc and will open the general LibreOffice desktop. Exit LibreOffice.
-
 
 
 
@@ -699,7 +660,7 @@ The socket server can be startet in various ways:
 Starting the socketserver from the TinyIDE or GalleryOfPlots application
 ...................................................................................
 
-Explain use of menu.
+In both applications, in the main menu, click on ``Tools`` -> ``Start SocketServer``. The GalleryOfPlots application starts the socketserver automatically at startup.
 
 
 
@@ -707,66 +668,88 @@ Explain use of menu.
 Starting the socketserver from the Navigator dialog in Excel
 ...................................................................................
 
-Explain use of dialog.
+The socketserver can also be started from the Navigator dialog in MS Excel, by clicking on the button ``Start socket server``.
 
 
+.. image:: ../_static/XL_NavigatorXlCalcNet.png
+    :width: 50 %
+    :align: center
 
 
-Starting the socketserver programmatically from Python
-...................................................................................
-
-
-.. method:: gui.socketserver()
-
-    Describe the start of the socket server
-
-    .. code-block:: pycon
-
-        >>> from xlcalcnet import gui
-        >>> gui.socketserver()
-
-
-
-
-Calling the socketserver from Python
-.............................................
-
-Describe calling the socketserver from Python
-
-
-.. code-block:: pycon
-
-    >>> import socket
-
-    >>> host = socket.gethostname()
-    >>> port = 11958  # socket server port number
-    >>> client_socket = socket.socket()  # instantiate
-    >>> client_socket.connect((host, port))  # connect to the server
-
-    >>> client_socket.send(SnippetToSend.encode())  # send message
-    >>> DataReceived = client_socket.recv(1024).decode()  # receive response
-    >>> print('Received from server: ' + DataReceived)  # show in terminal
-
-    >>> client_socket.close()  # close the connection
 
 
 Calling the socketserver from C\#
 .............................................
 
-Describe calling the socketserver from C\#
+
+
+The full C\# source code of the example below can be found online in the ``DataXlCalcNet`` repository or in the corresponding local ``DataXlCalcNet`` folder in the file `D05_CallSocketServer.cs <https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C01_Setup/D05_CallSocketServer.cs>`__.
+
+
+The following example illustrates the use:
+
+.. code-block:: csharp
+
+    #region Usings
+    using MpFunLabClient;
+    using System;
+    using System.Diagnostics;
+    using System.Globalization;
+    using System.Threading;
+    using System.Numerics;
+    using FixedPrecNet;
+    #endregion
+
+    static class Program
+    {
+
+    public static void MainTests()
+    {
+        Console.WriteLine("Demo of call socket server");
+        for (int i = 0; i < 1; i++) 
+            TestSocketServer();
+    }
+
+    public static void TestSocketServer()
+    {
+        Console.WriteLine("Hello TestSocketServer!");
+        bool Transpose = false;
+        bool ShowShape = true;
+
+        string Code2 = "from A01_ExamplesPython.B18_FunctionsAndCurvesPlots.C02_BasicCurves import D02_Circle;";
+        Code2 += "D02_Circle.CircleXY(); result = 'Done'";
+
+        dynamic ResultFinal = MpFunLabSocketClientClass.CallSocketServer0(Code2, Transpose, ShowShape);
+        Console.WriteLine();
+        Console.WriteLine("Returned:");
+        Console.WriteLine("{0}, {1}", ResultFinal.ToString(), ResultFinal.GetType());
+
+        try
+        {
+            int U0 = ResultFinal.GetUpperBound(0);
+            int U1 = ResultFinal.GetUpperBound(1);
+            Console.WriteLine("U0: {0}, U1: {1}", U0, U1);
+            for (int i = 0; i <= U0; i++)
+            {
+                for (int j = 0; j <= U1; j++)
+                {
+                    Console.WriteLine("{0}, {1}", ResultFinal[i, j], ResultFinal[i, j].GetType());
+                }
+            }
+        }
+        catch (Exception)
+        {
+        }
+        Console.WriteLine();
+    }
 
 
 
 
-Source code
-.............................................
 
+The Python source code for the socketserver itself can be found here: https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Bin/socketspy.py
 
-The Python source code for the socketserver can be found here: https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Bin/socketspy.py
-
-The C\# source code for the socket client can be found here: https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/ClientServer
-
-
+The C\# source code for the socket client which is called by the above program can be found here: https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/ClientServer
 
 
 
@@ -809,12 +792,70 @@ When starting MS Excel the next time, both add-ins will be loaded.
 
 
 
+.. _rst_XL_functions_standard: 
+
+Using the Python standard library functions within spreadsheet formulas
+..............................................................................
+
+.. note::
+    In the following subsections, we will work with the file ``LoDemoCPY_std.ods``, which contains examples for using the Python standard library. More advanced examples using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet start  :ref:`here <rst_XL_functions_advanced>`.
+
+
+Within MS Excel, open from the main menu ``File`` -> ``Open`` in the Documents folder the MS Excel workbook ``DataXlCalcNet\DataExamples\MainExamples\Workbooks\LoDemoCPY_std.ods``.
+
+This file contains several worksheets which demonstrate different possibilities of using the Python standard library within MS Excel spreadsheet formulas.
+
+Before we start with that we will briefly explore the use of these functions with the Function Dialog of  MS Excel: In the worksheet "Math", select cell ``B12`` and click on the icon of the Function Dialog in the Formula Bar. This opens the Function Dialog:
+
+
+.. image:: ../_static/XL_FunctionArguments.png
+    :align: center
+    :width: 60%
 
 
 
+We see that the formula in the spreadsheeet cell is ``=CPY_1("result = math.ceil(P1)",C12)``. The function ``CPY_1`` has a required string parameter, ``Formula``, which contains a Python script. This python script can contain several Python statement. The last statement is always expected to assign a value to the variable result, in this case a Python float, which is coverted to a floating point number in double precision (a "Double") in LibreOffice. The next optional parameter, ``Param1``, can be a string, a Double, a Boolean value or a reference. In this case, it is a reference (``C12``) which points to a Double with the value ``3.123``. This optional parameter, ``Param1``, is referenced in the Python formula given above as ``P1``. The last but one parameter, ``Transposed``, and the last parameter, ``ShowShape``, are only relevant when arrays are returned; this is discussed :ref:`here <rst_XL_functions_Arrays>`.
+
+In the worksheet "Math", select an emptz cell and click on the icon of the Function Dialog in the Formula Bar. This opens the Function Insert Dialog:
+
+.. image:: ../_static/XL_FunctionInsert.png
+    :align: center
+    :width: 60%
 
 
-MS Excel: TestCPython.xlsx
+
+We see that the function ``CPY_1`` is in the Category "MpFunLab", and that there are 10 functions,  ``CPY_0`` to ``CPY_9``, which differ only by the number of parameters ``Param1`` to ``Param9`` which they support (The function ``CPY_0`` does not have a parameter ``Param0``). There is also a function ``ASDOUBLE``, which is used to convert string representations of a Python Fraction or Decimal into a Double; this is discussed :ref:`here <rst_XL_functions_MpInput>`.
+
+
+
+The worksheet "GeneralInfo"
+..............................................................................
+
+
+The worksheet "GeneralInfo" contains calls to the Python modules ``os``, ``platform`` and ``sys``. 
+
+For example, the cell ``B4`` contains the formula ``=CPY_0("result = platform.processor()")``. The function result depends on the hardware, e.g. ``Intel64 Family 6 Model 165 Stepping 5, GenuineIntel``.
+
+The cell ``B16`` contains the formula ``=CPY_0("result = os.getcwd()")``. The function result depends on the LibreOffice installation, e.g. ``C:\Program Files\LibreOffice\program``.
+
+The cell ``B33`` contains the formula ``=CPY_0("result = str(sys.float_info.epsilon)")``, which return the machine epsilon in double precision. The function result is: ``2.220446049250313e-16``.
+
+
+
+The worksheet "Math"
+..............................................................................
+
+The worksheet "Math" demonstrates the use of the Python module ``math`` and the use of parameters in functions. 
+
+For example, the cell ``B33`` contains the formula ``=CPY_1("result = math.exp(P1)-1",C33)``, which calculates `\exp(\text{P1})-1` naively. The function result is ``1.00000500000696E-05``, with the cell ``C33`` containing the value ``0.00001``.
+
+The cell ``B34`` contains the formula ``=CPY_1("result = math.expm1(P1)",C34)``, which calculates `\exp(\text{P1})-1` using the ``expm1`` function. The function result is ``1.00000500001667E-05``, with the cell ``C34`` again containing the value ``0.00001``.
+
+The floating point  values ``NaN``, ``+inf`` and ``-inf`` are not supported in spreadsheet programs, which only return ``#NUM!`` in these cases. Use the string representation instead. This is shown in the cells ``A4:B9`` on this worksheet.
+
+The cell ``B36`` contains the formula ``=CPY_2("result = math.log(P1, P2)",C36, D36)``, with the cell ``C36`` containing the value ``3.123`` and the cell ``D36`` containing the value ``10``. The function result is: ``0.494571984230199``.
+
+With ``B36`` the active cell, click on the icon for the "Function Wizard". The following dialog appears:
 
 
 
@@ -823,59 +864,253 @@ MS Excel: TestCPython.xlsx
     :align: center
 
 
-MS Excel: TestCPython.xlsx
+
+.. _rst_XL_functions_Arrays: 
+
+The worksheet "Arrays"
+..............................................................................
+
+
+The worksheet "Arrays" demonstrates the use of arrays in functions. The Python equivalent of arrays are lists.
+
+For example, the cell ``B3`` contains the formula ``=CPY_0("result = str(sys.path)")``. The function ``sys.path`` returns a list of strings (containing the entries of the Python path), which is converted into one string by writing ``str(sys.path)``. This makes sure that the result can be displayed in one cell, but the result string is quite long and hard to read.
+
+We can use an array formula to improve readability. We recall that in addition to the usual parameters ``P1`` - ``P9`` in the functions ``CPY_0`` to ``CPY_9`` there are two more: The last but one paramter, named ``Transposed``, which is optional with default value 0, where a non-zero value means that the returned array should be transposed; and the last paramter, named ``ShowShape``, which is optional with default value 0, where a non-zero value means that the shape of the returned array should be indicated like ``R7C3`` for an array with 7 rows and 3 columns.
+
+As an example, the cell ``B6`` contains the formula ``=CPY_0("result = sys.path",1,1)`` and returns the shape information ``R12C1`` followed by the separator ``|``, followed by the first entry of the transposed array, i.e. in this case ``R12xC1| C:\Users\DUHad\Documents\DataXlCalcNet``.
+
+We can build the corresponding array formula by first selecting a range like ``R12C1``, then typing in the input line of the formula bar ``=CPY_0("result = sys.path",1,0)``, and finally, while keeping the shift and control keys pressed down, pressing the enter key.
+
+This is what has been done in cells ``B9:B20``. The formula is now displayed as ``{=CPY_0("result = sys.path",1,0)}``, with curly braces, to indicate that it is an array formula. We can change the range which is covered by the array formula by dragging the small blue rectangle in the lower right corner in the selected range (see the screenshot below).
+
+
+.. image:: ../_static/LO_Change_Range.png
+    :align: center
+    :width: 60%
 
 
 
-.. image:: ../_static/XL_ContextMenu.png
-    :width: 30 %
+
+
+
+
+
+The worksheet "Data"
+...................................................
+
+The worksheet "Data " demonstrates the use of named ranges in MS Excel spreadsheet formulas.
+
+Currently there a two small datasets with predefined as named ranges: ``matA`` defined as the range $Data.$A$3:$A$7 and  ``matB`` defined as the range $Data.$A$3:$A$7.
+
+These ranges are used in the workbook "Arrays".
+
+
+
+
+
+
+
+.. _rst_XL_functions_advanced: 
+
+Using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet within spreadsheet formulas
+...........................................................................................
+
+.. note::
+    In the following subsections. we will work with the file ``LoDemoCPY_adv.ods``, which contains more advanced examples using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet. Examples for using MS Excel with the Python standard library start :ref:`here <rst_XL_functions_standard>`.
+
+
+Within MS Excel, open from the main menu ``File`` -> ``Open`` in the Documents folder the MS Excel workbook ``DataXlCalcNet\DataExamples\MainExamples\Workbooks\LoDemoCPY_adv.ods``.
+
+This file contains several worksheets which demonstrate different possibilities of using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet within MS Excel spreadsheet formulas.
+
+Some of these functions write their output  into the ``XlCalcNetIDE\OutputMonitor`` folder in the AppData\Local folder. In order to see it, we need to open the ``Output Monitor`` application: start the ``Tiny IDE`` by clicking on its icon in the task bar, and in the main menu, click on ``Tools`` -> ``Start Output Monitor``.
+
+
+
+
+
+.. _rst_XL_functions_MpInput: 
+
+The worksheet "MpInput"
+...................................................
+
+The worksheet "MpInput " demonstrates the use of named ranges in MS Excel spreadsheet formulas.
+
+If we try to enter a number like ``123456789012345678/901234567890``, i.e. a number with more than 16 digits into a spreadsheet cell, it will automatically be shortened to ``1.23456789012346E+029``. In order to be able to enter such numbers into spreadsheet cells, the cells must first be formatted as text, and thereafter these numbers can be entered as text. This is mostly useful when working with Python Fractions and Decimals.
+
+As an example, worksheet "MpInput" contains a named range called "MpInputFractions" in column ``A``, which can be used as input for descriptive statistics or linear algebra routines.
+
+However, this kind of input is hard to read; it is also not directly usable for numerical spreadsheet functions. This can be changed by using the function ``ASDOUBLE``, a shown in column ``B``
+
+
+
+
+
+
+
+
+The worksheet "Programming"
+...................................................
+
+The worksheet "Programming" demonstrates the use of small python scripts in MS Excel spreadsheet formulas.
+
+``=CPY_0("temp = 0 $n for i in range(14): $n$t temp += i $n result = 2 * temp")`` is the formula in the cell ``B3``. Here we are using ``$n`` for newline and ``$t`` for indentation; the result is ``182``. The corresponding Python code with conventional formatting would look like this:
+
+
+.. code-block:: python
+
+        temp = 0
+        for i in range(14):
+            temp += i
+        result = 2 * temp
+
+
+|br|
+
+
+
+``=CPY_1("temp = 0 $n for i in range(int(P1)): $n$t temp += i $n result = 2 * temp", C4)`` is the formula in the cell ``B4``, and the cell ``C4`` contains the value ``45``; the result is ``1980``. The corresponding Python code with conventional formatting would look like this:
+
+
+.. code-block:: python
+
+        temp = 0
+        for i in range(int(P1)):
+            temp += i
+        result = 2 * temp
+
+
+|br|
+
+
+
+
+``=CPY_0("from xlcalcnet import mpm $n  mpm.dps=40 $n result = str(mpm.sqrt(2))")`` is the formula in the cell ``B8``; the result is ``1.41421356237309504880168872420969807857``. The corresponding Python code with conventional formatting would look like this:
+
+
+.. code-block:: python
+
+        from xlcalcnet import mpm
+        mpm.dps=40
+        result = str(mpm.sqrt(2))
+
+
+|br|
+
+
+
+``=CPY_0("from scipy.integrate import quad $n def integrand(x, a, b): return a*x**2 + b $n a = 2.1; b = 1.1;  $n I = quad(integrand, 0, 1, args=(a,b))   $n result = str(I) ")`` is the formula in the cell ``B12``; the result is the tuple ``(1.8000000000000003, 1.998401444325282e-14)``, where the first item is the value of the integral and the second item is the error estimate. The corresponding Python code with conventional formatting would look like this:
+
+
+.. code-block:: python
+
+        from scipy.integrate import quad
+        def integrand(x, a, b): return a*x**2 + b
+        a = 2.1; b = 1.1;
+        I = quad(integrand, 0, 1, args=(a,b))
+        result = str(I)
+
+
+|br|
+
+
+
+``=CPY_0("from A06_UserlibExamplesPython.B29_InferentialStatistics.C01_BasicTests1Sample import D01_StudentT_PValues $n D01_StudentT_PValues.demo_stats_student_t_1sample_test() $n result='Done'")`` is the formula in the cell ``B17``; the result is a CSV file which is written to the Output Monitor folder. The corresponding Python code with conventional formatting would look like this:
+
+
+.. code-block:: python
+
+        from A06_UserlibExamplesPython.B29_InferentialStatistics.C01_BasicTests1Sample import D01_StudentT_PValues
+        D01_StudentT_PValues.demo_stats_student_t_1sample_test()
+        result='Done'
+
+
+And this is the Output Monitor showing the result (with the project panel hidden)
+
+.. image:: ../_static/CSV_Output_Monitor.png
+    :width: 50 %
     :align: center
 
+|br|
 
-MS Excel: TestCPython.xlsx
+|br|
+
+``=CPY_0("from A01_ExamplesPython.B18_FunctionsAndCurvesPlots.C02_BasicCurves import D01_RegularConvexPolygon  $n D01_RegularConvexPolygon.RegularConvexPolygon(OutputMode='svg') $n result='Done'")`` is the formula in the cell ``B22``; the result is a SVG file which is written to the Output Monitor folder. The corresponding Python code with conventional formatting would look like this:
 
 
-.. image:: ../_static/XL_NavigatorXlCalcNet.png
+.. code-block:: python
+
+        from A01_ExamplesPython.B18_FunctionsAndCurvesPlots.C02_BasicCurves import D01_RegularConvexPolygon
+        D01_RegularConvexPolygon.RegularConvexPolygon(OutputMode='svg')
+        result='Done'
+
+
+And this is the Output Monitor showing the result (with the project panel hidden)
+
+.. image:: ../_static/SVG_Output_Monitor.png
     :width: 50 %
     :align: center
 
 
-MS Excel: TestCPython.xlsx
 
 
 
 
-Simple formulas, multiple precision
-...................................................
-
-Explain ``CPY_0`` to ``CPY_0``.
-
-
-
-Array formulas
-...................................................
-
-Some text
-
-
-Small Python programs, syntax rules
-...................................................
-
-Some text
-
-
-
-Multiple precision data
-...................................................
-
-Entering multi-precision data into a spreadsheet (text formatting and AsDouble)
 
 
 
 Managing procedures instead of functions
 ...................................................
 
-Entering multi-precision data into a spreadsheet (text formatting and AsDouble)
+It is possible to call the spreadsheet functions  ``CPY_0`` to ``CPY_9`` from LibreOffice Basic and to use this to start procedures instead of functions. A few simple examples have already been prepared to demonstrate the technique. 
+
+
+To access the relevant dialog, click on the XlCalcNet logo (in orange) on the main menu bar:
+
+.. image:: ../_static/XL_ContextMenu.png
+    :align: center
+    :width: 40%
+
+
+The following dialog box with the title **Navigator for XlCalcNet** will appear:
+
+
+.. image:: ../_static/XL_NavigatorXlCalcNet.png
+    :align: center
+    :width: 60%
+
+
+The first example, with ``CSV Output`` in "Category" and ``ShowTTest1`` in "Subroutine", will write a CSV file into the ``XlCalcNetIDE\OutputMonitor`` folder in the AppData\Local folder. In order to see it, we need to open the ``Output Monitor`` application: start the ``Tiny IDE`` by clicking on its icon in the task bar, and in the main menu, click on ``Tools`` -> ``Start Output Monitor``. With the ``Output Monitor`` application running, click ``OK``. The CSV file will then immediately appear in the ``Output Monitor``. 
+
+
+The corresponding code in the module ``MpFunlabLocal`` -> ``BasicAndDialogs`` is shown below:
+
+.. code-block:: visualbasic
+
+    Sub ShowTTest1()
+        Rem Output (a .csv file) is shown in output monitor
+        Code = "from A06_UserlibExamplesPython.B29_InferentialStatistics.C01_BasicTests1Sample import D01_StudentT_PValues;"
+        Code = Code + "D01_StudentT_PValues.demo_stats_student_t_1sample_test(); result='Done';"
+        Result = Application.Run("CPY_0", Code)
+        showResult (Result)
+    End Sub
+
+
+The second example, with ``SVG Output`` in "Category" and ``ShowPolygon`` in "Subroutine", will write a SVG file into the ``XlCalcNetIDE\OutputMonitor`` folder in the AppData\Local folder. With the ``Output Monitor`` application running (see above), click ``OK``. The SVG file will then immediately appear in the ``Output Monitor``. 
+
+
+The corresponding code in the module ``MpFunlabLocal`` -> ``BasicAndDialogs`` is shown below:
+
+.. code-block:: visualbasic
+
+    Sub ShowPolygon()
+        Rem Graphics is shown in output monitor
+        Code = "from A01_ExamplesPython.B18_FunctionsAndCurvesPlots.C02_BasicCurves import D01_RegularConvexPolygon;"
+        Code = Code + "D01_RegularConvexPolygon.RegularConvexPolygon(OutputMode='svg'); result='Done';"
+        Result = Application.Run("CPY_0", Code)
+        showResult (Result)
+    End Sub
+
 
 
 
@@ -890,6 +1125,399 @@ Within MS Excel, on an Excel worksheet, open the Add-ins dialog from the main me
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|newpage|
+
+
+
+.. _rst_setting_up_LOCalc: 
+
+Preparing LibreOffice Calc for using XlCalcNet: first steps
+---------------------------------------------------------------------------------------------
+
+To enable the use of XlCalcNet in LibreOffice Calc, two extensions need to be installed: the first, named ``MpfunlabLocal.oxt``, contains functions and dialogs written in LibreOffice Basic and is intended to be modified by the user during normal use. The second, named ``Mpfunlab.oxt``, contains the functionality behind the spreadsheet functions ``APY0`` - ``APY9`` and ``ASDOUBLE``. It has been compiled using the SDK of LibreOfffice 7.4 and is NOT intended to be modified by the user during normal use. Both extensions are located in a subfolder of the ``DataXlCalcNet`` folder in the ``Documents`` folder: ``DataXlCalcNet\SpreadsheetAddins\LibreOfficeCalc``.
+
+
+Installing MpfunlabLocal.oxt and Mpfunlab.oxt
+...................................................
+
+To install these two extensions properly, following the correct order is important. First install ``MpfunlabLocal.oxt`` within a normally launched LibreOffice Calc (i.e. without administrator privileges): Open the Extension dialog from the main menu:``Tools`` -> ``Extensions...``. In the Extension dialog click the ``Add`` button and in the ``Documents`` folder navigate to the folder ``DataXlCalcNet\SpreadsheetAddins\LibreOfficeCalc``. Double- click on ``MpfunlabLocal.oxt``. Then click on the ``Close`` button in the Extension dialog. In the dialog ``Restart LibreOffice``, click on ``Restart Now``. This will close LibreOffice Calc and will open the general LibreOffice desktop. Exit LibreOffice.
+
+Now start LibreOffice with administrator privileges: Right-click on the desktop icon of LibreOffice and select ``Run as administrator``. In the following dialog, confirm that you want to proceed. In the LibreOffice desktop, open a ``Calc Spreadsheet``. Open the Extension dialog from the main menu:``Tools`` -> ``Extensions...``. In the Extension dialog click the ``Add`` button and in the ``Documents`` folder navigate to the folder ``DataXlCalcNet\SpreadsheetAddins\LibreOfficeCalc``. Double- click on ``Mpfunlab.oxt``. In the following dialog box "For whom do you want to install the extension?", click on ``For all users``. In the following "License Agreement" dialog, click on ``Accept``. Then click on the ``Close`` button in the Extension dialog. In the dialog ``Restart LibreOffice``, click on ``Restart Now``. This will close LibreOffice Calc and will open the general LibreOffice desktop. Exit LibreOffice.
+
+Within a normally launched LibreOffice Calc, open the Macro Editor from the main menu: ``Tools`` -> ``Macros`` -> ``Edit Macros...``. In the Object Catalog of the Macro Editor, select ``My Macros & Dialogs`` -> ``MpFunlabLocal`` -> ``CallsFromPython``: In the function ``GetCPythonExeDirLocal`` set the path of the external Python installation which matches the main internal Python version, e.g. ``GetCPythonExeDirLocal ="C:\Python313"``. Then close the Macro Editor.
+
+
+
+.. _rst_LO_functions_standard: 
+
+Using the Python standard library functions within spreadsheet formulas
+..............................................................................
+
+.. note::
+    In the following subsections, we will work with the file ``LoDemoAPYstd.ods``, which contains examples for using the Python standard library. More advanced examples using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet start  :ref:`here <rst_LO_functions_advanced>`.
+
+
+Within LibreOffice Calc, open from the main menu ``File`` -> ``Open`` in the Documents folder the LibreOffice Calc workbook ``DataXlCalcNet\DataExamples\MainExamples\Workbooks\LoDemoAPYstd.ods``.
+
+This file contains several worksheets which demonstrate different possibilities of using the Python standard library within Libreoffice Calc spreadsheet formulas.
+
+Before we start with that we will briefly explore the use of these functions with the Function Wizard of  LibreOffice Calc: In the worksheet "Math", select cell ``B12`` and click on the icon of the Function Wizard in the Formula Bar. This opens the Function Wizard with the Structure tab selected:
+
+
+.. image:: ../_static/LO_FunctionWizardStructureCeil.png
+    :align: center
+    :width: 60%
+
+
+
+We see that the formula in the spreadsheeet cell is ``=APY1("result = math.ceil(P1)",C12)``. The function ``APY1`` has a required string parameter, ``Formula``, which contains a Python script. This python script can contain several Python statement. The last statement is always expected to assign a value to the variable result, in this case a Python float, which is coverted to a floating point number in double precision (a "Double") in LibreOffice. The next optional parameter, ``Param1``, can be a string, a Double, a Boolean value or a reference. In this case, it is a reference (``C12``) which points to a Double with the value ``3.123``. This optional parameter, ``Param1``, is referenced in the Python formula given above as ``P1``. The last but one parameter, ``Transposed``, and the last parameter, ``ShowShape``, are only relevant when arrays are returned; this is discussed :ref:`here <rst_LO_functions_Arrays>`.
+
+If we open the Functions tab, the Functions wizard looks like this:
+
+
+.. image:: ../_static/LO_FunctionWizardFunctionsCeil.png
+    :align: center
+    :width: 60%
+
+
+
+We see that the function ``APY1`` is in the Category "Add-in", and that there are 10 functions,  ``APY0`` to ``APY9``, which differ only by the number of parameters ``Param1`` to ``Param9`` which they support (The function ``APY0`` does not have a parameter ``Param0``). There is also a function ``ASDOUBLE``, which is used to convert string representations of a Python Fraction or Decimal into a Double; this is discussed :ref:`here <rst_LO_functions_MpInput>`.
+
+
+
+The worksheet "GeneralInfo"
+..............................................................................
+
+
+The worksheet "GeneralInfo" contains calls to the Python modules ``os``, ``platform`` and ``sys``. 
+
+For example, the cell ``B4`` contains the formula ``=APY0("result = platform.processor()")``. The function result depends on the hardware, e.g. ``Intel64 Family 6 Model 165 Stepping 5, GenuineIntel``.
+
+The cell ``B16`` contains the formula ``=APY0("result = os.getcwd()")``. The function result depends on the LibreOffice installation, e.g. ``C:\Program Files\LibreOffice\program``.
+
+The cell ``B33`` contains the formula ``=APY0("result = str(sys.float_info.epsilon)")``, which return the machine epsilon in double precision. The function result is: ``2.220446049250313e-16``.
+
+
+
+The worksheet "Math"
+..............................................................................
+
+The worksheet "Math" demonstrates the use of the Python module ``math`` and the use of parameters in functions. 
+
+For example, the cell ``B33`` contains the formula ``=APY1("result = math.exp(P1)-1",C33)``, which calculates `\exp(\text{P1})-1` naively. The function result is ``1.00000500000696E-05``, with the cell ``C33`` containing the value ``0.00001``.
+
+The cell ``B34`` contains the formula ``=APY1("result = math.expm1(P1)",C34)``, which calculates `\exp(\text{P1})-1` using the ``expm1`` function. The function result is ``1.00000500001667E-05``, with the cell ``C34`` again containing the value ``0.00001``.
+
+The floating point  values ``NaN``, ``+inf`` and ``-inf`` are not supported in spreadsheet programs, which only return ``#NUM!`` in these cases. Use the string representation instead. This is shown in the cells ``A4:B9`` on this worksheet.
+
+The cell ``B36`` contains the formula ``=APY2("result = math.log(P1, P2)",C36, D36)``, with the cell ``C36`` containing the value ``3.123`` and the cell ``D36`` containing the value ``10``. The function result is: ``0.494571984230199``.
+
+With ``B36`` the active cell, click on the icon for the "Function Wizard". The following dialog appears:
+
+
+
+.. image:: ../_static/LO_FunctionArguments.png
+    :width: 50 %
+    :align: center
+
+
+
+.. _rst_LO_functions_Arrays: 
+
+The worksheet "Arrays"
+..............................................................................
+
+
+The worksheet "Arrays" demonstrates the use of arrays in functions. The Python equivalent of arrays are lists.
+
+For example, the cell ``B3`` contains the formula ``=APY0("result = str(sys.path)")``. The function ``sys.path`` returns a list of strings (containing the entries of the Python path), which is converted into one string by writing ``str(sys.path)``. This makes sure that the result can be displayed in one cell, but the result string is quite long and hard to read.
+
+We can use an array formula to improve readability. We recall that in addition to the usual parameters ``P1`` - ``P9`` in the functions ``APY0`` to ``APY9`` there are two more: The last but one paramter, named ``Transposed``, which is optional with default value 0, where a non-zero value means that the returned array should be transposed; and the last paramter, named ``ShowShape``, which is optional with default value 0, where a non-zero value means that the shape of the returned array should be indicated like ``R7C3`` for an array with 7 rows and 3 columns.
+
+As an example, the cell ``B6`` contains the formula ``=APY0("result = sys.path",1,1)`` and returns the shape information ``R12C1`` followed by the separator ``|``, followed by the first entry of the transposed array, i.e. in this case ``R12xC1| C:\Users\DUHad\Documents\DataXlCalcNet``.
+
+We can build the corresponding array formula by first selecting a range like ``R12C1``, then typing in the input line of the formula bar ``=APY0("result = sys.path",1,0)``, and finally, while keeping the shift and control keys pressed down, pressing the enter key.
+
+This is what has been done in cells ``B9:B20``. The formula is now displayed as ``{=APY0("result = sys.path",1,0)}``, with curly braces, to indicate that it is an array formula. We can change the range which is covered by the array formula by dragging the small blue rectangle in the lower right corner in the selected range (see the screenshot below).
+
+
+.. image:: ../_static/LO_Change_Range.png
+    :align: center
+    :width: 60%
+
+
+
+
+
+
+
+
+The worksheet "Data"
+...................................................
+
+The worksheet "Data " demonstrates the use of named ranges in LibreOffice Calc spreadsheet formulas.
+
+Currently there a two small datasets with predefined as named ranges: ``matA`` defined as the range $Data.$A$3:$A$7 and  ``matB`` defined as the range $Data.$A$3:$A$7.
+
+These ranges are used in the workbook "Arrays".
+
+
+
+
+
+
+
+.. _rst_LO_functions_advanced: 
+
+Using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet within spreadsheet formulas
+...........................................................................................
+
+.. note::
+    In the following subsections. we will work with the file ``LoDemoAPYadv.ods``, which contains more advanced examples using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet. Examples for using LibreOffice Calc with the Python standard library start :ref:`here <rst_LO_functions_standard>`.
+
+
+Within LibreOffice Calc, open from the main menu ``File`` -> ``Open`` in the Documents folder the LibreOffice Calc workbook ``DataXlCalcNet\DataExamples\MainExamples\Workbooks\LoDemoAPYadv.ods``.
+
+This file contains several worksheets which demonstrate different possibilities of using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet within Libreoffice Calc spreadsheet formulas.
+
+Some of these functions write their output  into the ``XlCalcNetIDE\OutputMonitor`` folder in the AppData\Local folder. In order to see it, we need to open the ``Output Monitor`` application: start the ``Tiny IDE`` by clicking on its icon in the task bar, and in the main menu, click on ``Tools`` -> ``Start Output Monitor``.
+
+
+
+
+
+.. _rst_LO_functions_MpInput: 
+
+The worksheet "MpInput"
+...................................................
+
+The worksheet "MpInput " demonstrates the use of named ranges in LibreOffice Calc spreadsheet formulas.
+
+If we try to enter a number like ``123456789012345678/901234567890``, i.e. a number with more than 16 digits into a spreadsheet cell, it will automatically be shortened to ``1.23456789012346E+029``. In order to be able to enter such numbers into spreadsheet cells, the cells must first be formatted as text, and thereafter these numbers can be entered as text. This is mostly useful when working with Python Fractions and Decimals.
+
+As an example, worksheet "MpInput" contains a named range called "MpInputFractions" in column ``A``, which can be used as input for descriptive statistics or linear algebra routines.
+
+However, this kind of input is hard to read; it is also not directly usable for numerical spreadsheet functions. This can be changed by using the function ``ASDOUBLE``, a shown in column ``B``
+
+
+
+
+
+
+
+
+The worksheet "Programming"
+...................................................
+
+The worksheet "Programming" demonstrates the use of small python scripts in LibreOffice Calc spreadsheet formulas.
+
+``=APY0("temp = 0 $n for i in range(14): $n$t temp += i $n result = 2 * temp")`` is the formula in the cell ``B3``. Here we are using ``$n`` for newline and ``$t`` for indentation; the result is ``182``. The corresponding Python code with conventional formatting would look like this:
+
+
+.. code-block:: python
+
+        temp = 0
+        for i in range(14):
+            temp += i
+        result = 2 * temp
+
+
+|br|
+
+
+
+``=APY1("temp = 0 $n for i in range(int(P1)): $n$t temp += i $n result = 2 * temp", C4)`` is the formula in the cell ``B4``, and the cell ``C4`` contains the value ``45``; the result is ``1980``. The corresponding Python code with conventional formatting would look like this:
+
+
+.. code-block:: python
+
+        temp = 0
+        for i in range(int(P1)):
+            temp += i
+        result = 2 * temp
+
+
+|br|
+
+
+
+
+``=APY0("from xlcalcnet import mpm $n  mpm.dps=40 $n result = str(mpm.sqrt(2))")`` is the formula in the cell ``B8``; the result is ``1.41421356237309504880168872420969807857``. The corresponding Python code with conventional formatting would look like this:
+
+
+.. code-block:: python
+
+        from xlcalcnet import mpm
+        mpm.dps=40
+        result = str(mpm.sqrt(2))
+
+
+|br|
+
+
+
+``=APY0("from scipy.integrate import quad $n def integrand(x, a, b): return a*x**2 + b $n a = 2.1; b = 1.1;  $n I = quad(integrand, 0, 1, args=(a,b))   $n result = str(I) ")`` is the formula in the cell ``B12``; the result is the tuple ``(1.8000000000000003, 1.998401444325282e-14)``, where the first item is the value of the integral and the second item is the error estimate. The corresponding Python code with conventional formatting would look like this:
+
+
+.. code-block:: python
+
+        from scipy.integrate import quad
+        def integrand(x, a, b): return a*x**2 + b
+        a = 2.1; b = 1.1;
+        I = quad(integrand, 0, 1, args=(a,b))
+        result = str(I)
+
+
+|br|
+
+
+
+``=APY0("from A06_UserlibExamplesPython.B29_InferentialStatistics.C01_BasicTests1Sample import D01_StudentT_PValues $n D01_StudentT_PValues.demo_stats_student_t_1sample_test() $n result='Done'")`` is the formula in the cell ``B17``; the result is a CSV file which is written to the Output Monitor folder. The corresponding Python code with conventional formatting would look like this:
+
+
+.. code-block:: python
+
+        from A06_UserlibExamplesPython.B29_InferentialStatistics.C01_BasicTests1Sample import D01_StudentT_PValues
+        D01_StudentT_PValues.demo_stats_student_t_1sample_test()
+        result='Done'
+
+
+And this is the Output Monitor showing the result (with the project panel hidden)
+
+.. image:: ../_static/CSV_Output_Monitor.png
+    :width: 50 %
+    :align: center
+
+|br|
+
+|br|
+
+``=APY0("from A01_ExamplesPython.B18_FunctionsAndCurvesPlots.C02_BasicCurves import D01_RegularConvexPolygon  $n D01_RegularConvexPolygon.RegularConvexPolygon(OutputMode='svg') $n result='Done'")`` is the formula in the cell ``B22``; the result is a SVG file which is written to the Output Monitor folder. The corresponding Python code with conventional formatting would look like this:
+
+
+.. code-block:: python
+
+        from A01_ExamplesPython.B18_FunctionsAndCurvesPlots.C02_BasicCurves import D01_RegularConvexPolygon
+        D01_RegularConvexPolygon.RegularConvexPolygon(OutputMode='svg')
+        result='Done'
+
+
+And this is the Output Monitor showing the result (with the project panel hidden)
+
+.. image:: ../_static/SVG_Output_Monitor.png
+    :width: 50 %
+    :align: center
+
+
+
+
+
+
+
+
+
+Managing procedures instead of functions
+...................................................
+
+It is possible to call the spreadsheet functions  ``APY0`` to ``APY9`` from LibreOffice Basic and to use this to start procedures instead of functions. A few simple examples have already been prepared to demonstrate the technique. 
+
+
+To access the relevant dialog, click on the XlCalcNet logo (in orange) on the main menu bar:
+
+.. image:: ../_static/LO_MainMenu.png
+    :align: center
+    :width: 30%
+
+
+The following dialog box with the title **Navigator for XlCalcNet** will appear:
+
+
+.. image:: ../_static/LO_NavigatorXlCalcNet.png
+    :align: center
+    :width: 60%
+
+
+The first example, with ``CSV Output`` in "Category" and ``ShowTTest1`` in "Subroutine", will write a CSV file into the ``XlCalcNetIDE\OutputMonitor`` folder in the AppData\Local folder. In order to see it, we need to open the ``Output Monitor`` application: start the ``Tiny IDE`` by clicking on its icon in the task bar, and in the main menu, click on ``Tools`` -> ``Start Output Monitor``. With the ``Output Monitor`` application running, click ``OK``. The CSV file will then immediately appear in the ``Output Monitor``. 
+
+
+The corresponding code in the module ``MpFunlabLocal`` -> ``BasicAndDialogs`` is shown below:
+
+.. code-block:: visualbasic
+
+    Sub ShowTTest1()
+        REM Output (a .csv file) is shown in output monitor
+        fa = createUnoService("com.sun.star.sheet.FunctionAccess")  
+        Code = "from A06_UserlibExamplesPython.B29_InferentialStatistics.C01_BasicTests1Sample import D01_StudentT_PValues;"
+        Code = Code + "D01_StudentT_PValues.demo_stats_student_t_1sample_test(); result='Done';"
+        ResultArray = fa.callFunction("APY0", Array(Code))
+        result = ResultArray(0)(0)
+    End Sub 
+
+
+
+The second example, with ``SVG Output`` in "Category" and ``ShowPolygon`` in "Subroutine", will write a SVG file into the ``XlCalcNetIDE\OutputMonitor`` folder in the AppData\Local folder. With the ``Output Monitor`` application running (see above), click ``OK``. The SVG file will then immediately appear in the ``Output Monitor``. 
+
+
+The corresponding code in the module ``MpFunlabLocal`` -> ``BasicAndDialogs`` is shown below:
+
+.. code-block:: visualbasic
+
+
+    Sub ShowPolygon()
+        REM Graphics is shown in output monitor
+        fa = createUnoService("com.sun.star.sheet.FunctionAccess")  
+        Code = "from A01_ExamplesPython.B18_FunctionsAndCurvesPlots.C02_BasicCurves import D01_RegularConvexPolygon;"
+        Code = Code + "D01_RegularConvexPolygon.RegularConvexPolygon(OutputMode='svg'); result='Done';"
+        ResultArray = fa.callFunction("APY0", Array(Code))
+        result = ResultArray(0)(0)
+    End Sub 
+
+
+
+
+
+
+
+
+Exporting changes in MpfunlabLocal to MpfunlabLocal.oxt
+...............................................................
+
+Changes which are made in the MpfunlabLocal library are stored in the script folders of LibreOffice and are not automatically saved to MpfunlabLocal.oxt. However, they can be exported to MpfunlabLocal.oxt, so that they are available for installation (re-installation at the current LibreOffice installation or new installation for another LibreOffice installation). 
+
+To export the MpfunlabLocal library to MpfunlabLocal.oxt, follow these steps: 
+open the Macro Editor from the main menu of LibreOffice Calc: ``Tools`` -> ``Macros`` -> ``Edit Macros...``. In the main menu of the Macro Editor, select ``Dialogs`` -> ``Organize Dialogs``. In the dialog "Basic Macro Organizer" select the tab "Libraries". "Location" should be set to "My Macros & Dialogs" and "Library: Name" should be "MpFunlabLocal". Click on ``Export...``. In the following dialog box select "Export as extension", and click on ``OK``. In the dialog "Export library as extension" navigate to the documents folder, and within this folder to ``DataXlCalcNet\SpreadsheetAddins\LibreOfficeCalc``. Select ``MpfunlabLocal.oxt`` and click on ``Save``. Confirm to replace. In the dialog "Basic Macro Organizer" click on ``Close``. Then close the Macro Editor.
+
+
+
+
+
+Uninstalling MpfunlabLocal.oxt and Mpfunlab.oxt
+...................................................
+
+To uninstall these two extensions properly, following the correct order is important. 
+
+First start LibreOffice with administrator privileges: Right-click on the desktop icon of LibreOffice and select ``Run as administrator``. In the following dialog, confirm that you want to proceed. In the LibreOffice desktop, open a ``Calc Spreadsheet``. Open the Extension dialog from the main menu:``Tools`` -> ``Extensions...``. In the Extension dialog select ``MpFunlab.oxt``, click the ``Remove`` button and click on ``OK`` in the confirmation dialog. Then click on the ``Close`` button in the Extension dialog. In the dialog ``Restart LibreOffice``, click on ``Restart Now``. This will close LibreOffice Calc and will open the general LibreOffice desktop. Exit LibreOffice.
+
+Now uninstall ``MpfunlabLocal.oxt`` within a normally launched LibreOffice Calc (i.e. without administrator privileges): Open the Extension dialog from the main menu: ``Tools`` -> ``Extensions...``. In the Extension dialog select ``MpfunlabLocal.oxt``, click the ``Remove`` button and click on ``OK`` in the confirmation dialog. Then click on the ``Close`` button in the Extension dialog. In the dialog ``Restart LibreOffice``, click on ``Restart Now``. This will close LibreOffice Calc and will open the general LibreOffice desktop. Exit LibreOffice.
 
 
 
