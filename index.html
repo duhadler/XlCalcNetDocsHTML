@@ -52,7 +52,7 @@
     <link rel="next" title="Preface" href="000_Preface/01_preface.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 30, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 01, 2026"/>
   </head>
   
   
@@ -163,12 +163,13 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="B01_GeneralUsage/index.html">Setup and general usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C01_Setup.html">Setting up XlCalcNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C02_GuiFunctions.html">General user interface and functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C03_SpreadsheetFormulas.html">Building user libraries and documenting them</a></li>
-<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C04_PythonFromCSharp.html">Calling Python from C#</a></li>
+<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C02_MSExcel.html">Using XlCalcNet within MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C03_LibreOfficeCalc.html">Using XlCalcNet within LibreOffice Calc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C04_GuiFunctions.html">General user interface and functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C08_BuildingUserLibraries.html">Building user libraries and documenting them</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="B02_BasicFloatingPointFunctions/index.html">Basic floating point functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -904,7 +905,7 @@ document.write(`
 </section>
 <section id="use-with-microsoft-excel">
 <h1>Use with Microsoft Excel<a class="headerlink" href="#use-with-microsoft-excel" title="Link to this heading">#</a></h1>
-<p>Once MS Excel has been prepared for using XlCalcNet (see <a class="reference internal" href="B01_GeneralUsage/C01_Setup.html#rst-setting-up-msexcel"><span class="std std-ref">here</span></a> for details), one can run small Python scripts in spreadsheet formulas, using parameters which are passed from other spreadsheet cells. If the example workbook “Simple.xlsx” has been loaded, the following dialog box will appear when the user clicks on the “Insert Function” button in Excel’s formula bar:</p>
+<p>Once MS Excel has been prepared for using XlCalcNet (see <a class="reference internal" href="B01_GeneralUsage/C02_MSExcel.html#rst-setting-up-msexcel"><span class="std std-ref">here</span></a> for details), one can run small Python scripts in spreadsheet formulas, using parameters which are passed from other spreadsheet cells. If the example workbook “Simple.xlsx” has been loaded, the following dialog box will appear when the user clicks on the “Insert Function” button in Excel’s formula bar:</p>
 <a class="reference internal image-reference" href="_images/XL_FunctionArguments.png"><img alt="_images/XL_FunctionArguments.png" class="align-center" src="_images/XL_FunctionArguments.png" style="width: 60%;" />
 </a>
 <p><br /></p>
@@ -921,7 +922,7 @@ document.write(`
 </section>
 <section id="use-with-libreoffice-calc">
 <h1>Use with LibreOffice Calc<a class="headerlink" href="#use-with-libreoffice-calc" title="Link to this heading">#</a></h1>
-<p>Once LibreOffice Calc has been prepared for using XlCalcNet (see <a class="reference internal" href="B01_GeneralUsage/C01_Setup.html#rst-setting-up-localc"><span class="std std-ref">here</span></a> for details), one can run small Python scripts in spreadsheet formulas, using parameters which are passed from other spreadsheet cells. If the example workbook “Simple.xlsx” has been loaded, the following dialog box will appear when the user clicks on the “Insert Function” button in LibreOffice Calc’s formula bar:</p>
+<p>Once LibreOffice Calc has been prepared for using XlCalcNet (see <a class="reference internal" href="B01_GeneralUsage/C03_LibreOfficeCalc.html#rst-setting-up-localc"><span class="std std-ref">here</span></a> for details), one can run small Python scripts in spreadsheet formulas, using parameters which are passed from other spreadsheet cells. If the example workbook “Simple.xlsx” has been loaded, the following dialog box will appear when the user clicks on the “Insert Function” button in LibreOffice Calc’s formula bar:</p>
 <a class="reference internal image-reference" href="_images/LO_FunctionArguments.png"><img alt="_images/LO_FunctionArguments.png" class="align-center" src="_images/LO_FunctionArguments.png" style="width: 80%;" />
 </a>
 <p><br /></p>
@@ -1027,7 +1028,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 30, 2026.
+  Last updated on Oct 01, 2026.
   <br/>
 </p>
   </div>

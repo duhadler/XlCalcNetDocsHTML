@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>General user interface and functions &#8212; XlCalcNet 0.4.0 documentation</title>
+    <title>Using XlCalcNet within MS Excel &#8212; XlCalcNet 0.4.0 documentation</title>
   
   
   
@@ -44,15 +44,16 @@
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=4ea706d9"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'B01_GeneralUsage/C02_GuiFunctions';</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'B01_GeneralUsage/C02_MSExcel';</script>
     <script src="../_static/custom-icon.js?v=74687d30"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Building user libraries and documenting them" href="C03_SpreadsheetFormulas.html" />
+    <link rel="next" title="Using XlCalcNet within LibreOffice Calc" href="C03_LibreOfficeCalc.html" />
     <link rel="prev" title="Setting up XlCalcNet" href="C01_Setup.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 30, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 01, 2026"/>
   </head>
   
   
@@ -161,12 +162,13 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Setup and general usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html">Setting up XlCalcNet</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">General user interface and functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html">Building user libraries and documenting them</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C04_PythonFromCSharp.html">Calling Python from C#</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Using XlCalcNet within MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_LibreOfficeCalc.html">Using XlCalcNet within LibreOffice Calc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html">General user interface and functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C08_BuildingUserLibraries.html">Building user libraries and documenting them</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/index.html">Basic floating point functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -773,7 +775,7 @@
       
       
       
-      <li><a href="../_sources/B01_GeneralUsage/C02_GuiFunctions.rst" target="_blank"
+      <li><a href="../_sources/B01_GeneralUsage/C02_MSExcel.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -857,7 +859,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>General user interface and functions</h1>
+    <h1>Using XlCalcNet within MS Excel</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -867,49 +869,24 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-output-monitor">Starting the output monitor</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.outputmonitor"><code class="docutils literal notranslate"><span class="pre">gui.outputmonitor()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-ms-excel-for-using-xlcalcnet">Preparing MS Excel for using XlCalcNet</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-mpfunlablocal-xlam-and-mpfunlab-xll">Installing Mpfunlablocal.xlam and Mpfunlab.xll</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-gallery-of-plots">Starting the gallery of plots</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.plot2d"><code class="docutils literal notranslate"><span class="pre">gui.plot2d()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-python-standard-library-functions-within-spreadsheet-formulas">Using the Python standard library functions within spreadsheet formulas</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-worksheet-generalinfo">The worksheet “GeneralInfo”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-worksheet-math">The worksheet “Math”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-worksheet-arrays">The worksheet “Arrays”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-worksheet-data">The worksheet “Data”</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-interactive-3d-wpf-plots">Starting the interactive 3D wpf plots</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.plot3d"><code class="docutils literal notranslate"><span class="pre">gui.plot3d()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-numpy-matplotlib-pandas-scipy-seaborn-and-xlcalcnet-within-spreadsheet-formulas">Using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet within spreadsheet formulas</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-worksheet-mpinput">The worksheet “MpInput”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-worksheet-programming">The worksheet “Programming”</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-data-viewer">Starting the data viewer</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.dataviewer"><code class="docutils literal notranslate"><span class="pre">gui.dataviewer()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-idle">Starting IDLE</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.idle"><code class="docutils literal notranslate"><span class="pre">gui.idle()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-related-to-folders">Functions related to folders</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.get_local_appdata"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.get_local_appdata_xlcalcnet"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata_xlcalcnet()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.get_my_documents"><code class="docutils literal notranslate"><span class="pre">gui.get_my_documents()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-about-installation-status-of-supporting-python-packages">Information about installation status of supporting python packages</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.info"><code class="docutils literal notranslate"><span class="pre">gui.info()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.has_gpm"><code class="docutils literal notranslate"><span class="pre">gui.has_gpm()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.has_apm"><code class="docutils literal notranslate"><span class="pre">gui.has_apm()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.has_xlcalcnet2"><code class="docutils literal notranslate"><span class="pre">gui.has_xlcalcnet2()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-about-context-lists-and-setting-global-precision">Information about context lists, and setting global precision</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.ctxlistreal"><code class="docutils literal notranslate"><span class="pre">gui.ctxlistreal</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.ctxlistcplx"><code class="docutils literal notranslate"><span class="pre">gui.ctxlistcplx</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.setdps"><code class="docutils literal notranslate"><span class="pre">gui.setdps()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#support-for-running-interactive-matplotlib-output-in-a-separate-process">Support for running interactive Matplotlib output in a separate process</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.plot"><code class="docutils literal notranslate"><span class="pre">gui.plot</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-procedures-instead-of-functions">Managing procedures instead of functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uninstalling">Uninstalling</a></li>
 </ul>
             </nav>
         </div>
@@ -922,227 +899,185 @@ document.write(`
                 <article class="bd-article">
                   
   <p></p>
-<section id="general-user-interface-and-functions">
-<h1>General user interface and functions<a class="headerlink" href="#general-user-interface-and-functions" title="Link to this heading">#</a></h1>
-<p></p>
-<section id="starting-the-output-monitor">
-<span id="rst-outputmonitor"></span><h2>Starting the output monitor<a class="headerlink" href="#starting-the-output-monitor" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.outputmonitor">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">outputmonitor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.outputmonitor" title="Link to this definition">#</a></dt>
-<dd><p>Describe the start of the output monitor</p>
-<a class="reference internal image-reference" href="../_images/DataMo0nitor.png"><img alt="../_images/DataMo0nitor.png" class="align-center" src="../_images/DataMo0nitor.png" style="width: 50%;" />
+<section id="using-xlcalcnet-within-ms-excel">
+<h1>Using XlCalcNet within MS Excel<a class="headerlink" href="#using-xlcalcnet-within-ms-excel" title="Link to this heading">#</a></h1>
+<section id="preparing-ms-excel-for-using-xlcalcnet">
+<span id="rst-setting-up-msexcel"></span><h2>Preparing MS Excel for using XlCalcNet<a class="headerlink" href="#preparing-ms-excel-for-using-xlcalcnet" title="Link to this heading">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Before beginning to install the MS Excel addins, make sure that the socket server is up and running as expected (see the section above). When calling a function, which calls the socket server, for the first time, MS Excel will seem to freeze if the socket server does not respond quickly. However, subsequent calls will return quickly when the socket server is not up and running (there seems to be a learning effect).</p>
+</div>
+<p>To enable the use of XlCalcNet in MS Excel, two add-ins need to be installed: the first, named <code class="docutils literal notranslate"><span class="pre">Mpfunlablocal.xlam</span></code>, contains functions written in Visual Basic for Applications (VBA), including functions populating the XlCalcNet Navigator dialog, and is intended to be modified by the user during normal use. This add-in is located in a subfolder of the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the <code class="docutils literal notranslate"><span class="pre">Documents</span></code> folder: <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet\SpreadsheetAddins\MSExcel</span></code>.</p>
+<p>The second, named <code class="docutils literal notranslate"><span class="pre">Mpfunlab.xll</span></code>, contains the functionality behind the spreadsheet functions <code class="docutils literal notranslate"><span class="pre">CPY_0</span></code> - <code class="docutils literal notranslate"><span class="pre">CPY_9</span></code> and <code class="docutils literal notranslate"><span class="pre">ASDOUBLE</span></code> and the XlCalcNet Navigator dialog container. The files comprising the whole add-in (<code class="docutils literal notranslate"><span class="pre">Mpfunlab.xll</span></code>, <code class="docutils literal notranslate"><span class="pre">ExcelDna.Integration.dll</span></code>, <code class="docutils literal notranslate"><span class="pre">MpFunLabAddin64.dll</span></code>, <code class="docutils literal notranslate"><span class="pre">MpFunLabClient.dll</span></code>, <code class="docutils literal notranslate"><span class="pre">MpFunLab.Dna</span></code>) have been compiled using Visual Studio and are NOT intended to be modified by the user during normal use. This add-in is located in the <code class="docutils literal notranslate"><span class="pre">Bin</span></code> folder in the <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span></code> package: <code class="docutils literal notranslate"><span class="pre">PathToPython\Lib\site-packages\xlcalcnet\Addin\NET48\Bin</span></code>, where <code class="docutils literal notranslate"><span class="pre">PathToPython</span></code> is the path to the Python installation (in our example <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code>).</p>
+<section id="installing-mpfunlablocal-xlam-and-mpfunlab-xll">
+<h3>Installing Mpfunlablocal.xlam and Mpfunlab.xll<a class="headerlink" href="#installing-mpfunlablocal-xlam-and-mpfunlab-xll" title="Link to this heading">#</a></h3>
+<p>To install these two add-ins properly, follow these steps:</p>
+<p>Again, make sure that the socket server is up and running.</p>
+<p>Within MS Excel, on an Excel worksheet, open the Add-ins dialog from the main menu/ribbon: <code class="docutils literal notranslate"><span class="pre">Developer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Excel</span> <span class="pre">Add-ins</span></code>. In the Add-ins dialog,
+click on <code class="docutils literal notranslate"><span class="pre">Browse...</span></code> and in the <code class="docutils literal notranslate"><span class="pre">Documents</span></code> folder navigate to the folder <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet\SpreadsheetAddins\MSExcel</span></code>. Double-click on <code class="docutils literal notranslate"><span class="pre">Mpfunlablocal.xlam</span></code>, which will then appear in the Add-ins dialog under “Add-ins available”. Still in the Add-ins dialog,
+click on <code class="docutils literal notranslate"><span class="pre">Browse...</span></code> again, and navigate to the folder <code class="docutils literal notranslate"><span class="pre">PathToPython\Lib\site-packages\xlcalcnet\Addin\NET48\Bin</span></code> (see above). Double-click on <code class="docutils literal notranslate"><span class="pre">MpFunlab.xll</span></code>, which will then appear in the Add-ins dialog under “Add-ins available”. Still in the Add-ins dialog,
+click on <code class="docutils literal notranslate"><span class="pre">OK</span></code>. Exit MS Excel.</p>
+<p>When starting MS Excel the next time, both add-ins will be loaded.</p>
+</section>
+</section>
+<section id="using-the-python-standard-library-functions-within-spreadsheet-formulas">
+<span id="rst-xl-functions-standard"></span><h2>Using the Python standard library functions within spreadsheet formulas<a class="headerlink" href="#using-the-python-standard-library-functions-within-spreadsheet-formulas" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the following subsections, we will work with the file <code class="docutils literal notranslate"><span class="pre">XlDemoCPYstd.xlsx</span></code>, which contains examples for using the Python standard library. More advanced examples using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet start  <a class="reference internal" href="#rst-xl-functions-advanced"><span class="std std-ref">here</span></a>.</p>
+</div>
+<p>Within MS Excel, open from the main menu <code class="docutils literal notranslate"><span class="pre">File</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Open</span></code> in the Documents folder the MS Excel workbook <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet\DataExamples\MainExamples\Workbooks\XlDemoCPYstd.xlsx</span></code>.</p>
+<p>This file contains several worksheets which demonstrate different possibilities of using the Python standard library within MS Excel spreadsheet formulas.</p>
+<p>Before we start with that we will briefly explore the use of these functions with the Function Dialog of  MS Excel: In the worksheet “Math”, select cell <code class="docutils literal notranslate"><span class="pre">B12</span></code> and click on the icon of the Function Dialog in the Formula Bar. This opens the Function Dialog:</p>
+<a class="reference internal image-reference" href="../_images/XL_FunctionArguments.png"><img alt="../_images/XL_FunctionArguments.png" class="align-center" src="../_images/XL_FunctionArguments.png" style="width: 50%;" />
 </a>
-<p>The Python source code for starting the output monitor can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowOutputMonitor.py">duhadler/XlCalcNet</a></p>
-<p>The C# source code for the output monitor can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/OutputMonitor">duhadler/XlCalcNet</a></p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">outputmonitor</span><span class="p">()</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<p></p>
-</section>
-<section id="starting-the-gallery-of-plots">
-<span id="rst-galleryofplots"></span><h2>Starting the gallery of plots<a class="headerlink" href="#starting-the-gallery-of-plots" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.plot2d">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">plot2d</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.plot2d" title="Link to this definition">#</a></dt>
-<dd><p>Describe the start of the gallery of plots</p>
-<a class="reference internal image-reference" href="../_images/GalleryOfPlots.png"><img alt="../_images/GalleryOfPlots.png" class="align-center" src="../_images/GalleryOfPlots.png" style="width: 50%;" />
+<p>We see that the formula in the spreadsheeet cell is <code class="docutils literal notranslate"><span class="pre">=CPY_1(&quot;result</span> <span class="pre">=</span> <span class="pre">math.ceil(P1)&quot;,C12)</span></code>. The function <code class="docutils literal notranslate"><span class="pre">CPY_1</span></code> has a required string parameter, <code class="docutils literal notranslate"><span class="pre">Formula</span></code>, which contains a Python script. This python script can contain several Python statement. The last statement is always expected to assign a value to the variable result, in this case a Python float, which is coverted to a floating point number in double precision (a “Double”) in LibreOffice. The next optional parameter, <code class="docutils literal notranslate"><span class="pre">Param1</span></code>, can be a string, a Double, a Boolean value or a reference. In this case, it is a reference (<code class="docutils literal notranslate"><span class="pre">C12</span></code>) which points to a Double with the value <code class="docutils literal notranslate"><span class="pre">3.123</span></code>. This optional parameter, <code class="docutils literal notranslate"><span class="pre">Param1</span></code>, is referenced in the Python formula given above as <code class="docutils literal notranslate"><span class="pre">P1</span></code>. The last but one parameter, <code class="docutils literal notranslate"><span class="pre">Transposed</span></code>, and the last parameter, <code class="docutils literal notranslate"><span class="pre">ShowShape</span></code>, are only relevant when arrays are returned; this is discussed <a class="reference internal" href="#rst-xl-functions-arrays"><span class="std std-ref">here</span></a>.</p>
+<p>In the worksheet “Math”, select an emptz cell and click on the icon of the Function Dialog in the Formula Bar. This opens the Function Insert Dialog:</p>
+<a class="reference internal image-reference" href="../_images/XL_FunctionInsert.png"><img alt="../_images/XL_FunctionInsert.png" class="align-center" src="../_images/XL_FunctionInsert.png" style="width: 50%;" />
 </a>
-<p>The Python source code for starting the IDE can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowEditor.py">duhadler/XlCalcNet</a></p>
-<p>The C# source code for the gallery of plots can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/TinyPlot2D">duhadler/XlCalcNet</a></p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">plot2d</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<p></p>
+<p>We see that the function <code class="docutils literal notranslate"><span class="pre">CPY_1</span></code> is in the Category “MpFunLab”, and that there are 10 functions,  <code class="docutils literal notranslate"><span class="pre">CPY_0</span></code> to <code class="docutils literal notranslate"><span class="pre">CPY_9</span></code>, which differ only by the number of parameters <code class="docutils literal notranslate"><span class="pre">Param1</span></code> to <code class="docutils literal notranslate"><span class="pre">Param9</span></code> which they support (The function <code class="docutils literal notranslate"><span class="pre">CPY_0</span></code> does not have a parameter <code class="docutils literal notranslate"><span class="pre">Param0</span></code>). There is also a function <code class="docutils literal notranslate"><span class="pre">ASDOUBLE</span></code>, which is used to convert string representations of a Python Fraction or Decimal into a Double; this is discussed <a class="reference internal" href="#rst-xl-functions-mpinput"><span class="std std-ref">here</span></a>.</p>
+<section id="the-worksheet-generalinfo">
+<h3>The worksheet “GeneralInfo”<a class="headerlink" href="#the-worksheet-generalinfo" title="Link to this heading">#</a></h3>
+<p>The worksheet “GeneralInfo” contains calls to the Python modules <code class="docutils literal notranslate"><span class="pre">os</span></code>, <code class="docutils literal notranslate"><span class="pre">platform</span></code> and <code class="docutils literal notranslate"><span class="pre">sys</span></code>.</p>
+<p>For example, the cell <code class="docutils literal notranslate"><span class="pre">B4</span></code> contains the formula <code class="docutils literal notranslate"><span class="pre">=CPY_0(&quot;result</span> <span class="pre">=</span> <span class="pre">platform.processor()&quot;)</span></code>. The function result depends on the hardware, e.g. <code class="docutils literal notranslate"><span class="pre">Intel64</span> <span class="pre">Family</span> <span class="pre">6</span> <span class="pre">Model</span> <span class="pre">165</span> <span class="pre">Stepping</span> <span class="pre">5,</span> <span class="pre">GenuineIntel</span></code>.</p>
+<p>The cell <code class="docutils literal notranslate"><span class="pre">B16</span></code> contains the formula <code class="docutils literal notranslate"><span class="pre">=CPY_0(&quot;result</span> <span class="pre">=</span> <span class="pre">os.getcwd()&quot;)</span></code>. The function result depends on the LibreOffice installation, e.g. <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\LibreOffice\program</span></code>.</p>
+<p>The cell <code class="docutils literal notranslate"><span class="pre">B33</span></code> contains the formula <code class="docutils literal notranslate"><span class="pre">=CPY_0(&quot;result</span> <span class="pre">=</span> <span class="pre">str(sys.float_info.epsilon)&quot;)</span></code>, which return the machine epsilon in double precision. The function result is: <code class="docutils literal notranslate"><span class="pre">2.220446049250313e-16</span></code>.</p>
 </section>
-<section id="starting-the-interactive-3d-wpf-plots">
-<span id="rst-wpf3d"></span><h2>Starting the interactive 3D wpf plots<a class="headerlink" href="#starting-the-interactive-3d-wpf-plots" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.plot3d">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">plot3d</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.plot3d" title="Link to this definition">#</a></dt>
-<dd><p>Describe the start of Interactive 3D Wpf plots</p>
-<a class="reference internal image-reference" href="../_images/Wpf3D.png"><img alt="../_images/Wpf3D.png" class="align-center" src="../_images/Wpf3D.png" style="width: 50%;" />
+<section id="the-worksheet-math">
+<h3>The worksheet “Math”<a class="headerlink" href="#the-worksheet-math" title="Link to this heading">#</a></h3>
+<p>The worksheet “Math” demonstrates the use of the Python module <code class="docutils literal notranslate"><span class="pre">math</span></code> and the use of parameters in functions.</p>
+<p>For example, the cell <code class="docutils literal notranslate"><span class="pre">B33</span></code> contains the formula <code class="docutils literal notranslate"><span class="pre">=CPY_1(&quot;result</span> <span class="pre">=</span> <span class="pre">math.exp(P1)-1&quot;,C33)</span></code>, which calculates <span class="math notranslate nohighlight">\(\exp(\text{P1})-1\)</span> naively. The function result is <code class="docutils literal notranslate"><span class="pre">1.00000500000696E-05</span></code>, with the cell <code class="docutils literal notranslate"><span class="pre">C33</span></code> containing the value <code class="docutils literal notranslate"><span class="pre">0.00001</span></code>.</p>
+<p>The cell <code class="docutils literal notranslate"><span class="pre">B34</span></code> contains the formula <code class="docutils literal notranslate"><span class="pre">=CPY_1(&quot;result</span> <span class="pre">=</span> <span class="pre">math.expm1(P1)&quot;,C34)</span></code>, which calculates <span class="math notranslate nohighlight">\(\exp(\text{P1})-1\)</span> using the <code class="docutils literal notranslate"><span class="pre">expm1</span></code> function. The function result is <code class="docutils literal notranslate"><span class="pre">1.00000500001667E-05</span></code>, with the cell <code class="docutils literal notranslate"><span class="pre">C34</span></code> again containing the value <code class="docutils literal notranslate"><span class="pre">0.00001</span></code>.</p>
+<p>The floating point  values <code class="docutils literal notranslate"><span class="pre">NaN</span></code>, <code class="docutils literal notranslate"><span class="pre">+inf</span></code> and <code class="docutils literal notranslate"><span class="pre">-inf</span></code> are not supported in spreadsheet programs, which only return <code class="docutils literal notranslate"><span class="pre">#NUM!</span></code> in these cases. Use the string representation instead. This is shown in the cells <code class="docutils literal notranslate"><span class="pre">A4:B9</span></code> on this worksheet.</p>
+<p>The cell <code class="docutils literal notranslate"><span class="pre">B36</span></code> contains the formula <code class="docutils literal notranslate"><span class="pre">=CPY_2(&quot;result</span> <span class="pre">=</span> <span class="pre">math.log(P1,</span> <span class="pre">P2)&quot;,C36,</span> <span class="pre">D36)</span></code>, with the cell <code class="docutils literal notranslate"><span class="pre">C36</span></code> containing the value <code class="docutils literal notranslate"><span class="pre">3.123</span></code> and the cell <code class="docutils literal notranslate"><span class="pre">D36</span></code> containing the value <code class="docutils literal notranslate"><span class="pre">10</span></code>. The function result is: <code class="docutils literal notranslate"><span class="pre">0.494571984230199</span></code>.</p>
+</section>
+<section id="the-worksheet-arrays">
+<span id="rst-xl-functions-arrays"></span><h3>The worksheet “Arrays”<a class="headerlink" href="#the-worksheet-arrays" title="Link to this heading">#</a></h3>
+<p>The worksheet “Arrays” demonstrates the use of arrays in functions. The Python equivalent of arrays are lists.</p>
+<p>For example, the cell <code class="docutils literal notranslate"><span class="pre">B3</span></code> contains the formula <code class="docutils literal notranslate"><span class="pre">=CPY_0(&quot;result</span> <span class="pre">=</span> <span class="pre">str(sys.path)&quot;)</span></code>. The function <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> returns a list of strings (containing the entries of the Python path), which is converted into one string by writing <code class="docutils literal notranslate"><span class="pre">str(sys.path)</span></code>. This makes sure that the result can be displayed in one cell, but the result string is quite long and hard to read.</p>
+<p>We can use an array formula to improve readability. We recall that in addition to the usual parameters <code class="docutils literal notranslate"><span class="pre">P1</span></code> - <code class="docutils literal notranslate"><span class="pre">P9</span></code> in the functions <code class="docutils literal notranslate"><span class="pre">CPY_0</span></code> to <code class="docutils literal notranslate"><span class="pre">CPY_9</span></code> there are two more: The last but one paramter, named <code class="docutils literal notranslate"><span class="pre">Transposed</span></code>, which is optional with default value 0, where a non-zero value means that the returned array should be transposed; and the last paramter, named <code class="docutils literal notranslate"><span class="pre">ShowShape</span></code>, which is optional with default value 0, where a non-zero value means that the shape of the returned array should be indicated like <code class="docutils literal notranslate"><span class="pre">R7C3</span></code> for an array with 7 rows and 3 columns.</p>
+<p>As an example, the cell <code class="docutils literal notranslate"><span class="pre">B6</span></code> contains the formula <code class="docutils literal notranslate"><span class="pre">=CPY_0(&quot;result</span> <span class="pre">=</span> <span class="pre">sys.path&quot;,1,1)</span></code> and returns the shape information <code class="docutils literal notranslate"><span class="pre">R12C1</span></code> followed by the separator <code class="docutils literal notranslate"><span class="pre">|</span></code>, followed by the first entry of the transposed array, i.e. in this case <code class="docutils literal notranslate"><span class="pre">R12xC1|</span> <span class="pre">C:\Users\DUHad\Documents\DataXlCalcNet</span></code>.</p>
+<p>We can build the corresponding array formula by first selecting a range like <code class="docutils literal notranslate"><span class="pre">R12C1</span></code>, then typing in the input line of the formula bar <code class="docutils literal notranslate"><span class="pre">=CPY_0(&quot;result</span> <span class="pre">=</span> <span class="pre">sys.path&quot;,1,0)</span></code>, and finally, while keeping the shift and control keys pressed down, pressing the enter key.</p>
+<p>This is what has been done in cells <code class="docutils literal notranslate"><span class="pre">B9:B20</span></code>. The formula is now displayed as <code class="docutils literal notranslate"><span class="pre">{=CPY_0(&quot;result</span> <span class="pre">=</span> <span class="pre">sys.path&quot;,1,0)}</span></code>, with curly braces, to indicate that it is an array formula. We can change the range which is covered by the array formula by dragging the small blue rectangle in the lower right corner in the selected range (see the screenshot below).</p>
+<a class="reference internal image-reference" href="../_images/LO_Change_Range.png"><img alt="../_images/LO_Change_Range.png" class="align-center" src="../_images/LO_Change_Range.png" style="width: 60%;" />
 </a>
-<p>The Python source code for starting the interactive 3D wpf plots can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowPlot3d.py">duhadler/XlCalcNet</a></p>
-<p>The C# source code for the gallery of plots can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/TinyPlot3D">duhadler/XlCalcNet</a></p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">plot3d</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</section>
+<section id="the-worksheet-data">
+<h3>The worksheet “Data”<a class="headerlink" href="#the-worksheet-data" title="Link to this heading">#</a></h3>
+<p>The worksheet “Data “ demonstrates the use of named ranges in MS Excel spreadsheet formulas.</p>
+<p>Currently there a two small datasets with predefined as named ranges: <code class="docutils literal notranslate"><span class="pre">matA</span></code> defined as the range $Data.$A$3:$A$7 and  <code class="docutils literal notranslate"><span class="pre">matB</span></code> defined as the range $Data.$A$3:$A$7.</p>
+<p>These ranges are used in the workbook “Arrays”.</p>
+</section>
+</section>
+<section id="using-numpy-matplotlib-pandas-scipy-seaborn-and-xlcalcnet-within-spreadsheet-formulas">
+<span id="rst-xl-functions-advanced"></span><h2>Using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet within spreadsheet formulas<a class="headerlink" href="#using-numpy-matplotlib-pandas-scipy-seaborn-and-xlcalcnet-within-spreadsheet-formulas" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the following subsections. we will work with the file <code class="docutils literal notranslate"><span class="pre">XlDemoCPYadv.xlsx</span></code>, which contains more advanced examples using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet. Examples for using MS Excel with the Python standard library start <a class="reference internal" href="#rst-xl-functions-standard"><span class="std std-ref">here</span></a>.</p>
+</div>
+<p>Within MS Excel, open from the main menu <code class="docutils literal notranslate"><span class="pre">File</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Open</span></code> in the Documents folder the MS Excel workbook <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet\DataExamples\MainExamples\Workbooks\XlDemoCPYadv.xlsx</span></code>.</p>
+<p>This file contains several worksheets which demonstrate different possibilities of using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet within MS Excel spreadsheet formulas.</p>
+<p>Some of these functions write their output  into the <code class="docutils literal notranslate"><span class="pre">XlCalcNetIDE\OutputMonitor</span></code> folder in the AppDataLocal folder. In order to see it, we need to open the <code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">Monitor</span></code> application: start the <code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">IDE</span></code> by clicking on its icon in the task bar, and in the main menu, click on <code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Start</span> <span class="pre">Output</span> <span class="pre">Monitor</span></code>.</p>
+<section id="the-worksheet-mpinput">
+<span id="rst-xl-functions-mpinput"></span><h3>The worksheet “MpInput”<a class="headerlink" href="#the-worksheet-mpinput" title="Link to this heading">#</a></h3>
+<p>The worksheet “MpInput “ demonstrates the use of named ranges in MS Excel spreadsheet formulas.</p>
+<p>If we try to enter a number like <code class="docutils literal notranslate"><span class="pre">123456789012345678/901234567890</span></code>, i.e. a number with more than 16 digits into a spreadsheet cell, it will automatically be shortened to <code class="docutils literal notranslate"><span class="pre">1.23456789012346E+029</span></code>. In order to be able to enter such numbers into spreadsheet cells, the cells must first be formatted as text, and thereafter these numbers can be entered as text. This is mostly useful when working with Python Fractions and Decimals.</p>
+<p>As an example, worksheet “MpInput” contains a named range called “MpInputFractions” in column <code class="docutils literal notranslate"><span class="pre">A</span></code>, which can be used as input for descriptive statistics or linear algebra routines.</p>
+<p>However, this kind of input is hard to read; it is also not directly usable for numerical spreadsheet functions. This can be changed by using the function <code class="docutils literal notranslate"><span class="pre">ASDOUBLE</span></code>, a shown in column <code class="docutils literal notranslate"><span class="pre">B</span></code></p>
+</section>
+<section id="the-worksheet-programming">
+<h3>The worksheet “Programming”<a class="headerlink" href="#the-worksheet-programming" title="Link to this heading">#</a></h3>
+<p>The worksheet “Programming” demonstrates the use of small python scripts in MS Excel spreadsheet formulas.</p>
+<p><code class="docutils literal notranslate"><span class="pre">=CPY_0(&quot;temp</span> <span class="pre">=</span> <span class="pre">0</span> <span class="pre">$n</span> <span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(14):</span> <span class="pre">$n$t</span> <span class="pre">temp</span> <span class="pre">+=</span> <span class="pre">i</span> <span class="pre">$n</span> <span class="pre">result</span> <span class="pre">=</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">temp&quot;)</span></code> is the formula in the cell <code class="docutils literal notranslate"><span class="pre">B3</span></code>. Here we are using <code class="docutils literal notranslate"><span class="pre">$n</span></code> for newline and <code class="docutils literal notranslate"><span class="pre">$t</span></code> for indentation; the result is <code class="docutils literal notranslate"><span class="pre">182</span></code>. The corresponding Python code with conventional formatting would look like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">14</span><span class="p">):</span>
+    <span class="n">temp</span> <span class="o">+=</span> <span class="n">i</span>
+<span class="n">result</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">temp</span>
 </pre></div>
 </div>
-</dd></dl>
-
-<p></p>
-</section>
-<section id="starting-the-data-viewer">
-<span id="rst-dataviewer"></span><h2>Starting the data viewer<a class="headerlink" href="#starting-the-data-viewer" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.dataviewer">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">dataviewer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.dataviewer" title="Link to this definition">#</a></dt>
-<dd><p>Describe the start of data viewer</p>
-<a class="reference internal image-reference" href="../_images/DataViewer.png"><img alt="../_images/DataViewer.png" class="align-center" src="../_images/DataViewer.png" style="width: 50%;" />
+<p><br /></p>
+<p><code class="docutils literal notranslate"><span class="pre">=CPY_1(&quot;temp</span> <span class="pre">=</span> <span class="pre">0</span> <span class="pre">$n</span> <span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(int(P1)):</span> <span class="pre">$n$t</span> <span class="pre">temp</span> <span class="pre">+=</span> <span class="pre">i</span> <span class="pre">$n</span> <span class="pre">result</span> <span class="pre">=</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">temp&quot;,</span> <span class="pre">C4)</span></code> is the formula in the cell <code class="docutils literal notranslate"><span class="pre">B4</span></code>, and the cell <code class="docutils literal notranslate"><span class="pre">C4</span></code> contains the value <code class="docutils literal notranslate"><span class="pre">45</span></code>; the result is <code class="docutils literal notranslate"><span class="pre">1980</span></code>. The corresponding Python code with conventional formatting would look like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">P1</span><span class="p">)):</span>
+    <span class="n">temp</span> <span class="o">+=</span> <span class="n">i</span>
+<span class="n">result</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">temp</span>
+</pre></div>
+</div>
+<p><br /></p>
+<p><code class="docutils literal notranslate"><span class="pre">=CPY_0(&quot;from</span> <span class="pre">xlcalcnet</span> <span class="pre">import</span> <span class="pre">mpm</span> <span class="pre">$n</span>&#160; <span class="pre">mpm.dps=40</span> <span class="pre">$n</span> <span class="pre">result</span> <span class="pre">=</span> <span class="pre">str(mpm.sqrt(2))&quot;)</span></code> is the formula in the cell <code class="docutils literal notranslate"><span class="pre">B8</span></code>; the result is <code class="docutils literal notranslate"><span class="pre">1.41421356237309504880168872420969807857</span></code>. The corresponding Python code with conventional formatting would look like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">mpm</span>
+<span class="n">mpm</span><span class="o">.</span><span class="n">dps</span><span class="o">=</span><span class="mi">40</span>
+<span class="n">result</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">mpm</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><br /></p>
+<p><code class="docutils literal notranslate"><span class="pre">=CPY_0(&quot;from</span> <span class="pre">scipy.integrate</span> <span class="pre">import</span> <span class="pre">quad</span> <span class="pre">$n</span> <span class="pre">def</span> <span class="pre">integrand(x,</span> <span class="pre">a,</span> <span class="pre">b):</span> <span class="pre">return</span> <span class="pre">a*x**2</span> <span class="pre">+</span> <span class="pre">b</span> <span class="pre">$n</span> <span class="pre">a</span> <span class="pre">=</span> <span class="pre">2.1;</span> <span class="pre">b</span> <span class="pre">=</span> <span class="pre">1.1;</span>&#160; <span class="pre">$n</span> <span class="pre">I</span> <span class="pre">=</span> <span class="pre">quad(integrand,</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">args=(a,b))</span>&#160;&#160; <span class="pre">$n</span> <span class="pre">result</span> <span class="pre">=</span> <span class="pre">str(I)</span> <span class="pre">&quot;)</span></code> is the formula in the cell <code class="docutils literal notranslate"><span class="pre">B12</span></code>; the result is the tuple <code class="docutils literal notranslate"><span class="pre">(1.8000000000000003,</span> <span class="pre">1.998401444325282e-14)</span></code>, where the first item is the value of the integral and the second item is the error estimate. The corresponding Python code with conventional formatting would look like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">quad</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">integrand</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span> <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mf">2.1</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">1.1</span><span class="p">;</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">integrand</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+<span class="n">result</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">I</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><br /></p>
+<p><code class="docutils literal notranslate"><span class="pre">=CPY_0(&quot;from</span> <span class="pre">A06_UserlibExamplesPython.B29_InferentialStatistics.C01_BasicTests1Sample</span> <span class="pre">import</span> <span class="pre">D01_StudentT_PValues</span> <span class="pre">$n</span> <span class="pre">D01_StudentT_PValues.demo_stats_student_t_1sample_test()</span> <span class="pre">$n</span> <span class="pre">result='Done'&quot;)</span></code> is the formula in the cell <code class="docutils literal notranslate"><span class="pre">B17</span></code>; the result is a CSV file which is written to the Output Monitor folder. The corresponding Python code with conventional formatting would look like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">A06_UserlibExamplesPython.B29_InferentialStatistics.C01_BasicTests1Sample</span><span class="w"> </span><span class="kn">import</span> <span class="n">D01_StudentT_PValues</span>
+<span class="n">D01_StudentT_PValues</span><span class="o">.</span><span class="n">demo_stats_student_t_1sample_test</span><span class="p">()</span>
+<span class="n">result</span><span class="o">=</span><span class="s1">&#39;Done&#39;</span>
+</pre></div>
+</div>
+<p>And this is the Output Monitor showing the result (with the project panel hidden)</p>
+<a class="reference internal image-reference" href="../_images/CSV_Output_Monitor.png"><img alt="../_images/CSV_Output_Monitor.png" class="align-center" src="../_images/CSV_Output_Monitor.png" style="width: 50%;" />
 </a>
-<p>The Python source code for starting the data viewer can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowDataViewer.py">duhadler/XlCalcNet</a></p>
-<p>The C# source code for the data viewer can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/DataViewer">duhadler/XlCalcNet</a></p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">dataviewer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<p><br /></p>
+<p><br /></p>
+<p><code class="docutils literal notranslate"><span class="pre">=CPY_0(&quot;from</span> <span class="pre">A01_ExamplesPython.B18_FunctionsAndCurvesPlots.C02_BasicCurves</span> <span class="pre">import</span> <span class="pre">D01_RegularConvexPolygon</span>&#160; <span class="pre">$n</span> <span class="pre">D01_RegularConvexPolygon.RegularConvexPolygon(OutputMode='svg')</span> <span class="pre">$n</span> <span class="pre">result='Done'&quot;)</span></code> is the formula in the cell <code class="docutils literal notranslate"><span class="pre">B22</span></code>; the result is a SVG file which is written to the Output Monitor folder. The corresponding Python code with conventional formatting would look like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">A01_ExamplesPython.B18_FunctionsAndCurvesPlots.C02_BasicCurves</span><span class="w"> </span><span class="kn">import</span> <span class="n">D01_RegularConvexPolygon</span>
+<span class="n">D01_RegularConvexPolygon</span><span class="o">.</span><span class="n">RegularConvexPolygon</span><span class="p">(</span><span class="n">OutputMode</span><span class="o">=</span><span class="s1">&#39;svg&#39;</span><span class="p">)</span>
+<span class="n">result</span><span class="o">=</span><span class="s1">&#39;Done&#39;</span>
 </pre></div>
 </div>
-</dd></dl>
-
-<p></p>
-</section>
-<section id="starting-idle">
-<h2>Starting IDLE<a class="headerlink" href="#starting-idle" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.idle">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">idle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.idle" title="Link to this definition">#</a></dt>
-<dd><p>Describe the setup and use of IDLE</p>
-<a class="reference internal image-reference" href="../_images/IDLE.png"><img alt="../_images/IDLE.png" class="align-center" src="../_images/IDLE.png" style="width: 50%;" />
+<p>And this is the Output Monitor showing the result (with the project panel hidden)</p>
+<a class="reference internal image-reference" href="../_images/SVG_Output_Monitor.png"><img alt="../_images/SVG_Output_Monitor.png" class="align-center" src="../_images/SVG_Output_Monitor.png" style="width: 50%;" />
 </a>
-<p>The Python source code for starting the data viewer can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowDataViewer.py">duhadler/XlCalcNet</a></p>
-<p>The C# source code for the data viewer can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/DataViewer">duhadler/XlCalcNet</a></p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">idle</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<p></p>
 </section>
-<section id="functions-related-to-folders">
-<h2>Functions related to folders<a class="headerlink" href="#functions-related-to-folders" title="Link to this heading">#</a></h2>
-<p>There are several functions related to folders</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.get_local_appdata">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">get_local_appdata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.get_local_appdata" title="Link to this definition">#</a></dt>
-<dd><p>Return the current user’s local Application Data folder</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">get_local_appdata</span><span class="p">()</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.get_local_appdata_xlcalcnet">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">get_local_appdata_xlcalcnet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.get_local_appdata_xlcalcnet" title="Link to this definition">#</a></dt>
-<dd><p>Return the current user’s local AppData/XlCalcNetIDE folder</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">get_local_appdata_xlcalcnet</span><span class="p">()</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.get_my_documents">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">get_my_documents</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.get_my_documents" title="Link to this definition">#</a></dt>
-<dd><p>Return the current user’s local AppData/XlCalcNetIDE folder</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">get_my_documents</span><span class="p">()</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<p></p>
 </section>
-<section id="information-about-installation-status-of-supporting-python-packages">
-<h2>Information about installation status of supporting python packages<a class="headerlink" href="#information-about-installation-status-of-supporting-python-packages" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.info">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.info" title="Link to this definition">#</a></dt>
-<dd><p>Support for Matplotlib output in a separate process</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<section id="managing-procedures-instead-of-functions">
+<h2>Managing procedures instead of functions<a class="headerlink" href="#managing-procedures-instead-of-functions" title="Link to this heading">#</a></h2>
+<p>It is possible to call the spreadsheet functions  <code class="docutils literal notranslate"><span class="pre">CPY_0</span></code> to <code class="docutils literal notranslate"><span class="pre">CPY_9</span></code> from LibreOffice Basic and to use this to start procedures instead of functions. A few simple examples have already been prepared to demonstrate the technique.</p>
+<p>To access the relevant dialog, click on the XlCalcNet logo (in orange) on the main menu bar:</p>
+<a class="reference internal image-reference" href="../_images/XL_ContextMenu.png"><img alt="../_images/XL_ContextMenu.png" class="align-center" src="../_images/XL_ContextMenu.png" style="width: 40%;" />
+</a>
+<p>The following dialog box with the title <strong>Navigator for XlCalcNet</strong> will appear:</p>
+<a class="reference internal image-reference" href="../_images/XL_NavigatorXlCalcNet.png"><img alt="../_images/XL_NavigatorXlCalcNet.png" class="align-center" src="../_images/XL_NavigatorXlCalcNet.png" style="width: 50%;" />
+</a>
+<p>The first example, with <code class="docutils literal notranslate"><span class="pre">CSV</span> <span class="pre">Output</span></code> in “Category” and <code class="docutils literal notranslate"><span class="pre">ShowTTest1</span></code> in “Subroutine”, will write a CSV file into the <code class="docutils literal notranslate"><span class="pre">XlCalcNetIDE\OutputMonitor</span></code> folder in the AppDataLocal folder. In order to see it, we need to open the <code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">Monitor</span></code> application: start the <code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">IDE</span></code> by clicking on its icon in the task bar, and in the main menu, click on <code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Start</span> <span class="pre">Output</span> <span class="pre">Monitor</span></code>. With the <code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">Monitor</span></code> application running, click <code class="docutils literal notranslate"><span class="pre">OK</span></code>. The CSV file will then immediately appear in the <code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">Monitor</span></code>.</p>
+<p>The corresponding code in the module <code class="docutils literal notranslate"><span class="pre">MpFunlabLocal</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">BasicAndDialogs</span></code> is shown below:</p>
+<div class="highlight-visualbasic notranslate"><div class="highlight"><pre><span></span><span class="k">Sub</span><span class="w"> </span><span class="nf">ShowTTest1</span><span class="p">()</span>
+<span class="w">    </span><span class="c">Rem Output (a .csv file) is shown in output monitor</span>
+<span class="w">    </span><span class="n">Code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;from A06_UserlibExamplesPython.B29_InferentialStatistics.C01_BasicTests1Sample import D01_StudentT_PValues;&quot;</span>
+<span class="w">    </span><span class="n">Code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Code</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;D01_StudentT_PValues.demo_stats_student_t_1sample_test(); result=&#39;Done&#39;;&quot;</span>
+<span class="w">    </span><span class="n">Result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Application</span><span class="p">.</span><span class="n">Run</span><span class="p">(</span><span class="s">&quot;CPY_0&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Code</span><span class="p">)</span>
+<span class="w">    </span><span class="n">showResult</span><span class="w"> </span><span class="p">(</span><span class="n">Result</span><span class="p">)</span>
+<span class="k">End</span><span class="w"> </span><span class="k">Sub</span>
 </pre></div>
 </div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.has_gpm">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">has_gpm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.has_gpm" title="Link to this definition">#</a></dt>
-<dd><p>Returns True if gmpy2 is installed</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">has_gpm</span><span class="p">()</span>
+<p>The second example, with <code class="docutils literal notranslate"><span class="pre">SVG</span> <span class="pre">Output</span></code> in “Category” and <code class="docutils literal notranslate"><span class="pre">ShowPolygon</span></code> in “Subroutine”, will write a SVG file into the <code class="docutils literal notranslate"><span class="pre">XlCalcNetIDE\OutputMonitor</span></code> folder in the AppDataLocal folder. With the <code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">Monitor</span></code> application running (see above), click <code class="docutils literal notranslate"><span class="pre">OK</span></code>. The SVG file will then immediately appear in the <code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">Monitor</span></code>.</p>
+<p>The corresponding code in the module <code class="docutils literal notranslate"><span class="pre">MpFunlabLocal</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">BasicAndDialogs</span></code> is shown below:</p>
+<div class="highlight-visualbasic notranslate"><div class="highlight"><pre><span></span><span class="k">Sub</span><span class="w"> </span><span class="nf">ShowPolygon</span><span class="p">()</span>
+<span class="w">    </span><span class="c">Rem Graphics is shown in output monitor</span>
+<span class="w">    </span><span class="n">Code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;from A01_ExamplesPython.B18_FunctionsAndCurvesPlots.C02_BasicCurves import D01_RegularConvexPolygon;&quot;</span>
+<span class="w">    </span><span class="n">Code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Code</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;D01_RegularConvexPolygon.RegularConvexPolygon(OutputMode=&#39;svg&#39;); result=&#39;Done&#39;;&quot;</span>
+<span class="w">    </span><span class="n">Result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Application</span><span class="p">.</span><span class="n">Run</span><span class="p">(</span><span class="s">&quot;CPY_0&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Code</span><span class="p">)</span>
+<span class="w">    </span><span class="n">showResult</span><span class="w"> </span><span class="p">(</span><span class="n">Result</span><span class="p">)</span>
+<span class="k">End</span><span class="w"> </span><span class="k">Sub</span>
 </pre></div>
 </div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.has_apm">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">has_apm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.has_apm" title="Link to this definition">#</a></dt>
-<dd><p>Returns True if python-flint is installed</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">has_apm</span><span class="p">()</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.has_xlcalcnet2">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">has_xlcalcnet2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.has_xlcalcnet2" title="Link to this definition">#</a></dt>
-<dd><p>Returns True if xlcalcnet2 is installed</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">has_xlcalcnet2</span><span class="p">()</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<p></p>
 </section>
-<section id="information-about-context-lists-and-setting-global-precision">
-<h2>Information about context lists, and setting global precision<a class="headerlink" href="#information-about-context-lists-and-setting-global-precision" title="Link to this heading">#</a></h2>
-<dl class="py property">
-<dt class="sig sig-object py" id="gui.ctxlistreal">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">ctxlistreal</span></span><a class="headerlink" href="#gui.ctxlistreal" title="Link to this definition">#</a></dt>
-<dd><p>Returns a list of all available numerical contexts supporting real data types</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">ctxlistreal</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="gui.ctxlistcplx">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">ctxlistcplx</span></span><a class="headerlink" href="#gui.ctxlistcplx" title="Link to this definition">#</a></dt>
-<dd><p>Returns a list of all available numerical contexts supporting complex data types</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">ctxlistcomplex</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.setdps">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">setdps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.setdps" title="Link to this definition">#</a></dt>
-<dd><p>Sets the decimal precision for all multiprecision data types</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dps</span> <span class="o">=</span> <span class="mi">50</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="n">dps</span><span class="p">)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<p></p>
-</section>
-<section id="support-for-running-interactive-matplotlib-output-in-a-separate-process">
-<h2>Support for running interactive Matplotlib output in a separate process<a class="headerlink" href="#support-for-running-interactive-matplotlib-output-in-a-separate-process" title="Link to this heading">#</a></h2>
-<p>There is support for Matplotlib output in a separate process</p>
-<p>See also: <a class="reference external" href="https://matplotlib.org/stable/users/explain/figure/interactive.html#default-ui">https://matplotlib.org/stable/users/explain/figure/interactive.html#default-ui</a></p>
-<dl class="py property">
-<dt class="sig sig-object py" id="gui.plot">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.plot" title="Link to this definition">#</a></dt>
-<dd><p>Support for Matplotlib output in a separate process</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span>
-</pre></div>
-</div>
-</dd></dl>
-
+<section id="uninstalling">
+<h2>Uninstalling<a class="headerlink" href="#uninstalling" title="Link to this heading">#</a></h2>
+<p>To uninstall these two extensions properly, follow these steps:
+Within MS Excel, on an Excel worksheet, open the Add-ins dialog from the main menu/ribbon: <code class="docutils literal notranslate"><span class="pre">Developer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Excel</span> <span class="pre">Add-ins</span></code>. In the Add-ins dialog, unselect <code class="docutils literal notranslate"><span class="pre">MpFunlab</span></code> and <code class="docutils literal notranslate"><span class="pre">Mpfunlablocal</span></code>,  and click on <code class="docutils literal notranslate"><span class="pre">OK</span></code>. Close MS Excel. When Excel is started the next time these Add-ins will not be loaded, however, they will still appear (unselected) in the Add-ins dialog (this seems to be a decade-old bug/feature). To remove them also from the Add-ins dialog, you need to rename them in their original location, start Excel again, and start the Add-ins dialog again. When you then re-select these unselected items, a dialog stating that the add-in cannot be found will appear, followed by “Delete from list?”. Click on <span class="math notranslate nohighlight">\(Yes\)</span>, and the add-in will be removed from the list.</p>
 </section>
 </section>
 
@@ -1167,11 +1102,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="C03_SpreadsheetFormulas.html"
+       href="C03_LibreOfficeCalc.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Building user libraries and documenting them</p>
+        <p class="prev-next-title">Using XlCalcNet within LibreOffice Calc</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1191,49 +1126,24 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-output-monitor">Starting the output monitor</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.outputmonitor"><code class="docutils literal notranslate"><span class="pre">gui.outputmonitor()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-ms-excel-for-using-xlcalcnet">Preparing MS Excel for using XlCalcNet</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-mpfunlablocal-xlam-and-mpfunlab-xll">Installing Mpfunlablocal.xlam and Mpfunlab.xll</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-gallery-of-plots">Starting the gallery of plots</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.plot2d"><code class="docutils literal notranslate"><span class="pre">gui.plot2d()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-python-standard-library-functions-within-spreadsheet-formulas">Using the Python standard library functions within spreadsheet formulas</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-worksheet-generalinfo">The worksheet “GeneralInfo”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-worksheet-math">The worksheet “Math”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-worksheet-arrays">The worksheet “Arrays”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-worksheet-data">The worksheet “Data”</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-interactive-3d-wpf-plots">Starting the interactive 3D wpf plots</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.plot3d"><code class="docutils literal notranslate"><span class="pre">gui.plot3d()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-numpy-matplotlib-pandas-scipy-seaborn-and-xlcalcnet-within-spreadsheet-formulas">Using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet within spreadsheet formulas</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-worksheet-mpinput">The worksheet “MpInput”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-worksheet-programming">The worksheet “Programming”</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-data-viewer">Starting the data viewer</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.dataviewer"><code class="docutils literal notranslate"><span class="pre">gui.dataviewer()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-idle">Starting IDLE</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.idle"><code class="docutils literal notranslate"><span class="pre">gui.idle()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-related-to-folders">Functions related to folders</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.get_local_appdata"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.get_local_appdata_xlcalcnet"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata_xlcalcnet()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.get_my_documents"><code class="docutils literal notranslate"><span class="pre">gui.get_my_documents()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-about-installation-status-of-supporting-python-packages">Information about installation status of supporting python packages</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.info"><code class="docutils literal notranslate"><span class="pre">gui.info()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.has_gpm"><code class="docutils literal notranslate"><span class="pre">gui.has_gpm()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.has_apm"><code class="docutils literal notranslate"><span class="pre">gui.has_apm()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.has_xlcalcnet2"><code class="docutils literal notranslate"><span class="pre">gui.has_xlcalcnet2()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-about-context-lists-and-setting-global-precision">Information about context lists, and setting global precision</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.ctxlistreal"><code class="docutils literal notranslate"><span class="pre">gui.ctxlistreal</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.ctxlistcplx"><code class="docutils literal notranslate"><span class="pre">gui.ctxlistcplx</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.setdps"><code class="docutils literal notranslate"><span class="pre">gui.setdps()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#support-for-running-interactive-matplotlib-output-in-a-separate-process">Support for running interactive Matplotlib output in a separate process</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.plot"><code class="docutils literal notranslate"><span class="pre">gui.plot</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-procedures-instead-of-functions">Managing procedures instead of functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uninstalling">Uninstalling</a></li>
 </ul>
   </nav></div>
 
@@ -1267,7 +1177,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 30, 2026.
+  Last updated on Oct 01, 2026.
   <br/>
 </p>
   </div>

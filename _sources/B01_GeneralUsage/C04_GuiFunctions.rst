@@ -18,11 +18,6 @@ General user interface and functions
 
 
 
-
-|newpage|
-
-
-
 .. _rst_OutputMonitor: 
 
 Starting the output monitor

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Calling Python from C# &#8212; XlCalcNet 0.4.0 documentation</title>
+    <title>Building user libraries and documenting them &#8212; XlCalcNet 0.4.0 documentation</title>
   
   
   
@@ -44,15 +44,15 @@
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=4ea706d9"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'B01_GeneralUsage/C04_PythonFromCSharp';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'B01_GeneralUsage/C08_BuildingUserLibraries';</script>
     <script src="../_static/custom-icon.js?v=74687d30"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)" href="C05_ContextsMpmath.html" />
-    <link rel="prev" title="Building user libraries and documenting them" href="C03_SpreadsheetFormulas.html" />
+    <link rel="next" title="Basic floating point functions" href="../B02_BasicFloatingPointFunctions/index.html" />
+    <link rel="prev" title="Mathematical functions based on XlCalcNet2 (C#, can be called from Python)" href="C07_ContextsXlCalcNet2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 30, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 01, 2026"/>
   </head>
   
   
@@ -161,12 +161,13 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Setup and general usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html">Setting up XlCalcNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html">General user interface and functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html">Building user libraries and documenting them</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Calling Python from C#</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C02_MSExcel.html">Using XlCalcNet within MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_LibreOfficeCalc.html">Using XlCalcNet within LibreOffice Calc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html">General user interface and functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Building user libraries and documenting them</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/index.html">Basic floating point functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -773,7 +774,7 @@
       
       
       
-      <li><a href="../_sources/B01_GeneralUsage/C04_PythonFromCSharp.rst" target="_blank"
+      <li><a href="../_sources/B01_GeneralUsage/C08_BuildingUserLibraries.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -857,7 +858,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Calling Python from C#</h1>
+    <h1>Building user libraries and documenting them</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -867,8 +868,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-pythonnet-from-c">Using Pythonnet from C#</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-the-socket-server-from-c">Calling the socket server from C#</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-library-of-user-defined-python-functions">Building a library of user defined Python functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-library-of-user-defined-functions-in-c">Building a library of user defined functions in C#</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sphinx-building-documentation-for-software-with-python-html-and-pdf">Sphinx: building documentation for software with Python (html and pdf)</a></li>
 </ul>
             </nav>
         </div>
@@ -881,15 +883,33 @@ document.write(`
                 <article class="bd-article">
                   
   <p></p>
-<section id="calling-python-from-c">
-<h1>Calling Python from C#<a class="headerlink" href="#calling-python-from-c" title="Link to this heading">#</a></h1>
-<section id="using-pythonnet-from-c">
-<h2>Using Pythonnet from C#<a class="headerlink" href="#using-pythonnet-from-c" title="Link to this heading">#</a></h2>
-<p>This allows to call python from C# in-process.</p>
+<section id="building-user-libraries-and-documenting-them">
+<h1>Building user libraries and documenting them<a class="headerlink" href="#building-user-libraries-and-documenting-them" title="Link to this heading">#</a></h1>
+<p>XlCalcNet allows the user to build libraries of user defined functions in Python and C#, which can be used from spreadsheet formulas in Microsoft Excel and LibreOffice Calc, as well as from Python scripts and C# programs. The user libraries can be documented using Sphinx, which allows to build documentation in html and pdf format.</p>
+<p>Basic examples of building a user library are provided for Python in the subfolders of the <code class="docutils literal notranslate"><span class="pre">A03_UserlibPython</span></code> folder, and for C# in the subfolders of the <code class="docutils literal notranslate"><span class="pre">A04_UserlibCSharp</span></code> folder, which can be used as templates for building more complex user libraries.</p>
+<p>The user library can be documented using Sphinx, which allows to build documentation in html and pdf format. The documentation can be built starting with examples in the <code class="docutils literal notranslate"><span class="pre">A05_UserlibDocs</span></code> folder, which can be used as a template for documenting more complex user libraries. The documentation for the already included starting user libraray is part of this manual. It is written in the same style as this manual and comprises two parts: User library: numerical; and User library: graphics.</p>
+<p>Examples of using the user libraries are provided in the subfolders of the <code class="docutils literal notranslate"><span class="pre">A06_UserlibExamplesPython</span></code> folder for Python and in the <code class="docutils literal notranslate"><span class="pre">A07_UserlibExamplesCSharp</span></code> folder for C#.</p>
+<section id="building-a-library-of-user-defined-python-functions">
+<h2>Building a library of user defined Python functions<a class="headerlink" href="#building-a-library-of-user-defined-python-functions" title="Link to this heading">#</a></h2>
+<p>In Python, the user library is built in the subfolders of the <code class="docutils literal notranslate"><span class="pre">A03_UserlibPython</span></code> folder, which contains Python modules with the user defined functions. The modules can be imported in Python scripts and used from spreadsheet formulas in Microsoft Excel and LibreOffice Calc. The functions are decribed here.</p>
+<p>These functions can be tested  in the subfolders of the <code class="docutils literal notranslate"><span class="pre">A06_UserlibExamplesPython</span></code> folder.</p>
 </section>
-<section id="calling-the-socket-server-from-c">
-<h2>Calling the socket server from C#<a class="headerlink" href="#calling-the-socket-server-from-c" title="Link to this heading">#</a></h2>
-<p>This is the preferred method. It is also used internally by MS Excel XlNet addin.</p>
+<section id="building-a-library-of-user-defined-functions-in-c">
+<h2>Building a library of user defined functions in C#<a class="headerlink" href="#building-a-library-of-user-defined-functions-in-c" title="Link to this heading">#</a></h2>
+<p>The library of user defined functions in C# is built in form of 2 dynamic link libraries (DLLs), which are called <code class="docutils literal notranslate"><span class="pre">UserFixedPrecNet.dll</span></code> and <code class="docutils literal notranslate"><span class="pre">UserArbPrecNet.dll</span></code> and which are written into the Binary Output Folder. These functions are described here.</p>
+<p>There is also a third DLL called <code class="docutils literal notranslate"><span class="pre">UserMpPrecNet.dll</span></code>, which is used by the Python user library. This DLL is also written into the Binary Output Folder.</p>
+</section>
+<section id="sphinx-building-documentation-for-software-with-python-html-and-pdf">
+<span id="rst-user-documentation"></span><h2>Sphinx: building documentation for software with Python (html and pdf)<a class="headerlink" href="#sphinx-building-documentation-for-software-with-python-html-and-pdf" title="Link to this heading">#</a></h2>
+<p>This manual is written in reStructuredText (reST) format, which is a lightweight markup language. The manual is built using Sphinx, which is a tool that makes it easy to create intelligent and beautiful documentation for Python projects (or other software projects). Sphinx uses reStructuredText as its markup language and can generate output in various formats, including HTML and PDF.</p>
+<p>To build the documentation, you need to have Sphinx installed. You can install Sphinx using pip:</p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span></code></p>
+<p>See also: <a class="reference external" href="https://www.sphinx-doc.org/en/master/">https://www.sphinx-doc.org/en/master/</a></p>
+<p>You also need to install 3 additional Sphinx extensions that are used in this manual: the Sphinx Book Theme, the Sphinx Copybutton extension, and the Sphinx Contrib Bibtex extension. They can be installed using pip:</p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx-book-theme</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx-copybutton</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinxcontrib-bibtex</span></code></p>
+<p>With these packages installed, you can build the documentation of the user library by opening in the Tiny IDE the file <code class="docutils literal notranslate"><span class="pre">A05_UserlibDocs\B01_Lib01\_static\builddoc.py</span></code>. In the Tiny IDE main menu, click on <code class="docutils literal notranslate"><span class="pre">Run</span></code>. The HTML documentation will then be built in the subfolder <code class="docutils literal notranslate"><span class="pre">html</span></code> in the <code class="docutils literal notranslate"><span class="pre">XlCalcNetIDE</span></code> folder in the AppDataLocal folder. If built has succeded, the documentation will be opened automatically. The html documentation can be viewed by opening the file <code class="docutils literal notranslate"><span class="pre">index.html</span></code> in a web browser.</p>
 </section>
 </section>
 
@@ -905,20 +925,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="C03_SpreadsheetFormulas.html"
+       href="C07_ContextsXlCalcNet2.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Building user libraries and documenting them</p>
+        <p class="prev-next-title">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</p>
       </div>
     </a>
     <a class="right-next"
-       href="C05_ContextsMpmath.html"
+       href="../B02_BasicFloatingPointFunctions/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</p>
+        <p class="prev-next-title">Basic floating point functions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -938,8 +958,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-pythonnet-from-c">Using Pythonnet from C#</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-the-socket-server-from-c">Calling the socket server from C#</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-library-of-user-defined-python-functions">Building a library of user defined Python functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-library-of-user-defined-functions-in-c">Building a library of user defined functions in C#</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sphinx-building-documentation-for-software-with-python-html-and-pdf">Sphinx: building documentation for software with Python (html and pdf)</a></li>
 </ul>
   </nav></div>
 
@@ -973,7 +994,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 30, 2026.
+  Last updated on Oct 01, 2026.
   <br/>
 </p>
   </div>

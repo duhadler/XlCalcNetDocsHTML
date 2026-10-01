@@ -49,7 +49,7 @@
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 30, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 01, 2026"/>
   </head>
   
   
@@ -160,12 +160,13 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="B01_GeneralUsage/index.html">Setup and general usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C01_Setup.html">Setting up XlCalcNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C02_GuiFunctions.html">General user interface and functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C03_SpreadsheetFormulas.html">Building user libraries and documenting them</a></li>
-<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C04_PythonFromCSharp.html">Calling Python from C#</a></li>
+<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C02_MSExcel.html">Using XlCalcNet within MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C03_LibreOfficeCalc.html">Using XlCalcNet within LibreOffice Calc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C04_GuiFunctions.html">General user interface and functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="B01_GeneralUsage/C08_BuildingUserLibraries.html">Building user libraries and documenting them</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="B02_BasicFloatingPointFunctions/index.html">Basic floating point functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -2207,9 +2208,9 @@ document.write(`
 </li>
       <li><a href="B04_StatisticalDistributions/C07_IncompleteGamma/D12_SkewExpPower.html#ctx.skewexponpower">ctx.skewexponpower (built-in class)</a>
 </li>
-      <li><a href="B01_GeneralUsage/C02_GuiFunctions.html#gui.ctxlistcplx">ctxlistcplx (gui property)</a>
+      <li><a href="B01_GeneralUsage/C04_GuiFunctions.html#gui.ctxlistcplx">ctxlistcplx (gui property)</a>
 </li>
-      <li><a href="B01_GeneralUsage/C02_GuiFunctions.html#gui.ctxlistreal">ctxlistreal (gui property)</a>
+      <li><a href="B01_GeneralUsage/C04_GuiFunctions.html#gui.ctxlistreal">ctxlistreal (gui property)</a>
 </li>
       <li><a href="B03_ElementaryScalarFunctions/C05_PowerFunctions.html#ctx.cube">cube() (ctx method)</a>
 </li>
@@ -2503,7 +2504,7 @@ document.write(`
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="B29_More0F1/C02_ModifiedBesselIntegerOrder.html#math53.damath_bessel_in">damath_bessel_in() (math53 method)</a>
 </li>
-      <li><a href="B01_GeneralUsage/C02_GuiFunctions.html#gui.dataviewer">dataviewer() (gui method)</a>
+      <li><a href="B01_GeneralUsage/C04_GuiFunctions.html#gui.dataviewer">dataviewer() (gui method)</a>
 </li>
       <li><a href="B11_Hypergeometric1F1/C04_ErrorFunction.html#ctx.dawson">dawson() (ctx method)</a>
 </li>
@@ -3139,11 +3140,11 @@ document.write(`
 </li>
       <li><a href="B07_NumpyMultiprecision/C03_ArraysForNumericalWork.html#npm.geomspace">geomspace() (npm method)</a>
 </li>
-      <li><a href="B01_GeneralUsage/C02_GuiFunctions.html#gui.get_local_appdata">get_local_appdata() (gui method)</a>
+      <li><a href="B01_GeneralUsage/C04_GuiFunctions.html#gui.get_local_appdata">get_local_appdata() (gui method)</a>
 </li>
-      <li><a href="B01_GeneralUsage/C02_GuiFunctions.html#gui.get_local_appdata_xlcalcnet">get_local_appdata_xlcalcnet() (gui method)</a>
+      <li><a href="B01_GeneralUsage/C04_GuiFunctions.html#gui.get_local_appdata_xlcalcnet">get_local_appdata_xlcalcnet() (gui method)</a>
 </li>
-      <li><a href="B01_GeneralUsage/C02_GuiFunctions.html#gui.get_my_documents">get_my_documents() (gui method)</a>
+      <li><a href="B01_GeneralUsage/C04_GuiFunctions.html#gui.get_my_documents">get_my_documents() (gui method)</a>
 </li>
       <li><a href="B02_BasicFloatingPointFunctions/C08_MathConstants.html#ctx.glaisher">glaisher (ctx property)</a>
 </li>
@@ -3195,11 +3196,11 @@ document.write(`
 </li>
       <li><a href="B09_LerchPhi/C04_HurwitzZeta.html#ctx.harmonic2">harmonic2() (ctx method)</a>
 </li>
-      <li><a href="B01_GeneralUsage/C02_GuiFunctions.html#gui.has_apm">has_apm() (gui method)</a>
+      <li><a href="B01_GeneralUsage/C04_GuiFunctions.html#gui.has_apm">has_apm() (gui method)</a>
 </li>
-      <li><a href="B01_GeneralUsage/C02_GuiFunctions.html#gui.has_gpm">has_gpm() (gui method)</a>
+      <li><a href="B01_GeneralUsage/C04_GuiFunctions.html#gui.has_gpm">has_gpm() (gui method)</a>
 </li>
-      <li><a href="B01_GeneralUsage/C02_GuiFunctions.html#gui.has_xlcalcnet2">has_xlcalcnet2() (gui method)</a>
+      <li><a href="B01_GeneralUsage/C04_GuiFunctions.html#gui.has_xlcalcnet2">has_xlcalcnet2() (gui method)</a>
 </li>
       <li><a href="B26_MoreElementary/C02_Trigonometric.html#math53.hav">hav() (math53 method)</a>
 </li>
@@ -3343,7 +3344,7 @@ document.write(`
 </li>
       <li><a href="B07_NumpyMultiprecision/C01_ArraysFromShapeOrValue.html#npm.identity">identity() (npm method)</a>
 </li>
-      <li><a href="B01_GeneralUsage/C02_GuiFunctions.html#gui.idle">idle() (gui method)</a>
+      <li><a href="B01_GeneralUsage/C04_GuiFunctions.html#gui.idle">idle() (gui method)</a>
 </li>
       <li><a href="B05_NumericalCalculus/C04_MpMathRootfindingOptimisation.html#ctx.illinois">illinois() (ctx method)</a>
 </li>
@@ -3357,7 +3358,7 @@ document.write(`
 </li>
       <li><a href="B02_BasicFloatingPointFunctions/C02_MachineConstants.html#ctx.inf">inf() (ctx method)</a>
 </li>
-      <li><a href="B01_GeneralUsage/C02_GuiFunctions.html#gui.info">info() (gui method)</a>
+      <li><a href="B01_GeneralUsage/C04_GuiFunctions.html#gui.info">info() (gui method)</a>
 </li>
       <li><a href="B07_NumpyMultiprecision/C18_MatrixAndVectorProducts.html#npm.inner">inner() (npm method)</a>
 </li>
@@ -5357,7 +5358,7 @@ document.write(`
 </li>
       <li><a href="B07_NumpyMultiprecision/C18_MatrixAndVectorProducts.html#npm.outer">outer() (npm method)</a>
 </li>
-      <li><a href="B01_GeneralUsage/C02_GuiFunctions.html#gui.outputmonitor">outputmonitor() (gui method)</a>
+      <li><a href="B01_GeneralUsage/C04_GuiFunctions.html#gui.outputmonitor">outputmonitor() (gui method)</a>
 </li>
       <li><a href="B11_Hypergeometric1F1/C04_ErrorFunction.html#ctx.owen_t">owen_t() (ctx method)</a>
 </li>
@@ -5687,11 +5688,11 @@ document.write(`
 </li>
       <li><a href="B16_FastApproximations/C03_CentralTFBeta.html#ctx.pillay_v_mu3_qtf">pillay_v_mu3_qtf() (ctx method)</a>
 </li>
-      <li><a href="B01_GeneralUsage/C02_GuiFunctions.html#gui.plot">plot (gui property)</a>
+      <li><a href="B01_GeneralUsage/C04_GuiFunctions.html#gui.plot">plot (gui property)</a>
 </li>
-      <li><a href="B01_GeneralUsage/C02_GuiFunctions.html#gui.plot2d">plot2d() (gui method)</a>
+      <li><a href="B01_GeneralUsage/C04_GuiFunctions.html#gui.plot2d">plot2d() (gui method)</a>
 </li>
-      <li><a href="B01_GeneralUsage/C02_GuiFunctions.html#gui.plot3d">plot3d() (gui method)</a>
+      <li><a href="B01_GeneralUsage/C04_GuiFunctions.html#gui.plot3d">plot3d() (gui method)</a>
 </li>
       <li><a href="B04_StatisticalDistributions/C14_LattticeRank/D02_wilcoxon_bennett.html#dist_bennett.pmf">pmf() (dist_bennett method)</a>
 
@@ -6339,7 +6340,7 @@ document.write(`
 </li>
       <li><a href="B04_StatisticalDistributions/C02_BaseClass.html#rv_base.set_qtf_method">set_qtf_method() (rv_base method)</a>
 </li>
-      <li><a href="B01_GeneralUsage/C02_GuiFunctions.html#gui.setdps">setdps() (gui method)</a>
+      <li><a href="B01_GeneralUsage/C04_GuiFunctions.html#gui.setdps">setdps() (gui method)</a>
 </li>
       <li><a href="B04_StatisticalDistributions/C07_IncompleteGamma/D08_Amoroso.html#dist_amoroso.sf">sf() (dist_amoroso method)</a>
 
@@ -7263,7 +7264,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 30, 2026.
+  Last updated on Oct 01, 2026.
   <br/>
 </p>
   </div>

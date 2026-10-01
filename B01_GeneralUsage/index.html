@@ -52,7 +52,7 @@
     <link rel="prev" title="Preface" href="../000_Preface/01_preface.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 30, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 01, 2026"/>
   </head>
   
   
@@ -161,12 +161,13 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Setup and general usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html">Setting up XlCalcNet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html">General user interface and functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html">Building user libraries and documenting them</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C04_PythonFromCSharp.html">Calling Python from C#</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C02_MSExcel.html">Using XlCalcNet within MS Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_LibreOfficeCalc.html">Using XlCalcNet within LibreOffice Calc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html">General user interface and functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C06_ContextsFixedPrec.html">Mathematical functions in fixed precision (C#, can be called from Python)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C07_ContextsXlCalcNet2.html">Mathematical functions based on XlCalcNet2 (C#, can be called from Python)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C08_BuildingUserLibraries.html">Building user libraries and documenting them</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/index.html">Basic floating point functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -903,101 +904,107 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#seaborn">Seaborn</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#starting-and-calling-the-socket-server-from-c">Starting and calling the socket server from C#</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#calling-python-from-c-socket-server-vs-in-process-calls">Calling Python from C:#: socket server vs in-process calls</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#starting-the-socketserver-from-the-tinyide-or-galleryofplots-application">Starting the socketserver from the TinyIDE or GalleryOfPlots application</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#starting-the-socketserver-from-the-navigator-dialog-in-excel">Starting the socketserver from the Navigator dialog in Excel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#calling-the-socketserver-from-c">Calling the socketserver from C#</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#preparing-ms-excel-for-using-xlcalcnet-first-steps">Preparing MS Excel for using XlCalcNet: first steps</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#installing-mpfunlablocal-xlam-and-mpfunlab-xll">Installing Mpfunlablocal.xlam and Mpfunlab.xll</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#using-the-python-standard-library-functions-within-spreadsheet-formulas">Using the Python standard library functions within spreadsheet formulas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#the-worksheet-generalinfo">The worksheet “GeneralInfo”</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#the-worksheet-math">The worksheet “Math”</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#the-worksheet-arrays">The worksheet “Arrays”</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#the-worksheet-data">The worksheet “Data”</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#using-numpy-matplotlib-pandas-scipy-seaborn-and-xlcalcnet-within-spreadsheet-formulas">Using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet within spreadsheet formulas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#the-worksheet-mpinput">The worksheet “MpInput”</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#the-worksheet-programming">The worksheet “Programming”</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#managing-procedures-instead-of-functions">Managing procedures instead of functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#uninstalling-mpfunlab-xlam-and-mpfunlab-xll">Uninstalling Mpfunlab.xlam and Mpfunlab.xll</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#preparing-libreoffice-calc-for-using-xlcalcnet-first-steps">Preparing LibreOffice Calc for using XlCalcNet: first steps</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#installing-mpfunlablocal-oxt-and-mpfunlab-oxt">Installing MpfunlabLocal.oxt and Mpfunlab.oxt</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#rst-lo-functions-standard">Using the Python standard library functions within spreadsheet formulas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#id2">The worksheet “GeneralInfo”</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#id3">The worksheet “Math”</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#rst-lo-functions-arrays">The worksheet “Arrays”</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#id5">The worksheet “Data”</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#rst-lo-functions-advanced">Using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet within spreadsheet formulas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#rst-lo-functions-mpinput">The worksheet “MpInput”</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#id8">The worksheet “Programming”</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#id9">Managing procedures instead of functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#exporting-changes-in-mpfunlablocal-to-mpfunlablocal-oxt">Exporting changes in MpfunlabLocal to MpfunlabLocal.oxt</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#uninstalling-mpfunlablocal-oxt-and-mpfunlab-oxt">Uninstalling MpfunlabLocal.oxt and Mpfunlab.oxt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#calling-python-from-c-in-process">Calling Python from C# in-process</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#reasons-for-using-multiprecision-arithmetic">Reasons for using multiprecision arithmetic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#reasons-for-calling-c-from-python">Reasons for calling C# from Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#rebuilding-the-dll-files-of-xlcalcnet-and-xlcalcnet2-from-source-code">Rebuilding the .dll files of XlCalcNet and XlCalcNet2 from source code</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="C02_GuiFunctions.html">General user interface and functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html#starting-the-output-monitor">Starting the output monitor</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#gui.outputmonitor"><code class="docutils literal notranslate"><span class="pre">gui.outputmonitor()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="C02_MSExcel.html">Using XlCalcNet within MS Excel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="C02_MSExcel.html#preparing-ms-excel-for-using-xlcalcnet">Preparing MS Excel for using XlCalcNet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C02_MSExcel.html#installing-mpfunlablocal-xlam-and-mpfunlab-xll">Installing Mpfunlablocal.xlam and Mpfunlab.xll</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html#starting-the-gallery-of-plots">Starting the gallery of plots</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#gui.plot2d"><code class="docutils literal notranslate"><span class="pre">gui.plot2d()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C02_MSExcel.html#using-the-python-standard-library-functions-within-spreadsheet-formulas">Using the Python standard library functions within spreadsheet formulas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C02_MSExcel.html#the-worksheet-generalinfo">The worksheet “GeneralInfo”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C02_MSExcel.html#the-worksheet-math">The worksheet “Math”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C02_MSExcel.html#the-worksheet-arrays">The worksheet “Arrays”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C02_MSExcel.html#the-worksheet-data">The worksheet “Data”</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html#starting-the-interactive-3d-wpf-plots">Starting the interactive 3D wpf plots</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#gui.plot3d"><code class="docutils literal notranslate"><span class="pre">gui.plot3d()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C02_MSExcel.html#using-numpy-matplotlib-pandas-scipy-seaborn-and-xlcalcnet-within-spreadsheet-formulas">Using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet within spreadsheet formulas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C02_MSExcel.html#the-worksheet-mpinput">The worksheet “MpInput”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C02_MSExcel.html#the-worksheet-programming">The worksheet “Programming”</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html#starting-the-data-viewer">Starting the data viewer</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#gui.dataviewer"><code class="docutils literal notranslate"><span class="pre">gui.dataviewer()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C02_MSExcel.html#managing-procedures-instead-of-functions">Managing procedures instead of functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C02_MSExcel.html#uninstalling">Uninstalling</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html#starting-idle">Starting IDLE</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#gui.idle"><code class="docutils literal notranslate"><span class="pre">gui.idle()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="C03_LibreOfficeCalc.html">Using XlCalcNet within LibreOffice Calc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="C03_LibreOfficeCalc.html#preparing-libreoffice-calc-for-using-xlcalcnet">Preparing LibreOffice Calc for using XlCalcNet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C03_LibreOfficeCalc.html#installing-mpfunlablocal-oxt-and-mpfunlab-oxt">Installing MpfunlabLocal.oxt and Mpfunlab.oxt</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html#functions-related-to-folders">Functions related to folders</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#gui.get_local_appdata"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#gui.get_local_appdata_xlcalcnet"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata_xlcalcnet()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#gui.get_my_documents"><code class="docutils literal notranslate"><span class="pre">gui.get_my_documents()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_LibreOfficeCalc.html#using-the-python-standard-library-functions-within-spreadsheet-formulas">Using the Python standard library functions within spreadsheet formulas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C03_LibreOfficeCalc.html#the-worksheet-generalinfo">The worksheet “GeneralInfo”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C03_LibreOfficeCalc.html#the-worksheet-math">The worksheet “Math”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C03_LibreOfficeCalc.html#the-worksheet-arrays">The worksheet “Arrays”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C03_LibreOfficeCalc.html#the-worksheet-data">The worksheet “Data”</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html#information-about-installation-status-of-supporting-python-packages">Information about installation status of supporting python packages</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#gui.info"><code class="docutils literal notranslate"><span class="pre">gui.info()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#gui.has_gpm"><code class="docutils literal notranslate"><span class="pre">gui.has_gpm()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#gui.has_apm"><code class="docutils literal notranslate"><span class="pre">gui.has_apm()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#gui.has_xlcalcnet2"><code class="docutils literal notranslate"><span class="pre">gui.has_xlcalcnet2()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_LibreOfficeCalc.html#using-numpy-matplotlib-pandas-scipy-seaborn-and-xlcalcnet-within-spreadsheet-formulas">Using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet within spreadsheet formulas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C03_LibreOfficeCalc.html#the-worksheet-mpinput">The worksheet “MpInput”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C03_LibreOfficeCalc.html#the-worksheet-programming">The worksheet “Programming”</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html#information-about-context-lists-and-setting-global-precision">Information about context lists, and setting global precision</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#gui.ctxlistreal"><code class="docutils literal notranslate"><span class="pre">gui.ctxlistreal</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#gui.ctxlistcplx"><code class="docutils literal notranslate"><span class="pre">gui.ctxlistcplx</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#gui.setdps"><code class="docutils literal notranslate"><span class="pre">gui.setdps()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C02_GuiFunctions.html#support-for-running-interactive-matplotlib-output-in-a-separate-process">Support for running interactive Matplotlib output in a separate process</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C02_GuiFunctions.html#gui.plot"><code class="docutils literal notranslate"><span class="pre">gui.plot</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_LibreOfficeCalc.html#managing-procedures-instead-of-functions">Managing procedures instead of functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C03_LibreOfficeCalc.html#exporting-and-uninstalling">Exporting and uninstalling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C03_LibreOfficeCalc.html#exporting-changes-in-mpfunlablocal-to-mpfunlablocal-oxt">Exporting changes in MpfunlabLocal to MpfunlabLocal.oxt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C03_LibreOfficeCalc.html#uninstalling-mpfunlablocal-oxt-and-mpfunlab-oxt">Uninstalling MpfunlabLocal.oxt and Mpfunlab.oxt</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="C03_SpreadsheetFormulas.html">Building user libraries and documenting them</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#building-a-library-of-user-defined-python-functions">Building a library of user defined python functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#building-a-library-of-user-defined-functions-in-c">Building a library of user defined functions in C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C03_SpreadsheetFormulas.html#sphinx-building-documentation-for-software-with-python-html-and-pdf">Sphinx: building documentation for software with Python (html and pdf)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C04_GuiFunctions.html">General user interface and functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#starting-the-output-monitor">Starting the output monitor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.outputmonitor"><code class="docutils literal notranslate"><span class="pre">gui.outputmonitor()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="C04_PythonFromCSharp.html">Calling Python from C#</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C04_PythonFromCSharp.html#using-pythonnet-from-c">Using Pythonnet from C#</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C04_PythonFromCSharp.html#calling-the-socket-server-from-c">Calling the socket server from C#</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#starting-the-gallery-of-plots">Starting the gallery of plots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.plot2d"><code class="docutils literal notranslate"><span class="pre">gui.plot2d()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#starting-the-interactive-3d-wpf-plots">Starting the interactive 3D wpf plots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.plot3d"><code class="docutils literal notranslate"><span class="pre">gui.plot3d()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#starting-the-data-viewer">Starting the data viewer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.dataviewer"><code class="docutils literal notranslate"><span class="pre">gui.dataviewer()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#starting-idle">Starting IDLE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.idle"><code class="docutils literal notranslate"><span class="pre">gui.idle()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#functions-related-to-folders">Functions related to folders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.get_local_appdata"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.get_local_appdata_xlcalcnet"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata_xlcalcnet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.get_my_documents"><code class="docutils literal notranslate"><span class="pre">gui.get_my_documents()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#information-about-installation-status-of-supporting-python-packages">Information about installation status of supporting python packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.info"><code class="docutils literal notranslate"><span class="pre">gui.info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.has_gpm"><code class="docutils literal notranslate"><span class="pre">gui.has_gpm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.has_apm"><code class="docutils literal notranslate"><span class="pre">gui.has_apm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.has_xlcalcnet2"><code class="docutils literal notranslate"><span class="pre">gui.has_xlcalcnet2()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#information-about-context-lists-and-setting-global-precision">Information about context lists, and setting global precision</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.ctxlistreal"><code class="docutils literal notranslate"><span class="pre">gui.ctxlistreal</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.ctxlistcplx"><code class="docutils literal notranslate"><span class="pre">gui.ctxlistcplx</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.setdps"><code class="docutils literal notranslate"><span class="pre">gui.setdps()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#support-for-running-interactive-matplotlib-output-in-a-separate-process">Support for running interactive Matplotlib output in a separate process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.plot"><code class="docutils literal notranslate"><span class="pre">gui.plot</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="C05_ContextsMpmath.html">Mathematical functions based on Mpmath, Gmpy2 and Python-Flint (only Python)</a><ul>
@@ -1199,6 +1206,12 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="C08_BuildingUserLibraries.html">Building user libraries and documenting them</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="C08_BuildingUserLibraries.html#building-a-library-of-user-defined-python-functions">Building a library of user defined Python functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C08_BuildingUserLibraries.html#building-a-library-of-user-defined-functions-in-c">Building a library of user defined functions in C#</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C08_BuildingUserLibraries.html#sphinx-building-documentation-for-software-with-python-html-and-pdf">Sphinx: building documentation for software with Python (html and pdf)</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
@@ -1267,7 +1280,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Sep 30, 2026.
+  Last updated on Oct 01, 2026.
   <br/>
 </p>
   </div>
