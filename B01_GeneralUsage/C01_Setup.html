@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Setting up XlCalcNet &#8212; XlCalcNet 0.4.0 documentation</title>
+    <title>Setting up XlCalcNet &#8212; XlCalcNet 0.5.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=183391d5"></script>
+    <script src="../_static/documentation_options.js?v=e4e9a439"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Setup and general usage" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 01, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 04, 2026"/>
   </head>
   
   
@@ -890,8 +890,6 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-python-from-c-socket-server-vs-in-process-calls">Calling Python from C:#: socket server vs in-process calls</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-from-the-tinyide-or-galleryofplots-application">Starting the socketserver from the TinyIDE or GalleryOfPlots application</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-from-the-navigator-dialog-in-excel">Starting the socketserver from the Navigator dialog in Excel</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-the-socketserver-from-c">Calling the socketserver from C#</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-python-from-c-in-process">Calling Python from C# in-process</a></li>
 </ul>
@@ -1339,20 +1337,13 @@ built on top of the Python programming language”. For more information, see  <
 <section id="calling-python-from-c-socket-server-vs-in-process-calls">
 <span id="rst-clientserver"></span><h2>Calling Python from C:#: socket server vs in-process calls<a class="headerlink" href="#calling-python-from-c-socket-server-vs-in-process-calls" title="Link to this heading">#</a></h2>
 <p>A running socket server is critical for the use of XlCalcNet from Microsoft Excel.</p>
-<p>When starting the socket server for the first time from a specific installation of python.exe, a dialog will appear to allow access of this version of Python to networks. Confirm, since this is required for the socket server to work properly. If you have multiple installations of Python, you may have to do this for each installation.</p>
+<p>When starting the socket server for the first time from a specific installation of python.exe, a dialog will appear to allow access of this version of Python to networks.</p>
+<a class="reference internal image-reference" href="../_images/NetWorkAccess.png"><img alt="../_images/NetWorkAccess.png" class="align-center" src="../_images/NetWorkAccess.png" style="width: 40%;" />
+</a>
+<p>Confirm, since this is required for the socket server to work properly. If you have multiple installations of Python, you may have to do this for each installation.</p>
+<p>The socketserver is started from the TinyIDE: in the main menu, click on <code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Start</span> <span class="pre">SocketServer</span></code>.</p>
 <a class="reference internal image-reference" href="../_images/SocketServer.png"><img alt="../_images/SocketServer.png" class="align-center" src="../_images/SocketServer.png" style="width: 50%;" />
 </a>
-<p>The socket server can be startet in various ways:</p>
-<section id="starting-the-socketserver-from-the-tinyide-or-galleryofplots-application">
-<h3>Starting the socketserver from the TinyIDE or GalleryOfPlots application<a class="headerlink" href="#starting-the-socketserver-from-the-tinyide-or-galleryofplots-application" title="Link to this heading">#</a></h3>
-<p>In both applications, in the main menu, click on <code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Start</span> <span class="pre">SocketServer</span></code>. The GalleryOfPlots application starts the socketserver automatically at startup.</p>
-</section>
-<section id="starting-the-socketserver-from-the-navigator-dialog-in-excel">
-<h3>Starting the socketserver from the Navigator dialog in Excel<a class="headerlink" href="#starting-the-socketserver-from-the-navigator-dialog-in-excel" title="Link to this heading">#</a></h3>
-<p>The socketserver can also be started from the Navigator dialog in MS Excel, by clicking on the button <code class="docutils literal notranslate"><span class="pre">Start</span> <span class="pre">socket</span> <span class="pre">server</span></code>.</p>
-<a class="reference internal image-reference" href="../_images/XL_NavigatorXlCalcNet.png"><img alt="../_images/XL_NavigatorXlCalcNet.png" class="align-center" src="../_images/XL_NavigatorXlCalcNet.png" style="width: 50%;" />
-</a>
-</section>
 <section id="calling-the-socketserver-from-c">
 <h3>Calling the socketserver from C#<a class="headerlink" href="#calling-the-socketserver-from-c" title="Link to this heading">#</a></h3>
 <p>The full C# source code of the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B01_GeneralUsage/C01_Setup/D05a_CallSocketServer.cs">D05a_CallSocketServer.cs</a>.</p>
@@ -1739,8 +1730,6 @@ x_{2}
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-python-from-c-socket-server-vs-in-process-calls">Calling Python from C:#: socket server vs in-process calls</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-from-the-tinyide-or-galleryofplots-application">Starting the socketserver from the TinyIDE or GalleryOfPlots application</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-socketserver-from-the-navigator-dialog-in-excel">Starting the socketserver from the Navigator dialog in Excel</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-the-socketserver-from-c">Calling the socketserver from C#</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-python-from-c-in-process">Calling Python from C# in-process</a></li>
 </ul>
@@ -1780,7 +1769,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 01, 2026.
+  Last updated on Oct 04, 2026.
   <br/>
 </p>
   </div>
