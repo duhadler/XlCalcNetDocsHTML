@@ -53,7 +53,7 @@
     <link rel="prev" title="Setting up XlCalcNet" href="C01_Setup.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 08, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 11, 2026"/>
   </head>
   
   
@@ -908,6 +908,18 @@ document.write(`
   <p></p>
 <section id="using-xlcalcnet-within-ms-excel">
 <h1>Using XlCalcNet within MS Excel<a class="headerlink" href="#using-xlcalcnet-within-ms-excel" title="Link to this heading">#</a></h1>
+<p>Compared to Microsofts “Python in Excel” (see <a class="reference external" href="https://support.microsoft.com/en-us/excel/python/introduction-to-python-in-excel">https://support.microsoft.com/en-us/excel/python/introduction-to-python-in-excel</a>), XlCalcNet has the following features:</p>
+<ul class="simple">
+<li><p>Every thing is open source and can be modified by the user.</p></li>
+<li><p>The user can use any (locally installed) Python version from 3.8 to 3.15, and any Python package, including packages which are not supported by Microsoft.</p></li>
+<li><p>Both MS Excel 365 and MS Excel 2010 - 2024 are supported.</p></li>
+<li><p>Everything stays local. No data and no code leave the computer of the user. An internet connection is not necessary.</p></li>
+<li><p>Using Python.NET, code written in C# can also be used from Python, and therefore from MS Excel.</p></li>
+<li><p>The user can use any Python IDE, including the Tiny IDE which is part of XlCalcNet.</p></li>
+<li><p>The user can write functions of arbitrary length and complexity in Python using an external editor, and call them in a short Python script in a spreadsheet cell.</p></li>
+<li><p>Such functions can also be called as procedures from VBA.</p></li>
+<li><p>There is extensive support for calculations in multiprecision, including arbitrary precision.</p></li>
+</ul>
 <section id="preparing-ms-excel-for-using-xlcalcnet">
 <span id="rst-setting-up-msexcel"></span><h2>Preparing MS Excel for using XlCalcNet<a class="headerlink" href="#preparing-ms-excel-for-using-xlcalcnet" title="Link to this heading">#</a></h2>
 <div class="admonition important">
@@ -931,7 +943,7 @@ click on <code class="docutils literal notranslate"><span class="pre">OK</span><
 <span id="rst-xl-functions-standard"></span><h2>Using the Python standard library functions within spreadsheet formulas<a class="headerlink" href="#using-the-python-standard-library-functions-within-spreadsheet-formulas" title="Link to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In the following subsections, we will work with the file <code class="docutils literal notranslate"><span class="pre">XlDemoCPYstd.xlsx</span></code>, which contains examples for using the Python standard library. More advanced examples using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet start  <a class="reference internal" href="#rst-xl-functions-advanced"><span class="std std-ref">here</span></a>.</p>
+<p>In the following subsections, we will work with the file <code class="docutils literal notranslate"><span class="pre">XlDemoCPYstd.xlsx</span></code>, which contains examples for using the Python standard library. More advanced examples using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet start  <a class="reference internal" href="#rst-xl-functions-advanced"><span class="std std-ref">here</span></a>, and examples for using dynamic arrays in MS Excel with XlCalcNet start  <a class="reference internal" href="#rst-xl-functions-dynamic"><span class="std std-ref">here</span></a>.</p>
 </div>
 <p>Within MS Excel, open from the main menu <code class="docutils literal notranslate"><span class="pre">File</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Open</span></code> in the Documents folder the MS Excel workbook <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet\DataExamples\MainExamples\Workbooks\XlDemoCPYstd.xlsx</span></code>.</p>
 <p>This file contains several worksheets which demonstrate different possibilities of using the Python standard library within MS Excel spreadsheet formulas.</p>
@@ -980,7 +992,7 @@ click on <code class="docutils literal notranslate"><span class="pre">OK</span><
 <span id="rst-xl-functions-advanced"></span><h2>Using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet within spreadsheet formulas<a class="headerlink" href="#using-numpy-matplotlib-pandas-scipy-seaborn-and-xlcalcnet-within-spreadsheet-formulas" title="Link to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In the following subsections. we will work with the file <code class="docutils literal notranslate"><span class="pre">XlDemoCPYadv.xlsx</span></code>, which contains more advanced examples using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet. Examples for using MS Excel with the Python standard library start <a class="reference internal" href="#rst-xl-functions-standard"><span class="std std-ref">here</span></a>.</p>
+<p>In the following subsections we will work with the file <code class="docutils literal notranslate"><span class="pre">XlDemoCPYadv.xlsx</span></code>, which contains more advanced examples using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet. Examples for using MS Excel with the Python standard library start <a class="reference internal" href="#rst-xl-functions-standard"><span class="std std-ref">here</span></a>, and an example of using dynamic arrays in MS Excel starts <a class="reference internal" href="#rst-xl-functions-dynamic"><span class="std std-ref">here</span></a>.</p>
 </div>
 <p>Within MS Excel, open from the main menu <code class="docutils literal notranslate"><span class="pre">File</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Open</span></code> in the Documents folder the MS Excel workbook <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet\DataExamples\MainExamples\Workbooks\XlDemoCPYadv.xlsx</span></code>.</p>
 <p>This file contains several worksheets which demonstrate different possibilities of using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet within MS Excel spreadsheet formulas.</p>
@@ -1109,7 +1121,11 @@ click on <code class="docutils literal notranslate"><span class="pre">OK</span><
 </section>
 </section>
 <section id="using-dynamic-arrrays-in-ms-excel">
-<h2>Using dynamic arrrays in MS Excel<a class="headerlink" href="#using-dynamic-arrrays-in-ms-excel" title="Link to this heading">#</a></h2>
+<span id="rst-xl-functions-dynamic"></span><h2>Using dynamic arrrays in MS Excel<a class="headerlink" href="#using-dynamic-arrrays-in-ms-excel" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the following subsection we will work with the file <code class="docutils literal notranslate"><span class="pre">XlDemoCPYdyn.xlsx</span></code>, which contains an example of using dynamic arrays in MS Excel with XlCalcNet. Examples for using MS Excel with the Python standard library start <a class="reference internal" href="#rst-xl-functions-standard"><span class="std std-ref">here</span></a>, and more advanced examples using Numpy, Matplotlib, Pandas, Scipy, Seaborn and XlCalcNet start  <a class="reference internal" href="#rst-xl-functions-advanced"><span class="std std-ref">here</span></a>.</p>
+</div>
 <section id="the-worksheet-student-t-1sample-test">
 <h3>The worksheet “Student_t_1sample_test”<a class="headerlink" href="#the-worksheet-student-t-1sample-test" title="Link to this heading">#</a></h3>
 <p>Dynamic arrays are only supported in MS Excel 365 and MS Excel 2021 or later. In these versions, the output of a function can be an array, which is then automatically “spilled” into the cells below and to the right of the cell containing the formula. The size of the output array can be changed by changing the input parameters of the function.</p>
@@ -1277,7 +1293,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 08, 2026.
+  Last updated on Oct 11, 2026.
   <br/>
 </p>
   </div>

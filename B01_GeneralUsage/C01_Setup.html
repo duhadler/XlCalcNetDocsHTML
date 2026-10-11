@@ -53,7 +53,7 @@
     <link rel="prev" title="Setup and general usage" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 08, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 11, 2026"/>
   </head>
   
   
@@ -873,20 +873,29 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-a-version-of-python-which-is-dedicated-to-ms-excel-and-or-libreoffice-calc">Installing a version of Python which is dedicated to MS Excel and/or LibreOffice Calc</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-steps-with-xlcalcnet">First steps with XlCalcNet</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-3-folders-which-are-used-by-xlcalcnet">The 3 folders which are used by XlCalcNet</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-use-of-additional-installation-batch-files-for-installing-python-packages">Preparing the use of additional installation batch files for installing Python packages</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-python-net-calling-c-from-python">Installing and using Python.NET: Calling C# from Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-the-tiny-ide-as-a-python-application">Installing and using the Tiny IDE as a Python application</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-menu-bar-of-the-editor">The menu bar of the Editor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-context-menu-and-autocomplete-feature-of-the-editor">The context menu and autocomplete feature of the Editor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-python-development-cycle-in-the-tiny-ide">The Python development cycle in the Tiny IDE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-csharp-development-cycle-in-the-tiny-ide">The CSharp development cycle in the Tiny IDE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-output-tab-in-the-output-panel">The Output tab in the Output Panel</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code">Source code</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-numpy-matplotlib-pandas-scipy-and-seaborn">Installing and using Numpy, Matplotlib, Pandas, Scipy and Seaborn</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-numpy-matplotlib-pandas-scipy-seaborn-statsmodels-and-scikit-learn">Installing and using Numpy, Matplotlib, Pandas, Scipy, Seaborn, Statsmodels and Scikit-learn</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">Numpy</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib">Matplotlib</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas">Pandas</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scipy">Scipy</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seaborn">Seaborn</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statsmodels">Statsmodels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scikit-learn">Scikit-learn</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-python-from-c-socket-server-vs-in-process-calls">Calling Python from C:#: socket server vs in-process calls</a><ul class="visible nav section-nav flex-column">
@@ -933,9 +942,9 @@ document.write(`
 <section id="first-steps-with-xlcalcnet">
 <h3>First steps with XlCalcNet<a class="headerlink" href="#first-steps-with-xlcalcnet" title="Link to this heading">#</a></h3>
 <p>Since the path to <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> is not added to the PATH environment variable, it is convenient to prepare, within the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder, batch files for the installation of the Python packages which one wishes to install and possibly update later.</p>
-<p>The first batch file will ensure that our version of pip is up to date. Right-click over any free space in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder, select <code class="docutils literal notranslate"><span class="pre">New</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Document</span></code>. Rename this document to <code class="docutils literal notranslate"><span class="pre">A1upgradepip.bat</span></code>, ignoring the warning. Open this file for editing in the Windows standard editor. Type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">--no-warn-script-location</span> <span class="pre">pip</span></code> as install command, begin a new line, type <code class="docutils literal notranslate"><span class="pre">pause</span></code>, save the file, and close the editor.</p>
-<p>Now double-click on <code class="docutils literal notranslate"><span class="pre">A1upgradepip.bat</span></code>. This will update pip as needed.</p>
-<p>In the same way prepare a batch file named <code class="docutils literal notranslate"><span class="pre">A2installxlcalcnet.bat</span></code>, using <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span>&#160; <span class="pre">xlcalcnet</span></code> as install command. Double-click on <code class="docutils literal notranslate"><span class="pre">A2installxlcalcnet.bat</span></code>. This will install the latest version of the XlCalcNet package.</p>
+<p>The first batch file will ensure that our version of pip is up to date. Right-click over any free space in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder, select <code class="docutils literal notranslate"><span class="pre">New</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Document</span></code>. Rename this document to <code class="docutils literal notranslate"><span class="pre">A01upgradepip.bat</span></code>, ignoring the warning. Open this file for editing in the Windows standard editor. Type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">--no-warn-script-location</span> <span class="pre">pip</span></code> as install command, begin a new line, type <code class="docutils literal notranslate"><span class="pre">pause</span></code>, save the file, and close the editor.</p>
+<p>Now double-click on <code class="docutils literal notranslate"><span class="pre">A01upgradepip.bat</span></code>. This will update pip as needed.</p>
+<p>In the same way prepare a batch file named <code class="docutils literal notranslate"><span class="pre">A02installxlcalcnet.bat</span></code>, using <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span>&#160; <span class="pre">xlcalcnet</span></code> as install command. Double-click on <code class="docutils literal notranslate"><span class="pre">A02installxlcalcnet.bat</span></code>. This will install the latest version of the XlCalcNet package.</p>
 <p>To check that this installation was successful, double-click on <code class="docutils literal notranslate"><span class="pre">python.exe</span></code>, which will open the python console:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">mpm</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">40</span>
@@ -956,7 +965,10 @@ document.write(`
 <p class="admonition-title">Important</p>
 <p>It is crucial for the correct functioning of XlCalcNetThat that the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder is located in the Documents folder. The <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder has already been downloaded during the installation of XlCalcNet; it is located in the installation folder (in our example <code class="docutils literal notranslate"><span class="pre">C:\Python313\Lib\site-packages\xlcalcnet</span></code>). <strong>The user needs to copy it manually from the installation folder into the Documents folder</strong>.</p>
 </div>
-<p>With the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the Documents folder we are ready for the next step: installing Python.NET.</p>
+</section>
+<section id="preparing-the-use-of-additional-installation-batch-files-for-installing-python-packages">
+<span id="rst-installationbatchfiles"></span><h3>Preparing the use of additional installation batch files for installing Python packages<a class="headerlink" href="#preparing-the-use-of-additional-installation-batch-files-for-installing-python-packages" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder contains a number of batch files for installing additional Python packages which can be used with XlCalcNet. These batch files are located in the subfolder <code class="docutils literal notranslate"><span class="pre">\PythonBatchFiles\BatchFiles</span></code>. The user can copy these batch files into the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder, and double-click on them to install the corresponding Python packages. The user can also create new batch files for installing additional Python packages, using the same procedure as described above for creating the batch files <code class="docutils literal notranslate"><span class="pre">A01upgradepip.bat</span></code> and <code class="docutils literal notranslate"><span class="pre">A02installxlcalcnet.bat</span></code>.</p>
 <p></p>
 </section>
 </section>
@@ -964,8 +976,7 @@ document.write(`
 <h2>Installing and using Python.NET: Calling C# from Python<a class="headerlink" href="#installing-and-using-python-net-calling-c-from-python" title="Link to this heading">#</a></h2>
 <p>Python.NET is a package that gives Python programmers nearly seamless integration with the .NET Common Language Runtime (CLR) and provides a powerful application scripting tool for .NET developers. It allows Python code to interact with the CLR, and may also be used to embed Python into a .NET application.</p>
 <p>See <a class="github reference external" href="https://github.com/pythonnet/pythonnet">pythonnet/pythonnet</a></p>
-<p>Right-click over any free space in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder, select <code class="docutils literal notranslate"><span class="pre">New</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Document</span></code>. Rename this document to <code class="docutils literal notranslate"><span class="pre">A3installpythonnet.bat</span></code>, ignoring the warning. Open this file for editing in the Windows standard editor. Type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pythonnet</span></code> as install command, begin a new line, type <code class="docutils literal notranslate"><span class="pre">pause</span></code>, save the file, and close the editor.</p>
-<p>Double-click on <code class="docutils literal notranslate"><span class="pre">A3installpythonnet.bat</span></code>. This will install the latest version of the Python.NET package.</p>
+<p>Assuming that the Python batch files have been installed as described <a class="reference internal" href="#rst-installationbatchfiles"><span class="std std-ref">here</span></a>, Python.NET can be installed by double-clicking on the batch file <code class="docutils literal notranslate"><span class="pre">A03installpythonnet.bat</span></code> in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder.</p>
 <p>To check that this installation was successful, double-click on <code class="docutils literal notranslate"><span class="pre">python.exe</span></code>, which will open the python console. With Python.NET installed, we can access the C# module <code class="docutils literal notranslate"><span class="pre">qreal</span></code>, which provides functions in quadruple precision:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">qreal</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">qreal</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -1000,6 +1011,234 @@ document.write(`
 </ul>
 <p>From now on, you can start the Tiny IDE by clicking on this Python symbol on the taskbar. To start an additional instance of the Tiny IDE when the Tiny IDE is already running, click in the main menu on <code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">IDE</span> <span class="pre">(external)</span></code>. Note that the Python source code for starting the Tiny IDE is also the Python code example which is shown after starting the  Tiny IDE (in <code class="docutils literal notranslate"><span class="pre">A01_ExamplesPython\B01_GeneralUsage\C01_Setup\D03_ShowEditor.py</span></code>), so clicking on <code class="docutils literal notranslate"><span class="pre">Run</span></code> will also start an additional instance. However, now the program does not return until it is closed, as it is not running in an additional instance of Python; running the program like this is useful for debugging and testing purposes, like modifying title, width and height of the window, which can be changed on lines 67-68.</p>
 </section>
+<section id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h3>
+<p>The Tiny IDE is designed around the structure of the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder, making it easy to navigate and manage existing code examples, as well a new code written by the user. The Tiny IDE can be used only to edit and run Python or C# code examples which are located in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder and are located in subfolders beginning with <code class="docutils literal notranslate"><span class="pre">A0</span></code>. The code examples are organized in a tree structure, which is shown in the top right panel (the “folder panel”) of the Tiny IDE.</p>
+<p>The top left panel (the “editor panel”) of the Tiny IDE shows the code of the selected file, which can be edited and run. The Tiny IDE also provides features like syntax highlighting, autocompletion, bookmarks, code folding, and error highlighting to make coding easier.</p>
+<p>The output of the program is shown in the bottom panel (the “output panel”) of the Tiny IDE, which has 4 tabs: the “Log” tab, which documents the progress of compiling and running the code (and also displays warning and error messages); the “Output” tab, which shows the text output of the program (if any); the “Function Info” tab, which provides information about the functions (if they belong to a module from XlCalcNet); and the “Search Results” tab, which shows the search results.</p>
+<p>Each file in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet\A0*</span></code> folders can be opened in the Tiny IDE by clicking on it. Per Tiny IDE instance, only one file can be opened, edited and run at a time (to open an additional file, you need to start a new instance of the Tiny IDE: <code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">IDE</span> <span class="pre">(external)</span></code>). The Tiny IDE will load this file into the editor, and the code can be edited and run. To run the code, click on the “Run” button in the main menu. The output of the program (if any) is shown in the output tab of the output panel.</p>
+<p>The ordering and naming of the code examples in the subfolders <code class="docutils literal notranslate"><span class="pre">A01_ExamplesPython</span></code> and <code class="docutils literal notranslate"><span class="pre">A02_ExamplesCSharp</span></code> matches the ordering and naming of the corresponding chapters, sections and subsections in this manual, making it easy to find the code example which corresponds to a specific section of the manual. In addition, the “section help” feature (<code class="docutils literal notranslate"><span class="pre">Help</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Section</span> <span class="pre">Help</span></code>), which is available in the main menu of the Tiny IDE and opens the corresponding section of this manual in a web browser, depends on this ordering and naming.</p>
+<p>Also, in Python, the feature that code examples can be called like modules, using statements like <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">A01_ExamplesPython.B17_VisualisationOfDatasets.C01_BarCharts</span> <span class="pre">import</span> <span class="pre">D01_BarChartPart1</span></code>, depends on keeping this ordering and naming intact.</p>
+<p>Therefore the names of these folders and files should not be changed, and new code examples should be added to the appropriate folders, either <code class="docutils literal notranslate"><span class="pre">A03_UserlibPython</span></code> or <code class="docutils literal notranslate"><span class="pre">A04_UserlibCSharp</span></code> for user-defined libraries, or <code class="docutils literal notranslate"><span class="pre">A05_UserExamplesPython</span></code> or <code class="docutils literal notranslate"><span class="pre">A06_UserExamplesCSharp</span></code> for code examples which demonstrate the use of existing or user-defined libraries. The Tiny IDE will automatically detect new files and folders, and will update the tree structure accordingly.</p>
+</section>
+<section id="the-menu-bar-of-the-editor">
+<h3>The menu bar of the Editor<a class="headerlink" href="#the-menu-bar-of-the-editor" title="Link to this heading">#</a></h3>
+<a class="reference internal image-reference" href="../_images/MenuBar.png"><img alt="../_images/MenuBar.png" class="align-center" src="../_images/MenuBar.png" style="width: 90%;" />
+</a>
+<p>The Menubar of the Tiny IDE contains the following menus: <code class="docutils literal notranslate"><span class="pre">File</span></code>, <code class="docutils literal notranslate"><span class="pre">Edit</span></code>, <code class="docutils literal notranslate"><span class="pre">View</span></code>, <code class="docutils literal notranslate"><span class="pre">Search</span></code>, <code class="docutils literal notranslate"><span class="pre">Tools</span></code>, and <code class="docutils literal notranslate"><span class="pre">Help</span></code>. Each menu contains a number of items, which are described below.</p>
+<p>There are also two buttons (with green foreground color) in the menu bar: the “Run” button, which runs the code of the current file, and the “Show/Hide” button, which toggles the visibility of the folder panel.</p>
+<p><br /></p>
+<a class="reference internal image-reference" href="../_images/FileMenu.png"><img alt="../_images/FileMenu.png" class="align-center" src="../_images/FileMenu.png" style="width: 30%;" />
+</a>
+<p>In the <code class="docutils literal notranslate"><span class="pre">File</span></code> menu, two standard items are missing: “New” and “Open”.</p>
+<p>The “New” item is missing because the Tiny IDE is designed to work within the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder, and therefore new files which are not in the current folder should be created in the appropriate subfolders of <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code>, which often have to be created manually first using the Windows Explorer.</p>
+<p>There is, however, a <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">As</span></code> item in the file menu, which allows to save the current file under a new name in the current folder. This is useful for creating a copy of an existing file, and using this as a starting point for a new file.</p>
+<p>The “Open” item (which would typically open a dialog box with the functionally of the Windows Explorer) is missing because the Tiny IDE is limited to the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder. Instead the folder panel allows to navigate through the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder and open any file in it.</p>
+<p>Renaming or deleting files and folders is possible, but should be done with care, using the Windows Explorer, and not using the Tiny IDE. After these changes, when returning to the Tiny IDE, the tree structure will not be updated automatically, but has to be updated manually by clicking on the appropriate parent folder in the tree structure.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Containing</span> <span class="pre">Folder</span></code> opens the Windows Explorer in the folder of the current file. This is useful for quickly accessing other files in the same folder, or for deleting files and folders.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Appdata</span> <span class="pre">Local</span> <span class="pre">Folder</span></code> opens the Windows Explorer in the <code class="docutils literal notranslate"><span class="pre">AppData\Local\XlCalcNetIDE</span></code> folder. This is useful for quickly accessing files and folders which are generated by running Python or C# code examples in the Tiny IDE.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Binary</span> <span class="pre">Folder</span></code> opens the Windows Explorer in the <code class="docutils literal notranslate"><span class="pre">Bin</span></code> subfolder of the <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span></code> installation. This is useful mostly for debugging purposes.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Page</span> <span class="pre">Setup</span></code> opens the standard Windows dialog for setting up the page layout for printing. <code class="docutils literal notranslate"><span class="pre">Print</span> <span class="pre">Preview</span></code> opens a preview of the current file, which can be printed from there. <code class="docutils literal notranslate"><span class="pre">Print</span></code> opens the standard Windows dialog for printing the current file.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Save</span></code> will just save the current file without any further action. <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">As</span></code> has been descibed above. <code class="docutils literal notranslate"><span class="pre">Exit</span></code> will close the Tiny IDE.</p>
+<p><br /></p>
+<a class="reference internal image-reference" href="../_images/EditMenu.png"><img alt="../_images/EditMenu.png" class="align-center" src="../_images/EditMenu.png" style="width: 26%;" />
+</a>
+<p>In the <code class="docutils literal notranslate"><span class="pre">Edit</span></code> menu, <code class="docutils literal notranslate"><span class="pre">Undo</span></code>, <code class="docutils literal notranslate"><span class="pre">Redo</span></code>, <code class="docutils literal notranslate"><span class="pre">Cut</span></code>, <code class="docutils literal notranslate"><span class="pre">Copy</span></code>, <code class="docutils literal notranslate"><span class="pre">Paste</span></code>, <code class="docutils literal notranslate"><span class="pre">Delete</span></code>, and <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">All</span></code> are standard items.  <code class="docutils literal notranslate"><span class="pre">Insert</span> <span class="pre">BlockComment</span></code> and <code class="docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">BlockComment</span></code> allows to comment or uncomment a block of code, which is useful for testing purposes (these 2 items are available in the context menu as well). <code class="docutils literal notranslate"><span class="pre">Indent</span></code> and <code class="docutils literal notranslate"><span class="pre">Unindent</span></code> allow to indent or unindent a block of code, which is useful for formatting purposes.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Character</span> <span class="pre">Map</span></code> opens the standard Windows dialog for selecting special characters, which can be inserted into the code. <code class="docutils literal notranslate"><span class="pre">Calculator</span></code> opens the standard Windows calculator, which can be used for quick calculations.</p>
+<p><br /></p>
+<a class="reference internal image-reference" href="../_images/ViewMenu.png"><img alt="../_images/ViewMenu.png" class="align-center" src="../_images/ViewMenu.png" style="width: 26%;" />
+</a>
+<p>In the <code class="docutils literal notranslate"><span class="pre">View</span></code> menu, <code class="docutils literal notranslate"><span class="pre">Collapse</span> <span class="pre">Top</span> <span class="pre">Level</span> <span class="pre">Folds</span></code> allows to collapse all top level folds in the code, which is useful for quickly navigating through the code.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Expand</span> <span class="pre">All</span> <span class="pre">Folds</span></code> allow to collapse or expand all folds in the code, which will make all code visible</p>
+<p><code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">Indentation</span> <span class="pre">Guides</span></code> toggles the visibility of indentation guides in the editor panel.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Word</span> <span class="pre">Wrap</span></code> toggles word wrap in the editor panel.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">Whitespace</span></code> toggles the visibility of whitespace characters in the editor panel.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">EOL</span></code> toggles the visibility of end of line markers in the editor panel.</p>
+<a class="reference internal image-reference" href="../_images/SearchMenu.png"><img alt="../_images/SearchMenu.png" class="align-center" src="../_images/SearchMenu.png" style="width: 30%;" />
+</a>
+<p>In the <code class="docutils literal notranslate"><span class="pre">Search</span></code> menu, <code class="docutils literal notranslate"><span class="pre">Find</span></code> starts the search for a string in the code, <code class="docutils literal notranslate"><span class="pre">Replace</span></code> allows to replace a string in the code, and <code class="docutils literal notranslate"><span class="pre">Goto</span></code> allows to jump to a specific line number in the code.</p>
+<p>The corresponding dialog boxes are shown below:</p>
+<a class="reference internal image-reference" href="../_images/Find.png"><img alt="../_images/Find.png" class="align-center" src="../_images/Find.png" style="width: 50%;" />
+</a>
+<p>If the string is found, the first occurrence is highlighted in the code. If the string is not found, a message box appears which informs that the string was not found. The search can be continued by clicking on <code class="docutils literal notranslate"><span class="pre">Find</span> <span class="pre">Next</span></code> or <code class="docutils literal notranslate"><span class="pre">Find</span> <span class="pre">Previous</span></code>. The search can be limited to the current selection, and it can be case sensitive or insensitive. The search can also be done using regular expressions.</p>
+<a class="reference internal image-reference" href="../_images/Replace.png"><img alt="../_images/Replace.png" class="align-center" src="../_images/Replace.png" style="width: 50%;" />
+</a>
+<p>If the string is found, the first occurrence is highlighted in the code. If the string is not found, a message box appears which informs that the string was not found. The search can be continued by clicking on <code class="docutils literal notranslate"><span class="pre">Find</span> <span class="pre">Next</span></code> or <code class="docutils literal notranslate"><span class="pre">Find</span> <span class="pre">Previous</span></code>. <code class="docutils literal notranslate"><span class="pre">Replace</span> <span class="pre">Next</span></code>, <code class="docutils literal notranslate"><span class="pre">Replace</span> <span class="pre">Previous</span></code> or <code class="docutils literal notranslate"><span class="pre">Replace</span> <span class="pre">All</span></code> can be used to decide what to do with the found string. The search can be limited to the current selection, and it can be case sensitive or insensitive. The search can also be done using regular expressions.</p>
+<a class="reference internal image-reference" href="../_images/Goto.png"><img alt="../_images/Goto.png" class="align-center" src="../_images/Goto.png" style="width: 30%;" />
+</a>
+<p>if the line number is valid, the cursor jumps to the specified line number. If the line number is invalid, a message box appears which informs that the line number is invalid.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Toggle</span> <span class="pre">Bookmark</span></code> allows to set or delete a bookmark in the code, which can be used to quickly navigate through the code.
+<code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">All</span> <span class="pre">Bookmarks</span></code> deletes all bookmarks in the code.
+<code class="docutils literal notranslate"><span class="pre">Next</span> <span class="pre">Bookmark</span></code> jumps to the next bookmark in the code.
+<code class="docutils literal notranslate"><span class="pre">Previous</span> <span class="pre">Bookmark</span></code> jumps to the previous bookmark in the code.</p>
+<p><br /></p>
+<a class="reference internal image-reference" href="../_images/ToolsMenu.png"><img alt="../_images/ToolsMenu.png" class="align-center" src="../_images/ToolsMenu.png" style="width: 26%;" />
+</a>
+<p>In the <code class="docutils literal notranslate"><span class="pre">Tools</span></code> menu, <code class="docutils literal notranslate"><span class="pre">Start</span> <span class="pre">Socket</span> <span class="pre">Server</span></code> starts the socket server, see <a class="reference internal" href="#rst-clientserver"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Start</span> <span class="pre">Output</span> <span class="pre">Monitor</span></code> starts the output monitor application, see <a class="reference internal" href="C04_GuiFunctions.html#rst-outputmonitor"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">IDE</span> <span class="pre">(external)</span></code> starts an additional instance of the Tiny IDE, which can be used to edit and run another file.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Gallery</span> <span class="pre">of</span> <span class="pre">Plots</span></code> starts the gallery of plots application, see <a class="reference internal" href="C04_GuiFunctions.html#rst-galleryofplots"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Interactive</span> <span class="pre">3D</span> <span class="pre">Wpf</span> <span class="pre">Plots</span></code> starts the Interactive 3D Wpf Plots application, see <a class="reference internal" href="C04_GuiFunctions.html#rst-wpf3d"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">Data</span> <span class="pre">Viewer</span></code> starts the Tiny Data Viewer application, see <a class="reference internal" href="C04_GuiFunctions.html#rst-dataviewer"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">IDLE</span></code> starts the Python IDLE application, see <a class="reference internal" href="C04_GuiFunctions.html#rst-idle"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Console</span></code> starts the Python console.</p>
+<p><br /></p>
+<a class="reference internal image-reference" href="../_images/HelpMenu.png"><img alt="../_images/HelpMenu.png" class="align-center" src="../_images/HelpMenu.png" style="width: 30%;" />
+</a>
+<p>In the <code class="docutils literal notranslate"><span class="pre">Help</span></code> menu, <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span> <span class="pre">Manual</span> <span class="pre">(online)...</span></code> displays the start page of the XlCalcNet online manual in a web browser.</p>
+<p><code class="docutils literal notranslate"><span class="pre">XlCalcNet</span> <span class="pre">Section</span> <span class="pre">Help</span> <span class="pre">(online)...</span></code> displays the section of the XlCalcNet.online manual which corresponds to the current file in a web browser.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">IDE</span> <span class="pre">Tutorial</span> <span class="pre">(online)...</span></code> displays the section of the XlCalcNet.online manual which explains the use of the Tiny IDE in a web browser.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Tutorial</span> <span class="pre">(online)...</span></code> displays the online tutorial for Python, which is available on the official Python website in a web browser.</p>
+<p><code class="docutils literal notranslate"><span class="pre">C\#</span> <span class="pre">Tutorial</span> <span class="pre">(online)...</span></code> displays the online tutorial for C#, which is available on the official C# website in a web browser.</p>
+<p><code class="docutils literal notranslate"><span class="pre">About</span> <span class="pre">XlCalcNet...</span></code> displays information about the XlCalcNet package, including version number and copyright information.</p>
+</section>
+<section id="the-context-menu-and-autocomplete-feature-of-the-editor">
+<h3>The context menu and autocomplete feature of the Editor<a class="headerlink" href="#the-context-menu-and-autocomplete-feature-of-the-editor" title="Link to this heading">#</a></h3>
+<p>Right-clicking in the editor panel opens a context menu, which provides quick access to common actions like <code class="docutils literal notranslate"><span class="pre">Insert</span> <span class="pre">Block</span></code>, <code class="docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">Block</span> <span class="pre">Comment</span></code>, <code class="docutils literal notranslate"><span class="pre">Collapse</span> <span class="pre">Top</span> <span class="pre">Level</span> <span class="pre">Folds</span></code>, <code class="docutils literal notranslate"><span class="pre">Expand</span> <span class="pre">All</span> <span class="pre">Folds</span></code>, <code class="docutils literal notranslate"><span class="pre">Goto</span> <span class="pre">Previous</span> <span class="pre">Bookmark</span></code>, <code class="docutils literal notranslate"><span class="pre">Goto</span> <span class="pre">Next</span> <span class="pre">Bookmark</span></code>, all of which are also available in the main menu.</p>
+<p>New in this context menu is the item <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">Function</span> <span class="pre">Info</span></code>, which for functions which belong to a module from XlCalcNet, displays information about the function in the “Function Info” tab of the output panel.</p>
+<a class="reference internal image-reference" href="../_images/EditorContextMenu.png"><img alt="../_images/EditorContextMenu.png" class="align-center" src="../_images/EditorContextMenu.png" style="width: 50%;" />
+</a>
+<p>In the screenshot above, the context menu is shown after right-clicking on the function <code class="docutils literal notranslate"><span class="pre">dreal.bessel_jv</span></code> (with the curser to the right of the dot). The item <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">Function</span> <span class="pre">Info</span></code> is highlighted, and the corresponding information about this function is shown in the “Function Info” tab of the output panel below.</p>
+<a class="reference internal image-reference" href="../_images/ShowInManual.png"><img alt="../_images/ShowInManual.png" class="align-center" src="../_images/ShowInManual.png" style="width: 50%;" />
+</a>
+<p>Just to the upper left of the <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">Function</span> <span class="pre">Info</span></code> item, the button <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">in</span> <span class="pre">Manual</span></code> is visible. Clicking on this button opens the corresponding section of the XlCalcNet online manual in a web browser.</p>
+<a class="reference internal image-reference" href="../_images/AutoCompleteModule.png"><img alt="../_images/AutoCompleteModule.png" class="align-center" src="../_images/AutoCompleteModule.png" style="width: 50%;" />
+</a>
+<p>This works in combination with the autocomplete feature, which is activated by pressing <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Space</span></code>. The autocomplete feature shows a list of functions which belong to a module from XlCalcNet, and for each function, the corresponding information is shown in the “Function Info” tab of the output panel. This allows to quickly find the function which is needed, and to see how it can be used.</p>
+<a class="reference internal image-reference" href="../_images/AutoCompleteLibrary.png"><img alt="../_images/AutoCompleteLibrary.png" class="align-center" src="../_images/AutoCompleteLibrary.png" style="width: 50%;" />
+</a>
+<p>The autocomplete feature also works for user-defined libraries, however in these cases no additional information is shown in the “Function Info” tab of the output panel.</p>
+</section>
+<section id="the-python-development-cycle-in-the-tiny-ide">
+<h3>The Python development cycle in the Tiny IDE<a class="headerlink" href="#the-python-development-cycle-in-the-tiny-ide" title="Link to this heading">#</a></h3>
+<p>Here we describe the Python development cycle in the Tiny IDE for producing and running python programs.  The process for producing a Python library is similar but different, and is described <a class="reference internal" href="C08_BuildingUserLibraries.html#rst-makingpythonlib"><span class="std std-ref">here</span></a>.</p>
+<p>Overall, the Python development cycle in the Tiny IDE consists of the following steps: The file is opened in the editor panel, and the code is edited as needed. The code can be run by clicking on the “Run” button in the main menu bar. If there are any errors or warnings, they are shown in the “Log” tab of the output panel. When clicking on the error messages in the “Log” tab, they are also highlighted in the code. After correcting the errors, the “Run” button can be clicked again. If there are no errors, the code is  is executed. Any text output of the program is shown in the “Output” tab of the output panel after the program has finished running.</p>
+<p>These steps are illustrated in the following screenshots, which show the Python development cycle in the Tiny IDE for producing and running python programs.</p>
+<a class="reference internal image-reference" href="../_images/PythonCodeFolded.png"><img alt="../_images/PythonCodeFolded.png" class="align-center" src="../_images/PythonCodeFolded.png" style="width: 50%;" />
+</a>
+<p>Directly after loading the Python code example, the code is folded, and the “Log” tab of the output panel is empty. The “Output” tab of the output panel is also empty, since the program has not been run yet. The unfolded code looks like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># See: https://python-graph-gallery.com/80-contour-plot-with-seaborn/</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">KdePlot3</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">OutputDir</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;OutputDir&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;OutputDir&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="s1">&#39;OutputMonitor&#39;</span>
+    <span class="n">Title</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;Title&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;Title&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="s1">&#39;KdePlot3&#39;</span>
+    <span class="n">PlotStyle</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;PlotStyle&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;PlotStyle&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="s1">&#39;default&#39;</span>
+    <span class="n">OutputMode</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;OutputMode&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;OutputMode&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="s1">&#39;svg&#39;</span>
+    <span class="n">FigSizeX</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;FigSizeX&#39;</span><span class="p">])</span> <span class="k">if</span> <span class="s1">&#39;FigSizeX&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="mi">4</span>
+    <span class="n">FigSizeY</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;FigSizeY&#39;</span><span class="p">])</span> <span class="k">if</span> <span class="s1">&#39;FigSizeY&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="mi">4</span>
+    <span class="n">Resolution</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;Resolution&#39;</span><span class="p">])</span> <span class="k">if</span> <span class="s1">&#39;Resolution&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="mi">300</span>
+<span class="c1"># End of standard key word arguments</span>
+
+    <span class="c1"># Choose &#39;Agg&#39; as backend unless we want to display the graphics</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">OutputMode</span> <span class="o">!=</span> <span class="s1">&#39;gui&#39;</span><span class="p">):</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span>
+        <span class="n">matplotlib</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;Agg&#39;</span><span class="p">)</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">PlotStyle</span><span class="p">)</span>
+
+    <span class="n">fn</span> <span class="o">=</span> <span class="n">gui</span><span class="o">.</span><span class="n">get_dataxlcalcnet</span><span class="p">()</span>
+    <span class="n">fn</span> <span class="o">+=</span> <span class="sa">r</span><span class="s1">&#39;\DataExamples\MainExamples\Workbooks\Datasets.xlsx&#39;</span>
+    <span class="n">datasets</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">ExcelFile</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">datasets</span><span class="p">,</span> <span class="s1">&#39;iris&#39;</span><span class="p">)</span>
+
+    <span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">sepal_width</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">sepal_length</span><span class="p">,</span>
+                <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bw_adjust</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+
+<span class="c1"># Start of output choices</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">OutputMode</span> <span class="o">==</span> <span class="s1">&#39;plt&#39;</span><span class="p">):</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">OutputMode</span> <span class="o">==</span> <span class="s1">&#39;gui&#39;</span><span class="p">):</span>
+        <span class="n">gui</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="vm">__file__</span><span class="p">,</span> <span class="n">Title</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">FName</span> <span class="o">=</span> <span class="s1">&#39;Temp&#39;</span>
+        <span class="k">if</span> <span class="n">OutputDir</span> <span class="o">!=</span> <span class="s1">&#39;Temp&#39;</span><span class="p">:</span> <span class="n">FName</span> <span class="o">=</span> <span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">stem</span><span class="p">)</span>
+        <span class="n">LocalDir</span> <span class="o">=</span> <span class="n">gui</span><span class="o">.</span><span class="n">get_local_appdata_xlcalcnet</span><span class="p">()</span>
+        <span class="n">FullPath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">LocalDir</span><span class="p">,</span> <span class="n">OutputDir</span><span class="p">,</span> <span class="n">FName</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span> <span class="o">+</span> <span class="n">OutputMode</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">FullPath</span><span class="p">,</span>  <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">OutputDir</span> <span class="o">!=</span> <span class="s1">&#39;Temp&#39;</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Graphics written to: &#39;</span><span class="p">,</span> <span class="n">FullPath</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+        <span class="n">start0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">KdePlot3</span><span class="p">(</span><span class="n">OutputMode</span> <span class="o">=</span> <span class="s1">&#39;gui&#39;</span><span class="p">)</span>
+        <span class="n">end0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Elapsed time:&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="p">(</span><span class="n">end0</span> <span class="o">-</span> <span class="n">start0</span><span class="p">,</span> <span class="s1">&#39;.4g&#39;</span><span class="p">),</span> <span class="s1">&#39;seconds&#39;</span> <span class="p">)</span>
+
+
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">traceback</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Folding in Python works on code blocks which are defined by indentation. At the top of the file are the import statements, followed by a <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">funcname(**kwargs)</span></code> statement, where “funcname” in this case is <code class="docutils literal notranslate"><span class="pre">KdePlot3</span></code>. The body of this function is the place where “the real work” is done.</p>
+<p>This function also has two standardized parts (for Matplotlib graphic code examples), one at the beginning, which takes care of the keyword arguments and ensures that the ‘Agg’ backend is used unless one wants to display the graphics (this is necessary to ensure this function can be called from older versions of Libreoffice like 7.4); and another at the end (”# Start of output choices”), which makes sure that interactive use, output to the OutputMonitor folder, or output to another folder is possible in verious formats (like jpg, png, svg, pdf).</p>
+<p>At the end of the file, the <code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">...</span> <span class="pre">except</span></code> block makes sure that exceptions are dealt with properly, that the time for actually running the code (as opposed to the time required to load and initialize the imported libraries) is printed, and that we have the chance to call the function with a specific set of keyword arguments (in this case <code class="docutils literal notranslate"><span class="pre">OutputMode</span> <span class="pre">=</span> <span class="pre">'gui'</span></code>).</p>
+<p>Python files with this overall structure are well suited for calls from within spreadsheet functions.</p>
+<a class="reference internal image-reference" href="../_images/PythonFoldedOutput.png"><img alt="../_images/PythonFoldedOutput.png" class="align-center" src="../_images/PythonFoldedOutput.png" style="width: 50%;" />
+</a>
+<p>The output of the program is shown in the “Output” tab of the output panel after the program has finished running. Lengthy text output can be folded and unfolded, and the context menu allows to copy the output to the clipboard, clear the output, or save the output to a file.</p>
+<a class="reference internal image-reference" href="../_images/PythonLog.png"><img alt="../_images/PythonLog.png" class="align-center" src="../_images/PythonLog.png" style="width: 50%;" />
+</a>
+<p>The “Log” tab of the output panel contains additional information after successfully running the program.</p>
+<a class="reference internal image-reference" href="../_images/PythonErrorBeforeRun.png"><img alt="../_images/PythonErrorBeforeRun.png" class="align-center" src="../_images/PythonErrorBeforeRun.png" style="width: 50%;" />
+</a>
+<p>The snapshot above shows a code snippet which contains an error (<code class="docutils literal notranslate"><span class="pre">print</span></code> is misspelled as print2``)</p>
+<a class="reference internal image-reference" href="../_images/PythonErrorMsgInLog.png"><img alt="../_images/PythonErrorMsgInLog.png" class="align-center" src="../_images/PythonErrorMsgInLog.png" style="width: 50%;" />
+</a>
+<p>This error is detected by the Python interpreter, and is reported in the Log tab of the output panel.</p>
+<a class="reference internal image-reference" href="../_images/PythonErrorMsgInCode.png"><img alt="../_images/PythonErrorMsgInCode.png" class="align-center" src="../_images/PythonErrorMsgInCode.png" style="width: 50%;" />
+</a>
+<p>After double-clicking in the Log tab on the first line in red color, the error is also indicated in the editor, with a full error message below the line where the error occured.</p>
+</section>
+<section id="the-csharp-development-cycle-in-the-tiny-ide">
+<h3>The CSharp development cycle in the Tiny IDE<a class="headerlink" href="#the-csharp-development-cycle-in-the-tiny-ide" title="Link to this heading">#</a></h3>
+<p>Here we describe the C# development cycle in the Tiny IDE for producing <code class="docutils literal notranslate"><span class="pre">*.exe</span></code> files which are stored in the <code class="docutils literal notranslate"><span class="pre">AppData\Local\XlCalcNetIDE\Bin</span></code> folder, and which can be run immediately. The process for producing  <code class="docutils literal notranslate"><span class="pre">*.dll</span></code> files which can be called from Python is similar but different, and is described <a class="reference internal" href="C08_BuildingUserLibraries.html#rst-makingcsharpdlls"><span class="std std-ref">here</span></a>.</p>
+<p>Overall, the C# development cycle in the Tiny IDE consists of the following steps: The file is opened in the editor panel, and the code is edited as needed. The code can be compiled by clicking on the “Run” button in the main menu bar. If there are any errors or warnings, they are shown in the “Log” tab of the output panel. When clicking on the error messages in the “Log” tab, they are also highlighted in the code. After correcting the errors, the “Run” button can be clicked again to compile the code. If there are no errors, the code is compiled into a <code class="docutils literal notranslate"><span class="pre">*.exe</span></code> file, which is stored in the <code class="docutils literal notranslate"><span class="pre">AppData\Local\XlCalcNetIDE\Bin</span></code> folder and which is executed automatically after successful compilation. Any text output of the program is shown in the “Output” tab of the output panel after the program has finished running.</p>
+<p>These steps are illustrated in the following screenshots, which show the C# development cycle in the Tiny IDE for producing <code class="docutils literal notranslate"><span class="pre">*.exe</span></code> files:</p>
+<a class="reference internal image-reference" href="../_images/CSharpFolding.png"><img alt="../_images/CSharpFolding.png" class="align-center" src="../_images/CSharpFolding.png" style="width: 50%;" />
+</a>
+<p>Directly after loading the C# code example, the code is folded, and the “Log” tab of the output panel is empty. The “Output” tab of the output panel is also empty, since the program has not been run yet.</p>
+<p>Folding in C# works both on regions and on code blocks. Overall, the folding of regions is more important than the folding of code blocks, since it allows to hide the implementation of functions and classes, and to focus on the overall structure of the code. The folding of code blocks is useful for hiding the implementation of loops and conditional statements, and to focus on the overall structure of the code.</p>
+<p>The screenshot above shows the overall structure of the C# code examples in XlCalcNet, which are organized into regions. The first region contains the using statements, followed (outside of any region) by a <code class="docutils literal notranslate"><span class="pre">static</span> <span class="pre">class</span> <span class="pre">Program</span></code> statement, and the first function in this class, which always has the form <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">static</span> <span class="pre">void</span> <span class="pre">MainTests()</span></code>. The body of this function contains calls to the functions where “the real work” is done.</p>
+<p>The implementations of these functions are located in the following regions (in this example the regions “ScplxTest0” and “ScplxTest1”), which are organized according to the functionality of the functions. The next region is called “Main”, and contains the implementation of the <code class="docutils literal notranslate"><span class="pre">Main</span></code> function, which is the entry point of the program, and contains a lot of necessary boilerplate code, which makes sure that the program can run without a project file (which Visual Studio would require). The last region is called “EOF”, and makes sure that code folding is working properly (adressing a small bug in the underlying ScintillaNet library). These last two regions should never be changed by the user during normal use.</p>
+<a class="reference internal image-reference" href="../_images/CSharpOutput.png"><img alt="../_images/CSharpOutput.png" class="align-center" src="../_images/CSharpOutput.png" style="width: 50%;" />
+</a>
+<p>The output of the program is shown in the “Output” tab of the output panel after the program has finished running. The output can be folded and unfolded, and the context menu allows to copy the output to the clipboard, clear the output, or save the output to a file.</p>
+<a class="reference internal image-reference" href="../_images/CSharpRun.png"><img alt="../_images/CSharpRun.png" class="align-center" src="../_images/CSharpRun.png" style="width: 50%;" />
+</a>
+<p>The “Log” tab of the output panel contains additional information after successfully compiling and running the program.</p>
+<a class="reference internal image-reference" href="../_images/CSharpErrorBeforeCompile.png"><img alt="../_images/CSharpErrorBeforeCompile.png" class="align-center" src="../_images/CSharpErrorBeforeCompile.png" style="width: 50%;" />
+</a>
+<p>The snapshot above shows a code snippet which contains an error (the variable <code class="docutils literal notranslate"><span class="pre">res1</span></code> is defined twice)</p>
+<a class="reference internal image-reference" href="../_images/CSharpErrorLogAfterCompile.png"><img alt="../_images/CSharpErrorLogAfterCompile.png" class="align-center" src="../_images/CSharpErrorLogAfterCompile.png" style="width: 50%;" />
+</a>
+<p>This error is detected by the compiler, and is reported in the Log tab of the output panel.</p>
+<a class="reference internal image-reference" href="../_images/CSharpErrorMsgInCode.png"><img alt="../_images/CSharpErrorMsgInCode.png" class="align-center" src="../_images/CSharpErrorMsgInCode.png" style="width: 50%;" />
+</a>
+<p>After double-clicking in the Log tab on the first line in red color, the error is also indicated in the editor, with a full error message below the line where the error occured.</p>
+<a class="reference internal image-reference" href="../_images/CSharpWarningMsgInCode.png"><img alt="../_images/CSharpWarningMsgInCode.png" class="align-center" src="../_images/CSharpWarningMsgInCode.png" style="width: 50%;" />
+</a>
+<p>Warnings are treated in a way similar to errors: in this case the program is compiled (in the absence of errors), but is not run. Instead the warning is shown in the Log tab, and after double-clicking on it the warning is also indicated in the editor, with a full error message below the line where the warning was triggered.</p>
+</section>
+<section id="the-output-tab-in-the-output-panel">
+<h3>The Output tab in the Output Panel<a class="headerlink" href="#the-output-tab-in-the-output-panel" title="Link to this heading">#</a></h3>
+<p>Describe the toolbar on top of the Output tab.</p>
+<p>Note that the Output tab in the Output Panel can be used to display any text output of a Python or C# program. The output can be folded and unfolded, and the context menu allows to copy the output to the clipboard, clear the output, or save the output to a file.</p>
+<a class="reference internal image-reference" href="../_images/OutputFoldingContextMenu.png"><img alt="../_images/OutputFoldingContextMenu.png" class="align-center" src="../_images/OutputFoldingContextMenu.png" style="width: 50%;" />
+</a>
+</section>
 <section id="source-code">
 <h3>Source code<a class="headerlink" href="#source-code" title="Link to this heading">#</a></h3>
 <p>The Python source code for starting the IDE can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowEditor.py">duhadler/XlCalcNet</a></p>
@@ -1007,14 +1246,12 @@ document.write(`
 <p></p>
 </section>
 </section>
-<section id="installing-and-using-numpy-matplotlib-pandas-scipy-and-seaborn">
-<h2>Installing and using Numpy, Matplotlib, Pandas, Scipy and Seaborn<a class="headerlink" href="#installing-and-using-numpy-matplotlib-pandas-scipy-and-seaborn" title="Link to this heading">#</a></h2>
+<section id="installing-and-using-numpy-matplotlib-pandas-scipy-seaborn-statsmodels-and-scikit-learn">
+<h2>Installing and using Numpy, Matplotlib, Pandas, Scipy, Seaborn, Statsmodels and Scikit-learn<a class="headerlink" href="#installing-and-using-numpy-matplotlib-pandas-scipy-seaborn-statsmodels-and-scikit-learn" title="Link to this heading">#</a></h2>
 <section id="numpy">
 <h3>Numpy<a class="headerlink" href="#numpy" title="Link to this heading">#</a></h3>
 <p>Numpy is “The fundamental package for scientific computing with Python”. For more information, see  <a class="reference external" href="https://numpy.org/">https://numpy.org/</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/NumPy">https://en.wikipedia.org/wiki/NumPy</a>.</p>
-<p>To install Numpy, follow these steps:</p>
-<p>Right-click over any free space in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder, select <code class="docutils literal notranslate"><span class="pre">New</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Document</span></code>. Rename this document to <code class="docutils literal notranslate"><span class="pre">A4installnumpy.bat</span></code>, ignoring the warning. Open this file for editing in the Windows standard editor. Type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">--no-warn-script-location</span> <span class="pre">numpy</span></code> as install command, begin a new line, type <code class="docutils literal notranslate"><span class="pre">pause</span></code>, save the file, and close the editor.</p>
-<p>Double-click on <code class="docutils literal notranslate"><span class="pre">A4installnumpy.bat</span></code>. This will install the latest version of Numpy.</p>
+<p>Assuming that the Python batch files have been installed as described <a class="reference internal" href="#rst-installationbatchfiles"><span class="std std-ref">here</span></a>, Numpy can be installed by double-clicking on the batch file <code class="docutils literal notranslate"><span class="pre">A04installnumpy.bat</span></code> in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder.</p>
 <p>The following example shows how Numpy can be used with the Decimal type to calculate the mean:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">dpm</span>
@@ -1077,9 +1314,7 @@ res = np.mean(R, axis=1):
 <section id="matplotlib">
 <h3>Matplotlib<a class="headerlink" href="#matplotlib" title="Link to this heading">#</a></h3>
 <p>Matplotlib is “a comprehensive library for creating static, animated, and interactive visualizations in Python”. For more information, see  <a class="reference external" href="https://matplotlib.org/">https://matplotlib.org/</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Matplotlib">https://en.wikipedia.org/wiki/Matplotlib</a>.</p>
-<p>To install Matplotlib, follow these steps:</p>
-<p>Right-click over any free space in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder, select <code class="docutils literal notranslate"><span class="pre">New</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Document</span></code>. Rename this document to <code class="docutils literal notranslate"><span class="pre">A5installmatplotlib.bat</span></code>, ignoring the warning. Open this file for editing in the Windows standard editor. Type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">--no-warn-script-location</span> <span class="pre">matplotlib</span></code> as install command, begin a new line, type <code class="docutils literal notranslate"><span class="pre">pause</span></code>, save the file, and close the editor.</p>
-<p>Double-click on <code class="docutils literal notranslate"><span class="pre">A5installmatplotlib.bat</span></code>. This will install the latest version of Matplotlib.</p>
+<p>Assuming that the Python batch files have been installed as described <a class="reference internal" href="#rst-installationbatchfiles"><span class="std std-ref">here</span></a>, Matplotlib can be installed by double-clicking on the batch file <code class="docutils literal notranslate"><span class="pre">A05installmatplotlib.bat</span></code> in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder.</p>
 <p>The following example shows how Matplotlib can be used to produce a boxplot. This code example shows how parameters can be passed:</p>
 <p>The Python code for the example below can also be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B17_VisualisationOfDatasets/C04_BoxViolinRaincloudplots/D04b_Matplotlib3D.py">D04b_Matplotlib3D.py</a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
@@ -1147,9 +1382,7 @@ res = np.mean(R, axis=1):
 <h3>Pandas<a class="headerlink" href="#pandas" title="Link to this heading">#</a></h3>
 <p>Pandas is “a fast, powerful, flexible and easy to use open source data analysis and manipulation tool,
 built on top of the Python programming language”. For more information, see  <a class="reference external" href="https://pandas.pydata.org/">https://pandas.pydata.org/</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Pandas_(software">https://en.wikipedia.org/wiki/Pandas_(software</a>)</p>
-<p>To install Pandas, follow these steps:</p>
-<p>Right-click over any free space in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder, select <code class="docutils literal notranslate"><span class="pre">New</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Document</span></code>. Rename this document to <code class="docutils literal notranslate"><span class="pre">A6installpandas.bat</span></code>, ignoring the warning. Open this file for editing in the Windows standard editor. Type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">&quot;pandas[excel]</span></code> as install command, begin a new line, type <code class="docutils literal notranslate"><span class="pre">pause</span></code>, save the file, and close the editor.</p>
-<p>Double-click on <code class="docutils literal notranslate"><span class="pre">A6installpandas.bat</span></code>. This will install the latest version of Pandas.</p>
+<p>Assuming that the Python batch files have been installed as described <a class="reference internal" href="#rst-installationbatchfiles"><span class="std std-ref">here</span></a>, Pandas can be installed by double-clicking on the batch file <code class="docutils literal notranslate"><span class="pre">A06installpandas.bat</span></code> in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder.</p>
 <p>The following example shows how Pandas can be used to access data in an Excel workbook:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
@@ -1224,9 +1457,7 @@ Elapsed time: 0.4529 seconds
 <h3>Scipy<a class="headerlink" href="#scipy" title="Link to this heading">#</a></h3>
 <p>Scipy is “a fast, powerful, flexible and easy to use open source data analysis and manipulation tool,
 built on top of the Python programming language”. For more information, see  <a class="reference external" href="https://scipy.org/">https://scipy.org/</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/SciPy">https://en.wikipedia.org/wiki/SciPy</a>.</p>
-<p>To install Scipy, follow these steps:</p>
-<p>Right-click over any free space in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder, select <code class="docutils literal notranslate"><span class="pre">New</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Document</span></code>. Rename this document to <code class="docutils literal notranslate"><span class="pre">A7installscipy.bat</span></code>, ignoring the warning. Open this file for editing in the Windows standard editor. Type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">scipy</span></code> as install command, begin a new line, type <code class="docutils literal notranslate"><span class="pre">pause</span></code>, save the file, and close the editor.</p>
-<p>Double-click on <code class="docutils literal notranslate"><span class="pre">A7installscipy.bat</span></code>. This will install the latest version of Scipy.</p>
+<p>Assuming that the Python batch files have been installed as described <a class="reference internal" href="#rst-installationbatchfiles"><span class="std std-ref">here</span></a>, Scipy can be installed by double-clicking on the batch file <code class="docutils literal notranslate"><span class="pre">A07installscipy.bat</span></code> in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder.</p>
 <p>The following example shows how Scipy can be used for fitting data:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
@@ -1277,9 +1508,7 @@ built on top of the Python programming language”. For more information, see  <
 <section id="seaborn">
 <h3>Seaborn<a class="headerlink" href="#seaborn" title="Link to this heading">#</a></h3>
 <p>Seaborn is “a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics”. For more information, see  <a class="reference external" href="https://seaborn.pydata.org/">https://seaborn.pydata.org/</a>.</p>
-<p>To install Seaborn, follow these steps:</p>
-<p>Right-click over any free space in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder, select <code class="docutils literal notranslate"><span class="pre">New</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Document</span></code>. Rename this document to <code class="docutils literal notranslate"><span class="pre">A8installseaborn.bat</span></code>, ignoring the warning. Open this file for editing in the Windows standard editor. Type <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">seaborn</span></code> as install command, begin a new line, type <code class="docutils literal notranslate"><span class="pre">pause</span></code>, save the file, and close the editor.</p>
-<p>Double-click on <code class="docutils literal notranslate"><span class="pre">A8installseaborn.bat</span></code>. This will install the latest version of Seaborn.</p>
+<p>Assuming that the Python batch files have been installed as described <a class="reference internal" href="#rst-installationbatchfiles"><span class="std std-ref">here</span></a>, Seaborn can be installed by double-clicking on the batch file <code class="docutils literal notranslate"><span class="pre">A08installseaborn.bat</span></code> in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder.</p>
 <p>The following example shows how Seaborn can be used to produce a scatterplot matrix:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
@@ -1331,6 +1560,175 @@ built on top of the Python programming language”. For more information, see  <
 </div>
 <p>This produces the following output:</p>
 <img alt="../_images/scatterplot_matrix.svg" class="align-center" src="../_images/scatterplot_matrix.svg" />
+<p></p>
+</section>
+<section id="statsmodels">
+<h3>Statsmodels<a class="headerlink" href="#statsmodels" title="Link to this heading">#</a></h3>
+<p>Statsmodels is a Python package for statistical computations. For more information, see <a class="reference external" href="https://www.statsmodels.org/stable/index.html">https://www.statsmodels.org/stable/index.html</a>.</p>
+<p>Assuming that the Python batch files have been installed as described <a class="reference internal" href="#rst-installationbatchfiles"><span class="std std-ref">here</span></a>, Statsmodels can be installed by double-clicking on the batch file <code class="docutils literal notranslate"><span class="pre">A09installstatsmodels.bat</span></code> in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder.</p>
+<p>The following example shows how Statsmodels can be used for ordinary least squares calculations:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">statsmodels.api</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sm</span>
+
+<span class="c1"># See also: https://www.statsmodels.org/stable/examples/notebooks/generated/ols.html</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">OLS</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<span class="c1"># End of standard key word arguments</span>
+
+    <span class="n">nsample</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+    <span class="n">beta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+    <span class="n">e</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">nsample</span><span class="p">)</span>
+
+    <span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">beta</span><span class="p">)</span> <span class="o">+</span> <span class="n">e</span>
+
+    <span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+        <span class="n">start0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">OLS</span><span class="p">()</span>
+        <span class="n">end0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Elapsed time:&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="p">(</span><span class="n">end0</span> <span class="o">-</span> <span class="n">start0</span><span class="p">,</span> <span class="s1">&#39;.4g&#39;</span><span class="p">),</span> <span class="s1">&#39;seconds&#39;</span> <span class="p">)</span>
+
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">traceback</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>The output looks like this</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                            OLS Regression Results
+==============================================================================
+Dep. Variable:                      y   R-squared:                       1.000
+Model:                            OLS   Adj. R-squared:                  1.000
+Method:                 Least Squares   F-statistic:                 4.027e+06
+Date:                Sun, 11 Oct 2026   Prob (F-statistic):          2.61e-239
+Time:                        08:43:02   Log-Likelihood:                -146.41
+No. Observations:                 100   AIC:                             298.8
+Df Residuals:                      97   BIC:                             306.6
+Df Model:                           2
+Covariance Type:            nonrobust
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          1.6938      0.312      5.422      0.000       1.074       2.314
+x1            -0.1856      0.144     -1.286      0.202      -0.472       0.101
+x2            10.0215      0.014    717.320      0.000       9.994      10.049
+==============================================================================
+Omnibus:                        2.046   Durbin-Watson:                   2.207
+Prob(Omnibus):                  0.359   Jarque-Bera (JB):                1.489
+Skew:                          -0.065   Prob(JB):                        0.475
+Kurtosis:                       2.416   Cond. No.                         144.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Elapsed time: 0.005406 seconds
+</pre></div>
+</div>
+<p></p>
+</section>
+<section id="scikit-learn">
+<h3>Scikit-learn<a class="headerlink" href="#scikit-learn" title="Link to this heading">#</a></h3>
+<p>Scikit-learn is a Python package for machine learning. For more information, see <a class="reference external" href="https://scikit-learn.org/stable/index.html">https://scikit-learn.org/stable/index.html</a>.</p>
+<p>Assuming that the Python batch files have been installed as described <a class="reference internal" href="#rst-installationbatchfiles"><span class="std std-ref">here</span></a>, Scikit-learn can be installed by double-clicking on the batch file <code class="docutils literal notranslate"><span class="pre">A10install_scikit_learn.bat</span></code> in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder.</p>
+<p>The following example shows how Scikit-learn can be used for a Principal Component Analysis (PCA) on the Iris dataset.:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.decomposition</span><span class="w"> </span><span class="kn">import</span> <span class="n">PCA</span>
+
+<span class="c1"># see https://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_iris.html</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">PlotPCA</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">OutputDir</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;OutputDir&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;OutputDir&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="s1">&#39;OutputMonitor&#39;</span>
+    <span class="n">Title</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;Title&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;Title&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="s1">&#39;First three principal components&#39;</span>
+    <span class="n">PlotStyle</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;PlotStyle&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;PlotStyle&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="s1">&#39;default&#39;</span>
+    <span class="n">OutputMode</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;OutputMode&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;OutputMode&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="s1">&#39;svg&#39;</span>
+    <span class="n">FigSizeX</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;FigSizeX&#39;</span><span class="p">])</span> <span class="k">if</span> <span class="s1">&#39;FigSizeX&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="mi">8</span>
+    <span class="n">FigSizeY</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;FigSizeY&#39;</span><span class="p">])</span> <span class="k">if</span> <span class="s1">&#39;FigSizeY&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="mi">6</span>
+    <span class="n">Resolution</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;Resolution&#39;</span><span class="p">])</span> <span class="k">if</span> <span class="s1">&#39;Resolution&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="k">else</span> <span class="mi">300</span>
+<span class="c1"># End of standard key word arguments</span>
+
+    <span class="c1"># Choose &#39;Agg&#39; as backend unless we want to display the graphics</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">OutputMode</span> <span class="o">!=</span> <span class="s1">&#39;gui&#39;</span><span class="p">):</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span>
+        <span class="n">matplotlib</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;Agg&#39;</span><span class="p">)</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">PlotStyle</span><span class="p">)</span>
+
+    <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_iris</span>
+    <span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">(</span><span class="n">as_frame</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="c1">#print(iris.keys())</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">FigSizeX</span><span class="p">,</span> <span class="n">FigSizeY</span><span class="p">))</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">,</span> <span class="n">elev</span><span class="o">=-</span><span class="mi">150</span><span class="p">,</span> <span class="n">azim</span><span class="o">=</span><span class="mi">110</span><span class="p">)</span>
+
+    <span class="n">X_reduced</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">scatter</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+        <span class="n">X_reduced</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="n">X_reduced</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="n">X_reduced</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">],</span>
+        <span class="n">c</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">,</span>
+        <span class="n">s</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="n">Title</span><span class="p">,</span>
+        <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;1st Principal Component&#39;</span><span class="p">,</span>
+        <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;2nd Principal Component&#39;</span><span class="p">,</span>
+        <span class="n">zlabel</span><span class="o">=</span><span class="s1">&#39;3rd Principal Component&#39;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticklabels</span><span class="p">([])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticklabels</span><span class="p">([])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">zaxis</span><span class="o">.</span><span class="n">set_ticklabels</span><span class="p">([])</span>
+
+    <span class="c1"># Add a legend</span>
+    <span class="n">legend1</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
+        <span class="n">scatter</span><span class="o">.</span><span class="n">legend_elements</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+        <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Classes&#39;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">legend1</span><span class="p">)</span>
+
+<span class="c1"># Start of output choices</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">OutputMode</span> <span class="o">==</span> <span class="s1">&#39;plt&#39;</span><span class="p">):</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">OutputMode</span> <span class="o">==</span> <span class="s1">&#39;gui&#39;</span><span class="p">):</span>
+        <span class="n">gui</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="vm">__file__</span><span class="p">,</span> <span class="n">Title</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">FName</span> <span class="o">=</span> <span class="s1">&#39;Temp&#39;</span>
+        <span class="k">if</span> <span class="n">OutputDir</span> <span class="o">!=</span> <span class="s1">&#39;Temp&#39;</span><span class="p">:</span> <span class="n">FName</span> <span class="o">=</span> <span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">stem</span><span class="p">)</span>
+        <span class="n">LocalDir</span> <span class="o">=</span> <span class="n">gui</span><span class="o">.</span><span class="n">get_local_appdata_xlcalcnet</span><span class="p">()</span>
+        <span class="n">FullPath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">LocalDir</span><span class="p">,</span> <span class="n">OutputDir</span><span class="p">,</span> <span class="n">FName</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span> <span class="o">+</span> <span class="n">OutputMode</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">FullPath</span><span class="p">,</span>  <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">OutputDir</span> <span class="o">!=</span> <span class="s1">&#39;Temp&#39;</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Graphics written to: &#39;</span><span class="p">,</span> <span class="n">FullPath</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+        <span class="n">start0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">PlotPCA</span><span class="p">(</span><span class="n">OutputMode</span> <span class="o">=</span> <span class="s1">&#39;gui&#39;</span><span class="p">)</span>
+        <span class="n">end0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Elapsed time:&#39;</span><span class="p">,</span> <span class="nb">format</span><span class="p">(</span><span class="n">end0</span> <span class="o">-</span> <span class="n">start0</span><span class="p">,</span> <span class="s1">&#39;.4g&#39;</span><span class="p">),</span> <span class="s1">&#39;seconds&#39;</span> <span class="p">)</span>
+
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">traceback</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>The output looks like this:</p>
+<a class="reference internal image-reference" href="../_images/SciKitLearn_PCA.svg"><img alt="../_images/SciKitLearn_PCA.svg" class="align-center" src="../_images/SciKitLearn_PCA.svg" style="width: 90%;" />
+</a>
 <p></p>
 </section>
 </section>
@@ -1713,20 +2111,29 @@ x_{2}
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-a-version-of-python-which-is-dedicated-to-ms-excel-and-or-libreoffice-calc">Installing a version of Python which is dedicated to MS Excel and/or LibreOffice Calc</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#first-steps-with-xlcalcnet">First steps with XlCalcNet</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-3-folders-which-are-used-by-xlcalcnet">The 3 folders which are used by XlCalcNet</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-use-of-additional-installation-batch-files-for-installing-python-packages">Preparing the use of additional installation batch files for installing Python packages</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-python-net-calling-c-from-python">Installing and using Python.NET: Calling C# from Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-the-tiny-ide-as-a-python-application">Installing and using the Tiny IDE as a Python application</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-menu-bar-of-the-editor">The menu bar of the Editor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-context-menu-and-autocomplete-feature-of-the-editor">The context menu and autocomplete feature of the Editor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-python-development-cycle-in-the-tiny-ide">The Python development cycle in the Tiny IDE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-csharp-development-cycle-in-the-tiny-ide">The CSharp development cycle in the Tiny IDE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-output-tab-in-the-output-panel">The Output tab in the Output Panel</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code">Source code</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-numpy-matplotlib-pandas-scipy-and-seaborn">Installing and using Numpy, Matplotlib, Pandas, Scipy and Seaborn</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-using-numpy-matplotlib-pandas-scipy-seaborn-statsmodels-and-scikit-learn">Installing and using Numpy, Matplotlib, Pandas, Scipy, Seaborn, Statsmodels and Scikit-learn</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">Numpy</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib">Matplotlib</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas">Pandas</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scipy">Scipy</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seaborn">Seaborn</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statsmodels">Statsmodels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scikit-learn">Scikit-learn</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calling-python-from-c-socket-server-vs-in-process-calls">Calling Python from C:#: socket server vs in-process calls</a><ul class="visible nav section-nav flex-column">
@@ -1769,7 +2176,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 08, 2026.
+  Last updated on Oct 11, 2026.
   <br/>
 </p>
   </div>

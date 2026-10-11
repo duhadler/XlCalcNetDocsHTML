@@ -52,7 +52,7 @@
     <link rel="prev" title="Mathematical functions based on XlCalcNet2 (C#, can be called from Python)" href="C07_ContextsXlCalcNet2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 08, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 11, 2026"/>
   </head>
   
   
@@ -890,25 +890,22 @@ document.write(`
 <p>The user library can be documented using Sphinx, which allows to build documentation in html and pdf format. The documentation can be built starting with examples in the <code class="docutils literal notranslate"><span class="pre">A05_UserlibDocs</span></code> folder, which can be used as a template for documenting more complex user libraries. The documentation for the already included starting user libraray is part of this manual. It is written in the same style as this manual and comprises two parts: User library: numerical; and User library: graphics.</p>
 <p>Examples of using the user libraries are provided in the subfolders of the <code class="docutils literal notranslate"><span class="pre">A06_UserlibExamplesPython</span></code> folder for Python and in the <code class="docutils literal notranslate"><span class="pre">A07_UserlibExamplesCSharp</span></code> folder for C#.</p>
 <section id="building-a-library-of-user-defined-python-functions">
-<h2>Building a library of user defined Python functions<a class="headerlink" href="#building-a-library-of-user-defined-python-functions" title="Link to this heading">#</a></h2>
+<span id="rst-makingpythonlib"></span><h2>Building a library of user defined Python functions<a class="headerlink" href="#building-a-library-of-user-defined-python-functions" title="Link to this heading">#</a></h2>
 <p>In Python, the user library is built in the subfolders of the <code class="docutils literal notranslate"><span class="pre">A03_UserlibPython</span></code> folder, which contains Python modules with the user defined functions. The modules can be imported in Python scripts and used from spreadsheet formulas in Microsoft Excel and LibreOffice Calc. The functions are decribed here.</p>
 <p>These functions can be tested  in the subfolders of the <code class="docutils literal notranslate"><span class="pre">A06_UserlibExamplesPython</span></code> folder.</p>
 </section>
 <section id="building-a-library-of-user-defined-functions-in-c">
-<h2>Building a library of user defined functions in C#<a class="headerlink" href="#building-a-library-of-user-defined-functions-in-c" title="Link to this heading">#</a></h2>
+<span id="rst-makingcsharpdlls"></span><h2>Building a library of user defined functions in C#<a class="headerlink" href="#building-a-library-of-user-defined-functions-in-c" title="Link to this heading">#</a></h2>
 <p>The library of user defined functions in C# is built in form of 2 dynamic link libraries (DLLs), which are called <code class="docutils literal notranslate"><span class="pre">UserFixedPrecNet.dll</span></code> and <code class="docutils literal notranslate"><span class="pre">UserArbPrecNet.dll</span></code> and which are written into the Binary Output Folder. These functions are described here.</p>
 <p>There is also a third DLL called <code class="docutils literal notranslate"><span class="pre">UserMpPrecNet.dll</span></code>, which is used by the Python user library. This DLL is also written into the Binary Output Folder.</p>
 </section>
 <section id="sphinx-building-documentation-for-software-with-python-html-and-pdf">
 <span id="rst-user-documentation"></span><h2>Sphinx: building documentation for software with Python (html and pdf)<a class="headerlink" href="#sphinx-building-documentation-for-software-with-python-html-and-pdf" title="Link to this heading">#</a></h2>
 <p>This manual is written in reStructuredText (reST) format, which is a lightweight markup language. The manual is built using Sphinx, which is a tool that makes it easy to create intelligent and beautiful documentation for Python projects (or other software projects). Sphinx uses reStructuredText as its markup language and can generate output in various formats, including HTML and PDF.</p>
-<p>To build the documentation, you need to have Sphinx installed. You can install Sphinx using pip:</p>
-<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx</span></code></p>
+<p>To build the documentation, you need to have Sphinx installed.</p>
 <p>See also: <a class="reference external" href="https://www.sphinx-doc.org/en/master/">https://www.sphinx-doc.org/en/master/</a></p>
-<p>You also need to install 3 additional Sphinx extensions that are used in this manual: the Sphinx Book Theme, the Sphinx Copybutton extension, and the Sphinx Contrib Bibtex extension. They can be installed using pip:</p>
-<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx-book-theme</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx-copybutton</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinxcontrib-bibtex</span></code></p>
+<p>You also need to install 3 additional Sphinx extensions that are used in this manual: the Sphinx Book Theme, the Sphinx Copybutton extension, and the Sphinx Contrib Bibtex extension</p>
+<p>Assuming that the Python batch files have been installed as described <a class="reference internal" href="C01_Setup.html#rst-installationbatchfiles"><span class="std std-ref">here</span></a>, these four packages can be installed by double-clicking on the batch files <code class="docutils literal notranslate"><span class="pre">A14installSphinx.bat</span></code>, <code class="docutils literal notranslate"><span class="pre">A15install_sphinx_book_theme.bat</span></code>, <code class="docutils literal notranslate"><span class="pre">A16install_sphinx_copybutton.bat</span></code>, <code class="docutils literal notranslate"><span class="pre">A17install_sphinxcontribute_bibtex.bat</span></code>,  in the <code class="docutils literal notranslate"><span class="pre">C:\Python313</span></code> folder.</p>
 <p>With these packages installed, you can build the documentation of the user library by opening in the Tiny IDE the file <code class="docutils literal notranslate"><span class="pre">A05_UserlibDocs\B01_Lib01\_static\builddoc.py</span></code>. In the Tiny IDE main menu, click on <code class="docutils literal notranslate"><span class="pre">Run</span></code>. The HTML documentation will then be built in the subfolder <code class="docutils literal notranslate"><span class="pre">html</span></code> in the <code class="docutils literal notranslate"><span class="pre">XlCalcNetIDE</span></code> folder in the AppDataLocal folder. If built has succeded, the documentation will be opened automatically. The html documentation can be viewed by opening the file <code class="docutils literal notranslate"><span class="pre">index.html</span></code> in a web browser.</p>
 </section>
 </section>
@@ -994,7 +991,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 08, 2026.
+  Last updated on Oct 11, 2026.
   <br/>
 </p>
   </div>

@@ -52,7 +52,7 @@
     <link rel="prev" title="Using XlCalcNet within LibreOffice Calc" href="C03_LibreOfficeCalc.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 08, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 11, 2026"/>
   </head>
   
   
@@ -868,26 +868,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-output-monitor">Starting the output monitor</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.outputmonitor"><code class="docutils literal notranslate"><span class="pre">gui.outputmonitor()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-gallery-of-plots">Starting the gallery of plots</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.plot2d"><code class="docutils literal notranslate"><span class="pre">gui.plot2d()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-interactive-3d-wpf-plots">Starting the interactive 3D wpf plots</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.plot3d"><code class="docutils literal notranslate"><span class="pre">gui.plot3d()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-data-viewer">Starting the data viewer</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.dataviewer"><code class="docutils literal notranslate"><span class="pre">gui.dataviewer()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-idle">Starting IDLE</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.idle"><code class="docutils literal notranslate"><span class="pre">gui.idle()</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-output-monitor">Starting the output monitor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-gallery-of-plots">Starting the gallery of plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-interactive-3d-wpf-plots">Starting the interactive 3D wpf plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-data-viewer">Starting the data viewer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-idle">Starting IDLE</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-related-to-folders">Functions related to folders</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.get_local_appdata"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.get_local_appdata_xlcalcnet"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata_xlcalcnet()</span></code></a></li>
@@ -927,92 +912,62 @@ document.write(`
 <h1>General user interface and functions<a class="headerlink" href="#general-user-interface-and-functions" title="Link to this heading">#</a></h1>
 <section id="starting-the-output-monitor">
 <span id="rst-outputmonitor"></span><h2>Starting the output monitor<a class="headerlink" href="#starting-the-output-monitor" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.outputmonitor">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">outputmonitor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.outputmonitor" title="Link to this definition">#</a></dt>
-<dd><p>Describe the start of the output monitor</p>
+<p>Describe the start of the output monitor</p>
 <a class="reference internal image-reference" href="../_images/DataMo0nitor.png"><img alt="../_images/DataMo0nitor.png" class="align-center" src="../_images/DataMo0nitor.png" style="width: 50%;" />
 </a>
-<p>The Python source code for starting the output monitor can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowOutputMonitor.py">duhadler/XlCalcNet</a></p>
 <p>The C# source code for the output monitor can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/OutputMonitor">duhadler/XlCalcNet</a></p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">outputmonitor</span><span class="p">()</span>
 </pre></div>
 </div>
-</dd></dl>
-
 <p></p>
 </section>
 <section id="starting-the-gallery-of-plots">
 <span id="rst-galleryofplots"></span><h2>Starting the gallery of plots<a class="headerlink" href="#starting-the-gallery-of-plots" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.plot2d">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">plot2d</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.plot2d" title="Link to this definition">#</a></dt>
-<dd><p>Describe the start of the gallery of plots</p>
+<p>Describe the start of the gallery of plots</p>
 <a class="reference internal image-reference" href="../_images/GalleryOfPlots.png"><img alt="../_images/GalleryOfPlots.png" class="align-center" src="../_images/GalleryOfPlots.png" style="width: 50%;" />
 </a>
-<p>The Python source code for starting the IDE can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowEditor.py">duhadler/XlCalcNet</a></p>
 <p>The C# source code for the gallery of plots can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/TinyPlot2D">duhadler/XlCalcNet</a></p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">plot2d</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
-</dd></dl>
-
 <p></p>
 </section>
 <section id="starting-the-interactive-3d-wpf-plots">
 <span id="rst-wpf3d"></span><h2>Starting the interactive 3D wpf plots<a class="headerlink" href="#starting-the-interactive-3d-wpf-plots" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.plot3d">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">plot3d</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.plot3d" title="Link to this definition">#</a></dt>
-<dd><p>Describe the start of Interactive 3D Wpf plots</p>
+<p>Describe the start of Interactive 3D Wpf plots</p>
 <a class="reference internal image-reference" href="../_images/Wpf3D.png"><img alt="../_images/Wpf3D.png" class="align-center" src="../_images/Wpf3D.png" style="width: 50%;" />
 </a>
-<p>The Python source code for starting the interactive 3D wpf plots can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowPlot3d.py">duhadler/XlCalcNet</a></p>
 <p>The C# source code for the gallery of plots can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/TinyPlot3D">duhadler/XlCalcNet</a></p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">plot3d</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
-</dd></dl>
-
 <p></p>
 </section>
 <section id="starting-the-data-viewer">
 <span id="rst-dataviewer"></span><h2>Starting the data viewer<a class="headerlink" href="#starting-the-data-viewer" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.dataviewer">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">dataviewer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.dataviewer" title="Link to this definition">#</a></dt>
-<dd><p>Describe the start of data viewer</p>
+<p>Describe the start of data viewer</p>
 <a class="reference internal image-reference" href="../_images/DataViewer.png"><img alt="../_images/DataViewer.png" class="align-center" src="../_images/DataViewer.png" style="width: 50%;" />
 </a>
-<p>The Python source code for starting the data viewer can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowDataViewer.py">duhadler/XlCalcNet</a></p>
 <p>The C# source code for the data viewer can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/DataViewer">duhadler/XlCalcNet</a></p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">dataviewer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
-</dd></dl>
-
 <p></p>
 </section>
 <section id="starting-idle">
-<h2>Starting IDLE<a class="headerlink" href="#starting-idle" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="gui.idle">
-<span class="sig-prename descclassname"><span class="pre">gui.</span></span><span class="sig-name descname"><span class="pre">idle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.idle" title="Link to this definition">#</a></dt>
-<dd><p>Describe the setup and use of IDLE</p>
+<span id="rst-idle"></span><h2>Starting IDLE<a class="headerlink" href="#starting-idle" title="Link to this heading">#</a></h2>
+<p>Describe the setup and use of IDLE</p>
 <a class="reference internal image-reference" href="../_images/IDLE.png"><img alt="../_images/IDLE.png" class="align-center" src="../_images/IDLE.png" style="width: 50%;" />
 </a>
-<p>The Python source code for starting the data viewer can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowDataViewer.py">duhadler/XlCalcNet</a></p>
-<p>The C# source code for the data viewer can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/DataViewer">duhadler/XlCalcNet</a></p>
+<p>The C# source code for the IDLE can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/IDLE">duhadler/XlCalcNet</a></p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">idle</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
-</dd></dl>
-
 <p></p>
 </section>
 <section id="functions-related-to-folders">
@@ -1191,26 +1146,11 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-output-monitor">Starting the output monitor</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.outputmonitor"><code class="docutils literal notranslate"><span class="pre">gui.outputmonitor()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-gallery-of-plots">Starting the gallery of plots</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.plot2d"><code class="docutils literal notranslate"><span class="pre">gui.plot2d()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-interactive-3d-wpf-plots">Starting the interactive 3D wpf plots</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.plot3d"><code class="docutils literal notranslate"><span class="pre">gui.plot3d()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-data-viewer">Starting the data viewer</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.dataviewer"><code class="docutils literal notranslate"><span class="pre">gui.dataviewer()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-idle">Starting IDLE</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.idle"><code class="docutils literal notranslate"><span class="pre">gui.idle()</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-output-monitor">Starting the output monitor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-gallery-of-plots">Starting the gallery of plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-interactive-3d-wpf-plots">Starting the interactive 3D wpf plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-data-viewer">Starting the data viewer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-idle">Starting IDLE</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-related-to-folders">Functions related to folders</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.get_local_appdata"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.get_local_appdata_xlcalcnet"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata_xlcalcnet()</span></code></a></li>
@@ -1267,7 +1207,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 08, 2026.
+  Last updated on Oct 11, 2026.
   <br/>
 </p>
   </div>

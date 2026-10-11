@@ -52,7 +52,7 @@
     <link rel="prev" title="Preface" href="../000_Preface/01_preface.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 08, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 11, 2026"/>
   </head>
   
   
@@ -888,20 +888,29 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#installing-a-version-of-python-which-is-dedicated-to-ms-excel-and-or-libreoffice-calc">Installing a version of Python which is dedicated to MS Excel and/or LibreOffice Calc</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#first-steps-with-xlcalcnet">First steps with XlCalcNet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#the-3-folders-which-are-used-by-xlcalcnet">The 3 folders which are used by XlCalcNet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#preparing-the-use-of-additional-installation-batch-files-for-installing-python-packages">Preparing the use of additional installation batch files for installing Python packages</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-and-using-python-net-calling-c-from-python">Installing and using Python.NET: Calling C# from Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-and-using-the-tiny-ide-as-a-python-application">Installing and using the Tiny IDE as a Python application</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#the-menu-bar-of-the-editor">The menu bar of the Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#the-context-menu-and-autocomplete-feature-of-the-editor">The context menu and autocomplete feature of the Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#the-python-development-cycle-in-the-tiny-ide">The Python development cycle in the Tiny IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#the-csharp-development-cycle-in-the-tiny-ide">The CSharp development cycle in the Tiny IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#the-output-tab-in-the-output-panel">The Output tab in the Output Panel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#source-code">Source code</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-and-using-numpy-matplotlib-pandas-scipy-and-seaborn">Installing and using Numpy, Matplotlib, Pandas, Scipy and Seaborn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#installing-and-using-numpy-matplotlib-pandas-scipy-seaborn-statsmodels-and-scikit-learn">Installing and using Numpy, Matplotlib, Pandas, Scipy, Seaborn, Statsmodels and Scikit-learn</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#numpy">Numpy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#matplotlib">Matplotlib</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#pandas">Pandas</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#scipy">Scipy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#seaborn">Seaborn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#statsmodels">Statsmodels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#scikit-learn">Scikit-learn</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="C01_Setup.html#calling-python-from-c-socket-server-vs-in-process-calls">Calling Python from C:#: socket server vs in-process calls</a><ul>
@@ -976,26 +985,11 @@ document.write(`
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="C04_GuiFunctions.html">General user interface and functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#starting-the-output-monitor">Starting the output monitor</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.outputmonitor"><code class="docutils literal notranslate"><span class="pre">gui.outputmonitor()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#starting-the-gallery-of-plots">Starting the gallery of plots</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.plot2d"><code class="docutils literal notranslate"><span class="pre">gui.plot2d()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#starting-the-interactive-3d-wpf-plots">Starting the interactive 3D wpf plots</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.plot3d"><code class="docutils literal notranslate"><span class="pre">gui.plot3d()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#starting-the-data-viewer">Starting the data viewer</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.dataviewer"><code class="docutils literal notranslate"><span class="pre">gui.dataviewer()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#starting-idle">Starting IDLE</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.idle"><code class="docutils literal notranslate"><span class="pre">gui.idle()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#starting-the-output-monitor">Starting the output monitor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#starting-the-gallery-of-plots">Starting the gallery of plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#starting-the-interactive-3d-wpf-plots">Starting the interactive 3D wpf plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#starting-the-data-viewer">Starting the data viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#starting-idle">Starting IDLE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#functions-related-to-folders">Functions related to folders</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.get_local_appdata"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.get_local_appdata_xlcalcnet"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata_xlcalcnet()</span></code></a></li>
@@ -1294,7 +1288,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 08, 2026.
+  Last updated on Oct 11, 2026.
   <br/>
 </p>
   </div>
