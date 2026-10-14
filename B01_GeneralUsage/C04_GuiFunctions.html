@@ -44,6 +44,7 @@
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=4ea706d9"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'B01_GeneralUsage/C04_GuiFunctions';</script>
     <script src="../_static/custom-icon.js?v=74687d30"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -52,7 +53,7 @@
     <link rel="prev" title="Using XlCalcNet within LibreOffice Calc" href="C03_LibreOfficeCalc.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 11, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 14, 2026"/>
   </head>
   
   
@@ -868,10 +869,32 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-output-monitor">Starting the output monitor</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-gallery-of-plots">Starting the gallery of plots</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-interactive-3d-wpf-plots">Starting the interactive 3D wpf plots</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-data-viewer">Starting the data viewer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-tiny-data-viewer">The Tiny Data Viewer</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-menu-bar-of-the-application">The menu bar of the application</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code">Source code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-output-monitor">The Output Monitor</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">The menu bar of the application</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Source code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-gallery-of-plots">The Gallery of Plots</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">The menu bar of the application</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-general-section-in-the-edtior-property-grit">The General section in the edtior property grit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Source code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-3d-wpf-plots">Interactive 3D wpf plots</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">The menu bar of the application</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-context-menus-of-the-3d-plot-definition-editor">The context menus of the 3D plot definition editor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">The General section in the edtior property grit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-evaluation-section-in-the-edtior-property-grit">The Evaluation section in the edtior property grit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-reshaping-section-in-the-edtior-property-grit">The Reshaping section in the edtior property grit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-formatting-section-in-the-edtior-property-grit">The Formatting section in the edtior property grit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Source code</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-related-to-folders">Functions related to folders</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.get_local_appdata"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.get_local_appdata_xlcalcnet"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata_xlcalcnet()</span></code></a></li>
@@ -909,53 +932,353 @@ document.write(`
   <p></p>
 <section id="general-user-interface-and-functions">
 <h1>General user interface and functions<a class="headerlink" href="#general-user-interface-and-functions" title="Link to this heading">#</a></h1>
-<section id="starting-the-output-monitor">
-<span id="rst-outputmonitor"></span><h2>Starting the output monitor<a class="headerlink" href="#starting-the-output-monitor" title="Link to this heading">#</a></h2>
-<p>Describe the start of the output monitor</p>
-<a class="reference internal image-reference" href="../_images/DataMo0nitor.png"><img alt="../_images/DataMo0nitor.png" class="align-center" src="../_images/DataMo0nitor.png" style="width: 50%;" />
-</a>
-<p>The C# source code for the output monitor can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/OutputMonitor">duhadler/XlCalcNet</a></p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">outputmonitor</span><span class="p">()</span>
-</pre></div>
-</div>
-<p></p>
-</section>
-<section id="starting-the-gallery-of-plots">
-<span id="rst-galleryofplots"></span><h2>Starting the gallery of plots<a class="headerlink" href="#starting-the-gallery-of-plots" title="Link to this heading">#</a></h2>
-<p>Describe the start of the gallery of plots</p>
-<a class="reference internal image-reference" href="../_images/GalleryOfPlots.png"><img alt="../_images/GalleryOfPlots.png" class="align-center" src="../_images/GalleryOfPlots.png" style="width: 50%;" />
-</a>
-<p>The C# source code for the gallery of plots can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/TinyPlot2D">duhadler/XlCalcNet</a></p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">plot2d</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-<p></p>
-</section>
-<section id="starting-the-interactive-3d-wpf-plots">
-<span id="rst-wpf3d"></span><h2>Starting the interactive 3D wpf plots<a class="headerlink" href="#starting-the-interactive-3d-wpf-plots" title="Link to this heading">#</a></h2>
-<p>Describe the start of Interactive 3D Wpf plots</p>
-<a class="reference internal image-reference" href="../_images/Wpf3D.png"><img alt="../_images/Wpf3D.png" class="align-center" src="../_images/Wpf3D.png" style="width: 50%;" />
-</a>
-<p>The C# source code for the gallery of plots can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/TinyPlot3D">duhadler/XlCalcNet</a></p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">plot3d</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-<p></p>
-</section>
-<section id="starting-the-data-viewer">
-<span id="rst-dataviewer"></span><h2>Starting the data viewer<a class="headerlink" href="#starting-the-data-viewer" title="Link to this heading">#</a></h2>
-<p>Describe the start of data viewer</p>
+<section id="the-tiny-data-viewer">
+<span id="rst-dataviewer"></span><h2>The Tiny Data Viewer<a class="headerlink" href="#the-tiny-data-viewer" title="Link to this heading">#</a></h2>
+<p>The “Tiny Data Viewer” application is started from the Tiny IDE: in the main menu, click on <code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">Data</span> <span class="pre">Viewer</span></code>. The screenshot below shows an example</p>
 <a class="reference internal image-reference" href="../_images/DataViewer.png"><img alt="../_images/DataViewer.png" class="align-center" src="../_images/DataViewer.png" style="width: 50%;" />
 </a>
+<p>The “Tiny Data Viewer” application is designed around the structure of the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder, making it easy to navigate and manage existing data sources, as well a new data provided by the user.
+The Tiny IDE can be used only to view data sources which are located in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder and are located in subfolders beginning with <code class="docutils literal notranslate"><span class="pre">Data</span></code>. The data source examples are organized in a tree structure, which is shown in the right panel (the “folder panel”) of the “Tiny Data Viewer” application.</p>
+<p>The left panel (the “data panel”) of the “Gallery of Plots” application displays the data of the selected file. This panel has 7 tabs: “Text”, “Pictures”, “SVG”, “PDF”, “CSV”, “SQLiteDb”, “Other”.</p>
+<p>Each file in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet\Data*</span></code> folders can be opened in the “Tiny Data Viewer” application by clicking on it. Per application instance, only one file can be opened and displayed at a time (to open an additional file, you need to start a new instance of the  application: <code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">Data</span> <span class="pre">Viewer</span> <span class="pre">(external)</span></code>).</p>
+<section id="the-menu-bar-of-the-application">
+<h3>The menu bar of the application<a class="headerlink" href="#the-menu-bar-of-the-application" title="Link to this heading">#</a></h3>
+<a class="reference internal image-reference" href="../_images/DataViewerMenuMain.png"><img alt="../_images/DataViewerMenuMain.png" class="align-center" src="../_images/DataViewerMenuMain.png" style="width: 90%;" />
+</a>
+<p>The Menubar of the “Tiny Data Viewer” application contains the following menus: <code class="docutils literal notranslate"><span class="pre">File</span></code>, <code class="docutils literal notranslate"><span class="pre">Tools</span></code>, and <code class="docutils literal notranslate"><span class="pre">Help</span></code>. Each menu contains a number of items, which are described below.</p>
+<p>There are also a button (with green foreground color) in the menu bar: the “Show/Hide” button, which toggles the visibility of the folder panel.</p>
+<p><br /></p>
+<a class="reference internal image-reference" href="../_images/DataViewerMenuFile.png"><img alt="../_images/DataViewerMenuFile.png" class="align-center" src="../_images/DataViewerMenuFile.png" style="width: 30%;" />
+</a>
+<p>In the <code class="docutils literal notranslate"><span class="pre">File</span></code> menu, two standard items are missing: “New” and “Open”.</p>
+<p>The “New” item is missing because the application is designed to view existing data, not to create new data.</p>
+<p>The “Open” item (which would typically open a dialog box with the functionally of the Windows Explorer) is missing because the “Tiny Data Viewer” application is limited to the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder. Instead the folder panel allows to navigate through the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder and open any file in it.</p>
+<p>Renaming or deleting files and folders is possible, but should be done with care, using the Windows Explorer. After these changes, when returning to the Tiny IDE, the tree structure will not be updated automatically, but has to be updated manually by clicking on the appropriate parent folder in the tree structure.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Containing</span> <span class="pre">Folder</span></code> opens the Windows Explorer in the folder of the current file. This is useful for quickly accessing other files in the same folder, or for deleting files and folders.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Appdata</span> <span class="pre">Local</span> <span class="pre">Folder</span></code> opens the Windows Explorer in the <code class="docutils literal notranslate"><span class="pre">AppData\Local\XlCalcNetIDE</span></code> folder. This is useful for quickly accessing files and folders which are generated by running Python or C# code examples in the Tiny IDE.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Binary</span> <span class="pre">Folder</span></code> opens the Windows Explorer in the <code class="docutils literal notranslate"><span class="pre">Bin</span></code> subfolder of the <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span></code> installation. This is useful mostly for debugging purposes.</p>
+<p><br /></p>
+<a class="reference internal image-reference" href="../_images/DataViewerMenuTools.png"><img alt="../_images/DataViewerMenuTools.png" class="align-center" src="../_images/DataViewerMenuTools.png" style="width: 26%;" />
+</a>
+<p><code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">IDE</span> <span class="pre">(external)</span></code> starts the Tiny IDE application,  see <a class="reference internal" href="C01_Setup.html#rst-tinyide"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">Monitor</span></code> starts the “Output Monitor” application, see <a class="reference internal" href="#rst-outputmonitor"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Gallery</span> <span class="pre">of</span> <span class="pre">Plots</span></code> starts the “Gallery of Plots” application, see <a class="reference internal" href="#rst-galleryofplots"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Interactive</span> <span class="pre">3D</span> <span class="pre">Wpf</span> <span class="pre">Plots</span></code> starts an additional the Interactive 3D Wpf Plots application, see <a class="reference internal" href="#rst-wpf3d"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">Data</span> <span class="pre">Viewer</span> <span class="pre">(external)</span></code> starts an additional instance of the Tiny Data Viewer application, see <a class="reference internal" href="#rst-dataviewer"><span class="std std-ref">here</span></a> for details.</p>
+<p><br /></p>
+<a class="reference internal image-reference" href="../_images/DataViewerMenuHelp.png"><img alt="../_images/DataViewerMenuHelp.png" class="align-center" src="../_images/DataViewerMenuHelp.png" style="width: 40%;" />
+</a>
+<p>In the <code class="docutils literal notranslate"><span class="pre">Help</span></code> menu, <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span> <span class="pre">Manual</span> <span class="pre">(online)...</span></code> displays the start page of the XlCalcNet online manual in a web browser.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">Data</span> <span class="pre">Viewer</span> <span class="pre">Tutorial</span> <span class="pre">(online)...</span></code> displays the section of the XlCalcNet.online manual which explains the use of the Tiny Data Viewer application in a web browser.</p>
+</section>
+<section id="source-code">
+<h3>Source code<a class="headerlink" href="#source-code" title="Link to this heading">#</a></h3>
 <p>The C# source code for the data viewer can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/DataViewer">duhadler/XlCalcNet</a></p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">gui</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">dataviewer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
 <p></p>
+</section>
+</section>
+<section id="the-output-monitor">
+<span id="rst-outputmonitor"></span><h2>The Output Monitor<a class="headerlink" href="#the-output-monitor" title="Link to this heading">#</a></h2>
+<p>The “Output Monitor” application is started from the Tiny IDE: in the main menu, click on <code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">Monitor</span></code>. The screenshot below shows an example</p>
+<a class="reference internal image-reference" href="../_images/OutputMonitor.png"><img alt="../_images/OutputMonitor.png" class="align-center" src="../_images/OutputMonitor.png" style="width: 50%;" />
+</a>
+<p>The “Output Monitor” application is designed to be used together with spreadsheet functions, when the output is a table or a graphics file, and it it not convenient to incorporate the output into the spreadsheet right away.</p>
+<p>The folder which is monitored is <code class="docutils literal notranslate"><span class="pre">PathToLocalAppDara\\XlCalcNetIDE\OutputMonitor</span></code>. Whenever a file changes or is newly created in this folder, the “Output Monitor” application is updated.</p>
+<p>The Tiny IDE can be used only to view data which are located in the <code class="docutils literal notranslate"><span class="pre">OutputMonitor</span></code> folder. The files in this folder  are organized in a tree structure, which is shown in the right panel (the “folder panel”) of the “Output Monitor” application.</p>
+<p>The left panel (the “data panel”) of the “Gallery of Plots” application displays the data of the selected file. This panel has 7 tabs: “Text”, “Pictures”, “SVG”, “PDF”, “CSV”, “SQLiteDb”, “Other”.</p>
+<p>Each file in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet\Data*</span></code> folders can be opened in the “Output Monitor” application by clicking on it. Per application instance, only one file can be opened and displayed at a time (to open an additional file, you need to start a new instance of the  application: <code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">Monitor</span> <span class="pre">(external)</span></code>).</p>
+<section id="id1">
+<h3>The menu bar of the application<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<a class="reference internal image-reference" href="../_images/MonitorMenuMain.png"><img alt="../_images/MonitorMenuMain.png" class="align-center" src="../_images/MonitorMenuMain.png" style="width: 90%;" />
+</a>
+<p>The Menubar of the “Output Monitor” application contains the following menus: <code class="docutils literal notranslate"><span class="pre">File</span></code>, <code class="docutils literal notranslate"><span class="pre">Tools</span></code>, and <code class="docutils literal notranslate"><span class="pre">Help</span></code>. Each menu contains a number of items, which are described below.</p>
+<p>There are also a button (with green foreground color) in the menu bar: the “Show/Hide” button, which toggles the visibility of the folder panel.</p>
+<p><br /></p>
+<a class="reference internal image-reference" href="../_images/MonitorMenuFile.png"><img alt="../_images/MonitorMenuFile.png" class="align-center" src="../_images/MonitorMenuFile.png" style="width: 30%;" />
+</a>
+<p>In the <code class="docutils literal notranslate"><span class="pre">File</span></code> menu, two standard items are missing: “New” and “Open”.</p>
+<p>The “New” item is missing because the application is designed to view existing data, not to create new data.</p>
+<p>The “Open” item (which would typically open a dialog box with the functionally of the Windows Explorer) is missing because the “Output Monitor” application limited to the <code class="docutils literal notranslate"><span class="pre">OutputMonitor</span></code> folder. Instead the folder panel allows to navigate through the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder and open any file in it.</p>
+<p>Renaming or deleting files and folders is possible, but should be done with care, using the Windows Explorer. After these changes, when returning to the “Output Monitor” application, the “Output Monitor” application is updated automatically.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Containing</span> <span class="pre">Folder</span></code> opens the Windows Explorer in the folder of the current file. This is useful for quickly accessing other files in the same folder, or for deleting files.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Appdata</span> <span class="pre">Local</span> <span class="pre">Folder</span></code> opens the Windows Explorer in the <code class="docutils literal notranslate"><span class="pre">AppData\Local\XlCalcNetIDE</span></code> folder. This is useful for quickly accessing files and folders which are generated by running Python or C# code examples in the Tiny IDE.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Binary</span> <span class="pre">Folder</span></code> opens the Windows Explorer in the <code class="docutils literal notranslate"><span class="pre">Bin</span></code> subfolder of the <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span></code> installation. This is useful mostly for debugging purposes.</p>
+<p><br /></p>
+<a class="reference internal image-reference" href="../_images/MonitorMenuTools.png"><img alt="../_images/MonitorMenuTools.png" class="align-center" src="../_images/MonitorMenuTools.png" style="width: 26%;" />
+</a>
+<p><code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">IDE</span></code> starts the Tiny IDE application, see <a class="reference internal" href="C01_Setup.html#rst-tinyide"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">Monitor</span> <span class="pre">(external)</span></code> starts an additional instance of the the “Output Monitor” application, see <a class="reference internal" href="#rst-outputmonitor"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Gallery</span> <span class="pre">of</span> <span class="pre">Plots</span></code> starts the gallery of plots application, see <a class="reference internal" href="#rst-galleryofplots"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Interactive</span> <span class="pre">3D</span> <span class="pre">Wpf</span> <span class="pre">Plots</span></code> starts an additional the Interactive 3D Wpf Plots application, see <a class="reference internal" href="#rst-wpf3d"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">Data</span> <span class="pre">Viewer</span></code> starts the Tiny Data Viewer application, see <a class="reference internal" href="#rst-dataviewer"><span class="std std-ref">here</span></a> for details.</p>
+<p><br /></p>
+<a class="reference internal image-reference" href="../_images/MonitorMenuHelp.png"><img alt="../_images/MonitorMenuHelp.png" class="align-center" src="../_images/MonitorMenuHelp.png" style="width: 40%;" />
+</a>
+<p>In the <code class="docutils literal notranslate"><span class="pre">Help</span></code> menu, <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span> <span class="pre">Manual</span> <span class="pre">(online)...</span></code> displays the start page of the XlCalcNet online manual in a web browser.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">Data</span> <span class="pre">Viewer</span> <span class="pre">Tutorial</span> <span class="pre">(online)...</span></code> displays the section of the XlCalcNet.online manual which explains the use of the Tiny Data Viewer application in a web browser.</p>
+</section>
+<section id="id2">
+<h3>Source code<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>The C# source code for the output monitor can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/OutputMonitor">duhadler/XlCalcNet</a></p>
+<p></p>
+</section>
+</section>
+<section id="the-gallery-of-plots">
+<span id="rst-galleryofplots"></span><h2>The Gallery of Plots<a class="headerlink" href="#the-gallery-of-plots" title="Link to this heading">#</a></h2>
+<p>The “Gallery of Plots” application is started from the Tiny IDE: in the main menu, click on <code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Gallery</span> <span class="pre">of</span> <span class="pre">Plots</span></code>. The screenshot below shows an example</p>
+<a class="reference internal image-reference" href="../_images/GalleryOfPlots.png"><img alt="../_images/GalleryOfPlots.png" class="align-center" src="../_images/GalleryOfPlots.png" style="width: 50%;" />
+</a>
+<p>The “Gallery of Plots” application is designed around the structure of the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder, making it easy to navigate and manage existing plot definition examples, as well a new plot definitions written by the user.
+This application can be used only to edit and run plot definition examples which are located in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder and are located in subfolders beginning with <code class="docutils literal notranslate"><span class="pre">GalleryOfPlots</span></code>. The plot definition examples are organized in a tree structure, which is shown in the top right panel (the “folder panel”) of the “Gallery of Plots” application.</p>
+<p>The top left panel (the “plot definition editor panel”) of the application shows the plot definition of the selected file, which can be edited and run. The plot definition is stored as an <span class="math notranslate nohighlight">\(.xml\)</span> file, but is edited in a property grid. This allows to structure the definition and to use of drop down boxes to make the definition of the plot easier.</p>
+<p>The output of the program is shown in the bottom panel (the “output panel”) of the application, which has 3 tabs: the “SVG” tab, the “Pictures” tab, the “Log” tab.</p>
+<p>Each file in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet\GalleryOfPlots*</span></code> folders can be opened in the application by clicking on it. Per application instance, only one file can be opened, edited and run at a time (to open an additional file, you need to start a new instance of the “Gallery of Plots” application: <code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">&quot;Gallery</span> <span class="pre">of</span> <span class="pre">Plots&quot;</span> <span class="pre">application</span> <span class="pre">(external)</span></code>). The application will load this file into the editor, and the plot definition can be edited and run. To run the plot definition, click on the “Run” button in the main menu. The output is shown in the output panel.</p>
+<p>The ordering and naming of the code examples in the subfolder <code class="docutils literal notranslate"><span class="pre">Plots3DWpfExamples</span></code> match the ordering and naming of the corresponding chapters, sections and subsections in this manual, making it easy to find the code example which corresponds to a specific section of the manual. The “section help” feature (<code class="docutils literal notranslate"><span class="pre">Help</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Section</span> <span class="pre">Help</span></code>), which is available in the main menu of the “Gallery of Plots” application and opens the corresponding section of this manual in a web browser, depends on this ordering and naming.</p>
+<section id="id3">
+<h3>The menu bar of the application<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<a class="reference internal image-reference" href="../_images/GalleryMenuMain.png"><img alt="../_images/GalleryMenuMain.png" class="align-center" src="../_images/GalleryMenuMain.png" style="width: 90%;" />
+</a>
+<p>The Menubar of the “Gallery of Plots” application contains the following menus: <code class="docutils literal notranslate"><span class="pre">File</span></code>, <code class="docutils literal notranslate"><span class="pre">Tools</span></code>, and <code class="docutils literal notranslate"><span class="pre">Help</span></code>. Each menu contains a number of items, which are described below.</p>
+<p>There are also two buttons (with green foreground color) in the menu bar: the “Run” button, which runs the code of the current file, and the “Show/Hide” button, which toggles the visibility of the folder panel.</p>
+<p><br /></p>
+<a class="reference internal image-reference" href="../_images/GalleryMenuFile.png"><img alt="../_images/GalleryMenuFile.png" class="align-center" src="../_images/GalleryMenuFile.png" style="width: 30%;" />
+</a>
+<p>In the <code class="docutils literal notranslate"><span class="pre">File</span></code> menu, two standard items are missing: “New” and “Open”.</p>
+<p>The “New” item is missing because the Tiny IDE is designed to work within the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder, and therefore new files which are not in the current folder should be created in the appropriate subfolders of <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code>, which often have to be created manually first using the Windows Explorer.</p>
+<p>There is, however, a <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">As</span></code> item in the file menu, which allows to save the current file under a new name in the current folder. This is useful for creating a copy of an existing file, and using this as a starting point for a new file.</p>
+<p>The “Open” item (which would typically open a dialog box with the functionally of the Windows Explorer) is missing because the Tiny IDE is limited to the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder. Instead the folder panel allows to navigate through the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder and open any file in it.</p>
+<p>Renaming or deleting files and folders is possible, but should be done with care, using the Windows Explorer, and not using the Tiny IDE. After these changes, when returning to the Tiny IDE, the tree structure will not be updated automatically, but has to be updated manually by clicking on the appropriate parent folder in the tree structure.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Containing</span> <span class="pre">Folder</span></code> opens the Windows Explorer in the folder of the current file. This is useful for quickly accessing other files in the same folder, or for deleting files and folders.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Appdata</span> <span class="pre">Local</span> <span class="pre">Folder</span></code> opens the Windows Explorer in the <code class="docutils literal notranslate"><span class="pre">AppData\Local\XlCalcNetIDE</span></code> folder. This is useful for quickly accessing files and folders which are generated by running Python or C# code examples in the Tiny IDE.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Binary</span> <span class="pre">Folder</span></code> opens the Windows Explorer in the <code class="docutils literal notranslate"><span class="pre">Bin</span></code> subfolder of the <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span></code> installation. This is useful mostly for debugging purposes.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Save</span></code> will just save the current file without any further action. <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">As</span></code> has been descibed above. <code class="docutils literal notranslate"><span class="pre">Exit</span></code> will close the Tiny IDE.</p>
+<p><br /></p>
+<a class="reference internal image-reference" href="../_images/GalleryMenuTools.png"><img alt="../_images/GalleryMenuTools.png" class="align-center" src="../_images/GalleryMenuTools.png" style="width: 26%;" />
+</a>
+<p><code class="docutils literal notranslate"><span class="pre">Start</span> <span class="pre">Socket</span> <span class="pre">Server</span></code> starts the socket server, see <a class="reference internal" href="C01_Setup.html#rst-clientserver"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Start</span> <span class="pre">Output</span> <span class="pre">Monitor</span></code> starts the output monitor application, see <a class="reference internal" href="#rst-outputmonitor"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">IDE</span></code> starts the Tiny IDE application, see <a class="reference internal" href="C01_Setup.html#rst-tinyide"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Gallery</span> <span class="pre">of</span> <span class="pre">Plots</span></code> starts the gallery of plots application, see <a class="reference internal" href="#rst-galleryofplots"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Interactive</span> <span class="pre">3D</span> <span class="pre">Wpf</span> <span class="pre">Plots</span></code> starts the Interactive 3D Wpf Plots application, see <a class="reference internal" href="#rst-wpf3d"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">Data</span> <span class="pre">Viewer</span></code> starts the Tiny Data Viewer application, see <a class="reference internal" href="#rst-dataviewer"><span class="std std-ref">here</span></a> for details.</p>
+<p><br /></p>
+<a class="reference internal image-reference" href="../_images/GalleryMenuHelp.png"><img alt="../_images/GalleryMenuHelp.png" class="align-center" src="../_images/GalleryMenuHelp.png" style="width: 26%;" />
+</a>
+<p>In the <code class="docutils literal notranslate"><span class="pre">Help</span></code> menu, <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span> <span class="pre">Manual</span> <span class="pre">(online)...</span></code> displays the start page of the XlCalcNet online manual in a web browser.</p>
+<p><code class="docutils literal notranslate"><span class="pre">XlCalcNet</span> <span class="pre">Section</span> <span class="pre">Help</span> <span class="pre">(online)...</span></code> displays the section of the XlCalcNet.online manual which corresponds to the current file in a web browser.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Interactive</span> <span class="pre">3D</span> <span class="pre">plots</span> <span class="pre">Tutorial</span> <span class="pre">(online)...</span></code> displays the section of the XlCalcNet.online manual which explains the use of the Interactive 3D plots application in a web browser.</p>
+</section>
+<section id="the-general-section-in-the-edtior-property-grit">
+<h3>The General section in the edtior property grit<a class="headerlink" href="#the-general-section-in-the-edtior-property-grit" title="Link to this heading">#</a></h3>
+<p>As described above, the plot definition is edited in a property grid:</p>
+<a class="reference internal image-reference" href="../_images/GalleryGeneral.png"><img alt="../_images/GalleryGeneral.png" class="align-center" src="../_images/GalleryGeneral.png" style="width: 50%;" />
+</a>
+<p>The example above shows the plot definition of the file <code class="docutils literal notranslate"><span class="pre">\GalleryOfPlotsExamples\B18_FunctionsAndCurvesPlots\C01_Intro_Parametric2D\D09b_SinCosMath53.2D.xml</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/Gallery01.A.ImportStatement.png"><img alt="../_images/Gallery01.A.ImportStatement.png" class="align-center" src="../_images/Gallery01.A.ImportStatement.png" style="width: 50%;" />
+</a>
+<p><strong>A. Import Statement</strong> contains the import statement.</p>
+<a class="reference internal image-reference" href="../_images/Gallery01.B.FunctionStatement.png"><img alt="../_images/Gallery01.B.FunctionStatement.png" class="align-center" src="../_images/Gallery01.B.FunctionStatement.png" style="width: 50%;" />
+</a>
+<p><strong>B. Function Name</strong> contains the function name.</p>
+<p><strong>C. Title</strong> contains the function title.</p>
+<a class="reference internal image-reference" href="../_images/Gallery01.D.PlotStyle.png"><img alt="../_images/Gallery01.D.PlotStyle.png" class="align-center" src="../_images/Gallery01.D.PlotStyle.png" style="width: 50%;" />
+</a>
+<p><strong>D. PlotStyle</strong> contains the plotstyle (see above).</p>
+<a class="reference internal image-reference" href="../_images/Gallery01.E.OutputMode.png"><img alt="../_images/Gallery01.E.OutputMode.png" class="align-center" src="../_images/Gallery01.E.OutputMode.png" style="width: 50%;" />
+</a>
+<p><strong>E. OutputMode</strong> contains the Output Mode (see above).</p>
+<p><strong>G. FigSizeX</strong> contains the size of the figure in x (horizontal) direction.</p>
+<p><strong>F. FigSizeY</strong> contains the size of the figure in y (vertical) direction.</p>
+<a class="reference internal image-reference" href="../_images/Gallery01.H.Resolution.png"><img alt="../_images/Gallery01.H.Resolution.png" class="align-center" src="../_images/Gallery01.H.Resolution.png" style="width: 50%;" />
+</a>
+<p><strong>H. Resolution of x or t</strong> contains the resolution of x or t.</p>
+<a class="reference internal image-reference" href="../_images/Gallery01.I.LocalImports.png"><img alt="../_images/Gallery01.I.LocalImports.png" class="align-center" src="../_images/Gallery01.I.LocalImports.png" style="width: 50%;" />
+</a>
+<p><strong>I. Local imports</strong> contains the local imports and definitions before the function call.</p>
+<a class="reference internal image-reference" href="../_images/Gallery01.J.LocalImports.png"><img alt="../_images/Gallery01.J.LocalImports.png" class="align-center" src="../_images/Gallery01.J.LocalImports.png" style="width: 50%;" />
+</a>
+<p><strong>J. Keyword arguments</strong> contains the which passed to function.</p>
+<p>Some text</p>
+<a class="reference internal image-reference" href="../_images/Gallery01.K.RunAfterLoading.png"><img alt="../_images/Gallery01.K.RunAfterLoading.png" class="align-center" src="../_images/Gallery01.K.RunAfterLoading.png" style="width: 50%;" />
+</a>
+<p><strong>K. Run After loading</strong> determines whether and how the plot definition is run after loading (see above).</p>
+</section>
+<section id="id4">
+<h3>Source code<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>The C# source code for the gallery of plots can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/TinyPlot2D">duhadler/XlCalcNet</a></p>
+<p></p>
+</section>
+</section>
+<section id="interactive-3d-wpf-plots">
+<span id="rst-wpf3d"></span><h2>Interactive 3D wpf plots<a class="headerlink" href="#interactive-3d-wpf-plots" title="Link to this heading">#</a></h2>
+<p>The “Interactive 3D Wpf Plots” application is started from the Tiny IDE: in the main menu, click on <code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Interactive</span> <span class="pre">3D</span> <span class="pre">Wpf</span> <span class="pre">Plots</span></code>. The screenshot below shows an example</p>
+<a class="reference internal image-reference" href="../_images/Wpf3D.png"><img alt="../_images/Wpf3D.png" class="align-center" src="../_images/Wpf3D.png" style="width: 50%;" />
+</a>
+<p>The “Interactive 3D Wpf Plots” application is designed around the structure of the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder, making it easy to navigate and manage existing 3D plot definition examples, as well a new definitions written by the user.
+This application can be used only to edit and run 3D plot definition examples which are located in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder and are located in subfolders beginning with <code class="docutils literal notranslate"><span class="pre">Plots3D</span></code>. The code examples are organized in a tree structure, which is shown in the top right panel (the “folder panel”) of the application.</p>
+<p>The top left panel (the “3D plot definition editor panel”) of the application shows the 3D plot definition of the selected file, which can be edited and run. The 3D plot definition is stored as an <span class="math notranslate nohighlight">\(.xml\)</span> file, but is edited in a property grid. This allows to structure the definition in the sections <code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">General</span></code>, <code class="docutils literal notranslate"><span class="pre">02.</span> <span class="pre">Evaluation</span></code>, <code class="docutils literal notranslate"><span class="pre">03.</span> <span class="pre">Reshaping</span></code>, <code class="docutils literal notranslate"><span class="pre">Formatting</span></code>, and to use drop down menus to make the definition of the 3D plot easier.</p>
+<p>The output of the program is shown in the bottom panel (the “output panel”) of the application, which has 3 tabs: the “3D graphics” tab, which displays the interactive 3D plot;  the “Pictures” tab, which shows available pictures which can be used as textures; and the “Log” tab, which documents the progress of compiling and running the code containing the “Defining Equations”  and the “Expression Evaluator” (and also displays warning and error messages).</p>
+<p>Each file in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet\Plots3D*</span></code> folders can be opened in the application by clicking on it. Per  application instance, only one file can be opened, edited and run at a time
+(to open an additional file, you need to start a new instance of the application: <code class="docutils literal notranslate"><span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Interactive</span> <span class="pre">3D</span> <span class="pre">Wpf</span> <span class="pre">Plots</span></code>).
+The application will load this file into the 3D plot definition editor, and the 3D plot definition can be edited and run. To run the 3D plot definition, click on the “Run” button in the main menu. The output  is shown in the output panel.</p>
+<p>The ordering and naming of the 3D plot definition examples in the subfolder <code class="docutils literal notranslate"><span class="pre">Plots3DWpfExamples</span></code> match the ordering and naming of the corresponding chapters, sections and subsections in this manual, making it easy to find the 3D plot definition example which corresponds to a specific section of the manual. The “section help” feature (<code class="docutils literal notranslate"><span class="pre">Help</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Section</span> <span class="pre">Help</span></code>), which is available in the main menu of the application and opens the corresponding section of this manual in a web browser, depends on this ordering and naming.</p>
+<section id="id5">
+<h3>The menu bar of the application<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<a class="reference internal image-reference" href="../_images/WpfMenuMain.png"><img alt="../_images/WpfMenuMain.png" class="align-center" src="../_images/WpfMenuMain.png" style="width: 90%;" />
+</a>
+<p>The Menubar of the “Interactive 3D Wpf Plots” application contains the following menus: <code class="docutils literal notranslate"><span class="pre">File</span></code>, <code class="docutils literal notranslate"><span class="pre">Tools</span></code>, and <code class="docutils literal notranslate"><span class="pre">Help</span></code>. Each menu contains a number of items, which are described below.</p>
+<p>There are also two buttons (with green foreground color) in the menu bar: the “Run” button, which runs the code of the current file, and the “Show/Hide” button, which toggles the visibility of the folder panel.</p>
+<p><br /></p>
+<a class="reference internal image-reference" href="../_images/WpfMenuFile.png"><img alt="../_images/WpfMenuFile.png" class="align-center" src="../_images/WpfMenuFile.png" style="width: 30%;" />
+</a>
+<p>In the <code class="docutils literal notranslate"><span class="pre">File</span></code> menu, two standard items are missing: “New” and “Open”.</p>
+<p>The “New” item is missing because the Tiny IDE is designed to work within the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder, and therefore new files which are not in the current folder should be created in the appropriate subfolders of <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code>, which often have to be created manually first using the Windows Explorer.</p>
+<p>There is, however, a <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">As</span></code> item in the file menu, which allows to save the current file under a new name in the current folder. This is useful for creating a copy of an existing file, and using this as a starting point for a new file.</p>
+<p>The “Open” item (which would typically open a dialog box with the functionally of the Windows Explorer) is missing because the Tiny IDE is limited to the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder. Instead the folder panel allows to navigate through the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder and open any file in it.</p>
+<p>Renaming or deleting files and folders is possible, but should be done with care, using the Windows Explorer, and not using the Tiny IDE. After these changes, when returning to the Tiny IDE, the tree structure will not be updated automatically, but has to be updated manually by clicking on the appropriate parent folder in the tree structure.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Containing</span> <span class="pre">Folder</span></code> opens the Windows Explorer in the folder of the current file. This is useful for quickly accessing other files in the same folder, or for deleting files and folders.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Appdata</span> <span class="pre">Local</span> <span class="pre">Folder</span></code> opens the Windows Explorer in the <code class="docutils literal notranslate"><span class="pre">AppData\Local\XlCalcNetIDE</span></code> folder. This is useful for quickly accessing files and folders which are generated by running Python or C# code examples in the Tiny IDE.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Binary</span> <span class="pre">Folder</span></code> opens the Windows Explorer in the <code class="docutils literal notranslate"><span class="pre">Bin</span></code> subfolder of the <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span></code> installation. This is useful mostly for debugging purposes.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Save</span></code> will just save the current file without any further action. <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">As</span></code> has been descibed above. <code class="docutils literal notranslate"><span class="pre">Exit</span></code> will close the Tiny IDE.</p>
+<p><br /></p>
+<a class="reference internal image-reference" href="../_images/WpfMenuTools.png"><img alt="../_images/WpfMenuTools.png" class="align-center" src="../_images/WpfMenuTools.png" style="width: 26%;" />
+</a>
+<p><code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">IDE</span></code> starts the Tiny IDE application, see <a class="reference internal" href="C01_Setup.html#rst-tinyide"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">Monitor</span> <span class="pre">(external)</span></code> starts an additional instance of the the “Output Monitor” application, see <a class="reference internal" href="#rst-outputmonitor"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Gallery</span> <span class="pre">of</span> <span class="pre">Plots</span></code> starts the gallery of plots application, see <a class="reference internal" href="#rst-galleryofplots"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Interactive</span> <span class="pre">3D</span> <span class="pre">Wpf</span> <span class="pre">Plots</span> <span class="pre">(external)</span></code> starts an additional the Interactive 3D Wpf Plots application, see <a class="reference internal" href="#rst-wpf3d"><span class="std std-ref">here</span></a> for details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Tiny</span> <span class="pre">Data</span> <span class="pre">Viewer</span></code> starts the Tiny Data Viewer application, see <a class="reference internal" href="#rst-dataviewer"><span class="std std-ref">here</span></a> for details.</p>
+<p><br /></p>
+<a class="reference internal image-reference" href="../_images/WpfMenuHelp.png"><img alt="../_images/WpfMenuHelp.png" class="align-center" src="../_images/WpfMenuHelp.png" style="width: 40%;" />
+</a>
+<p>In the <code class="docutils literal notranslate"><span class="pre">Help</span></code> menu, <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span> <span class="pre">Manual</span> <span class="pre">(online)...</span></code> displays the start page of the XlCalcNet online manual in a web browser.</p>
+<p><code class="docutils literal notranslate"><span class="pre">XlCalcNet</span> <span class="pre">Section</span> <span class="pre">Help</span> <span class="pre">(online)...</span></code> displays the section of the XlCalcNet.online manual which corresponds to the current file in a web browser.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Interactive</span> <span class="pre">3D</span> <span class="pre">plots</span> <span class="pre">Tutorial</span> <span class="pre">(online)...</span></code> displays the section of the XlCalcNet.online manual which explains the use of the Interactive 3D plots application in a web browser.</p>
+</section>
+<section id="the-context-menus-of-the-3d-plot-definition-editor">
+<h3>The context menus of the 3D plot definition editor<a class="headerlink" href="#the-context-menus-of-the-3d-plot-definition-editor" title="Link to this heading">#</a></h3>
+<a class="reference internal image-reference" href="../_images/ctxmenuEditor.png"><img alt="../_images/ctxmenuEditor.png" class="align-center" src="../_images/ctxmenuEditor.png" style="width: 26%;" />
+</a>
+<p>Right-clicking in the 3D plot definition editor opens a context menu, which provides quick access to</p>
+<a class="reference internal image-reference" href="../_images/ctxmenu3DGrapgics.png"><img alt="../_images/ctxmenu3DGrapgics.png" class="align-center" src="../_images/ctxmenu3DGrapgics.png" style="width: 26%;" />
+</a>
+<p>Right-clicking in the 3D Graphics tab in the output panel opens a context menu, which provides quick access to</p>
+</section>
+<section id="id6">
+<h3>The General section in the edtior property grit<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>The General section in the edtior property grit contains the following items:</p>
+<a class="reference internal image-reference" href="../_images/01._General.png"><img alt="../_images/01._General.png" class="align-center" src="../_images/01._General.png" style="width: 50%;" />
+</a>
+<p><strong>A. Title</strong> contains the title of the graphics</p>
+<p><strong>C. Camera Angle Theta</strong> contains the camera angle theta.</p>
+<p><strong>D. Camera Angle Phi</strong> contains the camera angle phi.</p>
+<p><strong>E. Camera Radius Exponent</strong> contains the camera radius exponent.</p>
+<p><strong>F. Camera Is Orthographic</strong> determines if the camera is orthographic or perspective.</p>
+<p><strong>G. Show Axes</strong> determines if axes are shown in the graphics.</p>
+<a class="reference internal image-reference" href="../_images/01.H.StyleOfAxes.png"><img alt="../_images/01.H.StyleOfAxes.png" class="align-center" src="../_images/01.H.StyleOfAxes.png" style="width: 50%;" />
+</a>
+<p><strong>H. Style Of Axes</strong> determines the style axes (if any).</p>
+<a class="reference internal image-reference" href="../_images/01.I.RunAfterLoading.png"><img alt="../_images/01.I.RunAfterLoading.png" class="align-center" src="../_images/01.I.RunAfterLoading.png" style="width: 50%;" />
+</a>
+<p><strong>I. Run After Loading</strong> determines the action which occurs after loading the plot definition.</p>
+</section>
+<section id="the-evaluation-section-in-the-edtior-property-grit">
+<h3>The Evaluation section in the edtior property grit<a class="headerlink" href="#the-evaluation-section-in-the-edtior-property-grit" title="Link to this heading">#</a></h3>
+<p>The Evaluation section in the edtior property grit contains the following items:</p>
+<a class="reference internal image-reference" href="../_images/02._Evaluation.png"><img alt="../_images/02._Evaluation.png" class="align-center" src="../_images/02._Evaluation.png" style="width: 60%;" />
+</a>
+<a class="reference internal image-reference" href="../_images/02.A.PlotType.png"><img alt="../_images/02.A.PlotType.png" class="align-center" src="../_images/02.A.PlotType.png" style="width: 60%;" />
+</a>
+<p><strong>A. Plot Type</strong> determines the plot type.</p>
+<a class="reference internal image-reference" href="../_images/02.B.DefiningEquations.png"><img alt="../_images/02.B.DefiningEquations.png" class="align-center" src="../_images/02.B.DefiningEquations.png" style="width: 60%;" />
+</a>
+<p><strong>B. Defining equations</strong> contains the C# code for the equations which define the graphics.</p>
+<a class="reference internal image-reference" href="../_images/02.C.Resolution_xut.png"><img alt="../_images/02.C.Resolution_xut.png" class="align-center" src="../_images/02.C.Resolution_xut.png" style="width: 60%;" />
+</a>
+<p><strong>C. Resolution of x, u, t</strong> determines the resolution of the variable, x ,u or t, depending on the plot type.</p>
+<a class="reference internal image-reference" href="../_images/02.D.Resolution_yvpolygon.png"><img alt="../_images/02.D.Resolution_yvpolygon.png" class="align-center" src="../_images/02.D.Resolution_yvpolygon.png" style="width: 60%;" />
+</a>
+<p><strong>D. Resolution of y, v, polygon</strong> determines the resolution of the variable, y ,v or polygon, depending on the plot type.</p>
+<a class="reference internal image-reference" href="../_images/02.E.StartOf_xut.png"><img alt="../_images/02.E.StartOf_xut.png" class="align-center" src="../_images/02.E.StartOf_xut.png" style="width: 60%;" />
+</a>
+<p><strong>E. Start of x, u, t</strong> determines the start of the variable, x ,u or t, depending on the plot type.</p>
+<p><strong>F. Stop of x, u, t</strong> determines the stop of the variable, x ,u or t, depending on the plot type.</p>
+<p><strong>G. Start of y, v, polygon</strong> determines the start of the variable, y ,v or polygon, depending on the plot type.</p>
+<p><strong>H. Stop of y, v, polygon</strong> determines the stop of the variable, y ,v or polygon, depending on the plot type.</p>
+<p><strong>I. Extend path end</strong> determines if the path end is extended to close the path. Only relevant for path surfaces.</p>
+<a class="reference internal image-reference" href="../_images/02.J.PathEvaluationSequence.png"><img alt="../_images/02.J.PathEvaluationSequence.png" class="align-center" src="../_images/02.J.PathEvaluationSequence.png" style="width: 60%;" />
+</a>
+<p><strong>J. Path evaluation sequence</strong> determines  the path sequence which is used for optimal results. Only relevant for path surfaces.</p>
+</section>
+<section id="the-reshaping-section-in-the-edtior-property-grit">
+<h3>The Reshaping section in the edtior property grit<a class="headerlink" href="#the-reshaping-section-in-the-edtior-property-grit" title="Link to this heading">#</a></h3>
+<p>The Evaluation section in the edtior property grit contains the following items:</p>
+<a class="reference internal image-reference" href="../_images/03._Reshaping.png"><img alt="../_images/03._Reshaping.png" class="align-center" src="../_images/03._Reshaping.png" style="width: 60%;" />
+</a>
+<a class="reference internal image-reference" href="../_images/03.A.FinalRotationOrder.png"><img alt="../_images/03.A.FinalRotationOrder.png" class="align-center" src="../_images/03.A.FinalRotationOrder.png" style="width: 60%;" />
+</a>
+<p><strong>A. Final Rotation Order</strong> Sets the order for the final rotation (if any).</p>
+<p><strong>B. Final XRotation (in degrees)</strong> Rotation around the X axis (in degrees).</p>
+<p><strong>C. Final YRotation (in degrees)</strong> Rotation around the Y axis (in degrees).</p>
+<p><strong>D. Final ZRotation (in degrees)</strong> Rotation around the Z axis (in degrees).</p>
+<p><strong>E. Truncate</strong> Sets the truncation threshold for the Z axis.</p>
+<p><strong>F. LogLogTransform</strong> determines if the LogLog transform is applied.</p>
+<p><strong>G. Centered XY</strong> determines if x,y are centered or not.</p>
+<a class="reference internal image-reference" href="../_images/03.H.SameScale.png"><img alt="../_images/03.H.SameScale.png" class="align-center" src="../_images/03.H.SameScale.png" style="width: 60%;" />
+</a>
+<p><strong>H. Same Scale</strong> determines which axes are using the same scale.</p>
+<a class="reference internal image-reference" href="../_images/03.I.ComplexComponent.png"><img alt="../_images/03.I.ComplexComponent.png" class="align-center" src="../_images/03.I.ComplexComponent.png" style="width: 60%;" />
+</a>
+<p><strong>I. Complex Component</strong> determines which complex component is used. Only relevant if the plot type is Altitude surface, complex function.</p>
+<a class="reference internal image-reference" href="../_images/03.J.Branchcuts.png"><img alt="../_images/03.J.Branchcuts.png" class="align-center" src="../_images/03.J.Branchcuts.png" style="width: 60%;" />
+</a>
+<p><strong>J. Branchcuts</strong> determines which brachcuts. Only relevant if the plot type is Altitude surface, complex function.</p>
+</section>
+<section id="the-formatting-section-in-the-edtior-property-grit">
+<h3>The Formatting section in the edtior property grit<a class="headerlink" href="#the-formatting-section-in-the-edtior-property-grit" title="Link to this heading">#</a></h3>
+<p>The Formatting section in the edtior property grit contains the following items:</p>
+<a class="reference internal image-reference" href="../_images/04._Formatting.png"><img alt="../_images/04._Formatting.png" class="align-center" src="../_images/04._Formatting.png" style="width: 60%;" />
+</a>
+<a class="reference internal image-reference" href="../_images/04.A.SurfaceMaterial.png"><img alt="../_images/04.A.SurfaceMaterial.png" class="align-center" src="../_images/04.A.SurfaceMaterial.png" style="width: 60%;" />
+</a>
+<p><strong>A. Surface Material</strong> determines which surface material is used.</p>
+<a class="reference internal image-reference" href="../_images/04.B.SurfaceColor.png"><img alt="../_images/04.B.SurfaceColor.png" class="align-center" src="../_images/04.B.SurfaceColor.png" style="width: 60%;" />
+</a>
+<p><strong>B. Surface Color</strong> determines which surface color is used. Note that there are 3 different tabs which can be used to choose the color. Only relevant the surface material is Plain Color or Glossy Color.</p>
+<a class="reference internal image-reference" href="../_images/04.C.SurfaceGradient.png"><img alt="../_images/04.C.SurfaceGradient.png" class="align-center" src="../_images/04.C.SurfaceGradient.png" style="width: 60%;" />
+</a>
+<p><strong>C. Surface Gradient</strong> determines which surface gradient is used.. Only relevant if the surface material is Gradient.</p>
+<a class="reference internal image-reference" href="../_images/04.D.ColorMap.png"><img alt="../_images/04.D.ColorMap.png" class="align-center" src="../_images/04.D.ColorMap.png" style="width: 60%;" />
+</a>
+<p><strong>D. Surface ColorMap</strong> determines which surface colormap is used.. Only relevant if the surface material is ColorMap.</p>
+<a class="reference internal image-reference" href="../_images/04.E.Texture.png"><img alt="../_images/04.E.Texture.png" class="align-center" src="../_images/04.E.Texture.png" style="width: 60%;" />
+</a>
+<p><strong>E. Surface Texture</strong> determines which texture is used.. Only relevant if the surface material is Texture.</p>
+<p><strong>F. Surface Smoothing</strong> determines if surface smoothing is applied.</p>
+<p><strong>G. Surface Transparency</strong> determines the amount of surface transparency (from o to 255).</p>
+<a class="reference internal image-reference" href="../_images/04.H.BachMaterial.png"><img alt="../_images/04.H.BachMaterial.png" class="align-center" src="../_images/04.H.BachMaterial.png" style="width: 60%;" />
+</a>
+<p><strong>H. Back Material</strong> determines the background material.</p>
+<p><strong>I. Back Color</strong> determines the background color.</p>
+<p><strong>J. Show Wireframe</strong> determines if a wireframe is shown.</p>
+<p><strong>K. Wireframe Thickness</strong> determines the wireframe thickness.</p>
+<p><strong>L. Wireframe Color</strong> determines the wireframe color.</p>
+<p><strong>M. Highlight Vertices</strong> determines if vertices are highlighted.</p>
+<p><strong>N. Vertices Thickness</strong> determines the thickness of the vertices.</p>
+<p><strong>O. Vertices Color</strong> determines the color of the vertices.</p>
+<a class="reference internal image-reference" href="../_images/04.P.BackgroundSolidType.png"><img alt="../_images/04.P.BackgroundSolidType.png" class="align-center" src="../_images/04.P.BackgroundSolidType.png" style="width: 60%;" />
+</a>
+<p><strong>P. Background Solid Type</strong> determines the type of the background, if any.</p>
+<p><strong>Q. Background Solid color</strong> determines the color of the background, if any.</p>
+<p><strong>R. Background Solid Transparency</strong> determines the amount of surface transparency (from o to 255).</p>
+</section>
+<section id="id7">
+<h3>Source code<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>The Python source code for starting the IDE can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/ShowEditor.py">duhadler/XlCalcNet</a></p>
+<p>The C# source code for the gallery of plots can be found here: <a class="github reference external" href="https://github.com/duhadler/XlCalcNet/tree/master/xlcalcnet/Addin/NET48/Source/TinyPlot3D">duhadler/XlCalcNet</a></p>
+<p>Much of the C# code of this application is based on <span id="id8">Stephens [<a class="reference internal" href="../99BackMatter/index.html#id881" title="Rod Stephens. WPF 3d: Three-Dimensional Graphics with WPF and C#. CreateSpace Independent Publishing Platform, 2018. ISBN 978-1983905964. [Online; accessed 22-July-2024]. URL: https://github.com/WriterRod/WPF-3d-source.">507</a>]</span>.</p>
+<p></p>
+</section>
 </section>
 <section id="functions-related-to-folders">
 <h2>Functions related to folders<a class="headerlink" href="#functions-related-to-folders" title="Link to this heading">#</a></h2>
@@ -1133,10 +1456,32 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-output-monitor">Starting the output monitor</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-gallery-of-plots">Starting the gallery of plots</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-interactive-3d-wpf-plots">Starting the interactive 3D wpf plots</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-data-viewer">Starting the data viewer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-tiny-data-viewer">The Tiny Data Viewer</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-menu-bar-of-the-application">The menu bar of the application</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code">Source code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-output-monitor">The Output Monitor</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">The menu bar of the application</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Source code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-gallery-of-plots">The Gallery of Plots</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">The menu bar of the application</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-general-section-in-the-edtior-property-grit">The General section in the edtior property grit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Source code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-3d-wpf-plots">Interactive 3D wpf plots</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">The menu bar of the application</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-context-menus-of-the-3d-plot-definition-editor">The context menus of the 3D plot definition editor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">The General section in the edtior property grit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-evaluation-section-in-the-edtior-property-grit">The Evaluation section in the edtior property grit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-reshaping-section-in-the-edtior-property-grit">The Reshaping section in the edtior property grit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-formatting-section-in-the-edtior-property-grit">The Formatting section in the edtior property grit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Source code</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-related-to-folders">Functions related to folders</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.get_local_appdata"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gui.get_local_appdata_xlcalcnet"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata_xlcalcnet()</span></code></a></li>
@@ -1193,7 +1538,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 11, 2026.
+  Last updated on Oct 14, 2026.
   <br/>
 </p>
   </div>

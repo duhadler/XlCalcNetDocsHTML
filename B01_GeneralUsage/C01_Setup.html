@@ -53,7 +53,7 @@
     <link rel="prev" title="Setup and general usage" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 11, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 14, 2026"/>
   </head>
   
   
@@ -881,7 +881,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-menu-bar-of-the-editor">The menu bar of the Editor</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-context-menu-and-autocomplete-feature-of-the-editor">The context menu and autocomplete feature of the Editor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-context-menu-of-the-editor">The context menu of the editor</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-python-development-cycle-in-the-tiny-ide">The Python development cycle in the Tiny IDE</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-csharp-development-cycle-in-the-tiny-ide">The CSharp development cycle in the Tiny IDE</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-output-tab-in-the-output-panel">The Output tab in the Output Panel</a></li>
@@ -1092,8 +1092,8 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">C\#</span> <span class="pre">Tutorial</span> <span class="pre">(online)...</span></code> displays the online tutorial for C#, which is available on the official C# website in a web browser.</p>
 <p><code class="docutils literal notranslate"><span class="pre">About</span> <span class="pre">XlCalcNet...</span></code> displays information about the XlCalcNet package, including version number and copyright information.</p>
 </section>
-<section id="the-context-menu-and-autocomplete-feature-of-the-editor">
-<h3>The context menu and autocomplete feature of the Editor<a class="headerlink" href="#the-context-menu-and-autocomplete-feature-of-the-editor" title="Link to this heading">#</a></h3>
+<section id="the-context-menu-of-the-editor">
+<h3>The context menu of the editor<a class="headerlink" href="#the-context-menu-of-the-editor" title="Link to this heading">#</a></h3>
 <p>Right-clicking in the editor panel opens a context menu, which provides quick access to common actions like <code class="docutils literal notranslate"><span class="pre">Insert</span> <span class="pre">Block</span></code>, <code class="docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">Block</span> <span class="pre">Comment</span></code>, <code class="docutils literal notranslate"><span class="pre">Collapse</span> <span class="pre">Top</span> <span class="pre">Level</span> <span class="pre">Folds</span></code>, <code class="docutils literal notranslate"><span class="pre">Expand</span> <span class="pre">All</span> <span class="pre">Folds</span></code>, <code class="docutils literal notranslate"><span class="pre">Goto</span> <span class="pre">Previous</span> <span class="pre">Bookmark</span></code>, <code class="docutils literal notranslate"><span class="pre">Goto</span> <span class="pre">Next</span> <span class="pre">Bookmark</span></code>, all of which are also available in the main menu.</p>
 <p>New in this context menu is the item <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">Function</span> <span class="pre">Info</span></code>, which for functions which belong to a module from XlCalcNet, displays information about the function in the “Function Info” tab of the output panel.</p>
 <a class="reference internal image-reference" href="../_images/EditorContextMenu.png"><img alt="../_images/EditorContextMenu.png" class="align-center" src="../_images/EditorContextMenu.png" style="width: 50%;" />
@@ -1991,7 +1991,7 @@ Memory used after full collection:   1,431,368
 <p>In double precision and binary floating point arithmetic, the tangent of <span class="math notranslate nohighlight">\(x = 1.57079632679489\)</span> is calculated as <span class="math notranslate nohighlight">\(\tan(x) = 1.48752 \cdot 10^{14}\)</span>, whereas the correct result is <span class="math notranslate nohighlight">\(\tan(x) = 1.51075 \cdot 10^{14}\)</span>. This amounts to an absolute error of <span class="math notranslate nohighlight">\(2.32287  \cdot 10^{12}\)</span> and a relative error of <span class="math notranslate nohighlight">\(1.54\%\)</span>.</p>
 <p>There are also limits on the range of arguments, e.g. <span class="math notranslate nohighlight">\(\sin(10^{8})\)</span> returns the value  <span class="math notranslate nohighlight">\(-9.31639 \cdot 10^{-1}\)</span>   (with an relative error of <span class="math notranslate nohighlight">\(-6.22776 \cdot 10^{-13}\)</span>), whereas  <span class="math notranslate nohighlight">\(\sin(10^{9})\)</span> returns an invalid result (the exact result is  <span class="math notranslate nohighlight">\(5.45843 \cdot 10^{-1}\)</span>)</p>
 <p><strong>Example: Logarithms and Exponential Functions</strong></p>
-<p>Consider the following example from <span id="id5">Kaveh R. Ghazi and Vincent Lefèvre and Philippe Théveny and Paul Zimmermann [<a class="reference internal" href="../99BackMatter/index.html#id102" title="Kaveh R. Ghazi and Vincent Lefèvre and Philippe Théveny and Paul Zimmermann. Why and how to use arbitrary precision. Computing in Science and Engineering, 12(3):62–65, 2010. Preprint available at http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.212.6321&amp;rep=rep1&amp;type=pdf.">1504</a>]</span>:</p>
+<p>Consider the following example from <span id="id5">Kaveh R. Ghazi and Vincent Lefèvre and Philippe Théveny and Paul Zimmermann [<a class="reference internal" href="../99BackMatter/index.html#id102" title="Kaveh R. Ghazi and Vincent Lefèvre and Philippe Théveny and Paul Zimmermann. Why and how to use arbitrary precision. Computing in Science and Engineering, 12(3):62–65, 2010. Preprint available at http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.212.6321&amp;rep=rep1&amp;type=pdf.">1505</a>]</span>:</p>
 <p>Determine 10 decimal digits of the constant</p>
 <div class="math notranslate nohighlight">
 \[Y = 173746a + 94228b - 78487c, \quad \text{where }\]</div>
@@ -1999,7 +1999,7 @@ Memory used after full collection:   1,431,368
 \[a = \sin(10^{22}), b = \log(17.1), c = \exp(0.42).\]</div>
 <p>The expected result is <span class="math notranslate nohighlight">\(Y = -1.341818958 \cdot 10^{-12}\)</span>.</p>
 <p><strong>Example: Linear Algebra</strong></p>
-<p>The following example is from <span id="id6">W. Hofschuster and W. Krämer [<a class="reference internal" href="../99BackMatter/index.html#id129" title="W. Hofschuster and W. Krämer. C-xsc 2.0: a c++ library for extended scientific computing. In R. Alt, A. Frommer, R.B. Kearfott, and W. Luther, editors, Numerical Software with Result Verification, Lecture notes in Computer Science, pages 15–35. Springer-Verlag, Heidelberg, 2004.">1505</a>]</span>:</p>
+<p>The following example is from <span id="id6">W. Hofschuster and W. Krämer [<a class="reference internal" href="../99BackMatter/index.html#id129" title="W. Hofschuster and W. Krämer. C-xsc 2.0: a c++ library for extended scientific computing. In R. Alt, A. Frommer, R.B. Kearfott, and W. Luther, editors, Numerical Software with Result Verification, Lecture notes in Computer Science, pages 15–35. Springer-Verlag, Heidelberg, 2004.">1506</a>]</span>:</p>
 <p>We want to solve the (ill-conditioned) system of linear equations <span class="math notranslate nohighlight">\(Ax = b\)</span> with</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix}
@@ -2119,7 +2119,7 @@ x_{2}
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-menu-bar-of-the-editor">The menu bar of the Editor</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-context-menu-and-autocomplete-feature-of-the-editor">The context menu and autocomplete feature of the Editor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-context-menu-of-the-editor">The context menu of the editor</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-python-development-cycle-in-the-tiny-ide">The Python development cycle in the Tiny IDE</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-csharp-development-cycle-in-the-tiny-ide">The CSharp development cycle in the Tiny IDE</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-output-tab-in-the-output-panel">The Output tab in the Output Panel</a></li>
@@ -2176,7 +2176,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 11, 2026.
+  Last updated on Oct 14, 2026.
   <br/>
 </p>
   </div>

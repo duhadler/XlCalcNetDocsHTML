@@ -52,7 +52,7 @@
     <link rel="prev" title="Preface" href="../000_Preface/01_preface.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 11, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 14, 2026"/>
   </head>
   
   
@@ -896,7 +896,7 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#installation">Installation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#overview">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#the-menu-bar-of-the-editor">The menu bar of the Editor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#the-context-menu-and-autocomplete-feature-of-the-editor">The context menu and autocomplete feature of the Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#the-context-menu-of-the-editor">The context menu of the editor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#the-python-development-cycle-in-the-tiny-ide">The Python development cycle in the Tiny IDE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#the-csharp-development-cycle-in-the-tiny-ide">The CSharp development cycle in the Tiny IDE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="C01_Setup.html#the-output-tab-in-the-output-panel">The Output tab in the Output Panel</a></li>
@@ -985,10 +985,32 @@ document.write(`
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="C04_GuiFunctions.html">General user interface and functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#starting-the-output-monitor">Starting the output monitor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#starting-the-gallery-of-plots">Starting the gallery of plots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#starting-the-interactive-3d-wpf-plots">Starting the interactive 3D wpf plots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#starting-the-data-viewer">Starting the data viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#the-tiny-data-viewer">The Tiny Data Viewer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#the-menu-bar-of-the-application">The menu bar of the application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#source-code">Source code</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#the-output-monitor">The Output Monitor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#id1">The menu bar of the application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#id2">Source code</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#the-gallery-of-plots">The Gallery of Plots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#id3">The menu bar of the application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#the-general-section-in-the-edtior-property-grit">The General section in the edtior property grit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#id4">Source code</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#interactive-3d-wpf-plots">Interactive 3D wpf plots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#id5">The menu bar of the application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#the-context-menus-of-the-3d-plot-definition-editor">The context menus of the 3D plot definition editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#id6">The General section in the edtior property grit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#the-evaluation-section-in-the-edtior-property-grit">The Evaluation section in the edtior property grit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#the-reshaping-section-in-the-edtior-property-grit">The Reshaping section in the edtior property grit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#the-formatting-section-in-the-edtior-property-grit">The Formatting section in the edtior property grit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#id7">Source code</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="C04_GuiFunctions.html#functions-related-to-folders">Functions related to folders</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.get_local_appdata"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="C04_GuiFunctions.html#gui.get_local_appdata_xlcalcnet"><code class="docutils literal notranslate"><span class="pre">gui.get_local_appdata_xlcalcnet()</span></code></a></li>
@@ -1287,7 +1309,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 11, 2026.
+  Last updated on Oct 14, 2026.
   <br/>
 </p>
   </div>

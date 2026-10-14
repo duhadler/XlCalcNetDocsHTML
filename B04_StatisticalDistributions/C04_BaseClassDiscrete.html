@@ -53,7 +53,7 @@
     <link rel="prev" title="Base class for continuous univariate distributions" href="C03_BaseClassCont.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 11, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 14, 2026"/>
   </head>
   
   
@@ -927,7 +927,7 @@ document.write(`
 <dt class="sig sig-object py" id="rv_discrete.pmf">
 <span class="sig-prename descclassname"><span class="pre">rv_discrete.</span></span><span class="sig-name descname"><span class="pre">pmf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rv_discrete.pmf" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(\text{pmf}_X(x)\)</span>, the probability mass function (pmf) of a random variable <span class="math notranslate nohighlight">\(X\)</span>.</p>
-<p>See also Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id948" title="Wikipedia. Probability mass function. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Probability_mass_function.">1170</a>]</span>.</p>
+<p>See also Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id949" title="Wikipedia. Probability mass function. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Probability_mass_function.">1171</a>]</span>.</p>
 <p>There are various ways to calculate a pmf. Ideally, it is available in closed from and can be calculated directly, or there is are dedicated functions to calculate it. If this is not the case, then one of the options given below can be used. There is no method which is always best, and the choice depends not only on the function, but also on the values of the argument and the parameters.</p>
 </dd></dl>
 
@@ -948,12 +948,12 @@ document.write(`
 </section>
 <section id="probability-generating-function">
 <h2>Probability generating function<a class="headerlink" href="#probability-generating-function" title="Link to this heading">#</a></h2>
-<p>See also Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id949" title="Wikipedia. Probability-generating function. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Probability-generating_function.">1171</a>]</span>.</p>
+<p>See also Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id950" title="Wikipedia. Probability-generating function. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Probability-generating_function.">1172</a>]</span>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="rv_discrete.pgf">
 <span class="sig-prename descclassname"><span class="pre">rv_discrete.</span></span><span class="sig-name descname"><span class="pre">pgf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rv_discrete.pgf" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(\text{pgf}_X(x)\)</span>, the probability generating function (pgf) of a discrete random variable <span class="math notranslate nohighlight">\(X\)</span>.</p>
-<p>See also Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id949" title="Wikipedia. Probability-generating function. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Probability-generating_function.">1171</a>]</span>.</p>
+<p>See also Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id950" title="Wikipedia. Probability-generating function. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Probability-generating_function.">1172</a>]</span>.</p>
 <p>It is a power series representation (the generating function) of the probability mass function of the random variable.</p>
 <p>If <span class="math notranslate nohighlight">\(X\)</span> is a discrete random variable taking values in the non-negative integers <span class="math notranslate nohighlight">\(\{0,1, ...\}\)</span>, then the probability generating function of X is defined as</p>
 <div class="math notranslate nohighlight">
@@ -986,7 +986,7 @@ document.write(`
 <dt class="sig sig-object py" id="rv_discrete.pmfvec">
 <span class="sig-prename descclassname"><span class="pre">rv_discrete.</span></span><span class="sig-name descname"><span class="pre">pmfvec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rv_discrete.pmfvec" title="Link to this definition">#</a></dt>
 <dd><p>Returns a vector containing all values of the pmf. This is useful is such a vector is cheap to compute, and further operations (like convolutions) are required.</p>
-<p>See also Wikipedia <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id948" title="Wikipedia. Probability mass function. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Probability_mass_function.">1170</a>]</span>.</p>
+<p>See also Wikipedia <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id949" title="Wikipedia. Probability mass function. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Probability_mass_function.">1171</a>]</span>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mp</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">30</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mu</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">sigma</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">t</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">;</span>
@@ -1003,7 +1003,7 @@ document.write(`
 <dt class="sig sig-object py" id="rv_discrete.entropy">
 <span class="sig-prename descclassname"><span class="pre">rv_discrete.</span></span><span class="sig-name descname"><span class="pre">entropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rv_discrete.entropy" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(\text{entropy}_X(x)\)</span>, the entropy of a random variable <span class="math notranslate nohighlight">\(X\)</span>.</p>
-<p>See also Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id946" title="Wikipedia. Definition of entropy and differential entropy. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Maximum_entropy_probability_distribution#Definition_of_entropy_and_differential_entropy.">1150</a>]</span>.</p>
+<p>See also Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id947" title="Wikipedia. Definition of entropy and differential entropy. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Maximum_entropy_probability_distribution#Definition_of_entropy_and_differential_entropy.">1151</a>]</span>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mp</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">30</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mu</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">sigma</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">t</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">;</span>
@@ -1020,7 +1020,7 @@ document.write(`
 <dt class="sig sig-object py" id="rv_discrete.logpmf">
 <span class="sig-prename descclassname"><span class="pre">rv_discrete.</span></span><span class="sig-name descname"><span class="pre">logpmf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rv_discrete.logpmf" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(\text{logpmf}_X(x)\)</span>, the logarithm of the probability mass function (pmf) of a random variable <span class="math notranslate nohighlight">\(X\)</span>.</p>
-<p>See also Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id948" title="Wikipedia. Probability mass function. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Probability_mass_function.">1170</a>]</span>.</p>
+<p>See also Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id949" title="Wikipedia. Probability mass function. Wikimedia Foundation, 2007. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Probability_mass_function.">1171</a>]</span>.</p>
 <div class="math notranslate nohighlight">
 \[\text{logpmf}_X(x) = \log(\text{pmf}_X(x))\]</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
@@ -1136,7 +1136,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 11, 2026.
+  Last updated on Oct 14, 2026.
   <br/>
 </p>
   </div>
