@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Fisk (log-logistic) distribution &#8212; XlCalcNet 0.9.0 documentation</title>
+    <title>Fisk (log-logistic) distribution &#8212; XlCalcNet 1.0.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../_static/documentation_options.js?v=2a76c96f"></script>
+    <script src="../../_static/documentation_options.js?v=f9c1cefe"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Dagum (Burr Type III) distribution" href="D14_Dagum.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 21, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 22, 2026"/>
   </head>
   
   
@@ -636,6 +636,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../B27_Math53Elliptic/C05_JacobiTheta.html">Jacobi theta functions  at <span class="math notranslate nohighlight">\(x=0\)</span> for <span class="math notranslate nohighlight">\(0 \le q &lt;1\)</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B27_Math53Elliptic/C06_InverseJacobiEllipticFunctions.html">Inverse Jacobi elliptic functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B27_Math53Elliptic/C07_LemniscateFunctions.html">Lemniscate functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B27_Math53Elliptic/C08_NevilleThetaFunctions.html">Neville theta functions</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../B28_Math53LerchPhi/index.html">Real functions related to Lerchs phi</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -663,11 +664,8 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../B31_Cmath53/index.html">Real and complex functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../B31_Cmath53/C01_Elementary.html">Additional elementary complex functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B31_Cmath53/C02_NevilleThetaFunctions.html">Neville theta functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B31_Cmath53/C03_WeierstrassConversions.html">Conversions of parameters of Weierstrass <span class="math notranslate nohighlight">\(\wp\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B31_Cmath53/C04_WeierstrassG2G3.html">Weierstrass elliptic functions, in terms of (real) lattice invariants <span class="math notranslate nohighlight">\(g_2, g_3\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B31_Cmath53/C05_WeierstrassE1E2.html">Weierstrass elliptic functions, in terms of (real) lattice roots <span class="math notranslate nohighlight">\(e_1, e_2\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B31_Cmath53/C06_WeierstrassOmega.html">Weierstrass elliptic functions, in terms of lattice half-periods <span class="math notranslate nohighlight">\(\omega_1\)</span> and <span class="math notranslate nohighlight">\(\omega_2\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B31_Cmath53/C02_WeierstrassG2G3.html">Weierstrass elliptic functions, in terms of (real) lattice invariants <span class="math notranslate nohighlight">\(g_2, g_3\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B31_Cmath53/C03_WeierstrassE1E2.html">Weierstrass elliptic functions, in terms of (real) lattice roots <span class="math notranslate nohighlight">\(e_1, e_2\)</span></a></li>
 </ul>
 </details></li>
 </ul>
@@ -699,8 +697,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../../C05_UserDistributionPlots/C01_Intro_Parametric2D.html">Introduction to 2D functions plots</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../C06_UserSpecialCplxPlots/index.html">Distribution functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../C06_UserSpecialCplxPlots/C07_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../C06_UserSpecialCplxPlots/index.html">Complex functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../C06_UserSpecialCplxPlots/D01_EllipticK.html">Additional complex functions</a></li>
 </ul>
 </details></li>
 </ul>
@@ -1134,7 +1132,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 21, 2026.
+  Last updated on Oct 22, 2026.
   <br/>
 </p>
   </div>

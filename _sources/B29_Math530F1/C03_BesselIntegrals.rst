@@ -19,27 +19,6 @@ Integrals of zero-order Bessel functions
 ===============================================================================
 
 
-Integral of `I_0`
--------------------------------------------------------------------------------
-
-.. method:: math53.bessel_i0_int(x)
-
-    Returns the integral `\displaystyle \int_0^x I_0(t) \mathrm{d}t.`  See also Wikipedia :cite:p:`WikipediaFun86`, MathWorld :cite:p:`WolframFun86`, NIST :cite:p:`DLMFun86`, BoostMath :cite:p:`BoostFun86`, :cite:t:`Ehrhardt2018` (3.1.5.1).
-
-
-    An example in Python
-
-    .. code-block:: pycon
-
-        >>> from xlcalcnet import ereal
-        >>> ereal.BesselI0Int(0.5)
-        ereal('5.2359877559829887307E-1')
-        >>> ereal.BesselI0Int('0.51')
-        ereal('5.3518479027559984754E-1')
-
-
-
-
 
 
 
@@ -60,6 +39,49 @@ Integral of `J_0`
         ereal('5.2359877559829887307E-1')
         >>> ereal.BesselJ0Int('0.51')
         ereal('5.3518479027559984754E-1')
+
+
+
+
+Integral of `Y_0`
+-------------------------------------------------------------------------------
+
+.. method:: math53.bessel_y0_int(x)
+
+    Returns the integral `\displaystyle \int_0^x Y_0(t) \mathrm{d}t, \quad x \ge 0.`  See also  Wikipedia :cite:p:`WikipediaFun85`, MathWorld :cite:p:`WolframFun85`, NIST :cite:p:`DLMFun85`, BoostMath :cite:p:`BoostFun84`, :cite:t:`Ehrhardt2018` (3.1.5.4).
+
+
+    An example in Python
+
+    .. code-block:: pycon
+
+        >>> from xlcalcnet import ereal
+        >>> ereal.BesselY0Int(0.5)
+        ereal('5.2359877559829887307E-1')
+        >>> ereal.BesselY0Int('0.51')
+        ereal('5.3518479027559984754E-1')
+
+
+
+
+Integral of `I_0`
+-------------------------------------------------------------------------------
+
+.. method:: math53.bessel_i0_int(x)
+
+    Returns the integral `\displaystyle \int_0^x I_0(t) \mathrm{d}t.`  See also Wikipedia :cite:p:`WikipediaFun86`, MathWorld :cite:p:`WolframFun86`, NIST :cite:p:`DLMFun86`, BoostMath :cite:p:`BoostFun86`, :cite:t:`Ehrhardt2018` (3.1.5.1).
+
+
+    An example in Python
+
+    .. code-block:: pycon
+
+        >>> from xlcalcnet import ereal
+        >>> ereal.BesselI0Int(0.5)
+        ereal('5.2359877559829887307E-1')
+        >>> ereal.BesselI0Int('0.51')
+        ereal('5.3518479027559984754E-1')
+
 
 
 
@@ -86,27 +108,6 @@ Integral of `K_0`
 
 
 
-
-
-
-
-Integral of `Y_0`
--------------------------------------------------------------------------------
-
-.. method:: math53.bessel_y0_int(x)
-
-    Returns the integral `\displaystyle \int_0^x Y_0(t) \mathrm{d}t, \quad x \ge 0.`  See also  Wikipedia :cite:p:`WikipediaFun85`, MathWorld :cite:p:`WolframFun85`, NIST :cite:p:`DLMFun85`, BoostMath :cite:p:`BoostFun84`, :cite:t:`Ehrhardt2018` (3.1.5.4).
-
-
-    An example in Python
-
-    .. code-block:: pycon
-
-        >>> from xlcalcnet import ereal
-        >>> ereal.BesselY0Int(0.5)
-        ereal('5.2359877559829887307E-1')
-        >>> ereal.BesselY0Int('0.51')
-        ereal('5.3518479027559984754E-1')
 
 
 

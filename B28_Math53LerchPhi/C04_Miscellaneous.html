@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Miscellaneous functions &#8212; XlCalcNet 0.9.0 documentation</title>
+    <title>Miscellaneous functions &#8212; XlCalcNet 1.0.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=2a76c96f"></script>
+    <script src="../_static/documentation_options.js?v=f9c1cefe"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Riemann zeta, and related functions" href="C03_RiemannZeta.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 21, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 22, 2026"/>
   </head>
   
   
@@ -636,6 +636,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../B27_Math53Elliptic/C05_JacobiTheta.html">Jacobi theta functions  at <span class="math notranslate nohighlight">\(x=0\)</span> for <span class="math notranslate nohighlight">\(0 \le q &lt;1\)</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B27_Math53Elliptic/C06_InverseJacobiEllipticFunctions.html">Inverse Jacobi elliptic functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B27_Math53Elliptic/C07_LemniscateFunctions.html">Lemniscate functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B27_Math53Elliptic/C08_NevilleThetaFunctions.html">Neville theta functions</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Real functions related to Lerchs phi</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -663,11 +664,8 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B31_Cmath53/index.html">Real and complex functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../B31_Cmath53/C01_Elementary.html">Additional elementary complex functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B31_Cmath53/C02_NevilleThetaFunctions.html">Neville theta functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B31_Cmath53/C03_WeierstrassConversions.html">Conversions of parameters of Weierstrass <span class="math notranslate nohighlight">\(\wp\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B31_Cmath53/C04_WeierstrassG2G3.html">Weierstrass elliptic functions, in terms of (real) lattice invariants <span class="math notranslate nohighlight">\(g_2, g_3\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B31_Cmath53/C05_WeierstrassE1E2.html">Weierstrass elliptic functions, in terms of (real) lattice roots <span class="math notranslate nohighlight">\(e_1, e_2\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B31_Cmath53/C06_WeierstrassOmega.html">Weierstrass elliptic functions, in terms of lattice half-periods <span class="math notranslate nohighlight">\(\omega_1\)</span> and <span class="math notranslate nohighlight">\(\omega_2\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B31_Cmath53/C02_WeierstrassG2G3.html">Weierstrass elliptic functions, in terms of (real) lattice invariants <span class="math notranslate nohighlight">\(g_2, g_3\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B31_Cmath53/C03_WeierstrassE1E2.html">Weierstrass elliptic functions, in terms of (real) lattice roots <span class="math notranslate nohighlight">\(e_1, e_2\)</span></a></li>
 </ul>
 </details></li>
 </ul>
@@ -699,8 +697,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../C05_UserDistributionPlots/C01_Intro_Parametric2D.html">Introduction to 2D functions plots</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../C06_UserSpecialCplxPlots/index.html">Distribution functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../C06_UserSpecialCplxPlots/C07_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../C06_UserSpecialCplxPlots/index.html">Complex functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../C06_UserSpecialCplxPlots/D01_EllipticK.html">Additional complex functions</a></li>
 </ul>
 </details></li>
 </ul>
@@ -903,11 +901,11 @@ document.write(`
 <span id="ctx-logseriespdf"></span><h2>Log-series distribution, pmf<a class="headerlink" href="#log-series-distribution-pmf" title="Link to this heading">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.logseries_pmf">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">logseries_pmf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.logseries_pmf" title="Link to this definition">#</a></dt>
-<dd><p>Returns <span class="math notranslate nohighlight">\(\text{pmf}(x)\)</span>, the value of the probability mass function (<a class="reference internal" href="../B04_StatisticalDistributions/C04_BaseClassDiscrete.html#dist-pmf"><span class="std std-ref">Pmf</span></a>) of the log-series distribution with mean <span class="math notranslate nohighlight">\(mu\)</span> and the support interval <span class="math notranslate nohighlight">\((0,+\infty)\)</span>, and <span class="math notranslate nohighlight">\(0 \le q \le 1\)</span>.</p>
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">logseries_pmf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.logseries_pmf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{pmf}(x)\)</span>, the value of the probability mass function (<a class="reference internal" href="../B04_StatisticalDistributions/C04_BaseClassDiscrete.html#dist-pmf"><span class="std std-ref">Pmf</span></a>) of the log-series distribution with shape parameters <span class="math notranslate nohighlight">\(p, 0 \le p \le 1\)</span>, <span class="math notranslate nohighlight">\(k&gt;1\)</span>. and the support interval <span class="math notranslate nohighlight">\((0,+\infty)\)</span>.</p>
 <p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1036" title="Wikipedia. Logarithmic distribution. Wikimedia Foundation, 2010. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Logarithmic_distribution.">1226</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1479" title="E. W. Weisstein. Log-Series Distribution. From MathWorld - A Wolfram Web Resource, 2005. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/Log-SeriesDistribution.html.">829</a>]</span>, <span id="id3">Johnson <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id146" title="N. L. Johnson, S. Kotz, and N. Balakrishnan. Univariate discrete distributions. Wiley &amp; Sons, Inc., New York-London-Sydney-Toronto, 3rd edition, 1995.">389</a>]</span>, <span id="id4">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.9.17).</p>
 <div class="math notranslate nohighlight">
-\[\text{pmf}(x) = \frac{-1}{\ln(1-p)} \frac{p^k}{k}.\]</div>
+\[\text{pmf}(x) = \frac{-1}{\log(1-p)} \frac{p^k}{k}.\]</div>
 <p>The following example shows both forms of the syntax:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">t</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">;</span> <span class="n">x</span> <span class="o">=</span> <span class="mf">0.6</span><span class="p">;</span>
@@ -923,11 +921,12 @@ document.write(`
 <span id="ctx-logseriescdf"></span><h2>Log-series distribution, cdf<a class="headerlink" href="#log-series-distribution-cdf" title="Link to this heading">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.logseries_cdf">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">logseries_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.logseries_cdf" title="Link to this definition">#</a></dt>
-<dd><p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../B04_StatisticalDistributions/C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the log-series distribution with mean <span class="math notranslate nohighlight">\(mu\)</span> and the support interval <span class="math notranslate nohighlight">\((0,+\infty)\)</span>, and <span class="math notranslate nohighlight">\(0 \le q \le 1\)</span>.</p>
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">logseries_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.logseries_cdf" title="Link to this definition">#</a></dt>
+<dd><p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../B04_StatisticalDistributions/C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the log-series distribution with shape parameters <span class="math notranslate nohighlight">\(p, 0 \le p \le 1\)</span>, <span class="math notranslate nohighlight">\(k&gt;1\)</span>. and the support interval <span class="math notranslate nohighlight">\((0,+\infty)\)</span>.</p>
 <p>See also  Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1036" title="Wikipedia. Logarithmic distribution. Wikimedia Foundation, 2010. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Logarithmic_distribution.">1226</a>]</span>, MathWorld <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1479" title="E. W. Weisstein. Log-Series Distribution. From MathWorld - A Wolfram Web Resource, 2005. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/Log-SeriesDistribution.html.">829</a>]</span>, <span id="id7">Johnson <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id146" title="N. L. Johnson, S. Kotz, and N. Balakrishnan. Univariate discrete distributions. Wiley &amp; Sons, Inc., New York-London-Sydney-Toronto, 3rd edition, 1995.">389</a>]</span>, <span id="id8">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.9.17).</p>
 <div class="math notranslate nohighlight">
-\[\text{cdf}(x) = 1 + \frac{B(p; k+1, 0)}{\ln(1-p)}.\]</div>
+\[\text{cdf}(x) = 1 + \frac{B(p; k+1, 0)}{\log(1-p)} = 1 + \frac{a^k (\Phi(p,1,k)-1/k)}{\log(1-p)},\]</div>
+<p>where <span class="math notranslate nohighlight">\(B(\cdot)\)</span> is the incomplete beta function, and <span class="math notranslate nohighlight">\(\Phi(\cdot)\)</span> is Lerch’s transcendent.</p>
 <p>The following example shows both forms of the syntax:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">t</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">;</span> <span class="n">x</span> <span class="o">=</span> <span class="mf">0.6</span><span class="p">;</span>
@@ -943,7 +942,7 @@ document.write(`
 <span id="ctx-zetapmf"></span><h2>Zeta distribution, pmf<a class="headerlink" href="#zeta-distribution-pmf" title="Link to this heading">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.zeta_pmf">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">zeta_pmf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.zeta_pmf" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">zeta_pmf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.zeta_pmf" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(\text{pmf}(x)\)</span>, the value of the probability mass function (<a class="reference internal" href="../B04_StatisticalDistributions/C04_BaseClassDiscrete.html#dist-pmf"><span class="std std-ref">Pmf</span></a>) of the zeta distribution with parameter <span class="math notranslate nohighlight">\(r\)</span>, and <span class="math notranslate nohighlight">\(0 \le q \le 1\)</span>.</p>
 <p>See also  Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1042" title="Wikipedia. Zeta distribution. Wikimedia Foundation, 2010. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/ZipfDistribution.html.">1230</a>]</span>, <span id="id10">Rinne [<a class="reference internal" href="../99BackMatter/index.html#id224" title="H. Rinne. Taschenbuch der Statistik. Frankfurt, M. : Deutsch, 4 edition, 2008.">481</a>]</span>, <span id="id11">Johnson <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id146" title="N. L. Johnson, S. Kotz, and N. Balakrishnan. Univariate discrete distributions. Wiley &amp; Sons, Inc., New York-London-Sydney-Toronto, 3rd edition, 1995.">389</a>]</span> page 527, <span id="id12">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.9.34).</p>
 <div class="math notranslate nohighlight">
@@ -963,7 +962,7 @@ document.write(`
 <span id="ctx-zetacdf"></span><h2>Zeta distribution, cdf<a class="headerlink" href="#zeta-distribution-cdf" title="Link to this heading">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.zeta_cdf">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">zeta_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.zeta_cdf" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">zeta_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.zeta_cdf" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(\text{cdf}(x)\)</span>, the value of the cumulative distribution function (<a class="reference internal" href="../B04_StatisticalDistributions/C02_BaseClass.html#dist-cdf"><span class="std std-ref">Cdf</span></a>) of the zeta distribution:</p>
 <div class="math notranslate nohighlight">
 \[\text{cdf}(x) = \frac{H_k^{r+1}}{\zeta(r+1)} = 1 - \frac{\zeta(r+1, k+1)}{\zeta(r+1)}.\]</div>
@@ -1074,7 +1073,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 21, 2026.
+  Last updated on Oct 22, 2026.
   <br/>
 </p>
   </div>

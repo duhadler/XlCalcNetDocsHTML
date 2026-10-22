@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Integrals of zero-order Bessel functions &#8212; XlCalcNet 0.9.0 documentation</title>
+    <title>Integrals of zero-order Bessel functions &#8212; XlCalcNet 1.0.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=2a76c96f"></script>
+    <script src="../_static/documentation_options.js?v=f9c1cefe"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Modified Bessel functions of integer order" href="C02_ModifiedBesselIntegerOrder.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 21, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 22, 2026"/>
   </head>
   
   
@@ -636,6 +636,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../B27_Math53Elliptic/C05_JacobiTheta.html">Jacobi theta functions  at <span class="math notranslate nohighlight">\(x=0\)</span> for <span class="math notranslate nohighlight">\(0 \le q &lt;1\)</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B27_Math53Elliptic/C06_InverseJacobiEllipticFunctions.html">Inverse Jacobi elliptic functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B27_Math53Elliptic/C07_LemniscateFunctions.html">Lemniscate functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B27_Math53Elliptic/C08_NevilleThetaFunctions.html">Neville theta functions</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B28_Math53LerchPhi/index.html">Real functions related to Lerchs phi</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -663,11 +664,8 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B31_Cmath53/index.html">Real and complex functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../B31_Cmath53/C01_Elementary.html">Additional elementary complex functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B31_Cmath53/C02_NevilleThetaFunctions.html">Neville theta functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B31_Cmath53/C03_WeierstrassConversions.html">Conversions of parameters of Weierstrass <span class="math notranslate nohighlight">\(\wp\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B31_Cmath53/C04_WeierstrassG2G3.html">Weierstrass elliptic functions, in terms of (real) lattice invariants <span class="math notranslate nohighlight">\(g_2, g_3\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B31_Cmath53/C05_WeierstrassE1E2.html">Weierstrass elliptic functions, in terms of (real) lattice roots <span class="math notranslate nohighlight">\(e_1, e_2\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B31_Cmath53/C06_WeierstrassOmega.html">Weierstrass elliptic functions, in terms of lattice half-periods <span class="math notranslate nohighlight">\(\omega_1\)</span> and <span class="math notranslate nohighlight">\(\omega_2\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B31_Cmath53/C02_WeierstrassG2G3.html">Weierstrass elliptic functions, in terms of (real) lattice invariants <span class="math notranslate nohighlight">\(g_2, g_3\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B31_Cmath53/C03_WeierstrassE1E2.html">Weierstrass elliptic functions, in terms of (real) lattice roots <span class="math notranslate nohighlight">\(e_1, e_2\)</span></a></li>
 </ul>
 </details></li>
 </ul>
@@ -699,8 +697,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../C05_UserDistributionPlots/C01_Intro_Parametric2D.html">Introduction to 2D functions plots</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../C06_UserSpecialCplxPlots/index.html">Distribution functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../C06_UserSpecialCplxPlots/C07_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../C06_UserSpecialCplxPlots/index.html">Complex functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../C06_UserSpecialCplxPlots/D01_EllipticK.html">Additional complex functions</a></li>
 </ul>
 </details></li>
 </ul>
@@ -869,20 +867,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-of-i-0">Integral of <span class="math notranslate nohighlight">\(I_0\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.bessel_i0_int"><code class="docutils literal notranslate"><span class="pre">math53.bessel_i0_int()</span></code></a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-of-j-0">Integral of <span class="math notranslate nohighlight">\(J_0\)</span></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.bessel_j0_int"><code class="docutils literal notranslate"><span class="pre">math53.bessel_j0_int()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-of-k-0">Integral of <span class="math notranslate nohighlight">\(K_0\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.bessel_k0_int"><code class="docutils literal notranslate"><span class="pre">math53.bessel_k0_int()</span></code></a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-of-y-0">Integral of <span class="math notranslate nohighlight">\(Y_0\)</span></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.bessel_y0_int"><code class="docutils literal notranslate"><span class="pre">math53.bessel_y0_int()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-of-i-0">Integral of <span class="math notranslate nohighlight">\(I_0\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.bessel_i0_int"><code class="docutils literal notranslate"><span class="pre">math53.bessel_i0_int()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-of-k-0">Integral of <span class="math notranslate nohighlight">\(K_0\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.bessel_k0_int"><code class="docutils literal notranslate"><span class="pre">math53.bessel_k0_int()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -899,29 +897,12 @@ document.write(`
   <p></p>
 <section id="integrals-of-zero-order-bessel-functions">
 <h1>Integrals of zero-order Bessel functions<a class="headerlink" href="#integrals-of-zero-order-bessel-functions" title="Link to this heading">#</a></h1>
-<section id="integral-of-i-0">
-<h2>Integral of <span class="math notranslate nohighlight">\(I_0\)</span><a class="headerlink" href="#integral-of-i-0" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="math53.bessel_i0_int">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">bessel_i0_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.bessel_i0_int" title="Link to this definition">#</a></dt>
-<dd><p>Returns the integral <span class="math notranslate nohighlight">\(\displaystyle \int_0^x I_0(t) \mathrm{d}t.\)</span>  See also Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1080" title="Wikipedia. Modified Bessel functions. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Modified_Bessel_functions.">1265</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1538" title="E. W. Weisstein. Modified Bessel Function of the First Kind. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ModifiedBesselFunctionoftheFirstKind.html.">908</a>]</span>, NIST <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id469" title="L. Olver, F. W. J.; Maximon. Modified Bessel Function of the First Kind. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.25#E2.">446</a>]</span>, BoostMath <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id358" title="P. A. Bristow and H. Holin. Modified Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/mbessel.html.">108</a>]</span>, <span id="id5">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.5.1).</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">BesselI0Int</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">BesselI0Int</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
 <section id="integral-of-j-0">
 <h2>Integral of <span class="math notranslate nohighlight">\(J_0\)</span><a class="headerlink" href="#integral-of-j-0" title="Link to this heading">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.bessel_j0_int">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">bessel_j0_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.bessel_j0_int" title="Link to this definition">#</a></dt>
-<dd><p>Returns the integral <span class="math notranslate nohighlight">\(\displaystyle \int_0^x J_0(t) \mathrm{d}t.\)</span>  See also  Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1078" title="Wikipedia. Bessel functions of the first kind. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Bessel_functions_of_the_first_kind.">1251</a>]</span>, MathWorld <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1536" title="E. W. Weisstein. Bessel Function of the First Kind. From MathWorld - A Wolfram Web Resource, 2008. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/BesselFunctionoftheFirstKind.html.">879</a>]</span>, NIST <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id467" title="F. W. J. Olver and L. Maximon. Bessel Function of the First Kind. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.2#E2.">441</a>]</span>, BoostMath <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id357" title="P. A. Bristow and H. Holin. Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/bessel_first.html.">94</a>]</span>, <span id="id10">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.5.2).</p>
+<dd><p>Returns the integral <span class="math notranslate nohighlight">\(\displaystyle \int_0^x J_0(t) \mathrm{d}t.\)</span>  See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1078" title="Wikipedia. Bessel functions of the first kind. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Bessel_functions_of_the_first_kind.">1251</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1536" title="E. W. Weisstein. Bessel Function of the First Kind. From MathWorld - A Wolfram Web Resource, 2008. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/BesselFunctionoftheFirstKind.html.">879</a>]</span>, NIST <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id467" title="F. W. J. Olver and L. Maximon. Bessel Function of the First Kind. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.2#E2.">441</a>]</span>, BoostMath <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id357" title="P. A. Bristow and H. Holin. Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/bessel_first.html.">94</a>]</span>, <span id="id5">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.5.2).</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">BesselJ0Int</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
@@ -933,34 +914,51 @@ document.write(`
 </dd></dl>
 
 </section>
-<section id="integral-of-k-0">
-<h2>Integral of <span class="math notranslate nohighlight">\(K_0\)</span><a class="headerlink" href="#integral-of-k-0" title="Link to this heading">#</a></h2>
+<section id="integral-of-y-0">
+<h2>Integral of <span class="math notranslate nohighlight">\(Y_0\)</span><a class="headerlink" href="#integral-of-y-0" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.bessel_k0_int">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">bessel_k0_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.bessel_k0_int" title="Link to this definition">#</a></dt>
-<dd><p>Returns the integral <span class="math notranslate nohighlight">\(\displaystyle \int_0^x K_0(t) \mathrm{d}t, \quad x \ge 0.\)</span>  See also  Wikipedia <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id1080" title="Wikipedia. Modified Bessel functions. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Modified_Bessel_functions.">1265</a>]</span>, MathWorld <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1539" title="E. W. Weisstein. Modified Bessel Function of the Second Kind. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ModifiedBesselFunctionoftheSecondKind.html.">909</a>]</span>, NIST <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id470" title="L. Olver, F. W. J.; Maximon. Modified Bessel Function of the Second Kind. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.25#E3.">447</a>]</span>, BoostMath <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id358" title="P. A. Bristow and H. Holin. Modified Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/mbessel.html.">108</a>]</span>, <span id="id15">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.5.3).</p>
+<dt class="sig sig-object py" id="math53.bessel_y0_int">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">bessel_y0_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.bessel_y0_int" title="Link to this definition">#</a></dt>
+<dd><p>Returns the integral <span class="math notranslate nohighlight">\(\displaystyle \int_0^x Y_0(t) \mathrm{d}t, \quad x \ge 0.\)</span>  See also  Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1079" title="Wikipedia. Bessel functions of the second kind. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Bessel_functions_of_the_second_kind.">1252</a>]</span>, MathWorld <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1537" title="E. W. Weisstein. Bessel Function of the Second Kind. From MathWorld - A Wolfram Web Resource, 2008. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/BesselFunctionoftheSecondKind.html.">880</a>]</span>, NIST <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id468" title="F. W. J. Olver and L. Maximon. Bessel Function of the Second Kind. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.2#E3.">442</a>]</span>, BoostMath <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id357" title="P. A. Bristow and H. Holin. Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/bessel_first.html.">94</a>]</span>, <span id="id10">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.5.4).</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">BesselK0Int</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">BesselY0Int</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">BesselK0Int</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">BesselY0Int</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
 <span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
 </pre></div>
 </div>
 </dd></dl>
 
 </section>
-<section id="integral-of-y-0">
-<h2>Integral of <span class="math notranslate nohighlight">\(Y_0\)</span><a class="headerlink" href="#integral-of-y-0" title="Link to this heading">#</a></h2>
+<section id="integral-of-i-0">
+<h2>Integral of <span class="math notranslate nohighlight">\(I_0\)</span><a class="headerlink" href="#integral-of-i-0" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.bessel_y0_int">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">bessel_y0_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.bessel_y0_int" title="Link to this definition">#</a></dt>
-<dd><p>Returns the integral <span class="math notranslate nohighlight">\(\displaystyle \int_0^x Y_0(t) \mathrm{d}t, \quad x \ge 0.\)</span>  See also  Wikipedia <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id1079" title="Wikipedia. Bessel functions of the second kind. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Bessel_functions_of_the_second_kind.">1252</a>]</span>, MathWorld <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id1537" title="E. W. Weisstein. Bessel Function of the Second Kind. From MathWorld - A Wolfram Web Resource, 2008. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/BesselFunctionoftheSecondKind.html.">880</a>]</span>, NIST <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id468" title="F. W. J. Olver and L. Maximon. Bessel Function of the Second Kind. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.2#E3.">442</a>]</span>, BoostMath <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id357" title="P. A. Bristow and H. Holin. Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/bessel_first.html.">94</a>]</span>, <span id="id20">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.5.4).</p>
+<dt class="sig sig-object py" id="math53.bessel_i0_int">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">bessel_i0_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.bessel_i0_int" title="Link to this definition">#</a></dt>
+<dd><p>Returns the integral <span class="math notranslate nohighlight">\(\displaystyle \int_0^x I_0(t) \mathrm{d}t.\)</span>  See also Wikipedia <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id1080" title="Wikipedia. Modified Bessel functions. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Modified_Bessel_functions.">1265</a>]</span>, MathWorld <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1538" title="E. W. Weisstein. Modified Bessel Function of the First Kind. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ModifiedBesselFunctionoftheFirstKind.html.">908</a>]</span>, NIST <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id469" title="L. Olver, F. W. J.; Maximon. Modified Bessel Function of the First Kind. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.25#E2.">446</a>]</span>, BoostMath <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id358" title="P. A. Bristow and H. Holin. Modified Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/mbessel.html.">108</a>]</span>, <span id="id15">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.5.1).</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">BesselY0Int</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">BesselI0Int</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">BesselY0Int</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">BesselI0Int</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
+<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="integral-of-k-0">
+<h2>Integral of <span class="math notranslate nohighlight">\(K_0\)</span><a class="headerlink" href="#integral-of-k-0" title="Link to this heading">#</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="math53.bessel_k0_int">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">bessel_k0_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.bessel_k0_int" title="Link to this definition">#</a></dt>
+<dd><p>Returns the integral <span class="math notranslate nohighlight">\(\displaystyle \int_0^x K_0(t) \mathrm{d}t, \quad x \ge 0.\)</span>  See also  Wikipedia <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id1080" title="Wikipedia. Modified Bessel functions. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Modified_Bessel_functions.">1265</a>]</span>, MathWorld <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id1539" title="E. W. Weisstein. Modified Bessel Function of the Second Kind. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ModifiedBesselFunctionoftheSecondKind.html.">909</a>]</span>, NIST <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id470" title="L. Olver, F. W. J.; Maximon. Modified Bessel Function of the Second Kind. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.25#E3.">447</a>]</span>, BoostMath <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id358" title="P. A. Bristow and H. Holin. Modified Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/mbessel.html.">108</a>]</span>, <span id="id20">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.5.3).</p>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">BesselK0Int</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">BesselK0Int</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
 <span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
 </pre></div>
 </div>
@@ -1014,20 +1012,20 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-of-i-0">Integral of <span class="math notranslate nohighlight">\(I_0\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.bessel_i0_int"><code class="docutils literal notranslate"><span class="pre">math53.bessel_i0_int()</span></code></a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-of-j-0">Integral of <span class="math notranslate nohighlight">\(J_0\)</span></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.bessel_j0_int"><code class="docutils literal notranslate"><span class="pre">math53.bessel_j0_int()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-of-k-0">Integral of <span class="math notranslate nohighlight">\(K_0\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.bessel_k0_int"><code class="docutils literal notranslate"><span class="pre">math53.bessel_k0_int()</span></code></a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-of-y-0">Integral of <span class="math notranslate nohighlight">\(Y_0\)</span></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.bessel_y0_int"><code class="docutils literal notranslate"><span class="pre">math53.bessel_y0_int()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-of-i-0">Integral of <span class="math notranslate nohighlight">\(I_0\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.bessel_i0_int"><code class="docutils literal notranslate"><span class="pre">math53.bessel_i0_int()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-of-k-0">Integral of <span class="math notranslate nohighlight">\(K_0\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.bessel_k0_int"><code class="docutils literal notranslate"><span class="pre">math53.bessel_k0_int()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1063,7 +1061,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 21, 2026.
+  Last updated on Oct 22, 2026.
   <br/>
 </p>
   </div>
