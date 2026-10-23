@@ -53,7 +53,7 @@
     <link rel="prev" title="Real elliptic functions" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 22, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 23, 2026"/>
   </head>
   
   
@@ -890,23 +890,24 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p></p>
-<section id="conversions-of-parameters-of-elliptic-functions">
+  <section id="conversions-of-parameters-of-elliptic-functions">
 <h1>Conversions of parameters of elliptic functions<a class="headerlink" href="#conversions-of-parameters-of-elliptic-functions" title="Link to this heading">#</a></h1>
 <section id="elliptic-nome-q-k-damath">
 <h2>Elliptic nome <span class="math notranslate nohighlight">\(q(k)\)</span> (DAMath)<a class="headerlink" href="#elliptic-nome-q-k-damath" title="Link to this heading">#</a></h2>
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.elliptic_nome">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">elliptic_nome</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.elliptic_nome" title="Link to this definition">#</a></dt>
-<dd><p>Returns the elliptic nome  <span class="math notranslate nohighlight">\(q(k)\)</span> as a function of the modulus <span class="math notranslate nohighlight">\(|k| &lt; 1\)</span>:. See also Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1176" title="Wikipedia. Nome (mathematics). Wikimedia Foundation, 2017. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Nome_(mathematics).">1361</a>]</span>,  MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1680" title="E. W. Weisstein. Elliptic Nome q. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Nome.html.">1001</a>]</span>, <span id="id3">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.8).</p>
+<dd><p>Returns the elliptic nome  <span class="math notranslate nohighlight">\(q(k)\)</span> as a function of the modulus <span class="math notranslate nohighlight">\(|k| &lt; 1\)</span>:. See also Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1176" title="Wikipedia. Nome (mathematics). Wikimedia Foundation, 2017. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Nome_(mathematics).">1360</a>]</span>,  MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1680" title="E. W. Weisstein. Elliptic Nome q. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Nome.html.">1000</a>]</span>, <span id="id3">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.8).</p>
 <div class="math notranslate nohighlight">
 \[q(k)=\exp \left(-\pi \frac{K'(k)}{K(k)} \right)\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticNome</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticNome</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">elliptic_nome</span><span class="p">(</span><span class="o">-</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">0.12535593275727377</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">elliptic_nome</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">elliptic_nome</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">0.12535593275727377</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -917,15 +918,17 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.elliptic_modulus">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">elliptic_modulus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.elliptic_modulus" title="Link to this definition">#</a></dt>
-<dd><p>Returns the elliptic modulus k. as a function of the nome <span class="math notranslate nohighlight">\(|q|\)</span> le 1.  See also MathWorld <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1683" title="E. W. Weisstein. Elliptic Modulus k. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/EllipticModulus.html.">1000</a>]</span>, <span id="id5">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.9).The modulus <span class="math notranslate nohighlight">\(k\)</span> is often used as argument of elliptic integrals and Jacobi elliptic functions, the nome <span class="math notranslate nohighlight">\(q\)</span> is used with Jacobi theta functions. <span class="math notranslate nohighlight">\(k(q)\)</span> is explicitly given by</p>
+<dd><p>Returns the elliptic modulus k. as a function of the nome <span class="math notranslate nohighlight">\(|q|\)</span> le 1.  See also MathWorld <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1683" title="E. W. Weisstein. Elliptic Modulus k. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/EllipticModulus.html.">999</a>]</span>, <span id="id5">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.9).The modulus <span class="math notranslate nohighlight">\(k\)</span> is often used as argument of elliptic integrals and Jacobi elliptic functions, the nome <span class="math notranslate nohighlight">\(q\)</span> is used with Jacobi theta functions. <span class="math notranslate nohighlight">\(k(q)\)</span> is explicitly given by</p>
 <div class="math notranslate nohighlight">
 \[k(q) = \frac{\theta_2^2(q)}{\theta_3^2(q)}.\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticModulus</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticModulus</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">elliptic_modulus</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">elliptic_modulus</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">0.3845443947629648</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">elliptic_modulus</span><span class="p">(</span><span class="mf">0.6333</span><span class="p">)</span>
+<span class="go">0.9999999966889508</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -936,14 +939,16 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.jacobi_amplitude">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">jacobi_amplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.jacobi_amplitude" title="Link to this definition">#</a></dt>
-<dd><p>Returns the Jacobi amplitude function <span class="math notranslate nohighlight">\(\mathrm{am}(x, k)\)</span> for a given modulus <span class="math notranslate nohighlight">\(k\)</span>. This is the inverse function of Legendre’s elliptic function of the first kind: <span class="math notranslate nohighlight">\(\mathrm{am}(F(x, k), k) = x\)</span>. When <span class="math notranslate nohighlight">\(|k| &lt; 1, \mathrm{am}(x, k)\)</span> is a monotone quasi-periodic function NIST <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id505" title="P. L. Reinhardt, W. P.; Walker. Jacobi’s Amplitude(am) Function. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.16.">478</a>]</span>, 22.16.2: <span class="math notranslate nohighlight">\(\mathrm{am}(x + 2K(k), k) = \mathrm{am}(x, k) + \pi\)</span>, with the special case <span class="math notranslate nohighlight">\(\mathrm{am}(x, 0) = x\)</span>. When <span class="math notranslate nohighlight">\(|k| &gt; 1, \mathrm{am}(x, k)\)</span> is periodic with period <span class="math notranslate nohighlight">\(4K(1/k)/k\)</span>, and if <span class="math notranslate nohighlight">\(|k| = 1\)</span>, then it is equal to the Gudermannian function <span class="math notranslate nohighlight">\(\mathrm{am}(x, \pm1) = \mathrm{gd}(x)\)</span>.</p>
-<p>See also  MathWorld <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1681" title="E. W. Weisstein. Jacobi Amplitude. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/JacobiAmplitude.html.">1006</a>]</span>, NIST <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id505" title="P. L. Reinhardt, W. P.; Walker. Jacobi’s Amplitude(am) Function. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.16.">478</a>]</span>, <span id="id9">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.10).</p>
+<dd><p>Returns the Jacobi amplitude function <span class="math notranslate nohighlight">\(\mathrm{am}(x, k)\)</span> for a given modulus <span class="math notranslate nohighlight">\(k\)</span>. This is the inverse function of Legendre’s elliptic function of the first kind: <span class="math notranslate nohighlight">\(\mathrm{am}(F(x, k), k) = x\)</span>. When <span class="math notranslate nohighlight">\(|k| &lt; 1, \mathrm{am}(x, k)\)</span> is a monotone quasi-periodic function NIST <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id505" title="P. L. Reinhardt, W. P.; Walker. Jacobi’s Amplitude(am) Function. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.16.">477</a>]</span>, 22.16.2: <span class="math notranslate nohighlight">\(\mathrm{am}(x + 2K(k), k) = \mathrm{am}(x, k) + \pi\)</span>, with the special case <span class="math notranslate nohighlight">\(\mathrm{am}(x, 0) = x\)</span>. When <span class="math notranslate nohighlight">\(|k| &gt; 1, \mathrm{am}(x, k)\)</span> is periodic with period <span class="math notranslate nohighlight">\(4K(1/k)/k\)</span>, and if <span class="math notranslate nohighlight">\(|k| = 1\)</span>, then it is equal to the Gudermannian function <span class="math notranslate nohighlight">\(\mathrm{am}(x, \pm1) = \mathrm{gd}(x)\)</span>.</p>
+<p>See also  MathWorld <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1681" title="E. W. Weisstein. Jacobi Amplitude. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/JacobiAmplitude.html.">1005</a>]</span>, NIST <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id505" title="P. L. Reinhardt, W. P.; Walker. Jacobi’s Amplitude(am) Function. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.16.">477</a>]</span>, <span id="id9">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.10).</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiAmplitude</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiAmplitude</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_amplitude</span><span class="p">(</span><span class="mf">1.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">-0.21310912002774368</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_amplitude</span><span class="p">(</span><span class="mf">2.4</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="go">2.4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_amplitude</span><span class="p">(</span><span class="mf">3.7</span><span class="p">,</span> <span class="mf">4.333</span><span class="p">)</span>
+<span class="go">-0.024983643980939094</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1041,7 +1046,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 22, 2026.
+  Last updated on Oct 23, 2026.
   <br/>
 </p>
   </div>

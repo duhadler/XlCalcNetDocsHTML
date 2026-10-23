@@ -53,7 +53,7 @@
     <link rel="prev" title="Trigonometric functions" href="C02_Trigonometric.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 22, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 23, 2026"/>
   </head>
   
   
@@ -900,11 +900,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langevin-function-l-x">Langevin function, <span class="math notranslate nohighlight">\(L(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.langevin_l"><code class="docutils literal notranslate"><span class="pre">math53.langevin_l()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.langevinl"><code class="docutils literal notranslate"><span class="pre">math53.langevinl()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-langevin-function-l-1-x">Inverse Langevin function, <span class="math notranslate nohighlight">\(L^{-1}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.langevin_l_inv"><code class="docutils literal notranslate"><span class="pre">math53.langevin_l_inv()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.langevinlinv"><code class="docutils literal notranslate"><span class="pre">math53.langevinlinv()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions-of-keplers-equation-mathrm-kepler-m-e">Solutions of Kepler’s equation, <span class="math notranslate nohighlight">\(\mathrm{kepler}(M,e)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -932,11 +932,13 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">sinhc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.sinhc" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(\mathrm{sinhc}(x) = \sinh(x)/x\)</span>, accurate also for <span class="math notranslate nohighlight">\(x\)</span> near 0.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Sinhc</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Sinhc</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">sinhc</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">8.788291416587565</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">sinhc</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">1.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">sinhc</span><span class="p">(</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">8.788291416587565</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -949,11 +951,13 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">sinhmx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.sinhmx" title="Link to this definition">#</a></dt>
 <dd><p>Returns sinh(x)-x, accurate also for <span class="math notranslate nohighlight">\(x\)</span> near 0.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Sinhmx</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Sinhmx</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">sinhmx</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">-33.746666708073924</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">sinhmx</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">sinhmx</span><span class="p">(</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">33.746666708073924</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -966,11 +970,13 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">coshm1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.coshm1" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(\cosh(x)-1\)</span>, accurate also for <span class="math notranslate nohighlight">\(x\)</span> near 0.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Coshm1</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Coshm1</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">coshm1</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">37.09279481211629</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">coshm1</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">coshm1</span><span class="p">(</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">37.09279481211629</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -983,11 +989,13 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">acosh1p</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.acosh1p" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(\mathrm{acosh}(1+x), x \ge 0\)</span>, accurate also for <span class="math notranslate nohighlight">\(x\)</span> near 0.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Acosh1p</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Acosh1p</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">acosh1p</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">nan</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">acosh1p</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">acosh1p</span><span class="p">(</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">2.3581527329799776</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1000,11 +1008,13 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">logcosh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.logcosh" title="Link to this definition">#</a></dt>
 <dd><p>Returns ln(cosh(x)), accurate for x ~ 0 and without overflow for large x</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Logcosh</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Logcosh</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">logcosh</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">3.640025151705744</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">logcosh</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">logcosh</span><span class="p">(</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">3.640025151705744</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1017,11 +1027,13 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">logsinh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.logsinh" title="Link to this definition">#</a></dt>
 <dd><p>Returns ln(sinh(x)), x &gt; 0, accurate for x ~ 0 and without overflow for large x</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Logsinh</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Logsinh</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">logsinh</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">nan</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">logsinh</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">-inf</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">logsinh</span><span class="p">(</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">3.639680457470837</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1032,13 +1044,15 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.gd">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">gd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.gd" title="Link to this definition">#</a></dt>
-<dd><p>Returns the Gudermannian function <span class="math notranslate nohighlight">\(\mathrm{gd}(x) = \mathrm{asin}(\mathrm{tanh}(x))\)</span>. See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1163" title="Wikipedia. Gudermannian function. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Gudermannian_function.">1345</a>]</span>,  MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1666" title="E. W. Weisstein. Gudermannian function. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/Gudermannian.html.">983</a>]</span>.</p>
+<dd><p>Returns the Gudermannian function <span class="math notranslate nohighlight">\(\mathrm{gd}(x) = \mathrm{asin}(\mathrm{tanh}(x))\)</span>. See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1163" title="Wikipedia. Gudermannian function. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Gudermannian_function.">1344</a>]</span>,  MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1666" title="E. W. Weisstein. Gudermannian function. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/Gudermannian.html.">982</a>]</span>.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Gudermann</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Gudermann</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">gd</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">-1.5445416269481194</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">gd</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">gd</span><span class="p">(</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">1.5445416269481194</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1050,13 +1064,15 @@ document.write(`
 <dt class="sig sig-object py" id="math53.arcgd">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">arcgd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.arcgd" title="Link to this definition">#</a></dt>
 <dd><p>Returns the inverse Gudermannian function <span class="math notranslate nohighlight">\(\mathrm{arcgd}(x) = \mathrm{atanh}(\sin(x)), |x| &lt; \pi/2.\)</span></p>
-<p>See also  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1164" title="Wikipedia. Inverse Gudermannian function. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Gudermannian_function#Inverse.">1347</a>]</span>,  MathWorld <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1667" title="E. W. Weisstein. Inverse Gudermannian function. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/InverseGudermannian.html.">987</a>]</span>.</p>
+<p>See also  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1164" title="Wikipedia. Inverse Gudermannian function. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Gudermannian_function#Inverse.">1346</a>]</span>,  MathWorld <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1667" title="E. W. Weisstein. Inverse Gudermannian function. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/InverseGudermannian.html.">986</a>]</span>.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">ArcGd</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">ArcGd</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">arcgd</span><span class="p">(</span><span class="o">-</span><span class="mf">0.733</span><span class="p">)</span>
+<span class="go">-0.8091157114590968</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">arcgd</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">arcgd</span><span class="p">(</span><span class="mf">0.733</span><span class="p">)</span>
+<span class="go">0.8091157114590968</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1065,17 +1081,19 @@ document.write(`
 <section id="langevin-function-l-x">
 <h2>Langevin function, <span class="math notranslate nohighlight">\(L(x)\)</span><a class="headerlink" href="#langevin-function-l-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.langevin_l">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">langevin_l</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.langevin_l" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="math53.langevinl">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">langevinl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.langevinl" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Langevin function <span class="math notranslate nohighlight">\(L(x)\)</span>, defined as <span class="math notranslate nohighlight">\(L(x) = \coth(x) - 1/x\)</span> for <span class="math notranslate nohighlight">\(x \ne 0\)</span>, and  <span class="math notranslate nohighlight">\(L(0) = 0\)</span> for <span class="math notranslate nohighlight">\(x = 0\)</span>.</p>
 <p>See also <span id="id5">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.10.16).</p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Brillouin_and_Langevin_functions">https://en.wikipedia.org/wiki/Brillouin_and_Langevin_functions</a></p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">LangevinL</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">LangevinL</span><span class="p">(</span><span class="mf">0.21</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">langevinl</span><span class="p">(</span><span class="o">-</span><span class="mf">0.733</span><span class="p">)</span>
+<span class="go">-0.23600650435321588</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">langevinl</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">langevinl</span><span class="p">(</span><span class="mf">0.733</span><span class="p">)</span>
+<span class="go">0.23600650435321588</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1084,17 +1102,19 @@ document.write(`
 <section id="inverse-langevin-function-l-1-x">
 <h2>Inverse Langevin function, <span class="math notranslate nohighlight">\(L^{-1}(x)\)</span><a class="headerlink" href="#inverse-langevin-function-l-1-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.langevin_l_inv">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">langevin_l_inv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.langevin_l_inv" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="math53.langevinlinv">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">langevinlinv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.langevinlinv" title="Link to this definition">#</a></dt>
 <dd><p>Returns the functional inverse <span class="math notranslate nohighlight">\(L^{-1}\)</span> of the Langevin function, i.e. <span class="math notranslate nohighlight">\(L(L^{-1}(x))= x\)</span>, <span class="math notranslate nohighlight">\(|x| &lt; 1\)</span>.</p>
 <p>See also <span id="id6">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.10.17).</p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Brillouin_and_Langevin_functions">https://en.wikipedia.org/wiki/Brillouin_and_Langevin_functions</a></p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">LangevinLInv</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">LangevinLInv</span><span class="p">(</span><span class="mf">0.21</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">langevinlinv</span><span class="p">(</span><span class="o">-</span><span class="mf">0.733</span><span class="p">)</span>
+<span class="go">-3.7292029668920454</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">langevinlinv</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">langevinlinv</span><span class="p">(</span><span class="mf">0.733</span><span class="p">)</span>
+<span class="go">3.7292029668920454</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1114,11 +1134,13 @@ e \sinh(x)-x, &amp; e&gt;1.
 \end{cases}\end{split}\]</div>
 <p>See also <span id="id7">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.10.23).</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Kepler</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">0.44</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Kepler</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">0.14404</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kepler</span><span class="p">(</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">0.333</span><span class="p">)</span>
+<span class="go">1.5327591321519451</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kepler</span><span class="p">(</span><span class="mf">2.4</span><span class="p">,</span> <span class="mf">0.333</span><span class="p">)</span>
+<span class="go">2.577919997073644</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kepler</span><span class="p">(</span><span class="mf">4.8</span><span class="p">,</span> <span class="mf">4.333</span><span class="p">)</span>
+<span class="go">1.1179306170995853</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1204,11 +1226,11 @@ e \sinh(x)-x, &amp; e&gt;1.
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langevin-function-l-x">Langevin function, <span class="math notranslate nohighlight">\(L(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.langevin_l"><code class="docutils literal notranslate"><span class="pre">math53.langevin_l()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.langevinl"><code class="docutils literal notranslate"><span class="pre">math53.langevinl()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-langevin-function-l-1-x">Inverse Langevin function, <span class="math notranslate nohighlight">\(L^{-1}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.langevin_l_inv"><code class="docutils literal notranslate"><span class="pre">math53.langevin_l_inv()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.langevinlinv"><code class="docutils literal notranslate"><span class="pre">math53.langevinlinv()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions-of-keplers-equation-mathrm-kepler-m-e">Solutions of Kepler’s equation, <span class="math notranslate nohighlight">\(\mathrm{kepler}(M,e)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -1248,7 +1270,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 22, 2026.
+  Last updated on Oct 23, 2026.
   <br/>
 </p>
   </div>

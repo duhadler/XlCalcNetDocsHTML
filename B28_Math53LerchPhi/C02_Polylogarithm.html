@@ -53,7 +53,7 @@
     <link rel="prev" title="Polygamma, and related functions" href="C01_Polygamma.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 22, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 23, 2026"/>
   </head>
   
   
@@ -931,18 +931,20 @@ document.write(`
 <dt class="sig sig-object py" id="math53.polylog_i">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">polylog_i</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.polylog_i" title="Link to this definition">#</a></dt>
 <dd><p>Returns the polylogarithm  of integer order <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(\displaystyle \mathrm{Li}_n(x) = \sum_{k=1}^{\infty} \frac{x^k}{k^n}, \quad n \in \mathbb{Z}, |x|&lt;1 \,\)</span>, or its analytic continuation; for <span class="math notranslate nohighlight">\(n&gt;0\)</span>, <span class="math notranslate nohighlight">\(x&gt;1\)</span> the real part of <span class="math notranslate nohighlight">\(\mathrm{Li}_n(x)\)</span> is returned.</p>
-<p>See also   Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1141" title="Wikipedia. Polylogarithm. Wikimedia Foundation, 2015. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Polylogarithm.">1333</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1635" title="E. W. Weisstein. Polylogarithm. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Polylogarithm.html.">970</a>]</span>, NIST <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id491" title="T.M. Apostol. Polylogarithms. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/25.12#ii.">18</a>]</span>, <span id="id4">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.6.11).</p>
+<p>See also   Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1141" title="Wikipedia. Polylogarithm. Wikimedia Foundation, 2015. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Polylogarithm.">1332</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1635" title="E. W. Weisstein. Polylogarithm. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Polylogarithm.html.">969</a>]</span>, NIST <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id491" title="T.M. Apostol. Polylogarithms. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/25.12#ii.">18</a>]</span>, <span id="id4">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.6.11).</p>
 <p>Returns the polylogarithm function of integer order <span class="math notranslate nohighlight">\(n\)</span>.</p>
 <p>This function returns the polylogarithm function of integer order <span class="math notranslate nohighlight">\(n\)</span></p>
 <div class="math notranslate nohighlight">
 \[\text{Li}_n(z)=\sum_{k=1}^\infty \frac{z^{k}}{k^n}, \quad n \in  \mathbb{Z},  |z|&lt;1.\]</div>
 <p>or its analytic continuation; for <span class="math notranslate nohighlight">\(n&gt;0\)</span> there is the arguments restriction <span class="math notranslate nohighlight">\(x\leq 1\)</span>.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Polylog</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Polylog</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">polylog_i</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="go">0.010025111740139094</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">polylog_i</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">)</span>
+<span class="go">5.66534093854826</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">polylog_i</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">13.767054582329026</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -954,7 +956,7 @@ document.write(`
 <dt class="sig sig-object py" id="math53.fermi_dirac_i">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">fermi_dirac_i</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.fermi_dirac_i" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Fermi-Dirac integral of integer order <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(\displaystyle F_s(x) = \frac{1}{\Gamma(n+1)} \int_0^{\infty} \frac{t^n}{e^{t-x}+1} = -\text{Li}_{n+1}(-e^x) \,\)</span>.</p>
-<p>See also:  Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1144" title="Wikipedia. Complete Fermi-Dirac integral. Wikimedia Foundation, 2015. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Complete_Fermi%E2%80%93Dirac_integral.">1320</a>]</span>, MathWorld <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1638" title="E. W. Weisstein. Fermi-Dirac Distribution. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/Fermi-DiracDistribution.html.">958</a>]</span>, <span id="id7">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.6.8.2).</p>
+<p>See also:  Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1144" title="Wikipedia. Complete Fermi-Dirac integral. Wikimedia Foundation, 2015. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Complete_Fermi%E2%80%93Dirac_integral.">1319</a>]</span>, MathWorld <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1638" title="E. W. Weisstein. Fermi-Dirac Distribution. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/Fermi-DiracDistribution.html.">957</a>]</span>, <span id="id7">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.6.8.2).</p>
 <p>This function returns the complete Fermi-Dirac integrals <span class="math notranslate nohighlight">\(F_n(x)\)</span> of integer order. They are defined for real orders <span class="math notranslate nohighlight">\(s&gt;-1\)</span> by</p>
 <div class="math notranslate nohighlight">
 \[F_s(x)=\frac{1}{\Gamma(s+1)} \int_0^\infty \frac{t^s}{e^{t-x}+1} \mathrm{d}t\]</div>
@@ -962,11 +964,13 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[F_s(x)=-\text{Li}_{s+1}(-e^x).\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">FermiDirac</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">FermiDirac</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">fermi_dirac_i</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="go">0.9098020885004644</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">fermi_dirac_i</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">)</span>
+<span class="go">599.031966057601</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">fermi_dirac_i</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">36051.591345246416</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -977,13 +981,15 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.fermi_dirac_m05">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">fermi_dirac_m05</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.fermi_dirac_m05" title="Link to this definition">#</a></dt>
-<dd><p>Returns the Fermi-Dirac integral <span class="math notranslate nohighlight">\(F_{-1/2}(x)\)</span>. See also:  Wikipedia <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1144" title="Wikipedia. Complete Fermi-Dirac integral. Wikimedia Foundation, 2015. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Complete_Fermi%E2%80%93Dirac_integral.">1320</a>]</span>, MathWorld <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1638" title="E. W. Weisstein. Fermi-Dirac Distribution. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/Fermi-DiracDistribution.html.">958</a>]</span>, <span id="id10">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.6.8.3).</p>
+<dd><p>Returns the Fermi-Dirac integral <span class="math notranslate nohighlight">\(F_{-1/2}(x)\)</span>. See also:  Wikipedia <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1144" title="Wikipedia. Complete Fermi-Dirac integral. Wikimedia Foundation, 2015. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Complete_Fermi%E2%80%93Dirac_integral.">1319</a>]</span>, MathWorld <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1638" title="E. W. Weisstein. Fermi-Dirac Distribution. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/Fermi-DiracDistribution.html.">957</a>]</span>, <span id="id10">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.6.8.3).</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">FermiDiracm05</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">FermiDiracm05</span><span class="p">(</span><span class="s1">&#39;5.1&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">fermi_dirac_m05</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">0.608705610911171</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">fermi_dirac_m05</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">3.6420723652672895</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">fermi_dirac_m05</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">5.157769932482041</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -994,13 +1000,15 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.fermi_dirac_p05">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">fermi_dirac_p05</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.fermi_dirac_p05" title="Link to this definition">#</a></dt>
-<dd><p>Returns the Fermi-Dirac integral <span class="math notranslate nohighlight">\(F_{1/2}(x)\)</span>. See also:  Wikipedia <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1144" title="Wikipedia. Complete Fermi-Dirac integral. Wikimedia Foundation, 2015. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Complete_Fermi%E2%80%93Dirac_integral.">1320</a>]</span>, MathWorld <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1638" title="E. W. Weisstein. Fermi-Dirac Distribution. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/Fermi-DiracDistribution.html.">958</a>]</span>, <span id="id14">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.6.8.3).</p>
+<dd><p>Returns the Fermi-Dirac integral <span class="math notranslate nohighlight">\(F_{1/2}(x)\)</span>. See also:  Wikipedia <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1144" title="Wikipedia. Complete Fermi-Dirac integral. Wikimedia Foundation, 2015. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Complete_Fermi%E2%80%93Dirac_integral.">1319</a>]</span>, MathWorld <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1638" title="E. W. Weisstein. Fermi-Dirac Distribution. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/Fermi-DiracDistribution.html.">957</a>]</span>, <span id="id14">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.6.8.3).</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">FermiDiracp05</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">FermiDiracp05</span><span class="p">(</span><span class="s1">&#39;5.1&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">fermi_dirac_p05</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">0.7712150360437194</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">fermi_dirac_p05</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">25.88346611317671</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">fermi_dirac_p05</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">72.25098647441794</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1011,13 +1019,15 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.fermi_dirac_p15">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">fermi_dirac_p15</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.fermi_dirac_p15" title="Link to this definition">#</a></dt>
-<dd><p>Returns the Fermi-Dirac integral <span class="math notranslate nohighlight">\(F_{3/2}(x)\)</span>. See also:  Wikipedia <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id1144" title="Wikipedia. Complete Fermi-Dirac integral. Wikimedia Foundation, 2015. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Complete_Fermi%E2%80%93Dirac_integral.">1320</a>]</span>, MathWorld <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id1638" title="E. W. Weisstein. Fermi-Dirac Distribution. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/Fermi-DiracDistribution.html.">958</a>]</span>, <span id="id17">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.6.8.3).</p>
+<dd><p>Returns the Fermi-Dirac integral <span class="math notranslate nohighlight">\(F_{3/2}(x)\)</span>. See also:  Wikipedia <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id1144" title="Wikipedia. Complete Fermi-Dirac integral. Wikimedia Foundation, 2015. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Complete_Fermi%E2%80%93Dirac_integral.">1319</a>]</span>, MathWorld <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id1638" title="E. W. Weisstein. Fermi-Dirac Distribution. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/Fermi-DiracDistribution.html.">957</a>]</span>, <span id="id17">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.6.8.3).</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">FermiDiracp15</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">FermiDiracp15</span><span class="p">(</span><span class="s1">&#39;5.1&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">fermi_dirac_p15</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">0.874881667590789</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">fermi_dirac_p15</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">113.49527140479812</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">fermi_dirac_p15</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">611.7653726268513</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1028,13 +1038,15 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.fermi_dirac_p25">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">fermi_dirac_p25</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.fermi_dirac_p25" title="Link to this definition">#</a></dt>
-<dd><p>Returns the Fermi-Dirac integral <span class="math notranslate nohighlight">\(F_{5/2}(x)\)</span>. See also:  Wikipedia <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id1144" title="Wikipedia. Complete Fermi-Dirac integral. Wikimedia Foundation, 2015. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Complete_Fermi%E2%80%93Dirac_integral.">1320</a>]</span>, MathWorld <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id1638" title="E. W. Weisstein. Fermi-Dirac Distribution. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/Fermi-DiracDistribution.html.">958</a>]</span>, <span id="id20">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.6.8.3).</p>
+<dd><p>Returns the Fermi-Dirac integral <span class="math notranslate nohighlight">\(F_{5/2}(x)\)</span>. See also:  Wikipedia <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id1144" title="Wikipedia. Complete Fermi-Dirac integral. Wikimedia Foundation, 2015. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Complete_Fermi%E2%80%93Dirac_integral.">1319</a>]</span>, MathWorld <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id1638" title="E. W. Weisstein. Fermi-Dirac Distribution. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/Fermi-DiracDistribution.html.">957</a>]</span>, <span id="id20">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.6.8.3).</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">FermiDiracp25</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">FermiDiracp25</span><span class="p">(</span><span class="s1">&#39;5.1&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">fermi_dirac_p25</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">0.9362639349902176</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">fermi_dirac_p25</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">364.9252593211593</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">fermi_dirac_p25</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">3726.9235556746216</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1046,13 +1058,15 @@ document.write(`
 <dt class="sig sig-object py" id="math53.tangent_int_2">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">tangent_int_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.tangent_int_2" title="Link to this definition">#</a></dt>
 <dd><p>Returns the  inverse tangent integral <span class="math notranslate nohighlight">\(\displaystyle \mathrm{Ti}_2(x)  =  \int_0^x  \frac{\arctan(t)}{t} \, \mathrm{d}t\)</span>.</p>
-<p>See also:  Wikipedia <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id1142" title="Wikipedia. Polylogarithm, inverse tangent integral. Wikimedia Foundation, 2015. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Polylogarithm#Relationship_to_other_functions.">1334</a>]</span>, MathWorld <span id="id22">[<a class="reference internal" href="../99BackMatter/index.html#id1636" title="E. W. Weisstein. Inverse tangent integral. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/InverseTangentIntegral.html.">964</a>]</span>, <span id="id23">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.6.16).</p>
+<p>See also:  Wikipedia <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id1142" title="Wikipedia. Polylogarithm, inverse tangent integral. Wikimedia Foundation, 2015. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Polylogarithm#Relationship_to_other_functions.">1333</a>]</span>, MathWorld <span id="id22">[<a class="reference internal" href="../99BackMatter/index.html#id1636" title="E. W. Weisstein. Inverse tangent integral. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/InverseTangentIntegral.html.">963</a>]</span>, <span id="id23">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.6.16).</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">TangentInt2</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">TangentInt2</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">tangent_int_2</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">0.009999888892888685</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">tangent_int_2</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">3.788674042119505</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">tangent_int_2</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">4.8250862474762</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1065,11 +1079,13 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">lobachevsky_c</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.lobachevsky_c" title="Link to this definition">#</a></dt>
 <dd><p>Returns Lobachevsky’s log-cos integral <span class="math notranslate nohighlight">\(\displaystyle L(x) = \int_0^x \log|\cos(t)| \, \mathrm{d}t\)</span>. See also: <span id="id24">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.6.18).</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">LobachevskyC</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">LobachevskyC</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">lobachevsky_c</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">1.6666833336508016e-07</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">lobachevsky_c</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">6.7712697858797855</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">lobachevsky_c</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">15.017229619310305</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1082,11 +1098,13 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">lobachevsky_s</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.lobachevsky_s" title="Link to this definition">#</a></dt>
 <dd><p>Returns Lobachevsky’s log-sin integral <span class="math notranslate nohighlight">\(\displaystyle \Lambda(x) = \int_0^x \log|2\sin(t)| \, \mathrm{d}t\)</span>. See also: <span id="id25">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.6.19).</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">LobachevskyS</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">LobachevskyS</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">lobachevsky_s</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">0.049120285609948126</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">lobachevsky_s</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">0.3226979802070858</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">lobachevsky_s</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">-0.33243071505340765</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1098,7 +1116,7 @@ document.write(`
 <dt class="sig sig-object py" id="math53.debye">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">debye</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.debye" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Debye function <span class="math notranslate nohighlight">\(\displaystyle \mathrm{D}_n(x) = \frac{n}{x^n} \int_0^x \frac{t^n}{e^t-1} \, \mathrm{d}t,  \quad n&gt;0, x \ge 0\)</span>.</p>
-<p>See also:  Wikipedia <span id="id26">[<a class="reference internal" href="../99BackMatter/index.html#id1175" title="Wikipedia. Debye functions and polylogarithms. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Debye_function and https://en.wikipedia.org/wiki/Polylogarithm.">1341</a>]</span>, MathWorld <span id="id27">[<a class="reference internal" href="../99BackMatter/index.html#id1679" title="E. W. Weisstein. Debye Functions. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/DebyeFunctions.html.">997</a>]</span>, <span id="id28">Abramowitz and Stegun. [<a class="reference internal" href="../99BackMatter/index.html#id3" title="M. Abramowitz and I.A. Stegun. Handbook of Mathematical Functions. New York: Dekker, 1970. Available as https://archive.org/details/AandS-mono600/mode/2up.">4</a>]</span> section 27.1,  <span id="id29">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.10.6),  <span id="id30">Dubinov and Dubinova [<a class="reference internal" href="../99BackMatter/index.html#id75" title="E. Dubinov and A. A. Dubinova. Exact integral-free expressions for the integral debye functions. Technical Physics Letters, 34(12):503–508, 2008.">289</a>]</span>.</p>
+<p>See also:  Wikipedia <span id="id26">[<a class="reference internal" href="../99BackMatter/index.html#id1175" title="Wikipedia. Debye functions and polylogarithms. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Debye_function and https://en.wikipedia.org/wiki/Polylogarithm.">1340</a>]</span>, MathWorld <span id="id27">[<a class="reference internal" href="../99BackMatter/index.html#id1679" title="E. W. Weisstein. Debye Functions. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/DebyeFunctions.html.">996</a>]</span>, <span id="id28">Abramowitz and Stegun. [<a class="reference internal" href="../99BackMatter/index.html#id3" title="M. Abramowitz and I.A. Stegun. Handbook of Mathematical Functions. New York: Dekker, 1970. Available as https://archive.org/details/AandS-mono600/mode/2up.">4</a>]</span> section 27.1,  <span id="id29">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.10.6),  <span id="id30">Dubinov and Dubinova [<a class="reference internal" href="../99BackMatter/index.html#id75" title="E. Dubinov and A. A. Dubinova. Exact integral-free expressions for the integral debye functions. Technical Physics Letters, 34(12):503–508, 2008.">289</a>]</span>.</p>
 <p>This routine returns the Debye functions</p>
 <div class="math notranslate nohighlight">
 \[\text{D}_n(x) = \frac{n}{x^n} \int_0^x \frac{t^n}{e^t-1} \mathrm{d}t \quad (n&gt;0, x \geq 0).\]</div>
@@ -1122,11 +1140,13 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[Z_{n}(z)=\sum _{k=0}^{n-1}\mathrm{Li}_{n-k}(e^{-z}){z^{k} \over k!}\qquad (n=1,2,3,\ldots ).\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Debye</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Debye</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">debye</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="go">0.9966708333287038</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">debye</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">)</span>
+<span class="go">0.016717989806569248</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">debye</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">0.0005184007550452067</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1142,11 +1162,13 @@ document.write(`
 <p>A.J. MacLeod, The numerical computation of transport integrals, 1992, Computer Physics Communications,
 69, pp. 229-234, <a class="reference external" href="https://doi.org/10.1016/0010-4655(92)90162-R">https://doi.org/10.1016/0010-4655(92)90162-R</a>,</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">TransportJn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">TransportJn</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">transport_jn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="go">0.009999972222305555</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">transport_jn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">)</span>
+<span class="go">7.169455825440913</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">transport_jn</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">25.97556753445377</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1276,7 +1298,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 22, 2026.
+  Last updated on Oct 23, 2026.
   <br/>
 </p>
   </div>

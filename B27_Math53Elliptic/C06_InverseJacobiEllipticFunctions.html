@@ -53,7 +53,7 @@
     <link rel="prev" title="Jacobi theta functions at \(x=0\) for \(0 \le q &lt;1\)" href="C05_JacobiTheta.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 22, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 23, 2026"/>
   </head>
   
   
@@ -935,15 +935,17 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.jacobi_arcsn">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">jacobi_arcsn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.jacobi_arcsn" title="Link to this definition">#</a></dt>
-<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arcsn}(x, k)\)</span> for <span class="math notranslate nohighlight">\(|x| \le 1\)</span> and <span class="math notranslate nohighlight">\(|kx| \le 1\)</span>. See also NIST <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">477</a>]</span>, <span id="id2">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.12.1).</p>
+<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arcsn}(x, k)\)</span> for <span class="math notranslate nohighlight">\(|x| \le 1\)</span> and <span class="math notranslate nohighlight">\(|kx| \le 1\)</span>. See also NIST <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">476</a>]</span>, <span id="id2">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.12.1).</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{arcsn}(x, k) = F(\mathrm{arcsin}(x), k).\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcSN</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcSN</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcsn</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="go">0.010000208342552622</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcsn</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">0.5455929205316519</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcsn</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="go">1.2646631607926928</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -954,15 +956,17 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.jacobi_arccn">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">jacobi_arccn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.jacobi_arccn" title="Link to this definition">#</a></dt>
-<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arccn}(x, k)\)</span> for <span class="math notranslate nohighlight">\(|x| &lt; 1\)</span> if <span class="math notranslate nohighlight">\(k \le 1\)</span>, and <span class="math notranslate nohighlight">\(x^2 &gt; 1 - 1/k^2\)</span> if <span class="math notranslate nohighlight">\(k &gt; 1\)</span>. See also NIST <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">477</a>]</span>, <span id="id4">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span>  (3.2.12.2).</p>
+<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arccn}(x, k)\)</span> for <span class="math notranslate nohighlight">\(|x| &lt; 1\)</span> if <span class="math notranslate nohighlight">\(k \le 1\)</span>, and <span class="math notranslate nohighlight">\(x^2 &gt; 1 - 1/k^2\)</span> if <span class="math notranslate nohighlight">\(k &gt; 1\)</span>. See also NIST <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">476</a>]</span>, <span id="id4">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span>  (3.2.12.2).</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{arccn}(x, k) = F(\mathrm{arccos}(x), k).\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcCN</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcCN</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arccn</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="go">1.6742032211210454</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arccn</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">1.2569383151950466</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arccn</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="go">0.3693405114569477</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -973,15 +977,17 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.jacobi_arcdn">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">jacobi_arcdn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.jacobi_arcdn" title="Link to this definition">#</a></dt>
-<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arcdn}(x, k)\)</span> for <span class="math notranslate nohighlight">\(0 \le x \le 1\)</span> and <span class="math notranslate nohighlight">\(k^2 + x^2 &gt; 1\)</span> if <span class="math notranslate nohighlight">\(|k| &lt; 1\)</span>; and <span class="math notranslate nohighlight">\(|x| \le 1\)</span> if <span class="math notranslate nohighlight">\(|k| &gt; 1\)</span>. See also NIST <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">477</a>]</span>, <span id="id6">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span>  (3.2.12.3).</p>
+<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arcdn}(x, k)\)</span> for <span class="math notranslate nohighlight">\(0 \le x \le 1\)</span> and <span class="math notranslate nohighlight">\(k^2 + x^2 &gt; 1\)</span> if <span class="math notranslate nohighlight">\(|k| &lt; 1\)</span>; and <span class="math notranslate nohighlight">\(|x| \le 1\)</span> if <span class="math notranslate nohighlight">\(|k| &gt; 1\)</span>. See also NIST <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">476</a>]</span>, <span id="id6">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span>  (3.2.12.3).</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{arcdn}(x, k) = F\left(\mathrm{arcsin}\left(\sqrt{\frac{1-x^2}{k^2}} \right), k \right).\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcDN</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcDN</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcdn</span><span class="p">(</span><span class="mf">0.81</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">)</span>
+<span class="go">0.818383723341855</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcdn</span><span class="p">(</span><span class="mf">0.85</span><span class="p">,</span> <span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">0.6333740262678361</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcdn</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">)</span>
+<span class="go">0.44639702745946724</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -992,15 +998,17 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.jacobi_arccd">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">jacobi_arccd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.jacobi_arccd" title="Link to this definition">#</a></dt>
-<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arccd}(x, k)\)</span> for <span class="math notranslate nohighlight">\(|x| \le 1\)</span> if <span class="math notranslate nohighlight">\(|k| &lt; 1\)</span>; and <span class="math notranslate nohighlight">\(|x| \ge 1\)</span> if <span class="math notranslate nohighlight">\(|k| &gt; 1\)</span>. See also NIST <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">477</a>]</span>, <span id="id8">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.12.4).</p>
+<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arccd}(x, k)\)</span> for <span class="math notranslate nohighlight">\(|x| \le 1\)</span> if <span class="math notranslate nohighlight">\(|k| &lt; 1\)</span>; and <span class="math notranslate nohighlight">\(|x| \ge 1\)</span> if <span class="math notranslate nohighlight">\(|k| &gt; 1\)</span>. See also NIST <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">476</a>]</span>, <span id="id8">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.12.4).</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{arccd}(x, k) = F\left(\mathrm{arcsin}\left(\sqrt{\frac{1-x^2}{1-k^2 x^2}} \right), k \right).\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcCD</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcCD</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arccd</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="go">1.6757501464700435</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arccd</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">1.9135135823272573</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arccd</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="go">0.4210871940199031</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1011,15 +1019,17 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.jacobi_arcsd">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">jacobi_arcsd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.jacobi_arcsd" title="Link to this definition">#</a></dt>
-<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arcsd}(x, k)\)</span> for <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> if <span class="math notranslate nohighlight">\(|k| \ge 1\)</span> and <span class="math notranslate nohighlight">\(|x| &lt; 1/\sqrt{1 - k^2}\)</span> otherwise. See also NIST <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">477</a>]</span>, <span id="id10">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span>  (3.2.12.5).</p>
+<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arcsd}(x, k)\)</span> for <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> if <span class="math notranslate nohighlight">\(|k| \ge 1\)</span> and <span class="math notranslate nohighlight">\(|x| &lt; 1/\sqrt{1 - k^2}\)</span> otherwise. See also NIST <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">476</a>]</span>, <span id="id10">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span>  (3.2.12.5).</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{arcsd}(x, k) = F\left(\mathrm{arcsin}\left(\sqrt{\frac{x^2}{1+k^2 x^2}} \right), k \right).\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcSD</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcSD</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcsd</span><span class="p">(</span><span class="mf">1.01</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
+<span class="go">0.01000008333708349</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcsd</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.9333</span><span class="p">)</span>
+<span class="go">0.48599631639488927</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcsd</span><span class="p">(</span><span class="mf">1.9333</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
+<span class="go">1.0461374961953611</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1030,15 +1040,17 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.jacobi_arcnd">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">jacobi_arcnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.jacobi_arcnd" title="Link to this definition">#</a></dt>
-<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arcnd}(x, k)\)</span> for <span class="math notranslate nohighlight">\(x \ge 1\)</span> and <span class="math notranslate nohighlight">\(x^2 \le k^2/(1 - k^2)\)</span> if <span class="math notranslate nohighlight">\(|k| &lt; 1\)</span>. See also NIST <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">477</a>]</span>, <span id="id12">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.12.6).</p>
+<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arcnd}(x, k)\)</span> for <span class="math notranslate nohighlight">\(x \ge 1\)</span> and <span class="math notranslate nohighlight">\(x^2 \le k^2/(1 - k^2)\)</span> if <span class="math notranslate nohighlight">\(|k| &lt; 1\)</span>. See also NIST <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">476</a>]</span>, <span id="id12">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.12.6).</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{arcnd}(x, k) = F\left(\mathrm{arcsin}\left(\sqrt{\frac{x^2-1}{k^2 x^2}} \right), k \right).\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcND</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcND</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcnd</span><span class="p">(</span><span class="mf">1.01</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
+<span class="go">0.09402852893196235</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcnd</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.9333</span><span class="p">)</span>
+<span class="go">0.44786848710680505</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcnd</span><span class="p">(</span><span class="mf">1.9333</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
+<span class="go">0.7366908030186489</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1049,15 +1061,17 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.jacobi_arcdc">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">jacobi_arcdc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.jacobi_arcdc" title="Link to this definition">#</a></dt>
-<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arcdc}(x, k)\)</span> for <span class="math notranslate nohighlight">\(|x| \ge 1\)</span> if <span class="math notranslate nohighlight">\(|k| &lt; 1\)</span>; and <span class="math notranslate nohighlight">\(|x| \le 1\)</span> if <span class="math notranslate nohighlight">\(|k| &gt; 1\)</span>. See also NIST <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">477</a>]</span>, <span id="id14">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.12.7).</p>
+<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arcdc}(x, k)\)</span> for <span class="math notranslate nohighlight">\(|x| \ge 1\)</span> if <span class="math notranslate nohighlight">\(|k| &lt; 1\)</span>; and <span class="math notranslate nohighlight">\(|x| \le 1\)</span> if <span class="math notranslate nohighlight">\(|k| &gt; 1\)</span>. See also NIST <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">476</a>]</span>, <span id="id14">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.12.7).</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{arcdc}(x, k) = F\left(\mathrm{arcsin}\left(\sqrt{\frac{1-x^2-1}{k^2 - x^2}} \right), k \right).\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcDC</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcDC</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcdc</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
+<span class="go">1.1997781698230954</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcdc</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.9333</span><span class="p">)</span>
+<span class="go">0.602871393168387</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcdc</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
+<span class="go">0.3230254324880706</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1068,15 +1082,17 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.jacobi_arcnc">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">jacobi_arcnc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.jacobi_arcnc" title="Link to this definition">#</a></dt>
-<dd><p>Returns the inverse Jacobi elliptic function  <span class="math notranslate nohighlight">\(\mathrm{arcnc}(x, k)\)</span> for <span class="math notranslate nohighlight">\(x \ge 1\)</span>, and <span class="math notranslate nohighlight">\(x^2 \le k^2/(k^2 - 1)\)</span> for <span class="math notranslate nohighlight">\(|k| &gt; 1\)</span>. See also NIST <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">477</a>]</span>, <span id="id16">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.12.8).</p>
+<dd><p>Returns the inverse Jacobi elliptic function  <span class="math notranslate nohighlight">\(\mathrm{arcnc}(x, k)\)</span> for <span class="math notranslate nohighlight">\(x \ge 1\)</span>, and <span class="math notranslate nohighlight">\(x^2 \le k^2/(k^2 - 1)\)</span> for <span class="math notranslate nohighlight">\(|k| &gt; 1\)</span>. See also NIST <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">476</a>]</span>, <span id="id16">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.12.8).</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{arcnc}(x, k) = F(\mathrm{arcsec}(x), k).\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcNC</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcNC</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcnc</span><span class="p">(</span><span class="mf">1.01</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="go">0.1409520642226382</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcnc</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">0.9408474060083183</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcnc</span><span class="p">(</span><span class="mf">1.9333</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="go">1.0673523684807162</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1088,15 +1104,17 @@ document.write(`
 <dt class="sig sig-object py" id="math53.jacobi_arcsc">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">jacobi_arcsc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.jacobi_arcsc" title="Link to this definition">#</a></dt>
 <dd><p>Returns the inverse Jacobi elliptic function  <span class="math notranslate nohighlight">\(\mathrm{arcsc}(x, k)\)</span> for <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> if <span class="math notranslate nohighlight">\(|k| \le 1\)</span> and <span class="math notranslate nohighlight">\(|x| \le 1/\sqrt{
-k^2 - 1}\)</span> if <span class="math notranslate nohighlight">\(|k| &gt; 1\)</span>. See also NIST <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">477</a>]</span>, <span id="id18">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.12.9).</p>
+k^2 - 1}\)</span> if <span class="math notranslate nohighlight">\(|k| &gt; 1\)</span>. See also NIST <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">476</a>]</span>, <span id="id18">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.12.9).</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{arcsc}(x, k) = F(\mathrm{arctan}(x), k).\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcSC</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcSC</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcsc</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="go">0.009999708348801099</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcsc</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">0.4787388167314662</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcsc</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="go">0.7675883759164223</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1107,15 +1125,17 @@ k^2 - 1}\)</span> if <span class="math notranslate nohighlight">\(|k| &gt; 1\)</
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.jacobi_arcns">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">jacobi_arcns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.jacobi_arcns" title="Link to this definition">#</a></dt>
-<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arcns}(x, k)\)</span> for <span class="math notranslate nohighlight">\(|x| \ge 1\)</span> if <span class="math notranslate nohighlight">\(|k| &lt; 1\)</span> and <span class="math notranslate nohighlight">\(|x| \ge |k|\)</span> if <span class="math notranslate nohighlight">\(|k| &gt; 1\)</span>. See also NIST <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">477</a>]</span>, <span id="id20">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.12.10).</p>
+<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arcns}(x, k)\)</span> for <span class="math notranslate nohighlight">\(|x| \ge 1\)</span> if <span class="math notranslate nohighlight">\(|k| &lt; 1\)</span> and <span class="math notranslate nohighlight">\(|x| \ge |k|\)</span> if <span class="math notranslate nohighlight">\(|k| &gt; 1\)</span>. See also NIST <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">476</a>]</span>, <span id="id20">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.12.10).</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{arcns}(x, k) = F(\mathrm{arccsc}(x), k).\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcNS</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcNS</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcns</span><span class="p">(</span><span class="mf">1.01</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="go">1.523305059639121</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcns</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">0.7925159210200553</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcns</span><span class="p">(</span><span class="mf">1.9333</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="go">0.5501460517169048</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1126,15 +1146,17 @@ k^2 - 1}\)</span> if <span class="math notranslate nohighlight">\(|k| &gt; 1\)</
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.jacobi_arcds">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">jacobi_arcds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.jacobi_arcds" title="Link to this definition">#</a></dt>
-<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arcds}(x, k)\)</span> for <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> if <span class="math notranslate nohighlight">\(|k| &gt; 1\)</span> and <span class="math notranslate nohighlight">\(|x| \ge \sqrt{ 1 - k^2}\)</span> if <span class="math notranslate nohighlight">\(|k| &lt; 1\)</span>. See also NIST <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">477</a>]</span>, <span id="id22">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.12.11).</p>
+<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arcds}(x, k)\)</span> for <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> if <span class="math notranslate nohighlight">\(|k| &gt; 1\)</span> and <span class="math notranslate nohighlight">\(|x| \ge \sqrt{ 1 - k^2}\)</span> if <span class="math notranslate nohighlight">\(|k| &lt; 1\)</span>. See also NIST <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">476</a>]</span>, <span id="id22">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.12.11).</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{arcds}(x, k) = F\left(\mathrm{arcsin}\left(\sqrt{\frac{1}{k^2 + x^2}} \right), k \right).\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcDS</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcDS</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcds</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
+<span class="go">1.2004822727201372</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcds</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.9333</span><span class="p">)</span>
+<span class="go">0.7245630486544666</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arcds</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
+<span class="go">0.7261996704910932</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1145,15 +1167,17 @@ k^2 - 1}\)</span> if <span class="math notranslate nohighlight">\(|k| &gt; 1\)</
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.jacobi_arccs">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">jacobi_arccs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.jacobi_arccs" title="Link to this definition">#</a></dt>
-<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arccs}(x, k)\)</span> for <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> if <span class="math notranslate nohighlight">\(|k| &lt; 1\)</span> and <span class="math notranslate nohighlight">\(|x| \ge \sqrt{k^2 - 1}\)</span> if <span class="math notranslate nohighlight">\(|k| &gt; 1\)</span>. See also NIST <span id="id23">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">477</a>]</span>, <span id="id24">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.12.12).</p>
+<dd><p>Returns the inverse Jacobi elliptic function <span class="math notranslate nohighlight">\(\mathrm{arccs}(x, k)\)</span> for <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> if <span class="math notranslate nohighlight">\(|k| &lt; 1\)</span> and <span class="math notranslate nohighlight">\(|x| \ge \sqrt{k^2 - 1}\)</span> if <span class="math notranslate nohighlight">\(|k| &gt; 1\)</span>. See also NIST <span id="id23">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">476</a>]</span>, <span id="id24">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.2.12.12).</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{arccs}(x, k) = F(\mathrm{arccot}(x), k).\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcCS</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">JacobiArcCS</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arccs</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="go">1.6742037984472615</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arccs</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">1.3622156081449894</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">jacobi_arccs</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="go">0.8413253980268582</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1287,7 +1311,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 22, 2026.
+  Last updated on Oct 23, 2026.
   <br/>
 </p>
   </div>

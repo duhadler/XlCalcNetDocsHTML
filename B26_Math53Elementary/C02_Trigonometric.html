@@ -53,7 +53,7 @@
     <link rel="prev" title="Root, exponential, logarithmic and power functions" href="C01_ExpLogPower.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 22, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 23, 2026"/>
   </head>
   
   
@@ -950,13 +950,15 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.sind">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">sind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.sind" title="Link to this definition">#</a></dt>
-<dd><p>Returns the sine of <span class="math notranslate nohighlight">\(x\)</span>, with <span class="math notranslate nohighlight">\(x\)</span> in degrees, <span class="math notranslate nohighlight">\(\mathrm{sind}(x)\)</span>.  See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1063" title="Wikipedia. Sine. Wikimedia Foundation, 2011. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Sine.">1245</a>]</span>,  MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1500" title="E. W. Weisstein. Sine. From MathWorld - A Wolfram Web Resource, 2007. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Sine.html.">875</a>]</span>,  NIST <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id457" title="F.W.J. Roy, R.; Olver. Trigonometric functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/4.14.">493</a>]</span>.</p>
+<dd><p>Returns the sine of <span class="math notranslate nohighlight">\(x\)</span>, with <span class="math notranslate nohighlight">\(x\)</span> in degrees, <span class="math notranslate nohighlight">\(\mathrm{sind}(x)\)</span>.  See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1063" title="Wikipedia. Sine. Wikimedia Foundation, 2011. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Sine.">1244</a>]</span>,  MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1500" title="E. W. Weisstein. Sine. From MathWorld - A Wolfram Web Resource, 2007. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Sine.html.">874</a>]</span>,  NIST <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id457" title="F.W.J. Roy, R.; Olver. Trigonometric functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/4.14.">492</a>]</span>.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Sind</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Sind</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">sind</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">-0.07555305176474306</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">sind</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">sind</span><span class="p">(</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">0.07555305176474306</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -968,7 +970,17 @@ document.write(`
 <dt class="sig sig-object py" id="math53.asind">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">asind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.asind" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">mathc53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns the inverse sine of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\mathrm{asin}(x)\)</span>. See also  Wikipedia <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1065" title="Wikipedia. Inverse Trigonometric functions. Wikimedia Foundation, 2012. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Inverse_trigonometric_functions.">1261</a>]</span>,  MathWorld <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1512" title="E. W. Weisstein. Inverse Sine. From MathWorld - A Wolfram Web Resource, 2007. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/InverseSine.html.">872</a>]</span>,  NIST <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id459" title="F.W.J. Roy, R.; Olver. Inverse Trigonometric Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/4.23.">488</a>]</span>, <span id="id7">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (4.2.13), Mpmath <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id651" title="The Mpmath Development Team. Inverse Sine. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2009. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/trigonometric.html#asin.">578</a>]</span>.</p>
+<p>Returns the inverse sine of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\mathrm{asin}(x)\)</span>. See also  Wikipedia <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1065" title="Wikipedia. Inverse Trigonometric functions. Wikimedia Foundation, 2012. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Inverse_trigonometric_functions.">1260</a>]</span>,  MathWorld <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1512" title="E. W. Weisstein. Inverse Sine. From MathWorld - A Wolfram Web Resource, 2007. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/InverseSine.html.">871</a>]</span>,  NIST <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id459" title="F.W.J. Roy, R.; Olver. Inverse Trigonometric Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/4.23.">487</a>]</span>, <span id="id7">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (4.2.13), Mpmath <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id651" title="The Mpmath Development Team. Inverse Sine. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2009. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/trigonometric.html#asin.">577</a>]</span>.</p>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">asind</span><span class="p">(</span><span class="o">-</span><span class="mf">0.333</span><span class="p">)</span>
+<span class="go">-19.45096478286684</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">asind</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">asind</span><span class="p">(</span><span class="mf">0.333</span><span class="p">)</span>
+<span class="go">19.45096478286684</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </section>
@@ -977,13 +989,15 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.cosd">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">cosd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.cosd" title="Link to this definition">#</a></dt>
-<dd><p>Returns the cosine of <span class="math notranslate nohighlight">\(x\)</span>, with <span class="math notranslate nohighlight">\(x\)</span> in degrees, <span class="math notranslate nohighlight">\(\mathrm{cosd}(x)\)</span>.   See also  Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1062" title="Wikipedia. Trigonometric functions. Wikimedia Foundation, 2011. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions.">1248</a>]</span>,  MathWorld <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1501" title="E. W. Weisstein. Cosine. From MathWorld - A Wolfram Web Resource, 2007. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Cosine.html.">860</a>]</span>,  NIST <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id457" title="F.W.J. Roy, R.; Olver. Trigonometric functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/4.14.">493</a>]</span>.</p>
+<dd><p>Returns the cosine of <span class="math notranslate nohighlight">\(x\)</span>, with <span class="math notranslate nohighlight">\(x\)</span> in degrees, <span class="math notranslate nohighlight">\(\mathrm{cosd}(x)\)</span>.   See also  Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1062" title="Wikipedia. Trigonometric functions. Wikimedia Foundation, 2011. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions.">1247</a>]</span>,  MathWorld <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1501" title="E. W. Weisstein. Cosine. From MathWorld - A Wolfram Web Resource, 2007. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Cosine.html.">859</a>]</span>,  NIST <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id457" title="F.W.J. Roy, R.; Olver. Trigonometric functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/4.14.">492</a>]</span>.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Cosd</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Cosd</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">cosd</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">0.99714178348369</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">cosd</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">1.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">cosd</span><span class="p">(</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">0.99714178348369</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -995,7 +1009,17 @@ document.write(`
 <dt class="sig sig-object py" id="math53.acosd">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">acosd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.acosd" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">mathc53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns the inverse cosine of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\mathrm{acos}(x)\)</span>. See also  Wikipedia <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1065" title="Wikipedia. Inverse Trigonometric functions. Wikimedia Foundation, 2012. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Inverse_trigonometric_functions.">1261</a>]</span>,  MathWorld <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1513" title="E. W. Weisstein. Inverse Cosine. From MathWorld - A Wolfram Web Resource, 2007. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/InverseCosine.html.">869</a>]</span>,  NIST <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id459" title="F.W.J. Roy, R.; Olver. Inverse Trigonometric Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/4.23.">488</a>]</span>, <span id="id15">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (4.2.3), Flint <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id574" title="The FLINT Team. Arb: Inverse trigonometric functions. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/arb.html#inverse-trigonometric-functions.">744</a>]</span>, Flint <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id575" title="The FLINT Team. Acb: Inverse trigonometric functions. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb.html#inverse-trigonometric-functions.">734</a>]</span>, Mpmath <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id652" title="The Mpmath Development Team. Inverse Cosine. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2009. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/trigonometric.html#acos.">569</a>]</span>.</p>
+<p>Returns the inverse cosine of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\mathrm{acos}(x)\)</span>. See also  Wikipedia <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1065" title="Wikipedia. Inverse Trigonometric functions. Wikimedia Foundation, 2012. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Inverse_trigonometric_functions.">1260</a>]</span>,  MathWorld <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1513" title="E. W. Weisstein. Inverse Cosine. From MathWorld - A Wolfram Web Resource, 2007. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/InverseCosine.html.">868</a>]</span>,  NIST <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id459" title="F.W.J. Roy, R.; Olver. Inverse Trigonometric Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/4.23.">487</a>]</span>, <span id="id15">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (4.2.3), Flint <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id574" title="The FLINT Team. Arb: Inverse trigonometric functions. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/arb.html#inverse-trigonometric-functions.">743</a>]</span>, Flint <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id575" title="The FLINT Team. Acb: Inverse trigonometric functions. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb.html#inverse-trigonometric-functions.">733</a>]</span>, Mpmath <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id652" title="The Mpmath Development Team. Inverse Cosine. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2009. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/trigonometric.html#acos.">568</a>]</span>.</p>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">acosd</span><span class="p">(</span><span class="o">-</span><span class="mf">0.333</span><span class="p">)</span>
+<span class="go">109.45096478286685</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">acosd</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">90.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">acosd</span><span class="p">(</span><span class="mf">0.333</span><span class="p">)</span>
+<span class="go">70.54903521713317</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </section>
@@ -1004,13 +1028,15 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.tand">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">tand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.tand" title="Link to this definition">#</a></dt>
-<dd><p>Returns the tangent of <span class="math notranslate nohighlight">\(x\)</span>, with <span class="math notranslate nohighlight">\(x\)</span> in degrees, <span class="math notranslate nohighlight">\(\mathrm{tand}tan(x)\)</span>.  See also  Wikipedia <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id1062" title="Wikipedia. Trigonometric functions. Wikimedia Foundation, 2011. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions.">1248</a>]</span>,  MathWorld <span id="id20">[<a class="reference internal" href="../99BackMatter/index.html#id1502" title="E. W. Weisstein. Tangent. From MathWorld - A Wolfram Web Resource, 2007. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Tangent.html.">876</a>]</span>,  NIST <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id457" title="F.W.J. Roy, R.; Olver. Trigonometric functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/4.14.">493</a>]</span>.</p>
+<dd><p>Returns the tangent of <span class="math notranslate nohighlight">\(x\)</span>, with <span class="math notranslate nohighlight">\(x\)</span> in degrees, <span class="math notranslate nohighlight">\(\mathrm{tand}tan(x)\)</span>.  See also  Wikipedia <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id1062" title="Wikipedia. Trigonometric functions. Wikimedia Foundation, 2011. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions.">1247</a>]</span>,  MathWorld <span id="id20">[<a class="reference internal" href="../99BackMatter/index.html#id1502" title="E. W. Weisstein. Tangent. From MathWorld - A Wolfram Web Resource, 2007. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Tangent.html.">875</a>]</span>,  NIST <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id457" title="F.W.J. Roy, R.; Olver. Trigonometric functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/4.14.">492</a>]</span>.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Tand</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Tand</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">tand</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">-0.07576961773759515</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">tand</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">tand</span><span class="p">(</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">0.07576961773759515</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1022,7 +1048,17 @@ document.write(`
 <dt class="sig sig-object py" id="math53.atand">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">atand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.atand" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">mathc53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns the inverse tangent of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\mathrm{atan}(x)\)</span>. See also  Wikipedia <span id="id22">[<a class="reference internal" href="../99BackMatter/index.html#id1065" title="Wikipedia. Inverse Trigonometric functions. Wikimedia Foundation, 2012. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Inverse_trigonometric_functions.">1261</a>]</span>,  MathWorld <span id="id23">[<a class="reference internal" href="../99BackMatter/index.html#id1514" title="E. W. Weisstein. Inverse Tangent. From MathWorld - A Wolfram Web Resource, 2007. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/InverseTangent.html.">873</a>]</span>,  NIST <span id="id24">[<a class="reference internal" href="../99BackMatter/index.html#id459" title="F.W.J. Roy, R.; Olver. Inverse Trigonometric Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/4.23.">488</a>]</span>, <span id="id25">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (4.2.15), Flint <span id="id26">[<a class="reference internal" href="../99BackMatter/index.html#id574" title="The FLINT Team. Arb: Inverse trigonometric functions. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/arb.html#inverse-trigonometric-functions.">744</a>]</span>, Flint <span id="id27">[<a class="reference internal" href="../99BackMatter/index.html#id575" title="The FLINT Team. Acb: Inverse trigonometric functions. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb.html#inverse-trigonometric-functions.">734</a>]</span>, Mpmath <span id="id28">[<a class="reference internal" href="../99BackMatter/index.html#id653" title="The Mpmath Development Team. Inverse Tangent. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2009. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/trigonometric.html#atan.">579</a>]</span>.</p>
+<p>Returns the inverse tangent of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\mathrm{atan}(x)\)</span>. See also  Wikipedia <span id="id22">[<a class="reference internal" href="../99BackMatter/index.html#id1065" title="Wikipedia. Inverse Trigonometric functions. Wikimedia Foundation, 2012. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Inverse_trigonometric_functions.">1260</a>]</span>,  MathWorld <span id="id23">[<a class="reference internal" href="../99BackMatter/index.html#id1514" title="E. W. Weisstein. Inverse Tangent. From MathWorld - A Wolfram Web Resource, 2007. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/InverseTangent.html.">872</a>]</span>,  NIST <span id="id24">[<a class="reference internal" href="../99BackMatter/index.html#id459" title="F.W.J. Roy, R.; Olver. Inverse Trigonometric Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/4.23.">487</a>]</span>, <span id="id25">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (4.2.15), Flint <span id="id26">[<a class="reference internal" href="../99BackMatter/index.html#id574" title="The FLINT Team. Arb: Inverse trigonometric functions. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/arb.html#inverse-trigonometric-functions.">743</a>]</span>, Flint <span id="id27">[<a class="reference internal" href="../99BackMatter/index.html#id575" title="The FLINT Team. Acb: Inverse trigonometric functions. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb.html#inverse-trigonometric-functions.">733</a>]</span>, Mpmath <span id="id28">[<a class="reference internal" href="../99BackMatter/index.html#id653" title="The Mpmath Development Team. Inverse Tangent. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2009. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/trigonometric.html#atan.">578</a>]</span>.</p>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">atand</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">-77.00441747834749</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">atand</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">atand</span><span class="p">(</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">77.00441747834749</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </section>
@@ -1031,13 +1067,15 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.cotd">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">cotd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.cotd" title="Link to this definition">#</a></dt>
-<dd><p>Returns the cotangent of <span class="math notranslate nohighlight">\(x\)</span>, with <span class="math notranslate nohighlight">\(x\)</span> in degrees, <span class="math notranslate nohighlight">\(\mathrm{cotd}(x)\)</span>. See also  Wikipedia <span id="id29">[<a class="reference internal" href="../99BackMatter/index.html#id1062" title="Wikipedia. Trigonometric functions. Wikimedia Foundation, 2011. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions.">1248</a>]</span>,  MathWorld <span id="id30">[<a class="reference internal" href="../99BackMatter/index.html#id1505" title="E. W. Weisstein. Cotangent. From MathWorld - A Wolfram Web Resource, 2007. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Cotangent.html.">861</a>]</span>,  NIST <span id="id31">[<a class="reference internal" href="../99BackMatter/index.html#id457" title="F.W.J. Roy, R.; Olver. Trigonometric functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/4.14.">493</a>]</span>.</p>
+<dd><p>Returns the cotangent of <span class="math notranslate nohighlight">\(x\)</span>, with <span class="math notranslate nohighlight">\(x\)</span> in degrees, <span class="math notranslate nohighlight">\(\mathrm{cotd}(x)\)</span>. See also  Wikipedia <span id="id29">[<a class="reference internal" href="../99BackMatter/index.html#id1062" title="Wikipedia. Trigonometric functions. Wikimedia Foundation, 2011. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Trigonometric_functions.">1247</a>]</span>,  MathWorld <span id="id30">[<a class="reference internal" href="../99BackMatter/index.html#id1505" title="E. W. Weisstein. Cotangent. From MathWorld - A Wolfram Web Resource, 2007. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Cotangent.html.">860</a>]</span>,  NIST <span id="id31">[<a class="reference internal" href="../99BackMatter/index.html#id457" title="F.W.J. Roy, R.; Olver. Trigonometric functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/4.14.">492</a>]</span>.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Cotd</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Cotd</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">cotd</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">-13.197902138865127</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">cotd</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">inf</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">cotd</span><span class="p">(</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">13.197902138865127</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1048,7 +1086,17 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.acotd">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">acotd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.acotd" title="Link to this definition">#</a></dt>
-<dd><p>Returns the inverse cotangent of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\mathrm{acot}(x)\)</span>. See also  Wikipedia <span id="id32">[<a class="reference internal" href="../99BackMatter/index.html#id1065" title="Wikipedia. Inverse Trigonometric functions. Wikimedia Foundation, 2012. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Inverse_trigonometric_functions.">1261</a>]</span>,  MathWorld <span id="id33">[<a class="reference internal" href="../99BackMatter/index.html#id1517" title="E. W. Weisstein. Inverse Cotangent. From MathWorld - A Wolfram Web Resource, 2007. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/InverseCotangent.html.">870</a>]</span>,  NIST <span id="id34">[<a class="reference internal" href="../99BackMatter/index.html#id459" title="F.W.J. Roy, R.; Olver. Inverse Trigonometric Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/4.23.">488</a>]</span>, <span id="id35">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (4.2.5).</p>
+<dd><p>Returns the inverse cotangent of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\mathrm{acot}(x)\)</span>. See also  Wikipedia <span id="id32">[<a class="reference internal" href="../99BackMatter/index.html#id1065" title="Wikipedia. Inverse Trigonometric functions. Wikimedia Foundation, 2012. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Inverse_trigonometric_functions.">1260</a>]</span>,  MathWorld <span id="id33">[<a class="reference internal" href="../99BackMatter/index.html#id1517" title="E. W. Weisstein. Inverse Cotangent. From MathWorld - A Wolfram Web Resource, 2007. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/InverseCotangent.html.">869</a>]</span>,  NIST <span id="id34">[<a class="reference internal" href="../99BackMatter/index.html#id459" title="F.W.J. Roy, R.; Olver. Inverse Trigonometric Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/4.23.">487</a>]</span>, <span id="id35">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (4.2.5).</p>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">acotd</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">-12.995582521652512</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">acotd</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">90.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">acotd</span><span class="p">(</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">12.995582521652512</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </section>
@@ -1059,11 +1107,13 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">acos1m</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.acos1m" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(\mathrm{acos}(1-x)\)</span>, <span class="math notranslate nohighlight">\(0 \le x \le 2\)</span>, accurate also for <span class="math notranslate nohighlight">\(x\)</span> near 0.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Acos1m</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Acos1m</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">acos1m</span><span class="p">(</span><span class="o">-</span><span class="mf">0.333</span><span class="p">)</span>
+<span class="go">nan</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">acos1m</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">acos1m</span><span class="p">(</span><span class="mf">0.333</span><span class="p">)</span>
+<span class="go">0.8406213674789956</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1074,13 +1124,15 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.hav">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">hav</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.hav" title="Link to this definition">#</a></dt>
-<dd><p>Returns the haversine function <span class="math notranslate nohighlight">\(\mathrm{hav}(x) = (1 - \cos(x))/2 = \sin^2(x/2)\)</span>. See also  MathWorld <span id="id36">[<a class="reference internal" href="../99BackMatter/index.html#id1664" title="E. W. Weisstein. Haversine. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/Haversine.html.">984</a>]</span>,  Wikipedia <span id="id37">[<a class="reference internal" href="../99BackMatter/index.html#id1161" title="Wikipedia. Haversine. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Versine#Haversine and https://en.wikipedia.org/wiki/Haversine_formula.">1346</a>]</span>.</p>
+<dd><p>Returns the haversine function <span class="math notranslate nohighlight">\(\mathrm{hav}(x) = (1 - \cos(x))/2 = \sin^2(x/2)\)</span>. See also  MathWorld <span id="id36">[<a class="reference internal" href="../99BackMatter/index.html#id1664" title="E. W. Weisstein. Haversine. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/Haversine.html.">983</a>]</span>,  Wikipedia <span id="id37">[<a class="reference internal" href="../99BackMatter/index.html#id1161" title="Wikipedia. Haversine. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Versine#Haversine and https://en.wikipedia.org/wiki/Haversine_formula.">1345</a>]</span>.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Haversine</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Haversine</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">hav</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">0.6851764839496324</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">hav</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">hav</span><span class="p">(</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">0.6851764839496324</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1091,13 +1143,15 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="math53.archav">
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">archav</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.archav" title="Link to this definition">#</a></dt>
-<dd><p>Returns the inverse haversine function <span class="math notranslate nohighlight">\(\mathrm{archav}(x) = \mathrm{acos}(1-2x) =2 \mathrm{asin}(\sqrt{x})\)</span>, <span class="math notranslate nohighlight">\(0 \le x \le 1\)</span>. See also  MathWorld <span id="id38">[<a class="reference internal" href="../99BackMatter/index.html#id1665" title="E. W. Weisstein. Inverse Haversine. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/InverseHaversine.html.">988</a>]</span>,  Wikipedia <span id="id39">[<a class="reference internal" href="../99BackMatter/index.html#id1162" title="Wikipedia. Inverse Haversine. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Versine#Inverse_functions.">1348</a>]</span>.</p>
+<dd><p>Returns the inverse haversine function <span class="math notranslate nohighlight">\(\mathrm{archav}(x) = \mathrm{acos}(1-2x) =2 \mathrm{asin}(\sqrt{x})\)</span>, <span class="math notranslate nohighlight">\(0 \le x \le 1\)</span>. See also  MathWorld <span id="id38">[<a class="reference internal" href="../99BackMatter/index.html#id1665" title="E. W. Weisstein. Inverse Haversine. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/InverseHaversine.html.">987</a>]</span>,  Wikipedia <span id="id39">[<a class="reference internal" href="../99BackMatter/index.html#id1162" title="Wikipedia. Inverse Haversine. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Versine#Inverse_functions.">1347</a>]</span>.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">ArcHaversine</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">ArcHaversine</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">archav</span><span class="p">(</span><span class="o">-</span><span class="mf">0.333</span><span class="p">)</span>
+<span class="go">nan</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">archav</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">archav</span><span class="p">(</span><span class="mf">0.333</span><span class="p">)</span>
+<span class="go">1.2302522220901777</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1111,11 +1165,13 @@ document.write(`
 <dd><p>Returns the versine function <span class="math notranslate nohighlight">\(\mathrm{vers}(x) = 1 - \cos(x)\)</span>.</p>
 <p>See also:   <a class="reference external" href="https://en.wikipedia.org/wiki/Versine#Haversine">https://en.wikipedia.org/wiki/Versine#Haversine</a></p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Versine</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Versine</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">vers</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">1.3703529678992648</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">vers</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">vers</span><span class="p">(</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">1.3703529678992648</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1128,11 +1184,13 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">covers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.covers" title="Link to this definition">#</a></dt>
 <dd><p>Returns the <span class="math notranslate nohighlight">\(\mathrm{covers}(x) = 1 - \sin(x)\)</span>.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Covers</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Covers</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">covers</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">0.07110889811119075</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">covers</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">1.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">covers</span><span class="p">(</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">1.928891101888809</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1145,11 +1203,13 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">versint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.versint" title="Link to this definition">#</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(\displaystyle \mathrm{versint}(x) = \int_0^x \mathrm{vers}(t) \mathrm{d}t = x - \sin(x)\)</span>, accurate also near 0.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Versint</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Versint</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">versint</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">-5.26189110188881</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">versint</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">versint</span><span class="p">(</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">5.26189110188881</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1163,11 +1223,13 @@ document.write(`
 <dd><p>Returns <span class="math notranslate nohighlight">\(\displaystyle \mathrm{IC}_n(x) = \int_0^x \cos^n(t) \, \mathrm{d}t\)</span>, the integral of the nth cos power, for <span class="math notranslate nohighlight">\(n \ge 0\)</span>.</p>
 <p>See also  <span id="id40">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.10.13).</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">CosInt</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">CosInt</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">cosint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">4.333</span><span class="p">)</span>
+<span class="go">2.33850878821987</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">cosint</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">cosint</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">-1.7656780674583596</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1182,11 +1244,13 @@ document.write(`
 <p>Returns <span class="math notranslate nohighlight">\(\displaystyle \mathrm{IS}_n(x) = \int_0^x \sin^n(t) \, \mathrm{d}t\)</span>, the integral of the nth sin power, for <span class="math notranslate nohighlight">\(n \ge 0\)</span>.</p>
 <p>See also  <span id="id41">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.10.14).</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">SinInt</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">SinInt</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">sinint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">4.333</span><span class="p">)</span>
+<span class="go">1.9944912117801308</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">sinint</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">sinint</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">-1.421660491018621</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1336,7 +1400,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 22, 2026.
+  Last updated on Oct 23, 2026.
   <br/>
 </p>
   </div>

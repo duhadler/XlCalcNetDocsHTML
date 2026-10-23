@@ -53,7 +53,7 @@
     <link rel="prev" title="Real functions related to \(\,_1F_1\)" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 22, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 23, 2026"/>
   </head>
   
   
@@ -901,7 +901,7 @@ document.write(`
 <dd></dd></dl>
 
 <p>Returns Tricomi’s entire incomplete gamma function <span class="math notranslate nohighlight">\(\gamma^*(a,x)\)</span>.</p>
-<p>See also: Flint <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id562" title="The FLINT Team. Arb: Incomplete gamma and beta functions. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/arb_hypgeom.html#incomplete-gamma-and-beta-functions.">742</a>]</span>, Flint <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id563" title="The FLINT Team. Acb: Incomplete gamma and beta functions. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_hypgeom.html#incomplete-gamma-and-beta-functions.">732</a>]</span>.</p>
+<p>See also: Flint <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id562" title="The FLINT Team. Arb: Incomplete gamma and beta functions. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/arb_hypgeom.html#incomplete-gamma-and-beta-functions.">741</a>]</span>, Flint <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id563" title="The FLINT Team. Acb: Incomplete gamma and beta functions. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_hypgeom.html#incomplete-gamma-and-beta-functions.">731</a>]</span>.</p>
 <p>This routine returns Tricomi’s incomplete gamma function <span class="math notranslate nohighlight">\(\gamma^*\)</span>, defined as</p>
 <div class="math notranslate nohighlight">
 \[\gamma^*(a,x)=e^{-x} \frac{M(1,a+1,x)}{\Gamma(a+1)}\]</div>
@@ -945,10 +945,10 @@ document.write(`
 <p>See also: <span id="id3">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.10.25).</p>
 <p><a class="reference external" href="https://mathworld.wolfram.com/ExponentialSumFunction.html">https://mathworld.wolfram.com/ExponentialSumFunction.html</a></p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Expn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Expn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 <span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Expn</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Expn</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
 <span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
 </pre></div>
 </div>
@@ -963,10 +963,10 @@ document.write(`
 <dd><p>Returns  <span class="math notranslate nohighlight">\(\displaystyle \mathrm{exprel}_n(x) = \frac{n!}{x^n} \left(e^x - \sum_{k=0}^{n-1} \frac{x^k}{k!} \right) = e^x x^{-n} \left(\Gamma(1+n) - n \Gamma(n,x) \right)  = {}_1F_1(1, 1+n, x)\)</span>.</p>
 <p>See also  <span id="id4">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.10.10).</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Expreln</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Expreln</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">Expreln</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Expreln</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
 <span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
 </pre></div>
 </div>
@@ -1065,7 +1065,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 22, 2026.
+  Last updated on Oct 23, 2026.
   <br/>
 </p>
   </div>

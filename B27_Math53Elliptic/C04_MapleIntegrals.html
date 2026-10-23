@@ -53,7 +53,7 @@
     <link rel="prev" title="Bulirsch elliptic integrals" href="C03_BulirschIntegrals.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 22, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 23, 2026"/>
   </head>
   
   
@@ -938,11 +938,13 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\mathrm{EllipticK}(k) = \int_0^{1} \frac{\mathrm{d}t}{\sqrt{(1-t^2)(1-k^2 t^2)}}\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticK</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticK</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticK</span><span class="p">(</span><span class="o">-</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">2.459106502858909</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticK</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">1.570835598912152</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticK</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">2.459106502858909</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -957,11 +959,13 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\mathrm{EllipticKim}(k) = \int_0^{1} \frac{\mathrm{d}t}{\sqrt{(1-t^2)(1+k^2 t^2)}}\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticKim</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticKim</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticKim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">1.334879017781761</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticKim</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">1.5707570590955058</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticKim</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">1.334879017781761</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -977,11 +981,13 @@ document.write(`
 \[\mathrm{EllipticCK}(k) = \mathrm{EllipticK}(k_c) = \int_0^{1} \frac{\mathrm{d}t}{\sqrt{(1-t^2)(1-k_c^2 t^2)}}\]</div>
 <p>Note: the complex version is called Ellck(z) in Amath.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticCK</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticCK</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticCK</span><span class="p">(</span><span class="o">-</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">1.6254736111454573</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticCK</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">5.991589340506996</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticCK</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">1.6254736111454573</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -996,11 +1002,13 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\mathrm{EllipticEC}(k) = \int_0^{1} \frac{\sqrt{(1-k^2 t^2)}}{\sqrt{(1-t^2)}} \mathrm{d}t\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticEC</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticEC</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticEC</span><span class="p">(</span><span class="o">-</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">1.127649981567299</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticEC</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">1.5707570561503852</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticEC</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">1.127649981567299</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1015,11 +1023,13 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\mathrm{EllipticECim}(k) = E(ik) = \int_0^{1} \frac{\sqrt{(1+k^2 t^2)}}{\sqrt{(1-t^2)}} \mathrm{d}t\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticECim</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticECim</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticECim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">1.870953551376072</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticECim</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">1.5708355959667861</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticECim</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">1.870953551376072</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1034,11 +1044,13 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\mathrm{EllipticEC}(k) = \mathrm{EllipticEC}(k_c) = \int_0^{1} \frac{\sqrt{(1-k_c^2 t^2)}}{\sqrt{(1-t^2)}} \mathrm{d}t\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticCE</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticCE</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticCE</span><span class="p">(</span><span class="o">-</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">1.5188621404561577</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticCE</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">1.0002745824306631</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticCE</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">1.5188621404561577</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1053,11 +1065,13 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\mathrm{EllipticPiC}(\nu, k) = \int_0^{1} \frac{\mathrm{d}t}{(1-\nu t^2)\sqrt{(1-t^2)(1-k^2 t^2)}}\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticPiC</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticPiC</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticPiC</span><span class="p">(</span><span class="o">-</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="go">1.129742159472719</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticPiC</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">2.4745180633508044</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticPiC</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="go">6.0823893714986585</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1072,11 +1086,13 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\mathrm{EllipticPiCim}(\nu, k) = \mathrm{EllipticPiC}(\nu, k) = \int_0^{1} \frac{\mathrm{d}t}{(1-\nu t^2)\sqrt{(1-t^2)(1+k^2 t^2)}}\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticPiCim</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticPiCim</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticPiCim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="go">1.1296948994491276</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticPiCim</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">1.3410787572966438</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticPiCim</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="go">6.08190599516054</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1091,11 +1107,13 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\mathrm{EllipticCPi}(\nu, k) = \mathrm{EllipticPiC}(\nu, k_c) = \int_0^{1} \frac{\mathrm{d}t}{(1-\nu t^2)\sqrt{(1-t^2)(1-k_c^2 t^2)}}\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticCPi</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticCPi</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticCPi</span><span class="p">(</span><span class="o">-</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="go">3.4829363034929215</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticCPi</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">1.6338040919783785</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticCPi</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="go">60.46495296527363</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1110,11 +1128,13 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\mathrm{EllipticF}(z, k) = \int_0^{z} \frac{\mathrm{d}t}{\sqrt{(1-t^2)(1-k^2 t^2)}}\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticF</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticF</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticF</span><span class="p">(</span><span class="o">-</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="go">-1.2035171794595962</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticF</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">0.010000311859028539</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticF</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="go">1.2035171794595962</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1129,11 +1149,13 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\mathrm{EllipticE}(z, k) = \int_0^{z} \frac{\sqrt{(1-k^2 t^2)}}{\sqrt{(1-t^2)}} \mathrm{d}t\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticE</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticE</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticE</span><span class="p">(</span><span class="o">-</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="go">-1.2034737607138424</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticE</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">0.01000002149309969</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticE</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="go">1.2034737607138424</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1148,11 +1170,13 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\mathrm{EllipticPi}(z, \nu, k) = \int_0^{z} \frac{\mathrm{d}t}{(1-\nu t^2)\sqrt{(1-t^2)(1-k_c^2 t^2)}}\]</div>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ereal</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticPi</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ereal</span><span class="o">.</span><span class="n">EllipticPi</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticPi</span><span class="p">(</span><span class="o">-</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">-1.5540650009536827</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticPi</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">0.010000000758985845</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">EllipticPi</span><span class="p">(</span><span class="mf">0.9333</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.9333</span><span class="p">)</span>
+<span class="go">1.5540650009536827</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1286,7 +1310,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 22, 2026.
+  Last updated on Oct 23, 2026.
   <br/>
 </p>
   </div>
