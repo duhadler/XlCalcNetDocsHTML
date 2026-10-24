@@ -53,7 +53,7 @@
     <link rel="prev" title="Real functions related to \(\,_1F_1\)" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 23, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 25, 2026"/>
   </head>
   
   
@@ -868,7 +868,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tricomi-s-entire-incomplete-gamma-function-gamma-a-x">Tricomi’s entire incomplete gamma function: <span class="math notranslate nohighlight">\(\gamma^*(a,x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.gamma_tricomi"><code class="docutils literal notranslate"><span class="pre">ctx.gamma_tricomi()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.gamma_tricomi"><code class="docutils literal notranslate"><span class="pre">math53.gamma_tricomi()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#truncated-exponential-function-e-n-x">Truncated exponential function, <span class="math notranslate nohighlight">\(e_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -890,17 +890,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p></p>
-<section id="incomplete-gamma-functions">
+  <section id="incomplete-gamma-functions">
 <h1>Incomplete gamma functions<a class="headerlink" href="#incomplete-gamma-functions" title="Link to this heading">#</a></h1>
 <section id="tricomi-s-entire-incomplete-gamma-function-gamma-a-x">
 <span id="rst-mpm-gamma-tricomi"></span><h2>Tricomi’s entire incomplete gamma function: <span class="math notranslate nohighlight">\(\gamma^*(a,x)\)</span><a class="headerlink" href="#tricomi-s-entire-incomplete-gamma-function-gamma-a-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.gamma_tricomi">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">gamma_tricomi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">len</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.gamma_tricomi" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p>Returns Tricomi’s entire incomplete gamma function <span class="math notranslate nohighlight">\(\gamma^*(a,x)\)</span>.</p>
+<dt class="sig sig-object py" id="math53.gamma_tricomi">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">gamma_tricomi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.gamma_tricomi" title="Link to this definition">#</a></dt>
+<dd><p>Returns Tricomi’s entire incomplete gamma function <span class="math notranslate nohighlight">\(\gamma^*(a,x)\)</span>.</p>
 <p>See also: Flint <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id562" title="The FLINT Team. Arb: Incomplete gamma and beta functions. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/arb_hypgeom.html#incomplete-gamma-and-beta-functions.">741</a>]</span>, Flint <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id563" title="The FLINT Team. Acb: Incomplete gamma and beta functions. FLINT: Fast Library for Number Theory, 2019. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_hypgeom.html#incomplete-gamma-and-beta-functions.">731</a>]</span>.</p>
 <p>This routine returns Tricomi’s incomplete gamma function <span class="math notranslate nohighlight">\(\gamma^*\)</span>, defined as</p>
 <div class="math notranslate nohighlight">
@@ -908,33 +905,18 @@ document.write(`
 <p>Special cases are <span class="math notranslate nohighlight">\(\gamma^*(0,x)=1, \gamma^*(a,0)=1/\Gamma(a+1)\)</span>, and <span class="math notranslate nohighlight">\(\gamma^*(-n,x)=x^n\)</span>, if <span class="math notranslate nohighlight">\(-n\)</span> is a negative integer. Otherwise there are the following relations to the other incomplete functions:</p>
 <div class="math notranslate nohighlight">
 \[\gamma^*(a,x)=\frac{x^{-a}}{\Gamma(a)}\gamma(a,x)=x^{-a} P(a,x).\]</div>
-<p>An example with real input:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">dec</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">gmp</span><span class="p">,</span> <span class="n">fpm</span><span class="p">,</span> <span class="n">apm</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span> <span class="n">a</span><span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">30</span>
-<span class="gp">&gt;&gt;&gt; </span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">x</span> <span class="o">=</span> <span class="n">dec</span><span class="o">.</span><span class="n">gamma_tricomi</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">mx</span> <span class="o">=</span> <span class="n">mpm</span><span class="o">.</span><span class="n">gamma_tricomi</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">gx</span> <span class="o">=</span> <span class="n">gmp</span><span class="o">.</span><span class="n">gamma_tricomi</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fx</span> <span class="o">=</span> <span class="n">fpm</span><span class="o">.</span><span class="n">gamma_tricomi</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">apm</span><span class="o">.</span><span class="n">gamma_tricomi</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">show</span><span class="p">([</span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">x</span><span class="p">,</span> <span class="n">mx</span><span class="p">,</span> <span class="n">gx</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">ax</span><span class="p">])</span>
-<span class="go">dec:  1.693496720095407516508168391232985587748E-15</span>
-<span class="go">mpm:  1.693496720095407516508168391232985587748e-15</span>
-<span class="go">gmp:  1.693496720095407516508168391232985587748E-15</span>
-<span class="go">fpm:  1.69349672009541E-15</span>
-<span class="go">apm:  1.693496720095407516508168391232985587748e-15 (4.214e-39%)</span>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">gamma_tricomi</span><span class="p">(</span><span class="mf">1.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">17.84105392965348</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">gamma_tricomi</span><span class="p">(</span><span class="mf">2.4</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="go">0.33543467201965116</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">gamma_tricomi</span><span class="p">(</span><span class="mf">4.8</span><span class="p">,</span> <span class="mf">4.333</span><span class="p">)</span>
+<span class="go">0.00041567540877246445</span>
 </pre></div>
 </div>
-<p>An example with complex input:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">dec</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">gmp</span><span class="p">,</span> <span class="n">fpm</span><span class="p">,</span> <span class="n">apm</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="n">a</span><span class="o">=</span> <span class="s1">&#39;10 + 3j&#39;</span><span class="p">;</span> <span class="n">z</span> <span class="o">=</span> <span class="s1">&#39;3 + 2j&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">z</span> <span class="o">=</span> <span class="n">dec</span><span class="o">.</span><span class="n">gamma_tricomi</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span> <span class="n">mz</span> <span class="o">=</span> <span class="n">mpm</span><span class="o">.</span><span class="n">gamma_tricomi</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span> <span class="n">gz</span> <span class="o">=</span> <span class="n">gmp</span><span class="o">.</span><span class="n">gamma_tricomi</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fz</span> <span class="o">=</span> <span class="n">fpm</span><span class="o">.</span><span class="n">gamma_tricomi</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span> <span class="n">az</span> <span class="o">=</span> <span class="n">apm</span><span class="o">.</span><span class="n">gamma_tricomi</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">show</span><span class="p">([</span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">z</span><span class="p">,</span> <span class="n">mz</span><span class="p">,</span> <span class="n">gz</span><span class="p">,</span> <span class="n">fz</span><span class="p">,</span> <span class="n">az</span><span class="p">],</span>  <span class="n">aligned</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">dec: -2.6190844813399921279E-8               - 1.3081710985777839884E-8j</span>
-<span class="go">mpm: -2.6190844813399921279e-8               - 1.3081710985777839884e-8j</span>
-<span class="go">gmp: -2.6190844813399921279E-08              - 1.3081710985777839884E-08j</span>
-<span class="go">fpm: -2.61908448133999E-08                   - 1.30817109857778E-08j</span>
-<span class="go">apm: -2.6190844813399921279e-8 (-1.446e-18%) - 1.3081710985777839884e-8 (-2.75e-18%)j</span>
-</pre></div>
-</div>
-<p></p>
+</dd></dl>
+
 </section>
 <section id="truncated-exponential-function-e-n-x">
 <h2>Truncated exponential function, <span class="math notranslate nohighlight">\(e_n(x)\)</span><a class="headerlink" href="#truncated-exponential-function-e-n-x" title="Link to this heading">#</a></h2>
@@ -946,10 +928,12 @@ document.write(`
 <p><a class="reference external" href="https://mathworld.wolfram.com/ExponentialSumFunction.html">https://mathworld.wolfram.com/ExponentialSumFunction.html</a></p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Expn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Expn</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">expn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">6.054444500000001</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">expn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="go">1.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">expn</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">4.333</span><span class="p">)</span>
+<span class="go">42.9663958795967</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -964,10 +948,12 @@ document.write(`
 <p>See also  <span id="id4">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.10.10).</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Expreln</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Expreln</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">expreln</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">0.35644717836066736</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">expreln</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="go">1.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">expreln</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">4.333</span><span class="p">)</span>
+<span class="go">3.2608612360022433</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1021,7 +1007,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tricomi-s-entire-incomplete-gamma-function-gamma-a-x">Tricomi’s entire incomplete gamma function: <span class="math notranslate nohighlight">\(\gamma^*(a,x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.gamma_tricomi"><code class="docutils literal notranslate"><span class="pre">ctx.gamma_tricomi()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.gamma_tricomi"><code class="docutils literal notranslate"><span class="pre">math53.gamma_tricomi()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#truncated-exponential-function-e-n-x">Truncated exponential function, <span class="math notranslate nohighlight">\(e_n(x)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -1065,7 +1051,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 23, 2026.
+  Last updated on Oct 25, 2026.
   <br/>
 </p>
   </div>

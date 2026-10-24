@@ -53,7 +53,7 @@
     <link rel="prev" title="Real and complex functions" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 23, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 25, 2026"/>
   </head>
   
   
@@ -868,15 +868,15 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auxiliary-function-sqrt-1-z-2">Auxiliary function <span class="math notranslate nohighlight">\(\sqrt{1-z^2}\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.sqrt1mz2"><code class="docutils literal notranslate"><span class="pre">math53.sqrt1mz2()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cmath53.sqrt1mz2"><code class="docutils literal notranslate"><span class="pre">cmath53.sqrt1mz2()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cube-root-mathrm-cuberoot-x-sqrt-3-x-y-with-mathrm-arg-y-closest-to-mathrm-arg-x">Cube root, <span class="math notranslate nohighlight">\(\mathrm{cuberoot}(x) = \sqrt[3]{x} = y\)</span>, with <span class="math notranslate nohighlight">\(\mathrm{arg}(y)\)</span> closest to <span class="math notranslate nohighlight">\(\mathrm{arg}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.cuberoot"><code class="docutils literal notranslate"><span class="pre">math53.cuberoot()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cmath53.cuberoot"><code class="docutils literal notranslate"><span class="pre">cmath53.cuberoot()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nth-root-mathrm-surd-x-n-sqrt-n-x-y-with-mathrm-arg-y-closest-to-mathrm-arg-x">Nth root, <span class="math notranslate nohighlight">\(\mathrm{surd}(x, n) = \sqrt[n]{x} = y\)</span>, with <span class="math notranslate nohighlight">\(\mathrm{arg}(y)\)</span> closest to <span class="math notranslate nohighlight">\(\mathrm{arg}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathc53.surd"><code class="docutils literal notranslate"><span class="pre">mathc53.surd()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cmathc53.surd"><code class="docutils literal notranslate"><span class="pre">cmathc53.surd()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-inverse-cotangent-mathrm-acotc-x">Continuous inverse cotangent, <span class="math notranslate nohighlight">\(\mathrm{acotc}(x)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -884,7 +884,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-inverse-hyperbolic-cotangent-mathrm-acothc-x">Continuous inverse hyperbolic cotangent, <span class="math notranslate nohighlight">\(\mathrm{acothc}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.acothc"><code class="docutils literal notranslate"><span class="pre">ctx.acothc()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cmathc53.acothc"><code class="docutils literal notranslate"><span class="pre">cmathc53.acothc()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -903,16 +903,28 @@ document.write(`
 <section id="auxiliary-function-sqrt-1-z-2">
 <h2>Auxiliary function <span class="math notranslate nohighlight">\(\sqrt{1-z^2}\)</span><a class="headerlink" href="#auxiliary-function-sqrt-1-z-2" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.sqrt1mz2">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">sqrt1mz2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.sqrt1mz2" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="cmath53.sqrt1mz2">
+<span class="sig-prename descclassname"><span class="pre">cmath53.</span></span><span class="sig-name descname"><span class="pre">sqrt1mz2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cmath53.sqrt1mz2" title="Link to this definition">#</a></dt>
 <dd><p>Returns the square root of <span class="math notranslate nohighlight">\(1-z^2\)</span>. For very large <span class="math notranslate nohighlight">\(z\)</span> (when <span class="math notranslate nohighlight">\(z^2\)</span> would overflow) we have <span class="math notranslate nohighlight">\(\sqrt{1-z^2} = \pm iz\)</span>, where the sign is chosen to make <span class="math notranslate nohighlight">\(\Re \sqrt{1-z^2} \ge 0\)</span>; otherwise the result is computed from the definition.</p>
 <p>See also Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1061" title="Wikipedia. Cube root. Wikimedia Foundation, 2011. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Cube_root.">1233</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1499" title="E. W. Weisstein. Cube Root. From MathWorld - A Wolfram Web Resource, 2006. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/CubeRoot.html.">842</a>]</span>, BoostMath <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id343" title="P. A. Bristow and H. Holin. Cbrt. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/powers/log1p.html.">97</a>]</span>.</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ecplx</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Cuberoot</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Cuberoot</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.3518479027559984754E-1&#39;)</span>
+<p>An example in Python, real input:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">cmath53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">sqrt1mz2</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">))</span>
+<span class="go">(0, 4.21602763273677)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">sqrt1mz2</span><span class="p">(</span><span class="mf">0.0</span><span class="p">))</span>
+<span class="go">(1, 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">sqrt1mz2</span><span class="p">(</span><span class="mf">4.333</span><span class="p">))</span>
+<span class="go">(0, 4.21602763273677)</span>
+</pre></div>
+</div>
+<p>An example in Python, complex input:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">cmath53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">sqrt1mz2</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span><span class="p">))</span>
+<span class="go">(2.04503636378806, 4.23757745996643)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">sqrt1mz2</span><span class="p">(</span><span class="mf">0.0</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span><span class="p">))</span>
+<span class="go">0.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">sqrt1mz2</span><span class="p">(</span><span class="mf">4.333</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span><span class="p">))</span>
+<span class="go">(2.04503636378806, -4.23757745996643)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -921,15 +933,27 @@ document.write(`
 <section id="cube-root-mathrm-cuberoot-x-sqrt-3-x-y-with-mathrm-arg-y-closest-to-mathrm-arg-x">
 <h2>Cube root, <span class="math notranslate nohighlight">\(\mathrm{cuberoot}(x) = \sqrt[3]{x} = y\)</span>, with <span class="math notranslate nohighlight">\(\mathrm{arg}(y)\)</span> closest to <span class="math notranslate nohighlight">\(\mathrm{arg}(x)\)</span><a class="headerlink" href="#cube-root-mathrm-cuberoot-x-sqrt-3-x-y-with-mathrm-arg-y-closest-to-mathrm-arg-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.cuberoot">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">cuberoot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.cuberoot" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="cmath53.cuberoot">
+<span class="sig-prename descclassname"><span class="pre">cmath53.</span></span><span class="sig-name descname"><span class="pre">cuberoot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cmath53.cuberoot" title="Link to this definition">#</a></dt>
 <dd><p>Returns the cube root of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(x^{1/3}\)</span> in a way which gives a negative number for negative input.  See also Wikipedia <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1061" title="Wikipedia. Cube root. Wikimedia Foundation, 2011. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Cube_root.">1233</a>]</span>, MathWorld <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1499" title="E. W. Weisstein. Cube Root. From MathWorld - A Wolfram Web Resource, 2006. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/CubeRoot.html.">842</a>]</span>, BoostMath <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id343" title="P. A. Bristow and H. Holin. Cbrt. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/powers/log1p.html.">97</a>]</span>.</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ecplx</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Cuberoot</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Cuberoot</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.3518479027559984754E-1&#39;)</span>
+<p>An example in Python, real input:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">cmath53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">cuberoot</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">))</span>
+<span class="go">(-1.63028261124085, 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">cuberoot</span><span class="p">(</span><span class="mf">0.0</span><span class="p">))</span>
+<span class="go">(0, 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">cuberoot</span><span class="p">(</span><span class="mf">4.333</span><span class="p">))</span>
+<span class="go">(1.63028261124085, 0)</span>
+</pre></div>
+</div>
+<p>An example in Python, complex input:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">cmath53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">cuberoot</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span><span class="p">))</span>
+<span class="go">(-1.66615392003231, 0.24184624308246)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">cuberoot</span><span class="p">(</span><span class="mf">0.0</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span><span class="p">))</span>
+<span class="go">(1.09112363597172, 0.629960524947436)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">cuberoot</span><span class="p">(</span><span class="mf">4.333</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span><span class="p">))</span>
+<span class="go">(1.66615392003231, 0.24184624308246)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -938,15 +962,27 @@ document.write(`
 <section id="nth-root-mathrm-surd-x-n-sqrt-n-x-y-with-mathrm-arg-y-closest-to-mathrm-arg-x">
 <h2>Nth root, <span class="math notranslate nohighlight">\(\mathrm{surd}(x, n) = \sqrt[n]{x} = y\)</span>, with <span class="math notranslate nohighlight">\(\mathrm{arg}(y)\)</span> closest to <span class="math notranslate nohighlight">\(\mathrm{arg}(x)\)</span><a class="headerlink" href="#nth-root-mathrm-surd-x-n-sqrt-n-x-y-with-mathrm-arg-y-closest-to-mathrm-arg-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="mathc53.surd">
-<span class="sig-prename descclassname"><span class="pre">mathc53.</span></span><span class="sig-name descname"><span class="pre">surd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mathc53.surd" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="cmathc53.surd">
+<span class="sig-prename descclassname"><span class="pre">cmathc53.</span></span><span class="sig-name descname"><span class="pre">surd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cmathc53.surd" title="Link to this definition">#</a></dt>
 <dd><p>Returns the complex nth root <span class="math notranslate nohighlight">\(w = z^{1/n}\)</span> with arg(<span class="math notranslate nohighlight">\(w\)</span>) closest to arg(<span class="math notranslate nohighlight">\(z\)</span>), e.g. surd(-8, 3) = -2 or surd(<span class="math notranslate nohighlight">\(i\)</span>, 5) = <span class="math notranslate nohighlight">\(i\)</span>, compared to the cnroot results <span class="math notranslate nohighlight">\(\sqrt[3]{-8} = 1+i \sqrt{3}\)</span> and <span class="math notranslate nohighlight">\(\sqrt[5]{i} = \cos(\pi/10) +  i\sin(\pi/10)\)</span>. See  <span id="id7">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (4.2.60).</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ecplx</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Surd</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Surd</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.3518479027559984754E-1&#39;)</span>
+<p>An example in Python, real input:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">cmath53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">surd</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="go">(0, 2.08158593384948)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">surd</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="go">(0, 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">surd</span><span class="p">(</span><span class="mf">4.333</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="go">(1.44277022905571, 0)</span>
+</pre></div>
+</div>
+<p>An example in Python, complex input:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">cmath53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">surd</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="go">(0.468670657289459, 2.13369449195618)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">surd</span><span class="p">(</span><span class="mf">0.0</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="go">(1.09112363597172, 0.629960524947436)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">surd</span><span class="p">(</span><span class="mf">4.333</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="go">(1.46939697568672, 0.159477209033463)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -957,14 +993,26 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="ctx.acotc">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">acotc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.acotc" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">mathc53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
+<dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, or <code class="docutils literal notranslate"><span class="pre">cmathc53</span></code>.</p>
 <p>Returns the continuous inverse cotangent of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\mathrm{acotc}(x) = \pi/2 - \mathrm{atan}(x)\)</span>. See also  Wikipedia <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1065" title="Wikipedia. Inverse Trigonometric functions. Wikimedia Foundation, 2012. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Inverse_trigonometric_functions.">1260</a>]</span>,  MathWorld <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1517" title="E. W. Weisstein. Inverse Cotangent. From MathWorld - A Wolfram Web Resource, 2007. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/InverseCotangent.html.">869</a>]</span>,  NIST <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id459" title="F.W.J. Roy, R.; Olver. Inverse Trigonometric Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/4.23.">487</a>]</span>, Mpmath <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id656" title="The Mpmath Development Team. Inverse Cotangent. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2009. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/trigonometric.html#acot.">569</a>]</span>.</p>
-<p>An example in Python</p>
+<p>An example in Python, real input:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Acotc</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Acotc</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">acotc</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">2.9147769503723295</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">acotc</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="go">1.5707963267948966</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">acotc</span><span class="p">(</span><span class="mf">4.333</span><span class="p">)</span>
+<span class="go">0.2268157032174636</span>
+</pre></div>
+</div>
+<p>An example in Python, complex input:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">cmath53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">acotc</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span><span class="p">))</span>
+<span class="go">(2.95221017246, -0.0849298596570046)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">acotc</span><span class="p">(</span><span class="mf">0.0</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span><span class="p">))</span>
+<span class="go">(0, -0.549306144334055)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">acotc</span><span class="p">(</span><span class="mf">4.333</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span><span class="p">))</span>
+<span class="go">(0.189382481129794, -0.0849298596570046)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -973,16 +1021,27 @@ document.write(`
 <section id="continuous-inverse-hyperbolic-cotangent-mathrm-acothc-x">
 <h2>Continuous inverse hyperbolic cotangent, <span class="math notranslate nohighlight">\(\mathrm{acothc}(x)\)</span><a class="headerlink" href="#continuous-inverse-hyperbolic-cotangent-mathrm-acothc-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.acothc">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">acothc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.acothc" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">mathc53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns the continuous inverse hyperbolic cotangent of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\mathrm{acothc}(x) = \pi/2 - \mathrm{atan}(x)\)</span>. See also  Wikipedia <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1065" title="Wikipedia. Inverse Trigonometric functions. Wikimedia Foundation, 2012. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Inverse_trigonometric_functions.">1260</a>]</span>,  MathWorld <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1517" title="E. W. Weisstein. Inverse Cotangent. From MathWorld - A Wolfram Web Resource, 2007. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/InverseCotangent.html.">869</a>]</span>,  NIST <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id459" title="F.W.J. Roy, R.; Olver. Inverse Trigonometric Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/4.23.">487</a>]</span>, Mpmath <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id656" title="The Mpmath Development Team. Inverse Cotangent. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2009. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/trigonometric.html#acot.">569</a>]</span>.</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Acotc</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Acotc</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<dt class="sig sig-object py" id="cmathc53.acothc">
+<span class="sig-prename descclassname"><span class="pre">cmathc53.</span></span><span class="sig-name descname"><span class="pre">acothc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cmathc53.acothc" title="Link to this definition">#</a></dt>
+<dd><p>Returns the continuous inverse hyperbolic cotangent of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\mathrm{acothc}(x) = \pi/2 - \mathrm{atanh}(x) + i \cdot \pi/2\)</span>. See also  Wikipedia <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1065" title="Wikipedia. Inverse Trigonometric functions. Wikimedia Foundation, 2012. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Inverse_trigonometric_functions.">1260</a>]</span>,  MathWorld <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1517" title="E. W. Weisstein. Inverse Cotangent. From MathWorld - A Wolfram Web Resource, 2007. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/InverseCotangent.html.">869</a>]</span>,  NIST <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id459" title="F.W.J. Roy, R.; Olver. Inverse Trigonometric Functions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/4.23.">487</a>]</span>, Mpmath <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id656" title="The Mpmath Development Team. Inverse Cotangent. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2009. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/trigonometric.html#acot.">569</a>]</span>.</p>
+<p>An example in Python, real input:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">cmath53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">acothc</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span><span class="p">))</span>
+<span class="go">(-0.235020566146431, 3.14159265358979)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">acothc</span><span class="p">(</span><span class="mf">0.0</span><span class="p">))</span>
+<span class="go">(0, 1.5707963267949)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">acothc</span><span class="p">(</span><span class="mf">4.333</span><span class="p">))</span>
+<span class="go">(0.235020566146431, 0)</span>
+</pre></div>
+</div>
+<p>An example in Python, complex input:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">cmath53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">acothc</span><span class="p">(</span><span class="o">-</span><span class="mf">4.333</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span><span class="p">))</span>
+<span class="go">(-0.191034096798641, 3.05075645267977)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">acothc</span><span class="p">(</span><span class="mf">0.0</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span><span class="p">))</span>
+<span class="go">(0, 2.67794504458899)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cmath53</span><span class="o">.</span><span class="n">acothc</span><span class="p">(</span><span class="mf">4.333</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span><span class="p">))</span>
+<span class="go">(0.191034096798641, 3.05075645267977)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1036,15 +1095,15 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auxiliary-function-sqrt-1-z-2">Auxiliary function <span class="math notranslate nohighlight">\(\sqrt{1-z^2}\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.sqrt1mz2"><code class="docutils literal notranslate"><span class="pre">math53.sqrt1mz2()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cmath53.sqrt1mz2"><code class="docutils literal notranslate"><span class="pre">cmath53.sqrt1mz2()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cube-root-mathrm-cuberoot-x-sqrt-3-x-y-with-mathrm-arg-y-closest-to-mathrm-arg-x">Cube root, <span class="math notranslate nohighlight">\(\mathrm{cuberoot}(x) = \sqrt[3]{x} = y\)</span>, with <span class="math notranslate nohighlight">\(\mathrm{arg}(y)\)</span> closest to <span class="math notranslate nohighlight">\(\mathrm{arg}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.cuberoot"><code class="docutils literal notranslate"><span class="pre">math53.cuberoot()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cmath53.cuberoot"><code class="docutils literal notranslate"><span class="pre">cmath53.cuberoot()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nth-root-mathrm-surd-x-n-sqrt-n-x-y-with-mathrm-arg-y-closest-to-mathrm-arg-x">Nth root, <span class="math notranslate nohighlight">\(\mathrm{surd}(x, n) = \sqrt[n]{x} = y\)</span>, with <span class="math notranslate nohighlight">\(\mathrm{arg}(y)\)</span> closest to <span class="math notranslate nohighlight">\(\mathrm{arg}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathc53.surd"><code class="docutils literal notranslate"><span class="pre">mathc53.surd()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cmathc53.surd"><code class="docutils literal notranslate"><span class="pre">cmathc53.surd()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-inverse-cotangent-mathrm-acotc-x">Continuous inverse cotangent, <span class="math notranslate nohighlight">\(\mathrm{acotc}(x)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -1052,7 +1111,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-inverse-hyperbolic-cotangent-mathrm-acothc-x">Continuous inverse hyperbolic cotangent, <span class="math notranslate nohighlight">\(\mathrm{acothc}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.acothc"><code class="docutils literal notranslate"><span class="pre">ctx.acothc()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cmathc53.acothc"><code class="docutils literal notranslate"><span class="pre">cmathc53.acothc()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1088,7 +1147,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 23, 2026.
+  Last updated on Oct 25, 2026.
   <br/>
 </p>
   </div>

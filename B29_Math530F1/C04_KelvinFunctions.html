@@ -53,7 +53,7 @@
     <link rel="prev" title="Integrals of zero-order Bessel functions" href="C03_BesselIntegrals.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 23, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 25, 2026"/>
   </head>
   
   
@@ -884,19 +884,19 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-derivative-of-the-kelvin-function-mathrm-ber0-mathrm-ber0-x">First derivative of the Kelvin function <span class="math notranslate nohighlight">\(\mathrm{ber0}, \mathrm{ber0}'(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kelvin_ber0_prime"><code class="docutils literal notranslate"><span class="pre">math53.kelvin_ber0_prime()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kelvin_ber_prime0"><code class="docutils literal notranslate"><span class="pre">math53.kelvin_ber_prime0()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-derivative-of-the-kelvin-function-mathrm-bei0-mathrm-bei0-x">First derivative of the Kelvin function <span class="math notranslate nohighlight">\(\mathrm{bei0}, \mathrm{bei0}'(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kelvin_bei0_prime"><code class="docutils literal notranslate"><span class="pre">math53.kelvin_bei0_prime()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kelvin_bei_prime0"><code class="docutils literal notranslate"><span class="pre">math53.kelvin_bei_prime0()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-derivative-of-the-kelvin-function-mathrm-ker0-mathrm-ker0-nu-x">First derivative of the Kelvin function <span class="math notranslate nohighlight">\(\mathrm{ker0}, \mathrm{ker0}'(\nu, x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kelvin_ker0_prime"><code class="docutils literal notranslate"><span class="pre">math53.kelvin_ker0_prime()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kelvin_ker_prime0"><code class="docutils literal notranslate"><span class="pre">math53.kelvin_ker_prime0()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-derivative-of-the-kelvin-function-mathrm-kei0-mathrm-kei0-x">First derivative of the Kelvin function <span class="math notranslate nohighlight">\(\mathrm{kei0}, \mathrm{kei0}'(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kelvin_kei0_prime"><code class="docutils literal notranslate"><span class="pre">math53.kelvin_kei0_prime()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kelvin_kei_prime0"><code class="docutils literal notranslate"><span class="pre">math53.kelvin_kei_prime0()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -922,17 +922,14 @@ document.write(`
 <p>Returns the Kelvin function <span class="math notranslate nohighlight">\(\mathrm{ber}_0(x)\)</span>, defined as</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{ber}_0(x) = \sum_{k=0}^\infty (-1)^k \frac{\left(\tfrac{1}{4}x^2\right)^{2k}}{((2k)!)^2}.\]</div>
-<p>An example with real input:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">dec</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">gmp</span><span class="p">,</span> <span class="n">fpm</span><span class="p">,</span> <span class="n">apm</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="gp">&gt;&gt;&gt; </span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">x</span> <span class="o">=</span> <span class="n">dec</span><span class="o">.</span><span class="n">kelvinber</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">mx</span> <span class="o">=</span> <span class="n">mpm</span><span class="o">.</span><span class="n">kelvinber</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">gx</span> <span class="o">=</span> <span class="n">gmp</span><span class="o">.</span><span class="n">kelvinber</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fx</span> <span class="o">=</span> <span class="n">fpm</span><span class="o">.</span><span class="n">kelvinber</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">apm</span><span class="o">.</span><span class="n">kelvinber</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">show</span><span class="p">([</span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">x</span><span class="p">,</span> <span class="n">mx</span><span class="p">,</span> <span class="n">gx</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">ax</span><span class="p">],</span>  <span class="n">aligned</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">dec: -2.213802495986938888682464345899509922321E-1</span>
-<span class="go">mpm: -2.213802495986938888682464345899509922321e-1</span>
-<span class="go">gmp: -2.213802495986938888682464345899509922321E-01</span>
-<span class="go">fpm: -2.21380249598694E-01</span>
-<span class="go">apm: -2.213802495986938888682464345899509922332e-1 (-1.283e-37%)</span>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_ber0</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">0.99999999984375</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_ber0</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">153.76858196600045</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_ber0</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">-62152.363191785866</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -947,17 +944,14 @@ document.write(`
 <p>Returns the Kelvin function <span class="math notranslate nohighlight">\(\mathrm{bei}_0(x)\)</span> is defined as</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{bei}_0(x) = \sum_{k=0}^\infty (-1)^k \frac{\left(\tfrac{1}{4}x^2\right)^{2k+1}}{((2k+1)!)^2}.\]</div>
-<p>An example with real input:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">dec</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">gmp</span><span class="p">,</span> <span class="n">fpm</span><span class="p">,</span> <span class="n">apm</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="gp">&gt;&gt;&gt; </span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">x</span> <span class="o">=</span> <span class="n">dec</span><span class="o">.</span><span class="n">kelvinbei</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">mx</span> <span class="o">=</span> <span class="n">mpm</span><span class="o">.</span><span class="n">kelvinbei</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">gx</span> <span class="o">=</span> <span class="n">gmp</span><span class="o">.</span><span class="n">kelvinbei</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fx</span> <span class="o">=</span> <span class="n">fpm</span><span class="o">.</span><span class="n">kelvinbei</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">apm</span><span class="o">.</span><span class="n">kelvinbei</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">show</span><span class="p">([</span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">x</span><span class="p">,</span> <span class="n">mx</span><span class="p">,</span> <span class="n">gx</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">ax</span><span class="p">],</span>  <span class="n">aligned</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">dec: 1.937586785266042766896808122272260201255E+0</span>
-<span class="go">mpm: 1.937586785266042766896808122272260201255e+0</span>
-<span class="go">gmp: 1.937586785266042766896808122272260201255E+00</span>
-<span class="go">fpm: 1.93758678526604E+00</span>
-<span class="go">apm: 1.937586785266042766896808122272260201256e+0 (1.54e-38%)</span>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_bei0</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">2.4999999999565975e-05</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_bei0</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">140.32375216623805</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_bei0</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">226472.54726414903</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -972,17 +966,14 @@ document.write(`
 <p>The Kelvin function <span class="math notranslate nohighlight">\(\mathrm{ker}_0(x)\)</span> is defined as</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{ker}_0(x) = -\log \left(\tfrac{1}{2}x \right) \mathrm{ber}_0(x) +\tfrac{1}{4}\pi \; \mathrm{bei}_0(x) + \sum_{k=0}^\infty (-1)^k \frac{\psi(2k+1) \left(\tfrac{1}{4}x^2\right)^{2k}}{((2k)!)^2}.\]</div>
-<p>An example with real input:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">dec</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">gmp</span><span class="p">,</span> <span class="n">fpm</span><span class="p">,</span> <span class="n">apm</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="gp">&gt;&gt;&gt; </span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">x</span> <span class="o">=</span> <span class="n">dec</span><span class="o">.</span><span class="n">kelvinker</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">mx</span> <span class="o">=</span> <span class="n">mpm</span><span class="o">.</span><span class="n">kelvinker</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">gx</span> <span class="o">=</span> <span class="n">gmp</span><span class="o">.</span><span class="n">kelvinker</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fx</span> <span class="o">=</span> <span class="n">fpm</span><span class="o">.</span><span class="n">kelvinker</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">apm</span><span class="o">.</span><span class="n">kelvinker</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">show</span><span class="p">([</span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">x</span><span class="p">,</span> <span class="n">mx</span><span class="p">,</span> <span class="n">gx</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">ax</span><span class="p">],</span>  <span class="n">aligned</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">dec: -6.702923330379869775199782194748322134382E-2</span>
-<span class="go">mpm: -6.702923330379869775199782194748322134382e-2</span>
-<span class="go">gmp: -6.702923330379869775199782194748322134382E-02</span>
-<span class="go">fpm: -6.70292333037987E-02</span>
-<span class="go">apm: -6.702923330379869775199782194748322134370e-2 (-8.669e-36%)</span>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_ker0</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">4.721121335628541</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_ker0</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">1.0187520004406006e-05</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_ker0</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">-8.840038229293252e-08</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -996,18 +987,15 @@ document.write(`
 <dd><p>Returns the Kelvin function kei. See also  Wikipedia <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1203" title="Wikipedia. Kelvin function kei. Wikimedia Foundation, 2018. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Kelvin_functions#kei(x).">1382</a>]</span>, MathWorld <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id1711" title="E. W. Weisstein. Kelvin Function Kei. From MathWorld - A Wolfram Web Resource, 2015. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Kei.html.">1023</a>]</span>, NIST <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id516" title="L. Olver, F. W. J.; Maximon. Kelvin Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.61.">444</a>]</span>, Mpmath <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id826" title="The Mpmath Development Team. Kelvin function kei. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2017. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/bessel.html#kei.">709</a>]</span>.</p>
 <p>The Kelvin function <span class="math notranslate nohighlight">\(\mathrm{kei}_0(x)\)</span> is defined as</p>
 <div class="math notranslate nohighlight">
-\[\mathrm{kei}_0(x) = -\log \left(\tfrac{1}{2}x \right) \mathrm{ber}_0(x) -\tfrac{1}{4}\pi \; \mathrm{bei}_0(x) + \sum_{k=0}^\infty (-1)^k \frac{\psi(2k+2) \left(\tfrac{1}{4}x^2\right)^{2k+1}}{((2k+1)!)^2}\]</div>
-<p>An example with real input:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">dec</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">gmp</span><span class="p">,</span> <span class="n">fpm</span><span class="p">,</span> <span class="n">apm</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="gp">&gt;&gt;&gt; </span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">x</span> <span class="o">=</span> <span class="n">dec</span><span class="o">.</span><span class="n">kelvinkei</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">mx</span> <span class="o">=</span> <span class="n">mpm</span><span class="o">.</span><span class="n">kelvinkei</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">gx</span> <span class="o">=</span> <span class="n">gmp</span><span class="o">.</span><span class="n">kelvinkei</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fx</span> <span class="o">=</span> <span class="n">fpm</span><span class="o">.</span><span class="n">kelvinkei</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">apm</span><span class="o">.</span><span class="n">kelvinkei</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">show</span><span class="p">([</span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">x</span><span class="p">,</span> <span class="n">mx</span><span class="p">,</span> <span class="n">gx</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">ax</span><span class="p">],</span>  <span class="n">aligned</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">dec: -5.112188404598678140246687753930501705762E-2</span>
-<span class="go">mpm: -5.112188404598678140246687753930501705762e-2</span>
-<span class="go">gmp: -5.112188404598678140246687753930501705762E-02</span>
-<span class="go">fpm: -5.11218840459868E-02</span>
-<span class="go">apm: -5.112188404598678140246687753930501705753e-2 (-9.353e-36%)</span>
+\[\mathrm{kei}_0(x) = -\log \left(\tfrac{1}{2}x \right) \mathrm{bei}_0(x) -\tfrac{1}{4}\pi \; \mathrm{ber}_0(x) + \sum_{k=0}^\infty (-1)^k \frac{\psi(2k+2) \left(\tfrac{1}{4}x^2\right)^{2k+1}}{((2k+1)!)^2}\]</div>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_kei0</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">-0.7852551357321914</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_kei0</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">-0.0002285179865986644</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_kei0</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">-5.029479901091146e-08</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1016,16 +1004,18 @@ document.write(`
 <section id="first-derivative-of-the-kelvin-function-mathrm-ber0-mathrm-ber0-x">
 <h2>First derivative of the Kelvin function <span class="math notranslate nohighlight">\(\mathrm{ber0}, \mathrm{ber0}'(x)\)</span><a class="headerlink" href="#first-derivative-of-the-kelvin-function-mathrm-ber0-mathrm-ber0-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.kelvin_ber0_prime">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">kelvin_ber0_prime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.kelvin_ber0_prime" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="math53.kelvin_ber_prime0">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">kelvin_ber_prime0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.kelvin_ber_prime0" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Kelvin function ber’(x), x &gt;= 0</p>
 <p>See also: <span id="id17">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.8.8).</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">KelvinBerPrime</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">KelvinBerPrime</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_ber_prime0</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">-6.249999999945747e-08</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_ber_prime0</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">1.9344188906856528</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_ber_prime0</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">-202640.54055889626</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1034,16 +1024,18 @@ document.write(`
 <section id="first-derivative-of-the-kelvin-function-mathrm-bei0-mathrm-bei0-x">
 <h2>First derivative of the Kelvin function <span class="math notranslate nohighlight">\(\mathrm{bei0}, \mathrm{bei0}'(x)\)</span><a class="headerlink" href="#first-derivative-of-the-kelvin-function-mathrm-bei0-mathrm-bei0-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.kelvin_bei0_prime">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">kelvin_bei0_prime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.kelvin_bei0_prime" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="math53.kelvin_bei_prime0">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">kelvin_bei_prime0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.kelvin_bei_prime0" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Kelvin function bei’(x), x &gt;= 0</p>
 <p>See also: <span id="id18">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.8.9).</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">KelvinBeiPrime</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">KelvinBeiPrime</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_bei_prime0</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">0.004999999999739583</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_bei_prime0</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">201.30360248165368</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_bei_prime0</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">110723.61094753428</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1052,16 +1044,18 @@ document.write(`
 <section id="first-derivative-of-the-kelvin-function-mathrm-ker0-mathrm-ker0-nu-x">
 <h2>First derivative of the Kelvin function <span class="math notranslate nohighlight">\(\mathrm{ker0}, \mathrm{ker0}'(\nu, x)\)</span><a class="headerlink" href="#first-derivative-of-the-kelvin-function-mathrm-ker0-mathrm-ker0-nu-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.kelvin_ker0_prime">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">kelvin_ker0_prime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.kelvin_ker0_prime" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="math53.kelvin_ker_prime0">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">kelvin_ker_prime0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.kelvin_ker_prime0" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Kelvin function ker’(x), x &gt; 0</p>
 <p>See also: <span id="id19">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.8.10).</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">KelvinKerPrime</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">KelvinKerPrime</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_ker_prime0</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">-99.99607338237708</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_ker_prime0</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">-0.00016942836391713252</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_ker_prime0</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">2.902892305874749e-08</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1070,16 +1064,18 @@ document.write(`
 <section id="first-derivative-of-the-kelvin-function-mathrm-kei0-mathrm-kei0-x">
 <h2>First derivative of the Kelvin function <span class="math notranslate nohighlight">\(\mathrm{kei0}, \mathrm{kei0}'(x)\)</span><a class="headerlink" href="#first-derivative-of-the-kelvin-function-mathrm-kei0-mathrm-kei0-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.kelvin_kei0_prime">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">kelvin_kei0_prime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.kelvin_kei0_prime" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="math53.kelvin_kei_prime0">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">kelvin_kei_prime0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.kelvin_kei_prime0" title="Link to this definition">#</a></dt>
 <dd><p>Returns the Kelvin function kei’(x), x &gt;= 0</p>
 <p>See also: <span id="id20">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.8.11).</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">KelvinKeiPrime</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">KelvinKeiPrime</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_kei_prime0</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">0.02610555759395425</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_kei_prime0</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">0.0001650763656284745</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">kelvin_kei_prime0</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">9.928019000907199e-08</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1149,19 +1145,19 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-derivative-of-the-kelvin-function-mathrm-ber0-mathrm-ber0-x">First derivative of the Kelvin function <span class="math notranslate nohighlight">\(\mathrm{ber0}, \mathrm{ber0}'(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kelvin_ber0_prime"><code class="docutils literal notranslate"><span class="pre">math53.kelvin_ber0_prime()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kelvin_ber_prime0"><code class="docutils literal notranslate"><span class="pre">math53.kelvin_ber_prime0()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-derivative-of-the-kelvin-function-mathrm-bei0-mathrm-bei0-x">First derivative of the Kelvin function <span class="math notranslate nohighlight">\(\mathrm{bei0}, \mathrm{bei0}'(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kelvin_bei0_prime"><code class="docutils literal notranslate"><span class="pre">math53.kelvin_bei0_prime()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kelvin_bei_prime0"><code class="docutils literal notranslate"><span class="pre">math53.kelvin_bei_prime0()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-derivative-of-the-kelvin-function-mathrm-ker0-mathrm-ker0-nu-x">First derivative of the Kelvin function <span class="math notranslate nohighlight">\(\mathrm{ker0}, \mathrm{ker0}'(\nu, x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kelvin_ker0_prime"><code class="docutils literal notranslate"><span class="pre">math53.kelvin_ker0_prime()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kelvin_ker_prime0"><code class="docutils literal notranslate"><span class="pre">math53.kelvin_ker_prime0()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-derivative-of-the-kelvin-function-mathrm-kei0-mathrm-kei0-x">First derivative of the Kelvin function <span class="math notranslate nohighlight">\(\mathrm{kei0}, \mathrm{kei0}'(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kelvin_kei0_prime"><code class="docutils literal notranslate"><span class="pre">math53.kelvin_kei0_prime()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.kelvin_kei_prime0"><code class="docutils literal notranslate"><span class="pre">math53.kelvin_kei_prime0()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1197,7 +1193,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 23, 2026.
+  Last updated on Oct 25, 2026.
   <br/>
 </p>
   </div>

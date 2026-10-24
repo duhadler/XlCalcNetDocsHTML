@@ -53,7 +53,7 @@
     <link rel="prev" title="Kelvin functions of order 0" href="C04_KelvinFunctions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 23, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 25, 2026"/>
   </head>
   
   
@@ -898,10 +898,12 @@ document.write(`
 <p>See also: <span id="id1">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.11.1).</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">SynchF</span><span class="p">(</span><span class="mf">2.25</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">SynchF</span><span class="p">(</span><span class="mf">12.25</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">synchrotron_f</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">0.4449725041142106</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">synchrotron_f</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">0.00011914762875805393</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">synchrotron_f</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">4.808211886821304e-09</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -916,10 +918,12 @@ document.write(`
 <p>See also: <span id="id2">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.11.2).</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">SynchG</span><span class="p">(</span><span class="mf">2.25</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">SynchG</span><span class="p">(</span><span class="mf">12.25</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">synchrotron_g</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">0.2309807734222628</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">synchrotron_g</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">0.0001128256550353819</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">synchrotron_g</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">4.669098611060105e-09</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1013,7 +1017,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 23, 2026.
+  Last updated on Oct 25, 2026.
   <br/>
 </p>
   </div>

@@ -53,7 +53,7 @@
     <link rel="prev" title="Bessel functions of integer order" href="C01_BesselIntegerOrder.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 23, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 25, 2026"/>
   </head>
   
   
@@ -876,7 +876,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modified-bessel-function-of-the-1st-kind-integer-order-n-i-n-x">Modified Bessel function of the 1st kind, integer order <span class="math notranslate nohighlight">\(n, I_{n}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.damath_bessel_in"><code class="docutils literal notranslate"><span class="pre">math53.damath_bessel_in()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.bessel_in"><code class="docutils literal notranslate"><span class="pre">math53.bessel_in()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modified-bessel-function-of-the-2nd-kind-order-0-k-0-x">Modified Bessel function of the 2nd kind, order 0, <span class="math notranslate nohighlight">\(K_{0}(x)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -929,10 +929,12 @@ document.write(`
 <dd><p>Returns I0(x), the modified Bessel function of the 1st kind, order zero. See also Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1080" title="Wikipedia. Modified Bessel functions. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Modified_Bessel_functions.">1264</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1538" title="E. W. Weisstein. Modified Bessel Function of the First Kind. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ModifiedBesselFunctionoftheFirstKind.html.">907</a>]</span>, NIST <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id469" title="L. Olver, F. W. J.; Maximon. Modified Bessel Function of the First Kind. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.25#E2.">445</a>]</span>, BoostMath <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id358" title="P. A. Bristow and H. Holin. Modified Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/mbessel.html.">108</a>]</span>, <span id="id5">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.2.1).</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselI0</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselI0</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_i0</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">1.0000250001562505</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_i0</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">4527.441714638888</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_i0</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">108234695.25162585</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -946,10 +948,12 @@ document.write(`
 <dd><p>Returns I1(x), the modified Bessel function of the 1st kind, order one. See also Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1080" title="Wikipedia. Modified Bessel functions. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Modified_Bessel_functions.">1264</a>]</span>, MathWorld <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1538" title="E. W. Weisstein. Modified Bessel Function of the First Kind. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ModifiedBesselFunctionoftheFirstKind.html.">907</a>]</span>, NIST <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id469" title="L. Olver, F. W. J.; Maximon. Modified Bessel Function of the First Kind. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.25#E2.">445</a>]</span>, BoostMath <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id358" title="P. A. Bristow and H. Holin. Modified Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/mbessel.html.">108</a>]</span>, <span id="id10">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.2.3).</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselI1</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselI1</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_i1</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">0.005000062500260419</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_i1</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">4306.134875096274</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_i1</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">105616995.41931723</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -958,17 +962,19 @@ document.write(`
 <section id="modified-bessel-function-of-the-1st-kind-integer-order-n-i-n-x">
 <h2>Modified Bessel function of the 1st kind, integer order <span class="math notranslate nohighlight">\(n, I_{n}(x)\)</span><a class="headerlink" href="#modified-bessel-function-of-the-1st-kind-integer-order-n-i-n-x" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="math53.damath_bessel_in">
-<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">damath_bessel_in</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.damath_bessel_in" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="math53.bessel_in">
+<span class="sig-prename descclassname"><span class="pre">math53.</span></span><span class="sig-name descname"><span class="pre">bessel_in</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math53.bessel_in" title="Link to this definition">#</a></dt>
 <dd><p>Returns I_n(x), the modified Bessel function of the 1st kind, order n. See also Wikipedia <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id1080" title="Wikipedia. Modified Bessel functions. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Modified_Bessel_functions.">1264</a>]</span>, MathWorld <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1538" title="E. W. Weisstein. Modified Bessel Function of the First Kind. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ModifiedBesselFunctionoftheFirstKind.html.">907</a>]</span>, NIST <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id469" title="L. Olver, F. W. J.; Maximon. Modified Bessel Function of the First Kind. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.25#E2.">445</a>]</span>, BoostMath <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id358" title="P. A. Bristow and H. Holin. Modified Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/mbessel.html.">108</a>]</span>, <span id="id15">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.2.5).</p>
 <div class="math notranslate nohighlight">
 \[I_{\nu}\left(z\right)=(\tfrac{1}{2}z)^{\nu}\sum_{k=0}^{\infty}\frac{(\tfrac{1}{4}z^{2})^{k}}{k!\Gamma\left(\nu+k+1\right)}.\]</div>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselIn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselIn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_in</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="go">1.2500104166992188e-05</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_in</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">)</span>
+<span class="go">2893.8584758757465</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_in</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">73246703.18288033</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -982,10 +988,12 @@ document.write(`
 <dd><p>Returns K0(x), the modified Bessel function of the 2nd kind, order zero, x&gt;0.  See also  Wikipedia <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id1080" title="Wikipedia. Modified Bessel functions. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Modified_Bessel_functions.">1264</a>]</span>, MathWorld <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id1539" title="E. W. Weisstein. Modified Bessel Function of the Second Kind. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ModifiedBesselFunctionoftheSecondKind.html.">908</a>]</span>, NIST <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id470" title="L. Olver, F. W. J.; Maximon. Modified Bessel Function of the Second Kind. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.25#E3.">446</a>]</span>,  BoostMath <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id358" title="P. A. Bristow and H. Holin. Modified Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/mbessel.html.">108</a>]</span>, <span id="id20">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.2.6).</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselK0</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselK0</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_k0</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">4.721244730161095</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_k0</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">1.0529988143865325e-05</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_k0</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">2.2074463556036048e-10</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -999,10 +1007,12 @@ document.write(`
 <dd><p>Returns K1(x), the modified Bessel function of the 2nd kind, order one, x&gt;0.  See also  Wikipedia <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id1080" title="Wikipedia. Modified Bessel functions. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Modified_Bessel_functions.">1264</a>]</span>, MathWorld <span id="id22">[<a class="reference internal" href="../99BackMatter/index.html#id1539" title="E. W. Weisstein. Modified Bessel Function of the Second Kind. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ModifiedBesselFunctionoftheSecondKind.html.">908</a>]</span>, NIST <span id="id23">[<a class="reference internal" href="../99BackMatter/index.html#id470" title="L. Olver, F. W. J.; Maximon. Modified Bessel Function of the Second Kind. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.25#E3.">446</a>]</span>, BoostMath <span id="id24">[<a class="reference internal" href="../99BackMatter/index.html#id358" title="P. A. Bristow and H. Holin. Modified Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/mbessel.html.">108</a>]</span>, <span id="id25">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.2.8).</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselK1</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselK1</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_k1</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">99.97389411829626</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_k1</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">1.1020472311353894e-05</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_k1</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">2.2595704164348006e-10</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1020,10 +1030,12 @@ document.write(`
  &amp; + &amp; (-1)^{n}\tfrac{1}{2}(\tfrac{1}{2}z)^{n}\sum_{k=0}^{\infty}\left(\psi\left(k+1\right)+\psi\left(n+k+1\right)\right)\frac{(\tfrac{1}{4}z^{2})^{k}}{k!(n+k)!} \nonumber
 \end{eqnarray}</div><p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselKn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselKn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_kn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="go">19999.50006838941</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_kn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">)</span>
+<span class="go">1.583156782639403e-05</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_kn</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">3.203701460743069e-10</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1037,10 +1049,12 @@ document.write(`
 <dd><p>Returns I0(x)*exp(-<span class="math notranslate nohighlight">\(|x|\)</span>), the exponentially scaled modified Bessel function of the 1st kind, order zero. See also Wikipedia <span id="id31">[<a class="reference internal" href="../99BackMatter/index.html#id1080" title="Wikipedia. Modified Bessel functions. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Modified_Bessel_functions.">1264</a>]</span>, MathWorld <span id="id32">[<a class="reference internal" href="../99BackMatter/index.html#id1538" title="E. W. Weisstein. Modified Bessel Function of the First Kind. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ModifiedBesselFunctionoftheFirstKind.html.">907</a>]</span>, NIST <span id="id33">[<a class="reference internal" href="../99BackMatter/index.html#id469" title="L. Olver, F. W. J.; Maximon. Modified Bessel Function of the First Kind. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.25#E2.">445</a>]</span>, BoostMath <span id="id34">[<a class="reference internal" href="../99BackMatter/index.html#id358" title="P. A. Bristow and H. Holin. Modified Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/mbessel.html.">108</a>]</span>, <span id="id35">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.2.2).</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselI0e</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselI0e</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_i0e</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">0.9900745851497076</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_i0e</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">0.12466966945908617</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_i0e</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">0.08773034165079278</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1054,10 +1068,12 @@ document.write(`
 <dd><p>Returns I1(x)*exp(-<span class="math notranslate nohighlight">\(|x|\)</span>), the exponentially scaled modified Bessel function of the 1st kind, order one. See also Wikipedia <span id="id36">[<a class="reference internal" href="../99BackMatter/index.html#id1080" title="Wikipedia. Modified Bessel functions. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Modified_Bessel_functions.">1264</a>]</span>, MathWorld <span id="id37">[<a class="reference internal" href="../99BackMatter/index.html#id1538" title="E. W. Weisstein. Modified Bessel Function of the First Kind. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ModifiedBesselFunctionoftheFirstKind.html.">907</a>]</span>, NIST <span id="id38">[<a class="reference internal" href="../99BackMatter/index.html#id469" title="L. Olver, F. W. J.; Maximon. Modified Bessel Function of the First Kind. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.25#E2.">445</a>]</span>, BoostMath <span id="id39">[<a class="reference internal" href="../99BackMatter/index.html#id358" title="P. A. Bristow and H. Holin. Modified Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/mbessel.html.">108</a>]</span>, <span id="id40">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.2.4).</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselI1e</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselI1e</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_i1e</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">0.004950311047118277</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_i1e</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">0.11857566488126836</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_i1e</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">0.08560854789423662</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1071,10 +1087,12 @@ document.write(`
 <dd><p>Returns K0(x)*exp(x),    the exponentially scaled modified Bessel function of the 2nd kind, order zero, x&gt;0. See also  Wikipedia <span id="id41">[<a class="reference internal" href="../99BackMatter/index.html#id1080" title="Wikipedia. Modified Bessel functions. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Modified_Bessel_functions.">1264</a>]</span>, MathWorld <span id="id42">[<a class="reference internal" href="../99BackMatter/index.html#id1539" title="E. W. Weisstein. Modified Bessel Function of the Second Kind. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ModifiedBesselFunctionoftheSecondKind.html.">908</a>]</span>, NIST <span id="id43">[<a class="reference internal" href="../99BackMatter/index.html#id470" title="L. Olver, F. W. J.; Maximon. Modified Bessel Function of the Second Kind. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.25#E3.">446</a>]</span>,  BoostMath <span id="id44">[<a class="reference internal" href="../99BackMatter/index.html#id358" title="P. A. Bristow and H. Holin. Modified Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/mbessel.html.">108</a>]</span>, <span id="id45">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.2.7).</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselK0e</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselK0e</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_k0e</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">4.768694028544461</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_k0e</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">0.3824018125983266</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_k0e</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">0.27233711745257894</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1088,10 +1106,12 @@ document.write(`
 <dd><p>Returns K1(x)*exp(x),    the exponentially scaled modified Bessel function of the 2nd kind, order one, x&gt;0.  See also  Wikipedia <span id="id46">[<a class="reference internal" href="../99BackMatter/index.html#id1080" title="Wikipedia. Modified Bessel functions. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Bessel_function#Modified_Bessel_functions.">1264</a>]</span>, MathWorld <span id="id47">[<a class="reference internal" href="../99BackMatter/index.html#id1539" title="E. W. Weisstein. Modified Bessel Function of the Second Kind. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ModifiedBesselFunctionoftheSecondKind.html.">908</a>]</span>, NIST <span id="id48">[<a class="reference internal" href="../99BackMatter/index.html#id470" title="L. Olver, F. W. J.; Maximon. Modified Bessel Function of the Second Kind. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/10.25#E3.">446</a>]</span>, BoostMath <span id="id49">[<a class="reference internal" href="../99BackMatter/index.html#id358" title="P. A. Bristow and H. Holin. Modified Bessel Functions of the First and Second Kinds. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/bessel/mbessel.html.">108</a>]</span>, <span id="id50">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">297</a>]</span> (3.1.2.9).</p>
 <p>An example in Python</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselK1e</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">BesselK1e</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_k1e</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="go">100.97864845824004</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_k1e</span><span class="p">(</span><span class="mf">10.5</span><span class="p">)</span>
+<span class="go">0.4002139916944334</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">bessel_k1e</span><span class="p">(</span><span class="mf">20.9333</span><span class="p">)</span>
+<span class="go">0.2787677681638209</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1153,7 +1173,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modified-bessel-function-of-the-1st-kind-integer-order-n-i-n-x">Modified Bessel function of the 1st kind, integer order <span class="math notranslate nohighlight">\(n, I_{n}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.damath_bessel_in"><code class="docutils literal notranslate"><span class="pre">math53.damath_bessel_in()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math53.bessel_in"><code class="docutils literal notranslate"><span class="pre">math53.bessel_in()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modified-bessel-function-of-the-2nd-kind-order-0-k-0-x">Modified Bessel function of the 2nd kind, order 0, <span class="math notranslate nohighlight">\(K_{0}(x)\)</span></a><ul class="visible nav section-nav flex-column">
@@ -1217,7 +1237,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 23, 2026.
+  Last updated on Oct 25, 2026.
   <br/>
 </p>
   </div>
