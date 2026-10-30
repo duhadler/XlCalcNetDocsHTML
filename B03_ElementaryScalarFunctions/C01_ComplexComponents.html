@@ -53,7 +53,7 @@
     <link rel="prev" title="Elementary scalar functions (real and complex)" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 25, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 30, 2026"/>
   </head>
   
   
@@ -920,12 +920,95 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">abs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.abs" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">mathc53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns the absolute value of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(|x|\)</span>.</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ecplx</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.3518479027559984754E-1&#39;)</span>
+<p>An example with real input:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">;</span> <span class="n">dps</span> <span class="o">=</span> <span class="mi">90</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+<span class="go">    fpm:  5.1</span>
+<span class="go">    mpm:  5.1</span>
+<span class="go">    dpm:  5.1</span>
+<span class="go">    ipm: [5.0999999999999999999999999999999999999999999999999999999999999999999999999999999999999999992145,</span>
+<span class="go">          5.1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001964]</span>
+<span class="go">    gpm:  5.1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002</span>
+<span class="go">    apm: [5.10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.77e-90]</span>
+<span class="go"> math53:  5.1</span>
+<span class="go">  sreal:  5.1</span>
+<span class="go">  dreal:  5.1</span>
+<span class="go">  ereal:  5.0999999999999999999</span>
+<span class="go">  qreal:  5.1</span>
+<span class="go">  oreal:  5.1</span>
+<span class="go">  mreal:  5.1</span>
+<span class="go"> sflint:  5.1</span>
+<span class="go"> dflint:  5.1</span>
+<span class="go"> eflint:  5.0999999999999999999</span>
+<span class="go"> qflint:  5.1</span>
+<span class="go"> oflint:  5.1</span>
+<span class="go"> mflint:  5.1</span>
+<span class="go"> aflint: [5.10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.58e-90]</span>
+</pre></div>
+</div>
+<p>An example with complex input, using C#-style formatting for complex numbers for the result</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="p">[</span><span class="n">fpm</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">cmath53</span><span class="p">,</span> <span class="n">qcplx</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+<span class="go">    fpm:  5.47813836992094</span>
+<span class="go">    mpm:  5.4781383699209351022648364340189282337545849763702</span>
+<span class="go">cmath53:  5.47813836992093</span>
+<span class="go">  qcplx:  5.47813836992093510226483643401893</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the real part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_cplx</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">))))</span>
+<span class="go">    fpm:  5.47813836992094</span>
+<span class="go">    mpm:  5.47813836992093510226483643401892823375458497637021084486761170937337176722073409530758203</span>
+<span class="go">    dpm:  5.47813836992093510226483643401892823375458497637021084486761170937337176722073409530758203</span>
+<span class="go">    ipm: [5.4781383699209351022648364340189282337545849763702108448676117093733717672207340953075820327435,</span>
+<span class="go">          5.4781383699209351022648364340189282337545849763702108448676117093733717672207340953075820347071]</span>
+<span class="go">    gpm:  5.4781383699209351022648364340189282337545849763702108448676117093733717672207340953075820347</span>
+<span class="go">    apm: [5.47813836992093510226483643401892823375458497637021084486761170937337176722073409530758203 +/- 4.67e-90]</span>
+<span class="go">cmath53:  5.47813836992093</span>
+<span class="go">  scplx:  5.478138</span>
+<span class="go">  dcplx:  5.47813836992093</span>
+<span class="go">  ecplx:  5.4781383699209351022</span>
+<span class="go">  qcplx:  5.47813836992093510226483643401893</span>
+<span class="go">  ocplx:  5.4781383699209351022648364340189282337545849763702108448676117093733718</span>
+<span class="go">  mcplx:  5.47813836992093510226483643401892823375458497637021084486761170937337176722073409530758203</span>
+<span class="go">sflintc:  5.478138</span>
+<span class="go">dflintc:  5.47813836992093</span>
+<span class="go">eflintc:  5.4781383699209351022</span>
+<span class="go">qflintc:  5.47813836992093510226483643401893</span>
+<span class="go">oflintc:  5.4781383699209351022648364340189282337545849763702108448676117093733718</span>
+<span class="go">mflintc:  5.47813836992093510226483643401892823375458497637021084486761170937337176722073409530758203</span>
+<span class="go">aflintc: [5.47813836992093510226483643401892823375458497637021084486761170937337176722073409530758203 +/- 6.52e-90]</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the imaginary part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_cplx</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">))))</span>
+<span class="go">    fpm:  0</span>
+<span class="go">    mpm:  0.0</span>
+<span class="go">    dpm:  0</span>
+<span class="go">    ipm: [0.0,</span>
+<span class="go">          0.0]</span>
+<span class="go">    gpm:  0.0</span>
+<span class="go">    apm: 0</span>
+<span class="go">cmath53:  0</span>
+<span class="go">  scplx:  0</span>
+<span class="go">  dcplx:  0</span>
+<span class="go">  ecplx:  0</span>
+<span class="go">  qcplx:  0</span>
+<span class="go">  ocplx:  0</span>
+<span class="go">  mcplx:  0</span>
+<span class="go">sflintc:  0</span>
+<span class="go">dflintc:  0</span>
+<span class="go">eflintc:  0</span>
+<span class="go">qflintc:  0</span>
+<span class="go">oflintc:  0</span>
+<span class="go">mflintc:  0</span>
+<span class="go">aflintc:  0</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -948,12 +1031,95 @@ document.write(`
 <p>See also: <a class="reference external" href="https://en.wikipedia.org/wiki/Sign_function">https://en.wikipedia.org/wiki/Sign_function</a></p>
 <p>Note that the sign function is also defined for complex numbers,
 for which it gives the projection onto the unit circle:</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ecplx</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Sign</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Sign</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.3518479027559984754E-1&#39;)</span>
+<p>An example with real input:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">;</span> <span class="n">dps</span> <span class="o">=</span> <span class="mi">90</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+<span class="go">    fpm:  -1</span>
+<span class="go">    mpm:  -1.0</span>
+<span class="go">    dpm:  -1</span>
+<span class="go">    ipm: [-1.0,</span>
+<span class="go">          -1.0]</span>
+<span class="go">    gpm:  -1.0</span>
+<span class="go">    apm: [-1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 3.86e-91]</span>
+<span class="go"> math53:  -1</span>
+<span class="go">  sreal:  -1</span>
+<span class="go">  dreal:  -1</span>
+<span class="go">  ereal:  -1</span>
+<span class="go">  qreal:  -1</span>
+<span class="go">  oreal:  -1</span>
+<span class="go">  mreal:  -1</span>
+<span class="go"> sflint:  -1</span>
+<span class="go"> dflint:  -1</span>
+<span class="go"> eflint:  -1</span>
+<span class="go"> qflint:  -1</span>
+<span class="go"> oflint:  -1</span>
+<span class="go"> mflint:  -1</span>
+<span class="go"> aflint:  -1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</span>
+</pre></div>
+</div>
+<p>An example with complex input, using C#-style formatting for complex numbers for the result</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="p">[</span><span class="n">fpm</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">cmath53</span><span class="p">,</span> <span class="n">qcplx</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+<span class="go">    fpm:  (-0.930973198487063, 0.365087528818456)</span>
+<span class="go">    mpm:  (-0.9309731984870632796251471447349728088020121086134, 0.36508752881845618808829299793528345443216161122094)</span>
+<span class="go">cmath53:  (-0.930973198487063, 0.365087528818456)</span>
+<span class="go">  qcplx:  (-0.930973198487063279625147144734973, 0.365087528818456188088292997935283)</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the real part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_cplx</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">x</span><span class="p">))))</span>
+<span class="go">    fpm:  -0.930973198487063</span>
+<span class="go">    mpm:  -0.930973198487063279625147144734972808802012108613398044279400856974481706525349679642408143</span>
+<span class="go">    dpm:  -0.930973198487063279625147144734972808802012108613398044279400856974481706525349679642408144</span>
+<span class="go">    ipm: [-0.93097319848706327962514714473497280880201210861339804427940085697448170652534967964240814371239,</span>
+<span class="go">          -0.93097319848706327962514714473497280880201210861339804427940085697448170652534967964240814248511]</span>
+<span class="go">    gpm:  -0.93097319848706327962514714473497280880201210861339804427940085697448170652534967964240814298</span>
+<span class="go">    apm: [-0.930973198487063279625147144734972808802012108613398044279400856974481706525349679642408143 +/- 7.27e-91]</span>
+<span class="go">cmath53:  -0.930973198487063</span>
+<span class="go">  scplx:  -0.9309732</span>
+<span class="go">  dcplx:  -0.930973198487063</span>
+<span class="go">  ecplx:  -0.93097319848706327962</span>
+<span class="go">  qcplx:  -0.930973198487063279625147144734973</span>
+<span class="go">  ocplx:  -0.9309731984870632796251471447349728088020121086133980442794008569744817</span>
+<span class="go">  mcplx:  -0.930973198487063279625147144734972808802012108613398044279400856974481706525349679642408143</span>
+<span class="go">sflintc:  -0.9309732</span>
+<span class="go">dflintc:  -0.930973198487063</span>
+<span class="go">eflintc:  -0.93097319848706327962</span>
+<span class="go">qflintc:  -0.930973198487063279625147144734973</span>
+<span class="go">oflintc:  -0.9309731984870632796251471447349728088020121086133980442794008569744817</span>
+<span class="go">mflintc:  -0.930973198487063279625147144734972808802012108613398044279400856974481706525349679642408143</span>
+<span class="go">aflintc: [-0.93097319848706327962514714473497280880201210861339804427940085697448170652534967964240814 +/- 4.67e-90]</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the imaginary part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_cplx</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">x</span><span class="p">))))</span>
+<span class="go">    fpm:  0.365087528818456</span>
+<span class="go">    mpm:  0.365087528818456188088292997935283454432161611220940409521333669401757531970725364565650252</span>
+<span class="go">    dpm:  0.365087528818456188088292997935283454432161611220940409521333669401757531970725364565650253</span>
+<span class="go">    ipm: [0.36508752881845618808829299793528345443216161122094040952133366940175753197072536456565025196698,</span>
+<span class="go">          0.36508752881845618808829299793528345443216161122094040952133366940175753197072536456565025245789]</span>
+<span class="go">    gpm:  0.36508752881845618808829299793528345443216161122094040952133366940175753197072536456565025215</span>
+<span class="go">    apm: [0.365087528818456188088292997935283454432161611220940409521333669401757531970725364565650252 +/- 4.64e-91]</span>
+<span class="go">cmath53:  0.365087528818456</span>
+<span class="go">  scplx:  0.3650875</span>
+<span class="go">  dcplx:  0.365087528818456</span>
+<span class="go">  ecplx:  0.36508752881845618811</span>
+<span class="go">  qcplx:  0.365087528818456188088292997935283</span>
+<span class="go">  ocplx:  0.36508752881845618808829299793528345443216161122094040952133366940175753</span>
+<span class="go">  mcplx:  0.365087528818456188088292997935283454432161611220940409521333669401757531970725364565650252</span>
+<span class="go">sflintc:  0.3650875</span>
+<span class="go">dflintc:  0.365087528818456</span>
+<span class="go">eflintc:  0.36508752881845618811</span>
+<span class="go">qflintc:  0.365087528818456188088292997935283</span>
+<span class="go">oflintc:  0.36508752881845618808829299793528345443216161122094040952133366940175753</span>
+<span class="go">mflintc:  0.365087528818456188088292997935283454432161611220940409521333669401757531970725364565650252</span>
+<span class="go">aflintc: [0.365087528818456188088292997935283454432161611220940409521333669401757531970725364565650252 +/- 8.98e-91]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -966,12 +1132,95 @@ for which it gives the projection onto the unit circle:</p>
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">real</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.real" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">mathc53</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code>.</p>
 <p>Returns the real part of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\Re(x)\)</span>.</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ecplx</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Real</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Real</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.3518479027559984754E-1&#39;)</span>
+<p>An example with real input:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">;</span> <span class="n">dps</span> <span class="o">=</span> <span class="mi">90</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+<span class="go">    fpm:  -5.1</span>
+<span class="go">    mpm:  -5.1</span>
+<span class="go">    dpm:  -5.1</span>
+<span class="go">    ipm: [-5.1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001964,</span>
+<span class="go">          -5.0999999999999999999999999999999999999999999999999999999999999999999999999999999999999999992145]</span>
+<span class="go">    gpm:  -5.1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002</span>
+<span class="go">    apm: [-5.10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.77e-90]</span>
+<span class="go"> math53:  -5.1</span>
+<span class="go">  sreal:  -5.1</span>
+<span class="go">  dreal:  -5.1</span>
+<span class="go">  ereal:  -5.0999999999999999999</span>
+<span class="go">  qreal:  -5.1</span>
+<span class="go">  oreal:  -5.1</span>
+<span class="go">  mreal:  -5.1</span>
+<span class="go"> sflint:  -5.1</span>
+<span class="go"> dflint:  -5.1</span>
+<span class="go"> eflint:  -5.0999999999999999999</span>
+<span class="go"> qflint:  -5.1</span>
+<span class="go"> oflint:  -5.1</span>
+<span class="go"> mflint:  -5.1</span>
+<span class="go"> aflint: [-5.10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.58e-90]</span>
+</pre></div>
+</div>
+<p>An example with complex input, using C#-style formatting for complex numbers for the result</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="p">[</span><span class="n">fpm</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">cmath53</span><span class="p">,</span> <span class="n">qcplx</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+<span class="go">    fpm:  -5.1</span>
+<span class="go">    mpm:  -5.1</span>
+<span class="go">cmath53:  -5.1</span>
+<span class="go">  qcplx:  -5.1</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the real part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_cplx</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">x</span><span class="p">))))</span>
+<span class="go">    fpm:  -5.1</span>
+<span class="go">    mpm:  -5.1</span>
+<span class="go">    dpm:  -5.1</span>
+<span class="go">    ipm: [-5.1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001964,</span>
+<span class="go">          -5.0999999999999999999999999999999999999999999999999999999999999999999999999999999999999999992145]</span>
+<span class="go">    gpm:  -5.1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002</span>
+<span class="go">    apm: [-5.10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.77e-90]</span>
+<span class="go">cmath53:  -5.1</span>
+<span class="go">  scplx:  -5.1</span>
+<span class="go">  dcplx:  -5.1</span>
+<span class="go">  ecplx:  -5.0999999999999999999</span>
+<span class="go">  qcplx:  -5.1</span>
+<span class="go">  ocplx:  -5.1</span>
+<span class="go">  mcplx:  -5.1</span>
+<span class="go">sflintc:  -5.1</span>
+<span class="go">dflintc:  -5.1</span>
+<span class="go">eflintc:  -5.0999999999999999999</span>
+<span class="go">qflintc:  -5.1</span>
+<span class="go">oflintc:  -5.1</span>
+<span class="go">mflintc:  -5.1</span>
+<span class="go">aflintc: [-5.10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.58e-90]</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the imaginary part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_cplx</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">x</span><span class="p">))))</span>
+<span class="go">    fpm:  0</span>
+<span class="go">    mpm:  0.0</span>
+<span class="go">    dpm:  0</span>
+<span class="go">    ipm: [0.0,</span>
+<span class="go">          0.0]</span>
+<span class="go">    gpm:  0.0</span>
+<span class="go">    apm: 0</span>
+<span class="go">cmath53:  0</span>
+<span class="go">  scplx:  0</span>
+<span class="go">  dcplx:  0</span>
+<span class="go">  ecplx:  0</span>
+<span class="go">  qcplx:  0</span>
+<span class="go">  ocplx:  0</span>
+<span class="go">  mcplx:  0</span>
+<span class="go">sflintc:  0</span>
+<span class="go">dflintc:  0</span>
+<span class="go">eflintc:  0</span>
+<span class="go">qflintc:  0</span>
+<span class="go">oflintc:  0</span>
+<span class="go">mflintc:  0</span>
+<span class="go">aflintc:  0</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -984,12 +1233,95 @@ for which it gives the projection onto the unit circle:</p>
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">imag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.imag" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">mathc53</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code>.</p>
 <p>Returns the imaginary part of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\Im(x)\)</span>.</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ecplx</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Imaginary</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Imaginary</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.3518479027559984754E-1&#39;)</span>
+<p>An example with real input:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">;</span> <span class="n">dps</span> <span class="o">=</span> <span class="mi">90</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+<span class="go">    fpm:  0</span>
+<span class="go">    mpm:  0.0</span>
+<span class="go">    dpm:  0</span>
+<span class="go">    ipm: [0.0,</span>
+<span class="go">          0.0]</span>
+<span class="go">    gpm:  0.0</span>
+<span class="go">    apm: 0</span>
+<span class="go"> math53:  0</span>
+<span class="go">  sreal:  0</span>
+<span class="go">  dreal:  0</span>
+<span class="go">  ereal:  0</span>
+<span class="go">  qreal:  0</span>
+<span class="go">  oreal:  0</span>
+<span class="go">  mreal:  0</span>
+<span class="go"> sflint:  0</span>
+<span class="go"> dflint:  0</span>
+<span class="go"> eflint:  0</span>
+<span class="go"> qflint:  0</span>
+<span class="go"> oflint:  0</span>
+<span class="go"> mflint:  0</span>
+<span class="go"> aflint:  0</span>
+</pre></div>
+</div>
+<p>An example with complex input, using C#-style formatting for complex numbers for the result</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="p">[</span><span class="n">fpm</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">cmath53</span><span class="p">,</span> <span class="n">qcplx</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+<span class="go">    fpm:  2</span>
+<span class="go">    mpm:  2.0</span>
+<span class="go">cmath53:  2</span>
+<span class="go">  qcplx:  2</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the real part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_cplx</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">x</span><span class="p">))))</span>
+<span class="go">    fpm:  2</span>
+<span class="go">    mpm:  2.0</span>
+<span class="go">    dpm:  2.0</span>
+<span class="go">    ipm: [2.0,</span>
+<span class="go">          2.0]</span>
+<span class="go">    gpm:  2.0</span>
+<span class="go">    apm: 2.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</span>
+<span class="go">cmath53:  2</span>
+<span class="go">  scplx:  2</span>
+<span class="go">  dcplx:  2</span>
+<span class="go">  ecplx:  2</span>
+<span class="go">  qcplx:  2</span>
+<span class="go">  ocplx:  2</span>
+<span class="go">  mcplx:  2</span>
+<span class="go">sflintc:  2</span>
+<span class="go">dflintc:  2</span>
+<span class="go">eflintc:  2</span>
+<span class="go">qflintc:  2</span>
+<span class="go">oflintc:  2</span>
+<span class="go">mflintc:  2</span>
+<span class="go">aflintc:  2.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the imaginary part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_cplx</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">x</span><span class="p">))))</span>
+<span class="go">    fpm:  0</span>
+<span class="go">    mpm:  0.0</span>
+<span class="go">    dpm:  0</span>
+<span class="go">    ipm: [0.0,</span>
+<span class="go">          0.0]</span>
+<span class="go">    gpm:  0.0</span>
+<span class="go">    apm: 0</span>
+<span class="go">cmath53:  0</span>
+<span class="go">  scplx:  0</span>
+<span class="go">  dcplx:  0</span>
+<span class="go">  ecplx:  0</span>
+<span class="go">  qcplx:  0</span>
+<span class="go">  ocplx:  0</span>
+<span class="go">  mcplx:  0</span>
+<span class="go">sflintc:  0</span>
+<span class="go">dflintc:  0</span>
+<span class="go">eflintc:  0</span>
+<span class="go">qflintc:  0</span>
+<span class="go">oflintc:  0</span>
+<span class="go">mflintc:  0</span>
+<span class="go">aflintc:  0</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1001,17 +1333,100 @@ for which it gives the projection onto the unit circle:</p>
 <dt class="sig sig-object py" id="ctx.phase">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">phase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.phase" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">mathc53</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code>.</p>
-</dd></dl>
-
 <p>Computes the complex argument (phase) of <span class="math notranslate nohighlight">\(x\)</span>, defined as the signed angle between the positive real axis and <span class="math notranslate nohighlight">\(x\)</span> in the complex plane: The angle is defined to satisfy <span class="math notranslate nohighlight">\(-\pi &lt; \arg(x) \le \pi\)</span> and with the sign convention that a nonnegative imaginary part results in a nonnegative argument.</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ecplx</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Phase</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Phase</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.3518479027559984754E-1&#39;)</span>
+<p>An example with real input:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">;</span> <span class="n">dps</span> <span class="o">=</span> <span class="mi">90</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">phase</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+<span class="go">    fpm:  0</span>
+<span class="go">    mpm:  3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803483</span>
+<span class="go">    dpm:  3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803483</span>
+<span class="go">    ipm: [3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253398,</span>
+<span class="go">          3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348258307]</span>
+<span class="go">    gpm:  3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253</span>
+<span class="go">    apm: [3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803483 +/- 4.91e-90]</span>
+<span class="go"> math53:  3.14159265358979</span>
+<span class="go">  sreal:  3.141593</span>
+<span class="go">  dreal:  3.14159265358979</span>
+<span class="go">  ereal:  3.1415926535897932385</span>
+<span class="go">  qreal:  3.1415926535897932384626433832795</span>
+<span class="go">  oreal:  3.1415926535897932384626433832795028841971693993751058209749445923078164</span>
+<span class="go">  mreal:  3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482</span>
+<span class="go"> sflint:  3.141593</span>
+<span class="go"> dflint:  3.14159265358979</span>
+<span class="go"> eflint:  3.1415926535897932385</span>
+<span class="go"> qflint:  3.1415926535897932384626433832795</span>
+<span class="go"> oflint:  3.1415926535897932384626433832795028841971693993751058209749445923078164</span>
+<span class="go"> mflint:  3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482</span>
+<span class="go"> aflint: [3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482 +/- 5.84e-90]</span>
 </pre></div>
 </div>
+<p>An example with complex input, using C#-style formatting for complex numbers for the result</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="p">[</span><span class="n">fpm</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">cmath53</span><span class="p">,</span> <span class="n">qcplx</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">phase</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+<span class="go">    fpm:  2.76786583362424</span>
+<span class="go">    mpm:  2.7678658336242397790155820717594347757896731382865</span>
+<span class="go">cmath53:  2.76786583362424</span>
+<span class="go">  qcplx:  2.76786583362423977901558207175943</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the real part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_cplx</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">phase</span><span class="p">(</span><span class="n">x</span><span class="p">))))</span>
+<span class="go">    fpm:  2.76786583362424</span>
+<span class="go">    mpm:  2.76786583362423977901558207175943477578967313828649465952475940574898154799554287886905002</span>
+<span class="go">    dpm:  2.76786583362423977901558207175943477578967313828649465952475940574898154799554287886905002</span>
+<span class="go">    ipm: [2.7678658336242397790155820717594347757896731382864946595247594057489815479955428788690500219374,</span>
+<span class="go">          2.7678658336242397790155820717594347757896731382864946595247594057489815479955428788690500224283]</span>
+<span class="go">    gpm:  2.7678658336242397790155820717594347757896731382864946595247594057489815479955428788690500219</span>
+<span class="go">    apm: [2.76786583362423977901558207175943477578967313828649465952475940574898154799554287886905002 +/- 2.38e-90]</span>
+<span class="go">cmath53:  2.76786583362424</span>
+<span class="go">  scplx:  2.767866</span>
+<span class="go">  dcplx:  2.76786583362424</span>
+<span class="go">  ecplx:  2.767865833624239779</span>
+<span class="go">  qcplx:  2.76786583362423977901558207175943</span>
+<span class="go">  ocplx:  2.7678658336242397790155820717594347757896731382864946595247594057489815</span>
+<span class="go">  mcplx:  2.76786583362423977901558207175943477578967313828649465952475940574898154799554287886905002</span>
+<span class="go">sflintc:  2.767866</span>
+<span class="go">dflintc:  2.76786583362424</span>
+<span class="go">eflintc:  2.767865833624239779</span>
+<span class="go">qflintc:  2.76786583362423977901558207175943</span>
+<span class="go">oflintc:  2.7678658336242397790155820717594347757896731382864946595247594057489815</span>
+<span class="go">mflintc:  2.76786583362423977901558207175943477578967313828649465952475940574898154799554287886905002</span>
+<span class="go">aflintc: [2.76786583362423977901558207175943477578967313828649465952475940574898154799554287886905002 +/- 2.98e-90]</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the imaginary part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_cplx</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">phase</span><span class="p">(</span><span class="n">x</span><span class="p">))))</span>
+<span class="go">    fpm:  0</span>
+<span class="go">    mpm:  0.0</span>
+<span class="go">    dpm:  0</span>
+<span class="go">    ipm: [0.0,</span>
+<span class="go">          0.0]</span>
+<span class="go">    gpm:  0.0</span>
+<span class="go">    apm: 0</span>
+<span class="go">cmath53:  0</span>
+<span class="go">  scplx:  0</span>
+<span class="go">  dcplx:  0</span>
+<span class="go">  ecplx:  0</span>
+<span class="go">  qcplx:  0</span>
+<span class="go">  ocplx:  0</span>
+<span class="go">  mcplx:  0</span>
+<span class="go">sflintc:  0</span>
+<span class="go">dflintc:  0</span>
+<span class="go">eflintc:  0</span>
+<span class="go">qflintc:  0</span>
+<span class="go">oflintc:  0</span>
+<span class="go">mflintc:  0</span>
+<span class="go">aflintc:  0</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </section>
 <section id="conjugate-of-a-real-or-complex-number">
 <h2>Conjugate of a real or complex number<a class="headerlink" href="#conjugate-of-a-real-or-complex-number" title="Link to this heading">#</a></h2>
@@ -1020,12 +1435,95 @@ for which it gives the projection onto the unit circle:</p>
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">conj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.conj" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">mathc53</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code>.</p>
 <p>Returns the complex conjugate of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\overline{x}\)</span>.</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ecplx</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Conj</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Conj</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.3518479027559984754E-1&#39;)</span>
+<p>An example with real input:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">;</span> <span class="n">dps</span> <span class="o">=</span> <span class="mi">90</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+<span class="go">    fpm:  -5.1</span>
+<span class="go">    mpm:  -5.1</span>
+<span class="go">    dpm:  -5.1</span>
+<span class="go">    ipm: [-5.1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001964,</span>
+<span class="go">          -5.0999999999999999999999999999999999999999999999999999999999999999999999999999999999999999992145]</span>
+<span class="go">    gpm:  -5.1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002</span>
+<span class="go">    apm: [-5.10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.77e-90]</span>
+<span class="go"> math53:  -5.1</span>
+<span class="go">  sreal:  -5.1</span>
+<span class="go">  dreal:  -5.1</span>
+<span class="go">  ereal:  -5.0999999999999999999</span>
+<span class="go">  qreal:  -5.1</span>
+<span class="go">  oreal:  -5.1</span>
+<span class="go">  mreal:  -5.1</span>
+<span class="go"> sflint:  -5.1</span>
+<span class="go"> dflint:  -5.1</span>
+<span class="go"> eflint:  -5.0999999999999999999</span>
+<span class="go"> qflint:  -5.1</span>
+<span class="go"> oflint:  -5.1</span>
+<span class="go"> mflint:  -5.1</span>
+<span class="go"> aflint: [-5.10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.58e-90]</span>
+</pre></div>
+</div>
+<p>An example with complex input, using C#-style formatting for complex numbers for the result</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_cplx</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">x</span><span class="p">))))</span>
+<span class="go">    fpm:  (-5.1, -2)</span>
+<span class="go">    mpm:  (-5.1, -2.0)</span>
+<span class="go">cmath53:  (-5.1, -2)</span>
+<span class="go">  qcplx:  (-5.1, -2)</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the real part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_cplx</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">x</span><span class="p">))))</span>
+<span class="go">    fpm:  -5.1</span>
+<span class="go">    mpm:  -5.1</span>
+<span class="go">    dpm:  -5.1</span>
+<span class="go">    ipm: [-5.1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001964,</span>
+<span class="go">          -5.0999999999999999999999999999999999999999999999999999999999999999999999999999999999999999992145]</span>
+<span class="go">    gpm:  -5.1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002</span>
+<span class="go">    apm: [-5.10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.77e-90]</span>
+<span class="go">cmath53:  -5.1</span>
+<span class="go">  scplx:  -5.1</span>
+<span class="go">  dcplx:  -5.1</span>
+<span class="go">  ecplx:  -5.0999999999999999999</span>
+<span class="go">  qcplx:  -5.1</span>
+<span class="go">  ocplx:  -5.1</span>
+<span class="go">  mcplx:  -5.1</span>
+<span class="go">sflintc:  -5.1</span>
+<span class="go">dflintc:  -5.1</span>
+<span class="go">eflintc:  -5.0999999999999999999</span>
+<span class="go">qflintc:  -5.1</span>
+<span class="go">oflintc:  -5.1</span>
+<span class="go">mflintc:  -5.1</span>
+<span class="go">aflintc: [-5.10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.58e-90]</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the imaginary part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_cplx</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">x</span><span class="p">))))</span>
+<span class="go">    fpm:  -2</span>
+<span class="go">    mpm:  -2.0</span>
+<span class="go">    dpm:  -2.0</span>
+<span class="go">    ipm: [-2.0,</span>
+<span class="go">          -2.0]</span>
+<span class="go">    gpm:  -2.0</span>
+<span class="go">    apm: -2.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</span>
+<span class="go">cmath53:  -2</span>
+<span class="go">  scplx:  -2</span>
+<span class="go">  dcplx:  -2</span>
+<span class="go">  ecplx:  -2</span>
+<span class="go">  qcplx:  -2</span>
+<span class="go">  ocplx:  -2</span>
+<span class="go">  mcplx:  -2</span>
+<span class="go">sflintc:  -2</span>
+<span class="go">dflintc:  -2</span>
+<span class="go">eflintc:  -2</span>
+<span class="go">qflintc:  -2</span>
+<span class="go">oflintc:  -2</span>
+<span class="go">mflintc:  -2</span>
+<span class="go">aflintc:  -2.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1038,13 +1536,67 @@ for which it gives the projection onto the unit circle:</p>
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">polar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.polar" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">mathc53</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code>.</p>
 <p>Returns the polar representation of the complex number <span class="math notranslate nohighlight">\(z\)</span> as a pair <span class="math notranslate nohighlight">\((r, \phi)\)</span> such that <span class="math notranslate nohighlight">\(z = r e^{i \phi}\)</span>:</p>
-<p>See also  Mpmath <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id768" title="The Mpmath Development Team. Polar representation of a complex number. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2014. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#polar.">677</a>]</span>.</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ecplx</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Polar</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Polar</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.3518479027559984754E-1&#39;)</span>
+<p>See also  Mpmath <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id768" title="The Mpmath Development Team. Polar representation of a complex number. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2014. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#polar.">676</a>]</span>.</p>
+<p>An example with real input:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="go">   &gt;&gt;&gt; from xlcalcnet import *</span>
+<span class="go">   &gt;&gt;&gt; -5.1; gui.setdps(35)</span>
+<span class="go">   &gt;&gt;&gt; for ctx in gui.ctxlist_real: print(ctx.fmtname + &#39;: &#39;, ctx.polar(x))</span>
+<span class="go">   fpm:  (5.1, 3.141592653589793)</span>
+<span class="go">   mpm:  (mpf(&#39;5.0999999999999999999999999999999999988&#39;), mpf(&#39;3.1415926535897932384626433832795028847&#39;))</span>
+<span class="go">   dpm:  (Decimal(&#39;5.1&#39;), Decimal(&#39;3.1415926535897932384626433832795029&#39;))</span>
+<span class="go">   ipm:  (mpi(&#39;5.0999999999999999999999999999999999988&#39;, &#39;5.1000000000000000000000000000000000048&#39;), mpi(&#39;3.1415926535897932384626433832795028817&#39;, &#39;3.1415926535897932384626433832795028847&#39;))</span>
+<span class="go">   gpm:  (5.1, mpfr(&#39;3.1415926535897932384626433832795028847&#39;,120))</span>
+<span class="go">   apm:  ([5.1000000000000000000000000000000000 +/- 7.23e-36], [3.1415926535897932384626433832795029 +/- 1.68e-35])</span>
+<span class="go">math53:  (5.1, 3.14159265358979)</span>
+<span class="go"> sreal:  (5.1, 3.141593)</span>
+<span class="go"> dreal:  (5.1, 3.14159265358979)</span>
+<span class="go"> ereal:  (5.0999999999999999999, 3.1415926535897932385)</span>
+<span class="go"> qreal:  (5.1, 3.1415926535897932384626433832795)</span>
+<span class="go"> oreal:  (5.1, 3.1415926535897932384626433832795028841971693993751058209749445923078164)</span>
+<span class="go"> mreal:  (5.1, 3.1415926535897932384626433832795029)</span>
+<span class="go">sflint:  (5.1, 3.141593)</span>
+<span class="go">dflint:  (5.1, 3.14159265358979)</span>
+<span class="go">eflint:  (5.0999999999999999999, 3.1415926535897932385)</span>
+<span class="go">qflint:  (5.1, 3.1415926535897932384626433832795)</span>
+<span class="go">oflint:  (5.1, 3.1415926535897932384626433832795028841971693993751058209749445923078164)</span>
+<span class="go">mflint:  (5.1, 3.1415926535897932384626433832795029)</span>
+<span class="go">aflint:  ([5.1000000000000000000000000000000000 +/- 3.86e-35], [3.1415926535897932384626433832795029 +/- 1.83e-35])</span>
+</pre></div>
+</div>
+<p>An example with complex input, using C#-style formatting for complex numbers for the result</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_cplx</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">polar</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="go">    fpm:  (5.478138369920935, 2.76786583362424)</span>
+<span class="go">    mpm:  (mpf(&#39;5.4781383699209351022648364340189282348&#39;), mpf(&#39;2.7678658336242397790155820717594347745&#39;))</span>
+<span class="go">cmath53:  (5.47813836992093, 2.76786583362424)</span>
+<span class="go">  qcplx:  (5.47813836992093510226483643401893, 2.76786583362423977901558207175943)</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing the result for all numerical data types:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_cplx</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">polar</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="go">    fpm:  (5.478138369920935, 2.76786583362424)</span>
+<span class="go">    mpm:  (mpf(&#39;5.4781383699209351022648364340189282348&#39;), mpf(&#39;2.7678658336242397790155820717594347745&#39;))</span>
+<span class="go">    dpm:  (Decimal(&#39;5.4781383699209347715167147478545767&#39;), Decimal(&#39;2.7678658336242397553387165016128094&#39;))</span>
+<span class="go">    ipm:  (mpi(&#39;5.4781383699209351022648364340189282288&#39;, &#39;5.4781383699209351022648364340189282409&#39;), mpi(&#39;2.7678658336242397790155820717594347745&#39;, &#39;2.7678658336242397790155820717594347775&#39;))</span>
+<span class="go">    gpm:  (5.478138369920935, mpfr(&#39;2.7678658336242397790155820717594347745&#39;,120))</span>
+<span class="go">    apm:  ([5.4781383699209351022648364340189282 +/- 4.06e-35], [2.7678658336242397790155820717594348 +/- 3.13e-35])</span>
+<span class="go">cmath53:  (5.47813836992093, 2.76786583362424)</span>
+<span class="go">  scplx:  (5.478138, 2.767866)</span>
+<span class="go">  dcplx:  (5.47813836992093, 2.76786583362424)</span>
+<span class="go">  ecplx:  (5.4781383699209351022, 2.767865833624239779)</span>
+<span class="go">  qcplx:  (5.47813836992093510226483643401893, 2.76786583362423977901558207175943)</span>
+<span class="go">  ocplx:  (5.4781383699209351022648364340189282337545849763702108448676117093733718, 2.7678658336242397790155820717594347757896731382864946595247594057489815)</span>
+<span class="go">  mcplx:  (5.4781383699209351022648364340189282, 2.7678658336242397790155820717594348)</span>
+<span class="go">sflintc:  (5.478138, 2.767866)</span>
+<span class="go">dflintc:  (5.47813836992093, 2.76786583362424)</span>
+<span class="go">eflintc:  (5.4781383699209351022, 2.767865833624239779)</span>
+<span class="go">qflintc:  (5.47813836992093510226483643401893, 2.76786583362423977901558207175943)</span>
+<span class="go">oflintc:  (5.4781383699209351022648364340189282337545849763702108448676117093733718, 2.7678658336242397790155820717594347757896731382864946595247594057489815)</span>
+<span class="go">mflintc:  (5.4781383699209351022648364340189282, 2.7678658336242397790155820717594348)</span>
+<span class="go">aflintc:  ([5.4781383699209351022648364340189282 +/- 7.45e-35], [2.7678658336242397790155820717594348 +/- 8.11e-35])</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1056,14 +1608,32 @@ for which it gives the projection onto the unit circle:</p>
 <dt class="sig sig-object py" id="ctx.rect">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">rect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.rect" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">mathc53</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code>.</p>
-<p>Returns the complex number represented by polar coordinates <span class="math notranslate nohighlight">\((r, \phi)\)</span>:</p>
-<p>See also  Mpmath <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id769" title="The Mpmath Development Team. Complex number: conversion from polar coordinates. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2014. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#rect.">669</a>]</span>.</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ecplx</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Rect</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Rect</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.3518479027559984754E-1&#39;)</span>
+<p>Returns the complex number represented by polar coordinates <span class="math notranslate nohighlight">\((r, \phi)\)</span>, where <span class="math notranslate nohighlight">\(r\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span> are real numbers. The result is always a complex number.</p>
+<p>See also  Mpmath <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id769" title="The Mpmath Development Team. Complex number: conversion from polar coordinates. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2014. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#rect.">668</a>]</span>.</p>
+<p>An example:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span> <span class="o">=</span> <span class="mf">5.1</span><span class="p">;</span> <span class="n">phi</span> <span class="o">=</span> <span class="mf">3.1</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">cplxctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">phi</span><span class="p">)))</span>
+<span class="go">    fpm:  (-5.09558926639373, 0.212061378409781)</span>
+<span class="go">    mpm:  (-5.095589266393725268911117878161477940467, 0.2120613784097819538929611851430328128286)</span>
+<span class="go">    dpm:  (-5.095589266393725268911117878161477940467, 0.2120613784097819538929611851430328128286)</span>
+<span class="go">    ipm: ([-5.09558926639372493278184033907709493069968525, -5.09558926639372493278184033907709493069968525], [0.212061378409781486541300158459371296141849461, 0.212061378409781486541300158459371296141849461])</span>
+<span class="go">    gpm:  (-5.09558926639372526891111787816147794046687, 0.212061378409781953892961185143032812828623)</span>
+<span class="go">    apm: ([-5.095589266393725268911117878161477940467 +/- 4.78e-40], [0.212061378409781953892961185143032812829 +/- 6.28e-40])</span>
+<span class="go"> math53:  (-5.09558926639373, 0.212061378409781)</span>
+<span class="go">  sreal:  (-5.095589, 0.2120619)</span>
+<span class="go">  dreal:  (-5.09558926639373, 0.212061378409781)</span>
+<span class="go">  ereal:  (-5.0955892663937252685, 0.2120613784097819543)</span>
+<span class="go">  qreal:  (-5.09558926639372526891111787816148, 0.212061378409781953892961185143032)</span>
+<span class="go">  oreal:  (-5.0955892663937252689111178781614779404668725167345079920780515110023443, 0.21206137840978195389296118514303281282852845711541442830484590390601119)</span>
+<span class="go">  mreal:  (-5.095589266393725268911117878161477940467, 0.2120613784097819538929611851430328128281)</span>
+<span class="go"> sflint:  (-5.095589, 0.2120619)</span>
+<span class="go"> dflint:  (-5.09558926639373, 0.212061378409781)</span>
+<span class="go"> eflint:  (-5.0955892663937252685, 0.21206137840978195434)</span>
+<span class="go"> qflint:  (-5.09558926639372526891111787816148, 0.212061378409781953892961185143032)</span>
+<span class="go"> oflint:  (-5.0955892663937252689111178781614779404668725167345079920780515110023443, 0.21206137840978195389296118514303281282852845711541442830484590390601119)</span>
+<span class="go"> mflint:  (-5.095589266393725268911117878161477940467, 0.2120613784097819538929611851430328128281)</span>
+<span class="go"> aflint: ([-5.09558926639372526891111787816147794047 +/- 5.67e-39], [0.212061378409781953892961185143032812828 +/- 5.58e-40])</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1182,7 +1752,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 25, 2026.
+  Last updated on Oct 30, 2026.
   <br/>
 </p>
   </div>

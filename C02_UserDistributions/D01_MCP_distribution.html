@@ -53,7 +53,7 @@
     <link rel="prev" title="Distribution functions" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 25, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 30, 2026"/>
   </head>
   
   
@@ -1236,7 +1236,7 @@ See also <span id="id13">Dunnett [<a class="reference internal" href="../99BackM
 <dd></dd></dl>
 
 <p>Returns the pdf, cdf, qtf or boost class of a random variable <span class="math notranslate nohighlight">\(X\)</span>, following a normal range distribution, with  <span class="math notranslate nohighlight">\(k \ge 2\)</span> groups, and the support interval <span class="math notranslate nohighlight">\((0, +\infty)\)</span>, and <span class="math notranslate nohighlight">\(0 \le q \le 1\)</span>.
-See also  Wikipedia <span id="id25">[<a class="reference internal" href="../99BackMatter/index.html#id999" title="Wikipedia. Studentized range distribution. Wikimedia Foundation, 2009. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Studentized_range_distribution.">1218</a>]</span>, <span id="id26">Harter [<a class="reference internal" href="../99BackMatter/index.html#id121" title="H. L. Harter. Tables of range and studentized range. The Annals of Mathematical Statistics, 31(4):1122-1147, 1960. Article Stable url: http://www.jstor.org/stable/2237810.">364</a>]</span>, <span id="id27">Team [<a class="reference internal" href="../99BackMatter/index.html#id879" title="R Core Team. The Studentized Range Distribution. The R Project for Statistical Computing, 2020. [Online; accessed 22-July-2024]. URL: https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/Tukey.">535</a>]</span>.</p>
+See also  Wikipedia <span id="id25">[<a class="reference internal" href="../99BackMatter/index.html#id999" title="Wikipedia. Studentized range distribution. Wikimedia Foundation, 2009. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Studentized_range_distribution.">1216</a>]</span>, <span id="id26">Harter [<a class="reference internal" href="../99BackMatter/index.html#id121" title="H. L. Harter. Tables of range and studentized range. The Annals of Mathematical Statistics, 31(4):1122-1147, 1960. Article Stable url: http://www.jstor.org/stable/2237810.">364</a>]</span>, <span id="id27">Team [<a class="reference internal" href="../99BackMatter/index.html#id879" title="R Core Team. The Studentized Range Distribution. The R Project for Statistical Computing, 2020. [Online; accessed 22-July-2024]. URL: https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/Tukey.">535</a>]</span>.</p>
 <p>The density in the central case is given by</p>
 <div class="math notranslate nohighlight">
 \[\text{pdf}(x) = k(k-1)  \int_{-\infty}^\infty \left( \Phi(y) - \Phi(y-x) \right)^{k-2} \phi(y) \phi(y-x) dy\]</div>
@@ -1672,7 +1672,7 @@ See also <span id="id40">Dunnett [<a class="reference internal" href="../99BackM
 <dd></dd></dl>
 
 <p>Returns the pdf, cdf, qtf or boost class of a random variable <span class="math notranslate nohighlight">\(X\)</span>, following a studentized range distribution, with  <span class="math notranslate nohighlight">\(k \ge 2\)</span> groups, <span class="math notranslate nohighlight">\(\nu\)</span> error degrees of freedom,  and the support interval <span class="math notranslate nohighlight">\((0, +\infty)\)</span>, and <span class="math notranslate nohighlight">\(0 \le q \le 1\)</span>.
-See also  Wikipedia <span id="id42">[<a class="reference internal" href="../99BackMatter/index.html#id999" title="Wikipedia. Studentized range distribution. Wikimedia Foundation, 2009. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Studentized_range_distribution.">1218</a>]</span>, <span id="id43">Harter [<a class="reference internal" href="../99BackMatter/index.html#id121" title="H. L. Harter. Tables of range and studentized range. The Annals of Mathematical Statistics, 31(4):1122-1147, 1960. Article Stable url: http://www.jstor.org/stable/2237810.">364</a>]</span>, <span id="id44">Team [<a class="reference internal" href="../99BackMatter/index.html#id879" title="R Core Team. The Studentized Range Distribution. The R Project for Statistical Computing, 2020. [Online; accessed 22-July-2024]. URL: https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/Tukey.">535</a>]</span>.</p>
+See also  Wikipedia <span id="id42">[<a class="reference internal" href="../99BackMatter/index.html#id999" title="Wikipedia. Studentized range distribution. Wikimedia Foundation, 2009. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Studentized_range_distribution.">1216</a>]</span>, <span id="id43">Harter [<a class="reference internal" href="../99BackMatter/index.html#id121" title="H. L. Harter. Tables of range and studentized range. The Annals of Mathematical Statistics, 31(4):1122-1147, 1960. Article Stable url: http://www.jstor.org/stable/2237810.">364</a>]</span>, <span id="id44">Team [<a class="reference internal" href="../99BackMatter/index.html#id879" title="R Core Team. The Studentized Range Distribution. The R Project for Statistical Computing, 2020. [Online; accessed 22-July-2024]. URL: https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/Tukey.">535</a>]</span>.</p>
 <div class="math notranslate nohighlight">
 \[\text{pdf}(x) = \int_{0}^\infty f_{\text{nrange}}(sx, k) \cdot s \sqrt{\nu} \cdot f_{\chi} \left(s \sqrt{\nu}, \nu \right) \: ds\]</div>
 <p>where <span class="math notranslate nohighlight">\(f_{\text{nrange}}(\cdot, k)\)</span> is the pdf of the normal range with <span class="math notranslate nohighlight">\(k\)</span> groups (see <a class="reference internal" href="#rst-mpm-nrange-pdf"><span class="std std-ref">nrange_pdf()</span></a>), and <span class="math notranslate nohighlight">\(f_{\chi}(\cdot, \nu)\)</span> is the pdf of the <span class="math notranslate nohighlight">\(\chi\)</span>-distribution with <span class="math notranslate nohighlight">\(\nu\)</span> degrees of freedom.</p>
@@ -1874,7 +1874,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 25, 2026.
+  Last updated on Oct 30, 2026.
   <br/>
 </p>
   </div>
