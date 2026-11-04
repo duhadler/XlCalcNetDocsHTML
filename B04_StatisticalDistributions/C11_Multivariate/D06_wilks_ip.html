@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Distribution of Wilks’ test of independence of \(p\) variates &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>Distribution of Wilks’ test of independence of \(p\) variates &#8212; XlCalcNet 1.1.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="../../_static/documentation_options.js?v=051bfb12"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Distribution of Wilks’ \(L_{vcm}\)" href="D05_wilks_lcm.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 30, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 04, 2026"/>
   </head>
   
   
@@ -172,13 +172,13 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/index.html">Basic floating point functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">Operator overloading, general real functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">General real functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C02_MachineConstants.html">Machine constants, general</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C03_PropertiesOfNumbers.html">Properties of numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C04_IntegerAndRemainder.html">Integer related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C05_RealFpManipulation.html">Floating point functions for real numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C06_FractionRemainder.html">Fraction and remainder related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C07_MachineConstants.html">Functions related to mantissa width and exponent range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C07_FractionMantissa.html">Functions related to mantissa width and exponent range</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C08_MathConstants.html">Mathematical Constants</a></li>
 </ul>
 </details></li>
@@ -897,7 +897,7 @@ document.write(`
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dist_wilks_ip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ci</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dist_wilks_ip" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, <code class="docutils literal notranslate"><span class="pre">ipm</span></code>, <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">gmp</span></code> or <code class="docutils literal notranslate"><span class="pre">apm</span></code>.</p>
 <p>A random variable <span class="math notranslate nohighlight">\(X\)</span> follows the distribution of the negative logarithm of the product of <span class="math notranslate nohighlight">\(p\)</span> beta variables with parameters <span class="math notranslate nohighlight">\(a_i\)</span> and <span class="math notranslate nohighlight">\(b_i\)</span> if it is defined as <span class="math notranslate nohighlight">\(X = -\log(Y)\)</span>, where <span class="math notranslate nohighlight">\(Y\)</span> follows a beta product distribution  with parameters <span class="math notranslate nohighlight">\(a_i\)</span> and <span class="math notranslate nohighlight">\(b_i\)</span>. The  support interval of <span class="math notranslate nohighlight">\(X\)</span> is <span class="math notranslate nohighlight">\((0,+\infty)\)</span>.</p>
-<p>See also <span id="id1">Wilks [<a class="reference internal" href="../../99BackMatter/index.html#id270" title="S. S. Wilks. On the independence of k sets of normally distributed statistical variables. Econometrica, 3:309–326, 1935.">1449</a>]</span>,  <span id="id2">Anderson [<a class="reference internal" href="../../99BackMatter/index.html#id9" title="T. W. Anderson. An Introduction to Multivariate Statistical Analysis. John Wiley &amp; Sons, Inc., 3 edition, 2003.">9</a>]</span>, <span id="id3">Muirhead [<a class="reference internal" href="../../99BackMatter/index.html#id184" title="R. J. Muirhead. Aspects of Multivariate Statistical Theory. John Wiley and Sons, 1982.">418</a>]</span>, <span id="id4">Butler [<a class="reference internal" href="../../99BackMatter/index.html#id37" title="R.W. Butler. Saddlepoint Approximations with Applications. Cambridge University Press, 1st edition, 2007.">165</a>]</span>, <span id="id5">Ginzberg [<a class="reference internal" href="../../99BackMatter/index.html#id103" title="P. Ginzberg. Quaternion matrices: statistical properties and applications to signal processing and wavelets. PhD thesis, Imperial College, 2013. Available as https://spiral.imperial.ac.uk:8443/bitstream/10044/1/18975/1/Ginzberg-P-2013-PhD-Thesis.pdf.">349</a>]</span>, pages 92-105, <span id="id6">Marques <em>et al.</em> [<a class="reference internal" href="../../99BackMatter/index.html#id177" title="F.J. Marques, C.A. Coelho, and B.C. Arnold. A general near-exact distribution theory for the most common likelihood ratio test statistics used in multivariate analysis. Test, 20:180 – 203, 2011.">411</a>]</span>, <span id="id7">Tang and Gupta [<a class="reference internal" href="../../99BackMatter/index.html#id248" title="J. Tang and A.K. Gupta. On the distribution of the product of independent beta random variables. Statistics &amp; Probability Letters, 2:165-168, 1984.">513</a>]</span>.</p>
+<p>See also <span id="id1">Wilks [<a class="reference internal" href="../../99BackMatter/index.html#id270" title="S. S. Wilks. On the independence of k sets of normally distributed statistical variables. Econometrica, 3:309–326, 1935.">1448</a>]</span>,  <span id="id2">Anderson [<a class="reference internal" href="../../99BackMatter/index.html#id9" title="T. W. Anderson. An Introduction to Multivariate Statistical Analysis. John Wiley &amp; Sons, Inc., 3 edition, 2003.">9</a>]</span>, <span id="id3">Muirhead [<a class="reference internal" href="../../99BackMatter/index.html#id184" title="R. J. Muirhead. Aspects of Multivariate Statistical Theory. John Wiley and Sons, 1982.">418</a>]</span>, <span id="id4">Butler [<a class="reference internal" href="../../99BackMatter/index.html#id37" title="R.W. Butler. Saddlepoint Approximations with Applications. Cambridge University Press, 1st edition, 2007.">165</a>]</span>, <span id="id5">Ginzberg [<a class="reference internal" href="../../99BackMatter/index.html#id103" title="P. Ginzberg. Quaternion matrices: statistical properties and applications to signal processing and wavelets. PhD thesis, Imperial College, 2013. Available as https://spiral.imperial.ac.uk:8443/bitstream/10044/1/18975/1/Ginzberg-P-2013-PhD-Thesis.pdf.">349</a>]</span>, pages 92-105, <span id="id6">Marques <em>et al.</em> [<a class="reference internal" href="../../99BackMatter/index.html#id177" title="F.J. Marques, C.A. Coelho, and B.C. Arnold. A general near-exact distribution theory for the most common likelihood ratio test statistics used in multivariate analysis. Test, 20:180 – 203, 2011.">411</a>]</span>, <span id="id7">Tang and Gupta [<a class="reference internal" href="../../99BackMatter/index.html#id248" title="J. Tang and A.K. Gupta. On the distribution of the product of independent beta random variables. Statistics &amp; Probability Letters, 2:165-168, 1984.">513</a>]</span>.</p>
 </dd></dl>
 
 <p></p>
@@ -1161,7 +1161,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 30, 2026.
+  Last updated on Nov 04, 2026.
   <br/>
 </p>
   </div>

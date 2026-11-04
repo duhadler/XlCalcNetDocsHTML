@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Operator overloading, general real functions &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>General real functions &#8212; XlCalcNet 1.1.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="../_static/documentation_options.js?v=051bfb12"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Basic floating point functions" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 30, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 04, 2026"/>
   </head>
   
   
@@ -172,13 +172,13 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Basic floating point functions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Operator overloading, general real functions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">General real functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C02_MachineConstants.html">Machine constants, general</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C03_PropertiesOfNumbers.html">Properties of numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_IntegerAndRemainder.html">Integer related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_RealFpManipulation.html">Floating point functions for real numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C06_FractionRemainder.html">Fraction and remainder related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C07_MachineConstants.html">Functions related to mantissa width and exponent range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_FractionMantissa.html">Functions related to mantissa width and exponent range</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C08_MathConstants.html">Mathematical Constants</a></li>
 </ul>
 </details></li>
@@ -857,7 +857,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Operator overloading, general real functions</h1>
+    <h1>General real functions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -867,42 +867,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-overloading-scope-and-restrictions">Operator overloading: scope and restrictions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-cost-of-creating-and-destroying-objects">The cost of creating and destroying objects</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-addition-of-two-floating-point-numbers">Raw addition of two floating point numbers</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawadd"><code class="docutils literal notranslate"><span class="pre">ctx.rawadd()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-subtraction-of-two-floating-point-numbers">Raw subtraction of two floating point numbers</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawsub"><code class="docutils literal notranslate"><span class="pre">ctx.rawsub()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-multiplication-of-two-floating-point-numbers">Raw multiplication of two floating point numbers</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawmul"><code class="docutils literal notranslate"><span class="pre">ctx.rawmul()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-division-of-two-floating-point-numbers">Raw division of two floating point numbers</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawdiv"><code class="docutils literal notranslate"><span class="pre">ctx.rawdiv()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-addition-of-a-floating-point-number-and-a-signed-32-bit-integer">Raw addition of a floating point number and a signed 32 bit integer</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawaddint32"><code class="docutils literal notranslate"><span class="pre">ctx.rawaddint32()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-subtraction-of-a-floating-point-number-and-a-signed-32-bit-integer">Raw subtraction of a floating point number and a signed 32 bit integer</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawsubint32"><code class="docutils literal notranslate"><span class="pre">ctx.rawsubint32()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawint32sub"><code class="docutils literal notranslate"><span class="pre">ctx.rawint32sub()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-multiplication-of-a-floating-point-number-and-a-signed-32-bit-integer">Raw multiplication of a floating point number and a signed 32 bit integer</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawmulint32"><code class="docutils literal notranslate"><span class="pre">ctx.rawmulint32()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-division-of-a-floating-point-number-and-a-signed-32-bit-integer">Raw division of a floating point number and a signed 32 bit integer</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawdivint32"><code class="docutils literal notranslate"><span class="pre">ctx.rawdivint32()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawint32div"><code class="docutils literal notranslate"><span class="pre">ctx.rawint32div()</span></code></a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fused-multiplication-and-addition-mathrm-fma-x-y-z">Fused multiplication and addition: <span class="math notranslate nohighlight">\(\mathrm{fma}(x, y, z)\)</span></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.fma"><code class="docutils literal notranslate"><span class="pre">ctx.fma()</span></code></a></li>
 </ul>
@@ -926,170 +890,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="operator-overloading-general-real-functions">
-<h1>Operator overloading, general real functions<a class="headerlink" href="#operator-overloading-general-real-functions" title="Link to this heading">#</a></h1>
-<section id="operator-overloading-scope-and-restrictions">
-<h2>Operator overloading: scope and restrictions<a class="headerlink" href="#operator-overloading-scope-and-restrictions" title="Link to this heading">#</a></h2>
-<p>Compatible operators</p>
-</section>
-<section id="the-cost-of-creating-and-destroying-objects">
-<h2>The cost of creating and destroying objects<a class="headerlink" href="#the-cost-of-creating-and-destroying-objects" title="Link to this heading">#</a></h2>
-<p>Some text</p>
-</section>
-<section id="raw-addition-of-two-floating-point-numbers">
-<h2>Raw addition of two floating point numbers<a class="headerlink" href="#raw-addition-of-two-floating-point-numbers" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="ctx.rawadd">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">rawadd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.rawadd" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Sets <code class="docutils literal notranslate"><span class="pre">res</span></code> to  the sum of the floating point number <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ecplx</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.3518479027559984754E-1&#39;)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="raw-subtraction-of-two-floating-point-numbers">
-<h2>Raw subtraction of two floating point numbers<a class="headerlink" href="#raw-subtraction-of-two-floating-point-numbers" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="ctx.rawsub">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">rawsub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.rawsub" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Sets <code class="docutils literal notranslate"><span class="pre">res</span></code> to  the difference of the floating point numbers <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ecplx</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.3518479027559984754E-1&#39;)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="raw-multiplication-of-two-floating-point-numbers">
-<h2>Raw multiplication of two floating point numbers<a class="headerlink" href="#raw-multiplication-of-two-floating-point-numbers" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="ctx.rawmul">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">rawmul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.rawmul" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Sets <code class="docutils literal notranslate"><span class="pre">res</span></code> to  the product of the floating point numbers <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ecplx</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.3518479027559984754E-1&#39;)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="raw-division-of-two-floating-point-numbers">
-<h2>Raw division of two floating point numbers<a class="headerlink" href="#raw-division-of-two-floating-point-numbers" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="ctx.rawdiv">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">rawdiv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.rawdiv" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Sets <code class="docutils literal notranslate"><span class="pre">res</span></code> to  the quotient of the floating point numbers <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ecplx</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.3518479027559984754E-1&#39;)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="raw-addition-of-a-floating-point-number-and-a-signed-32-bit-integer">
-<h2>Raw addition of a floating point number and a signed 32 bit integer<a class="headerlink" href="#raw-addition-of-a-floating-point-number-and-a-signed-32-bit-integer" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="ctx.rawaddint32">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">rawaddint32</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.rawaddint32" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Sets <code class="docutils literal notranslate"><span class="pre">res</span></code> to  the sum of the floating point number <code class="docutils literal notranslate"><span class="pre">x</span></code> and the signed 32 bit integer <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ecplx</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.3518479027559984754E-1&#39;)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="raw-subtraction-of-a-floating-point-number-and-a-signed-32-bit-integer">
-<h2>Raw subtraction of a floating point number and a signed 32 bit integer<a class="headerlink" href="#raw-subtraction-of-a-floating-point-number-and-a-signed-32-bit-integer" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="ctx.rawsubint32">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">rawsubint32</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.rawsubint32" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="ctx.rawint32sub">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">rawint32sub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.rawint32sub" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Sets <code class="docutils literal notranslate"><span class="pre">res</span></code> to  the difference of the floating point number <code class="docutils literal notranslate"><span class="pre">x</span></code> and the signed 32 bit integer <code class="docutils literal notranslate"><span class="pre">i</span></code> (<code class="docutils literal notranslate"><span class="pre">SubInt</span></code>) or to the difference of the signed 32 bit integer <code class="docutils literal notranslate"><span class="pre">i</span></code> the floating point number <code class="docutils literal notranslate"><span class="pre">x</span></code> (<code class="docutils literal notranslate"><span class="pre">IntSub</span></code>).</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ecplx</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.3518479027559984754E-1&#39;)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="raw-multiplication-of-a-floating-point-number-and-a-signed-32-bit-integer">
-<h2>Raw multiplication of a floating point number and a signed 32 bit integer<a class="headerlink" href="#raw-multiplication-of-a-floating-point-number-and-a-signed-32-bit-integer" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="ctx.rawmulint32">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">rawmulint32</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.rawmulint32" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Sets <code class="docutils literal notranslate"><span class="pre">res</span></code> to the product of the floating point number <code class="docutils literal notranslate"><span class="pre">x</span></code> and the signed 32 bit integer <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ecplx</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.3518479027559984754E-1&#39;)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="raw-division-of-a-floating-point-number-and-a-signed-32-bit-integer">
-<h2>Raw division of a floating point number and a signed 32 bit integer<a class="headerlink" href="#raw-division-of-a-floating-point-number-and-a-signed-32-bit-integer" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="ctx.rawdivint32">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">rawdivint32</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.rawdivint32" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="ctx.rawint32div">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">rawint32div</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.rawint32div" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Sets <code class="docutils literal notranslate"><span class="pre">res</span></code> to the quotient of the floating point number <code class="docutils literal notranslate"><span class="pre">x</span></code> and the signed 32 bit integer <code class="docutils literal notranslate"><span class="pre">i</span></code> (<code class="docutils literal notranslate"><span class="pre">DivInt</span></code>) or to the quotient of the signed 32 bit integer <code class="docutils literal notranslate"><span class="pre">i</span></code> the floating point number <code class="docutils literal notranslate"><span class="pre">x</span></code> (<code class="docutils literal notranslate"><span class="pre">IntDiv</span></code>).</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">ecplx</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ecplx</span><span class="o">.</span><span class="n">Abs</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
-<span class="go">ecplx(&#39;5.3518479027559984754E-1&#39;)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
+  <section id="general-real-functions">
+<h1>General real functions<a class="headerlink" href="#general-real-functions" title="Link to this heading">#</a></h1>
 <section id="fused-multiplication-and-addition-mathrm-fma-x-y-z">
 <h2>Fused multiplication and addition: <span class="math notranslate nohighlight">\(\mathrm{fma}(x, y, z)\)</span><a class="headerlink" href="#fused-multiplication-and-addition-mathrm-fma-x-y-z" title="Link to this heading">#</a></h2>
 <dl class="py method">
@@ -1099,11 +901,30 @@ document.write(`
 <p>If successful, returns the value of x * y + z as if calculated to infinite precision and rounded once to fit the result type (or, alternatively, calculated as a single ternary floating-point operation).</p>
 <p>See also: <a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/math/fma">https://en.cppreference.com/w/cpp/numeric/math/fma</a></p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Copysign</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Copysign</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">5.1</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">2.7</span><span class="p">;</span>  <span class="n">z</span> <span class="o">=</span> <span class="mf">3.5</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fma</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)))</span>
+<span class="go">    fpm:  17.27</span>
+<span class="go">    mpm:  17.27</span>
+<span class="go">    dpm:  17.27</span>
+<span class="go">    ipm: [17.269999999999999999999999999999999999999999999999999999999999999999999999999999999999999998272,</span>
+<span class="go">          17.270000000000000000000000000000000000000000000000000000000000000000000000000000000000000002199]</span>
+<span class="go">    gpm:  17.269999999999999999999999999999999999999999999999999999999999999999999999999999999999999998</span>
+<span class="go">    apm: [17.2700000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 5.66e-90]</span>
+<span class="go"> math53:  17.27</span>
+<span class="go">  sreal:  17.27</span>
+<span class="go">  dreal:  17.27</span>
+<span class="go">  ereal:  17.27</span>
+<span class="go">  qreal:  17.27</span>
+<span class="go">  oreal:  17.27</span>
+<span class="go">  mreal:  17.27</span>
+<span class="go"> sflint:  17.27</span>
+<span class="go"> dflint:  17.27</span>
+<span class="go"> eflint:  17.27</span>
+<span class="go"> qflint:  17.27</span>
+<span class="go"> oflint:  17.27</span>
+<span class="go"> mflint:  17.27</span>
+<span class="go"> aflint: [17.2700000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 2.56e-89]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1120,11 +941,30 @@ document.write(`
 <p>This function is not required to be sensitive to the sign of zero, although some implementations additionally enforce that if one argument is +0 and the other is -0, then +0 is returned.</p>
 <p>See also: <a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/math/fmax">https://en.cppreference.com/w/cpp/numeric/math/fmax</a></p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Max</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Max</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">5.1</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">2.7</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmax</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)))</span>
+<span class="go">    fpm:  5.1</span>
+<span class="go">    mpm:  5.1</span>
+<span class="go">    dpm:  5.1</span>
+<span class="go">    ipm: [5.0999999999999999999999999999999999999999999999999999999999999999999999999999999999999999992145,</span>
+<span class="go">          5.1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001964]</span>
+<span class="go">    gpm:  5.1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002</span>
+<span class="go">    apm: [5.10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.77e-90]</span>
+<span class="go"> math53:  5.1</span>
+<span class="go">  sreal:  5.1</span>
+<span class="go">  dreal:  5.1</span>
+<span class="go">  ereal:  5.0999999999999999999</span>
+<span class="go">  qreal:  5.1</span>
+<span class="go">  oreal:  5.1</span>
+<span class="go">  mreal:  5.1</span>
+<span class="go"> sflint:  5.1</span>
+<span class="go"> dflint:  5.1</span>
+<span class="go"> eflint:  5.0999999999999999999</span>
+<span class="go"> qflint:  5.1</span>
+<span class="go"> oflint:  5.1</span>
+<span class="go"> mflint:  5.1</span>
+<span class="go"> aflint: [5.10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.58e-90]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1141,11 +981,30 @@ document.write(`
 <p>This function is not required to be sensitive to the sign of zero, although some implementations additionally enforce that if one argument is +0 and the other is -0, then -0 is returned.</p>
 <p>See also: <a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/math/fmin">https://en.cppreference.com/w/cpp/numeric/math/fmin</a></p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Min</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Min</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">5.1</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">2.7</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmin</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)))</span>
+<span class="go">    fpm:  2.7</span>
+<span class="go">    mpm:  2.7</span>
+<span class="go">    dpm:  2.7</span>
+<span class="go">    ipm: [2.6999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999018,</span>
+<span class="go">          2.7000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003927]</span>
+<span class="go">    gpm:  2.6999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999</span>
+<span class="go">    apm: [2.70000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 5.90e-91]</span>
+<span class="go"> math53:  2.7</span>
+<span class="go">  sreal:  5.1</span>
+<span class="go">  dreal:  2.7</span>
+<span class="go">  ereal:  2.7</span>
+<span class="go">  qreal:  2.7</span>
+<span class="go">  oreal:  2.7</span>
+<span class="go">  mreal:  2.7</span>
+<span class="go"> sflint:  5.1</span>
+<span class="go"> dflint:  2.7</span>
+<span class="go"> eflint:  2.7</span>
+<span class="go"> qflint:  2.7</span>
+<span class="go"> oflint:  2.7</span>
+<span class="go"> mflint:  2.7</span>
+<span class="go"> aflint: [2.70000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 7.88e-91]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1198,42 +1057,6 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-overloading-scope-and-restrictions">Operator overloading: scope and restrictions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-cost-of-creating-and-destroying-objects">The cost of creating and destroying objects</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-addition-of-two-floating-point-numbers">Raw addition of two floating point numbers</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawadd"><code class="docutils literal notranslate"><span class="pre">ctx.rawadd()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-subtraction-of-two-floating-point-numbers">Raw subtraction of two floating point numbers</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawsub"><code class="docutils literal notranslate"><span class="pre">ctx.rawsub()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-multiplication-of-two-floating-point-numbers">Raw multiplication of two floating point numbers</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawmul"><code class="docutils literal notranslate"><span class="pre">ctx.rawmul()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-division-of-two-floating-point-numbers">Raw division of two floating point numbers</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawdiv"><code class="docutils literal notranslate"><span class="pre">ctx.rawdiv()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-addition-of-a-floating-point-number-and-a-signed-32-bit-integer">Raw addition of a floating point number and a signed 32 bit integer</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawaddint32"><code class="docutils literal notranslate"><span class="pre">ctx.rawaddint32()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-subtraction-of-a-floating-point-number-and-a-signed-32-bit-integer">Raw subtraction of a floating point number and a signed 32 bit integer</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawsubint32"><code class="docutils literal notranslate"><span class="pre">ctx.rawsubint32()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawint32sub"><code class="docutils literal notranslate"><span class="pre">ctx.rawint32sub()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-multiplication-of-a-floating-point-number-and-a-signed-32-bit-integer">Raw multiplication of a floating point number and a signed 32 bit integer</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawmulint32"><code class="docutils literal notranslate"><span class="pre">ctx.rawmulint32()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-division-of-a-floating-point-number-and-a-signed-32-bit-integer">Raw division of a floating point number and a signed 32 bit integer</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawdivint32"><code class="docutils literal notranslate"><span class="pre">ctx.rawdivint32()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rawint32div"><code class="docutils literal notranslate"><span class="pre">ctx.rawint32div()</span></code></a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fused-multiplication-and-addition-mathrm-fma-x-y-z">Fused multiplication and addition: <span class="math notranslate nohighlight">\(\mathrm{fma}(x, y, z)\)</span></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.fma"><code class="docutils literal notranslate"><span class="pre">ctx.fma()</span></code></a></li>
 </ul>
@@ -1279,7 +1102,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 30, 2026.
+  Last updated on Nov 04, 2026.
   <br/>
 </p>
   </div>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Shifted Gompertz distribution &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>Shifted Gompertz distribution &#8212; XlCalcNet 1.1.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="../../_static/documentation_options.js?v=051bfb12"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Lomax distribution" href="D20_Lomax.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 30, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 04, 2026"/>
   </head>
   
   
@@ -172,13 +172,13 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/index.html">Basic floating point functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">Operator overloading, general real functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">General real functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C02_MachineConstants.html">Machine constants, general</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C03_PropertiesOfNumbers.html">Properties of numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C04_IntegerAndRemainder.html">Integer related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C05_RealFpManipulation.html">Floating point functions for real numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C06_FractionRemainder.html">Fraction and remainder related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C07_MachineConstants.html">Functions related to mantissa width and exponent range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C07_FractionMantissa.html">Functions related to mantissa width and exponent range</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C08_MathConstants.html">Mathematical Constants</a></li>
 </ul>
 </details></li>
@@ -896,7 +896,7 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.dist_shifted_gompertz">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dist_shifted_gompertz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dist_shifted_gompertz" title="Link to this definition">#</a></dt>
 <dd><p>Shifted Gompertz distribution is a continuous probability distribution with parameters <span class="math notranslate nohighlight">\(a &gt; 0, b &gt; 0\)</span>, and the support interval <span class="math notranslate nohighlight">\([0, +\infty)\)</span>.</p>
-<p>See also: Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id1008" title="Wikipedia. Shifted Gompertz distribution. Wikimedia Foundation, 2009. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Shifted_Gompertz_distribution.">1215</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id1475" title="Wolfram Language Documentation. Shifted Gompertz distribution. Wolfram Research, 2005. [Online; accessed 22-July-2024]. URL: https://reference.wolfram.com/language/ref/ShiftedGompertzDistribution.html.">255</a>]</span>, <span id="id3">Jiménez and Pedro Jodrá [<a class="reference internal" href="../../99BackMatter/index.html#id138" title="F. Jiménez and P. Pedro Jodrá. A note on the moments and computer generation of the shifted gompertz distribution. Communications in Statistics - Theory and Methods, 38(1):75-89, 2008.">381</a>]</span>, <span id="id4">Jiménez Torres [<a class="reference internal" href="../../99BackMatter/index.html#id139" title="F. Jiménez Torres. Estimation of parameters of the shifted gompertz distribution using least squares, maximum likelihood and moments methods. Journal of Computational and Applied Mathematics, 255:867–877, 2014.">382</a>]</span>.</p>
+<p>See also: Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id1008" title="Wikipedia. Shifted Gompertz distribution. Wikimedia Foundation, 2009. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Shifted_Gompertz_distribution.">1214</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id1475" title="Wolfram Language Documentation. Shifted Gompertz distribution. Wolfram Research, 2005. [Online; accessed 22-July-2024]. URL: https://reference.wolfram.com/language/ref/ShiftedGompertzDistribution.html.">255</a>]</span>, <span id="id3">Jiménez and Pedro Jodrá [<a class="reference internal" href="../../99BackMatter/index.html#id138" title="F. Jiménez and P. Pedro Jodrá. A note on the moments and computer generation of the shifted gompertz distribution. Communications in Statistics - Theory and Methods, 38(1):75-89, 2008.">381</a>]</span>, <span id="id4">Jiménez Torres [<a class="reference internal" href="../../99BackMatter/index.html#id139" title="F. Jiménez Torres. Estimation of parameters of the shifted gompertz distribution using least squares, maximum likelihood and moments methods. Journal of Computational and Applied Mathematics, 255:867–877, 2014.">382</a>]</span>.</p>
 </dd></dl>
 
 <p></p>
@@ -1155,7 +1155,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 30, 2026.
+  Last updated on Nov 04, 2026.
   <br/>
 </p>
   </div>

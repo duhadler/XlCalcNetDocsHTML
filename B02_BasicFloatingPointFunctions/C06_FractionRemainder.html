@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Fraction and remainder related functions &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>Fraction and remainder related functions &#8212; XlCalcNet 1.1.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="../_static/documentation_options.js?v=051bfb12"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -49,11 +49,11 @@
     <script src="../_static/custom-icon.js?v=74687d30"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Functions related to mantissa width and exponent range" href="C07_MachineConstants.html" />
+    <link rel="next" title="Functions related to mantissa width and exponent range" href="C07_FractionMantissa.html" />
     <link rel="prev" title="Floating point functions for real numbers" href="C05_RealFpManipulation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 30, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 04, 2026"/>
   </head>
   
   
@@ -172,13 +172,13 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Basic floating point functions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html">Operator overloading, general real functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html">General real functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C02_MachineConstants.html">Machine constants, general</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C03_PropertiesOfNumbers.html">Properties of numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_IntegerAndRemainder.html">Integer related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_RealFpManipulation.html">Floating point functions for real numbers</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Fraction and remainder related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C07_MachineConstants.html">Functions related to mantissa width and exponent range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_FractionMantissa.html">Functions related to mantissa width and exponent range</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C08_MathConstants.html">Mathematical Constants</a></li>
 </ul>
 </details></li>
@@ -883,6 +883,14 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.remquo"><code class="docutils literal notranslate"><span class="pre">ctx.remquo()</span></code></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fractional-part-of-a-floating-point-number-mathrm-frac-x">Fractional part of a floating point number: <span class="math notranslate nohighlight">\(\mathrm{frac}(x)\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.frac"><code class="docutils literal notranslate"><span class="pre">ctx.frac()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fractional-part-of-a-floating-point-number-symmetric-function-mathrm-fractionalpart-x">Fractional part of a floating point number (symmetric function): <span class="math notranslate nohighlight">\(\mathrm{fractionalpart}(x)\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.fractionalpart"><code class="docutils literal notranslate"><span class="pre">ctx.fractionalpart()</span></code></a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -914,11 +922,29 @@ document.write(`
 <p>The returned value is exact, the current rounding mode is ignored.</p>
 <p>See also: <a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/math/modf">https://en.cppreference.com/w/cpp/numeric/math/modf</a></p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Modf</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Modf</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">modf</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="go">    fpm:  (-5.0, -0.09999999999999964)</span>
+<span class="go">    mpm:  (mpf(&#39;-5.0&#39;), mpf(&#39;-0.100000000000000000000000000000316&#39;))</span>
+<span class="go">    dpm:  (Decimal(&#39;-5&#39;), Decimal(&#39;-0.1&#39;))</span>
+<span class="go">    ipm:  (mpi(&#39;-5.0&#39;, &#39;-5.0&#39;), mpi(&#39;-0.100000000000000000000000000000316&#39;, &#39;-0.0999999999999999999999999999995267&#39;))</span>
+<span class="go">    gpm:  (mpfr(&#39;-5.0&#39;,103), mpfr(&#39;-0.100000000000000000000000000000316&#39;,103))</span>
+<span class="go">    apm:  (-5.00000000000000000000000000000, [-0.1000000000000000000000000000 +/- 1.30e-30])</span>
+<span class="go"> math53:  (-5, -0.0999999999999996)</span>
+<span class="go">  sreal:  (-5, -0.0999999)</span>
+<span class="go">  dreal:  (-5, -0.0999999999999996)</span>
+<span class="go">  ereal:  (-5, -0.099999999999999999913)</span>
+<span class="go">  qreal:  (-5, -0.0999999999999999999999999999999997)</span>
+<span class="go">  oreal:  (-5, -0.099999999999999999999999999999999999999999999999999999999999999999999986)</span>
+<span class="go">  mreal:  (-5, -0.0999999999999999999999999999987)</span>
+<span class="go"> sflint:  (-5, -0.0999999)</span>
+<span class="go"> dflint:  (-5, -0.0999999999999996)</span>
+<span class="go"> eflint:  (-5, -0.099999999999999999913)</span>
+<span class="go"> qflint:  (-5, -0.0999999999999999999999999999999997)</span>
+<span class="go"> oflint:  (-5, -0.099999999999999999999999999999999999999999999999999999999999999999999986)</span>
+<span class="go"> mflint:  (-5, -0.0999999999999999999999999999987)</span>
+<span class="go"> aflint:  ( -5.00000000000000000000000000000, [-0.1000000000000000000000000000 +/- 2.53e-30])</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -929,27 +955,8 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="ctx.fmod">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">fmod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.fmod" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, <code class="docutils literal notranslate"><span class="pre">ipm</span></code>, <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">gmp</span></code> or <code class="docutils literal notranslate"><span class="pre">apm</span></code>. See also  Mpmath <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id758" title="The Mpmath Development Team. Modular division. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2014. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#fmod.">673</a>]</span>.</p>
-<p>!!! TypeError: unsupported operand type(s) for %: ‘ivmpf’ and ‘ivmpf’ !!!</p>
-<p>!!! TypeError: unsupported operand type(s) for %: ‘arb3_t’ and ‘arb3_t’ !!!</p>
-<p>Converts <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> to mpmath numbers and returns <span class="math notranslate nohighlight">\(x \mod y\)</span>.
-For mpmath numbers, this is equivalent to <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">%</span> <span class="pre">y</span></code>.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">fp</span><span class="p">,</span> <span class="n">mp</span><span class="p">,</span> <span class="n">iv</span><span class="p">,</span> <span class="n">dp</span><span class="p">,</span> <span class="n">gp</span><span class="p">,</span> <span class="n">ap</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="p">[</span><span class="n">fp</span><span class="p">,</span> <span class="n">mp</span><span class="p">,</span> <span class="n">dp</span><span class="p">,</span> <span class="n">gp</span><span class="p">]:</span> <span class="n">ctx</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>  <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmod</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="o">+</span><span class="n">ctx</span><span class="o">.</span><span class="n">pi</span><span class="p">)))</span>
-<span class="go">2.6106277387164134</span>
-<span class="go">mpf(&#39;2.6106277387164134&#39;)</span>
-<span class="go">Decimal(&#39;2.61062773871651&#39;)</span>
-<span class="go">mpfr(&#39;2.6106277387164134&#39;)</span>
-</pre></div>
-</div>
-<p>You can use <a class="reference internal" href="#ctx.fmod" title="ctx.fmod"><code class="xref py py-func docutils literal notranslate"><span class="pre">fmod()</span></code></a> to compute fractional parts of numbers:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="p">[</span><span class="n">fp</span><span class="p">,</span> <span class="n">mp</span><span class="p">,</span> <span class="n">dp</span><span class="p">,</span> <span class="n">gp</span><span class="p">]:</span> <span class="n">ctx</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>  <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmod</span><span class="p">(</span><span class="mf">10.25</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;, &#39;</span><span class="p">)</span>
-<span class="go">0.25, mpf(&#39;0.25&#39;), Decimal(&#39;0.25&#39;), mpfr(&#39;0.25&#39;),</span>
-</pre></div>
-</div>
-<p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns <span class="math notranslate nohighlight">\(x\)</span> mod <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(y \ne 0\)</span>, sign(result) = sign(<span class="math notranslate nohighlight">\(x\)</span>).</p>
-<p>The floating-point remainder of the division operation <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">/</span> <span class="pre">y</span></code> calculated by this function is exactly the value <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">-</span> <span class="pre">rem</span> <span class="pre">*</span> <span class="pre">y</span></code>, where <code class="docutils literal notranslate"><span class="pre">rem</span></code> is <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">/</span> <span class="pre">y</span></code> with its fractional part truncated.</p>
+<dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
+<p>Returns the floating-point remainder of the division operation <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">/</span> <span class="pre">y</span></code> calculated by this function is exactly the value <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">-</span> <span class="pre">rem</span> <span class="pre">*</span> <span class="pre">y</span></code>, where <code class="docutils literal notranslate"><span class="pre">rem</span></code> is <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">/</span> <span class="pre">y</span></code> with its fractional part truncated.</p>
 <p>The returned value has the same sign as x and is less than y in magnitude.</p>
 <p>If the implementation supports IEEE floating-point arithmetic (IEC 60559),</p>
 <ul class="simple">
@@ -961,11 +968,30 @@ For mpmath numbers, this is equivalent to <code class="docutils literal notransl
 </ul>
 <p>See also: <a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/math/fmod">https://en.cppreference.com/w/cpp/numeric/math/fmod</a></p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Fmod</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Fmod</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">7.5</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">2.1</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmod</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)))</span>
+<span class="go">    fpm:  1.2</span>
+<span class="go">    mpm:  1.2</span>
+<span class="go">    dpm:  1.2</span>
+<span class="go">    ipm: [1.1999999999999999999999999999990534,</span>
+<span class="go">          1.2000000000000000000000000000002367]</span>
+<span class="go">    gpm:  1.20000000000000000000000000000024</span>
+<span class="go">    apm: [1.20000000000000000000000000000 +/- 2.61e-30]</span>
+<span class="go"> math53:  1.2</span>
+<span class="go">  sreal:  1.2</span>
+<span class="go">  dreal:  1.2</span>
+<span class="go">  ereal:  1.2000000000000000003</span>
+<span class="go">  qreal:  1.2</span>
+<span class="go">  oreal:  1.2</span>
+<span class="go">  mreal:  1.2</span>
+<span class="go"> sflint:  1.2</span>
+<span class="go"> dflint:  1.2</span>
+<span class="go"> eflint:  1.2000000000000000003</span>
+<span class="go"> qflint:  1.2</span>
+<span class="go"> oflint:  1.2</span>
+<span class="go"> mflint:  1.2</span>
+<span class="go"> aflint: [1.20000000000000000000000000000 +/- 7.58e-30]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -991,11 +1017,30 @@ For mpmath numbers, this is equivalent to <code class="docutils literal notransl
 </ul>
 <p>See also: <a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/math/remainder">https://en.cppreference.com/w/cpp/numeric/math/remainder</a></p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Remainder</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Remainder</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">7.5</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">2.1</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">remainder</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)))</span>
+<span class="go">    fpm:  -0.9</span>
+<span class="go">    mpm:  -0.900000000000000000000000000000000000000000000000000000000000000000000000000000000000000001</span>
+<span class="go">    dpm:  -0.9</span>
+<span class="go">    ipm: [-0.90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000078545,</span>
+<span class="go">          -0.89999999999999999999999999999999999999999999999999999999999999999999999999999999999999999882182]</span>
+<span class="go">    gpm:  -0.90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000079</span>
+<span class="go">    apm: [-0.90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 3.15e-90]</span>
+<span class="go"> math53:  -0.9</span>
+<span class="go">  sreal:  -0.8999996</span>
+<span class="go">  dreal:  -0.9</span>
+<span class="go">  ereal:  -0.89999999999999999965</span>
+<span class="go">  qreal:  -0.9</span>
+<span class="go">  oreal:  -0.90000000000000000000000000000000000000000000000000000000000000000000001</span>
+<span class="go">  mreal:  -0.899999999999999999999999999999999999999999999999999999999999999999999999999999999999999997</span>
+<span class="go"> sflint:  -0.8999996</span>
+<span class="go"> dflint:  -0.9</span>
+<span class="go"> eflint:  -0.89999999999999999965</span>
+<span class="go"> qflint:  -0.9</span>
+<span class="go"> oflint:  -0.90000000000000000000000000000000000000000000000000000000000000000000001</span>
+<span class="go"> mflint:  -0.899999999999999999999999999999999999999999999999999999999999999999999999999999999999999997</span>
+<span class="go"> aflint: [-0.90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 6.29e-90]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1007,8 +1052,8 @@ For mpmath numbers, this is equivalent to <code class="docutils literal notransl
 <dt class="sig sig-object py" id="ctx.remquo">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">remquo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.remquo" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns the IEEE754 remainder x REM y = x - rmNearest(x/y)*y.</p>
-<p>Computes the floating-point remainder of the division operation <span class="math notranslate nohighlight">\(x / y\)</span> as the <code class="docutils literal notranslate"><span class="pre">std::remainder</span></code> function does. Additionally, the sign and at least three of the last bits of <span class="math notranslate nohighlight">\(x / y\)</span> will be stored in quo, sufficient to determine the octant of the result within a period.(formally, stores a value whose sign is the sign of <span class="math notranslate nohighlight">\(x / y\)</span> and whose magnitude is congruent modulo <span class="math notranslate nohighlight">\(2^n\)</span> to the magnitude of the integral quotient of <span class="math notranslate nohighlight">\(x / y\)</span>, where <span class="math notranslate nohighlight">\(n\)</span> is an implementation-defined integer greater than or equal to 3).</p>
+<p>Returns the IEEE floating point remainder and part of the quotient.</p>
+<p>Computes the floating-point remainder of the division operation <span class="math notranslate nohighlight">\(x / y\)</span> as the <code class="docutils literal notranslate"><span class="pre">std::remainder</span></code> function does. Additionally, the sign and at least three of the last bits of <span class="math notranslate nohighlight">\(x / y\)</span> will be stored in quo, sufficient to determine the octant of the result within a period. Formally, stores a value whose sign is the sign of <span class="math notranslate nohighlight">\(x / y\)</span> and whose magnitude is congruent modulo <span class="math notranslate nohighlight">\(2^n\)</span> to the magnitude of the integral quotient of <span class="math notranslate nohighlight">\(x / y\)</span>, where <span class="math notranslate nohighlight">\(n\)</span> is an implementation-defined integer greater than or equal to 3.</p>
 <p>If the implementation supports IEEE floating-point arithmetic (IEC 60559),</p>
 <p>The current rounding mode has no effect.</p>
 <p>FE_INEXACT is never raised.</p>
@@ -1017,11 +1062,104 @@ For mpmath numbers, this is equivalent to <code class="docutils literal notransl
 <p>If either x or y is NaN, NaN is returned.</p>
 <p>See also: <a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/math/remquo">https://en.cppreference.com/w/cpp/numeric/math/remquo</a></p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Remainder</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Remainder</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;7.5&#39;</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;2.1&#39;</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">remquo</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+<span class="go">    fpm:  (-0.9000000000000004, 4)</span>
+<span class="go">    mpm:  (mpf(&#39;-0.899999999999999999999999999999684&#39;), 4)</span>
+<span class="go">    dpm:  (Decimal(&#39;-0.9&#39;), 4)</span>
+<span class="go">    ipm:  (mpi(&#39;-0.900000000000000000000000000001262&#39;, &#39;-0.899999999999999999999999999999684&#39;), 4)</span>
+<span class="go">    gpm:  (mpfr(&#39;-0.899999999999999999999999999999684&#39;,103), 4)</span>
+<span class="go">    apm:  ([-0.90000000000000000000000000000 +/- 1.90e-30], 4)</span>
+<span class="go"> math53:  (-0.9, 4)</span>
+<span class="go">  sreal:  (-0.8999996, 4)</span>
+<span class="go">  dreal:  (-0.9, 4)</span>
+<span class="go">  ereal:  (-0.89999999999999999965, 4)</span>
+<span class="go">  qreal:  (-0.9, 4)</span>
+<span class="go">  oreal:  (-0.90000000000000000000000000000000000000000000000000000000000000000000001, 4)</span>
+<span class="go">  mreal:  (-0.899999999999999999999999999995, 4)</span>
+<span class="go"> sflint:  (-0.8999996, 4)</span>
+<span class="go"> dflint:  (-0.9, 4)</span>
+<span class="go"> eflint:  (-0.89999999999999999965, 4)</span>
+<span class="go"> qflint:  (-0.9, 4)</span>
+<span class="go"> oflint:  (-0.90000000000000000000000000000000000000000000000000000000000000000000001, 4)</span>
+<span class="go"> mflint:  (-0.899999999999999999999999999995, 4)</span>
+<span class="go"> aflint:  ([-0.9000000000000000000000000000 +/- 1.02e-29], 4)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="fractional-part-of-a-floating-point-number-mathrm-frac-x">
+<h2>Fractional part of a floating point number: <span class="math notranslate nohighlight">\(\mathrm{frac}(x)\)</span><a class="headerlink" href="#fractional-part-of-a-floating-point-number-mathrm-frac-x" title="Link to this heading">#</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="ctx.frac">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">frac</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.frac" title="Link to this definition">#</a></dt>
+<dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
+<p>Returns the fractional part of <span class="math notranslate nohighlight">\(x\)</span>, that is, <span class="math notranslate nohighlight">\(\mathrm{frac}(x) = x - floor(x)\)</span>.</p>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">frac</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+<span class="go">    fpm:  0.9</span>
+<span class="go">    mpm:  0.9</span>
+<span class="go">    dpm:  0.9</span>
+<span class="go">    ipm: [0.89999999999999999999999999999999999999999999999999999999999999999999999999999999999999999980364,</span>
+<span class="go">          0.90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000078545]</span>
+<span class="go">    gpm:  0.8999999999999999999999999999999999999999999999999999999999999999999999999999999999999999998</span>
+<span class="go">    apm: [0.90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.77e-90]</span>
+<span class="go"> math53:  0.9</span>
+<span class="go">  sreal:  0.9000001</span>
+<span class="go">  dreal:  0.9</span>
+<span class="go">  ereal:  0.90000000000000000009</span>
+<span class="go">  qreal:  0.9</span>
+<span class="go">  oreal:  0.90000000000000000000000000000000000000000000000000000000000000000000001</span>
+<span class="go">  mreal:  0.900000000000000000000000000000000000000000000000000000000000000000000000000000000000000001</span>
+<span class="go"> sflint:  0.9000001</span>
+<span class="go"> dflint:  0.9</span>
+<span class="go"> eflint:  0.90000000000000000009</span>
+<span class="go"> qflint:  0.9</span>
+<span class="go"> oflint:  0.90000000000000000000000000000000000000000000000000000000000000000000001</span>
+<span class="go"> mflint:  0.900000000000000000000000000000000000000000000000000000000000000000000000000000000000000001</span>
+<span class="go"> aflint: [0.90000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.58e-90]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="fractional-part-of-a-floating-point-number-symmetric-function-mathrm-fractionalpart-x">
+<h2>Fractional part of a floating point number (symmetric function): <span class="math notranslate nohighlight">\(\mathrm{fractionalpart}(x)\)</span><a class="headerlink" href="#fractional-part-of-a-floating-point-number-symmetric-function-mathrm-fractionalpart-x" title="Link to this heading">#</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="ctx.fractionalpart">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">fractionalpart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.fractionalpart" title="Link to this definition">#</a></dt>
+<dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
+<p>Returns the fractional part of x as a symmetric function:</p>
+<p><span class="math notranslate nohighlight">\(\mathrm{fractionalpart}(x) = \mathrm{frac}(x)\)</span> for <span class="math notranslate nohighlight">\(x \geq 0\)</span> and <span class="math notranslate nohighlight">\(\mathrm{fractionalpart}(x) = -\mathrm{frac}(-x)\)</span> for <span class="math notranslate nohighlight">\(x &lt; 0\)</span>.</p>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fractionalpart</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+<span class="go">    fpm:  -0.0999999999999996</span>
+<span class="go">    mpm:  -0.1</span>
+<span class="go">    dpm:  -0.1</span>
+<span class="go">    ipm: [-0.10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000019636,</span>
+<span class="go">          -0.099999999999999999999999999999999999999999999999999999999999999999999999999999999999999999214545]</span>
+<span class="go">    gpm:  -0.1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002</span>
+<span class="go">    apm: [-0.1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.81e-90]</span>
+<span class="go"> math53:  -0.0999999999999996</span>
+<span class="go">  sreal:  -0.0999999</span>
+<span class="go">  dreal:  -0.0999999999999996</span>
+<span class="go">  ereal:  -0.099999999999999999913</span>
+<span class="go">  qreal:  -0.0999999999999999999999999999999997</span>
+<span class="go">  oreal:  -0.099999999999999999999999999999999999999999999999999999999999999999999986</span>
+<span class="go">  mreal:  -0.0999999999999999999999999999999999999999999999999999999999999999999999999999999999999999992</span>
+<span class="go"> sflint:  -0.0999999</span>
+<span class="go"> dflint:  -0.0999999999999996</span>
+<span class="go"> eflint:  -0.099999999999999999913</span>
+<span class="go"> qflint:  -0.0999999999999999999999999999999997</span>
+<span class="go"> oflint:  -0.099999999999999999999999999999999999999999999999999999999999999999999986</span>
+<span class="go"> mflint:  -0.0999999999999999999999999999999999999999999999999999999999999999999999999999999999999999992</span>
+<span class="go"> aflint: [-0.1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.58e-90]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1050,7 +1188,7 @@ For mpmath numbers, this is equivalent to <code class="docutils literal notransl
       </div>
     </a>
     <a class="right-next"
-       href="C07_MachineConstants.html"
+       href="C07_FractionMantissa.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
@@ -1090,6 +1228,14 @@ For mpmath numbers, this is equivalent to <code class="docutils literal notransl
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.remquo"><code class="docutils literal notranslate"><span class="pre">ctx.remquo()</span></code></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fractional-part-of-a-floating-point-number-mathrm-frac-x">Fractional part of a floating point number: <span class="math notranslate nohighlight">\(\mathrm{frac}(x)\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.frac"><code class="docutils literal notranslate"><span class="pre">ctx.frac()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fractional-part-of-a-floating-point-number-symmetric-function-mathrm-fractionalpart-x">Fractional part of a floating point number (symmetric function): <span class="math notranslate nohighlight">\(\mathrm{fractionalpart}(x)\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.fractionalpart"><code class="docutils literal notranslate"><span class="pre">ctx.fractionalpart()</span></code></a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -1123,7 +1269,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 30, 2026.
+  Last updated on Nov 04, 2026.
   <br/>
 </p>
   </div>

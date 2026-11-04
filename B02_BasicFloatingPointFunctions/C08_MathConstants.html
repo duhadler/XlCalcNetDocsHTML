@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Mathematical Constants &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>Mathematical Constants &#8212; XlCalcNet 1.1.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="../_static/documentation_options.js?v=051bfb12"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -50,10 +50,10 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Elementary scalar functions (real and complex)" href="../B03_ElementaryScalarFunctions/index.html" />
-    <link rel="prev" title="Functions related to mantissa width and exponent range" href="C07_MachineConstants.html" />
+    <link rel="prev" title="Functions related to mantissa width and exponent range" href="C07_FractionMantissa.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 30, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 04, 2026"/>
   </head>
   
   
@@ -172,13 +172,13 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Basic floating point functions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html">Operator overloading, general real functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html">General real functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C02_MachineConstants.html">Machine constants, general</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C03_PropertiesOfNumbers.html">Properties of numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_IntegerAndRemainder.html">Integer related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_RealFpManipulation.html">Floating point functions for real numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C06_FractionRemainder.html">Fraction and remainder related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C07_MachineConstants.html">Functions related to mantissa width and exponent range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_FractionMantissa.html">Functions related to mantissa width and exponent range</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Mathematical Constants</a></li>
 </ul>
 </details></li>
@@ -931,17 +931,32 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.degree">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">degree</span></span><a class="headerlink" href="#ctx.degree" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns one degree of angle, <span class="math notranslate nohighlight">\(1^{\circ} = \pi/180\)</span>. See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1094" title="Wikipedia. Conversion between radians and degrees. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Radian#Conversion_between_radians_and_degrees.">1272</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1557" title="E. W. Weisstein. Degree/Radian. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Radian.html.">901</a>]</span>, Mpmath <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id692" title="The Mpmath Development Team. Degree constant. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/constants.html#degree-degree.">605</a>]</span>, Mpmath <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id820" title="The Mpmath Development Team. Radians. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2017. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/trigonometric.html#radians.">710</a>]</span>, Mpmath <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id821" title="The Mpmath Development Team. Degrees. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2017. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/trigonometric.html#degrees.">703</a>]</span>.</p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstDegree</span><span class="p">()</span>
-<span class="go">ereal(&#39;1.7453292519943295769E-2&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstDegree</span><span class="p">()</span>
-<span class="go">0.0174532925199433</span>
+<p>Returns one degree of angle, <span class="math notranslate nohighlight">\(1^{\circ} = \pi/180\)</span>. See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1094" title="Wikipedia. Conversion between radians and degrees. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Radian#Conversion_between_radians_and_degrees.">1271</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1557" title="E. W. Weisstein. Degree/Radian. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Radian.html.">900</a>]</span>, Mpmath <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id692" title="The Mpmath Development Team. Degree constant. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/constants.html#degree-degree.">605</a>]</span>, Mpmath <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id820" title="The Mpmath Development Team. Radians. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2017. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/trigonometric.html#radians.">709</a>]</span>, Mpmath <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id821" title="The Mpmath Development Team. Degrees. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2017. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/trigonometric.html#degrees.">702</a>]</span>.</p>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">zero</span><span class="p">))</span>
+<span class="go">    fpm:  0.0174532925199433</span>
+<span class="go">    mpm:  0.0174532925199432957692369076848861271344287188854172545609719144017100911460344944368224157</span>
+<span class="go">    dpm:  0.0174532925199432957692369076848861271344287188854172545609719144017100911460344944368224157</span>
+<span class="go">    ipm: [0.017453292519943295769236907684886127134428718885417254560971914401710091146034494436822415699145,</span>
+<span class="go">          0.01745329251994329576923690768488612713442871888541725456097191440171009114603449443682241570298]</span>
+<span class="go">    gpm:  0.017453292519943295769236907684886127134428718885417254560971914401710091146034494436822415695</span>
+<span class="go">    apm: [0.0174532925199432957692369076848861271344287188854172545609719144017100911460344944368224157 +/- 9.90e-93]</span>
+<span class="go"> math53:  0.0174532925199433</span>
+<span class="go">  sreal:  0.01745329</span>
+<span class="go">  dreal:  0.0174532925199433</span>
+<span class="go">  ereal:  0.017453292519943295769</span>
+<span class="go">  qreal:  0.0174532925199432957692369076848861</span>
+<span class="go">  oreal:  0.017453292519943295769236907684886127134428718885417254560971914401710091</span>
+<span class="go">  mreal:  0.0174532925199432957692369076848861271344287188854172545609719144017100911460344944368224157</span>
+<span class="go"> sflint:  0.01745329</span>
+<span class="go"> dflint:  0.0174532925199433</span>
+<span class="go"> eflint:  0.017453292519943295769</span>
+<span class="go"> qflint:  0.0174532925199432957692369076848861</span>
+<span class="go"> oflint:  0.017453292519943295769236907684886127134428718885417254560971914401710091</span>
+<span class="go"> mflint:  0.0174532925199432957692369076848861271344287188854172545609719144017100911460344944368224157</span>
+<span class="go"> aflint: [0.0174532925199432957692369076848861271344287188854172545609719144017100911460344944368224157 +/- 4.09e-92]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -953,17 +968,32 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.phi">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">phi</span></span><a class="headerlink" href="#ctx.phi" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns the golden ratio <span class="math notranslate nohighlight">\(\phi = (1+\sqrt 5)/2\)</span>. See also Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1089" title="Wikipedia. Golden ratio. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Golden_ratio.">1279</a>]</span>, MathWorld <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1552" title="E. W. Weisstein. Golden Ratio. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/GoldenRatio.html.">904</a>]</span>, Mpmath <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id687" title="The Mpmath Development Team. Golden Ratio. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/constants.html#golden-ratio-phi.">612</a>]</span>.</p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstPhi</span><span class="p">()</span>
-<span class="go">ereal(&#39;1.6180339887498948482&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstPhi</span><span class="p">()</span>
-<span class="go">1.61803398874989</span>
+<p>Returns the golden ratio <span class="math notranslate nohighlight">\(\phi = (1+\sqrt 5)/2\)</span>. See also Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1089" title="Wikipedia. Golden ratio. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Golden_ratio.">1278</a>]</span>, MathWorld <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1552" title="E. W. Weisstein. Golden Ratio. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/GoldenRatio.html.">903</a>]</span>, Mpmath <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id687" title="The Mpmath Development Team. Golden Ratio. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/constants.html#golden-ratio-phi.">612</a>]</span>.</p>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">phi</span><span class="p">))</span>
+<span class="go">    fpm:  1.61803398874989</span>
+<span class="go">    mpm:  1.6180339887498948482045868343656381177203091798057628621354486227052604628189024497072072</span>
+<span class="go">    dpm:  1.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720</span>
+<span class="go">    ipm: [1.6180339887498948482045868343656381177203091798057628621354486227052604628189024497072072041132,</span>
+<span class="go">          1.6180339887498948482045868343656381177203091798057628621354486227052604628189024497072072043587]</span>
+<span class="go">    gpm:  1.6180339887498948482045868343656381177203091798057628621354486227052604628189024497072072041</span>
+<span class="go">    apm: [1.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720 +/- 4.36e-90]</span>
+<span class="go"> math53:  1.61803398874989</span>
+<span class="go">  sreal:  1.618034</span>
+<span class="go">  dreal:  1.61803398874989</span>
+<span class="go">  ereal:  1.6180339887498948482</span>
+<span class="go">  qreal:  1.61803398874989484820458683436564</span>
+<span class="go">  oreal:  1.6180339887498948482045868343656381177203091798057628621354486227052605</span>
+<span class="go">  mreal:  1.6180339887498948482045868343656381177203091798057628621354486227052604628189024497072072</span>
+<span class="go"> sflint:  1.618034</span>
+<span class="go"> dflint:  1.61803398874989</span>
+<span class="go"> eflint:  1.6180339887498948482</span>
+<span class="go"> qflint:  1.61803398874989484820458683436564</span>
+<span class="go"> oflint:  1.6180339887498948482045868343656381177203091798057628621354486227052605</span>
+<span class="go"> mflint:  1.6180339887498948482045868343656381177203091798057628621354486227052604628189024497072072</span>
+<span class="go"> aflint: [1.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720 +/- 4.61e-90]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -975,17 +1005,32 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.ln2">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">ln2</span></span><a class="headerlink" href="#ctx.ln2" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns the logarithm of 2.  See also Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1085" title="Wikipedia. Natural logarithm of 2. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Natural_logarithm_of_2.">1263</a>]</span>, MathWorld <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1547" title="E. W. Weisstein. Natural Logarithm of 2. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/NaturalLogarithmof2.html.">909</a>]</span>.</p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstLog2</span><span class="p">()</span>
-<span class="go">ereal(&#39;6.9314718055994530943E-1&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstLog2</span><span class="p">()</span>
-<span class="go">0.693147180559945</span>
+<p>Returns the logarithm of 2.  See also Wikipedia <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1085" title="Wikipedia. Natural logarithm of 2. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Natural_logarithm_of_2.">1262</a>]</span>, MathWorld <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1547" title="E. W. Weisstein. Natural Logarithm of 2. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/NaturalLogarithmof2.html.">908</a>]</span>.</p>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">ln2</span><span class="p">))</span>
+<span class="go">    fpm:  0.693147180559945</span>
+<span class="go">    mpm:  0.693147180559945309417232121458176568075500134360255254120680009493393621969694715605863327</span>
+<span class="go">    dpm:  0.693147180559945309417232121458176568075500134360255254120680009493393621969694715605863327</span>
+<span class="go">    ipm: [0.69314718055994530941723212145817656807550013436025525412068000949339362196969471560586332688369,</span>
+<span class="go">          0.69314718055994530941723212145817656807550013436025525412068000949339362196969471560586332700641]</span>
+<span class="go">    gpm:  0.69314718055994530941723212145817656807550013436025525412068000949339362196969471560586332701</span>
+<span class="go">    apm: [0.693147180559945309417232121458176568075500134360255254120680009493393621969694715605863327 +/- 6.78e-92]</span>
+<span class="go"> math53:  0.693147180559945</span>
+<span class="go">  sreal:  0.6931472</span>
+<span class="go">  dreal:  0.693147180559945</span>
+<span class="go">  ereal:  0.69314718055994530943</span>
+<span class="go">  qreal:  0.693147180559945309417232121458177</span>
+<span class="go">  oreal:  0.69314718055994530941723212145817656807550013436025525412068000949339362</span>
+<span class="go">  mreal:  0.693147180559945309417232121458176568075500134360255254120680009493393621969694715605863327</span>
+<span class="go"> sflint:  0.6931472</span>
+<span class="go"> dflint:  0.693147180559945</span>
+<span class="go"> eflint:  0.69314718055994530943</span>
+<span class="go"> qflint:  0.693147180559945309417232121458177</span>
+<span class="go"> oflint:  0.69314718055994530941723212145817656807550013436025525412068000949339362</span>
+<span class="go"> mflint:  0.693147180559945309417232121458176568075500134360255254120680009493393621969694715605863327</span>
+<span class="go"> aflint: [0.693147180559945309417232121458176568075500134360255254120680009493393621969694715605863327 +/- 3.75e-91]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -997,17 +1042,32 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.ln10">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">ln10</span></span><a class="headerlink" href="#ctx.ln10" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns the logarithm of 10.  See also MathWorld <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id1548" title="E. W. Weisstein. Natural Logarithm of 10. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/NaturalLogarithmof10.html.">908</a>]</span>.</p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstLog10</span><span class="p">()</span>
-<span class="go">ereal(&#39;2.3025850929940456840&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstLog10</span><span class="p">()</span>
-<span class="go">2.30258509299405</span>
+<p>Returns the logarithm of 10.  See also MathWorld <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id1548" title="E. W. Weisstein. Natural Logarithm of 10. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/NaturalLogarithmof10.html.">907</a>]</span>.</p>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">ln10</span><span class="p">))</span>
+<span class="go">    fpm:  2.30258509299405</span>
+<span class="go">    mpm:  2.30258509299404568401799145468436420760110148862877297603332790096757260967735248023599721</span>
+<span class="go">    dpm:  2.30258509299404568401799145468436420760110148862877297603332790096757260967735248023599721</span>
+<span class="go">    ipm: [2.3025850929940456840179914546843642076011014886287729760333279009675726096773524802359972050818,</span>
+<span class="go">          2.3025850929940456840179914546843642076011014886287729760333279009675726096773524802359972055727]</span>
+<span class="go">    gpm:  2.3025850929940456840179914546843642076011014886287729760333279009675726096773524802359972051</span>
+<span class="go">    apm: [2.30258509299404568401799145468436420760110148862877297603332790096757260967735248023599721 +/- 5.41e-90]</span>
+<span class="go"> math53:  2.30258509299405</span>
+<span class="go">  sreal:  2.302585</span>
+<span class="go">  dreal:  2.30258509299405</span>
+<span class="go">  ereal:  2.302585092994045684</span>
+<span class="go">  qreal:  2.30258509299404568401799145468436</span>
+<span class="go">  oreal:  2.3025850929940456840179914546843642076011014886287729760333279009675726</span>
+<span class="go">  mreal:  2.30258509299404568401799145468436420760110148862877297603332790096757260967735248023599721</span>
+<span class="go"> sflint:  2.302585</span>
+<span class="go"> dflint:  2.30258509299405</span>
+<span class="go"> eflint:  2.302585092994045684</span>
+<span class="go"> qflint:  2.30258509299404568401799145468436</span>
+<span class="go"> oflint:  2.3025850929940456840179914546843642076011014886287729760333279009675726</span>
+<span class="go"> mflint:  2.30258509299404568401799145468436420760110148862877297603332790096757260967735248023599721</span>
+<span class="go"> aflint: [2.30258509299404568401799145468436420760110148862877297603332790096757260967735248023599720 +/- 6.07e-90]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1019,17 +1079,32 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.pi">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">pi</span></span><a class="headerlink" href="#ctx.pi" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns the constant pi. See also Wikipedia <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1086" title="Wikipedia. Pi. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Pi.">1264</a>]</span>, MathWorld <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1549" title="E. W. Weisstein. Pi. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Pi.html.">910</a>]</span>, Mpmath <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id684" title="The Mpmath Development Team. Pi. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/constants.html#pi-pi.">617</a>]</span>.</p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Pi</span><span class="p">()</span>
-<span class="go">ereal(&#39;3.1415926535897932385&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Pi</span><span class="p">()</span>
-<span class="go">3.14159265358979</span>
+<p>Returns the constant pi. See also Wikipedia <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id1086" title="Wikipedia. Pi. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Pi.">1263</a>]</span>, MathWorld <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1549" title="E. W. Weisstein. Pi. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Pi.html.">909</a>]</span>, Mpmath <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id684" title="The Mpmath Development Team. Pi. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/constants.html#pi-pi.">617</a>]</span>.</p>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+<span class="go">    fpm:  3.14159265358979</span>
+<span class="go">    mpm:  3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803483</span>
+<span class="go">    dpm:  3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803483</span>
+<span class="go">    ipm: [3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253398,</span>
+<span class="go">          3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348258307]</span>
+<span class="go">    gpm:  3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253</span>
+<span class="go">    apm: [3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803483 +/- 4.91e-90]</span>
+<span class="go"> math53:  3.14159265358979</span>
+<span class="go">  sreal:  3.141593</span>
+<span class="go">  dreal:  3.14159265358979</span>
+<span class="go">  ereal:  3.1415926535897932385</span>
+<span class="go">  qreal:  3.1415926535897932384626433832795</span>
+<span class="go">  oreal:  3.1415926535897932384626433832795028841971693993751058209749445923078164</span>
+<span class="go">  mreal:  3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482</span>
+<span class="go"> sflint:  3.141593</span>
+<span class="go"> dflint:  3.14159265358979</span>
+<span class="go"> eflint:  3.1415926535897932385</span>
+<span class="go"> qflint:  3.1415926535897932384626433832795</span>
+<span class="go"> oflint:  3.1415926535897932384626433832795028841971693993751058209749445923078164</span>
+<span class="go"> mflint:  3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482</span>
+<span class="go"> aflint: [3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482 +/- 5.84e-90]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1041,17 +1116,32 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.e">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">e</span></span><a class="headerlink" href="#ctx.e" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns the constant const_e. See also Wikipedia <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id1087" title="Wikipedia. e (mathematical constant). Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/E_(mathematical_constant).">1268</a>]</span>, MathWorld <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id1550" title="E. W. Weisstein. e. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/e.html.">911</a>]</span>, Mpmath <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id685" title="The Mpmath Development Team. Base of natural logarithm. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/constants.html#base-of-the-natural-logarithm-e.">602</a>]</span>.</p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstE</span><span class="p">()</span>
-<span class="go">ereal(&#39;3.1415926535897932385&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstE</span><span class="p">()</span>
-<span class="go">2.71828182845905</span>
+<p>Returns the constant const_e. See also Wikipedia <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id1087" title="Wikipedia. e (mathematical constant). Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/E_(mathematical_constant).">1267</a>]</span>, MathWorld <span id="id16">[<a class="reference internal" href="../99BackMatter/index.html#id1550" title="E. W. Weisstein. e. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/e.html.">910</a>]</span>, Mpmath <span id="id17">[<a class="reference internal" href="../99BackMatter/index.html#id685" title="The Mpmath Development Team. Base of natural logarithm. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/constants.html#base-of-the-natural-logarithm-e.">602</a>]</span>.</p>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">e</span><span class="p">))</span>
+<span class="go">    fpm:  2.71828182845905</span>
+<span class="go">    mpm:  2.71828182845904523536028747135266249775724709369995957496696762772407663035354759457138218</span>
+<span class="go">    dpm:  2.71828182845904523536028747135266249775724709369995957496696762772407663035354759457138218</span>
+<span class="go">    ipm: [2.7182818284590452353602874713526624977572470936999595749669676277240766303535475945713821781268,</span>
+<span class="go">          2.7182818284590452353602874713526624977572470936999595749669676277240766303535475945713821786177]</span>
+<span class="go">    gpm:  2.7182818284590452353602874713526624977572470936999595749669676277240766303535475945713821786</span>
+<span class="go">    apm: [2.71828182845904523536028747135266249775724709369995957496696762772407663035354759457138218 +/- 2.37e-90]</span>
+<span class="go"> math53:  2.71828182845905</span>
+<span class="go">  sreal:  2.718282</span>
+<span class="go">  dreal:  2.71828182845905</span>
+<span class="go">  ereal:  2.7182818284590452354</span>
+<span class="go">  qreal:  2.71828182845904523536028747135266</span>
+<span class="go">  oreal:  2.7182818284590452353602874713526624977572470936999595749669676277240766</span>
+<span class="go">  mreal:  2.71828182845904523536028747135266249775724709369995957496696762772407663035354759457138218</span>
+<span class="go"> sflint:  2.718282</span>
+<span class="go"> dflint:  2.71828182845905</span>
+<span class="go"> eflint:  2.7182818284590452354</span>
+<span class="go"> qflint:  2.71828182845904523536028747135266</span>
+<span class="go"> oflint:  2.7182818284590452353602874713526624977572470936999595749669676277240766</span>
+<span class="go"> mflint:  2.71828182845904523536028747135266249775724709369995957496696762772407663035354759457138218</span>
+<span class="go"> aflint: [2.71828182845904523536028747135266249775724709369995957496696762772407663035354759457138218 +/- 4.82e-90]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1063,17 +1153,32 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.egamma">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">egamma</span></span><a class="headerlink" href="#ctx.egamma" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns the Euler gamma constant. See also Wikipedia <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id1088" title="Wikipedia. Euler-Mascheroni constant. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Euler-Mascheroni_constant.">1277</a>]</span>, MathWorld <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id1551" title="E. W. Weisstein. Euler-Mascheroni Constant. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Euler-MascheroniConstant.html.">902</a>]</span>, Mpmath <span id="id20">[<a class="reference internal" href="../99BackMatter/index.html#id686" title="The Mpmath Development Team. Euler-Mascheroni Constant. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/constants.html#euler-s-constant-euler.">610</a>]</span>.</p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstEulerGamma</span><span class="p">()</span>
-<span class="go">ereal(&#39;5.7721566490153286062E-1&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstEulerGamma</span><span class="p">()</span>
-<span class="go">0.577215664901533</span>
+<p>Returns the Euler gamma constant. See also Wikipedia <span id="id18">[<a class="reference internal" href="../99BackMatter/index.html#id1088" title="Wikipedia. Euler-Mascheroni constant. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Euler-Mascheroni_constant.">1276</a>]</span>, MathWorld <span id="id19">[<a class="reference internal" href="../99BackMatter/index.html#id1551" title="E. W. Weisstein. Euler-Mascheroni Constant. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Euler-MascheroniConstant.html.">901</a>]</span>, Mpmath <span id="id20">[<a class="reference internal" href="../99BackMatter/index.html#id686" title="The Mpmath Development Team. Euler-Mascheroni Constant. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/constants.html#euler-s-constant-euler.">610</a>]</span>.</p>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">egamma</span><span class="p">))</span>
+<span class="go">    fpm:  0.577215664901533</span>
+<span class="go">    mpm:  0.577215664901532860606512090082402431042159335939923598805767234884867726777664670936947063</span>
+<span class="go">    dpm:  0.577215664901532860606512090082402431042159335939923598805767234884867726777664670936947063</span>
+<span class="go">    ipm: [0.57721566490153286060651209008240243104215933593992359880576723488486772677766467093694706323219,</span>
+<span class="go">          0.57721566490153286060651209008240243104215933593992359880576723488486772677766467093694706335492]</span>
+<span class="go">    gpm:  0.57721566490153286060651209008240243104215933593992359880576723488486772677766467093694706323</span>
+<span class="go">    apm: [0.577215664901532860606512090082402431042159335939923598805767234884867726777664670936947063 +/- 2.94e-91]</span>
+<span class="go"> math53:  0.577215664901533</span>
+<span class="go">  sreal:  0.5772157</span>
+<span class="go">  dreal:  0.577215664901533</span>
+<span class="go">  ereal:  0.57721566490153286062</span>
+<span class="go">  qreal:  0.577215664901532860606512090082402</span>
+<span class="go">  oreal:  0.57721566490153286060651209008240243104215933593992359880576723488486773</span>
+<span class="go">  mreal:  0.577215664901532860606512090082402431042159335939923598805767234884867726777664670936947063</span>
+<span class="go"> sflint:  0.5772157</span>
+<span class="go"> dflint:  0.577215664901533</span>
+<span class="go"> eflint:  0.57721566490153286062</span>
+<span class="go"> qflint:  0.577215664901532860606512090082402</span>
+<span class="go"> oflint:  0.57721566490153286060651209008240243104215933593992359880576723488486773</span>
+<span class="go"> mflint:  0.577215664901532860606512090082402431042159335939923598805767234884867726777664670936947063</span>
+<span class="go"> aflint: [0.577215664901532860606512090082402431042159335939923598805767234884867726777664670936947063 +/- 7.24e-91]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1085,20 +1190,35 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.apery">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">apery</span></span><a class="headerlink" href="#ctx.apery" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Represents Apery’s constant.  See also Wikipedia <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id1093" title="Wikipedia. Apéry's constant. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Apéry%27s_constant.">1269</a>]</span>, MathWorld <span id="id22">[<a class="reference internal" href="../99BackMatter/index.html#id1556" title="E. W. Weisstein. Apéry's Constant. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/AperysConstant.html.">896</a>]</span>, Mpmath <span id="id23">[<a class="reference internal" href="../99BackMatter/index.html#id691" title="The Mpmath Development Team. Apéry's Constant. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/constants.html#apery-s-constant-apery.">600</a>]</span>.</p>
+<p>Represents Apery’s constant.  See also Wikipedia <span id="id21">[<a class="reference internal" href="../99BackMatter/index.html#id1093" title="Wikipedia. Apéry's constant. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Apéry%27s_constant.">1268</a>]</span>, MathWorld <span id="id22">[<a class="reference internal" href="../99BackMatter/index.html#id1556" title="E. W. Weisstein. Apéry's Constant. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/AperysConstant.html.">895</a>]</span>, Mpmath <span id="id23">[<a class="reference internal" href="../99BackMatter/index.html#id691" title="The Mpmath Development Team. Apéry's Constant. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/constants.html#apery-s-constant-apery.">600</a>]</span>.</p>
 <p>It is an irrational number approximately equal to 1.2020569 given by</p>
 <div class="math notranslate nohighlight">
 \[\zeta(3) = \sum_{k=1}^\infty\frac{1}{k^3}.\]</div>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstApery</span><span class="p">()</span>
-<span class="go">ereal(&#39;1.2020569031595942854&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstApery</span><span class="p">()</span>
-<span class="go">1.20205690315959</span>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">apery</span><span class="p">))</span>
+<span class="go">    fpm:  1.20205690315959</span>
+<span class="go">    mpm:  1.20205690315959428539973816151144999076498629234049888179227155534183820578631309018645587</span>
+<span class="go">    dpm:  1.20205690315959428539973816151144999076498629234049888179227155534183820578631309018645587</span>
+<span class="go">    ipm: [1.2020569031595942853997381615114499907649862923404988817922715553418382057863130901864558697772,</span>
+<span class="go">          1.2020569031595942853997381615114499907649862923404988817922715553418382057863130901864558700227]</span>
+<span class="go">    gpm:  1.2020569031595942853997381615114499907649862923404988817922715553418382057863130901864558737</span>
+<span class="go">    apm: [1.20205690315959428539973816151144999076498629234049888179227155534183820578631309018645587 +/- 3.71e-90]</span>
+<span class="go"> math53:  1.20205690315959</span>
+<span class="go">  sreal:  1.202057</span>
+<span class="go">  dreal:  1.20205690315959</span>
+<span class="go">  ereal:  1.2020569031595942854</span>
+<span class="go">  qreal:  1.20205690315959428539973816151145</span>
+<span class="go">  oreal:  1.2020569031595942853997381615114499907649862923404988817922715553418382</span>
+<span class="go">  mreal:  1.20205690315959428539973816151144999076498629234049888179227155534183820578631309018645587</span>
+<span class="go"> sflint:  1.202057</span>
+<span class="go"> dflint:  1.20205690315959</span>
+<span class="go"> eflint:  1.2020569031595942854</span>
+<span class="go"> qflint:  1.20205690315959428539973816151145</span>
+<span class="go"> oflint:  1.2020569031595942853997381615114499907649862923404988817922715553418382</span>
+<span class="go"> mflint:  1.20205690315959428539973816151144999076498629234049888179227155534183820578631309018645587</span>
+<span class="go"> aflint: [1.20205690315959428539973816151144999076498629234049888179227155534183820578631309018645587 +/- 4.20e-90]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1110,20 +1230,35 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.catalan">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">catalan</span></span><a class="headerlink" href="#ctx.catalan" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns the Catalan constant. See also Wikipedia <span id="id24">[<a class="reference internal" href="../99BackMatter/index.html#id1090" title="Wikipedia. Golden ratio. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Golden_ratio.">1280</a>]</span>, MathWorld <span id="id25">[<a class="reference internal" href="../99BackMatter/index.html#id1553" title="E. W. Weisstein. Catalan's Constant. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/CatalansConstant.html.">897</a>]</span>, Mpmath <span id="id26">[<a class="reference internal" href="../99BackMatter/index.html#id688" title="The Mpmath Development Team. Catalan's Constant. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/constants.html#catalan-s-constant-catalan.">604</a>]</span>.</p>
+<p>Returns the Catalan constant. See also Wikipedia <span id="id24">[<a class="reference internal" href="../99BackMatter/index.html#id1090" title="Wikipedia. Golden ratio. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Golden_ratio.">1279</a>]</span>, MathWorld <span id="id25">[<a class="reference internal" href="../99BackMatter/index.html#id1553" title="E. W. Weisstein. Catalan's Constant. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/CatalansConstant.html.">896</a>]</span>, Mpmath <span id="id26">[<a class="reference internal" href="../99BackMatter/index.html#id688" title="The Mpmath Development Team. Catalan's Constant. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/constants.html#catalan-s-constant-catalan.">604</a>]</span>.</p>
 <p>Catalan’s constant <span class="math notranslate nohighlight">\(K\)</span> = 0.91596559… is given by the infinite series</p>
 <div class="math notranslate nohighlight">
 \[K = \sum_{k=0}^{\infty} \frac{(-1)^k}{(2k+1)^2}.\]</div>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstCatalan</span><span class="p">()</span>
-<span class="go">ereal(&#39;9.1596559417721901505E-1&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstCatalan</span><span class="p">()</span>
-<span class="go">0.915965594177219</span>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">catalan</span><span class="p">))</span>
+<span class="go">    fpm:  0.915965594177219</span>
+<span class="go">    mpm:  0.915965594177219015054603514932384110774149374281672134266498119621763019776254769479356513</span>
+<span class="go">    dpm:  0.915965594177219015054603514932384110774149374281672134266498119621763019776254769479356513</span>
+<span class="go">    ipm: [0.91596559417721901505460351493238411077414937428167213426649811962176301977625476947935651284108,</span>
+<span class="go">          0.91596559417721901505460351493238411077414937428167213426649811962176301977625476947935651296381]</span>
+<span class="go">    gpm:  0.91596559417721901505460351493238411077414937428167213426649811962176301977625476947935651296</span>
+<span class="go">    apm: [0.915965594177219015054603514932384110774149374281672134266498119621763019776254769479356513 +/- 2.82e-91]</span>
+<span class="go"> math53:  0.915965594177219</span>
+<span class="go">  sreal:  0.9159656</span>
+<span class="go">  dreal:  0.915965594177219</span>
+<span class="go">  ereal:  0.91596559417721901505</span>
+<span class="go">  qreal:  0.915965594177219015054603514932384</span>
+<span class="go">  oreal:  0.91596559417721901505460351493238411077414937428167213426649811962176302</span>
+<span class="go">  mreal:  0.915965594177219015054603514932384110774149374281672134266498119621763019776254769479356513</span>
+<span class="go"> sflint:  0.9159656</span>
+<span class="go"> dflint:  0.915965594177219</span>
+<span class="go"> eflint:  0.91596559417721901505</span>
+<span class="go"> qflint:  0.915965594177219015054603514932384</span>
+<span class="go"> oflint:  0.91596559417721901505460351493238411077414937428167213426649811962176302</span>
+<span class="go"> mflint:  0.915965594177219015054603514932384110774149374281672134266498119621763019776254769479356513</span>
+<span class="go"> aflint: [0.915965594177219015054603514932384110774149374281672134266498119621763019776254769479356512 +/- 9.64e-91]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1135,18 +1270,33 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.glaisher">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">glaisher</span></span><a class="headerlink" href="#ctx.glaisher" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns Glaisher’s constant. See also Wikipedia <span id="id27">[<a class="reference internal" href="../99BackMatter/index.html#id1092" title="Wikipedia. Glaisher-Kinkelin constant. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Glaisher-Kinkelin_constant.">1278</a>]</span>, MathWorld <span id="id28">[<a class="reference internal" href="../99BackMatter/index.html#id1555" title="E. W. Weisstein. Glaisher-Kinkelin Constant. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Glaisher-KinkelinConstant.html.">903</a>]</span>, Mpmath <span id="id29">[<a class="reference internal" href="../99BackMatter/index.html#id690" title="The Mpmath Development Team. Glaisher-Kinkelin Constant. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/constants.html#glaisher-s-constant-glaisher.">611</a>]</span>.</p>
+<p>Returns Glaisher’s constant. See also Wikipedia <span id="id27">[<a class="reference internal" href="../99BackMatter/index.html#id1092" title="Wikipedia. Glaisher-Kinkelin constant. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Glaisher-Kinkelin_constant.">1277</a>]</span>, MathWorld <span id="id28">[<a class="reference internal" href="../99BackMatter/index.html#id1555" title="E. W. Weisstein. Glaisher-Kinkelin Constant. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Glaisher-KinkelinConstant.html.">902</a>]</span>, Mpmath <span id="id29">[<a class="reference internal" href="../99BackMatter/index.html#id690" title="The Mpmath Development Team. Glaisher-Kinkelin Constant. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/constants.html#glaisher-s-constant-glaisher.">611</a>]</span>.</p>
 <p>The constant is defined  as <span class="math notranslate nohighlight">\(A = \exp(1/12-\zeta'(-1))\)</span> where <span class="math notranslate nohighlight">\(\zeta'(s)\)</span> denotes the derivative of the Riemann zeta function.</p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstGlaisher</span><span class="p">()</span>
-<span class="go">ereal(&#39;1.2824271291006226369&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstGlaisher</span><span class="p">()</span>
-<span class="go">1.28242712910062</span>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">glaisher</span><span class="p">))</span>
+<span class="go">    fpm:  1.28242712910062</span>
+<span class="go">    mpm:  1.28242712910062263687534256886979172776768892732500119206374002174040630885882646112973649</span>
+<span class="go">    dpm:  1.28242712910062263687534256886979172776768892732500119206374002174040630885882646112973649</span>
+<span class="go">    ipm: [1.2824271291006226368753425688697917277676889273250011920637400217404063088588264611297364917809,</span>
+<span class="go">          1.2824271291006226368753425688697917277676889273250011920637400217404063088588264611297364920264]</span>
+<span class="go">    gpm:  1.2824271291006226368753425688697917277676889273250011920637400217404063088588264611297364901</span>
+<span class="go">    apm: [1.28242712910062263687534256886979172776768892732500119206374002174040630885882646112973649 +/- 2.03e-90]</span>
+<span class="go"> math53:  1.28242712910062</span>
+<span class="go">  sreal:  1.282427</span>
+<span class="go">  dreal:  1.28242712910062</span>
+<span class="go">  ereal:  1.2824271291006226369</span>
+<span class="go">  qreal:  1.28242712910062263687534256886979</span>
+<span class="go">  oreal:  1.2824271291006226368753425688697917277676889273250011920637400217404063</span>
+<span class="go">  mreal:  1.28242712910062263687534256886979172776768892732500119206374002174040630885882646112973649</span>
+<span class="go"> sflint:  1.282427</span>
+<span class="go"> dflint:  1.28242712910062</span>
+<span class="go"> eflint:  1.2824271291006226369</span>
+<span class="go"> qflint:  1.28242712910062263687534256886979</span>
+<span class="go"> oflint:  1.2824271291006226368753425688697917277676889273250011920637400217404063</span>
+<span class="go"> mflint:  1.28242712910062263687534256886979172776768892732500119206374002174040630885882646112973649</span>
+<span class="go"> aflint: [1.28242712910062263687534256886979172776768892732500119206374002174040630885882646112973649 +/- 2.03e-90]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1158,17 +1308,32 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.khinchin">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">khinchin</span></span><a class="headerlink" href="#ctx.khinchin" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns Khinchin’s constant. See also Wikipedia <span id="id30">[<a class="reference internal" href="../99BackMatter/index.html#id1091" title="Wikipedia. Khinchin's constant. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Khinchin%27s_constant.">1285</a>]</span>, MathWorld <span id="id31">[<a class="reference internal" href="../99BackMatter/index.html#id1554" title="E. W. Weisstein. Khinchin's Constant. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/KhinchinsConstant.html.">905</a>]</span>, Mpmath <span id="id32">[<a class="reference internal" href="../99BackMatter/index.html#id689" title="The Mpmath Development Team. Khinchin's Constant. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/constants.html#khinchin-s-constant-khinchin.">616</a>]</span>.</p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstKhinchin</span><span class="p">()</span>
-<span class="go">ereal(&#39;2.6854520010653064454&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstKhinchin</span><span class="p">()</span>
-<span class="go">2.68545200106531</span>
+<p>Returns Khinchin’s constant. See also Wikipedia <span id="id30">[<a class="reference internal" href="../99BackMatter/index.html#id1091" title="Wikipedia. Khinchin's constant. Wikimedia Foundation, 2013. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Khinchin%27s_constant.">1284</a>]</span>, MathWorld <span id="id31">[<a class="reference internal" href="../99BackMatter/index.html#id1554" title="E. W. Weisstein. Khinchin's Constant. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/KhinchinsConstant.html.">904</a>]</span>, Mpmath <span id="id32">[<a class="reference internal" href="../99BackMatter/index.html#id689" title="The Mpmath Development Team. Khinchin's Constant. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2011. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/constants.html#khinchin-s-constant-khinchin.">616</a>]</span>.</p>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">khinchin</span><span class="p">))</span>
+<span class="go">    fpm:  2.68545200106531</span>
+<span class="go">    mpm:  2.68545200106530644530971483548179569382038229399446295305115234555721885953715200280114117</span>
+<span class="go">    dpm:  2.68545200106530644530971483548179569382038229399446295305115234555721885953715200280114117</span>
+<span class="go">    ipm: [2.6854520010653064453097148354817956938203822939944629530511523455572188595371520028011411744855,</span>
+<span class="go">          2.6854520010653064453097148354817956938203822939944629530511523455572188595371520028011411749764]</span>
+<span class="go">    gpm:  2.6854520010653064453097148354817956938203822939944629530511523455572188595371520028011411701</span>
+<span class="go">    apm: [2.68545200106530644530971483548179569382038229399446295305115234555721885953715200280114117 +/- 4.98e-90]</span>
+<span class="go"> math53:  2.68545200106531</span>
+<span class="go">  sreal:  2.685452</span>
+<span class="go">  dreal:  2.68545200106531</span>
+<span class="go">  ereal:  2.6854520010653064454</span>
+<span class="go">  qreal:  2.6854520010653064453097148354818</span>
+<span class="go">  oreal:  2.6854520010653064453097148354817956938203822939944629530511523455572189</span>
+<span class="go">  mreal:  2.68545200106530644530971483548179569382038229399446295305115234555721885953715200280114117</span>
+<span class="go"> sflint:  2.685452</span>
+<span class="go"> dflint:  2.68545200106531</span>
+<span class="go"> eflint:  2.6854520010653064454</span>
+<span class="go"> qflint:  2.6854520010653064453097148354818</span>
+<span class="go"> oflint:  2.6854520010653064453097148354817956938203822939944629530511523455572189</span>
+<span class="go"> mflint:  2.68545200106530644530971483548179569382038229399446295305115234555721885953715200280114117</span>
+<span class="go"> aflint: [2.68545200106530644530971483548179569382038229399446295305115234555721885953715200280114117 +/- 4.98e-90]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1188,7 +1353,7 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="C07_MachineConstants.html"
+       href="C07_FractionMantissa.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
@@ -1298,7 +1463,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 30, 2026.
+  Last updated on Nov 04, 2026.
   <br/>
 </p>
   </div>

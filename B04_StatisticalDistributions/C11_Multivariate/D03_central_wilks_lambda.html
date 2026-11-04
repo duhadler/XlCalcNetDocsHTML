@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Distribution of Wilks’ \(\Lambda\) &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>Distribution of Wilks’ \(\Lambda\) &#8212; XlCalcNet 1.1.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="../../_static/documentation_options.js?v=051bfb12"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Distribution of the product of independent beta variables" href="D02_betaprod.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 30, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 04, 2026"/>
   </head>
   
   
@@ -172,13 +172,13 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/index.html">Basic floating point functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">Operator overloading, general real functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">General real functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C02_MachineConstants.html">Machine constants, general</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C03_PropertiesOfNumbers.html">Properties of numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C04_IntegerAndRemainder.html">Integer related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C05_RealFpManipulation.html">Floating point functions for real numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C06_FractionRemainder.html">Fraction and remainder related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C07_MachineConstants.html">Functions related to mantissa width and exponent range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C07_FractionMantissa.html">Functions related to mantissa width and exponent range</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B02_BasicFloatingPointFunctions/C08_MathConstants.html">Mathematical Constants</a></li>
 </ul>
 </details></li>
@@ -906,7 +906,7 @@ document.write(`
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dist_wilks_lambda</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dist_wilks_lambda" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, <code class="docutils literal notranslate"><span class="pre">ipm</span></code>, <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">gmp</span></code> or <code class="docutils literal notranslate"><span class="pre">apm</span></code>.</p>
 <p>The Wilks’ <span class="math notranslate nohighlight">\(\Lambda\)</span> distribution is a continuous probability distribution with <span class="math notranslate nohighlight">\(p \ge 1\)</span> predictor variables, error degress of freedom <span class="math notranslate nohighlight">\(m \ge 1\)</span> and <span class="math notranslate nohighlight">\(n \ge 1\)</span>, and the support interval <span class="math notranslate nohighlight">\((0,1)\)</span>.
-See also: <span id="id1">Wilks [<a class="reference internal" href="../../99BackMatter/index.html#id269" title="S. S. Wilks. Certain generalizations in the analysis of variance. Biometrika, 24:471–494, 1932.">1448</a>]</span>, <span id="id2">Anderson [<a class="reference internal" href="../../99BackMatter/index.html#id9" title="T. W. Anderson. An Introduction to Multivariate Statistical Analysis. John Wiley &amp; Sons, Inc., 3 edition, 2003.">9</a>]</span>, <span id="id3">Muirhead [<a class="reference internal" href="../../99BackMatter/index.html#id184" title="R. J. Muirhead. Aspects of Multivariate Statistical Theory. John Wiley and Sons, 1982.">418</a>]</span>, <span id="id4">Butler [<a class="reference internal" href="../../99BackMatter/index.html#id37" title="R.W. Butler. Saddlepoint Approximations with Applications. Cambridge University Press, 1st edition, 2007.">165</a>]</span>, <span id="id5">Pham-Gia [<a class="reference internal" href="../../99BackMatter/index.html#id216" title="T. Pham-Gia. Exact distribution of the generalized wilks' statistic and applications. Journal of Multivariate Analysis, 99(8):1698–1716, 2008. Available at http://www.sciencedirect.com/science/article/pii/S0047259X08000249. URL: http://www.sciencedirect.com/science/article/pii/S0047259X08000249, doi:http://dx.doi.org/10.1016/j.jmva.2008.01.021.">469</a>]</span>, <span id="id6">Witkovský [<a class="reference internal" href="../../99BackMatter/index.html#id447" title="V. Witkovský. Wilks' Lambda Distribution. CharFunTool: The characteristic functions toolbox, 2018. [Online; accessed 22-July-2024]. URL: https://github.com/witkovsky/CharFunTool/blob/master/CF_Repository/cf_LogRV_WilksLambda.m.">1493</a>]</span>, <span id="id7">Witkovský [<a class="reference internal" href="../../99BackMatter/index.html#id448" title="V. Witkovský. Test for Equality of Means. CharFunTool: The characteristic functions toolbox, 2018. [Online; accessed 22-July-2024]. URL: https://github.com/witkovsky/CharFunTool/blob/master/CF_Repository/cfTest_EqualityMeans.m.">1492</a>]</span>.</p>
+See also: <span id="id1">Wilks [<a class="reference internal" href="../../99BackMatter/index.html#id269" title="S. S. Wilks. Certain generalizations in the analysis of variance. Biometrika, 24:471–494, 1932.">1447</a>]</span>, <span id="id2">Anderson [<a class="reference internal" href="../../99BackMatter/index.html#id9" title="T. W. Anderson. An Introduction to Multivariate Statistical Analysis. John Wiley &amp; Sons, Inc., 3 edition, 2003.">9</a>]</span>, <span id="id3">Muirhead [<a class="reference internal" href="../../99BackMatter/index.html#id184" title="R. J. Muirhead. Aspects of Multivariate Statistical Theory. John Wiley and Sons, 1982.">418</a>]</span>, <span id="id4">Butler [<a class="reference internal" href="../../99BackMatter/index.html#id37" title="R.W. Butler. Saddlepoint Approximations with Applications. Cambridge University Press, 1st edition, 2007.">165</a>]</span>, <span id="id5">Pham-Gia [<a class="reference internal" href="../../99BackMatter/index.html#id216" title="T. Pham-Gia. Exact distribution of the generalized wilks' statistic and applications. Journal of Multivariate Analysis, 99(8):1698–1716, 2008. Available at http://www.sciencedirect.com/science/article/pii/S0047259X08000249. URL: http://www.sciencedirect.com/science/article/pii/S0047259X08000249, doi:http://dx.doi.org/10.1016/j.jmva.2008.01.021.">469</a>]</span>, <span id="id6">Witkovský [<a class="reference internal" href="../../99BackMatter/index.html#id447" title="V. Witkovský. Wilks' Lambda Distribution. CharFunTool: The characteristic functions toolbox, 2018. [Online; accessed 22-July-2024]. URL: https://github.com/witkovsky/CharFunTool/blob/master/CF_Repository/cf_LogRV_WilksLambda.m.">1492</a>]</span>, <span id="id7">Witkovský [<a class="reference internal" href="../../99BackMatter/index.html#id448" title="V. Witkovský. Test for Equality of Means. CharFunTool: The characteristic functions toolbox, 2018. [Online; accessed 22-July-2024]. URL: https://github.com/witkovsky/CharFunTool/blob/master/CF_Repository/cfTest_EqualityMeans.m.">1491</a>]</span>.</p>
 </dd></dl>
 
 <p></p>
@@ -1238,7 +1238,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 30, 2026.
+  Last updated on Nov 04, 2026.
   <br/>
 </p>
   </div>

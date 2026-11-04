@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>Index &#8212; XlCalcNet 1.1.0 documentation</title>
   
   
   
@@ -37,7 +37,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="_static/documentation_options.js?v=051bfb12"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -49,7 +49,7 @@
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 30, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 04, 2026"/>
   </head>
   
   
@@ -170,13 +170,13 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="B02_BasicFloatingPointFunctions/index.html">Basic floating point functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">Operator overloading, general real functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">General real functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B02_BasicFloatingPointFunctions/C02_MachineConstants.html">Machine constants, general</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B02_BasicFloatingPointFunctions/C03_PropertiesOfNumbers.html">Properties of numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B02_BasicFloatingPointFunctions/C04_IntegerAndRemainder.html">Integer related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B02_BasicFloatingPointFunctions/C05_RealFpManipulation.html">Floating point functions for real numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B02_BasicFloatingPointFunctions/C06_FractionRemainder.html">Fraction and remainder related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="B02_BasicFloatingPointFunctions/C07_MachineConstants.html">Functions related to mantissa width and exponent range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="B02_BasicFloatingPointFunctions/C07_FractionMantissa.html">Functions related to mantissa width and exponent range</a></li>
 <li class="toctree-l2"><a class="reference internal" href="B02_BasicFloatingPointFunctions/C08_MathConstants.html">Mathematical Constants</a></li>
 </ul>
 </details></li>
@@ -2718,7 +2718,7 @@ document.write(`
         <li><a href="B04_StatisticalDistributions/C04_BaseClassDiscrete.html#rv_discrete.entropy">(rv_discrete method)</a>
 </li>
       </ul></li>
-      <li><a href="B02_BasicFloatingPointFunctions/C07_MachineConstants.html#ctx.epsilon">epsilon() (ctx method)</a>
+      <li><a href="B02_BasicFloatingPointFunctions/C07_FractionMantissa.html#ctx.epsilon">epsilon() (ctx method)</a>
 </li>
       <li><a href="B07_NumpyMultiprecision/C19_TruthValueTesting.html#npm.equal">equal() (npm method)</a>
 </li>
@@ -2920,10 +2920,10 @@ document.write(`
 </li>
       <li><a href="B16_FastApproximations/C03_CentralTFBeta.html#ctx.fisher_r2_lee_cl">fisher_r2_lee_cl() (ctx method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="B16_FastApproximations/C05_NoncentralFBeta.html#ctx.fisher_r2_lee_mu3_cdf">fisher_r2_lee_mu3_cdf() (ctx method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="B16_FastApproximations/C03_CentralTFBeta.html#ctx.fisher_r2_lee_qtf">fisher_r2_lee_qtf() (ctx method)</a>
 </li>
       <li><a href="B04_StatisticalDistributions/C09_Noncentral/D10_noncentral_R2_type_II.html#ctx.fisher_r2_spa">fisher_r2_spa() (ctx method)</a>
@@ -2979,6 +2979,10 @@ document.write(`
       <li><a href="B05_NumericalCalculus/C12_MpMathFunctionsApproximation.html#ctx.fourierval">fourierval() (ctx method)</a>
 </li>
       <li><a href="B07_NumpyMultiprecision/C23_ArithmeticScalarsAndIterables.html#ctx.fprod">fprod() (ctx method)</a>
+</li>
+      <li><a href="B02_BasicFloatingPointFunctions/C06_FractionRemainder.html#ctx.frac">frac() (ctx method)</a>
+</li>
+      <li><a href="B02_BasicFloatingPointFunctions/C06_FractionRemainder.html#ctx.fractionalpart">fractionalpart() (ctx method)</a>
 </li>
       <li><a href="C03_UserInferentialStatistics/D03_BasicTests2CorrSamples.html#ctx.fratio_variance_2csamples_ci">fratio_variance_2csamples_ci() (ctx method)</a>
 </li>
@@ -4320,7 +4324,7 @@ document.write(`
 </li>
       <li><a href="B12_HypergeometricpFq/C08_Anger_Weber_Lommel_Functions.html#ctx.lommel_s2">lommel_s2() (ctx method)</a>
 </li>
-      <li><a href="B02_BasicFloatingPointFunctions/C07_MachineConstants.html#ctx.lowestvalue">lowestvalue() (ctx method)</a>
+      <li><a href="B02_BasicFloatingPointFunctions/C07_FractionMantissa.html#ctx.lowestvalue">lowestvalue() (ctx method)</a>
 </li>
       <li><a href="B02_BasicFloatingPointFunctions/C04_IntegerAndRemainder.html#ctx.lrint">lrint() (ctx method)</a>
 </li>
@@ -4830,7 +4834,7 @@ document.write(`
 </li>
       <li><a href="B07_NumpyMultiprecision/C15_ExtremaFinding.html#npm.maximum">maximum() (npm method)</a>
 </li>
-      <li><a href="B02_BasicFloatingPointFunctions/C07_MachineConstants.html#ctx.maxvalue">maxvalue() (ctx method)</a>
+      <li><a href="B02_BasicFloatingPointFunctions/C07_FractionMantissa.html#ctx.maxvalue">maxvalue() (ctx method)</a>
 </li>
       <li><a href="B04_StatisticalDistributions/C07_IncompleteGamma/D06_Maxwell.html#math53.maxwell_cdf">maxwell_cdf() (math53 method)</a>
 </li>
@@ -4888,7 +4892,7 @@ document.write(`
 </li>
       <li><a href="B07_NumpyMultiprecision/C15_ExtremaFinding.html#npm.minimum">minimum() (npm method)</a>
 </li>
-      <li><a href="B02_BasicFloatingPointFunctions/C07_MachineConstants.html#ctx.minposvalue">minposvalue() (ctx method)</a>
+      <li><a href="B02_BasicFloatingPointFunctions/C07_FractionMantissa.html#ctx.minposvalue">minposvalue() (ctx method)</a>
 </li>
       <li><a href="B05_NumericalCalculus/C04_MpMathRootfindingOptimisation.html#ctx.mnewton_c">mnewton_c() (ctx method)</a>
 </li>
@@ -5246,17 +5250,13 @@ document.write(`
 </li>
       <li><a href="B05_NumericalCalculus/C04_MpMathRootfindingOptimisation.html#ctx.newton_steffenson_c">newton_steffenson_c() (ctx method)</a>
 </li>
-      <li><a href="B05_NumericalCalculus/C16_EigenCppOptLib.html#ctxboost.NewtonDescent">NewtonDescent() (ctxboost method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="B05_NumericalCalculus/C16_EigenCppOptLib.html#ctxboost.NewtonDescent">NewtonDescent() (ctxboost method)</a>
+</li>
       <li><a href="B05_NumericalCalculus/C03_BoostRootfinding.html#ctxboost.NewtonRaphson">NewtonRaphson() (ctxboost method)</a>
 </li>
-      <li><a href="B02_BasicFloatingPointFunctions/C07_MachineConstants.html#ctx.nextabove">nextabove() (ctx method)</a>
-</li>
-      <li><a href="B02_BasicFloatingPointFunctions/C07_MachineConstants.html#ctx.nextbelow">nextbelow() (ctx method)</a>
-</li>
-      <li><a href="B02_BasicFloatingPointFunctions/C07_MachineConstants.html#ctx.nexttowards">nexttowards() (ctx method)</a>
+      <li><a href="B02_BasicFloatingPointFunctions/C07_FractionMantissa.html#ctx.nextafter">nextafter() (ctx method)</a>
 </li>
       <li><a href="C02_UserDistributions/D01_MCP_distribution.html#math53lib.NmaxRhoCdf">NmaxRhoCdf() (math53lib method)</a>
 </li>
@@ -5328,7 +5328,7 @@ document.write(`
 </li>
       <li><a href="B02_BasicFloatingPointFunctions/C02_MachineConstants.html#Cxt.one">one (Cxt property)</a>
 </li>
-      <li><a href="B02_BasicFloatingPointFunctions/C02_MachineConstants.html#ctx.onej">onej (ctx property)</a>
+      <li><a href="B03_ElementaryScalarFunctions/C01_ComplexComponents.html#ctx.onej">onej (ctx property)</a>
 </li>
       <li><a href="B07_NumpyMultiprecision/C01_ArraysFromShapeOrValue.html#npm.ones">ones() (npm method)</a>
 </li>
@@ -6140,18 +6140,6 @@ document.write(`
 </li>
       <li><a href="B04_StatisticalDistributions/C02_BaseClass.html#rv_base.raw_moments">raw_moments() (rv_base method)</a>
 </li>
-      <li><a href="B02_BasicFloatingPointFunctions/C01_BasicFunctions.html#ctx.rawadd">rawadd() (ctx method)</a>
-</li>
-      <li><a href="B02_BasicFloatingPointFunctions/C01_BasicFunctions.html#ctx.rawaddint32">rawaddint32() (ctx method)</a>
-</li>
-      <li><a href="B02_BasicFloatingPointFunctions/C01_BasicFunctions.html#ctx.rawdiv">rawdiv() (ctx method)</a>
-</li>
-      <li><a href="B02_BasicFloatingPointFunctions/C01_BasicFunctions.html#ctx.rawdivint32">rawdivint32() (ctx method)</a>
-</li>
-      <li><a href="B02_BasicFloatingPointFunctions/C01_BasicFunctions.html#ctx.rawint32div">rawint32div() (ctx method)</a>
-</li>
-      <li><a href="B02_BasicFloatingPointFunctions/C01_BasicFunctions.html#ctx.rawint32sub">rawint32sub() (ctx method)</a>
-</li>
       <li><a href="B13_AlgebraWithRandomVariables/C10_RawMoments.html#ctx.rawmoments_from_centralmoments">rawmoments_from_centralmoments() (ctx method)</a>
 </li>
       <li><a href="B13_AlgebraWithRandomVariables/C10_RawMoments.html#ctx.rawmoments_from_cf">rawmoments_from_cf() (ctx method)</a>
@@ -6168,22 +6156,12 @@ document.write(`
 </li>
       <li><a href="B13_AlgebraWithRandomVariables/C10_RawMoments.html#ctx.rawmoments_from_pmf_vector">rawmoments_from_pmf_vector() (ctx method)</a>
 </li>
-      <li><a href="B02_BasicFloatingPointFunctions/C01_BasicFunctions.html#ctx.rawmul">rawmul() (ctx method)</a>
-</li>
-      <li><a href="B02_BasicFloatingPointFunctions/C01_BasicFunctions.html#ctx.rawmulint32">rawmulint32() (ctx method)</a>
-</li>
-      <li><a href="B02_BasicFloatingPointFunctions/C01_BasicFunctions.html#ctx.rawsub">rawsub() (ctx method)</a>
-</li>
-      <li><a href="B02_BasicFloatingPointFunctions/C01_BasicFunctions.html#ctx.rawsubint32">rawsubint32() (ctx method)</a>
-</li>
       <li><a href="B04_StatisticalDistributions/C05_ElementaryPart/D10_Rayleigh.html#math53.rayleigh_cdf">rayleigh_cdf() (math53 method)</a>
 </li>
       <li><a href="B04_StatisticalDistributions/C05_ElementaryPart/D10_Rayleigh.html#math53.rayleigh_pdf">rayleigh_pdf() (math53 method)</a>
 </li>
       <li><a href="B04_StatisticalDistributions/C05_ElementaryPart/D10_Rayleigh.html#math53.rayleigh_qtf">rayleigh_qtf() (math53 method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="B03_ElementaryScalarFunctions/C01_ComplexComponents.html#ctx.real">real() (ctx method)</a>
 </li>
       <li><a href="B07_NumpyMultiprecision/C16_ArithmeticElementwise.html#npm.reciprocal">reciprocal() (npm method)</a>
@@ -6194,6 +6172,8 @@ document.write(`
 </li>
       <li><a href="B04_StatisticalDistributions/C08_IncompleteBeta/D02_CentralFisherF.html#dist_fisher_f.recurrence_pdf">recurrence_pdf() (dist_fisher_f method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="B02_BasicFloatingPointFunctions/C06_FractionRemainder.html#ctx.remainder">remainder() (ctx method)</a>
 
       <ul>
@@ -6968,7 +6948,7 @@ document.write(`
 <h2 id="U">U</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="B02_BasicFloatingPointFunctions/C07_MachineConstants.html#ctx.ulp">ulp() (ctx method)</a>
+      <li><a href="B02_BasicFloatingPointFunctions/C07_FractionMantissa.html#ctx.ulp">ulp() (ctx method)</a>
 </li>
       <li><a href="B04_StatisticalDistributions/C05_ElementaryPart/D12_Uniform.html#math53.uniform_cdf">uniform_cdf() (math53 method)</a>
 </li>
@@ -7230,7 +7210,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 30, 2026.
+  Last updated on Nov 04, 2026.
   <br/>
 </p>
   </div>

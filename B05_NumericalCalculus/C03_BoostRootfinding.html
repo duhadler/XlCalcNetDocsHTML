@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Boost/Math: Root Finding and Minimization Algorithms &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>Boost/Math: Root Finding and Minimization Algorithms &#8212; XlCalcNet 1.1.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="../_static/documentation_options.js?v=051bfb12"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -52,7 +52,7 @@
     <link rel="prev" title="DAMath: Numerical Rootfinding and Minimization" href="C02_DAmathRootfinding.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 30, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 04, 2026"/>
   </head>
   
   
@@ -171,13 +171,13 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/index.html">Basic floating point functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">Operator overloading, general real functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">General real functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C02_MachineConstants.html">Machine constants, general</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C03_PropertiesOfNumbers.html">Properties of numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C04_IntegerAndRemainder.html">Integer related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C05_RealFpManipulation.html">Floating point functions for real numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C06_FractionRemainder.html">Fraction and remainder related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C07_MachineConstants.html">Functions related to mantissa width and exponent range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C07_FractionMantissa.html">Functions related to mantissa width and exponent range</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C08_MathConstants.html">Mathematical Constants</a></li>
 </ul>
 </details></li>
@@ -960,7 +960,7 @@ result:  3.036588971875662
 <dd class="field-even"><p>a tuple (<em>root, iter</em>), where <em>root</em> is an approximation to a root of the function <em>f</em> in the interval (<em>xmin, xmax</em>), using the Newton algorithm for finding a zero; and <em>iter</em> is the actual number of iterations.</p>
 </dd>
 </dl>
-<p>See also:  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id889" title="Wikipedia. Newton's method. Wikimedia Foundation, 2004. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Newton%27s_method.">1092</a>]</span>,  BoostMath <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id288" title="P. A. Bristow and H. Holin. Root Finding With Derivatives: Newton-Raphson, Halley and Schröder. Boost Math Toolkit Library, 2013. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/roots_deriv.html.">48</a>]</span>, MathWorld <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1422" title="E. W. Weisstein. Newton's Method. From MathWorld - A Wolfram Web Resource, 2004. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/NewtonsMethod.html.">806</a>]</span>.</p>
+<p>See also:  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id889" title="Wikipedia. Newton's method. Wikimedia Foundation, 2004. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Newton%27s_method.">1091</a>]</span>,  BoostMath <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id288" title="P. A. Bristow and H. Holin. Root Finding With Derivatives: Newton-Raphson, Halley and Schröder. Boost Math Toolkit Library, 2013. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/roots_deriv.html.">48</a>]</span>, MathWorld <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1422" title="E. W. Weisstein. Newton's Method. From MathWorld - A Wolfram Web Resource, 2004. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/NewtonsMethod.html.">805</a>]</span>.</p>
 <p>The routine in Python:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">28</span>
@@ -1001,7 +1001,7 @@ result:  3.0365889718756627
 <dd class="field-even"><p>a tuple (<em>root, iter</em>), where <em>root</em> is an approximation to a root of the function <em>f</em> in the interval (<em>xmin, xmax</em>), using the Halley algorithm for finding a zero; and <em>iter</em> is the actual number of iterations.</p>
 </dd>
 </dl>
-<p>See also:  Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id891" title="Wikipedia. Halley's method. Wikimedia Foundation, 2004. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Halley%27s_method.">1089</a>]</span>,  BoostMath <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id288" title="P. A. Bristow and H. Holin. Root Finding With Derivatives: Newton-Raphson, Halley and Schröder. Boost Math Toolkit Library, 2013. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/roots_deriv.html.">48</a>]</span>, MathWorld <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1423" title="E. W. Weisstein. Halley's Method. From MathWorld - A Wolfram Web Resource, 2004. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/HalleysMethod.html.">801</a>]</span>.</p>
+<p>See also:  Wikipedia <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id891" title="Wikipedia. Halley's method. Wikimedia Foundation, 2004. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Halley%27s_method.">1088</a>]</span>,  BoostMath <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id288" title="P. A. Bristow and H. Holin. Root Finding With Derivatives: Newton-Raphson, Halley and Schröder. Boost Math Toolkit Library, 2013. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/roots_deriv.html.">48</a>]</span>, MathWorld <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1423" title="E. W. Weisstein. Halley's Method. From MathWorld - A Wolfram Web Resource, 2004. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/HalleysMethod.html.">800</a>]</span>.</p>
 <p>The routine in Python:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">28</span>
@@ -1043,7 +1043,7 @@ result:  3.0365889718756627
 <dd class="field-even"><p>a tuple (<em>root, iter</em>), where <em>root</em> is an approximation to a root of the function <em>f</em> in the interval (<em>xmin, xmax</em>), using the Schröder algorithm for finding a zero; and <em>iter</em> is the actual number of iterations.</p>
 </dd>
 </dl>
-<p>See also:  BoostMath <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id288" title="P. A. Bristow and H. Holin. Root Finding With Derivatives: Newton-Raphson, Halley and Schröder. Boost Math Toolkit Library, 2013. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/roots_deriv.html.">48</a>]</span>, MathWorld <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1424" title="E. W. Weisstein. Schröder's Method. From MathWorld - A Wolfram Web Resource, 2004. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/SchroedersMethod.html.">811</a>]</span>, <span id="id11">Schröder [<a class="reference internal" href="../99BackMatter/index.html#id233" title="E. Schröder. Über unendlich viele algorithmen zur auflösung der gleichungen. Mathematische Annalen, Springer, 2:317–365, 1870.">495</a>]</span>.</p>
+<p>See also:  BoostMath <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id288" title="P. A. Bristow and H. Holin. Root Finding With Derivatives: Newton-Raphson, Halley and Schröder. Boost Math Toolkit Library, 2013. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/roots_deriv.html.">48</a>]</span>, MathWorld <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1424" title="E. W. Weisstein. Schröder's Method. From MathWorld - A Wolfram Web Resource, 2004. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/SchroedersMethod.html.">810</a>]</span>, <span id="id11">Schröder [<a class="reference internal" href="../99BackMatter/index.html#id233" title="E. Schröder. Über unendlich viele algorithmen zur auflösung der gleichungen. Mathematische Annalen, Springer, 2:317–365, 1870.">495</a>]</span>.</p>
 <p>The routine in Python:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">28</span>
@@ -1082,7 +1082,7 @@ result:  3.0365889718756627
 <dd class="field-even"><p>a tuple (<em>localmin, fx0, iter</em>), where <em>localmin</em> is  an approximation to a local minimum of the function f in the interval (<em>a,b</em>), using Brent’s algorithm; <em>fx0</em> is  the value of <em>f(localmin)</em>; and <em>iter</em> is the  number of iterations.</p>
 </dd>
 </dl>
-<p>See also:  Wikipedia <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id897" title="Wikipedia. Brent's method. Wikimedia Foundation, 2004. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Brent%27s_method.">1084</a>]</span>, <span id="id13">Zhang [<a class="reference internal" href="../99BackMatter/index.html#id285" title="Z. Zhang. An improvement to the brent's method. IJEA, 2:2–26, 2011. Available at: https://www.cscjournals.org/manuscript/Journals/IJEA/Volume2/Issue1/IJEA-7.pdf.">1497</a>]</span>, <span id="id14">Brent [<a class="reference internal" href="../99BackMatter/index.html#id28" title="R. Brent. Algorithms for Minimization without Derivatives. Prentice-Hall (Reprinted by Dover, 2002.), 1st edition, 1973.">36</a>]</span>,  BoostMath <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id290" title="P. A. Bristow and H. Holin. Locating Function Minima using Brent's algorithm. Boost Math Toolkit Library, 2013. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/roots_deriv.html.">47</a>]</span>.</p>
+<p>See also:  Wikipedia <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id897" title="Wikipedia. Brent's method. Wikimedia Foundation, 2004. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Brent%27s_method.">1083</a>]</span>, <span id="id13">Zhang [<a class="reference internal" href="../99BackMatter/index.html#id285" title="Z. Zhang. An improvement to the brent's method. IJEA, 2:2–26, 2011. Available at: https://www.cscjournals.org/manuscript/Journals/IJEA/Volume2/Issue1/IJEA-7.pdf.">1496</a>]</span>, <span id="id14">Brent [<a class="reference internal" href="../99BackMatter/index.html#id28" title="R. Brent. Algorithms for Minimization without Derivatives. Prentice-Hall (Reprinted by Dover, 2002.), 1st edition, 1973.">36</a>]</span>,  BoostMath <span id="id15">[<a class="reference internal" href="../99BackMatter/index.html#id290" title="P. A. Bristow and H. Holin. Locating Function Minima using Brent's algorithm. Boost Math Toolkit Library, 2013. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/roots_deriv.html.">47</a>]</span>.</p>
 <p>The routine in Python:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
@@ -1198,7 +1198,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 30, 2026.
+  Last updated on Nov 04, 2026.
   <br/>
 </p>
   </div>

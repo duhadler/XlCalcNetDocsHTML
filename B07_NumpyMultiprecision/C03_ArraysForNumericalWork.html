@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Building special arrays for numerical work &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>Building special arrays for numerical work &#8212; XlCalcNet 1.1.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="../_static/documentation_options.js?v=051bfb12"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Numpy array creation from existing data" href="C02_ArraysFromExistingData.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 30, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 04, 2026"/>
   </head>
   
   
@@ -172,13 +172,13 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/index.html">Basic floating point functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">Operator overloading, general real functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">General real functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C02_MachineConstants.html">Machine constants, general</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C03_PropertiesOfNumbers.html">Properties of numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C04_IntegerAndRemainder.html">Integer related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C05_RealFpManipulation.html">Floating point functions for real numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C06_FractionRemainder.html">Fraction and remainder related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C07_MachineConstants.html">Functions related to mantissa width and exponent range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C07_FractionMantissa.html">Functions related to mantissa width and exponent range</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C08_MathConstants.html">Mathematical Constants</a></li>
 </ul>
 </details></li>
@@ -977,7 +977,7 @@ The length of the output might not be numerically stable.</p>
 <span class="go">[1.00000000000000 1.25000000000000 1.50000000000000 1.75000000000000]</span>
 </pre></div>
 </div>
-<p>From mpmath. See also  Mpmath <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id783" title="The Mpmath Development Team. Generation of a list of real numbers. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2015. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#arange.">685</a>]</span>.</p>
+<p>From mpmath. See also  Mpmath <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id783" title="The Mpmath Development Team. Generation of a list of real numbers. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2015. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#arange.">684</a>]</span>.</p>
 <p>This is a generalized version of Python’s <code class="xref py py-func docutils literal notranslate"><span class="pre">range()</span></code> function
 that accepts fractional endpoints and step sizes and
 returns a list of <code class="docutils literal notranslate"><span class="pre">mpf</span></code> instances.</p>
@@ -1062,7 +1062,7 @@ is more convenient.</p>
 <span class="go">[1.00000000000000 1.75000000000000 2.50000000000000 3.25000000000000]</span>
 </pre></div>
 </div>
-<p>From mpmath. . See also  Mpmath <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id784" title="The Mpmath Development Team. Generation of a list of evenly spaced real numbers. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2015. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#linspace.">684</a>]</span>.</p>
+<p>From mpmath. . See also  Mpmath <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id784" title="The Mpmath Development Team. Generation of a list of evenly spaced real numbers. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2015. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#linspace.">683</a>]</span>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">linspace(a,</span> <span class="pre">b,</span> <span class="pre">n)</span></code> returns a list of <span class="math notranslate nohighlight">\(n\)</span> evenly spaced samples from <span class="math notranslate nohighlight">\(a\)</span> to <span class="math notranslate nohighlight">\(b\)</span>.</p>
 <p>The syntax <code class="docutils literal notranslate"><span class="pre">linspace(mpi(a,b),</span> <span class="pre">n)</span></code> is also valid.</p>
 <p>This function is often more convenient than <a class="reference internal" href="#npm.arange" title="npm.arange"><code class="xref py py-func docutils literal notranslate"><span class="pre">arange()</span></code></a> for partitioning an interval into subintervals, since
@@ -1644,7 +1644,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 30, 2026.
+  Last updated on Nov 04, 2026.
   <br/>
 </p>
   </div>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Setting up XlCalcNet &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>Setting up XlCalcNet &#8212; XlCalcNet 1.1.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="../_static/documentation_options.js?v=051bfb12"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Setup and general usage" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 30, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 04, 2026"/>
   </head>
   
   
@@ -172,13 +172,13 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/index.html">Basic floating point functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">Operator overloading, general real functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">General real functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C02_MachineConstants.html">Machine constants, general</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C03_PropertiesOfNumbers.html">Properties of numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C04_IntegerAndRemainder.html">Integer related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C05_RealFpManipulation.html">Floating point functions for real numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C06_FractionRemainder.html">Fraction and remainder related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C07_MachineConstants.html">Functions related to mantissa width and exponent range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C07_FractionMantissa.html">Functions related to mantissa width and exponent range</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C08_MathConstants.html">Mathematical Constants</a></li>
 </ul>
 </details></li>
@@ -1989,7 +1989,7 @@ Memory used after full collection:   1,431,368
 <p>In double precision and binary floating point arithmetic, the tangent of <span class="math notranslate nohighlight">\(x = 1.57079632679489\)</span> is calculated as <span class="math notranslate nohighlight">\(\tan(x) = 1.48752 \cdot 10^{14}\)</span>, whereas the correct result is <span class="math notranslate nohighlight">\(\tan(x) = 1.51075 \cdot 10^{14}\)</span>. This amounts to an absolute error of <span class="math notranslate nohighlight">\(2.32287  \cdot 10^{12}\)</span> and a relative error of <span class="math notranslate nohighlight">\(1.54\%\)</span>.</p>
 <p>There are also limits on the range of arguments, e.g. <span class="math notranslate nohighlight">\(\sin(10^{8})\)</span> returns the value  <span class="math notranslate nohighlight">\(-9.31639 \cdot 10^{-1}\)</span>   (with an relative error of <span class="math notranslate nohighlight">\(-6.22776 \cdot 10^{-13}\)</span>), whereas  <span class="math notranslate nohighlight">\(\sin(10^{9})\)</span> returns an invalid result (the exact result is  <span class="math notranslate nohighlight">\(5.45843 \cdot 10^{-1}\)</span>)</p>
 <p><strong>Example: Logarithms and Exponential Functions</strong></p>
-<p>Consider the following example from <span id="id5">Kaveh R. Ghazi and Vincent Lefèvre and Philippe Théveny and Paul Zimmermann [<a class="reference internal" href="../99BackMatter/index.html#id102" title="Kaveh R. Ghazi and Vincent Lefèvre and Philippe Théveny and Paul Zimmermann. Why and how to use arbitrary precision. Computing in Science and Engineering, 12(3):62–65, 2010. Preprint available at http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.212.6321&amp;rep=rep1&amp;type=pdf.">1500</a>]</span>:</p>
+<p>Consider the following example from <span id="id5">Kaveh R. Ghazi and Vincent Lefèvre and Philippe Théveny and Paul Zimmermann [<a class="reference internal" href="../99BackMatter/index.html#id102" title="Kaveh R. Ghazi and Vincent Lefèvre and Philippe Théveny and Paul Zimmermann. Why and how to use arbitrary precision. Computing in Science and Engineering, 12(3):62–65, 2010. Preprint available at http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.212.6321&amp;rep=rep1&amp;type=pdf.">1499</a>]</span>:</p>
 <p>Determine 10 decimal digits of the constant</p>
 <div class="math notranslate nohighlight">
 \[Y = 173746a + 94228b - 78487c, \quad \text{where }\]</div>
@@ -1997,7 +1997,7 @@ Memory used after full collection:   1,431,368
 \[a = \sin(10^{22}), b = \log(17.1), c = \exp(0.42).\]</div>
 <p>The expected result is <span class="math notranslate nohighlight">\(Y = -1.341818958 \cdot 10^{-12}\)</span>.</p>
 <p><strong>Example: Linear Algebra</strong></p>
-<p>The following example is from <span id="id6">W. Hofschuster and W. Krämer [<a class="reference internal" href="../99BackMatter/index.html#id129" title="W. Hofschuster and W. Krämer. C-xsc 2.0: a c++ library for extended scientific computing. In R. Alt, A. Frommer, R.B. Kearfott, and W. Luther, editors, Numerical Software with Result Verification, Lecture notes in Computer Science, pages 15–35. Springer-Verlag, Heidelberg, 2004.">1501</a>]</span>:</p>
+<p>The following example is from <span id="id6">W. Hofschuster and W. Krämer [<a class="reference internal" href="../99BackMatter/index.html#id129" title="W. Hofschuster and W. Krämer. C-xsc 2.0: a c++ library for extended scientific computing. In R. Alt, A. Frommer, R.B. Kearfott, and W. Luther, editors, Numerical Software with Result Verification, Lecture notes in Computer Science, pages 15–35. Springer-Verlag, Heidelberg, 2004.">1500</a>]</span>:</p>
 <p>We want to solve the (ill-conditioned) system of linear equations <span class="math notranslate nohighlight">\(Ax = b\)</span> with</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix}
@@ -2174,7 +2174,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 30, 2026.
+  Last updated on Nov 04, 2026.
   <br/>
 </p>
   </div>

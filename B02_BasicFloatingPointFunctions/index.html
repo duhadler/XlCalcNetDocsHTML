@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Basic floating point functions &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>Basic floating point functions &#8212; XlCalcNet 1.1.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="../_static/documentation_options.js?v=051bfb12"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -49,11 +49,11 @@
     <script src="../_static/custom-icon.js?v=74687d30"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Operator overloading, general real functions" href="C01_BasicFunctions.html" />
+    <link rel="next" title="General real functions" href="C01_BasicFunctions.html" />
     <link rel="prev" title="Building user libraries and documenting them" href="../B01_GeneralUsage/C08_BuildingUserLibraries.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 30, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 04, 2026"/>
   </head>
   
   
@@ -172,13 +172,13 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Basic floating point functions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html">Operator overloading, general real functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html">General real functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C02_MachineConstants.html">Machine constants, general</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C03_PropertiesOfNumbers.html">Properties of numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_IntegerAndRemainder.html">Integer related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_RealFpManipulation.html">Floating point functions for real numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C06_FractionRemainder.html">Fraction and remainder related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C07_MachineConstants.html">Functions related to mantissa width and exponent range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_FractionMantissa.html">Functions related to mantissa width and exponent range</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C08_MathConstants.html">Mathematical Constants</a></li>
 </ul>
 </details></li>
@@ -875,43 +875,7 @@ document.write(`
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic real functions</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="C01_BasicFunctions.html">Operator overloading, general real functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html#operator-overloading-scope-and-restrictions">Operator overloading: scope and restrictions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html#the-cost-of-creating-and-destroying-objects">The cost of creating and destroying objects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html#raw-addition-of-two-floating-point-numbers">Raw addition of two floating point numbers</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C01_BasicFunctions.html#ctx.rawadd"><code class="docutils literal notranslate"><span class="pre">ctx.rawadd()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html#raw-subtraction-of-two-floating-point-numbers">Raw subtraction of two floating point numbers</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C01_BasicFunctions.html#ctx.rawsub"><code class="docutils literal notranslate"><span class="pre">ctx.rawsub()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html#raw-multiplication-of-two-floating-point-numbers">Raw multiplication of two floating point numbers</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C01_BasicFunctions.html#ctx.rawmul"><code class="docutils literal notranslate"><span class="pre">ctx.rawmul()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html#raw-division-of-two-floating-point-numbers">Raw division of two floating point numbers</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C01_BasicFunctions.html#ctx.rawdiv"><code class="docutils literal notranslate"><span class="pre">ctx.rawdiv()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html#raw-addition-of-a-floating-point-number-and-a-signed-32-bit-integer">Raw addition of a floating point number and a signed 32 bit integer</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C01_BasicFunctions.html#ctx.rawaddint32"><code class="docutils literal notranslate"><span class="pre">ctx.rawaddint32()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html#raw-subtraction-of-a-floating-point-number-and-a-signed-32-bit-integer">Raw subtraction of a floating point number and a signed 32 bit integer</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C01_BasicFunctions.html#ctx.rawsubint32"><code class="docutils literal notranslate"><span class="pre">ctx.rawsubint32()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_BasicFunctions.html#ctx.rawint32sub"><code class="docutils literal notranslate"><span class="pre">ctx.rawint32sub()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html#raw-multiplication-of-a-floating-point-number-and-a-signed-32-bit-integer">Raw multiplication of a floating point number and a signed 32 bit integer</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C01_BasicFunctions.html#ctx.rawmulint32"><code class="docutils literal notranslate"><span class="pre">ctx.rawmulint32()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html#raw-division-of-a-floating-point-number-and-a-signed-32-bit-integer">Raw division of a floating point number and a signed 32 bit integer</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C01_BasicFunctions.html#ctx.rawdivint32"><code class="docutils literal notranslate"><span class="pre">ctx.rawdivint32()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="C01_BasicFunctions.html#ctx.rawint32div"><code class="docutils literal notranslate"><span class="pre">ctx.rawint32div()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="C01_BasicFunctions.html">General real functions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html#fused-multiplication-and-addition-mathrm-fma-x-y-z">Fused multiplication and addition: <span class="math notranslate nohighlight">\(\mathrm{fma}(x, y, z)\)</span></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="C01_BasicFunctions.html#ctx.fma"><code class="docutils literal notranslate"><span class="pre">ctx.fma()</span></code></a></li>
 </ul>
@@ -937,10 +901,6 @@ document.write(`
 </li>
 <li class="toctree-l2"><a class="reference internal" href="C02_MachineConstants.html#one">One</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="C02_MachineConstants.html#Cxt.one"><code class="docutils literal notranslate"><span class="pre">Cxt.one</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C02_MachineConstants.html#imaginary-one">Imaginary One</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C02_MachineConstants.html#ctx.onej"><code class="docutils literal notranslate"><span class="pre">ctx.onej</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="C02_MachineConstants.html#positive-infinity">Positive infinity</a><ul>
@@ -1106,39 +1066,39 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="C06_FractionRemainder.html#ctx.remquo"><code class="docutils literal notranslate"><span class="pre">ctx.remquo()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="C06_FractionRemainder.html#fractional-part-of-a-floating-point-number-mathrm-frac-x">Fractional part of a floating point number: <span class="math notranslate nohighlight">\(\mathrm{frac}(x)\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C06_FractionRemainder.html#ctx.frac"><code class="docutils literal notranslate"><span class="pre">ctx.frac()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="C07_MachineConstants.html">Functions related to mantissa width and exponent range</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C07_MachineConstants.html#machine-epsilon">Machine Epsilon</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C07_MachineConstants.html#ctx.epsilon"><code class="docutils literal notranslate"><span class="pre">ctx.epsilon()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C06_FractionRemainder.html#fractional-part-of-a-floating-point-number-symmetric-function-mathrm-fractionalpart-x">Fractional part of a floating point number (symmetric function): <span class="math notranslate nohighlight">\(\mathrm{fractionalpart}(x)\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C06_FractionRemainder.html#ctx.fractionalpart"><code class="docutils literal notranslate"><span class="pre">ctx.fractionalpart()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C07_MachineConstants.html#unit-in-the-last-place">Unit in the last place</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C07_MachineConstants.html#ctx.ulp"><code class="docutils literal notranslate"><span class="pre">ctx.ulp()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C07_MachineConstants.html#largest-representable-number">Largest representable number</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C07_MachineConstants.html#ctx.maxvalue"><code class="docutils literal notranslate"><span class="pre">ctx.maxvalue()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="C07_FractionMantissa.html">Functions related to mantissa width and exponent range</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="C07_FractionMantissa.html#machine-epsilon">Machine Epsilon</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C07_FractionMantissa.html#ctx.epsilon"><code class="docutils literal notranslate"><span class="pre">ctx.epsilon()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C07_MachineConstants.html#lowest-representable-number">Lowest representable number</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C07_MachineConstants.html#ctx.lowestvalue"><code class="docutils literal notranslate"><span class="pre">ctx.lowestvalue()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_FractionMantissa.html#unit-in-the-last-place">Unit in the last place</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C07_FractionMantissa.html#ctx.ulp"><code class="docutils literal notranslate"><span class="pre">ctx.ulp()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C07_MachineConstants.html#smallest-representable-positive-number">Smallest representable positive number</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C07_MachineConstants.html#ctx.minposvalue"><code class="docutils literal notranslate"><span class="pre">ctx.minposvalue()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_FractionMantissa.html#largest-representable-number">Largest representable number</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C07_FractionMantissa.html#ctx.maxvalue"><code class="docutils literal notranslate"><span class="pre">ctx.maxvalue()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C07_MachineConstants.html#next-representable-floating-point-number-mathrm-nexttowards-x-y">Next representable floating point number: <span class="math notranslate nohighlight">\(\mathrm{nexttowards}(x, y)\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C07_MachineConstants.html#ctx.nexttowards"><code class="docutils literal notranslate"><span class="pre">ctx.nexttowards()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_FractionMantissa.html#lowest-representable-number">Lowest representable number</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C07_FractionMantissa.html#ctx.lowestvalue"><code class="docutils literal notranslate"><span class="pre">ctx.lowestvalue()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C07_MachineConstants.html#next-representable-floating-point-number-mathrm-nextabove-x">Next representable floating point number: <span class="math notranslate nohighlight">\(\mathrm{nextabove}(x)\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C07_MachineConstants.html#ctx.nextabove"><code class="docutils literal notranslate"><span class="pre">ctx.nextabove()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_FractionMantissa.html#smallest-representable-positive-number">Smallest representable positive number</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C07_FractionMantissa.html#ctx.minposvalue"><code class="docutils literal notranslate"><span class="pre">ctx.minposvalue()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C07_MachineConstants.html#next-representable-floating-point-number-mathrm-nextbelow-x">Next representable floating point number: <span class="math notranslate nohighlight">\(\mathrm{nextbelow}(x)\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C07_MachineConstants.html#ctx.nextbelow"><code class="docutils literal notranslate"><span class="pre">ctx.nextbelow()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_FractionMantissa.html#next-representable-floating-point-number-mathrm-nextafter-x-y">Next representable floating point number: <span class="math notranslate nohighlight">\(\mathrm{nextafter}(x, y)\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C07_FractionMantissa.html#ctx.nextafter"><code class="docutils literal notranslate"><span class="pre">ctx.nextafter()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1219,7 +1179,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Operator overloading, general real functions</p>
+        <p class="prev-next-title">General real functions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1258,7 +1218,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 30, 2026.
+  Last updated on Nov 04, 2026.
   <br/>
 </p>
   </div>

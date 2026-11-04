@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Properties of numbers &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>Properties of numbers &#8212; XlCalcNet 1.1.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="../_static/documentation_options.js?v=051bfb12"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Machine constants, general" href="C02_MachineConstants.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 30, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 04, 2026"/>
   </head>
   
   
@@ -172,13 +172,13 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Basic floating point functions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html">Operator overloading, general real functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html">General real functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C02_MachineConstants.html">Machine constants, general</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Properties of numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_IntegerAndRemainder.html">Integer related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_RealFpManipulation.html">Floating point functions for real numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C06_FractionRemainder.html">Fraction and remainder related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C07_MachineConstants.html">Functions related to mantissa width and exponent range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_FractionMantissa.html">Functions related to mantissa width and exponent range</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C08_MathConstants.html">Mathematical Constants</a></li>
 </ul>
 </details></li>
@@ -949,11 +949,30 @@ document.write(`
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the sign bit of <span class="math notranslate nohighlight">\(x\)</span> is set.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsInfinity</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">False</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsInfinity</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-<span class="go">True</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">signbit</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+<span class="go">    fpm:  1</span>
+<span class="go">    mpm:  1.0</span>
+<span class="go">    dpm:  1</span>
+<span class="go">    ipm: [1.0,</span>
+<span class="go">          1.0]</span>
+<span class="go">    gpm:  1.0</span>
+<span class="go">    apm: 1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</span>
+<span class="go"> math53:  1</span>
+<span class="go">  sreal:  1</span>
+<span class="go">  dreal:  1</span>
+<span class="go">  ereal:  1</span>
+<span class="go">  qreal:  1</span>
+<span class="go">  oreal:  1</span>
+<span class="go">  mreal:  1</span>
+<span class="go"> sflint:  1</span>
+<span class="go"> dflint:  1</span>
+<span class="go"> eflint:  1</span>
+<span class="go"> qflint:  1</span>
+<span class="go"> oflint:  1</span>
+<span class="go"> mflint:  1</span>
+<span class="go"> aflint:  1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -967,11 +986,35 @@ document.write(`
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <span class="math notranslate nohighlight">\(x\)</span> is neither <span class="math notranslate nohighlight">\(+\infty\)</span> nor <span class="math notranslate nohighlight">\(-\infty\)</span> nor <code class="docutils literal notranslate"><span class="pre">NaN</span></code>.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsFinite</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">False</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsFinite</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-<span class="go">True</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">dreal</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">neginf</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">inf</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xlist</span><span class="p">:</span> <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">...</span>
+<span class="go">    fpm:  [False, False, True, True, True, True, False]</span>
+<span class="go">    mpm:  [False, False, True, True, True, True, False]</span>
+<span class="go">    dpm:  [False, False, True, True, True, True, False]</span>
+<span class="go">    ipm:  [False, False, True, True, True, True, False]</span>
+<span class="go">    gpm:  [False, False, True, True, True, True, False]</span>
+<span class="go">    apm:  [False, False, True, True, True, True, False]</span>
+<span class="go"> math53:  [False, False, True, True, True, True, False]</span>
+<span class="go">  sreal:  [False, False, True, True, True, True, False]</span>
+<span class="go">  dreal:  [False, False, True, True, True, True, False]</span>
+<span class="go">  ereal:  [False, False, True, True, True, True, False]</span>
+<span class="go">  qreal:  [False, False, True, True, True, True, False]</span>
+<span class="go">  oreal:  [False, False, True, True, True, True, False]</span>
+<span class="go">  mreal:  [False, False, True, True, True, True, False]</span>
+<span class="go"> sflint:  [False, False, True, True, True, True, False]</span>
+<span class="go"> dflint:  [False, False, True, True, True, True, False]</span>
+<span class="go"> eflint:  [False, False, True, True, True, True, False]</span>
+<span class="go"> qflint:  [False, False, True, True, True, True, False]</span>
+<span class="go"> oflint:  [False, False, True, True, True, True, False]</span>
+<span class="go"> mflint:  [False, False, True, True, True, True, False]</span>
+<span class="go"> aflint:  [False, False, True, True, True, True, False]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -985,11 +1028,35 @@ document.write(`
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <span class="math notranslate nohighlight">\(x\)</span> is either <span class="math notranslate nohighlight">\(+\infty\)</span> or <span class="math notranslate nohighlight">\(-\infty\)</span>.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsInfinity</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">False</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsInfinity</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-<span class="go">True</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">dreal</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">neginf</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">inf</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xlist</span><span class="p">:</span> <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">isinf</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">...</span>
+<span class="go">    fpm:  [False, True, False, False, False, False, True]</span>
+<span class="go">    mpm:  [False, True, False, False, False, False, True]</span>
+<span class="go">    dpm:  [False, True, False, False, False, False, True]</span>
+<span class="go">    ipm:  [False, True, False, False, False, False, True]</span>
+<span class="go">    gpm:  [False, True, False, False, False, False, True]</span>
+<span class="go">    apm:  [False, True, False, False, False, False, True]</span>
+<span class="go"> math53:  [False, True, False, False, False, False, True]</span>
+<span class="go">  sreal:  [False, True, False, False, False, False, True]</span>
+<span class="go">  dreal:  [False, True, False, False, False, False, True]</span>
+<span class="go">  ereal:  [False, True, False, False, False, False, True]</span>
+<span class="go">  qreal:  [False, True, False, False, False, False, True]</span>
+<span class="go">  oreal:  [False, True, False, False, False, False, True]</span>
+<span class="go">  mreal:  [False, True, False, False, False, False, True]</span>
+<span class="go"> sflint:  [False, True, False, False, False, False, True]</span>
+<span class="go"> dflint:  [False, True, False, False, False, False, True]</span>
+<span class="go"> eflint:  [False, True, False, False, False, False, True]</span>
+<span class="go"> qflint:  [False, True, False, False, False, False, True]</span>
+<span class="go"> oflint:  [False, True, False, False, False, False, True]</span>
+<span class="go"> mflint:  [False, True, False, False, False, False, True]</span>
+<span class="go"> aflint:  [False, True, False, False, False, False, True]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1003,11 +1070,35 @@ document.write(`
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <span class="math notranslate nohighlight">\(x\)</span> is <span class="math notranslate nohighlight">\(+\infty\)</span>.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsPositiveInfinity</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">False</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsPositiveInfinity</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-<span class="go">True</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">dreal</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">neginf</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">inf</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xlist</span><span class="p">:</span> <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">isposinf</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">...</span>
+<span class="go">    fpm:  [False, False, False, False, False, False, True]</span>
+<span class="go">    mpm:  [False, False, False, False, False, False, True]</span>
+<span class="go">    dpm:  [False, False, False, False, False, False, True]</span>
+<span class="go">    ipm:  [False, False, False, False, False, False, True]</span>
+<span class="go">    gpm:  [False, False, False, False, False, False, True]</span>
+<span class="go">    apm:  [False, False, False, False, False, False, True]</span>
+<span class="go"> math53:  [False, False, False, False, False, False, True]</span>
+<span class="go">  sreal:  [False, False, False, False, False, False, True]</span>
+<span class="go">  dreal:  [False, False, False, False, False, False, True]</span>
+<span class="go">  ereal:  [False, False, False, False, False, False, True]</span>
+<span class="go">  qreal:  [False, False, False, False, False, False, True]</span>
+<span class="go">  oreal:  [False, False, False, False, False, False, True]</span>
+<span class="go">  mreal:  [False, False, False, False, False, False, True]</span>
+<span class="go"> sflint:  [False, False, False, False, False, False, True]</span>
+<span class="go"> dflint:  [False, False, False, False, False, False, True]</span>
+<span class="go"> eflint:  [False, False, False, False, False, False, True]</span>
+<span class="go"> qflint:  [False, False, False, False, False, False, True]</span>
+<span class="go"> oflint:  [False, False, False, False, False, False, True]</span>
+<span class="go"> mflint:  [False, False, False, False, False, False, True]</span>
+<span class="go"> aflint:  [False, False, False, False, False, False, True]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1021,11 +1112,35 @@ document.write(`
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <span class="math notranslate nohighlight">\(x\)</span> is <span class="math notranslate nohighlight">\(-\infty\)</span>.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNegativeInfinity</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">False</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNegativeInfinity</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-<span class="go">True</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">dreal</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">neginf</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">inf</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xlist</span><span class="p">:</span> <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">isneginf</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">...</span>
+<span class="go">    fpm:  [False, True, False, False, False, False, False]</span>
+<span class="go">    mpm:  [False, True, False, False, False, False, False]</span>
+<span class="go">    dpm:  [False, True, False, False, False, False, False]</span>
+<span class="go">    ipm:  [False, True, False, False, False, False, False]</span>
+<span class="go">    gpm:  [False, True, False, False, False, False, False]</span>
+<span class="go">    apm:  [False, True, False, False, False, False, False]</span>
+<span class="go"> math53:  [False, True, False, False, False, False, False]</span>
+<span class="go">  sreal:  [False, True, False, False, False, False, False]</span>
+<span class="go">  dreal:  [False, True, False, False, False, False, False]</span>
+<span class="go">  ereal:  [False, True, False, False, False, False, False]</span>
+<span class="go">  qreal:  [False, True, False, False, False, False, False]</span>
+<span class="go">  oreal:  [False, True, False, False, False, False, False]</span>
+<span class="go">  mreal:  [False, True, False, False, False, False, False]</span>
+<span class="go"> sflint:  [False, True, False, False, False, False, False]</span>
+<span class="go"> dflint:  [False, True, False, False, False, False, False]</span>
+<span class="go"> eflint:  [False, True, False, False, False, False, False]</span>
+<span class="go"> qflint:  [False, True, False, False, False, False, False]</span>
+<span class="go"> oflint:  [False, True, False, False, False, False, False]</span>
+<span class="go"> mflint:  [False, True, False, False, False, False, False]</span>
+<span class="go"> aflint:  [False, True, False, False, False, False, False]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1039,11 +1154,35 @@ document.write(`
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <span class="math notranslate nohighlight">\(x\)</span> is Nan (Not a number).</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">False</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-<span class="go">True</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">dreal</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">neginf</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">inf</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xlist</span><span class="p">:</span> <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">...</span>
+<span class="go">    fpm:  [True, False, False, False, False, False, False]</span>
+<span class="go">    mpm:  [True, False, False, False, False, False, False]</span>
+<span class="go">    dpm:  [True, False, False, False, False, False, False]</span>
+<span class="go">    ipm:  [True, False, False, False, False, False, False]</span>
+<span class="go">    gpm:  [True, False, False, False, False, False, False]</span>
+<span class="go">    apm:  [True, False, False, False, False, False, False]</span>
+<span class="go"> math53:  [True, False, False, False, False, False, False]</span>
+<span class="go">  sreal:  [True, False, False, False, False, False, False]</span>
+<span class="go">  dreal:  [True, False, False, False, False, False, False]</span>
+<span class="go">  ereal:  [True, False, False, False, False, False, False]</span>
+<span class="go">  qreal:  [True, False, False, False, False, False, False]</span>
+<span class="go">  oreal:  [True, False, False, False, False, False, False]</span>
+<span class="go">  mreal:  [True, False, False, False, False, False, False]</span>
+<span class="go"> sflint:  [True, False, False, False, False, False, False]</span>
+<span class="go"> dflint:  [True, False, False, False, False, False, False]</span>
+<span class="go"> eflint:  [True, False, False, False, False, False, False]</span>
+<span class="go"> qflint:  [True, False, False, False, False, False, False]</span>
+<span class="go"> oflint:  [True, False, False, False, False, False, False]</span>
+<span class="go"> mflint:  [True, False, False, False, False, False, False]</span>
+<span class="go"> aflint:  [True, False, False, False, False, False, False]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1057,11 +1196,35 @@ document.write(`
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <span class="math notranslate nohighlight">\(x\)</span> is 0 (+0 or -0).</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">False</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-<span class="go">True</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">dreal</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">neginf</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">inf</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xlist</span><span class="p">:</span> <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">iszero</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">...</span>
+<span class="go">    fpm:  [False, False, False, True, True, False, False]</span>
+<span class="go">    mpm:  [False, False, False, True, True, False, False]</span>
+<span class="go">    dpm:  [False, False, False, True, True, False, False]</span>
+<span class="go">    ipm:  [False, False, False, True, True, False, False]</span>
+<span class="go">    gpm:  [False, False, False, True, True, False, False]</span>
+<span class="go">    apm:  [False, False, False, True, True, False, False]</span>
+<span class="go"> math53:  [False, False, False, True, True, False, False]</span>
+<span class="go">  sreal:  [False, False, False, True, True, False, False]</span>
+<span class="go">  dreal:  [False, False, False, True, True, False, False]</span>
+<span class="go">  ereal:  [False, False, False, True, True, False, False]</span>
+<span class="go">  qreal:  [False, False, False, True, True, False, False]</span>
+<span class="go">  oreal:  [False, False, False, True, True, False, False]</span>
+<span class="go">  mreal:  [False, False, False, True, True, False, False]</span>
+<span class="go"> sflint:  [False, False, False, True, True, False, False]</span>
+<span class="go"> dflint:  [False, False, False, True, True, False, False]</span>
+<span class="go"> eflint:  [False, False, False, True, True, False, False]</span>
+<span class="go"> qflint:  [False, False, False, True, True, False, False]</span>
+<span class="go"> oflint:  [False, False, False, True, True, False, False]</span>
+<span class="go"> mflint:  [False, False, False, True, True, False, False]</span>
+<span class="go"> aflint:  [False, False, False, True, True, False, False]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1075,11 +1238,35 @@ document.write(`
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <span class="math notranslate nohighlight">\(x\)</span> is 1.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">False</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-<span class="go">True</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">dreal</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">neginf</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">inf</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xlist</span><span class="p">:</span> <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">isone</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">...</span>
+<span class="go">    fpm:  [False, False, False, False, False, True, False, False]</span>
+<span class="go">    mpm:  [False, False, False, False, False, True, False, False]</span>
+<span class="go">    dpm:  [False, False, False, False, False, True, False, False]</span>
+<span class="go">    ipm:  [False, False, False, False, False, True, False, False]</span>
+<span class="go">    gpm:  [False, False, False, False, False, True, False, False]</span>
+<span class="go">    apm:  [False, False, False, False, False, True, False, False]</span>
+<span class="go"> math53:  [False, False, False, False, False, True, False, False]</span>
+<span class="go">  sreal:  [False, False, False, False, False, True, False, False]</span>
+<span class="go">  dreal:  [False, False, False, False, False, True, False, False]</span>
+<span class="go">  ereal:  [False, False, False, False, False, True, False, False]</span>
+<span class="go">  qreal:  [False, False, False, False, False, True, False, False]</span>
+<span class="go">  oreal:  [False, False, False, False, False, True, False, False]</span>
+<span class="go">  mreal:  [False, False, False, False, False, True, False, False]</span>
+<span class="go"> sflint:  [False, False, False, False, False, True, False, False]</span>
+<span class="go"> dflint:  [False, False, False, False, False, True, False, False]</span>
+<span class="go"> eflint:  [False, False, False, False, False, True, False, False]</span>
+<span class="go"> qflint:  [False, False, False, False, False, True, False, False]</span>
+<span class="go"> oflint:  [False, False, False, False, False, True, False, False]</span>
+<span class="go"> mflint:  [False, False, False, False, False, True, False, False]</span>
+<span class="go"> aflint:  [False, False, False, False, False, True, False, False]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1093,11 +1280,35 @@ document.write(`
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <span class="math notranslate nohighlight">\(x\)</span> is an integer.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">False</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-<span class="go">True</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">dreal</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">neginf</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">inf</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xlist</span><span class="p">:</span> <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">isinteger</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">...</span>
+<span class="go">    fpm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">    mpm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">    dpm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">    ipm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">    gpm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">    apm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> math53:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">  sreal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">  dreal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">  ereal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">  qreal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">  oreal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">  mreal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> sflint:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> dflint:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> eflint:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> qflint:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> oflint:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> mflint:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> aflint:  [False, False, False, True, True, True, False, False]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1111,11 +1322,35 @@ document.write(`
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <span class="math notranslate nohighlight">\(x\)</span> is an integer.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">False</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-<span class="go">True</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">dreal</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">neginf</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">inf</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xlist</span><span class="p">:</span> <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">isnumber</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">...</span>
+<span class="go">    fpm:  [False, False, True, True, True, True, True, False]</span>
+<span class="go">    mpm:  [False, False, True, True, True, True, True, False]</span>
+<span class="go">    dpm:  [False, False, True, True, True, True, True, False]</span>
+<span class="go">    ipm:  [False, False, True, True, True, True, True, False]</span>
+<span class="go">    gpm:  [False, False, True, True, True, True, True, False]</span>
+<span class="go">    apm:  [False, False, True, True, True, True, True, False]</span>
+<span class="go"> math53:  [False, False, True, True, True, True, True, False]</span>
+<span class="go">  sreal:  [False, False, True, True, True, True, True, False]</span>
+<span class="go">  dreal:  [False, False, True, True, True, True, True, False]</span>
+<span class="go">  ereal:  [False, False, True, True, True, True, True, False]</span>
+<span class="go">  qreal:  [False, False, True, True, True, True, True, False]</span>
+<span class="go">  oreal:  [False, False, True, True, True, True, True, False]</span>
+<span class="go">  mreal:  [False, False, True, True, True, True, True, False]</span>
+<span class="go"> sflint:  [False, False, True, True, True, True, True, False]</span>
+<span class="go"> dflint:  [False, False, True, True, True, True, True, False]</span>
+<span class="go"> eflint:  [False, False, True, True, True, True, True, False]</span>
+<span class="go"> qflint:  [False, False, True, True, True, True, True, False]</span>
+<span class="go"> oflint:  [False, False, True, True, True, True, True, False]</span>
+<span class="go"> mflint:  [False, False, True, True, True, True, True, False]</span>
+<span class="go"> aflint:  [False, False, True, True, True, True, True, False]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1129,11 +1364,35 @@ document.write(`
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <span class="math notranslate nohighlight">\(x\)</span> is a regular number (not zero, an infinity or NaN).</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">False</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-<span class="go">True</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">dreal</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">neginf</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">inf</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xlist</span><span class="p">:</span> <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">isregular</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">...</span>
+<span class="go">    fpm:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">    mpm:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">    dpm:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">    ipm:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">    gpm:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">    apm:  [False, False, True, False, False, True, True, False]</span>
+<span class="go"> math53:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">  sreal:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">  dreal:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">  ereal:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">  qreal:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">  oreal:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">  mreal:  [False, False, True, False, False, True, True, False]</span>
+<span class="go"> sflint:  [False, False, True, False, False, True, True, False]</span>
+<span class="go"> dflint:  [False, False, True, False, False, True, True, False]</span>
+<span class="go"> eflint:  [False, False, True, False, False, True, True, False]</span>
+<span class="go"> qflint:  [False, False, True, False, False, True, True, False]</span>
+<span class="go"> oflint:  [False, False, True, False, False, True, True, False]</span>
+<span class="go"> mflint:  [False, False, True, False, False, True, True, False]</span>
+<span class="go"> aflint:  [False, False, True, False, False, True, True, False]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1147,11 +1406,35 @@ document.write(`
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <span class="math notranslate nohighlight">\(x\)</span> is a normal number (not subnormal, zero, an infinity or NaN)</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">False</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-<span class="go">True</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">dreal</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">neginf</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">inf</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xlist</span><span class="p">:</span> <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">isnormal</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">...</span>
+<span class="go">    fpm:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">    mpm:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">    dpm:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">    ipm:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">    gpm:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">    apm:  [False, False, True, False, False, True, True, False]</span>
+<span class="go"> math53:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">  sreal:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">  dreal:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">  ereal:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">  qreal:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">  oreal:  [False, False, True, False, False, True, True, False]</span>
+<span class="go">  mreal:  [False, False, True, False, False, True, True, False]</span>
+<span class="go"> sflint:  [False, False, True, False, False, True, True, False]</span>
+<span class="go"> dflint:  [False, False, True, False, False, True, True, False]</span>
+<span class="go"> eflint:  [False, False, True, False, False, True, True, False]</span>
+<span class="go"> qflint:  [False, False, True, False, False, True, True, False]</span>
+<span class="go"> oflint:  [False, False, True, False, False, True, True, False]</span>
+<span class="go"> mflint:  [False, False, True, False, False, True, True, False]</span>
+<span class="go"> aflint:  [False, False, True, False, False, True, True, False]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1165,11 +1448,35 @@ document.write(`
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <span class="math notranslate nohighlight">\(x\)</span> and  <span class="math notranslate nohighlight">\(y\)</span> are unordered.</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">False</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-<span class="go">True</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">dreal</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">neginf</span><span class="p">,</span> <span class="s1">&#39;-2147483649&#39;</span><span class="p">,</span> <span class="s1">&#39;-2147483648&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;2147483647&#39;</span><span class="p">,</span> <span class="s1">&#39;2147483648&#39;</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">inf</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xlist</span><span class="p">:</span> <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fitsint32</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">...</span>
+<span class="go">    fpm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">    mpm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">    dpm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">    ipm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">    gpm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">    apm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> math53:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">  sreal:  [False, False, True, True, True, True, True, False]</span>
+<span class="go">  dreal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">  ereal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">  qreal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">  oreal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">  mreal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> sflint:  [False, False, True, True, True, True, True, False]</span>
+<span class="go"> dflint:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> eflint:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> qflint:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> oflint:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> mflint:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> aflint:  [False, False, False, True, True, True, False, False]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1183,11 +1490,35 @@ document.write(`
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Test if a number fits in a signed 32 bit integer</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">False</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-<span class="go">True</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">dreal</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">neginf</span><span class="p">,</span> <span class="s1">&#39;-2147483649&#39;</span><span class="p">,</span> <span class="s1">&#39;-2147483648&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;2147483647&#39;</span><span class="p">,</span> <span class="s1">&#39;2147483648&#39;</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">inf</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xlist</span><span class="p">:</span> <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fitsint32</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">...</span>
+<span class="go">    fpm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">    mpm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">    dpm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">    ipm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">    gpm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">    apm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> math53:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">  sreal:  [False, False, True, True, True, True, True, False]</span>
+<span class="go">  dreal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">  ereal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">  qreal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">  oreal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">  mreal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> sflint:  [False, False, True, True, True, True, True, False]</span>
+<span class="go"> dflint:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> eflint:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> qflint:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> oflint:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> mflint:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> aflint:  [False, False, False, True, True, True, False, False]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1201,11 +1532,36 @@ document.write(`
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Test if a number fits in a signed 64 bit integer</p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">False</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">IsNan</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
-<span class="go">True</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">dreal</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dreal</span><span class="o">.</span><span class="n">neginf</span><span class="p">,</span> <span class="s1">&#39;-9223372036854775809&#39;</span><span class="p">,</span> <span class="s1">&#39;-9223372036854775808&#39;</span><span class="p">,</span> \
+<span class="go">    0.0, &#39;9223372036854775807&#39;, &#39;9223372036854775808&#39;, dreal.inf]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xlist</span><span class="p">:</span> <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fitsint64</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">...</span>
+<span class="go">    fpm:  [False, False, True, True, True, True, True, False]</span>
+<span class="go">    mpm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">    dpm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">    ipm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">    gpm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">    apm:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> math53:  [False, False, True, True, True, True, True, False]</span>
+<span class="go">  sreal:  [False, False, True, True, True, True, True, False]</span>
+<span class="go">  dreal:  [False, False, True, True, True, True, True, False]</span>
+<span class="go">  ereal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">  qreal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">  oreal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go">  mreal:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> sflint:  [False, False, False, False, True, False, False, False]</span>
+<span class="go"> dflint:  [False, False, False, False, True, False, False, False]</span>
+<span class="go"> eflint:  [False, False, False, False, True, False, False, False]</span>
+<span class="go"> qflint:  [False, False, False, False, True, False, False, False]</span>
+<span class="go"> oflint:  [False, False, False, False, True, False, False, False]</span>
+<span class="go"> mflint:  [False, False, False, True, True, True, False, False]</span>
+<span class="go"> aflint:  [False, False, False, True, True, True, False, False]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1351,7 +1707,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 30, 2026.
+  Last updated on Nov 04, 2026.
   <br/>
 </p>
   </div>

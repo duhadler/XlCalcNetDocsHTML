@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Machine constants, general &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>Machine constants, general &#8212; XlCalcNet 1.1.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="../_static/documentation_options.js?v=051bfb12"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -50,10 +50,10 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Properties of numbers" href="C03_PropertiesOfNumbers.html" />
-    <link rel="prev" title="Operator overloading, general real functions" href="C01_BasicFunctions.html" />
+    <link rel="prev" title="General real functions" href="C01_BasicFunctions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 30, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 04, 2026"/>
   </head>
   
   
@@ -172,13 +172,13 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Basic floating point functions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html">Operator overloading, general real functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html">General real functions</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Machine constants, general</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C03_PropertiesOfNumbers.html">Properties of numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_IntegerAndRemainder.html">Integer related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_RealFpManipulation.html">Floating point functions for real numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C06_FractionRemainder.html">Fraction and remainder related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C07_MachineConstants.html">Functions related to mantissa width and exponent range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_FractionMantissa.html">Functions related to mantissa width and exponent range</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C08_MathConstants.html">Mathematical Constants</a></li>
 </ul>
 </details></li>
@@ -879,10 +879,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Cxt.one"><code class="docutils literal notranslate"><span class="pre">Cxt.one</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imaginary-one">Imaginary One</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.onej"><code class="docutils literal notranslate"><span class="pre">ctx.onej</span></code></a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-infinity">Positive infinity</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.inf"><code class="docutils literal notranslate"><span class="pre">ctx.inf()</span></code></a></li>
 </ul>
@@ -916,16 +912,31 @@ document.write(`
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">zero</span></span><a class="headerlink" href="#ctx.zero" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns  <span class="math notranslate nohighlight">\(+0\)</span>.</p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Zero</span><span class="p">()</span>
-<span class="go">ereal(&#39;0.0000000000000000000)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Zero</span><span class="p">()</span>
-<span class="go">0.0</span>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">zero</span><span class="p">))</span>
+<span class="go">    fpm:  0</span>
+<span class="go">    mpm:  0.0</span>
+<span class="go">    dpm:  0</span>
+<span class="go">    ipm: [0.0,</span>
+<span class="go">          0.0]</span>
+<span class="go">    gpm:  0.0</span>
+<span class="go">    apm: 0</span>
+<span class="go"> math53:  0</span>
+<span class="go">  sreal:  0</span>
+<span class="go">  dreal:  0</span>
+<span class="go">  ereal:  0</span>
+<span class="go">  qreal:  0</span>
+<span class="go">  oreal:  0</span>
+<span class="go">  mreal:  0</span>
+<span class="go"> sflint:  0</span>
+<span class="go"> dflint:  0</span>
+<span class="go"> eflint:  0</span>
+<span class="go"> qflint:  0</span>
+<span class="go"> oflint:  0</span>
+<span class="go"> mflint:  0</span>
+<span class="go"> aflint:  0</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -938,16 +949,31 @@ document.write(`
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">negzero</span></span><a class="headerlink" href="#ctx.negzero" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns  <span class="math notranslate nohighlight">\(-0\)</span>.</p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Zero</span><span class="p">()</span>
-<span class="go">ereal(&#39;0.0000000000000000000)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Zero</span><span class="p">()</span>
-<span class="go">0.0</span>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">negzero</span><span class="p">))</span>
+<span class="go">    fpm:  -0</span>
+<span class="go">    mpm:  0.0</span>
+<span class="go">    dpm:  0</span>
+<span class="go">    ipm: [0.0,</span>
+<span class="go">          0.0]</span>
+<span class="go">    gpm:  -0.0</span>
+<span class="go">    apm: 0</span>
+<span class="go"> math53:  0</span>
+<span class="go">  sreal:  0</span>
+<span class="go">  dreal:  0</span>
+<span class="go">  ereal:  0</span>
+<span class="go">  qreal:  0</span>
+<span class="go">  oreal:  0</span>
+<span class="go">  mreal:  -0</span>
+<span class="go"> sflint:  0</span>
+<span class="go"> dflint:  0</span>
+<span class="go"> eflint:  0</span>
+<span class="go"> qflint:  0</span>
+<span class="go"> oflint:  0</span>
+<span class="go"> mflint:  -0</span>
+<span class="go"> aflint:  0</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -960,38 +986,31 @@ document.write(`
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Cxt.</span></span><span class="sig-name descname"><span class="pre">one</span></span><a class="headerlink" href="#Cxt.one" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns  <span class="math notranslate nohighlight">\(1\)</span></p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">One</span><span class="p">()</span>
-<span class="go">ereal(&#39;1.0000000000000000000&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">One</span><span class="p">()</span>
-<span class="go">1.0</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="imaginary-one">
-<h2>Imaginary One<a class="headerlink" href="#imaginary-one" title="Link to this heading">#</a></h2>
-<dl class="py property">
-<dt class="sig sig-object py" id="ctx.onej">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">onej</span></span><a class="headerlink" href="#ctx.onej" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns the imaginary unit.</p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstDegree</span><span class="p">()</span>
-<span class="go">ereal(&#39;1.7453292519943295769E-2&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstDegree</span><span class="p">()</span>
-<span class="go">0.0174532925199433</span>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">one</span><span class="p">))</span>
+<span class="go">    fpm:  1</span>
+<span class="go">    mpm:  1.0</span>
+<span class="go">    dpm:  1</span>
+<span class="go">    ipm: [1.0,</span>
+<span class="go">          1.0]</span>
+<span class="go">    gpm:  1.0</span>
+<span class="go">    apm: 1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</span>
+<span class="go"> math53:  1</span>
+<span class="go">  sreal:  1</span>
+<span class="go">  dreal:  1</span>
+<span class="go">  ereal:  1</span>
+<span class="go">  qreal:  1</span>
+<span class="go">  oreal:  1</span>
+<span class="go">  mreal:  1</span>
+<span class="go"> sflint:  1</span>
+<span class="go"> dflint:  1</span>
+<span class="go"> eflint:  1</span>
+<span class="go"> qflint:  1</span>
+<span class="go"> oflint:  1</span>
+<span class="go"> mflint:  1</span>
+<span class="go"> aflint:  1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1004,16 +1023,31 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">inf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ctx.inf" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns  <span class="math notranslate nohighlight">\(+\infty\)</span></p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">PositiveInfinity</span><span class="p">()</span>
-<span class="go">ereal(&#39;+Inf&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">PositiveInfinity</span><span class="p">()</span>
-<span class="go">+Inf</span>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">inf</span><span class="p">))</span>
+<span class="go">    fpm:  INF</span>
+<span class="go">    mpm:  inf</span>
+<span class="go">    dpm:  Infinity</span>
+<span class="go">    ipm: [inf,</span>
+<span class="go">          inf]</span>
+<span class="go">    gpm:  inf</span>
+<span class="go">    apm: [+/- inf]</span>
+<span class="go"> math53:  ∞</span>
+<span class="go">  sreal:  ∞</span>
+<span class="go">  dreal:  ∞</span>
+<span class="go">  ereal:  inf</span>
+<span class="go">  qreal:  inf</span>
+<span class="go">  oreal:  inf</span>
+<span class="go">  mreal:  INF</span>
+<span class="go"> sflint:  ∞</span>
+<span class="go"> dflint:  ∞</span>
+<span class="go"> eflint:  inf</span>
+<span class="go"> qflint:  inf</span>
+<span class="go"> oflint:  inf</span>
+<span class="go"> mflint:  INF</span>
+<span class="go"> aflint:  inf</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1026,16 +1060,31 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">neginf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ctx.neginf" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns the  representation of <span class="math notranslate nohighlight">\(-\infty\)</span></p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">NegativeInfinity</span><span class="p">()</span>
-<span class="go">ereal(&#39;-Inf&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">NegativeInfinity</span><span class="p">()</span>
-<span class="go">-Inf</span>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">neginf</span><span class="p">))</span>
+<span class="go">    fpm:  -INF</span>
+<span class="go">    mpm:  -inf</span>
+<span class="go">    dpm:  -Infinity</span>
+<span class="go">    ipm: [-inf,</span>
+<span class="go">          -inf]</span>
+<span class="go">    gpm:  -inf</span>
+<span class="go">    apm: [+/- inf]</span>
+<span class="go"> math53:  -∞</span>
+<span class="go">  sreal:  -∞</span>
+<span class="go">  dreal:  -∞</span>
+<span class="go">  ereal:  -inf</span>
+<span class="go">  qreal:  -inf</span>
+<span class="go">  oreal:  -inf</span>
+<span class="go">  mreal:  -INF</span>
+<span class="go"> sflint:  -∞</span>
+<span class="go"> dflint:  -∞</span>
+<span class="go"> eflint:  -inf</span>
+<span class="go"> qflint:  -inf</span>
+<span class="go"> oflint:  -inf</span>
+<span class="go"> mflint:  -INF</span>
+<span class="go"> aflint:  -inf</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1048,16 +1097,31 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">nan</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ctx.nan" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">NaN</span></code> (Not a Number).</p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Nan</span><span class="p">()</span>
-<span class="go">ereal(&#39;Nan&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Nan</span><span class="p">()</span>
-<span class="go">Nan</span>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">nan</span><span class="p">))</span>
+<span class="go">    fpm:  NAN</span>
+<span class="go">    mpm:  nan</span>
+<span class="go">    dpm:  NaN</span>
+<span class="go">    ipm: [nan,</span>
+<span class="go">          nan]</span>
+<span class="go">    gpm:  nan</span>
+<span class="go">    apm: nan</span>
+<span class="go"> math53:  NaN</span>
+<span class="go">  sreal:  NaN</span>
+<span class="go">  dreal:  NaN</span>
+<span class="go">  ereal:  nan</span>
+<span class="go">  qreal:  NaN</span>
+<span class="go">  oreal:  nan</span>
+<span class="go">  mreal:  NAN</span>
+<span class="go"> sflint:  NaN</span>
+<span class="go"> dflint:  NaN</span>
+<span class="go"> eflint:  nan</span>
+<span class="go"> qflint:  NaN</span>
+<span class="go"> oflint:  nan</span>
+<span class="go"> mflint:  NAN</span>
+<span class="go"> aflint:  nan</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1082,7 +1146,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Operator overloading, general real functions</p>
+        <p class="prev-next-title">General real functions</p>
       </div>
     </a>
     <a class="right-next"
@@ -1120,10 +1184,6 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one">One</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Cxt.one"><code class="docutils literal notranslate"><span class="pre">Cxt.one</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imaginary-one">Imaginary One</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.onej"><code class="docutils literal notranslate"><span class="pre">ctx.onej</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-infinity">Positive infinity</a><ul class="visible nav section-nav flex-column">
@@ -1171,7 +1231,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 30, 2026.
+  Last updated on Nov 04, 2026.
   <br/>
 </p>
   </div>

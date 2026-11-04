@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Functions related to mantissa width and exponent range &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>Functions related to mantissa width and exponent range &#8212; XlCalcNet 1.1.0 documentation</title>
   
   
   
@@ -38,14 +38,14 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="../_static/documentation_options.js?v=051bfb12"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=4ea706d9"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'B02_BasicFloatingPointFunctions/C07_MachineConstants';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'B02_BasicFloatingPointFunctions/C07_FractionMantissa';</script>
     <script src="../_static/custom-icon.js?v=74687d30"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -53,7 +53,7 @@
     <link rel="prev" title="Fraction and remainder related functions" href="C06_FractionRemainder.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 30, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 04, 2026"/>
   </head>
   
   
@@ -172,7 +172,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Basic floating point functions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html">Operator overloading, general real functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C01_BasicFunctions.html">General real functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C02_MachineConstants.html">Machine constants, general</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C03_PropertiesOfNumbers.html">Properties of numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_IntegerAndRemainder.html">Integer related functions</a></li>
@@ -773,7 +773,7 @@
       
       
       
-      <li><a href="../_sources/B02_BasicFloatingPointFunctions/C07_MachineConstants.rst" target="_blank"
+      <li><a href="../_sources/B02_BasicFloatingPointFunctions/C07_FractionMantissa.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -887,16 +887,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.minposvalue"><code class="docutils literal notranslate"><span class="pre">ctx.minposvalue()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-representable-floating-point-number-mathrm-nexttowards-x-y">Next representable floating point number: <span class="math notranslate nohighlight">\(\mathrm{nexttowards}(x, y)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.nexttowards"><code class="docutils literal notranslate"><span class="pre">ctx.nexttowards()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-representable-floating-point-number-mathrm-nextabove-x">Next representable floating point number: <span class="math notranslate nohighlight">\(\mathrm{nextabove}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.nextabove"><code class="docutils literal notranslate"><span class="pre">ctx.nextabove()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-representable-floating-point-number-mathrm-nextbelow-x">Next representable floating point number: <span class="math notranslate nohighlight">\(\mathrm{nextbelow}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.nextbelow"><code class="docutils literal notranslate"><span class="pre">ctx.nextbelow()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-representable-floating-point-number-mathrm-nextafter-x-y">Next representable floating point number: <span class="math notranslate nohighlight">\(\mathrm{nextafter}(x, y)\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.nextafter"><code class="docutils literal notranslate"><span class="pre">ctx.nextafter()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -919,18 +911,33 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.epsilon">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">epsilon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ctx.epsilon" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Returns the machine epsilon for the given data type. See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1084" title="Wikipedia. Machine epsilon. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Machine_epsilon.">1261</a>]</span>.</p>
+<p>Returns the machine epsilon for the given data type. See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1084" title="Wikipedia. Machine epsilon. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Machine_epsilon.">1260</a>]</span>.</p>
 <p>See also: <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.float_info">https://docs.python.org/3/library/sys.html#sys.float_info</a></p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">MachineEps</span><span class="p">()</span>
-<span class="go">ereal(&#39;1.0842021724855044340E-19&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">MachineEps</span><span class="p">()</span>
-<span class="go">2.22044604925031e-16</span>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">epsilon</span><span class="p">()))</span>
+<span class="go">    fpm:  2.22044604925031E-16</span>
+<span class="go">    mpm:  2.45454673264886327654788597749313782148760775624972478255577455859355262736085792823004894e-91</span>
+<span class="go">    dpm:  1E-89</span>
+<span class="go">    ipm: [2.4545467326488632765478859774931378214876077562497247825557745585935526273608579282300489420187e-91,</span>
+<span class="go">          2.4545467326488632765478859774931378214876077562497247825557745585935526273608579282300489420187e-91]</span>
+<span class="go">    gpm:  2.454546732648863276547885977493137821487607756249724782555774558593552627360857928230048942e-91</span>
+<span class="go">    apm: [2.45454673264886327654788597749313782148760775624972478255577455859355262736085792823004894e-91 +/- 2.02e-181]</span>
+<span class="go"> math53:  2.22044604925031E-16</span>
+<span class="go">  sreal:  1.192093E-07</span>
+<span class="go">  dreal:  2.22044604925031E-16</span>
+<span class="go">  ereal:  1.084202172485504434e-19</span>
+<span class="go">  qreal:  1.92592994438723585305597794258493e-34</span>
+<span class="go">  oreal:  9.0556790788267123675091192908877917806825311981391381895826148899355013e-72</span>
+<span class="go">  mreal:  9.81818693059545310619154390997255128595043102499889913022309823437421050944343171292019577E-91</span>
+<span class="go"> sflint:  1.192093E-07</span>
+<span class="go"> dflint:  2.22044604925031E-16</span>
+<span class="go"> eflint:  1.084202172485504434e-19</span>
+<span class="go"> qflint:  1.92592994438723585305597794258493e-34</span>
+<span class="go"> oflint:  9.0556790788267123675091192908877917806825311981391381895826148899355013e-72</span>
+<span class="go"> mflint:  9.81818693059545310619154390997255128595043102499889913022309823437421050944343171292019577E-91</span>
+<span class="go"> aflint: [9.81818693059545310619154390997255128595043102499889913022309823437421050944343171292019577e-91 +/- 1.93e-181]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -946,15 +953,31 @@ document.write(`
 <p>See also: <a class="reference external" href="https://docs.python.org/3/library/math.html#math.ulp">https://docs.python.org/3/library/math.html#math.ulp</a></p>
 <p>See also: <a class="reference external" href="https://en.wikipedia.org/wiki/Unit_in_the_last_place">https://en.wikipedia.org/wiki/Unit_in_the_last_place</a></p>
 <p>See also: <a class="reference external" href="https://www.boost.org/doc/libs/1_85_0/libs/math/doc/html/math_toolkit/next_float/ulp.html">https://www.boost.org/doc/libs/1_85_0/libs/math/doc/html/math_toolkit/next_float/ulp.html</a></p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">MachineEps</span><span class="p">()</span>
-<span class="go">ereal(&#39;1.0842021724855044340E-19&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">MachineEps</span><span class="p">()</span>
-<span class="go">2.22044604925031e-16</span>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">500000.1</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">ulp</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+<span class="go">    fpm:  5.82076609134674E-11</span>
+<span class="go">    mpm:  6.4344469868350361476736902168396112107604744765432785339830096588794825994688474073793795e-86</span>
+<span class="go">    dpm:  1E-84</span>
+<span class="go">    ipm: [6.4344469868350361476736902168396112107604744765432785339830096588794825994688474073793794985654e-86,</span>
+<span class="go">          6.4344469868350361476736902168396112107604744765432785339830096588794825994688474073793795001448e-86]</span>
+<span class="go">    gpm:  6.4344469868350361476736902168396112107604744765432785339830096588794825994688474073793794986e-86</span>
+<span class="go">    apm: [6.43444698683503614767369021683961121076047447654327853398300965887948259946884740737937950e-86 +/- 3.02e-176]</span>
+<span class="go"> math53:  5.82076609134674E-11</span>
+<span class="go">  sreal:  0.03125</span>
+<span class="go">  dreal:  5.82076609134674E-11</span>
+<span class="go">  ereal:  2.8421709430404007435e-14</span>
+<span class="go">  qreal:  5.04870979341447555463506281780983e-29</span>
+<span class="go">  oreal:  2.3738919364399496868683105673904892885552414584049862415699449977072521e-66</span>
+<span class="go">  mreal:  2.5737787947340144590694760867358444843041897906173114135932038635517930397875389629517518E-85</span>
+<span class="go"> sflint:  0.03125</span>
+<span class="go"> dflint:  5.82076609134674E-11</span>
+<span class="go"> eflint:  2.8421709430404007435e-14</span>
+<span class="go"> qflint:  5.04870979341447555463506281780983e-29</span>
+<span class="go"> oflint:  2.3738919364399496868683105673904892885552414584049862415699449977072521e-66</span>
+<span class="go"> mflint:  2.5737787947340144590694760867358444843041897906173114135932038635517930397875389629517518E-85</span>
+<span class="go"> aflint: [2.57377879473401445906947608673584448430418979061731141359320386355179303978753896295175180e-85 +/- 5.75e-176]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -968,16 +991,31 @@ document.write(`
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns the largest representable number for the given data type.</p>
 <p>See also: <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.float_info">https://docs.python.org/3/library/sys.html#sys.float_info</a></p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">MaxValue</span><span class="p">()</span>
-<span class="go">ereal(&#39;1.1897314953572317650E+4932&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">MaxValue</span><span class="p">()</span>
-<span class="go">1.79769313486232E+308</span>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">maxvalue</span><span class="p">()))</span>
+<span class="go">    fpm:  1.79769313486232E+308</span>
+<span class="go">    mpm:  2.098578716467387692404358116883839070638e+323228496</span>
+<span class="go">    dpm:  9E+999999999999999999</span>
+<span class="go">    ipm: [2.09857871646738769240435811688383907063807387e+323228496,</span>
+<span class="go">          2.09857871646738769240435811688383907063809797e+323228496]</span>
+<span class="go">    gpm:  2.098578716467387692404358116883839070638e+323228496</span>
+<span class="go">    apm: [2.098578716467387692404358116883839070638e+323228496 +/- 9.81e+323228455]</span>
+<span class="go"> math53:  1.79769313486232E+308</span>
+<span class="go">  sreal:  3.402823E+38</span>
+<span class="go">  dreal:  1.79769313486232E+308</span>
+<span class="go">  ereal:  1.189731495357231765e+4932</span>
+<span class="go">  qreal:  1.18973149535723176508575932662801e+4932</span>
+<span class="go">  oreal:  1.6113257174857604736195721184520050106440238745496695174763712504960718e+78913</span>
+<span class="go">  mreal:  2.098578716467387692404358116883839070638E+323228496</span>
+<span class="go"> sflint:  3.402823E+38</span>
+<span class="go"> dflint:  1.79769313486232E+308</span>
+<span class="go"> eflint:  1.189731495357231765e+4932</span>
+<span class="go"> qflint:  1.18973149535723176508575932662801e+4932</span>
+<span class="go"> oflint:  1.6113257174857604736195721184520050106440238745496695174763712504960718e+78913</span>
+<span class="go"> mflint:  2.098578716467387692404358116883839070638E+323228496</span>
+<span class="go"> aflint: [2.098578716467387692404358116883839070638e+323228496 +/- 2.88e+323228456]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -990,16 +1028,31 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">lowestvalue</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ctx.lowestvalue" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>Returns the lowest representable number for the given data type.</p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">MaxValue</span><span class="p">()</span>
-<span class="go">ereal(&#39;-1.1897314953572317650E+4932&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">MaxValue</span><span class="p">()</span>
-<span class="go">-1.79769313486232E+308</span>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">lowestvalue</span><span class="p">()))</span>
+<span class="go">    fpm:  -1.79769313486232E+308</span>
+<span class="go">    mpm:  -2.098578716467387692404358116883839070638e+323228496</span>
+<span class="go">    dpm:  -9E+999999999999999999</span>
+<span class="go">    ipm: [-2.09857871646738769240435811688383907063809797e+323228496,</span>
+<span class="go">          -2.09857871646738769240435811688383907063807387e+323228496]</span>
+<span class="go">    gpm:  -2.098578716467387692404358116883839070638e+323228496</span>
+<span class="go">    apm: [-2.098578716467387692404358116883839070638e+323228496 +/- 9.81e+323228455]</span>
+<span class="go"> math53:  -1.79769313486232E+308</span>
+<span class="go">  sreal:  -3.402823E+38</span>
+<span class="go">  dreal:  -1.79769313486232E+308</span>
+<span class="go">  ereal:  -1.189731495357231765e+4932</span>
+<span class="go">  qreal:  -1.18973149535723176508575932662801e+4932</span>
+<span class="go">  oreal:  -1.6113257174857604736195721184520050106440238745496695174763712504960718e+78913</span>
+<span class="go">  mreal:  -2.098578716467387692404358116883839070638E+323228496</span>
+<span class="go"> sflint:  -3.402823E+38</span>
+<span class="go"> dflint:  -1.79769313486232E+308</span>
+<span class="go"> eflint:  -1.189731495357231765e+4932</span>
+<span class="go"> qflint:  -1.18973149535723176508575932662801e+4932</span>
+<span class="go"> oflint:  -1.6113257174857604736195721184520050106440238745496695174763712504960718e+78913</span>
+<span class="go"> mflint:  -2.098578716467387692404358116883839070638E+323228496</span>
+<span class="go"> aflint: [-2.098578716467387692404358116883839070638e+323228496 +/- 2.88e+323228456]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1013,76 +1066,70 @@ document.write(`
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>See also: <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.float_info">https://docs.python.org/3/library/sys.html#sys.float_info</a></p>
 <p>Returns the smallest representable positive number for the given data type.</p>
-<p>In extended precision (32 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">MinValue</span><span class="p">()</span>
-<span class="go">ereal(&#39;3.3621031431120935063E-4932&#39;)</span>
-</pre></div>
-</div>
-<p>In double precision (64 bit version of xlcalcnet)</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">MinValue</span><span class="p">()</span>
-<span class="go">2.22507385850720e-308</span>
+<p>An example in Python</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">minposvalue</span><span class="p">()))</span>
+<span class="go">    fpm:  2.2250738585072E-308</span>
+<span class="go">    mpm:  2.382564904887951073216169781732674520415e-323228497</span>
+<span class="go">    dpm:  9E-999999999999999999</span>
+<span class="go">    ipm: [2.38256490488795107321616978173267452041516878e-323228497,</span>
+<span class="go">          2.38256490488795107321616978173267452041519613e-323228497]</span>
+<span class="go">    gpm:  2.38256490488795107321616978173267452041502e-323228496</span>
+<span class="go">    apm: [2.382564904887951073216169781732674520415e-323228497 +/- 2.51e-323228537]</span>
+<span class="go"> math53:  2.2250738585072E-308</span>
+<span class="go">  sreal:  1.175494E-38</span>
+<span class="go">  dreal:  2.2250738585072E-308</span>
+<span class="go">  ereal:  3.3621031431120935063e-4932</span>
+<span class="go">  qreal:  3.36210314311209350626267781732175e-4932</span>
+<span class="go">  oreal:  2.4824279514643497882993282229138717236776877060796468692709532979137876e-78913</span>
+<span class="go">  mreal:  2.382564904887951073216169781732674520415E-323228497</span>
+<span class="go"> sflint:  1.175494E-38</span>
+<span class="go"> dflint:  2.2250738585072E-308</span>
+<span class="go"> eflint:  3.3621031431120935063e-4932</span>
+<span class="go"> qflint:  3.36210314311209350626267781732175e-4932</span>
+<span class="go"> oflint:  2.4824279514643497882993282229138717236776877060796468692709532979137876e-78913</span>
+<span class="go"> mflint:  2.382564904887951073216169781732674520415E-323228497</span>
+<span class="go"> aflint: [2.382564904887951073216169781732674520415e-323228497 +/- 1.97e-323228537]</span>
 </pre></div>
 </div>
 </dd></dl>
 
 </section>
-<section id="next-representable-floating-point-number-mathrm-nexttowards-x-y">
-<h2>Next representable floating point number: <span class="math notranslate nohighlight">\(\mathrm{nexttowards}(x, y)\)</span><a class="headerlink" href="#next-representable-floating-point-number-mathrm-nexttowards-x-y" title="Link to this heading">#</a></h2>
+<section id="next-representable-floating-point-number-mathrm-nextafter-x-y">
+<h2>Next representable floating point number: <span class="math notranslate nohighlight">\(\mathrm{nextafter}(x, y)\)</span><a class="headerlink" href="#next-representable-floating-point-number-mathrm-nextafter-x-y" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.nexttowards">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">nexttowards</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.nexttowards" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="ctx.nextafter">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">nextafter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.nextafter" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
 <p>See also: <a class="reference external" href="https://docs.python.org/3/library/math.html#math.nextafter">https://docs.python.org/3/library/math.html#math.nextafter</a></p>
 <p>Returns the next representable floating point number before <span class="math notranslate nohighlight">\(x\)</span> in the direction of <span class="math notranslate nohighlight">\(y\)</span>.</p>
 <p>See also: <a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/math/nextafter">https://en.cppreference.com/w/cpp/numeric/math/nextafter</a></p>
 <p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Succ</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Succ</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="next-representable-floating-point-number-mathrm-nextabove-x">
-<h2>Next representable floating point number: <span class="math notranslate nohighlight">\(\mathrm{nextabove}(x)\)</span><a class="headerlink" href="#next-representable-floating-point-number-mathrm-nextabove-x" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="ctx.nextabove">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">nextabove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.nextabove" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Note: ctx.pred(x),  ctx.succ(x).</p>
-<p>Nextabove: Returns the next representable floating point number before <span class="math notranslate nohighlight">\(x\)</span> in the direction of <code class="docutils literal notranslate"><span class="pre">+Inf</span></code>.</p>
-<p>See also: <a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/math/nextafter">https://en.cppreference.com/w/cpp/numeric/math/nextafter</a></p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Succ</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Succ</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</section>
-<section id="next-representable-floating-point-number-mathrm-nextbelow-x">
-<h2>Next representable floating point number: <span class="math notranslate nohighlight">\(\mathrm{nextbelow}(x)\)</span><a class="headerlink" href="#next-representable-floating-point-number-mathrm-nextbelow-x" title="Link to this heading">#</a></h2>
-<dl class="py method">
-<dt class="sig sig-object py" id="ctx.nextbelow">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">nextbelow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.nextbelow" title="Link to this definition">#</a></dt>
-<dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
-<p>Note: ctx.pred(x),  ctx.succ(x).</p>
-<p>Nextbelow: Returns the next representable floating point number before x in the direction of <code class="docutils literal notranslate"><span class="pre">-Inf</span></code>.</p>
-<p>See also: <a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/math/nextafter">https://en.cppreference.com/w/cpp/numeric/math/nextafter</a></p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Succ</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Succ</span><span class="p">(</span><span class="s1">&#39;0.51&#39;</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">500000.110</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">2.7</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="ow">or</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">nextafter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)))</span>
+<span class="go">    fpm:  500000.11</span>
+<span class="go">    mpm:  500000.11</span>
+<span class="go">    dpm:  500000.109999999999999999999999999999999999999999999999999999999999999999999999999999999999</span>
+<span class="go">    ipm: [500000.10999999999999999999999999999999999999999999999999999999999999999999999999999999999981469,</span>
+<span class="go">          500000.10999999999999999999999999999999999999999999999999999999999999999999999999999999999994338]</span>
+<span class="go">    gpm:  500000.10999999999999999999999999999999999999999999999999999999999999999999999999999999999994</span>
+<span class="go">    apm: [500000.110000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.86e-85]</span>
+<span class="go"> math53:  500000.11</span>
+<span class="go">  sreal:  500000.1</span>
+<span class="go">  dreal:  500000.11</span>
+<span class="go">  ereal:  500000.10999999999999</span>
+<span class="go">  qreal:  500000.11</span>
+<span class="go">  oreal:  500000.11</span>
+<span class="go">  mreal:  500000.11</span>
+<span class="go"> sflint:  500000.1</span>
+<span class="go"> dflint:  500000.11</span>
+<span class="go"> eflint:  500000.10999999999999</span>
+<span class="go"> qflint:  500000.11</span>
+<span class="go"> oflint:  500000.11</span>
+<span class="go"> mflint:  500000.11</span>
+<span class="go"> aflint: [500000.110000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.86e-85]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1155,16 +1202,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.minposvalue"><code class="docutils literal notranslate"><span class="pre">ctx.minposvalue()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-representable-floating-point-number-mathrm-nexttowards-x-y">Next representable floating point number: <span class="math notranslate nohighlight">\(\mathrm{nexttowards}(x, y)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.nexttowards"><code class="docutils literal notranslate"><span class="pre">ctx.nexttowards()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-representable-floating-point-number-mathrm-nextabove-x">Next representable floating point number: <span class="math notranslate nohighlight">\(\mathrm{nextabove}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.nextabove"><code class="docutils literal notranslate"><span class="pre">ctx.nextabove()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-representable-floating-point-number-mathrm-nextbelow-x">Next representable floating point number: <span class="math notranslate nohighlight">\(\mathrm{nextbelow}(x)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.nextbelow"><code class="docutils literal notranslate"><span class="pre">ctx.nextbelow()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-representable-floating-point-number-mathrm-nextafter-x-y">Next representable floating point number: <span class="math notranslate nohighlight">\(\mathrm{nextafter}(x, y)\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.nextafter"><code class="docutils literal notranslate"><span class="pre">ctx.nextafter()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1200,7 +1239,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 30, 2026.
+  Last updated on Nov 04, 2026.
   <br/>
 </p>
   </div>

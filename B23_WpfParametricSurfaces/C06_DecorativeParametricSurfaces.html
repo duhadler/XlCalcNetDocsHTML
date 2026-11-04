@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Decorative parametric surfaces &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>Decorative parametric surfaces &#8212; XlCalcNet 1.1.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="../_static/documentation_options.js?v=051bfb12"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Nonorientable (one-sided) Surfaces" href="C05_NonorientableSurfaces.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 30, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 04, 2026"/>
   </head>
   
   
@@ -172,13 +172,13 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/index.html">Basic floating point functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">Operator overloading, general real functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">General real functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C02_MachineConstants.html">Machine constants, general</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C03_PropertiesOfNumbers.html">Properties of numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C04_IntegerAndRemainder.html">Integer related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C05_RealFpManipulation.html">Floating point functions for real numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C06_FractionRemainder.html">Fraction and remainder related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C07_MachineConstants.html">Functions related to mantissa width and exponent range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C07_FractionMantissa.html">Functions related to mantissa width and exponent range</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C08_MathConstants.html">Mathematical Constants</a></li>
 </ul>
 </details></li>
@@ -974,7 +974,7 @@ document.write(`
 <h2>Fish Surface<a class="headerlink" href="#fish-surface" title="Link to this heading">#</a></h2>
 <p>The XML code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the files <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D05a_Fish.3D.xml">D05a_Fish.3D.xml (D05a-c)</a>.</p>
 <p>See also: <a class="reference external" href="http://www.3d-meier.de/tut3/Seite47.html">http://www.3d-meier.de/tut3/Seite47.html</a></p>
-<p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1304" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1363</a>]</span>,  MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1418" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1066</a>]</span>.</p>
+<p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1304" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1362</a>]</span>,  MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1418" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1065</a>]</span>.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">su</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">s2u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">u</span><span class="p">);</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">sv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sin</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
@@ -1079,7 +1079,7 @@ See also: <a class="reference external" href="https://mathart.org/sw/GreenSnake/
 <h2>Triaxial teardrop<a class="headerlink" href="#triaxial-teardrop" title="Link to this heading">#</a></h2>
 <p>The XML code for the example below can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder in the files <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/Plots3DWpfExamples/B23_WpfParametricSurfaces/C06_DecorativeParametricSurfaces/D11a_TearDrop.3D.xml">D11a_TearDrop.3D.xml (D11a-c)</a>.</p>
 <p>See also: <a class="reference external" href="http://paulbourke.net/geometry/triaxtear/">http://paulbourke.net/geometry/triaxtear/</a></p>
-<p>See also  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1304" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1363</a>]</span>,  MathWorld <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1418" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1066</a>]</span>.</p>
+<p>See also  Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1304" title="Wikipedia. Circle. Wikimedia Foundation, 2018. [Online; last edited on 5 December 2022; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Circle.">1362</a>]</span>,  MathWorld <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1418" title="E. W. Weisstein. One-Sheeted Hyperboloid. From MathWorld - A Wolfram Web Resource, 2020. [Online; accessed 22-Dec-2024]. URL: https://mathworld.wolfram.com/One-SheetedHyperboloid.html.">1065</a>]</span>.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="o">/</span><span class="mi">3</span><span class="p">;</span>
 <span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p2</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 <span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="p">(</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Cos</span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p2</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
@@ -1236,7 +1236,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 30, 2026.
+  Last updated on Nov 04, 2026.
   <br/>
 </p>
   </div>

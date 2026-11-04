@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Summary and examples: Numpy utility functions &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>Summary and examples: Numpy utility functions &#8212; XlCalcNet 1.1.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="../_static/documentation_options.js?v=051bfb12"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Numpy mathematical functions: Miscellaneous" href="C21_Miscellaneous.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 30, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 04, 2026"/>
   </head>
   
   
@@ -172,13 +172,13 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/index.html">Basic floating point functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">Operator overloading, general real functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">General real functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C02_MachineConstants.html">Machine constants, general</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C03_PropertiesOfNumbers.html">Properties of numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C04_IntegerAndRemainder.html">Integer related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C05_RealFpManipulation.html">Floating point functions for real numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C06_FractionRemainder.html">Fraction and remainder related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C07_MachineConstants.html">Functions related to mantissa width and exponent range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C07_FractionMantissa.html">Functions related to mantissa width and exponent range</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C08_MathConstants.html">Mathematical Constants</a></li>
 </ul>
 </details></li>
@@ -976,7 +976,7 @@ document.write(`
 <span class="go">array([1.,  3.,  5.])</span>
 </pre></div>
 </div>
-<p>From mpmath See also  Mpmath <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id764" title="The Mpmath Development Team. Real part of a number. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2014. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#re.">678</a>]</span>.</p>
+<p>From mpmath See also  Mpmath <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id764" title="The Mpmath Development Team. Real part of a number. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2014. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#re.">677</a>]</span>.</p>
 <p>Returns the real part of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\Re(x)\)</span>. <code class="xref py py-func docutils literal notranslate"><span class="pre">re()</span></code>
 converts a non-mpmath number to an mpmath number:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">mp</span><span class="p">,</span> <span class="n">iv</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">dp</span><span class="p">,</span> <span class="n">gp</span><span class="p">,</span> <span class="n">ap</span>
@@ -1124,7 +1124,7 @@ results in a nonnegative argument.</p>
 <span class="go">(1+0j)</span>
 </pre></div>
 </div>
-<p>From mpmath. See also  Mpmath <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id763" title="The Mpmath Development Team. Sign of a number. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2014. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#sign.">679</a>]</span>.</p>
+<p>From mpmath. See also  Mpmath <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id763" title="The Mpmath Development Team. Sign of a number. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2014. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#sign.">678</a>]</span>.</p>
 <p>Returns the sign of <span class="math notranslate nohighlight">\(x\)</span>, defined as <span class="math notranslate nohighlight">\(\mathrm{sign}(x) = x / |x|\)</span>
 (with the special case <span class="math notranslate nohighlight">\(\mathrm{sign}(0) = 0\)</span>):</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">mp</span><span class="p">,</span> <span class="n">iv</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">dp</span><span class="p">,</span> <span class="n">gp</span><span class="p">,</span> <span class="n">ap</span>
@@ -1233,7 +1233,7 @@ for which it gives the projection onto the unit circle:</p>
 <span class="go">array([0, 1, 0])</span>
 </pre></div>
 </div>
-<p>From mpmath. See also  Mpmath <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id778" title="The Mpmath Development Team. Testing if a number is finite. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2015. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#isfinite.">690</a>]</span>.</p>
+<p>From mpmath. See also  Mpmath <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id778" title="The Mpmath Development Team. Testing if a number is finite. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2015. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#isfinite.">689</a>]</span>.</p>
 <p>Return <em>True</em> if <em>x</em> is a finite number, i.e. neither an infinity or a NaN.</p>
 <p>Example:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">fpm</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">ipm</span><span class="p">,</span> <span class="n">dec</span><span class="p">,</span> <span class="n">gmp</span><span class="p">,</span> <span class="n">apm</span><span class="p">;</span> <span class="n">ctxall</span> <span class="o">=</span> <span class="p">[</span><span class="n">fpm</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">ipm</span><span class="p">,</span> <span class="n">dec</span><span class="p">,</span> <span class="n">gmp</span><span class="p">,</span> <span class="n">apm</span><span class="p">]</span>
@@ -1288,7 +1288,7 @@ for which it gives the projection onto the unit circle:</p>
 <span class="go">array([1, 0, 1])</span>
 </pre></div>
 </div>
-<p>From mpmath. See also  Mpmath <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id775" title="The Mpmath Development Team. Testing if a number is infinite. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2015. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#isinf.">691</a>]</span>.</p>
+<p>From mpmath. See also  Mpmath <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id775" title="The Mpmath Development Team. Testing if a number is infinite. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2015. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#isinf.">690</a>]</span>.</p>
 <p>Return <em>True</em> if the absolute value of <em>x</em> is infinite; otherwise return <em>False</em>.</p>
 <p>Example:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">fpm</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">ipm</span><span class="p">,</span> <span class="n">dec</span><span class="p">,</span> <span class="n">gmp</span><span class="p">,</span> <span class="n">apm</span><span class="p">;</span> <span class="n">ctxall</span> <span class="o">=</span> <span class="p">[</span><span class="n">fpm</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">ipm</span><span class="p">,</span> <span class="n">dec</span><span class="p">,</span> <span class="n">gmp</span><span class="p">,</span> <span class="n">apm</span><span class="p">]</span>
@@ -1333,7 +1333,7 @@ for which it gives the projection onto the unit circle:</p>
 <span class="go">array([ True, False, False])</span>
 </pre></div>
 </div>
-<p>From mpmath. See also  Mpmath <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id776" title="The Mpmath Development Team. Testing for NaN (not-a-number). mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2015. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#isnan.">689</a>]</span>.</p>
+<p>From mpmath. See also  Mpmath <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id776" title="The Mpmath Development Team. Testing for NaN (not-a-number). mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2015. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#isnan.">688</a>]</span>.</p>
 <p>Return <em>True</em> if <em>x</em> is a NaN (not-a-number), or for a complex number, whether either the real or complex part is NaN;
 otherwise return <em>False</em>:</p>
 <p>Example:</p>
@@ -1424,7 +1424,7 @@ otherwise return <em>False</em>:</p>
 </pre></div>
 </div>
 <p><strong>ctx.isint(x, gaussian=False)</strong></p>
-<p>From mpmath. See also  Mpmath <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id779" title="The Mpmath Development Team. Testing if a number is integer-valued. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2015. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#isint.">692</a>]</span>.</p>
+<p>From mpmath. See also  Mpmath <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id779" title="The Mpmath Development Team. Testing if a number is integer-valued. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2015. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#isint.">691</a>]</span>.</p>
 <p>Return <em>True</em> if <em>x</em> is integer-valued; otherwise return <em>False</em>:</p>
 <p>Example:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">fpm</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">ipm</span><span class="p">,</span> <span class="n">dec</span><span class="p">,</span> <span class="n">gmp</span><span class="p">,</span> <span class="n">apm</span><span class="p">;</span> <span class="n">ctxall</span> <span class="o">=</span> <span class="p">[</span><span class="n">fpm</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">ipm</span><span class="p">,</span> <span class="n">dec</span><span class="p">,</span> <span class="n">gmp</span><span class="p">,</span> <span class="n">apm</span><span class="p">]</span>
@@ -1453,7 +1453,7 @@ otherwise return <em>False</em>:</p>
 </pre></div>
 </div>
 <p><strong>ctx.isnormal(x)</strong></p>
-<p>From mpmath. . See also  Mpmath <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id777" title="The Mpmath Development Team. Testing if a number is normal. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2015. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#isnormal.">693</a>]</span>.</p>
+<p>From mpmath. . See also  Mpmath <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id777" title="The Mpmath Development Team. Testing if a number is normal. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2015. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#isnormal.">692</a>]</span>.</p>
 <p>Determine whether <em>x</em> is “normal” in the sense of floating-point
 representation; that is, return <em>False</em> if <em>x</em> is zero, an
 infinity or NaN; otherwise return <em>True</em>.</p>
@@ -1706,7 +1706,7 @@ infinity or NaN; otherwise return <em>True</em>.</p>
 <span class="go">array([False,  True])</span>
 </pre></div>
 </div>
-<p>From mpmath. See also  Mpmath <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id774" title="The Mpmath Development Team. Testing if numbers are almost equal. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2015. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#almosteq.">694</a>]</span>.</p>
+<p>From mpmath. See also  Mpmath <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id774" title="The Mpmath Development Team. Testing if numbers are almost equal. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2015. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#almosteq.">693</a>]</span>.</p>
 <p>Determine whether the difference between <span class="math notranslate nohighlight">\(s\)</span> and <span class="math notranslate nohighlight">\(t\)</span> is smaller
 than a given epsilon, either relatively or absolutely.</p>
 <p>Both a maximum relative difference and a maximum difference
@@ -1788,7 +1788,7 @@ in the presence of small rounding errors.</p>
 </div>
 <p><strong>ctx.chop(x, tol=None)</strong></p>
 <blockquote>
-<div><p>See also  Mpmath <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id773" title="The Mpmath Development Team. Chopping off small real or imaginary parts of a number. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2015. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#chop.">682</a>]</span>.</p>
+<div><p>See also  Mpmath <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id773" title="The Mpmath Development Team. Chopping off small real or imaginary parts of a number. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2015. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#chop.">681</a>]</span>.</p>
 </div></blockquote>
 <p>!!! iv context does not accept lists: NotImplementedError !!!</p>
 <p>!!! dp, gp and ap contexts do not accept lists: return None !!!</p>
@@ -1920,7 +1920,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 30, 2026.
+  Last updated on Nov 04, 2026.
   <br/>
 </p>
   </div>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Complex components &#8212; XlCalcNet 1.0.0 documentation</title>
+    <title>Complex components &#8212; XlCalcNet 1.1.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="../_static/documentation_options.js?v=051bfb12"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Elementary scalar functions (real and complex)" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Oct 30, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 04, 2026"/>
   </head>
   
   
@@ -172,13 +172,13 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/index.html">Basic floating point functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">Operator overloading, general real functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C01_BasicFunctions.html">General real functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C02_MachineConstants.html">Machine constants, general</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C03_PropertiesOfNumbers.html">Properties of numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C04_IntegerAndRemainder.html">Integer related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C05_RealFpManipulation.html">Floating point functions for real numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C06_FractionRemainder.html">Fraction and remainder related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C07_MachineConstants.html">Functions related to mantissa width and exponent range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C07_FractionMantissa.html">Functions related to mantissa width and exponent range</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B02_BasicFloatingPointFunctions/C08_MathConstants.html">Mathematical Constants</a></li>
 </ul>
 </details></li>
@@ -900,6 +900,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rect"><code class="docutils literal notranslate"><span class="pre">ctx.rect()</span></code></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imaginary-one">Imaginary One</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.onej"><code class="docutils literal notranslate"><span class="pre">ctx.onej</span></code></a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -1536,7 +1540,7 @@ for which it gives the projection onto the unit circle:</p>
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">polar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.polar" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">mathc53</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxcpp</span></code>.</p>
 <p>Returns the polar representation of the complex number <span class="math notranslate nohighlight">\(z\)</span> as a pair <span class="math notranslate nohighlight">\((r, \phi)\)</span> such that <span class="math notranslate nohighlight">\(z = r e^{i \phi}\)</span>:</p>
-<p>See also  Mpmath <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id768" title="The Mpmath Development Team. Polar representation of a complex number. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2014. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#polar.">676</a>]</span>.</p>
+<p>See also  Mpmath <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id768" title="The Mpmath Development Team. Polar representation of a complex number. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2014. [Online; accessed 22-July-2024]. URL: https://mpmath.org/doc/1.1.0/general.html#polar.">675</a>]</span>.</p>
 <p>An example with real input:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="go">   &gt;&gt;&gt; from xlcalcnet import *</span>
 <span class="go">   &gt;&gt;&gt; -5.1; gui.setdps(35)</span>
@@ -1639,6 +1643,28 @@ for which it gives the projection onto the unit circle:</p>
 </dd></dl>
 
 </section>
+<section id="imaginary-one">
+<h2>Imaginary One<a class="headerlink" href="#imaginary-one" title="Link to this heading">#</a></h2>
+<dl class="py property">
+<dt class="sig sig-object py" id="ctx.onej">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">onej</span></span><a class="headerlink" href="#ctx.onej" title="Link to this definition">#</a></dt>
+<dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflint</span></code>.</p>
+<p>Returns the imaginary unit.</p>
+<p>In extended precision (32 bit version of xlcalcnet)</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstDegree</span><span class="p">()</span>
+<span class="go">ereal(&#39;1.7453292519943295769E-2&#39;)</span>
+</pre></div>
+</div>
+<p>In double precision (64 bit version of xlcalcnet)</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">ConstDegree</span><span class="p">()</span>
+<span class="go">0.0174532925199433</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
 </section>
 
 
@@ -1719,6 +1745,10 @@ for which it gives the projection onto the unit circle:</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.rect"><code class="docutils literal notranslate"><span class="pre">ctx.rect()</span></code></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imaginary-one">Imaginary One</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.onej"><code class="docutils literal notranslate"><span class="pre">ctx.onej</span></code></a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -1752,7 +1782,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Oct 30, 2026.
+  Last updated on Nov 04, 2026.
   <br/>
 </p>
   </div>
