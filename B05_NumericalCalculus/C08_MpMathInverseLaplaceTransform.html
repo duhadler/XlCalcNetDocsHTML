@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Mpmath: Numerical inverse Laplace transform &#8212; XlCalcNet 1.1.0 documentation</title>
+    <title>Mpmath: Numerical inverse Laplace transform &#8212; XlCalcNet 1.2.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=051bfb12"></script>
+    <script src="../_static/documentation_options.js?v=db04a367"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Mpmath: Numerical integration" href="C07_MpMathIntegration.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Nov 05, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 08, 2026"/>
   </head>
   
   
@@ -439,9 +439,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C03_LegendreIntegrals.html">Legendre elliptic integrals (elliptic modulus  <span class="math notranslate nohighlight">\(k\)</span>), and related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C04_JacobiEllipticFunctions.html">Jacobi elliptic functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C05_JacobiThetafunctions.html">Jacobi theta functions and related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C06_WeierstrassConversions.html">Conversions of parameters of Weierstrass <span class="math notranslate nohighlight">\(\wp\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C07_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C08_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C06_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C07_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B09_LerchPhi/index.html">Lerch’s phi and related</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -907,7 +906,7 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.invertlaplace">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">invertlaplace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.invertlaplace" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, or <code class="docutils literal notranslate"><span class="pre">gmp</span></code>.</p>
-<p>See also: <span id="id1">Cohen [<a class="reference internal" href="../99BackMatter/index.html#id49" title="A.M. Cohen. Numerical Methods for Laplace Transform Inversion. Springer, Berlin, 2007.">181</a>]</span>, <span id="id2">Duffy [<a class="reference internal" href="../99BackMatter/index.html#id77" title="D.G. Duffy. Advanced Engineering Mathematics. CRC Press, 1998.">291</a>]</span>, <span id="id3">Bellman <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id17" title="R. Bellman, R.E. Kalaba, and J.A. Lockett. Numerical inversion of the Laplace transform: Applications to Biology, Economics, Engineering, and Physics. Elsevier, 1966.">28</a>]</span>, <span id="id4">Davies and Martin [<a class="reference internal" href="../99BackMatter/index.html#id62" title="B. Davies and B. Martin. Numerical inversion of the laplace transform: a survey and comparison of methods. Journal of Computational Physics, 33:1–32, 1979.">201</a>]</span>, <span id="id5">Duffy [<a class="reference internal" href="../99BackMatter/index.html#id76" title="D.G. Duffy. On the numerical inversion of laplace transforms: comparison of three new methods on characteristic problems from applications. ACM Transactions on Mathematical Software, 19(3):333–359, 1993.">290</a>]</span>, <span id="id6">Kuhlman [<a class="reference internal" href="../99BackMatter/index.html#id161" title="K.L. Kuhlman. Review of inverse laplace transform algorithms for laplace-space numerical approaches. Numerical Algorithms, 62:339-355, 2013.">400</a>]</span>.</p>
+<p>See also: <span id="id1">Cohen [<a class="reference internal" href="../99BackMatter/index.html#id49" title="A.M. Cohen. Numerical Methods for Laplace Transform Inversion. Springer, Berlin, 2007.">181</a>]</span>, <span id="id2">Duffy [<a class="reference internal" href="../99BackMatter/index.html#id77" title="D.G. Duffy. Advanced Engineering Mathematics. CRC Press, 1998.">289</a>]</span>, <span id="id3">Bellman <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id17" title="R. Bellman, R.E. Kalaba, and J.A. Lockett. Numerical inversion of the Laplace transform: Applications to Biology, Economics, Engineering, and Physics. Elsevier, 1966.">28</a>]</span>, <span id="id4">Davies and Martin [<a class="reference internal" href="../99BackMatter/index.html#id62" title="B. Davies and B. Martin. Numerical inversion of the laplace transform: a survey and comparison of methods. Journal of Computational Physics, 33:1–32, 1979.">201</a>]</span>, <span id="id5">Duffy [<a class="reference internal" href="../99BackMatter/index.html#id76" title="D.G. Duffy. On the numerical inversion of laplace transforms: comparison of three new methods on characteristic problems from applications. ACM Transactions on Mathematical Software, 19(3):333–359, 1993.">288</a>]</span>, <span id="id6">Kuhlman [<a class="reference internal" href="../99BackMatter/index.html#id161" title="K.L. Kuhlman. Review of inverse laplace transform algorithms for laplace-space numerical approaches. Numerical Algorithms, 62:339-355, 2013.">398</a>]</span>.</p>
 <p>Computes the numerical inverse Laplace transform for a Laplace-space function at a given time.  The function being evaluated is assumed to be a real-valued function of time.</p>
 <p>The user must supply a Laplace-space function <span class="math notranslate nohighlight">\(\bar{f}(p)\)</span>,
 and a desired time at which to estimate the time-domain
@@ -924,7 +923,7 @@ valid for all methods:</p>
 </dl>
 <p><strong>Basic examples</strong></p>
 <p>A few basic examples of Laplace-space functions with known
-inverses (see <span id="id7">Abate and Valko [<a class="reference internal" href="../99BackMatter/index.html#id2" title="J. Abate and P. Valko. Multi-precision laplace transform inversion. International Journal for Numerical Methods in Engineering, 60:979-993, 2004.">1</a>]</span>, <span id="id8">Talbot [<a class="reference internal" href="../99BackMatter/index.html#id247" title="A. Talbot. The accurate numerical inversion of laplace transforms. IMA Journal of Applied Mathematics, 23(1):97, 1979.">512</a>]</span>) :</p>
+inverses (see <span id="id7">Abate and Valko [<a class="reference internal" href="../99BackMatter/index.html#id2" title="J. Abate and P. Valko. Multi-precision laplace transform inversion. International Journal for Numerical Methods in Engineering, 60:979-993, 2004.">1</a>]</span>, <span id="id8">Talbot [<a class="reference internal" href="../99BackMatter/index.html#id247" title="A. Talbot. The accurate numerical inversion of laplace transforms. IMA Journal of Applied Mathematics, 23(1):97, 1979.">510</a>]</span>) :</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{L}\left\lbrace f(t) \right\rbrace=\bar{f}(p)\]</div>
 <div class="math notranslate nohighlight">
@@ -1073,7 +1072,7 @@ solution, and the answer will be completely wrong.</p>
 <dt class="sig sig-object py" id="ctx.invlaptalbot">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">invlaptalbot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.invlaptalbot" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, or <code class="docutils literal notranslate"><span class="pre">gmp</span></code>.</p>
-<p>See also: <span id="id9">Abate and Valko [<a class="reference internal" href="../99BackMatter/index.html#id2" title="J. Abate and P. Valko. Multi-precision laplace transform inversion. International Journal for Numerical Methods in Engineering, 60:979-993, 2004.">1</a>]</span>, <span id="id10">Talbot [<a class="reference internal" href="../99BackMatter/index.html#id247" title="A. Talbot. The accurate numerical inversion of laplace transforms. IMA Journal of Applied Mathematics, 23(1):97, 1979.">512</a>]</span>.</p>
+<p>See also: <span id="id9">Abate and Valko [<a class="reference internal" href="../99BackMatter/index.html#id2" title="J. Abate and P. Valko. Multi-precision laplace transform inversion. International Journal for Numerical Methods in Engineering, 60:979-993, 2004.">1</a>]</span>, <span id="id10">Talbot [<a class="reference internal" href="../99BackMatter/index.html#id247" title="A. Talbot. The accurate numerical inversion of laplace transforms. IMA Journal of Applied Mathematics, 23(1):97, 1979.">510</a>]</span>.</p>
 <p>The fixed Talbot method is high accuracy and fast, but the
 method can catastrophically fail for certain classes of time-domain
 behavior, including a Heaviside step function for positive
@@ -1154,7 +1153,7 @@ to set the parameters and compute the required coefficients.</p>
 <dt class="sig sig-object py" id="ctx.invlapstehfest">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">invlapstehfest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.invlapstehfest" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, or <code class="docutils literal notranslate"><span class="pre">gmp</span></code>.</p>
-<p>See also: <span id="id11">Stehfest [<a class="reference internal" href="../99BackMatter/index.html#id241" title="H. Stehfest. Algorithm 368: numerical inversion of laplace transforms. Communications of the ACM, 13(1):47–49, 1970.">505</a>]</span>, <span id="id12">Widder [<a class="reference internal" href="../99BackMatter/index.html#id266" title="D. Widder. The Laplace Transform. Princeton, 1941.">1077</a>]</span>.</p>
+<p>See also: <span id="id11">Stehfest [<a class="reference internal" href="../99BackMatter/index.html#id241" title="H. Stehfest. Algorithm 368: numerical inversion of laplace transforms. Communications of the ACM, 13(1):47–49, 1970.">503</a>]</span>, <span id="id12">Widder [<a class="reference internal" href="../99BackMatter/index.html#id266" title="D. Widder. The Laplace Transform. Princeton, 1941.">1075</a>]</span>.</p>
 <p>The Stehfest algorithm only uses abscissa along the real axis
 of the complex <span class="math notranslate nohighlight">\(p\)</span>-plane to estimate the time-domain
 function. Oscillatory time-domain functions have poles away
@@ -1256,7 +1255,7 @@ numerical approach.</p>
 <dt class="sig sig-object py" id="ctx.invlapcohen">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">invlapcohen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.invlapcohen" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, or <code class="docutils literal notranslate"><span class="pre">gmp</span></code>.</p>
-<p>See also <span id="id14">Cohen <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id48" title="H. Cohen, F. Rodriguez Villegas, and D. Zagier. Convergence acceleration of alternating series. Experiment. Math, 9(1):3–12, 2000.">182</a>]</span>, <span id="id15">Glasserman and Ruiz-Mata [<a class="reference internal" href="../99BackMatter/index.html#id104" title="P. Glasserman and J. Ruiz-Mata. Computing the credit loss distribution in the gaussian copula model: a comparison of methods. Journal of Credit Risk, 2(4):33-66, 2006. Extended and edited reprint from http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.22.6768.">350</a>]</span>.</p>
+<p>See also <span id="id14">Cohen <em>et al.</em> [<a class="reference internal" href="../99BackMatter/index.html#id48" title="H. Cohen, F. Rodriguez Villegas, and D. Zagier. Convergence acceleration of alternating series. Experiment. Math, 9(1):3–12, 2000.">182</a>]</span>, <span id="id15">Glasserman and Ruiz-Mata [<a class="reference internal" href="../99BackMatter/index.html#id104" title="P. Glasserman and J. Ruiz-Mata. Computing the credit loss distribution in the gaussian copula model: a comparison of methods. Journal of Credit Risk, 2(4):33-66, 2006. Extended and edited reprint from http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.22.6768.">348</a>]</span>.</p>
 <p>The Cohen method is a trapezoidal rule approximation to the Bromwich contour integral, with linear acceleration for alternating series. This method is as robust as the de Hoog et al method and the fastest of the four methods at high precision, and is therefore the default method.</p>
 <p>The Cohen algorithm accelerates the convergence of the nearly alternating series resulting from the application of the trapezoidal rule to the Bromwich contour inversion integral.</p>
 <div class="math notranslate nohighlight">
@@ -1384,7 +1383,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Nov 05, 2026.
+  Last updated on Nov 08, 2026.
   <br/>
 </p>
   </div>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Basic classical statistical tests (stratified) &#8212; XlCalcNet 1.1.0 documentation</title>
+    <title>Basic classical statistical tests (stratified) &#8212; XlCalcNet 1.2.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=051bfb12"></script>
+    <script src="../_static/documentation_options.js?v=db04a367"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Inferential statistics" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Nov 05, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 08, 2026"/>
   </head>
   
   
@@ -439,9 +439,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C03_LegendreIntegrals.html">Legendre elliptic integrals (elliptic modulus  <span class="math notranslate nohighlight">\(k\)</span>), and related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C04_JacobiEllipticFunctions.html">Jacobi elliptic functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C05_JacobiThetafunctions.html">Jacobi theta functions and related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C06_WeierstrassConversions.html">Conversions of parameters of Weierstrass <span class="math notranslate nohighlight">\(\wp\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C07_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C08_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C06_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C07_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B09_LerchPhi/index.html">Lerch’s phi and related</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -914,7 +913,7 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.student_t_1sample_test">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">student_t_1sample_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stdev</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.student_t_1sample_test" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, or <code class="docutils literal notranslate"><span class="pre">gmp</span></code>.</p>
-<p>Returns tests and/or confidence intervals for Student’s t-test for 1 sample with sample size <em>N</em> (<span class="math notranslate nohighlight">\(N\)</span>), reference mean <em>mu0</em> (<span class="math notranslate nohighlight">\(\mu_0\)</span>), sample mean <em>mean</em> (<span class="math notranslate nohighlight">\(\overline{x}_1\)</span>),  sample standard deviation <em>stdev</em> (<span class="math notranslate nohighlight">\(s\)</span>) and type I error <em>alpha</em> (<span class="math notranslate nohighlight">\(\alpha\)</span>). See also: Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1252" title="Wikipedia. One-sample t-test. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Student%27s_t-test#One-sample_t-test.">1436</a>]</span>.</p>
+<p>Returns tests and/or confidence intervals for Student’s t-test for 1 sample with sample size <em>N</em> (<span class="math notranslate nohighlight">\(N\)</span>), reference mean <em>mu0</em> (<span class="math notranslate nohighlight">\(\mu_0\)</span>), sample mean <em>mean</em> (<span class="math notranslate nohighlight">\(\overline{x}_1\)</span>),  sample standard deviation <em>stdev</em> (<span class="math notranslate nohighlight">\(s\)</span>) and type I error <em>alpha</em> (<span class="math notranslate nohighlight">\(\alpha\)</span>). See also: Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1252" title="Wikipedia. One-sample t-test. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Student%27s_t-test#One-sample_t-test.">1433</a>]</span>.</p>
 <p>The following boolean keyword arguments determine the output:</p>
 <p><strong>I</strong>: if <code class="docutils literal notranslate"><span class="pre">True</span></code>, the input parameters are shown.</p>
 <p><strong>D</strong>: if <code class="docutils literal notranslate"><span class="pre">True</span></code>, the descriptive statistics is shown.</p>
@@ -1057,7 +1056,7 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.student_t_1sample_power">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">student_t_1sample_power</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.student_t_1sample_power" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, or <code class="docutils literal notranslate"><span class="pre">gmp</span></code>.</p>
-<p>Returns power calculations for Student’s t-test for 1 sample with sample size <em>N</em> (<span class="math notranslate nohighlight">\(N\)</span>), reference mean <em>mu0</em> (<span class="math notranslate nohighlight">\(\mu_0\)</span>), population mean <em>mu1</em> (<span class="math notranslate nohighlight">\(\mu_1\)</span>),  population standard deviation <em>sigma</em> (<span class="math notranslate nohighlight">\(\sigma\)</span>) and type I error <em>alpha</em>  (<span class="math notranslate nohighlight">\(\alpha\)</span>). See also: Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1252" title="Wikipedia. One-sample t-test. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Student%27s_t-test#One-sample_t-test.">1436</a>]</span>.</p>
+<p>Returns power calculations for Student’s t-test for 1 sample with sample size <em>N</em> (<span class="math notranslate nohighlight">\(N\)</span>), reference mean <em>mu0</em> (<span class="math notranslate nohighlight">\(\mu_0\)</span>), population mean <em>mu1</em> (<span class="math notranslate nohighlight">\(\mu_1\)</span>),  population standard deviation <em>sigma</em> (<span class="math notranslate nohighlight">\(\sigma\)</span>) and type I error <em>alpha</em>  (<span class="math notranslate nohighlight">\(\alpha\)</span>). See also: Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1252" title="Wikipedia. One-sample t-test. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Student%27s_t-test#One-sample_t-test.">1433</a>]</span>.</p>
 <p>The following boolean keyword arguments determine the output:</p>
 <p><strong>I</strong>: if <code class="docutils literal notranslate"><span class="pre">True</span></code>, the input parameters are shown.</p>
 <p><strong>D</strong>: if <code class="docutils literal notranslate"><span class="pre">True</span></code>, the descriptive statistics is shown.</p>
@@ -1169,7 +1168,7 @@ Let <span class="math notranslate nohighlight">\(F_{t'}\left(\cdot, \nu, \delta 
 <dt class="sig sig-object py" id="ctx.student_t_1sample_samplesize">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">student_t_1sample_samplesize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.student_t_1sample_samplesize" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, or <code class="docutils literal notranslate"><span class="pre">gmp</span></code>.</p>
-<p>Returns sample size calculations for Student’s t-test for 1 sample with reference mean <em>mu0</em> (<span class="math notranslate nohighlight">\(\mu_0\)</span>), population mean <em>mu1</em> (<span class="math notranslate nohighlight">\(\mu_1\)</span>), population standard deviation <em>sigma</em> (<span class="math notranslate nohighlight">\(\sigma\)</span>), type I error <em>alpha</em>  (<span class="math notranslate nohighlight">\(\alpha\)</span>), and type II error <em>beta</em>  (<span class="math notranslate nohighlight">\(\beta\)</span>). See also: Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1252" title="Wikipedia. One-sample t-test. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Student%27s_t-test#One-sample_t-test.">1436</a>]</span>.</p>
+<p>Returns sample size calculations for Student’s t-test for 1 sample with reference mean <em>mu0</em> (<span class="math notranslate nohighlight">\(\mu_0\)</span>), population mean <em>mu1</em> (<span class="math notranslate nohighlight">\(\mu_1\)</span>), population standard deviation <em>sigma</em> (<span class="math notranslate nohighlight">\(\sigma\)</span>), type I error <em>alpha</em>  (<span class="math notranslate nohighlight">\(\alpha\)</span>), and type II error <em>beta</em>  (<span class="math notranslate nohighlight">\(\beta\)</span>). See also: Wikipedia <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1252" title="Wikipedia. One-sample t-test. Wikimedia Foundation, 2021. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Student%27s_t-test#One-sample_t-test.">1433</a>]</span>.</p>
 <p>The following boolean keyword arguments determine the output:</p>
 <p><strong>I</strong>: if <code class="docutils literal notranslate"><span class="pre">True</span></code>, the input parameters are shown.</p>
 <p><strong>D</strong>: if <code class="docutils literal notranslate"><span class="pre">True</span></code>, the descriptive statistics is shown.</p>
@@ -1609,7 +1608,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Nov 05, 2026.
+  Last updated on Nov 08, 2026.
   <br/>
 </p>
   </div>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Approximations based on the chi-squared distribution &#8212; XlCalcNet 1.1.0 documentation</title>
+    <title>Approximations based on the chi-squared distribution &#8212; XlCalcNet 1.2.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=051bfb12"></script>
+    <script src="../_static/documentation_options.js?v=db04a367"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Approximations based on the normal distribution" href="C01_NormalDistribution.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Nov 05, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 08, 2026"/>
   </head>
   
   
@@ -439,9 +439,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C03_LegendreIntegrals.html">Legendre elliptic integrals (elliptic modulus  <span class="math notranslate nohighlight">\(k\)</span>), and related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C04_JacobiEllipticFunctions.html">Jacobi elliptic functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C05_JacobiThetafunctions.html">Jacobi theta functions and related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C06_WeierstrassConversions.html">Conversions of parameters of Weierstrass <span class="math notranslate nohighlight">\(\wp\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C07_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C08_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C06_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../B08_EllipticFunctions/C07_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B09_LerchPhi/index.html">Lerch’s phi and related</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -912,7 +911,7 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">chi2_nc_mu2_cdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.chi2_nc_mu2_cdf" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, <code class="docutils literal notranslate"><span class="pre">ipm</span></code>, <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">gmp</span></code> or <code class="docutils literal notranslate"><span class="pre">apm</span></code>.</p>
 <p>Returns an approximation to the cdf of the noncentral chi-squared distribution by matching the first 2 moments.</p>
-<p><span id="id1">Patnaik [<a class="reference internal" href="../99BackMatter/index.html#id210" title="P. B. Patnaik. The noncentral `\chi ^2`and `F`-distributions and their applications. Biometrika, 36:202-–232, 1949.">464</a>]</span> gives the following 2-moment approximation based on the central <span class="math notranslate nohighlight">\(\chi^2\)</span>-distribution:</p>
+<p><span id="id1">Patnaik [<a class="reference internal" href="../99BackMatter/index.html#id210" title="P. B. Patnaik. The noncentral `\chi ^2`and `F`-distributions and their applications. Biometrika, 36:202-–232, 1949.">462</a>]</span> gives the following 2-moment approximation based on the central <span class="math notranslate nohighlight">\(\chi^2\)</span>-distribution:</p>
 <div class="math notranslate nohighlight">
 \[F_{\chi^2}\left(n, x; \lambda\right) \thickapprox F_{\chi^2}\left(n_1, x_1;\right), \quad \text{where } n_1= \frac{(n+\lambda)^2}{n+2\lambda} , \quad  x_1= \frac{x(n+\lambda)}{n+2\lambda}\]</div>
 <p>where <span class="math notranslate nohighlight">\(F_{\chi^2}(n, \cdot)\)</span> is the cdf of the (central) <span class="math notranslate nohighlight">\(\chi^2\)</span> distribution (see section ref{sec:ChiSquareDistribution_cdf}).</p>
@@ -941,7 +940,7 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">chi2_nc_mu2_qtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.chi2_nc_mu2_qtf" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, <code class="docutils literal notranslate"><span class="pre">ipm</span></code>, <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">gmp</span></code> or <code class="docutils literal notranslate"><span class="pre">apm</span></code>.</p>
 <p>Returns an approximation to the qtf of the noncentral chi-squared distribution.</p>
-<p>The noncentral quantile is approximated as in <span id="id2">Patnaik [<a class="reference internal" href="../99BackMatter/index.html#id210" title="P. B. Patnaik. The noncentral `\chi ^2`and `F`-distributions and their applications. Biometrika, 36:202-–232, 1949.">464</a>]</span>:</p>
+<p>The noncentral quantile is approximated as in <span id="id2">Patnaik [<a class="reference internal" href="../99BackMatter/index.html#id210" title="P. B. Patnaik. The noncentral `\chi ^2`and `F`-distributions and their applications. Biometrika, 36:202-–232, 1949.">462</a>]</span>:</p>
 <div class="math notranslate nohighlight">
 \[\chi^2_{n,\lambda,\alpha}  \thickapprox  (1+b) \chi^2_{n_1,\alpha} , \quad \text{where } n_1= \frac{(n+\lambda)^2}{n+2\lambda} , \quad  b = \frac{\lambda}{n+\lambda}\]</div>
 <p>An example (CDF):</p>
@@ -968,7 +967,7 @@ document.write(`
 <dt class="sig sig-object py" id="ctx.chi2_nc_wb_cl">
 <span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">chi2_nc_wb_cl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.chi2_nc_wb_cl" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, <code class="docutils literal notranslate"><span class="pre">ipm</span></code>, <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">gmp</span></code> or <code class="docutils literal notranslate"><span class="pre">apm</span></code>.</p>
-<p>Returns an approximation to the confidence interval (CI) for the noncentrality parameter <span class="math notranslate nohighlight">\(\lambda\)</span> of noncentral chi-squared distribution, as decribed in <span id="id3">Winterbottom [<a class="reference internal" href="../99BackMatter/index.html#id273" title="A. Winterbottom. Estimation for the bivariate normal correlation coefficient using asymptotic expansions. Communications in Statistics, Part B – Simulation and Computation [Split from: &#64;J(CommStat)], 9:599–609, 1980.">1451</a>]</span>.</p>
+<p>Returns an approximation to the confidence interval (CI) for the noncentrality parameter <span class="math notranslate nohighlight">\(\lambda\)</span> of noncentral chi-squared distribution, as decribed in <span id="id3">Winterbottom [<a class="reference internal" href="../99BackMatter/index.html#id273" title="A. Winterbottom. Estimation for the bivariate normal correlation coefficient using asymptotic expansions. Communications in Statistics, Part B – Simulation and Computation [Split from: &#64;J(CommStat)], 9:599–609, 1980.">1448</a>]</span>.</p>
 <p>[Winterbottom1979` gives the following formula to determine the paramter <span class="math notranslate nohighlight">\(\lambda\)</span> of a noncentral <span class="math notranslate nohighlight">\(\chi^2\)</span> distribution with <span class="math notranslate nohighlight">\(n\)</span> degrees of freedom,
 so that <span class="math notranslate nohighlight">\(F_{\chi^2}\left(n, x; 0\right)=1-\alpha\)</span> and <span class="math notranslate nohighlight">\(F_{\chi^2}\left(n, x; \lambda\right)=1-\beta\)</span>. Let c be the <span class="math notranslate nohighlight">\(1-\alpha\)</span> percentage point of a <span class="math notranslate nohighlight">\(\chi^2\)</span>-distribution with <span class="math notranslate nohighlight">\(n\)</span> degrees of freedom,
 let <span class="math notranslate nohighlight">\(x\)</span> be the <span class="math notranslate nohighlight">\(1-\beta\)</span> percentage point of a <span class="math notranslate nohighlight">\(N(0,1)\)</span> distribution, and <span class="math notranslate nohighlight">\(T=(c-n)/n\)</span>, <span class="math notranslate nohighlight">\(Y=2T+1\)</span>. Then</p>
@@ -1215,7 +1214,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Nov 05, 2026.
+  Last updated on Nov 08, 2026.
   <br/>
 </p>
   </div>

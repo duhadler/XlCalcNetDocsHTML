@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Normal range distribution &#8212; XlCalcNet 1.1.0 documentation</title>
+    <title>Normal range distribution &#8212; XlCalcNet 1.2.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../_static/documentation_options.js?v=051bfb12"></script>
+    <script src="../../_static/documentation_options.js?v=db04a367"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Normal maximum modulus distribution, \(\rho_{ij, i \ne j} = \lambda_i \lambda_j\)" href="D05_nmm_rhoij.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Nov 05, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 08, 2026"/>
   </head>
   
   
@@ -439,9 +439,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C03_LegendreIntegrals.html">Legendre elliptic integrals (elliptic modulus  <span class="math notranslate nohighlight">\(k\)</span>), and related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C04_JacobiEllipticFunctions.html">Jacobi elliptic functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C05_JacobiThetafunctions.html">Jacobi theta functions and related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C06_WeierstrassConversions.html">Conversions of parameters of Weierstrass <span class="math notranslate nohighlight">\(\wp\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C07_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C08_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C06_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C07_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../B09_LerchPhi/index.html">Lerch’s phi and related</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -897,7 +896,7 @@ document.write(`
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dist_normal_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dist_normal_range" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, <code class="docutils literal notranslate"><span class="pre">ipm</span></code>, <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">gmp</span></code> or <code class="docutils literal notranslate"><span class="pre">apm</span></code>.</p>
 <p>The normal range distribution is a continuous probability distribution with  <span class="math notranslate nohighlight">\(k \ge 2\)</span> groups, and the support interval <span class="math notranslate nohighlight">\((0, +\infty)\)</span>.
-See also Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id999" title="Wikipedia. Studentized range distribution. Wikimedia Foundation, 2009. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Studentized_range_distribution.">1215</a>]</span>, <span id="id2">Harter [<a class="reference internal" href="../../99BackMatter/index.html#id121" title="H. L. Harter. Tables of range and studentized range. The Annals of Mathematical Statistics, 31(4):1122-1147, 1960. Article Stable url: http://www.jstor.org/stable/2237810.">364</a>]</span>, R (Statistical System) <span id="id3">[<a class="reference internal" href="../../99BackMatter/index.html#id879" title="R Core Team. The Studentized Range Distribution. The R Project for Statistical Computing, 2020. [Online; accessed 22-July-2024]. URL: https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/Tukey.">535</a>]</span>, and  <a class="reference internal" href="#rst-dist-normal-range"><span class="std std-ref">dist_normal_range()</span></a>.</p>
+See also Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id999" title="Wikipedia. Studentized range distribution. Wikimedia Foundation, 2009. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Studentized_range_distribution.">1213</a>]</span>, <span id="id2">Harter [<a class="reference internal" href="../../99BackMatter/index.html#id121" title="H. L. Harter. Tables of range and studentized range. The Annals of Mathematical Statistics, 31(4):1122-1147, 1960. Article Stable url: http://www.jstor.org/stable/2237810.">362</a>]</span>, R (Statistical System) <span id="id3">[<a class="reference internal" href="../../99BackMatter/index.html#id879" title="R Core Team. The Studentized Range Distribution. The R Project for Statistical Computing, 2020. [Online; accessed 22-July-2024]. URL: https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/Tukey.">533</a>]</span>, and  <a class="reference internal" href="#rst-dist-normal-range"><span class="std std-ref">dist_normal_range()</span></a>.</p>
 </dd></dl>
 
 <p></p>
@@ -1164,7 +1163,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Nov 05, 2026.
+  Last updated on Nov 08, 2026.
   <br/>
 </p>
   </div>

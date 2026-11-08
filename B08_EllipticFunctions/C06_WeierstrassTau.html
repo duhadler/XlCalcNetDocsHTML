@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Conversions of parameters of Weierstrass \(\wp\) &#8212; XlCalcNet 1.1.0 documentation</title>
+    <title>Weierstrass elliptic functions, in terms of elliptic period ratio \(\tau\) &#8212; XlCalcNet 1.2.0 documentation</title>
   
   
   
@@ -38,22 +38,22 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=051bfb12"></script>
+    <script src="../_static/documentation_options.js?v=db04a367"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=4ea706d9"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'B08_EllipticFunctions/C06_WeierstrassConversions';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'B08_EllipticFunctions/C06_WeierstrassTau';</script>
     <script src="../_static/custom-icon.js?v=74687d30"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Weierstrass elliptic functions, in terms of elliptic period ratio \(\tau\)" href="C07_WeierstrassTau.html" />
+    <link rel="next" title="Modular forms, in terms of half-period \(\omega_1\) and elliptic period ratio \(\tau\)" href="C07_ModularFormsTau.html" />
     <link rel="prev" title="Jacobi theta functions and related functions" href="C05_JacobiThetafunctions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Nov 05, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 08, 2026"/>
   </head>
   
   
@@ -439,9 +439,8 @@
 <li class="toctree-l2"><a class="reference internal" href="C03_LegendreIntegrals.html">Legendre elliptic integrals (elliptic modulus  <span class="math notranslate nohighlight">\(k\)</span>), and related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_JacobiEllipticFunctions.html">Jacobi elliptic functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_JacobiThetafunctions.html">Jacobi theta functions and related functions</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Conversions of parameters of Weierstrass <span class="math notranslate nohighlight">\(\wp\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="C07_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="C08_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B09_LerchPhi/index.html">Lerch’s phi and related</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -773,7 +772,7 @@
       
       
       
-      <li><a href="../_sources/B08_EllipticFunctions/C06_WeierstrassConversions.rst" target="_blank"
+      <li><a href="../_sources/B08_EllipticFunctions/C06_WeierstrassTau.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -857,7 +856,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Conversions of parameters of Weierstrass \wp</h1>
+    <h1>Weierstrass elliptic functions, in terms of elliptic period ratio \tau</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -867,16 +866,24 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elliptic-lattice-invariants-g-2-g-3-from-lattice-roots-e-1-e-2-e-3">Elliptic lattice invariants <span class="math notranslate nohighlight">\(g_2, g_3\)</span> from lattice roots <span class="math notranslate nohighlight">\(e_1, e_2, e_3\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.elliptic_invariants_from_roots"><code class="docutils literal notranslate"><span class="pre">ctx.elliptic_invariants_from_roots()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weierstrass-function-wp-z-tau">Weierstrass function <span class="math notranslate nohighlight">\(\wp(z| \tau)\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.weierstrass_p_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_p_t()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elliptic-lattice-invariants-g-2-g-3-from-omega-tau">Elliptic lattice invariants <span class="math notranslate nohighlight">\(g_2, g_3\)</span> from <span class="math notranslate nohighlight">\((\omega, \tau)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.g2g3_from_tau"><code class="docutils literal notranslate"><span class="pre">ctx.g2g3_from_tau()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weierstrass-function-first-derivative-wp-z-tau">Weierstrass function, first derivative: <span class="math notranslate nohighlight">\(\wp'z| \tau)\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.weierstrass_p_prime_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_p_prime_t()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elliptic-lattice-roots-e-1-e-2-e-3-from-omega-tau">Elliptic lattice roots <span class="math notranslate nohighlight">\(e_1, e_2, e_3\)</span> from (<span class="math notranslate nohighlight">\(\omega, \tau\)</span>)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.elliptic_roots_from_tau"><code class="docutils literal notranslate"><span class="pre">ctx.elliptic_roots_from_tau()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-weierstrass-function-wp-1-z-tau">Inverse Weierstrass function <span class="math notranslate nohighlight">\(\wp^{-1}(z| \tau)\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.weierstrass_p_inv_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_p_inv_t()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weierstrass-zeta-function-zeta-z-tau">Weierstrass Zeta function <span class="math notranslate nohighlight">\(\zeta(z, \tau)\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.weierstrass_zeta_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_zeta_t()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weierstrass-sigma-function-sigma-z-tau">Weierstrass Sigma function <span class="math notranslate nohighlight">\(\sigma(z| \tau)\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.weierstrass_sigma_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_sigma_t()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -891,178 +898,342 @@ document.write(`
                 <article class="bd-article">
                   
   <p></p>
-<section id="conversions-of-parameters-of-weierstrass-wp">
-<h1>Conversions of parameters of Weierstrass <span class="math notranslate nohighlight">\(\wp\)</span><a class="headerlink" href="#conversions-of-parameters-of-weierstrass-wp" title="Link to this heading">#</a></h1>
-<p>Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1158" title="Wikipedia. Weierstrass elliptic function: Modular discriminant. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Weierstrass_elliptic_function#Modular_discriminant.">1351</a>]</span>, Wikipedia <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1159" title="Wikipedia. Weierstrass elliptic function: The constants e1, e2 and e3. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Weierstrass_elliptic_function#The_constants_e1,_e2_and_e3.">1352</a>]</span>, MathWorld <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1653" title="E. W. Weisstein. Weierstrass Elliptic Function. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/WeierstrassEllipticFunction.html.">989</a>]</span>, MathWorld <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1659" title="E. W. Weisstein. Modular Discriminant. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/ModularDiscriminant.html.">987</a>]</span>, MathWorld <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1660" title="Wolfram Language Documentation. Weierstrass Invariants. Wolfram Research, 2013. [Online; accessed 22-July-2024]. URL: https://reference.wolfram.com/language/ref/WeierstrassInvariants.html.">284</a>]</span>, MathWorld <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1661" title="Wolfram Language Documentation. Weierstrass HalfPeriods. Wolfram Research, 2013. [Online; accessed 22-July-2024]. URL: https://reference.wolfram.com/language/ref/WeierstrassHalfPeriods.html.">283</a>]</span>.</p>
-<p>The Weierstrass elliptic functions may be defined on a general lattice <span class="math notranslate nohighlight">\(\Lambda = \{m 2\omega_1 + n 2\omega_2 :  m, n \in \mathbb{Z} \}\)</span> with half-periods <span class="math notranslate nohighlight">\(\omega_1, \omega_2 \in \mathbb{C}\)</span>.</p>
-<p>In XlCalcNet, two interfaces are used:</p>
-<p>The first interface (described in this section) uses  <span class="math notranslate nohighlight">\(\omega = \omega_1\)</span> and <span class="math notranslate nohighlight">\(\tau = \omega_2 / \omega_1\)</span> as parameters; these have a natural geometrical interpretation, specifying respectively the size and shape of the “fundamental parallelogram”. In Flint there is a default choice of <span class="math notranslate nohighlight">\(\omega=1\)</span>; therefore <span class="math notranslate nohighlight">\(\omega\)</span> is omitted from the function parameters in Flint, but <span class="math notranslate nohighlight">\(\omega\)</span> is a required parameter in XlCalcNet.</p>
-<p>In some contexts the lattice invariants <span class="math notranslate nohighlight">\(g_2\)</span> and <span class="math notranslate nohighlight">\(g_3\)</span> are the natural parameters because they correspond directly with physical quantities; usually <span class="math notranslate nohighlight">\(g_2, g_3 \in \mathbb{R}\)</span> in such cases (and also in XlCalcNet). This interface is described in the next section.</p>
-<p>To keep these two interfaces apart with regard to mathematical notation, we write <span class="math notranslate nohighlight">\(\wp(z| \omega, \tau)\)</span> for the first interface and  <span class="math notranslate nohighlight">\(\wp_g(z; g_2, g_3)\)</span> for the second, and likewise for the other Weierstrass functions.</p>
-<p>To evaluate the functions on a general lattice, we can use the the following homogeneity relations (for <span class="math notranslate nohighlight">\(t \ne 0\)</span>). Note that the period ratio <span class="math notranslate nohighlight">\(\tau\)</span> is preserved:</p>
-<div class="math notranslate nohighlight">
-\[\wp'(tz| t \omega, \tau) = t^{-3} \wp'(z| \omega, \tau)\]</div>
-<div class="math notranslate nohighlight">
-\[\wp(tz| t \omega, \tau) = t^{-2} \wp(z| \omega, \tau)\]</div>
-<div class="math notranslate nohighlight">
-\[\zeta(tz| t \omega, \tau) = t^{-1} \zeta(z| \omega, \tau)\]</div>
-<div class="math notranslate nohighlight">
-\[\sigma(tz| t \omega, \tau) = t \sigma(z| \omega, \tau)\]</div>
-<div class="math notranslate nohighlight">
-\[g_2(t \omega, \tau) = t^{-4} g_2(\omega, \tau)\]</div>
-<div class="math notranslate nohighlight">
-\[g_3(t \omega, \tau) = t^{-6} g_3(\omega, \tau)\]</div>
-<div class="math notranslate nohighlight">
-\[e_i(t \omega, \tau) = t^{-2} e_i(\omega, \tau), \quad i = 1, 2, 3\]</div>
-<div class="math notranslate nohighlight">
-\[\Delta(t \omega, \tau) = t^{-12} \Delta(\omega, \tau)\]</div>
-<section id="elliptic-lattice-invariants-g-2-g-3-from-lattice-roots-e-1-e-2-e-3">
-<span id="rst-mpm-elliptic-invariants-from-roots"></span><h2>Elliptic lattice invariants <span class="math notranslate nohighlight">\(g_2, g_3\)</span> from lattice roots <span class="math notranslate nohighlight">\(e_1, e_2, e_3\)</span><a class="headerlink" href="#elliptic-lattice-invariants-g-2-g-3-from-lattice-roots-e-1-e-2-e-3" title="Link to this heading">#</a></h2>
+<section id="weierstrass-elliptic-functions-in-terms-of-elliptic-period-ratio-tau">
+<h1>Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span><a class="headerlink" href="#weierstrass-elliptic-functions-in-terms-of-elliptic-period-ratio-tau" title="Link to this heading">#</a></h1>
+<section id="weierstrass-function-wp-z-tau">
+<span id="rst-mpm-wpg-by-tau"></span><h2>Weierstrass function <span class="math notranslate nohighlight">\(\wp(z| \tau)\)</span><a class="headerlink" href="#weierstrass-function-wp-z-tau" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.elliptic_invariants_from_roots">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">elliptic_invariants_from_roots</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.elliptic_invariants_from_roots" title="Link to this definition">#</a></dt>
-<dd><p>Computes the lattice invariants <span class="math notranslate nohighlight">\(g_2, g_3\)</span>. The Weierstrass elliptic function satisfies the differential equation <span class="math notranslate nohighlight">\([\wp'(z, \tau)]^2 = 4 [\wp(z,\tau)]^3 - g_2 \wp(z,\tau) - g_3\)</span>.  Up to constant factors, the lattice invariants are the first two Eisenstein series.</p>
-<p>See also: MathWorld <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1660" title="Wolfram Language Documentation. Weierstrass Invariants. Wolfram Research, 2013. [Online; accessed 22-July-2024]. URL: https://reference.wolfram.com/language/ref/WeierstrassInvariants.html.">284</a>]</span>, MathWorld <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1661" title="Wolfram Language Documentation. Weierstrass HalfPeriods. Wolfram Research, 2013. [Online; accessed 22-July-2024]. URL: https://reference.wolfram.com/language/ref/WeierstrassHalfPeriods.html.">283</a>]</span>, Flint <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id608" title="The FLINT Team. Acb: Weierstrass elliptic functions. FLINT: Fast Library for Number Theory, 2021. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_elliptic.html#weierstrass-elliptic-functions.">768</a>]</span>.</p>
+<dt class="sig sig-object py" id="ctx.weierstrass_p_t">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">weierstrass_p_t</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.weierstrass_p_t" title="Link to this definition">#</a></dt>
+<dd><p>Computes Weierstrass’s elliptic function in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span>.</p>
+<p>We have <span class="math notranslate nohighlight">\(\wp(tz| t \omega, \tau) = t^{-2} \wp(z| \omega, \tau)\)</span>.</p>
+<p>See also MathWorld <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1653" title="E. W. Weisstein. Weierstrass Elliptic Function. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/WeierstrassEllipticFunction.html.">987</a>]</span>, Flint <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id608" title="The FLINT Team. Acb: Weierstrass elliptic functions. FLINT: Fast Library for Number Theory, 2021. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_elliptic.html#weierstrass-elliptic-functions.">766</a>]</span>.</p>
+<p>See also: <a class="reference external" href="https://dlmf.nist.gov/23.2">https://dlmf.nist.gov/23.2</a></p>
 <div class="math notranslate nohighlight">
-\[g_{2}=2({e_{1}}^{2}+{e_{2}}^{2}+{e_{3}}^{2})=-4(e_{2}e_{3}+e_{3}e_{1}+e_{1}e_{2}),\]</div>
+\[\wp(z, \tau, \omega=1) = \frac{1}{z^2} + \sum_{n^2+m^2 \ne 0}  \left[ \frac{1}{(z+m+n\tau)^2} - \frac{1}{(m+n\tau)^2} \right]\]</div>
+<p>which satisfies <span class="math notranslate nohighlight">\(\wp(z, \tau, \omega=1) = \wp(z + 1, \tau, \omega=1) = \wp(z + \tau, \tau, \omega=1)\)</span>. To evaluate the function efficiently, we use the formula (with with <span class="math notranslate nohighlight">\(q = e^{\pi i \tau}\)</span>)</p>
 <div class="math notranslate nohighlight">
-\[g_{3}=4e_{1}e_{2}e_{3}=\tfrac{4}{3}({e_{1}}^{3}+{e_{2}}^{3}+{e_{3}}^{3}).\]</div>
-<p>An example with purely imaginary input, producing real output:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">dec</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">gmp</span><span class="p">,</span> <span class="n">fpm</span><span class="p">,</span> <span class="n">apm</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="n">tau</span> <span class="o">=</span> <span class="s1">&#39;0.0 + 0.7j&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dx2</span><span class="p">,</span> <span class="n">dx3</span> <span class="o">=</span> <span class="n">dec</span><span class="o">.</span><span class="n">elliptic_invariants</span><span class="p">(</span><span class="n">tau</span><span class="p">);</span> <span class="n">mx2</span><span class="p">,</span> <span class="n">mx3</span> <span class="o">=</span> <span class="n">mpm</span><span class="o">.</span><span class="n">elliptic_invariants</span><span class="p">(</span><span class="n">tau</span><span class="p">);</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gx2</span><span class="p">,</span> <span class="n">gx3</span>  <span class="o">=</span> <span class="n">gmp</span><span class="o">.</span><span class="n">elliptic_invariants</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fx2</span><span class="p">,</span> <span class="n">fx3</span> <span class="o">=</span> <span class="n">fpm</span><span class="o">.</span><span class="n">elliptic_invariants</span><span class="p">(</span><span class="n">tau</span><span class="p">);</span> <span class="n">ax2</span><span class="p">,</span> <span class="n">ax3</span> <span class="o">=</span> <span class="n">apm</span><span class="o">.</span><span class="n">elliptic_invariants</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lattice invariant g2&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">show</span><span class="p">([</span><span class="n">dx2</span><span class="p">,</span> <span class="n">mx2</span><span class="p">,</span> <span class="n">gx2</span><span class="p">,</span> <span class="n">fx2</span><span class="p">,</span> <span class="n">ax2</span><span class="p">],</span> <span class="n">aligned</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lattice invariant g3&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">show</span><span class="p">([</span><span class="n">dx3</span><span class="p">,</span> <span class="n">mx3</span><span class="p">,</span> <span class="n">gx3</span><span class="p">,</span> <span class="n">fx3</span><span class="p">,</span> <span class="n">ax3</span><span class="p">],</span> <span class="n">aligned</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="go">lattice invariant g2</span>
-<span class="go">dec: 5.573660602292979232289778942418842671744E+2</span>
-<span class="go">mpm: 5.573660602292979232289778942418842671737e+2</span>
-<span class="go">gmp: 5.573660602292979232289778942418842671749E+02</span>
-<span class="go">fpm: 5.57366060229298E+02</span>
-<span class="go">apm: 5.573660602292979232289778942418842671735e+2 (7.909e-38%)</span>
-
-<span class="go">lattice invariant g3</span>
-<span class="go">dec: -2.266333763304145743477283974834873543570E+3</span>
-<span class="go">mpm: -2.266333763304145743477283974834873543563e+3</span>
-<span class="go">gmp: -2.266333763304145743477283974834873543571E+03</span>
-<span class="go">fpm: -2.26633376330415E+03</span>
-<span class="go">apm: -2.266333763304145743477283974834873543560e+3 (-1.184e-36%)</span>
+\[\wp(z, \tau) = \pi^3 \theta_2^2(0,q) \theta_3^2(0,q)  \frac{\theta_4^2(\pi z,q)}{\theta_1^2(\pi z,q)} - \frac{\pi^3}{3} \left[ \theta_2^4(0,q) + \theta_3^4(0,q)\right].\]</div>
+<div class="math notranslate nohighlight">
+\[\wp(tz| t \omega_1, t \omega_2) = t^{-2} \wp(z| \omega_1, \omega_2)\]</div>
+<p>An example with complex input, using C#-style formatting for complex numbers for the result</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.2</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span>  <span class="n">tau</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">+</span><span class="mf">1.2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="p">[</span><span class="n">fpm</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">cmath53</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">weierstrass_p_t</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tau</span><span class="p">)))</span>
+<span class="go">    fpm:  (-7.2543494503698, -0.131922508660363)</span>
+<span class="go">    mpm:  (-7.254349450369797280072152621242700239356, -0.131922508660363125611061408823267684624)</span>
+<span class="go">cmath53:  (-7.25434945036978, -0.13192250866036)</span>
 </pre></div>
 </div>
+<p>An example with the same complex input as above, showing only the real part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.2</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span>  <span class="n">tau</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">+</span><span class="mf">1.2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_noboost_cplx</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">weierstrass_p_t</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tau</span><span class="p">))))</span>
+<span class="go">    fpm:  -7.2543494503698</span>
+<span class="go">    mpm:  -7.25434945036979728007215262124270023935688016437392781746239599266690022627124751019982783</span>
+<span class="go">    dpm:  -7.25434945036979728007215262124270023935688016437392781746239599266690022627124751019982783</span>
+<span class="go">    gpm:  -7.2543494503697972800721526212427002393568801643739278174623959926669002262712475101998278298</span>
+<span class="go">    apm: [-7.25434945036979728007215262124270023935688016437392781746239599266690022627124751019983 +/- 3.45e-87]</span>
+<span class="go">cmath53:  -7.25434945036978</span>
+<span class="go">sflintc:  -7.254347</span>
+<span class="go">dflintc:  -7.2543494503698</span>
+<span class="go">eflintc:  -7.2543494503697972778</span>
+<span class="go">qflintc:  -7.2543494503697972800721526212427</span>
+<span class="go">oflintc:  -7.2543494503697972800721526212427002393568801643739278174623959926669003</span>
+<span class="go">mflintc:  -7.25434945036979728007215262124270023935688016437392781746239599266690022627124751019982765</span>
+<span class="go">aflintc: [-7.25434945036979728007215262124270023935688016437392781746239599266690022627124751019983 +/- 6.51e-87]</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the imaginary part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.2</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span>  <span class="n">tau</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">+</span><span class="mf">1.2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_noboost_cplx</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">weierstrass_p_t</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tau</span><span class="p">))))</span>
+<span class="go">    fpm:  -0.131922508660363</span>
+<span class="go">    mpm:  -0.131922508660363125611061408823267684624303607998590362391427636233079685872490471504434127</span>
+<span class="go">    dpm:  -0.131922508660363125611061408823267684624303607998590362391427636233079685872490471504434127</span>
+<span class="go">    gpm:  -0.13192250866036312561106140882326768462430360799859036239142763623307968587249047150443412699</span>
+<span class="go">    apm: [-0.13192250866036312561106140882326768462430360799859036239142763623307968587249047150443 +/- 5.35e-87]</span>
+<span class="go">cmath53:  -0.13192250866036</span>
+<span class="go">sflintc:  -0.1319214</span>
+<span class="go">dflintc:  -0.131922508660365</span>
+<span class="go">eflintc:  -0.13192250866036312458</span>
+<span class="go">qflintc:  -0.131922508660363125611061408823269</span>
+<span class="go">oflintc:  -0.13192250866036312561106140882326768462430360799859036239142763623307975</span>
+<span class="go">mflintc:  -0.131922508660363125611061408823267684624303607998590362391427636233079685872490471504434119</span>
+<span class="go">aflintc: [-0.13192250866036312561106140882326768462430360799859036239142763623307968587249047150443 +/- 8.14e-87]</span>
+</pre></div>
+</div>
+<p>The above and additional examples can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder for <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B08_EllipticFunctions/C06_WeierstrassTau/D01_WeistrassPTauCplx.py">Python (complex input)</a>, and <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B08_EllipticFunctions/C06_WeierstrassTau/D01_Weierstrass_p_t.cs">C# (real or complex input)</a>.</p>
 </dd></dl>
 
-<p></p>
 </section>
-<section id="elliptic-lattice-invariants-g-2-g-3-from-omega-tau">
-<span id="rst-mpm-elliptic-invariants-by-tau"></span><h2>Elliptic lattice invariants <span class="math notranslate nohighlight">\(g_2, g_3\)</span> from <span class="math notranslate nohighlight">\((\omega, \tau)\)</span><a class="headerlink" href="#elliptic-lattice-invariants-g-2-g-3-from-omega-tau" title="Link to this heading">#</a></h2>
+<section id="weierstrass-function-first-derivative-wp-z-tau">
+<span id="rst-mpm-wpg-prime-by-tau"></span><h2>Weierstrass function, first derivative: <span class="math notranslate nohighlight">\(\wp'z| \tau)\)</span><a class="headerlink" href="#weierstrass-function-first-derivative-wp-z-tau" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.g2g3_from_tau">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">g2g3_from_tau</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.g2g3_from_tau" title="Link to this definition">#</a></dt>
-<dd><p>Computes the lattice invariants <span class="math notranslate nohighlight">\(g_2, g_3\)</span> in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span>.</p>
-<p>We have <span class="math notranslate nohighlight">\(g_2(t \omega, \tau) = t^{-4} g_2(\omega, \tau)\)</span> and <span class="math notranslate nohighlight">\(g_3(t \omega, \tau) = t^{-6} g_3(\omega, \tau)\)</span>.</p>
-<p>See also: MathWorld <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1660" title="Wolfram Language Documentation. Weierstrass Invariants. Wolfram Research, 2013. [Online; accessed 22-July-2024]. URL: https://reference.wolfram.com/language/ref/WeierstrassInvariants.html.">284</a>]</span>, MathWorld <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id1661" title="Wolfram Language Documentation. Weierstrass HalfPeriods. Wolfram Research, 2013. [Online; accessed 22-July-2024]. URL: https://reference.wolfram.com/language/ref/WeierstrassHalfPeriods.html.">283</a>]</span>, Flint <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id608" title="The FLINT Team. Acb: Weierstrass elliptic functions. FLINT: Fast Library for Number Theory, 2021. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_elliptic.html#weierstrass-elliptic-functions.">768</a>]</span>.</p>
-<p>See also: <a class="reference external" href="https://en.wikipedia.org/wiki/J-invariant#Expressions_in_terms_of_theta_functions">https://en.wikipedia.org/wiki/J-invariant#Expressions_in_terms_of_theta_functions</a></p>
-<p>See also: <a class="reference external" href="https://dlmf.nist.gov/23.3#i">https://dlmf.nist.gov/23.3#i</a></p>
-<p>We obtain the elliptic lattice invariants from the Eisenstein series <span class="math notranslate nohighlight">\(G_4(\tau)\)</span> and <span class="math notranslate nohighlight">\(G_6(\tau)\)</span>:</p>
+<dt class="sig sig-object py" id="ctx.weierstrass_p_prime_t">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">weierstrass_p_prime_t</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.weierstrass_p_prime_t" title="Link to this definition">#</a></dt>
+<dd><p>Computes the  first derivative of Weierstrass’s elliptic function in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span>.</p>
+<p>We have <span class="math notranslate nohighlight">\(\wp'(tz| t \omega, \tau) = t^{-3} \wp'(z| \omega, \tau)\)</span>.</p>
+<p>The Weierstrass elliptic function satisfies the differential equation <span class="math notranslate nohighlight">\([\wp'(z, \tau)]^2 = 4 [\wp(z,\tau)]^3 - g_2 \wp(z,\tau) - g_3\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[g_2(\tau) = 60G_4(\tau) = 60\sum_{(m,n) \neq (0,0)} \left(m + n\tau\right)^{-4}\]</div>
-<div class="math notranslate nohighlight">
-\[g_3(\tau) = 140G_6(\tau) = 140\sum_{(m,n) \neq (0,0)} \left(m + n\tau\right)^{-6}\]</div>
-<p>Define <span class="math notranslate nohighlight">\(q = e^{\pi i \tau}\)</span></p>
-<p>Let <span class="math notranslate nohighlight">\(a = \theta_{2}(q)\)</span>, <span class="math notranslate nohighlight">\(b = \theta_{3}(q)\)</span>, <span class="math notranslate nohighlight">\(c = \theta_{4}(q)\)</span>, where <span class="math notranslate nohighlight">\(a^4 - b^4 + c^4 = 0\)</span>. Then</p>
-<p><span class="math notranslate nohighlight">\(g_2(\tau) = \tfrac{2}{3}\pi^4 \left(a^8 + b^8 + c^8\right)\)</span>, and</p>
-<p><span class="math notranslate nohighlight">\(g_3(\tau) = \tfrac{4}{27}\pi^6 \sqrt{\frac{\left(a^8+b^8+c^8\right)^3-54\left(abc\right)^8}{2}}\)</span>.</p>
+\[\wp'(z, \tau) =  \sqrt{ 4 [\wp(z,\tau)]^3 - g_2 \wp(z,\tau) - g_3 }.\]</div>
+<p>See also MathWorld <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1654" title="E. W. Weisstein. Weierstrass Elliptic Function, First derivative. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/WeierstrassEllipticFunction.html.">988</a>]</span>, Flint <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id608" title="The FLINT Team. Acb: Weierstrass elliptic functions. FLINT: Fast Library for Number Theory, 2021. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_elliptic.html#weierstrass-elliptic-functions.">766</a>]</span>.</p>
+<p>See also: <a class="reference external" href="https://dlmf.nist.gov/23.2">https://dlmf.nist.gov/23.2</a></p>
+<p>An example with complex input, using C#-style formatting for complex numbers for the result</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.2</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span>  <span class="n">tau</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">+</span><span class="mf">1.2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="p">[</span><span class="n">fpm</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">cmath53</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">weierstrass_pprime_t</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tau</span><span class="p">)))</span>
+<span class="go">    fpm:  (0.992425539025143, 26.6634628200187)</span>
+<span class="go">    mpm:  (0.9924255390251424904848569744012269422898, 26.66346282001865720765329567001337977704)</span>
+<span class="go">cmath53:  (0.99242553902508, 26.6634628200188)</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the real part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.2</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span>  <span class="n">tau</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">+</span><span class="mf">1.2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_noboost_cplx</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">weierstrass_pprime_t</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tau</span><span class="p">))))</span>
+<span class="go">    fpm:  0.992425539025143</span>
+<span class="go">    mpm:  0.992425539025142490484856974401226942286628664355608847314699843453258112576362442767381946</span>
+<span class="go">    dpm:  0.992425539025142490484856974401226942286628664355608847314699843453258112576362442767381946</span>
+<span class="go">    gpm:  0.99242553902514249048485697440122694228662866435560884731469984345325811257636244276738194599</span>
+<span class="go">    apm: [0.9924255390251424904848569744012269422866286643556088473146998434532581125763624427674 +/- 6.61e-86]</span>
+<span class="go">cmath53:  0.99242553902508</span>
+<span class="go">sflintc:  0.9924368</span>
+<span class="go">dflintc:  0.992425539025129</span>
+<span class="go">eflintc:  0.99242553902514250071</span>
+<span class="go">qflintc:  0.992425539025142490484856974401215</span>
+<span class="go">oflintc:  0.99242553902514249048485697440122694228662866435560884731469984345325752</span>
+<span class="go">mflintc:  0.992425539025142490484856974401226942286628664355608847314699843453258112576362442767382033</span>
+<span class="go">aflintc: [0.992425539025142490484856974401226942286628664355608847314699843453258112576362442767 +/- 5.42e-85]</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the imaginary part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.2</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span>  <span class="n">tau</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">+</span><span class="mf">1.2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_noboost_cplx</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">weierstrass_pprime_t</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tau</span><span class="p">))))</span>
+<span class="go">    fpm:  26.6634628200187</span>
+<span class="go">    mpm:  26.6634628200186572076532956700133797770419023533543634138452759890185048373647300952880864</span>
+<span class="go">    dpm:  26.6634628200186572076532956700133797770419023533543634138452759890185048373647300952880864</span>
+<span class="go">    gpm:  26.663462820018657207653295670013379777041902353354363413845275989018504837364730095288086401</span>
+<span class="go">    apm: [26.6634628200186572076532956700133797770419023533543634138452759890185048373647300952881 +/- 6.21e-86]</span>
+<span class="go">cmath53:  26.6634628200188</span>
+<span class="go">sflintc:  26.66344</span>
+<span class="go">dflintc:  26.6634628200187</span>
+<span class="go">eflintc:  26.663462820018657187</span>
+<span class="go">qflintc:  26.6634628200186572076532956700134</span>
+<span class="go">oflintc:  26.663462820018657207653295670013379777041902353354363413845275989018506</span>
+<span class="go">mflintc:  26.663462820018657207653295670013379777041902353354363413845275989018504837364730095288085</span>
+<span class="go">aflintc: [26.663462820018657207653295670013379777041902353354363413845275989018504837364730095288 +/- 2.46e-85]</span>
+</pre></div>
+</div>
+<p>The above and additional examples can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder for <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B08_EllipticFunctions/C06_WeierstrassTau/D02_WeistrassPprimeTauCplx.py">Python (complex input)</a>, and <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B08_EllipticFunctions/C06_WeierstrassTau/D02_Weierstrass_p_prime_t.cs">C# (real or complex input)</a>.</p>
 </dd></dl>
 
-<p></p>
 </section>
-<section id="elliptic-lattice-roots-e-1-e-2-e-3-from-omega-tau">
-<span id="rst-mpm-elliptic-roots-by-tau"></span><h2>Elliptic lattice roots <span class="math notranslate nohighlight">\(e_1, e_2, e_3\)</span> from (<span class="math notranslate nohighlight">\(\omega, \tau\)</span>)<a class="headerlink" href="#elliptic-lattice-roots-e-1-e-2-e-3-from-omega-tau" title="Link to this heading">#</a></h2>
+<section id="inverse-weierstrass-function-wp-1-z-tau">
+<span id="rst-mpm-wpg-inv-by-tau"></span><h2>Inverse Weierstrass function <span class="math notranslate nohighlight">\(\wp^{-1}(z| \tau)\)</span><a class="headerlink" href="#inverse-weierstrass-function-wp-1-z-tau" title="Link to this heading">#</a></h2>
 <dl class="py method">
-<dt class="sig sig-object py" id="ctx.elliptic_roots_from_tau">
-<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">elliptic_roots_from_tau</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.elliptic_roots_from_tau" title="Link to this definition">#</a></dt>
-<dd><p>Computes the lattice roots <span class="math notranslate nohighlight">\(e_1, e_2, e_3\)</span>, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span>. They are the roots of the polynomial <span class="math notranslate nohighlight">\(4z^3 - g_2 z - g_3\)</span>.</p>
-<p>We have <span class="math notranslate nohighlight">\(e_i(t \omega, \tau) = t^{-2} e_i(\omega, \tau), \quad i = 1, 2, 3\)</span>.</p>
-<p>See also Wikipedia <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id1159" title="Wikipedia. Weierstrass elliptic function: The constants e1, e2 and e3. Wikimedia Foundation, 2016. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Weierstrass_elliptic_function#The_constants_e1,_e2_and_e3.">1352</a>]</span>, Flint <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id608" title="The FLINT Team. Acb: Weierstrass elliptic functions. FLINT: Fast Library for Number Theory, 2021. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_elliptic.html#weierstrass-elliptic-functions.">768</a>]</span>.</p>
-<p>See also: <a class="reference external" href="https://dlmf.nist.gov/23.3#i">https://dlmf.nist.gov/23.3#i</a></p>
-<p>With <span class="math notranslate nohighlight">\(\tau\)</span> as input, the roots <span class="math notranslate nohighlight">\(e_{1}\)</span>, <span class="math notranslate nohighlight">\(e_{2}\)</span>, and <span class="math notranslate nohighlight">\(e_{3}\)</span> can be expressed in terms of the Jacobi theta functions <span class="math notranslate nohighlight">\(\theta _{i}(0;q)\)</span> . Let <span class="math notranslate nohighlight">\(q = e^{2 i \pi \tau}\)</span> denote the nome. Then</p>
+<dt class="sig sig-object py" id="ctx.weierstrass_p_inv_t">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">weierstrass_p_inv_t</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.weierstrass_p_inv_t" title="Link to this definition">#</a></dt>
+<dd><p>Computes the inverse of the Weierstrass elliptic function in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span>. It which satisfies <span class="math notranslate nohighlight">\(\wp(\wp^{-1}(z, \tau), \tau) = z\)</span>. This function is given  by the elliptic integral</p>
 <div class="math notranslate nohighlight">
-\[a=\theta _{2}(0;q); \quad  b=\theta _{3}(0;q); \quad c=\theta _{4}(0;q), \quad \text{with } a^4 - b^4 + c^4 = 0, \quad \text{and}\]</div>
-<div class="math notranslate nohighlight">
-\[e_{1}(\tau )=\tfrac {\pi ^{2}}{3}(b^{4}+c^{4}); \quad  e_{2}(\tau )=\tfrac {\pi ^{2}}{3}(-a^{4}-b^{4}); \quad  e_{3}(\tau )=\tfrac {\pi ^{2}}{3}(a^{4}-c^{4}).\]</div>
-<p>An example with purely imaginary input, producing real output:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">dec</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">gmp</span><span class="p">,</span> <span class="n">fpm</span><span class="p">,</span> <span class="n">apm</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span> <span class="n">tau</span> <span class="o">=</span> <span class="s1">&#39;0.0 + 0.7j&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span><span class="p">,</span> <span class="n">dx3</span> <span class="o">=</span> <span class="n">dec</span><span class="o">.</span><span class="n">elliptic_roots</span><span class="p">(</span><span class="n">tau</span><span class="p">);</span> <span class="n">mx1</span><span class="p">,</span> <span class="n">mx2</span><span class="p">,</span> <span class="n">mx3</span> <span class="o">=</span> <span class="n">mpm</span><span class="o">.</span><span class="n">elliptic_roots</span><span class="p">(</span><span class="n">tau</span><span class="p">);</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gx1</span><span class="p">,</span> <span class="n">gx2</span><span class="p">,</span> <span class="n">gx3</span>  <span class="o">=</span> <span class="n">gmp</span><span class="o">.</span><span class="n">elliptic_roots</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fx1</span><span class="p">,</span> <span class="n">fx2</span><span class="p">,</span> <span class="n">fx3</span> <span class="o">=</span> <span class="n">fpm</span><span class="o">.</span><span class="n">elliptic_roots</span><span class="p">(</span><span class="n">tau</span><span class="p">);</span> <span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">,</span> <span class="n">ax3</span> <span class="o">=</span> <span class="n">apm</span><span class="o">.</span><span class="n">elliptic_roots</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lattice root e1&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">show</span><span class="p">([</span><span class="n">dx1</span><span class="p">,</span> <span class="n">mx1</span><span class="p">,</span> <span class="n">gx1</span><span class="p">,</span> <span class="n">fx1</span><span class="p">,</span> <span class="n">ax1</span><span class="p">],</span> <span class="n">aligned</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">lattice root e1</span>
-<span class="go">dec: 8.546997557335192078343940404355992077317E+0</span>
-<span class="go">mpm: 8.546997557335192078343940404355992077314e+0</span>
-<span class="go">gmp: 8.546997557335192078343940404355992077321E+00</span>
-<span class="go">fpm: 8.54699755733519E+00</span>
-<span class="go">apm: 8.546997557335192078343940404355992077315e+0 (4.298e-39%)</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lattice root e2&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">show</span><span class="p">([</span><span class="n">dx2</span><span class="p">,</span> <span class="n">mx2</span><span class="p">,</span> <span class="n">gx2</span><span class="p">,</span> <span class="n">fx2</span><span class="p">,</span> <span class="n">ax2</span><span class="p">],</span> <span class="n">aligned</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">lattice root e2</span>
-<span class="go">dec: -1.346877689428238019477524701740978037594E+1</span>
-<span class="go">mpm: -1.346877689428238019477524701740978037593e+1</span>
-<span class="go">gmp: -1.346877689428238019477524701740978037595E+01</span>
-<span class="go">fpm: -1.34687768942824E+01</span>
-<span class="go">apm: 4.921779336947188116431306613053788298616e+0 (1.493e-38%)</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lattice root e3&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">show</span><span class="p">([</span><span class="n">dx3</span><span class="p">,</span> <span class="n">mx3</span><span class="p">,</span> <span class="n">gx3</span><span class="p">,</span> <span class="n">fx3</span><span class="p">,</span> <span class="n">ax3</span><span class="p">],</span> <span class="n">aligned</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">lattice root e3</span>
-<span class="go">dec: 4.921779336947188116431306613053788298624E+0</span>
-<span class="go">mpm: 4.921779336947188116431306613053788298616e+0</span>
-<span class="go">gmp: 4.921779336947188116431306613053788298625E+00</span>
-<span class="go">fpm: 4.92177933694719E+00</span>
-<span class="go">apm: -1.346877689428238019477524701740978037593e+1 (-7.023e-38%)</span>
+\[\wp^{-1}(z, \tau) = \frac{1}{2} \int_z^{\infty} \frac{\mathrm{d}t}{\sqrt{(t-e_1)(t-e_2)(t-e_3)}}  = R_F(z-e_1,z-e_2,z-e_3).\]</div>
+<p>See also MathWorld <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1655" title="E. W. Weisstein. Inverse of Weierstrass Elliptic Function. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/WeierstrassEllipticFunction.html.">983</a>]</span>, Flint <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id608" title="The FLINT Team. Acb: Weierstrass elliptic functions. FLINT: Fast Library for Number Theory, 2021. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_elliptic.html#weierstrass-elliptic-functions.">766</a>]</span>.</p>
+<p>See also: <a class="reference external" href="https://dlmf.nist.gov/23.2">https://dlmf.nist.gov/23.2</a></p>
+<p>An example with complex input, using C#-style formatting for complex numbers for the result</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.2</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span>  <span class="n">tau</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">+</span><span class="mf">1.2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="p">[</span><span class="n">fpm</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">cmath53</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">weierstrass_pinv_t</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tau</span><span class="p">)))</span>
+<span class="go">    fpm:  (0.408458464677131, -0.297575206941329)</span>
+<span class="go">    mpm:  (0.4084584646771311633210730690530960731275, -0.2975752069413288186194559922372487678026)</span>
+<span class="go">cmath53:  (0.408458464677103, -0.297575206941308)</span>
 </pre></div>
 </div>
-<p>!!! NEED TO FIX: Decimal complex negation and multiplication from left</p>
-<p>An example with complex input:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">dec</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">gmp</span><span class="p">,</span> <span class="n">fpm</span><span class="p">,</span> <span class="n">apm</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="n">tau</span> <span class="o">=</span> <span class="s1">&#39;0.4 + 0.7j&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">dx1</span><span class="p">,</span> <span class="n">dx2</span><span class="p">,</span> <span class="n">dx3</span> <span class="o">=</span> <span class="n">dec</span><span class="o">.</span><span class="n">elliptic_roots</span><span class="p">(</span><span class="n">tau</span><span class="p">);</span> <span class="n">mx1</span><span class="p">,</span> <span class="n">mx2</span><span class="p">,</span> <span class="n">mx3</span> <span class="o">=</span> <span class="n">mpm</span><span class="o">.</span><span class="n">elliptic_roots</span><span class="p">(</span><span class="n">tau</span><span class="p">);</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">gx1</span><span class="p">,</span> <span class="n">gx2</span><span class="p">,</span> <span class="n">gx3</span>  <span class="o">=</span> <span class="n">gmp</span><span class="o">.</span><span class="n">elliptic_roots</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fx1</span><span class="p">,</span> <span class="n">fx2</span><span class="p">,</span> <span class="n">fx3</span> <span class="o">=</span> <span class="n">fpm</span><span class="o">.</span><span class="n">elliptic_roots</span><span class="p">(</span><span class="n">tau</span><span class="p">);</span> <span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">,</span> <span class="n">ax3</span> <span class="o">=</span> <span class="n">apm</span><span class="o">.</span><span class="n">elliptic_roots</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lattice root e1&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">show</span><span class="p">([</span><span class="n">dx1</span><span class="p">,</span> <span class="n">mx1</span><span class="p">,</span> <span class="n">gx1</span><span class="p">,</span> <span class="n">fx1</span><span class="p">,</span> <span class="n">ax1</span><span class="p">],</span> <span class="n">aligned</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">lattice root e1</span>
-<span class="go">dec: 5.0162095528741509613E+0              + 1.1199909932847896589E+0j</span>
-<span class="go">mpm: 5.0162095528741509605e+0              + 1.1199909932847896584e+0j</span>
-<span class="go">gmp: 5.0162095528741509611E+00             + 1.1199909932847896588E+00j</span>
-<span class="go">fpm: 5.01620955287415E+00                  + 1.11999099328479E+00j</span>
-<span class="go">apm: 5.0162095528741509605e+0 (4.525e-18%) + 1.1199909932847896584e+0 (1.989e-17%)j</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lattice root e2&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">show</span><span class="p">([</span><span class="n">dx2</span><span class="p">,</span> <span class="n">mx2</span><span class="p">,</span> <span class="n">gx2</span><span class="p">,</span> <span class="n">fx2</span><span class="p">,</span> <span class="n">ax2</span><span class="p">],</span> <span class="n">aligned</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">lattice root e2</span>
-<span class="go">dec: -3.2965087919479326553E+0               - 3.2515656088055451348E+0j</span>
-<span class="go">mpm: -4.8733168229696470033e+0               - 8.6347058331318457444e+0j</span>
-<span class="go">gmp: -4.8733168229696470039E+00              - 8.6347058331318457450E+00j</span>
-<span class="go">fpm: -4.87331682296965E+00                   - 8.63470583313184E+00j</span>
-<span class="go">apm: -1.4289272990450395721e-1 (-1.792e-16%) + 7.5147148398470560860e+0 (3.562e-18%)j</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lattice root e3&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">show</span><span class="p">([</span><span class="n">dx3</span><span class="p">,</span> <span class="n">mx3</span><span class="p">,</span> <span class="n">gx3</span><span class="p">,</span> <span class="n">fx3</span><span class="p">,</span> <span class="n">ax3</span><span class="p">],</span> <span class="n">aligned</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">lattice root e3</span>
-<span class="go">dec: -1.4289272990450395785E-1              + 7.5147148398470560861E+0j</span>
-<span class="go">mpm: -1.4289272990450395722e-1              + 7.5147148398470560860e+0j</span>
-<span class="go">gmp: -1.4289272990450395720E-01             + 7.5147148398470560862E+00j</span>
-<span class="go">fpm: -1.42892729904505E-01                  + 7.51471483984706E+00j</span>
-<span class="go">apm: -4.8733168229696470032e+0 (-6.82e-17%) - 8.6347058331318457441e+0 (-3.869e-17%)j</span>
+<p>An example with the same complex input as above, showing only the real part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.2</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span>  <span class="n">tau</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">+</span><span class="mf">1.2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_noboost_cplx</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">weierstrass_pinv_t</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tau</span><span class="p">))))</span>
+<span class="go">    fpm:  0.408458464677131</span>
+<span class="go">    mpm:  0.408458464677131163321073069053096073127551204694840874360168926360515659585568931558425682</span>
+<span class="go">    dpm:  0.408458464677131163321073069053096073127551204694840874360168926360515659585568931558425682</span>
+<span class="go">    gpm:  0.40845846467713116332107306905309607312755120469484087436016892636051565958556893155842568201</span>
+<span class="go">    apm: [0.40845846467713116332107306905309607312755120469484087436016892636051565958556893155843 +/- 6.50e-87]</span>
+<span class="go">cmath53:  0.408458464677103</span>
+<span class="go">sflintc:  0.4084585</span>
+<span class="go">dflintc:  0.408458464677131</span>
+<span class="go">eflintc:  0.40845846467713116333</span>
+<span class="go">qflintc:  0.408458464677131163321073069053096</span>
+<span class="go">oflintc:  0.40845846467713116332107306905309607312755120469484087436016892636051566</span>
+<span class="go">mflintc:  0.408458464677131163321073069053096073127551204694840874360168926360515659585568931558425683</span>
+<span class="go">aflintc: [0.4084584646771311633210730690530960731275512046948408743601689263605156595855689315584 +/- 3.37e-86]</span>
 </pre></div>
 </div>
+<p>An example with the same complex input as above, showing only the imaginary part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.2</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span>  <span class="n">tau</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">+</span><span class="mf">1.2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_noboost_cplx</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">weierstrass_pinv_t</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tau</span><span class="p">))))</span>
+<span class="go">    fpm:  -0.297575206941329</span>
+<span class="go">    mpm:  -0.297575206941328818619455992237248767802590833504130544485629345380549132990744265473296515</span>
+<span class="go">    dpm:  -0.297575206941328818619455992237248767802590833504130544485629345380549132990744265473296515</span>
+<span class="go">    gpm:  -0.29757520694132881861945599223724876780259083350413054448562934538054913299074426547329651502</span>
+<span class="go">    apm: [-0.29757520694132881861945599223724876780259083350413054448562934538054913299074426547330 +/- 4.82e-87]</span>
+<span class="go">cmath53:  -0.297575206941308</span>
+<span class="go">sflintc:  -0.2975752</span>
+<span class="go">dflintc:  -0.297575206941329</span>
+<span class="go">eflintc:  -0.29757520694132881862</span>
+<span class="go">qflintc:  -0.297575206941328818619455992237249</span>
+<span class="go">oflintc:  -0.29757520694132881861945599223724876780259083350413054448562934538054913</span>
+<span class="go">mflintc:  -0.297575206941328818619455992237248767802590833504130544485629345380549132990744265473296515</span>
+<span class="go">aflintc: [-0.29757520694132881861945599223724876780259083350413054448562934538054913299074426547330 +/- 8.37e-87]</span>
+</pre></div>
+</div>
+<p>The above and additional examples can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder for <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B08_EllipticFunctions/C06_WeierstrassTau/D03_WeistrassPInvTauCplx.py">Python (complex input)</a>, and <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B08_EllipticFunctions/C06_WeierstrassTau/D03_Weierstrass_p_inv_t.cs">C# (real or complex input)</a>.</p>
+</dd></dl>
+
+</section>
+<section id="weierstrass-zeta-function-zeta-z-tau">
+<span id="rst-mpm-weierstrass-zeta-by-tau"></span><h2>Weierstrass Zeta function <span class="math notranslate nohighlight">\(\zeta(z, \tau)\)</span><a class="headerlink" href="#weierstrass-zeta-function-zeta-z-tau" title="Link to this heading">#</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="ctx.weierstrass_zeta_t">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">weierstrass_zeta_t</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.weierstrass_zeta_t" title="Link to this definition">#</a></dt>
+<dd><p>Computes the Weierstrass zeta function in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span>.</p>
+<p>We have <span class="math notranslate nohighlight">\(\zeta(tz| t \omega, \tau) = t^{-1} \zeta(z| \omega, \tau)\)</span>.</p>
+<p>The function can be defined as</p>
+<div class="math notranslate nohighlight">
+\[\zeta(z| \omega, \tau) = \frac{1}{z} + \sum_{n^2+m^2 \ne 0}  \left[ \frac{1}{z-m-n\tau} + \frac{1}{m+n\tau} + \frac{z}{(m+n\tau)^2} \right]\]</div>
+<p>and is quasiperiodic with <span class="math notranslate nohighlight">\(\zeta(z + 1| \omega, \tau) = \zeta(z| \omega, \tau) + \zeta(1/2| \omega, \tau)\)</span> and <span class="math notranslate nohighlight">\(\zeta(z + \tau| \omega, \tau) = \zeta(z| \omega, \tau) + \zeta(\tau/2| \omega, \tau)\)</span>.</p>
+<p>The function is related to <span class="math notranslate nohighlight">\(\wp(z| \omega, \tau)\)</span> by <span class="math notranslate nohighlight">\(\displaystyle \frac{d \zeta(z| \omega, \tau)}{\mathrm{d}z} = -\wp(z| \omega, \tau)\)</span> and <span class="math notranslate nohighlight">\(\displaystyle \zeta(z| \omega, \tau) - z^{-1} = \int_0^z \left(\wp(z| \omega, \tau) - z^{-2} \right)\)</span>.</p>
+<p>See also MathWorld <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1657" title="E. W. Weisstein. Weierstrass Zeta Function. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/WeierstrassZetaFunction.html.">990</a>]</span>, Flint <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id608" title="The FLINT Team. Acb: Weierstrass elliptic functions. FLINT: Fast Library for Number Theory, 2021. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_elliptic.html#weierstrass-elliptic-functions.">766</a>]</span>.</p>
+<p>See also: <a class="reference external" href="https://dlmf.nist.gov/23.2">https://dlmf.nist.gov/23.2</a></p>
+<p>To evaluate the function efficiently, we use the formula</p>
+<div class="math notranslate nohighlight">
+\[\zeta(z| \omega, \tau) = \frac{\pi z}{3} \frac{\theta_1'''(0,q)}{\theta_1'(0,q)}   + \frac{\theta_1'(\pi z,q)}{\theta_1(\pi z,q)}\]</div>
+<p>An example with complex input, using C#-style formatting for complex numbers for the result</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.2</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span>  <span class="n">tau</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">+</span><span class="mf">1.2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="p">[</span><span class="n">fpm</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">cmath53</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">weierstrass_zeta_t</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tau</span><span class="p">)))</span>
+<span class="go">    fpm:  (3.98088971569181, -2.42206897334368)</span>
+<span class="go">    mpm:  (3.980889715691808342151541496199970266175, -2.422068973343679557790538434887960265993)</span>
+<span class="go">cmath53:  (3.98088971569094, -2.42206897334536)</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the real part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.2</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span>  <span class="n">tau</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">+</span><span class="mf">1.2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_noboost_cplx</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">weierstrass_zeta_t</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tau</span><span class="p">))))</span>
+<span class="go">    fpm:  3.98088971569181</span>
+<span class="go">    mpm:  3.98088971569180834215154149619997026617514164120314092077263843965481693540841793490425065</span>
+<span class="go">    dpm:  3.98088971569180834215154149619997026617514164120314092077263843965481693540841793490425065</span>
+<span class="go">    gpm:  3.98088971569180834215154149619997026617514164120314092077263843965481693540841793490425065</span>
+<span class="go">    apm: [3.98088971569180834215154149619997026617514164120314092077263843965481693540841793490425 +/- 4.33e-87]</span>
+<span class="go">cmath53:  3.98088971569094</span>
+<span class="go">sflintc:  3.98089</span>
+<span class="go">dflintc:  3.98088971569181</span>
+<span class="go">eflintc:  3.9808897156918083425</span>
+<span class="go">qflintc:  3.98088971569180834215154149619997</span>
+<span class="go">oflintc:  3.9808897156918083421515414961999702661751416412031409207726384396548169</span>
+<span class="go">mflintc:  3.98088971569180834215154149619997026617514164120314092077263843965481693540841793490425117</span>
+<span class="go">aflintc: [3.9808897156918083421515414961999702661751416412031409207726384396548169354084179349043 +/- 5.73e-86]</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the imaginary part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.2</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span>  <span class="n">tau</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">+</span><span class="mf">1.2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_noboost_cplx</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">weierstrass_zeta_t</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tau</span><span class="p">))))</span>
+<span class="go">    fpm:  -2.42206897334368</span>
+<span class="go">    mpm:  -2.4220689733436795577905384348879602659923578377926217327095984664562795228352572070712683</span>
+<span class="go">    dpm:  -2.4220689733436795577905384348879602659923578377926217327095984664562795228352572070712683</span>
+<span class="go">    gpm:  -2.4220689733436795577905384348879602659923578377926217327095984664562795228352572070712682999</span>
+<span class="go">    apm: [-2.42206897334367955779053843488796026599235783779262173270959846645627952283525720707127 +/- 4.76e-87]</span>
+<span class="go">cmath53:  -2.42206897334536</span>
+<span class="go">sflintc:  -2.422069</span>
+<span class="go">dflintc:  -2.42206897334368</span>
+<span class="go">eflintc:  -2.4220689733436795582</span>
+<span class="go">qflintc:  -2.42206897334367955779053843488796</span>
+<span class="go">oflintc:  -2.4220689733436795577905384348879602659923578377926217327095984664562795</span>
+<span class="go">mflintc:  -2.42206897334367955779053843488796026599235783779262173270959846645627952283525720707126845</span>
+<span class="go">aflintc: [-2.4220689733436795577905384348879602659923578377926217327095984664562795228352572070713 +/- 4.01e-86]</span>
+</pre></div>
+</div>
+<p>The above and additional examples can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder for <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B08_EllipticFunctions/C06_WeierstrassTau/D04_WeistrassZetaTauCplx.py">Python (complex input)</a>, and <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B08_EllipticFunctions/C06_WeierstrassTau/D04_Weierstrass_zeta_t.cs">C# (real or complex input)</a>.</p>
+</dd></dl>
+
+</section>
+<section id="weierstrass-sigma-function-sigma-z-tau">
+<span id="rst-mpm-weierstrass-sigma-by-tau"></span><h2>Weierstrass Sigma function <span class="math notranslate nohighlight">\(\sigma(z| \tau)\)</span><a class="headerlink" href="#weierstrass-sigma-function-sigma-z-tau" title="Link to this heading">#</a></h2>
+<dl class="py method">
+<dt class="sig sig-object py" id="ctx.weierstrass_sigma_t">
+<span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">weierstrass_sigma_t</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.weierstrass_sigma_t" title="Link to this definition">#</a></dt>
+<dd><p>Computes the Weierstrass sigma function in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span>. We have <span class="math notranslate nohighlight">\(\sigma(tz| t \omega, \tau) = t \sigma(z| \omega, \tau)\)</span>.</p>
+<p>See also MathWorld <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1656" title="E. W. Weisstein. Weierstrass Sigma. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/WeierstrassSigmaFunction.html.">989</a>]</span>, Flint <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id608" title="The FLINT Team. Acb: Weierstrass elliptic functions. FLINT: Fast Library for Number Theory, 2021. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_elliptic.html#weierstrass-elliptic-functions.">766</a>]</span>.</p>
+<p>See also: <a class="reference external" href="https://dlmf.nist.gov/23.2">https://dlmf.nist.gov/23.2</a></p>
+<p>The function can be defined as</p>
+<div class="math notranslate nohighlight">
+\[\sigma(z| \omega, \tau) = z \prod_{n^2+m^2 \ne 0}  \left[ \left(1-\frac{z}{m+n\tau}\right)  \exp\left(\frac{z}{m+n\tau} + \frac{z^2}{2(m+n\tau)^2} \right) \right]\]</div>
+<p>and is quasiperiodic with <span class="math notranslate nohighlight">\(\sigma(z + 1| \omega, \tau) = -e^{2 \zeta(1/2| \omega, \tau) (z+1/2)} \sigma(z| \omega, \tau)\)</span> and <span class="math notranslate nohighlight">\(\sigma(z + \tau| \omega, \tau) = -e^{2 \zeta(\tau/2| \omega, \tau) (z+\tau/2)} \sigma(z| \omega, \tau)\)</span>.</p>
+<p>The function is related to <span class="math notranslate nohighlight">\(\zeta(z| \omega, \tau)\)</span> by <span class="math notranslate nohighlight">\(\displaystyle \frac{d}{\mathrm{d}z} \log \sigma(z| \omega, \tau) = \zeta(z| \omega, \tau)\)</span>.</p>
+<p>See also MathWorld <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id1656" title="E. W. Weisstein. Weierstrass Sigma. From MathWorld - A Wolfram Web Resource, 2013. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/WeierstrassSigmaFunction.html.">989</a>]</span>, Flint <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id608" title="The FLINT Team. Acb: Weierstrass elliptic functions. FLINT: Fast Library for Number Theory, 2021. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_elliptic.html#weierstrass-elliptic-functions.">766</a>]</span>.</p>
+<p>To evaluate the function efficiently, we use the formula</p>
+<div class="math notranslate nohighlight">
+\[\sigma(z, \tau) = \exp \left( -\frac{(\pi z)^2}{6}  \frac{\theta_1'''(0,q)}{\theta_1'(0,q)} \right)   \times \frac{\theta_1(\pi z,q)}{\theta_1'(\pi z,q)}\]</div>
+<p>An example with complex input, using C#-style formatting for complex numbers for the result</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.2</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span>  <span class="n">tau</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">+</span><span class="mf">1.2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="p">[</span><span class="n">fpm</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">cmath53</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">weierstrass_sigma_t</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tau</span><span class="p">)))</span>
+<span class="go">    fpm:  (-58.2289241875752, 186.450409191644)</span>
+<span class="go">    mpm:  (-58.22892418757515831369822982307070065278, 186.4504091916438864469475633005725545015)</span>
+<span class="go">cmath53:  (-58.2289241872898, 186.450409191966)</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the real part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.2</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span>  <span class="n">tau</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">+</span><span class="mf">1.2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_noboost_cplx</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">weierstrass_sigma_t</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tau</span><span class="p">))))</span>
+<span class="go">    fpm:  -58.2289241875752</span>
+<span class="go">    mpm:  -58.228924187575158313698229823070700652788947392932149320847754676264872753603678004134255</span>
+<span class="go">    dpm:  -58.228924187575158313698229823070700652788947392932149320847754676264872753603678004134255</span>
+<span class="go">    gpm:  -58.228924187575158313698229823070700652788947392932149320847754676264872753603678004134254996</span>
+<span class="go">    apm: [-58.228924187575158313698229823070700652788947392932149320847754676264872753603678004134 +/- 6.30e-85]</span>
+<span class="go">cmath53:  -58.2289241872898</span>
+<span class="go">sflintc:  -58.2289</span>
+<span class="go">dflintc:  -58.2289241875752</span>
+<span class="go">eflintc:  -58.228924187575158294</span>
+<span class="go">qflintc:  -58.2289241875751583136982298230707</span>
+<span class="go">oflintc:  -58.228924187575158313698229823070700652788947392932149320847754676264874</span>
+<span class="go">mflintc:  -58.2289241875751583136982298230707006527889473929321493208477546762648727536036780041343585</span>
+<span class="go">aflintc: [-58.228924187575158313698229823070700652788947392932149320847754676264872753603678004134 +/- 6.86e-85]</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the imaginary part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.2</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span>  <span class="n">tau</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">+</span><span class="mf">1.2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_noboost_cplx</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">weierstrass_sigma_t</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tau</span><span class="p">))))</span>
+<span class="go">    fpm:  186.450409191644</span>
+<span class="go">    mpm:  186.45040919164388644694756330057255450146544108080848765958214622288239763490128271881774</span>
+<span class="go">    dpm:  186.45040919164388644694756330057255450146544108080848765958214622288239763490128271881774</span>
+<span class="go">    gpm:  186.45040919164388644694756330057255450146544108080848765958214622288239763490128271881774001</span>
+<span class="go">    apm: [186.450409191643886446947563300572554501465441080808487659582146222882397634901282718818 +/- 4.73e-85]</span>
+<span class="go">cmath53:  186.450409191966</span>
+<span class="go">sflintc:  186.4504</span>
+<span class="go">dflintc:  186.450409191644</span>
+<span class="go">eflintc:  186.45040919164388643</span>
+<span class="go">qflintc:  186.450409191643886446947563300573</span>
+<span class="go">oflintc:  186.4504091916438864469475633005725545014654410808084876595821462228824</span>
+<span class="go">mflintc:  186.450409191643886446947563300572554501465441080808487659582146222882397634901282718817795</span>
+<span class="go">aflintc: [186.450409191643886446947563300572554501465441080808487659582146222882397634901282718818 +/- 5.29e-85]</span>
+</pre></div>
+</div>
+<p>The above and additional examples can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder for <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B08_EllipticFunctions/C06_WeierstrassTau/D05_WeistrassSigmaTauCplx.py">Python (complex input)</a>, and <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B08_EllipticFunctions/C06_WeierstrassTau/D05_Weierstrass_sigma_t.cs">C# (real or complex input)</a>.</p>
 </dd></dl>
 
 </section>
@@ -1089,11 +1260,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="C07_WeierstrassTau.html"
+       href="C07_ModularFormsTau.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></p>
+        <p class="prev-next-title">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1113,16 +1284,24 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elliptic-lattice-invariants-g-2-g-3-from-lattice-roots-e-1-e-2-e-3">Elliptic lattice invariants <span class="math notranslate nohighlight">\(g_2, g_3\)</span> from lattice roots <span class="math notranslate nohighlight">\(e_1, e_2, e_3\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.elliptic_invariants_from_roots"><code class="docutils literal notranslate"><span class="pre">ctx.elliptic_invariants_from_roots()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weierstrass-function-wp-z-tau">Weierstrass function <span class="math notranslate nohighlight">\(\wp(z| \tau)\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.weierstrass_p_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_p_t()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elliptic-lattice-invariants-g-2-g-3-from-omega-tau">Elliptic lattice invariants <span class="math notranslate nohighlight">\(g_2, g_3\)</span> from <span class="math notranslate nohighlight">\((\omega, \tau)\)</span></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.g2g3_from_tau"><code class="docutils literal notranslate"><span class="pre">ctx.g2g3_from_tau()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weierstrass-function-first-derivative-wp-z-tau">Weierstrass function, first derivative: <span class="math notranslate nohighlight">\(\wp'z| \tau)\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.weierstrass_p_prime_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_p_prime_t()</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elliptic-lattice-roots-e-1-e-2-e-3-from-omega-tau">Elliptic lattice roots <span class="math notranslate nohighlight">\(e_1, e_2, e_3\)</span> from (<span class="math notranslate nohighlight">\(\omega, \tau\)</span>)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.elliptic_roots_from_tau"><code class="docutils literal notranslate"><span class="pre">ctx.elliptic_roots_from_tau()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-weierstrass-function-wp-1-z-tau">Inverse Weierstrass function <span class="math notranslate nohighlight">\(\wp^{-1}(z| \tau)\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.weierstrass_p_inv_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_p_inv_t()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weierstrass-zeta-function-zeta-z-tau">Weierstrass Zeta function <span class="math notranslate nohighlight">\(\zeta(z, \tau)\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.weierstrass_zeta_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_zeta_t()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weierstrass-sigma-function-sigma-z-tau">Weierstrass Sigma function <span class="math notranslate nohighlight">\(\sigma(z| \tau)\)</span></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ctx.weierstrass_sigma_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_sigma_t()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1158,7 +1337,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Nov 05, 2026.
+  Last updated on Nov 08, 2026.
   <br/>
 </p>
   </div>

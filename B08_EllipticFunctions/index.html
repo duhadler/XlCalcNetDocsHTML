@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Elliptic functions and related &#8212; XlCalcNet 1.1.0 documentation</title>
+    <title>Elliptic functions and related &#8212; XlCalcNet 1.2.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=051bfb12"></script>
+    <script src="../_static/documentation_options.js?v=db04a367"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Singular Value and Eigen decompositions" href="../B07_NumpyMultiprecision/C26_EigenAndSVD.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Nov 05, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 08, 2026"/>
   </head>
   
   
@@ -439,9 +439,8 @@
 <li class="toctree-l2"><a class="reference internal" href="C03_LegendreIntegrals.html">Legendre elliptic integrals (elliptic modulus  <span class="math notranslate nohighlight">\(k\)</span>), and related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C04_JacobiEllipticFunctions.html">Jacobi elliptic functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="C05_JacobiThetafunctions.html">Jacobi theta functions and related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C06_WeierstrassConversions.html">Conversions of parameters of Weierstrass <span class="math notranslate nohighlight">\(\wp\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="C07_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="C08_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C06_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../B09_LerchPhi/index.html">Lerch’s phi and related</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -875,7 +874,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[f(z + 2 \omega_1) = f(z + 2 \omega_2) = f(z)\]</div>
 <p>for some half-periods <span class="math notranslate nohighlight">\(\omega_1, \omega_2\)</span> with <span class="math notranslate nohighlight">\(\mathrm{Im}[\omega_1 / \omega_2] &gt; 0\)</span>. The canonical elliptic functions are the Jacobi elliptic functions. More broadly, this section includes  quasi-doubly periodic functions (such as the Jacobi theta functions) and other functions useful in the study of elliptic functions.</p>
-<p>Many different conventions for the arguments of elliptic functions are in use. It is even standard to use different parameterizations for different functions in the same text or software. The usual parameters are the elliptic nome <span class="math notranslate nohighlight">\(q\)</span> or <span class="math notranslate nohighlight">\(\bar{q} = q^2\)</span> (see Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1176" title="Wikipedia. Nome (mathematics). Wikimedia Foundation, 2017. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Nome_(mathematics).">1356</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1680" title="E. W. Weisstein. Elliptic Nome q. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Nome.html.">997</a>]</span>), which usually must satisfy <span class="math notranslate nohighlight">\(|q| &lt; 1\)</span>; the elliptic parameter <span class="math notranslate nohighlight">\(m\)</span> (an arbitrary complex number, see MathWorld <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1682" title="E. W. Weisstein. Elliptic parameter m. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Parameter.html.">998</a>]</span>); the elliptic modulus <span class="math notranslate nohighlight">\(k\)</span> (an arbitrary complex number, see MathWorld <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1683" title="E. W. Weisstein. Elliptic Modulus k. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/EllipticModulus.html.">996</a>]</span>.); and the half-period ratio <span class="math notranslate nohighlight">\(\tau\)</span> (see Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1177" title="Wikipedia. Half-period ratio. Wikimedia Foundation, 2017. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Half-period_ratio.">1354</a>]</span>, MathWorld <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1684" title="E. W. Weisstein. Half-Period Ratio tau. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Half-PeriodRatio.html.">1001</a>]</span>.), which usually must satisfy <span class="math notranslate nohighlight">\(\mathrm{Im}[\tau] &gt; 0\)</span>.</p>
+<p>Many different conventions for the arguments of elliptic functions are in use. It is even standard to use different parameterizations for different functions in the same text or software. The usual parameters are the elliptic nome <span class="math notranslate nohighlight">\(q\)</span> or <span class="math notranslate nohighlight">\(\bar{q} = q^2\)</span> (see Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1176" title="Wikipedia. Nome (mathematics). Wikimedia Foundation, 2017. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Nome_(mathematics).">1353</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1680" title="E. W. Weisstein. Elliptic Nome q. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Nome.html.">995</a>]</span>), which usually must satisfy <span class="math notranslate nohighlight">\(|q| &lt; 1\)</span>; the elliptic parameter <span class="math notranslate nohighlight">\(m\)</span> (an arbitrary complex number, see MathWorld <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id1682" title="E. W. Weisstein. Elliptic parameter m. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Parameter.html.">996</a>]</span>); the elliptic modulus <span class="math notranslate nohighlight">\(k\)</span> (an arbitrary complex number, see MathWorld <span id="id4">[<a class="reference internal" href="../99BackMatter/index.html#id1683" title="E. W. Weisstein. Elliptic Modulus k. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: https://mathworld.wolfram.com/EllipticModulus.html.">994</a>]</span>.); and the half-period ratio <span class="math notranslate nohighlight">\(\tau\)</span> (see Wikipedia <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id1177" title="Wikipedia. Half-period ratio. Wikimedia Foundation, 2017. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Half-period_ratio.">1351</a>]</span>, MathWorld <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id1684" title="E. W. Weisstein. Half-Period Ratio tau. From MathWorld - A Wolfram Web Resource, 2014. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/Half-PeriodRatio.html.">999</a>]</span>.), which usually must satisfy <span class="math notranslate nohighlight">\(\mathrm{Im}[\tau] &gt; 0\)</span>.</p>
 <p>In the context of Weierstrass elliptic functions, we also have the lattice roots <span class="math notranslate nohighlight">\(e_1, e_2, e_3\)</span>, which are the roots of the polynomial <span class="math notranslate nohighlight">\(4z^3 - g_2 z - g_3\)</span>, where <span class="math notranslate nohighlight">\(g_2\)</span> and <span class="math notranslate nohighlight">\(g_3\)</span> are the lattice invariants.</p>
 <p>These quantities can be expressed in terms of each other using the following relations:</p>
 <div class="math notranslate nohighlight">
@@ -891,7 +890,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[k(q) = \frac{\theta_2^2(q)}{\theta_3^2(q)},\]</div>
 <p>where <span class="math notranslate nohighlight">\(K(\cdot)\)</span> denotes the complete elliptic integral of the first kind (Legendre), and <span class="math notranslate nohighlight">\(\theta_i(q)\)</span> denote the Jacobi theta functions.</p>
-<p>See also Wikipedia <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1133" title="Wikipedia. Jacobi elliptic functions. Wikimedia Foundation, 2014. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Jacobi_elliptic_functions.">1307</a>]</span>, Wikipedia <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1134" title="Wikipedia. Elliptic function. Wikimedia Foundation, 2014. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Elliptic_function.">1300</a>]</span>, MathWorld <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1609" title="E. W. Weisstein. Jacobi Elliptic Functions. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/JacobiEllipticFunctions.html.">961</a>]</span>, MathWorld <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1610" title="E. W. Weisstein. Elliptic Function. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/EllipticFunction.html.">953</a>]</span>, NIST <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">476</a>]</span>.</p>
+<p>See also Wikipedia <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id1133" title="Wikipedia. Jacobi elliptic functions. Wikimedia Foundation, 2014. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Jacobi_elliptic_functions.">1305</a>]</span>, Wikipedia <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1134" title="Wikipedia. Elliptic function. Wikimedia Foundation, 2014. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Elliptic_function.">1298</a>]</span>, MathWorld <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1609" title="E. W. Weisstein. Jacobi Elliptic Functions. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/JacobiEllipticFunctions.html.">959</a>]</span>, MathWorld <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id1610" title="E. W. Weisstein. Elliptic Function. From MathWorld - A Wolfram Web Resource, 2012. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/EllipticFunction.html.">951</a>]</span>, NIST <span id="id11">[<a class="reference internal" href="../99BackMatter/index.html#id486" title="P. L. Reinhardt, W. P.; Walker. Jacobian Elliptic Functions - Definitions. NIST Digital Library of Mathematical Functions, 2010. URL: https://dlmf.nist.gov/22.2.">474</a>]</span>.</p>
 <p>The source code for the C# tests in Visual Studio is divided by real and complex modules:</p>
 <p>The source code for the C# tests in Visual Studio using real modules can be found online in the <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/TestFixedAndArbPrecCS/B08a_RealEllipticFunctions.cs">B08a_RealEllipticFunctions.cs</a>,</p>
 <p>The source code for the C# tests in Visual Studio using complex modules can be found online in the <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">XlCalcNet</span></code> folder in the file <a class="reference external" href="https://github.com/duhadler/XlCalcNet/blob/master/xlcalcnet/Addin/NET48/Source/TestFixedAndArbPrecCS/B08b_CplxEllipticFunctions.cs">B08b_CplxEllipticFunctions.cs</a>,</p>
@@ -1044,59 +1043,44 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="C06_WeierstrassConversions.html">Conversions of parameters of Weierstrass <span class="math notranslate nohighlight">\(\wp\)</span></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C06_WeierstrassConversions.html#elliptic-lattice-invariants-g-2-g-3-from-lattice-roots-e-1-e-2-e-3">Elliptic lattice invariants <span class="math notranslate nohighlight">\(g_2, g_3\)</span> from lattice roots <span class="math notranslate nohighlight">\(e_1, e_2, e_3\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C06_WeierstrassConversions.html#ctx.elliptic_invariants_from_roots"><code class="docutils literal notranslate"><span class="pre">ctx.elliptic_invariants_from_roots()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="C06_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="C06_WeierstrassTau.html#weierstrass-function-wp-z-tau">Weierstrass function <span class="math notranslate nohighlight">\(\wp(z| \tau)\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C06_WeierstrassTau.html#ctx.weierstrass_p_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_p_t()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C06_WeierstrassConversions.html#elliptic-lattice-invariants-g-2-g-3-from-omega-tau">Elliptic lattice invariants <span class="math notranslate nohighlight">\(g_2, g_3\)</span> from <span class="math notranslate nohighlight">\((\omega, \tau)\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C06_WeierstrassConversions.html#ctx.g2g3_from_tau"><code class="docutils literal notranslate"><span class="pre">ctx.g2g3_from_tau()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C06_WeierstrassTau.html#weierstrass-function-first-derivative-wp-z-tau">Weierstrass function, first derivative: <span class="math notranslate nohighlight">\(\wp'z| \tau)\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C06_WeierstrassTau.html#ctx.weierstrass_p_prime_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_p_prime_t()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C06_WeierstrassConversions.html#elliptic-lattice-roots-e-1-e-2-e-3-from-omega-tau">Elliptic lattice roots <span class="math notranslate nohighlight">\(e_1, e_2, e_3\)</span> from (<span class="math notranslate nohighlight">\(\omega, \tau\)</span>)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C06_WeierstrassConversions.html#ctx.elliptic_roots_from_tau"><code class="docutils literal notranslate"><span class="pre">ctx.elliptic_roots_from_tau()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C06_WeierstrassTau.html#inverse-weierstrass-function-wp-1-z-tau">Inverse Weierstrass function <span class="math notranslate nohighlight">\(\wp^{-1}(z| \tau)\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C06_WeierstrassTau.html#ctx.weierstrass_p_inv_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_p_inv_t()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="C06_WeierstrassTau.html#weierstrass-zeta-function-zeta-z-tau">Weierstrass Zeta function <span class="math notranslate nohighlight">\(\zeta(z, \tau)\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C06_WeierstrassTau.html#ctx.weierstrass_zeta_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_zeta_t()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="C07_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C07_WeierstrassTau.html#weierstrass-function-wp-z-tau">Weierstrass function <span class="math notranslate nohighlight">\(\wp(z| \tau)\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C07_WeierstrassTau.html#ctx.weierstrass_p_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_p_t()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C07_WeierstrassTau.html#weierstrass-function-first-derivative-wp-z-tau">Weierstrass function, first derivative: <span class="math notranslate nohighlight">\(\wp'z| \tau)\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C07_WeierstrassTau.html#ctx.weierstrass_p_prime_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_p_prime_t()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C07_WeierstrassTau.html#inverse-weierstrass-function-wp-1-z-tau">Inverse Weierstrass function <span class="math notranslate nohighlight">\(\wp^{-1}(z| \tau)\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C07_WeierstrassTau.html#ctx.weierstrass_p_inv_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_p_inv_t()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C07_WeierstrassTau.html#weierstrass-zeta-function-zeta-z-tau">Weierstrass Zeta function <span class="math notranslate nohighlight">\(\zeta(z, \tau)\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C07_WeierstrassTau.html#ctx.weierstrass_zeta_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_zeta_t()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="C07_WeierstrassTau.html#weierstrass-sigma-function-sigma-z-tau">Weierstrass Sigma function <span class="math notranslate nohighlight">\(\sigma(z| \tau)\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C07_WeierstrassTau.html#ctx.weierstrass_sigma_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_sigma_t()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C06_WeierstrassTau.html#weierstrass-sigma-function-sigma-z-tau">Weierstrass Sigma function <span class="math notranslate nohighlight">\(\sigma(z| \tau)\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C06_WeierstrassTau.html#ctx.weierstrass_sigma_t"><code class="docutils literal notranslate"><span class="pre">ctx.weierstrass_sigma_t()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="C08_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C08_ModularFormsTau.html#dedekind-eta-function-eta-tau">Dedekind eta function <span class="math notranslate nohighlight">\(\eta(\tau)\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C08_ModularFormsTau.html#ctx.dedekind_eta"><code class="docutils literal notranslate"><span class="pre">ctx.dedekind_eta()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="C07_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="C07_ModularFormsTau.html#dedekind-eta-function-eta-tau">Dedekind eta function <span class="math notranslate nohighlight">\(\eta(\tau)\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C07_ModularFormsTau.html#ctx.dedekind_eta"><code class="docutils literal notranslate"><span class="pre">ctx.dedekind_eta()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C08_ModularFormsTau.html#elliptic-modular-lambda-function-lambda-tau-also-damath">Elliptic modular lambda function <span class="math notranslate nohighlight">\(\lambda(\tau)\)</span> (also DAMath)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C08_ModularFormsTau.html#ctx.ctx.elliptic_modular_lambda"><code class="docutils literal notranslate"><span class="pre">ctx.ctx.elliptic_modular_lambda()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_ModularFormsTau.html#elliptic-modular-lambda-function-lambda-tau-also-damath">Elliptic modular lambda function <span class="math notranslate nohighlight">\(\lambda(\tau)\)</span> (also DAMath)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C07_ModularFormsTau.html#ctx.ctx.elliptic_modular_lambda"><code class="docutils literal notranslate"><span class="pre">ctx.ctx.elliptic_modular_lambda()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C08_ModularFormsTau.html#elliptic-modular-delta-function-delta-omega-tau">Elliptic modular delta function <span class="math notranslate nohighlight">\(\Delta(\omega, \tau)\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C08_ModularFormsTau.html#ctx.ctx.elliptic_modular_delta"><code class="docutils literal notranslate"><span class="pre">ctx.ctx.elliptic_modular_delta()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_ModularFormsTau.html#elliptic-modular-delta-function-delta-omega-tau">Elliptic modular delta function <span class="math notranslate nohighlight">\(\Delta(\omega, \tau)\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C07_ModularFormsTau.html#ctx.ctx.elliptic_modular_delta"><code class="docutils literal notranslate"><span class="pre">ctx.ctx.elliptic_modular_delta()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="C08_ModularFormsTau.html#klein-j-invariant-j-tau-also-damath">Klein j-invariant <span class="math notranslate nohighlight">\(j(\tau )\)</span> (also DAMath)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="C08_ModularFormsTau.html#ctx.klein_j"><code class="docutils literal notranslate"><span class="pre">ctx.klein_j()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="C07_ModularFormsTau.html#klein-j-invariant-j-tau-also-damath">Klein j-invariant <span class="math notranslate nohighlight">\(j(\tau )\)</span> (also DAMath)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="C07_ModularFormsTau.html#ctx.klein_j"><code class="docutils literal notranslate"><span class="pre">ctx.klein_j()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1169,7 +1153,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Nov 05, 2026.
+  Last updated on Nov 08, 2026.
   <br/>
 </p>
   </div>

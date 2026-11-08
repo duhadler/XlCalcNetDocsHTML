@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Generalized Extreme Value (Maximum) or GEV distribution &#8212; XlCalcNet 1.1.0 documentation</title>
+    <title>Generalized Extreme Value (Maximum) or GEV distribution &#8212; XlCalcNet 1.2.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../_static/documentation_options.js?v=051bfb12"></script>
+    <script src="../../_static/documentation_options.js?v=db04a367"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Fréchet (Maximum/Minimum-Type-II or Inverse Weibull) distribution" href="D16_Frechet.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Nov 05, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 08, 2026"/>
   </head>
   
   
@@ -439,9 +439,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C03_LegendreIntegrals.html">Legendre elliptic integrals (elliptic modulus  <span class="math notranslate nohighlight">\(k\)</span>), and related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C04_JacobiEllipticFunctions.html">Jacobi elliptic functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C05_JacobiThetafunctions.html">Jacobi theta functions and related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C06_WeierstrassConversions.html">Conversions of parameters of Weierstrass <span class="math notranslate nohighlight">\(\wp\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C07_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C08_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C06_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C07_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../B09_LerchPhi/index.html">Lerch’s phi and related</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -898,7 +897,7 @@ document.write(`
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, <code class="docutils literal notranslate"><span class="pre">ipm</span></code>, <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">gmp</span></code> or <code class="docutils literal notranslate"><span class="pre">apm</span></code>.</p>
 <p>These functions return PDF, CDF, and ICDF of the GEV distribution with location
 <span class="math notranslate nohighlight">\(a\)</span>, scale <span class="math notranslate nohighlight">\(b &gt; 0\)</span>, and the support interval <span class="math notranslate nohighlight">\((-\infty,+\infty)\)</span> :</p>
-<p>See also: Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id1003" title="Wikipedia. GEV distribution. Wikimedia Foundation, 2009. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Generalized_extreme_value_distribution.">1202</a>]</span>, <span id="id2">Kleiber and Kotz [<a class="reference internal" href="../../99BackMatter/index.html#id153" title="C. Kleiber and S. Kotz. Statistical Size Distributions in Economics and Actuarial Sciences. Wiley &amp; Sons, Inc., New York-London-Sydney-Toronto, 2003.">393</a>]</span>, <span id="id3">Kotz and Nadarajah [<a class="reference internal" href="../../99BackMatter/index.html#id158" title="Kotz, S. and S. Nadarajah. Extreme Value Distributions. Theory and Applications. London: Imperial College Press, 2000.">398</a>]</span>, <span id="id4">Coles [<a class="reference internal" href="../../99BackMatter/index.html#id50" title="S. Coles. An Introduction to Statistical Modeling of Extreme Values. Springer, London, 2007.">184</a>]</span>.</p>
+<p>See also: Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id1003" title="Wikipedia. GEV distribution. Wikimedia Foundation, 2009. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Generalized_extreme_value_distribution.">1200</a>]</span>, <span id="id2">Kleiber and Kotz [<a class="reference internal" href="../../99BackMatter/index.html#id153" title="C. Kleiber and S. Kotz. Statistical Size Distributions in Economics and Actuarial Sciences. Wiley &amp; Sons, Inc., New York-London-Sydney-Toronto, 2003.">391</a>]</span>, <span id="id3">Kotz and Nadarajah [<a class="reference internal" href="../../99BackMatter/index.html#id158" title="Kotz, S. and S. Nadarajah. Extreme Value Distributions. Theory and Applications. London: Imperial College Press, 2000.">396</a>]</span>, <span id="id4">Coles [<a class="reference internal" href="../../99BackMatter/index.html#id50" title="S. Coles. An Introduction to Statistical Modeling of Extreme Values. Springer, London, 2007.">184</a>]</span>.</p>
 <p>Extreme value theory studies the statistical behaviour of <span class="math notranslate nohighlight">\(M_n = \text{max}\{X_1, \ldots, X_n   \}\)</span>, or <span class="math notranslate nohighlight">\(M_n = \text{min}\{X_1, \ldots, X_n   \}\)</span>, where <span class="math notranslate nohighlight">\(\{X_1, \ldots, X_n   \}\)</span> is a sequence of independent random variables having a common distribution function <span class="math notranslate nohighlight">\(F\)</span>.</p>
 <p>If there exist sequences of constants <span class="math notranslate nohighlight">\(\{a_n\}\)</span> and <span class="math notranslate nohighlight">\(\{b_n\}\)</span> such that <span class="math notranslate nohighlight">\(\lim\limits_{n \to \infty} P\{(M_n-b_n)/a_n \le z\} = G(z)\)</span>, where <span class="math notranslate nohighlight">\(G\)</span> is a non-degenerate distribution function (this assumption is called the stability postulate), then <span class="math notranslate nohighlight">\(G\)</span> belongs to the Gumbel, Fréchet or Weibull family of distributions.</p>
 <p>The following table summarizes the forms of limiting distributions for maxima and minima for seven widely used continuous distributions:</p>
@@ -1197,7 +1196,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Nov 05, 2026.
+  Last updated on Nov 08, 2026.
   <br/>
 </p>
   </div>

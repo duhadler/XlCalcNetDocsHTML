@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Halperin’s \(t\)-distribution &#8212; XlCalcNet 1.1.0 documentation</title>
+    <title>Halperin’s \(t\)-distribution &#8212; XlCalcNet 1.2.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../_static/documentation_options.js?v=051bfb12"></script>
+    <script src="../../_static/documentation_options.js?v=db04a367"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Nair’s \(t\)-distribution" href="D11_nair_t.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Nov 05, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 08, 2026"/>
   </head>
   
   
@@ -439,9 +439,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C03_LegendreIntegrals.html">Legendre elliptic integrals (elliptic modulus  <span class="math notranslate nohighlight">\(k\)</span>), and related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C04_JacobiEllipticFunctions.html">Jacobi elliptic functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C05_JacobiThetafunctions.html">Jacobi theta functions and related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C06_WeierstrassConversions.html">Conversions of parameters of Weierstrass <span class="math notranslate nohighlight">\(\wp\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C07_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C08_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C06_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C07_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../B09_LerchPhi/index.html">Lerch’s phi and related</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -897,7 +896,7 @@ document.write(`
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dist_halperin_t</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dist_halperin_t" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, <code class="docutils literal notranslate"><span class="pre">ipm</span></code>, <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">gmp</span></code> or <code class="docutils literal notranslate"><span class="pre">apm</span></code>.</p>
 <p>The  Halperin <span class="math notranslate nohighlight">\(t\)</span>-distribution with common correlation <span class="math notranslate nohighlight">\(\rho\)</span>,  <span class="math notranslate nohighlight">\(k \ge 2\)</span> groups (including control group) and error degrees of freedom <span class="math notranslate nohighlight">\(\nu\)</span> is a continuous distribution with the support interval <span class="math notranslate nohighlight">\((0, +\infty)\)</span>.
-See also <span id="id1">Dunnett [<a class="reference internal" href="../../99BackMatter/index.html#id78" title="Charles W. Dunnett. A multiple comparison procedure for comparing several treatments with a control. Journal of the American Statistical Association, 50:1096–1121, 1955.">292</a>]</span>, <span id="id2">Bechhofer and Dunnett [<a class="reference internal" href="../../99BackMatter/index.html#id15" title="R. E. Bechhofer and C. W. Dunnett. Tables of percentage points of multivariate student T distributions. Selected Tables in Mathematical Statistics, 11, 1–371, 1988.">26</a>]</span>.</p>
+See also <span id="id1">Dunnett [<a class="reference internal" href="../../99BackMatter/index.html#id78" title="Charles W. Dunnett. A multiple comparison procedure for comparing several treatments with a control. Journal of the American Statistical Association, 50:1096–1121, 1955.">290</a>]</span>, <span id="id2">Bechhofer and Dunnett [<a class="reference internal" href="../../99BackMatter/index.html#id15" title="R. E. Bechhofer and C. W. Dunnett. Tables of percentage points of multivariate student T distributions. Selected Tables in Mathematical Statistics, 11, 1–371, 1988.">26</a>]</span>.</p>
 <p>Let <span class="math notranslate nohighlight">\(X_1,\ldots,X_k\)</span> be a random sample of size <span class="math notranslate nohighlight">\(k\)</span> from a <span class="math notranslate nohighlight">\(\mathcal{N}(0,\sigma^2)\)</span> distribution. Let <span class="math notranslate nohighlight">\(s^2\)</span> be an independent mean square estimate of <span class="math notranslate nohighlight">\(\sigma\)</span> with <span class="math notranslate nohighlight">\(n\)</span> degrees of freedom. Then</p>
 <div class="math notranslate nohighlight">
 \[Q=\frac{\text{max}|X_1 - X_j|}{s}, \quad 1&lt;j&lt;k\]</div>
@@ -1143,7 +1142,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Nov 05, 2026.
+  Last updated on Nov 08, 2026.
   <br/>
 </p>
   </div>

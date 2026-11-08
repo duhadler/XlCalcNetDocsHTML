@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Boost: Skew normal Distribution &#8212; XlCalcNet 1.1.0 documentation</title>
+    <title>Boost: Skew normal Distribution &#8212; XlCalcNet 1.2.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../_static/documentation_options.js?v=051bfb12"></script>
+    <script src="../../_static/documentation_options.js?v=db04a367"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Boost: Normal (Johnson \(S_N\)) distribution" href="D04_Normal.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Nov 05, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 08, 2026"/>
   </head>
   
   
@@ -439,9 +439,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C03_LegendreIntegrals.html">Legendre elliptic integrals (elliptic modulus  <span class="math notranslate nohighlight">\(k\)</span>), and related functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C04_JacobiEllipticFunctions.html">Jacobi elliptic functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C05_JacobiThetafunctions.html">Jacobi theta functions and related functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C06_WeierstrassConversions.html">Conversions of parameters of Weierstrass <span class="math notranslate nohighlight">\(\wp\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C07_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C08_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C06_WeierstrassTau.html">Weierstrass elliptic functions, in terms of elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../B08_EllipticFunctions/C07_ModularFormsTau.html">Modular forms, in terms of half-period <span class="math notranslate nohighlight">\(\omega_1\)</span> and elliptic period ratio <span class="math notranslate nohighlight">\(\tau\)</span></a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../B09_LerchPhi/index.html">Lerch’s phi and related</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -896,7 +895,7 @@ document.write(`
 <section id="boost-skew-normal-distribution">
 <span id="rst-dist-skewnormal"></span><h1>Boost: Skew normal Distribution<a class="headerlink" href="#boost-skew-normal-distribution" title="Link to this heading">#</a></h1>
 <p>The following functions return the pdf, cdf, qtf or boost class of the skew normal distribution with location <span class="math notranslate nohighlight">\(a \in \mathbb{R}\)</span>,  scale <span class="math notranslate nohighlight">\(b &gt; 0\)</span>,  shape <span class="math notranslate nohighlight">\(c \in \mathbb{R}\)</span>,  and the support interval <span class="math notranslate nohighlight">\((-\infty, +\infty)\)</span>.</p>
-<p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id992" title="Wikipedia. Skew normal distribution. Wikimedia Foundation, 2008. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Skew_normal_distribution.">1188</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id1468" title="Wolfram Language Documentation. SkewNormal Distribution. Wolfram Research, 2005. [Online; accessed 22-July-2024]. URL: https://reference.wolfram.com/language/ref/SkewNormalDistribution.html.">256</a>]</span>,  BoostMath <span id="id3">[<a class="reference internal" href="../../99BackMatter/index.html#id331" title="P. A. Bristow and H. Holin. Skew Normal Distribution. Boost Math Toolkit Library, 2015. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/1_74_0/libs/math/doc/html/math_toolkit/dist_ref/dists/skew_normal_dist.html.">86</a>]</span>, <span id="id4">Haas [<a class="reference internal" href="../../99BackMatter/index.html#id115" title="M. Haas. A note on the moments of the skew-normal distribution. Economics Bulletin, 32(4):3306–3312, 2012.">360</a>]</span>.</p>
+<p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../../99BackMatter/index.html#id992" title="Wikipedia. Skew normal distribution. Wikimedia Foundation, 2008. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Skew_normal_distribution.">1186</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../../99BackMatter/index.html#id1468" title="Wolfram Language Documentation. SkewNormal Distribution. Wolfram Research, 2005. [Online; accessed 22-July-2024]. URL: https://reference.wolfram.com/language/ref/SkewNormalDistribution.html.">256</a>]</span>,  BoostMath <span id="id3">[<a class="reference internal" href="../../99BackMatter/index.html#id331" title="P. A. Bristow and H. Holin. Skew Normal Distribution. Boost Math Toolkit Library, 2015. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/1_74_0/libs/math/doc/html/math_toolkit/dist_ref/dists/skew_normal_dist.html.">86</a>]</span>, <span id="id4">Haas [<a class="reference internal" href="../../99BackMatter/index.html#id115" title="M. Haas. A note on the moments of the skew-normal distribution. Economics Bulletin, 32(4):3306–3312, 2012.">358</a>]</span>.</p>
 <p></p>
 <dl class="py method" id="ctx-skewnormalpdf">
 <dt class="sig sig-object py" id="math53.skewnormal_pdf">
@@ -953,7 +952,7 @@ document.write(`
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ctx.</span></span><span class="sig-name descname"><span class="pre">dist_skewnormal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ctx.dist_skewnormal" title="Link to this definition">#</a></dt>
 <dd><p>where <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">fpm</span></code>, <code class="docutils literal notranslate"><span class="pre">mpm</span></code>, <code class="docutils literal notranslate"><span class="pre">ipm</span></code>, <code class="docutils literal notranslate"><span class="pre">dec</span></code>, <code class="docutils literal notranslate"><span class="pre">gmp</span></code> or <code class="docutils literal notranslate"><span class="pre">apm</span></code>.</p>
 <p>The skew normal distribution is a continuous probability distribution with location <span class="math notranslate nohighlight">\(a \in \mathbb{R}\)</span>,  scale <span class="math notranslate nohighlight">\(b &gt; 0\)</span>,  shape <span class="math notranslate nohighlight">\(c \in \mathbb{R}\)</span>,  and the support interval <span class="math notranslate nohighlight">\((-\infty, +\infty)\)</span>.
-See also Wikipedia <span id="id5">[<a class="reference internal" href="../../99BackMatter/index.html#id992" title="Wikipedia. Skew normal distribution. Wikimedia Foundation, 2008. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Skew_normal_distribution.">1188</a>]</span>, MathWorld <span id="id6">[<a class="reference internal" href="../../99BackMatter/index.html#id1468" title="Wolfram Language Documentation. SkewNormal Distribution. Wolfram Research, 2005. [Online; accessed 22-July-2024]. URL: https://reference.wolfram.com/language/ref/SkewNormalDistribution.html.">256</a>]</span>, BoostMath <span id="id7">[<a class="reference internal" href="../../99BackMatter/index.html#id331" title="P. A. Bristow and H. Holin. Skew Normal Distribution. Boost Math Toolkit Library, 2015. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/1_74_0/libs/math/doc/html/math_toolkit/dist_ref/dists/skew_normal_dist.html.">86</a>]</span>, <span id="id8">Witkovský [<a class="reference internal" href="../../99BackMatter/index.html#id439" title="V. Witkovský. SkewNormal Distribution. CharFunTool: The characteristic functions toolbox, 2018. [Online; accessed 22-July-2024]. URL: https://github.com/witkovsky/CharFunTool/blob/master/CF_Repository/cf_SkewNormal.m.">1490</a>]</span>, <span id="id9">Haas [<a class="reference internal" href="../../99BackMatter/index.html#id115" title="M. Haas. A note on the moments of the skew-normal distribution. Economics Bulletin, 32(4):3306–3312, 2012.">360</a>]</span>.</p>
+See also Wikipedia <span id="id5">[<a class="reference internal" href="../../99BackMatter/index.html#id992" title="Wikipedia. Skew normal distribution. Wikimedia Foundation, 2008. [Online; accessed 22-July-2024]. URL: https://en.wikipedia.org/wiki/Skew_normal_distribution.">1186</a>]</span>, MathWorld <span id="id6">[<a class="reference internal" href="../../99BackMatter/index.html#id1468" title="Wolfram Language Documentation. SkewNormal Distribution. Wolfram Research, 2005. [Online; accessed 22-July-2024]. URL: https://reference.wolfram.com/language/ref/SkewNormalDistribution.html.">256</a>]</span>, BoostMath <span id="id7">[<a class="reference internal" href="../../99BackMatter/index.html#id331" title="P. A. Bristow and H. Holin. Skew Normal Distribution. Boost Math Toolkit Library, 2015. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/1_74_0/libs/math/doc/html/math_toolkit/dist_ref/dists/skew_normal_dist.html.">86</a>]</span>, <span id="id8">Witkovský [<a class="reference internal" href="../../99BackMatter/index.html#id439" title="V. Witkovský. SkewNormal Distribution. CharFunTool: The characteristic functions toolbox, 2018. [Online; accessed 22-July-2024]. URL: https://github.com/witkovsky/CharFunTool/blob/master/CF_Repository/cf_SkewNormal.m.">1487</a>]</span>, <span id="id9">Haas [<a class="reference internal" href="../../99BackMatter/index.html#id115" title="M. Haas. A note on the moments of the skew-normal distribution. Economics Bulletin, 32(4):3306–3312, 2012.">358</a>]</span>.</p>
 </dd></dl>
 
 <p></p>
@@ -1207,7 +1206,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Nov 05, 2026.
+  Last updated on Nov 08, 2026.
   <br/>
 </p>
   </div>
