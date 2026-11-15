@@ -33,7 +33,7 @@
 
         pip install xlcalcnet
 
-    More detailed information regarding the installation and general usage of XlCalcNet can be found :ref:`here <rst_setting_up_XlCalcNet>`.
+    The XlCalcNet package is compatible with Python versions 3.8 - 3.15. More detailed information regarding the installation and general usage of XlCalcNet can be found :ref:`here <rst_setting_up_XlCalcNet>`.
 
 
     Since one of the main goals of XlCalcNet is to enable the use of functions written in Python or C# within spreadsheet formulas, it is assumed that Microsoft Excel (2010 or later, 64 bit) and/or LibreOffice (version 7.0 or later, 64 bit) is installed on the users system, running under Windows (7.1 or later, 64 bit).

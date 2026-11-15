@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Hypergeometric Limit Function \(\,_0F_1\) &#8212; XlCalcNet 1.3.0 documentation</title>
+    <title>Hypergeometric Limit Function \(\,_0F_1\) &#8212; XlCalcNet 1.4.0 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=27de968b"></script>
+    <script src="../_static/documentation_options.js?v=bc4b15cc"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="Hypergeometric function \(\,_0F_1\) and related" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Nov 13, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 15, 2026"/>
   </head>
   
   
@@ -895,47 +895,83 @@ document.write(`
 <dd><p>Returns <span class="math notranslate nohighlight">\(\displaystyle {}_0F_1(b,x) = \sum_{k=0}^{\infty} \frac{1}{(b)_k} \frac{x^k}{k!}\)</span>, the confluent hypergeometric limit function, where <span class="math notranslate nohighlight">\(b \ne 0,-1,-2,\ldots\)</span></p>
 <p>See also  Wikipedia <span id="id1">[<a class="reference internal" href="../99BackMatter/index.html#id1081" title="Wikipedia. Confluent Hypergeometric Limit Function. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Generalized_hypergeometric_function#The_series_0F1.">1249</a>]</span>, MathWorld <span id="id2">[<a class="reference internal" href="../99BackMatter/index.html#id1540" title="E. W. Weisstein. Confluent Hypergeometric Limit Function. From MathWorld - A Wolfram Web Resource, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ConfluentHypergeometricLimitFunction.html.">897</a>]</span>  BoostMath <span id="id3">[<a class="reference internal" href="../99BackMatter/index.html#id359" title="P. A. Bristow and H. Holin. Hypergeometric Function 0F1. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/hypergeometric/hypergeometric_0f1.html.">104</a>]</span>, <span id="id4">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">295</a>]</span> (3.8.6), Flint <span id="id5">[<a class="reference internal" href="../99BackMatter/index.html#id586" title="The FLINT Team. Arb: Confluent hypergeometric functions. FLINT: Fast Library for Number Theory, 2020. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/arb_hypgeom.html#confluent-hypergeometric-functions.">753</a>]</span>, Flint <span id="id6">[<a class="reference internal" href="../99BackMatter/index.html#id587" title="The FLINT Team. Acb: Confluent hypergeometric functions. FLINT: Fast Library for Number Theory, 2020. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_hypgeom.html#confluent-hypergeometric-functions.">746</a>]</span>, Mpmath <span id="id7">[<a class="reference internal" href="../99BackMatter/index.html#id680" title="The Mpmath Development Team. Hypergeometric function 0F1. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2010. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/hypergeometric.html#hyp0f1.">588</a>]</span>.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflintreal</span></code>, then <span class="math notranslate nohighlight">\(b, x \in \mathbb{R}\)</span> is exspected. If <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">cmath53</span></code>, then <span class="math notranslate nohighlight">\(b \in \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(x \in \mathbb{C}\)</span> is exspected.  If <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">ctxflintcplx</span></code> then <span class="math notranslate nohighlight">\(b, x \in \mathbb{C}\)</span> is accepted.</p>
-<p>Calls <code class="docutils literal notranslate"><span class="pre">arb_hypgeom_0f1</span></code> or  <code class="docutils literal notranslate"><span class="pre">acb_hypgeom_0f1</span></code>.</p>
-<p>Returns the hypergeometric function <span class="math notranslate nohighlight">\({}_0F_1\)</span>.</p>
-<p>Gives the hypergeometric function <span class="math notranslate nohighlight">\({}_0F_1\)</span>, sometimes known as the confluent limit function, defined as</p>
-<div class="math notranslate nohighlight">
-\[{}_0F_1(a,z) = \sum_{k=0}^{\infty} \frac{1}{(a)_k} \frac{z^k}{k!}.\]</div>
 <p><a class="reference internal" href="../_images/01a_TestHypergeom0F1_re.3D.xml.jpg"><img alt="01a_TestHypergeom0F1_re" src="../_images/01a_TestHypergeom0F1_re.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/01b_TestHypergeom0F1_im.3D.xml.jpg"><img alt="01b_TestHypergeom0F1_im" src="../_images/01b_TestHypergeom0F1_im.3D.xml.jpg" style="width: 30%;" /></a> <span class="math notranslate nohighlight">\(\quad\)</span> <a class="reference internal" href="../_images/01c_TestHypergeom0F1_abs.3D.xml.jpg"><img alt="01c_TestHypergeom0F1_abs" src="../_images/01c_TestHypergeom0F1_abs.3D.xml.jpg" style="width: 30%;" /></a></p>
-<p><strong>3D wpf plot</strong>: real part (left figure), imaginary part (middle figure) and absolute value with color-coded phase (right figure) of the complex sine function <span class="math notranslate nohighlight">\(z = \sin(x + iy)\)</span>, with <span class="math notranslate nohighlight">\(-6 \le x \le 6\)</span> (blue axis), <span class="math notranslate nohighlight">\(-6 \le y \le 6\)</span> (red axis), <span class="math notranslate nohighlight">\(-10 \le z \le 10\)</span> (green axis). Function values are <a class="reference internal" href="../B22_WpfAltitudeSurfacesRealAndComplex/C01_Intro.html#rst-mpm-loglog-transformation"><span class="std std-ref">loglog-transformed</span></a>.</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Hyperg0F1</span><span class="p">(</span><span class="mf">5.1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Hyperg0F1</span><span class="p">(</span><span class="mf">15.2</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
-</pre></div>
-</div>
+<p><strong>3D wpf plot</strong>: real part (left figure), imaginary part (middle figure) and absolute value with color-coded phase (right figure) of the confluent hypergeometric limit function <span class="math notranslate nohighlight">\(z = {}_0F_1(b, x + iy)\)</span>, with <span class="math notranslate nohighlight">\(-6 \le x \le 6\)</span> (blue axis), <span class="math notranslate nohighlight">\(-6 \le y \le 6\)</span> (red axis), <span class="math notranslate nohighlight">\(-10 \le z \le 10\)</span> (green axis).</p>
 <p>An example with real input:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">dec</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">gmp</span><span class="p">,</span> <span class="n">fpm</span><span class="p">,</span> <span class="n">apm</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span> <span class="n">a</span><span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">30</span>
-<span class="gp">&gt;&gt;&gt; </span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">x</span> <span class="o">=</span> <span class="n">dec</span><span class="o">.</span><span class="n">hyp0f1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">mx</span> <span class="o">=</span> <span class="n">mpm</span><span class="o">.</span><span class="n">hyp0f1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">gx</span> <span class="o">=</span> <span class="n">gmp</span><span class="o">.</span><span class="n">hyp0f1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fx</span> <span class="o">=</span> <span class="n">fpm</span><span class="o">.</span><span class="n">hyp0f1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">apm</span><span class="o">.</span><span class="n">hyp0f1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">show</span><span class="p">([</span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">x</span><span class="p">,</span> <span class="n">mx</span><span class="p">,</span> <span class="n">gx</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">ax</span><span class="p">])</span>
-<span class="go">dec:  1.468615500968110064708314782694224995260E+1</span>
-<span class="go">mpm:  1.468615500968110064708314782694224995260e+1</span>
-<span class="go">gmp:  1.468615500968110064708314782694224995260E+01</span>
-<span class="go">fpm:  1.46861550096811E+01</span>
-<span class="go">apm:  1.468615500968110064708314782694224995260e+1 (1.251e-39%)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="mf">5.1</span><span class="p">;</span> <span class="n">x</span> <span class="o">=</span> <span class="mf">2.7</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_noipm_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">hyperg_0f1</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">x</span><span class="p">)))</span>
+<span class="go">    fpm:  1.66274304199531</span>
+<span class="go">    mpm:  1.66274304199531316588189352423566440322055406857592936486429514269829008002070629426453764</span>
+<span class="go">    dpm:  1.66274304199531316588189352423566440322055406857592936486429514269829008002070629426453764</span>
+<span class="go">    gpm:  1.6627430419953131658818935242356644032205540685759293648642951426982900800207062942645376399</span>
+<span class="go">    apm: [1.662743041995313165881893524235664403220554068575929364864295142698290080020706294264538 +/- 4.20e-88]</span>
+<span class="go"> math53:  1.66274304199531</span>
+<span class="go">  sreal:  1.662743</span>
+<span class="go">  dreal:  1.66274304199531</span>
+<span class="go">  ereal:  1.6627430419953131657</span>
+<span class="go">  qreal:  1.66274304199531316588189352423566</span>
+<span class="go">  oreal:  1.6627430419953131658818935242356644032205540685759293648642951426982901</span>
+<span class="go">  mreal:  1.66274304199531316588189352423566440322055406857592936486429514269829008002070629426453764</span>
+<span class="go"> sflint:  1.662743</span>
+<span class="go"> dflint:  1.66274304199531</span>
+<span class="go"> eflint:  1.6627430419953131659</span>
+<span class="go"> qflint:  1.66274304199531316588189352423566</span>
+<span class="go"> oflint:  1.6627430419953131658818935242356644032205540685759293648642951426982901</span>
+<span class="go"> mflint:  1.66274304199531316588189352423566440322055406857592936486429514269829008002070629426453764</span>
+<span class="go"> aflint: [1.662743041995313165881893524235664403220554068575929364864295142698290080020706294264538 +/- 6.39e-88]</span>
 </pre></div>
 </div>
-<p>An example with complex input:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">dec</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">gmp</span><span class="p">,</span> <span class="n">fpm</span><span class="p">,</span> <span class="n">apm</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="n">a</span><span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">z</span> <span class="o">=</span> <span class="s1">&#39;3 + 4j&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">z</span> <span class="o">=</span> <span class="n">dec</span><span class="o">.</span><span class="n">hyp0f1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span> <span class="n">mz</span> <span class="o">=</span> <span class="n">mpm</span><span class="o">.</span><span class="n">hyp0f1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span> <span class="n">gz</span> <span class="o">=</span> <span class="n">gmp</span><span class="o">.</span><span class="n">hyp0f1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fz</span> <span class="o">=</span> <span class="n">fpm</span><span class="o">.</span><span class="n">hyp0f1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span> <span class="n">az</span> <span class="o">=</span> <span class="n">apm</span><span class="o">.</span><span class="n">hyp0f1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">show</span><span class="p">([</span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">z</span><span class="p">,</span> <span class="n">mz</span><span class="p">,</span> <span class="n">gz</span><span class="p">,</span> <span class="n">fz</span><span class="p">,</span> <span class="n">az</span><span class="p">],</span>  <span class="n">aligned</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">dec: 1.2521260436915235828E+0              + 5.1371862393580499600E-1j</span>
-<span class="go">mpm: 1.2521260436915235828e+0              + 5.1371862393580499600e-1j</span>
-<span class="go">gmp: 1.2521260436915235828E+00             + 5.1371862393580499600E-01j</span>
-<span class="go">fpm: 1.25212604369152E+00                  + 5.13718623935805E-01j</span>
-<span class="go">apm: 1.2521260436915235828e+0 (1.353e-19%) + 5.1371862393580499600e-1 (8.244e-20%)j</span>
+<p>An example with complex input, using C#-style formatting for complex numbers for the result</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">;</span>  <span class="n">x</span> <span class="o">=</span> <span class="mf">2.7</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="p">[</span><span class="n">fpm</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">cmath53</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">hyperg_0f1</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">x</span><span class="p">)))</span>
+<span class="go">    fpm:  (0.460183166364689, -0.371845943064386)</span>
+<span class="go">    mpm:  (0.460183166364689146797903793103889773271, -0.3718459430643864013938003628810750931339)</span>
+<span class="go">cmath53:  (0.460183166364686, -0.371845943064386)</span>
 </pre></div>
 </div>
+<p>An example with the same complex input as above, showing only the real part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">;</span>  <span class="n">x</span> <span class="o">=</span> <span class="mf">2.7</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_noboost_cplx</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">hyperg_0f1</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">x</span><span class="p">))))</span>
+<span class="go">    fpm:  0.460183166364689</span>
+<span class="go">    mpm:  0.460183166364689146797903793103889773271070275977862226162287713985164793549649466398461056</span>
+<span class="go">    dpm:  0.460183166364689146797903793103889773271070275977862226162287713985164793549649466398461056</span>
+<span class="go">    gpm:  0.46018316636468914679790379310388977327107027597786222616228771398516479354964946639846105602</span>
+<span class="go">    apm: [0.4601831663646891467979037931038897732710702759778622261622877139851647935496494663984611 +/- 8.22e-89]</span>
+<span class="go">cmath53:  0.460183166364686</span>
+<span class="go">sflintc:  0.460183</span>
+<span class="go">dflintc:  0.460183166364689</span>
+<span class="go">eflintc:  0.46018316636468914666</span>
+<span class="go">qflintc:  0.460183166364689146797903793103889</span>
+<span class="go">oflintc:  0.46018316636468914679790379310388977327107027597786222616228771398516477</span>
+<span class="go">mflintc:  0.460183166364689146797903793103889773271070275977862226162287713985164793549649466398461053</span>
+<span class="go">aflintc: [0.460183166364689146797903793103889773271070275977862226162287713985164793549649466398461 +/- 1.58e-88]</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the imaginary part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">;</span>  <span class="n">x</span> <span class="o">=</span> <span class="mf">2.7</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_noboost_cplx</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">hyperg_0f1</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">x</span><span class="p">))))</span>
+<span class="go">    fpm:  -0.371845943064386</span>
+<span class="go">    mpm:  -0.371845943064386401393800362881075093133834600776006198970238575885003896657030432130818945</span>
+<span class="go">    dpm:  -0.371845943064386401393800362881075093133834600776006198970238575885003896657030432130818945</span>
+<span class="go">    gpm:  -0.371845943064386401393800362881075093133834600776006198970238575885003896657030432130818945</span>
+<span class="go">    apm: [-0.3718459430643864013938003628810750931338346007760061989702385758850038966570304321308189 +/- 7.10e-89]</span>
+<span class="go">cmath53:  -0.371845943064386</span>
+<span class="go">sflintc:  -0.3718461</span>
+<span class="go">dflintc:  -0.371845943064387</span>
+<span class="go">eflintc:  -0.37184594306438640158</span>
+<span class="go">qflintc:  -0.371845943064386401393800362881076</span>
+<span class="go">oflintc:  -0.37184594306438640139380036288107509313383460077600619897023857588500393</span>
+<span class="go">mflintc:  -0.371845943064386401393800362881075093133834600776006198970238575885003896657030432130818947</span>
+<span class="go">aflintc: [-0.371845943064386401393800362881075093133834600776006198970238575885003896657030432130819 +/- 1.31e-88]</span>
+</pre></div>
+</div>
+<p>The above and additional examples can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder for <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B10_Hypergeometric0F1/C01_Hyper0F1/D01a_Hyperg0F1Real.py">Python (real input)</a>, <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B10_Hypergeometric0F1/C01_Hyper0F1/D01b_Hyperg0F1Cplx.py">Python (complex input)</a>, and <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B10_Hypergeometric0F1/C01_Hyper0F1/D01_Hyperg0F1.cs">C# (real or complex input)</a>.</p>
 </dd></dl>
 
 <p></p>
@@ -948,40 +984,81 @@ document.write(`
 <dd><p>Returns <span class="math notranslate nohighlight">\(\displaystyle {}_0\widetilde{F}_1(b;x)  = \frac{1}{\Gamma(b)} {}_0F_1(b;x)\)</span>, the regularized  confluent hypergeometric limit function, for <span class="math notranslate nohighlight">\(b \ne 0, -1, -2, \cdots\)</span>, or, <span class="math notranslate nohighlight">\(\\\)</span> if <span class="math notranslate nohighlight">\(b = 0, -1, -2, \cdots = -n\)</span>, the corresponding limit <span class="math notranslate nohighlight">\(\displaystyle {}_0\widetilde{F}_1(b;x) = x^{n+1} {}_0\widetilde{F}_1(n+2;x) = \frac{x^{n+1}}{\Gamma(n+2)} {}_0F_1(n+2;x)\)</span>.</p>
 <p>See also  Wikipedia <span id="id8">[<a class="reference internal" href="../99BackMatter/index.html#id1081" title="Wikipedia. Confluent Hypergeometric Limit Function. Wikimedia Foundation, 2012. [Online; accessed 22-Dec-2024]. URL: https://en.wikipedia.org/wiki/Generalized_hypergeometric_function#The_series_0F1.">1249</a>]</span>, MathWorld <span id="id9">[<a class="reference internal" href="../99BackMatter/index.html#id1541" title="Wolfram Language Documentation. Regularized Confluent Hypergeometric Limit Function. Wolfram Research, 2009. [Online; accessed 22-July-2024]. URL: http://mathworld.wolfram.com/ConfluentHypergeometricLimitFunction.html.">261</a>]</span>  BoostMath <span id="id10">[<a class="reference internal" href="../99BackMatter/index.html#id359" title="P. A. Bristow and H. Holin. Hypergeometric Function 0F1. Boost Math Toolkit Library, 2016. [Online; accessed 22-July-2024]. URL: https://www.boost.org/doc/libs/latest/libs/math/doc/html/math_toolkit/hypergeometric/hypergeometric_0f1.html.">104</a>]</span>, <span id="id11">Ehrhardt [<a class="reference internal" href="../99BackMatter/index.html#id81" title="W. Ehrhardt. The AMath and DAMath Special Functions. Reference Manual and Implementation notes. Version 2.27, 2018. [Online; accessed 22-July-2024]. URL: https://web.archive.org/web/20181221065629/http://wolfgang-ehrhardt.de/specialfunctions.pdf.">295</a>]</span> (3.8.7), Flint <span id="id12">[<a class="reference internal" href="../99BackMatter/index.html#id586" title="The FLINT Team. Arb: Confluent hypergeometric functions. FLINT: Fast Library for Number Theory, 2020. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/arb_hypgeom.html#confluent-hypergeometric-functions.">753</a>]</span>, Flint <span id="id13">[<a class="reference internal" href="../99BackMatter/index.html#id587" title="The FLINT Team. Acb: Confluent hypergeometric functions. FLINT: Fast Library for Number Theory, 2020. [Online; accessed 22-July-2024]. URL: https://flintlib.org/doc/acb_hypgeom.html#confluent-hypergeometric-functions.">746</a>]</span>, Mpmath <span id="id14">[<a class="reference internal" href="../99BackMatter/index.html#id680" title="The Mpmath Development Team. Hypergeometric function 0F1. mpmath - a Python library for arbitrary-precision floating-point arithmetic, 2010. [Online; accessed 22-July-2024]. URL: https://mpmath.readthedocs.io/en/latest/functions/hypergeometric.html#hyp0f1.">588</a>]</span>.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">math53</span></code>, <code class="docutils literal notranslate"><span class="pre">ctxboost</span></code> or <code class="docutils literal notranslate"><span class="pre">ctxflintreal</span></code>, then <span class="math notranslate nohighlight">\(b, x \in \mathbb{R}\)</span> is exspected. If <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">cmath53</span></code>, then <span class="math notranslate nohighlight">\(b \in \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(x \in \mathbb{C}\)</span> is exspected.  If <code class="docutils literal notranslate"><span class="pre">ctx</span></code> is <code class="docutils literal notranslate"><span class="pre">ctxflintcplx</span></code> then <span class="math notranslate nohighlight">\(b, x \in \mathbb{C}\)</span> is accepted.</p>
-<p>An example in Python</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">math53</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Hyperg0F1r</span><span class="p">(</span><span class="mf">5.1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.2359877559829887307E-1&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">math53</span><span class="o">.</span><span class="n">Hyperg0F1r</span><span class="p">(</span><span class="mf">15.2</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="go">ereal(&#39;5.3518479027559984754E-1&#39;)</span>
-</pre></div>
-</div>
 <p>An example with real input:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">dec</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">gmp</span><span class="p">,</span> <span class="n">fpm</span><span class="p">,</span> <span class="n">apm</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span> <span class="n">a</span><span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">30</span>
-<span class="gp">&gt;&gt;&gt; </span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">x</span> <span class="o">=</span> <span class="n">dec</span><span class="o">.</span><span class="n">hyp0f1r</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">mx</span> <span class="o">=</span> <span class="n">mpm</span><span class="o">.</span><span class="n">hyp0f1r</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">gx</span> <span class="o">=</span> <span class="n">gmp</span><span class="o">.</span><span class="n">hyp0f1r</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fx</span> <span class="o">=</span> <span class="n">fpm</span><span class="o">.</span><span class="n">hyp0f1r</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">apm</span><span class="o">.</span><span class="n">hyp0f1r</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">show</span><span class="p">([</span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">x</span><span class="p">,</span> <span class="n">mx</span><span class="p">,</span> <span class="n">gx</span><span class="p">,</span> <span class="n">fx</span><span class="p">,</span> <span class="n">ax</span><span class="p">])</span>
-<span class="go">dec:  4.047110617747216889077146116331087398754E-5</span>
-<span class="go">mpm:  4.047110617747216889077146116331087398754e-5</span>
-<span class="go">gmp:  4.047110617747216889077146116331087398754E-05</span>
-<span class="go">fpm:  4.04711061774722E-05</span>
-<span class="go">apm:  4.047110617747216889077146116331087398754e-5 (1.731e-39%)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">;</span> <span class="n">x</span> <span class="o">=</span> <span class="mf">2.7</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_noipm_real</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">hyperg_0f1r</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">x</span><span class="p">)))</span>
+<span class="go">    fpm:  8.25621044956316</span>
+<span class="go">    mpm:  8.25621044956316427799030242096803175226037688625271057469959714018855685554715047395265477</span>
+<span class="go">    dpm:  8.25621044956316427799030242096803175226037688625271057469959714018855685554715047395265477</span>
+<span class="go">    gpm:  8.2562104495631642779903024209680317522603768862527105746995971401885568555471504739526547702</span>
+<span class="go">    apm: [8.2562104495631642779903024209680317522603768862527105746995971401885568555471504739526548 +/- 4.41e-89]</span>
+<span class="go"> math53:  8.25621044956316</span>
+<span class="go">  sreal:  8.256211</span>
+<span class="go">  dreal:  8.25621044956316</span>
+<span class="go">  ereal:  8.2562104495631642798</span>
+<span class="go">  qreal:  8.25621044956316427799030242096803</span>
+<span class="go">  oreal:  8.2562104495631642779903024209680317522603768862527105746995971401885566</span>
+<span class="go">  mreal:  8.25621044956316427799030242096803175226037688625271057469959714018855685554715047395265476</span>
+<span class="go"> sflint:  8.256211</span>
+<span class="go"> dflint:  8.25621044956317</span>
+<span class="go"> eflint:  8.2562104495631642781</span>
+<span class="go"> qflint:  8.25621044956316427799030242096803</span>
+<span class="go"> oflint:  8.2562104495631642779903024209680317522603768862527105746995971401885569</span>
+<span class="go"> mflint:  8.25621044956316427799030242096803175226037688625271057469959714018855685554715047395265476</span>
+<span class="go"> aflint: [8.2562104495631642779903024209680317522603768862527105746995971401885568555471504739526548 +/- 7.47e-89]</span>
 </pre></div>
 </div>
-<p>An example with complex input:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="n">dec</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">gmp</span><span class="p">,</span> <span class="n">fpm</span><span class="p">,</span> <span class="n">apm</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="n">a</span><span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">z</span> <span class="o">=</span> <span class="s1">&#39;3 + 4j&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">z</span> <span class="o">=</span> <span class="n">dec</span><span class="o">.</span><span class="n">hyp0f1r</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span> <span class="n">mz</span> <span class="o">=</span> <span class="n">mpm</span><span class="o">.</span><span class="n">hyp0f1r</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span> <span class="n">gz</span> <span class="o">=</span> <span class="n">gmp</span><span class="o">.</span><span class="n">hyp0f1r</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fz</span> <span class="o">=</span> <span class="n">fpm</span><span class="o">.</span><span class="n">hyp0f1r</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span> <span class="n">az</span> <span class="o">=</span> <span class="n">apm</span><span class="o">.</span><span class="n">hyp0f1r</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mpm</span><span class="o">.</span><span class="n">show</span><span class="p">([</span>\<span class="n">mathrm</span><span class="p">{</span><span class="n">d</span><span class="p">}</span><span class="n">z</span><span class="p">,</span> <span class="n">mz</span><span class="p">,</span> <span class="n">gz</span><span class="p">,</span> <span class="n">fz</span><span class="p">,</span> <span class="n">az</span><span class="p">],</span>  <span class="n">aligned</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="go">dec: 3.4505237094673820071E-6              + 1.4156708111105737324E-6j</span>
-<span class="go">mpm: 3.4505237094673820071e-6              + 1.4156708111105737324e-6j</span>
-<span class="go">gmp: 3.4505237094673820071E-06             + 1.4156708111105737324E-06j</span>
-<span class="go">fpm: 3.45052370946738E-06                  + 1.41567081111057E-06j</span>
-<span class="go">apm: 3.4505237094673820071e-6 (9.364e-20%) + 1.4156708111105737324e-6 (1.141e-19%)j</span>
+<p>An example with complex input, using C#-style formatting for complex numbers for the result</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">;</span>  <span class="n">x</span> <span class="o">=</span> <span class="mf">2.7</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="p">[</span><span class="n">fpm</span><span class="p">,</span> <span class="n">mpm</span><span class="p">,</span> <span class="n">cmath53</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="n">ctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">hyperg_0f1r</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">x</span><span class="p">)))</span>
+<span class="go">    fpm:  (-3.33950514325732, 12.7488380828593)</span>
+<span class="go">    mpm:  (-3.339505143257323832539336034201892278158, 12.74883808285931598356818624276434101411)</span>
+<span class="go">cmath53:  (-3.33950514325733, 12.7488380828594)</span>
 </pre></div>
 </div>
+<p>An example with the same complex input as above, showing only the real part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">;</span>  <span class="n">x</span> <span class="o">=</span> <span class="mf">2.7</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_noboost_cplx</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">hyperg_0f1</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">x</span><span class="p">))))</span>
+<span class="go">    fpm:  -3.33950514325732</span>
+<span class="go">    mpm:  -3.33950514325732383253933603420189227815805627248594344260565996987141867019270768892436121</span>
+<span class="go">    dpm:  -3.33950514325732383253933603420189227815805627248594344260565996987141867019270768892436121</span>
+<span class="go">    gpm:  -3.3395051432573238325393360342018922781580562724859434426056599698714186701927076889243612101</span>
+<span class="go">    apm: [-3.3395051432573238325393360342018922781580562724859434426056599698714186701927076889243612 +/- 2.12e-89]</span>
+<span class="go">cmath53:  -3.33950514325733</span>
+<span class="go">sflintc:  -3.339505</span>
+<span class="go">dflintc:  -3.33950514325732</span>
+<span class="go">eflintc:  -3.3395051432573238325</span>
+<span class="go">qflintc:  -3.33950514325732383253933603420189</span>
+<span class="go">oflintc:  -3.3395051432573238325393360342018922781580562724859434426056599698714187</span>
+<span class="go">mflintc:  -3.33950514325732383253933603420189227815805627248594344260565996987141867019270768892436121</span>
+<span class="go">aflintc: [-3.3395051432573238325393360342018922781580562724859434426056599698714186701927076889243612 +/- 2.65e-89]</span>
+</pre></div>
+</div>
+<p>An example with the same complex input as above, showing only the imaginary part of the result:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">xlcalcnet</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.1</span><span class="p">;</span>  <span class="n">x</span> <span class="o">=</span> <span class="mf">2.7</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">;</span> <span class="n">gui</span><span class="o">.</span><span class="n">setdps</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="n">gui</span><span class="o">.</span><span class="n">ctxlist_noboost_cplx</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">fmtname</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span>  <span class="n">ctx</span><span class="o">.</span><span class="n">realctx</span><span class="o">.</span><span class="n">fmt</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">hyperg_0f1</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">x</span><span class="p">))))</span>
+<span class="go">    fpm:  12.7488380828593</span>
+<span class="go">    mpm:  12.7488380828593159835681862427643410141060265077001449080649084109964442628031290850774142</span>
+<span class="go">    dpm:  12.7488380828593159835681862427643410141060265077001449080649084109964442628031290850774142</span>
+<span class="go">    gpm:  12.748838082859315983568186242764341014106026507700144908064908410996444262803129085077414201</span>
+<span class="go">    apm: [12.7488380828593159835681862427643410141060265077001449080649084109964442628031290850774142 +/- 3.30e-89]</span>
+<span class="go">cmath53:  12.7488380828594</span>
+<span class="go">sflintc:  12.74884</span>
+<span class="go">dflintc:  12.7488380828593</span>
+<span class="go">eflintc:  12.748838082859315984</span>
+<span class="go">qflintc:  12.7488380828593159835681862427643</span>
+<span class="go">oflintc:  12.748838082859315983568186242764341014106026507700144908064908410996444</span>
+<span class="go">mflintc:  12.7488380828593159835681862427643410141060265077001449080649084109964442628031290850774142</span>
+<span class="go">aflintc: [12.7488380828593159835681862427643410141060265077001449080649084109964442628031290850774142 +/- 4.22e-89]</span>
+</pre></div>
+</div>
+<p>The above and additional examples can be found online in the <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> repository or in the corresponding local <code class="docutils literal notranslate"><span class="pre">DataXlCalcNet</span></code> folder for <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B10_Hypergeometric0F1/C01_Hyper0F1/D02a_Hyperg0F1rReal.py">Python (real input)</a>, <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A01_ExamplesPython/B10_Hypergeometric0F1/C01_Hyper0F1/D02b_Hyperg0F1rCplx.py">Python (complex input)</a>, and <a class="reference external" href="https://github.com/duhadler/DataXlCalcNet/blob/master/DataXlCalcNet/A02_ExamplesCSharp/B10_Hypergeometric0F1/C01_Hyper0F1/D02_Hyperg0F1r.cs">C# (real or complex input)</a>.</p>
 </dd></dl>
 
 </section>
@@ -1073,7 +1150,7 @@ By Dietrich Hadler
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Nov 13, 2026.
+  Last updated on Nov 15, 2026.
   <br/>
 </p>
   </div>
